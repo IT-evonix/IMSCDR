@@ -1,0 +1,262 @@
+@font-face {
+  font-family: "Roma-Light";
+  src: url("/fonts/ROMA_LIGHT.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roma-Regular";
+  src: url("/fonts/ROMA_REGULAR.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roma-Semibold";
+  src: url("/fonts/ROMA_SEMIBOLD.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roma-Bold";
+  src: url("/fonts/ROMA_BOLD.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roma-Bold";
+  src: url("/fonts/ROMA_BOLD.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Avenir-Next-Regular";
+  src: url("/fonts/AVENIRNEXT-REGULAR.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Avenir-Next-Demi";
+  src: url("/fonts/AVENIRNEXT-DEMI.woff2") format("woff2");
+  font-display: swap;
+}
+
+Body {
+  font-family: "Avenir-Next-Regular" !important;
+  color: #000;
+  margin: 0px;
+  font-size: clamp(14px, 1.5vw, 16px);
+}
+
+.heading {
+  font-family: Roma-Bold;
+  font-size: 35px;
+  line-height: normal;
+  margin: 0px 0px 20px 0px;
+}
+.subheading {
+  font-family: "Roma-Semibold";
+  font-size: 20px;
+}
+/* About Institute Start Here */
+.aboutus_section {
+  padding: 100px 0px 50px 0px;
+}
+.aboutsec_inner {
+  display: flex;
+  align-items: center;
+}
+.aboutus_left {
+  width: 40%;
+  position: relative;
+}
+.aboutus_left::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -60px;
+  transform: translateY(-50%);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-image: url("/images/home/aboutlogo.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: 2;
+}
+.aboutus_right {
+  width: 60%;
+  padding: 0px 0px 0px 100px;
+}
+.aboutus_left img {
+  border-radius: 20px;
+}
+.explore_more_btn a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(90deg, #89004a 34%, #f05a94 100%);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  /* box-shadow: 0 5px 15px rgba(240, 90, 148, 0.35); */
+  font-family: "Avenir-Next-Demi";
+  margin-top: 10px;
+}
+.explore_more_btn a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.25);
+  transform: skewX(-25deg);
+  transition: all 0.7s ease;
+}
+.explore_more_btn a:hover::before {
+  left: 130%;
+}
+/* Hover Effect */
+.explore_more_btn a:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(240, 90, 148, 0.5);
+}
+/* Icon Animation */
+.explore_more_btn a svg {
+  transition: transform 0.4s ease;
+}
+.explore_more_btn a:hover svg {
+  transform: translateX(6px);
+}
+/* About Institute End Here */
+/* Courses We Offer Start Here */
+.CoursesWeOffer_sec{
+  position: relative;
+  background: linear-gradient(90deg,rgba(137, 0, 74, 1) 34%, rgba(9, 70, 142, 1) 100%);
+  padding: 80px 0px;
+}
+.CoursesWeOffer_sec::after{
+  padding: 40px 0px 40px 0px;
+  position:relative;
+  background-image: url(/images/home/Coursesbg.webp);
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  content:"";
+  position: absolute;
+  top:0;
+  right:0;
+  left:0;
+  bottom:0;
+  z-index:1;
+}
+.CoursesWeOffer_sec::before{
+    content: "";
+    z-index: 1;
+    background-image: url(/images/home/Coursesbg_icon.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    right: 14%;
+    top: 9%;
+}
+.CoursesWeOffer_inner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+.course_card {
+  position: relative;
+  transition-duration:0.5s;
+}
+.course_card img{
+  transition-duration:0.5s;
+  position:relative;
+}
+.course_card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(
+    280deg,
+    rgba(0, 0, 0, 0) 34%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+/* .course_card::before {
+  content: "";
+  position: absolute;
+  left:-20px;
+  right: 0;
+  top: -20px;
+  bottom: 0;
+  background-color:#fff;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  padding:20px 0px 0px 20px;
+} */
+
+
+.course_card:nth-child(1){
+  border-radius: 40px 0 0 0;
+}
+.course_card:nth-child(2){
+  border-radius: 0 40px 0 0;
+}
+.course_card:nth-child(3){
+  border-radius: 0 0 0 40px;
+}
+.course_card:nth-child(4){
+  border-radius: 0 0 40px 0;
+}
+
+
+.course_card:nth-child(1)::after{
+  border-radius: 40px 0 0 0;
+}
+.course_card:nth-child(1) img{
+  border-radius: 40px 0 0 0;
+}
+.course_card:nth-child(2) img{
+  border-radius: 0 40px 0 0;
+}
+.course_card:nth-child(3)::after{
+  border-radius: 0 0 0 40px;
+}
+.course_card:nth-child(3) img{
+  border-radius: 0 0 0 40px;
+}
+.course_card:nth-child(4) img{
+  border-radius: 0 0 40px 0;
+}
+
+
+.Courses_content {
+  z-index: 9;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 40px;
+  padding: 20px;
+  transition-duration:0.5s;
+}
+.course_card:hover .Courses_content{
+  left: 50px;
+}
+.Courses_content svg {
+  position: absolute;
+  bottom: 20px;
+}
+.Courses_content .subheading {
+  color: #fff;
+  line-height: normal;
+}
