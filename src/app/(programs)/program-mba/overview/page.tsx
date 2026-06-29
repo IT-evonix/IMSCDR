@@ -1,11 +1,13 @@
-import React from 'react'
+
+import React from "react";
+
 
 const page = () => {
   return (
-    <div>
-        <h1>MBA</h1>
+    <div className="innerpage-wrapper1">
+      <h1>MBA 1</h1>
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default page;
