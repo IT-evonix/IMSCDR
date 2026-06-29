@@ -80,6 +80,7 @@ Body {
 }
 .Header-module__RpiqDW__sticky .topbar-contact span {
   color: #000;
+  font-family: "Roma-Semibold";
 }
 .Header-module__RpiqDW__sticky .top-btn {
   background-color: #f0f0f0;
@@ -776,6 +777,7 @@ Body {
 /* Center Student */
 .centerTall {
   height: 420px;
+  background: #91b4dc;
 }
 
 /* Top/Bottom Columns */
@@ -1163,14 +1165,14 @@ Body {
   display: flex;
   justify-content: space-between;
 }
-.mapbox{
-  width:59%;
+.mapbox {
+  width: 59%;
 }
-.mapbox iframe{
+.mapbox iframe {
   border-radius: 0px 50px 50px 0px;
 }
-.formbox{
-  width:39%;
+.formbox {
+  width: 39%;
 }
 .contact-form-wrapper {
   background: #0c5cbb;
@@ -1248,9 +1250,52 @@ Body {
   margin-bottom: 25px;
 }
 
-/* ===========================
-   Responsive
-=========================== */
+/*--------------- Sidebar Start Here ---------------*/
+.left-sidebar {
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #e5e5e5;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+.sidebar-title {
+  background: #0d6efd;
+  color: #fff;
+  padding: 18px;
+  font-size: 22px;
+  font-weight: 600;
+}
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sidebar-menu li {
+  border-bottom: 1px solid #eee;
+}
+.sidebar-menu li:last-child {
+  border-bottom: none;
+}
+.sidebar-link {
+  display: block;
+  padding: 15px 18px;
+  color: #333;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.sidebar-link:hover {
+  background: #f7f7f7;
+  color: #0d6efd;
+  padding-left: 25px;
+}
+.sidebar-link.active {
+  background: #0d6efd;
+  color: #fff;
+  font-weight: 600;
+}
+/*--------------- Sidebar End Here ---------------*/
+
+/* ===========================   Responsive Pages Start here =========================== */
 @media (min-width: 1365.98px) {
   /*-------------------- Contact Us Start Here ------------*/
 
@@ -1379,6 +1424,9 @@ Body {
   }
   /*-------------------- Ranking End Here ------------*/
   /*-------------------- About Us Start Here ------------*/
+  .aboutus_section {
+    padding: 40px 0;
+  }
   .aboutsec_inner {
     flex-wrap: wrap;
   }
@@ -1400,6 +1448,9 @@ Body {
   /*-------------------- Courses We Offer Start Here ------------*/
   .subheading {
     font-size: 18px;
+  }
+  .CoursesWeOffer_sec{
+    padding: 40px 0;
   }
   .Courses_content {
     padding: 20px 0 0 40px;
@@ -1455,6 +1506,21 @@ Body {
   /*-------------------- Excellent Placements Start Here ------------*/
   .placement_whitebox {
     margin: 10px 0px;
+  }
+  .excellent_placements_sec {
+    padding: 40px 0;
+  }
+  .achievement-section{
+    padding: 40px 0 0;
+  }
+  .companylogo-slider {
+    padding: 50px 0;
+  }
+  .our_testimonials{
+    padding: 40px 0px;
+  }
+  .our_testimonials .testimonial-navigation{
+    margin-top: 20px;
   }
   /*-------------------- Excellent Placements End Here ------------*/
   /*----------------------- CampusLife Start Here -----------------------*/
@@ -1523,9 +1589,16 @@ Body {
   .subheading {
     font-size: 16px;
   }
+  /* Hero Banner Start Here */
+  .herobanner_Content{
+    top: 80%;
+    width: 95%;
+  }
+  /* Hero Banner End Here */
+
   /*-------------------- Ranking Start Here ------------*/
   .ranking_main {
-    margin-top: 30px;
+    margin-top: 40px;
   }
   .ranking_wrapper {
     gap: 15px;
@@ -1596,14 +1669,27 @@ Body {
 
 @media (max-width: 575.98px) {
   /*--------------- Header Start Here ---------------*/
-  .headerNavigation{
+  .headerNavigation {
     display: none;
   }
-  /* header{
-    padding: 10px 10px;
-  } */
-  
   /*--------------- Header End Here ---------------*/
+  /* Hero Banner Start Here */
+  .herobanner_Content {
+    width: 100%;
+    position: inherit;
+    margin: -6px 0 0;
+    background: #060606;
+    padding: 20px;
+    border-radius: 0px;
+    box-shadow: 0px 4px 8px #00000026;
+        transform: inherit;
+    left: 0;
+    top:inherit;
+  }
+  .hero-video:after{
+    display:none;
+  }
+  /* Hero Banner End Here */
   /*-------------------- Ranking Start Here ------------*/
   .ranking_card {
     width: 100%;
@@ -1682,6 +1768,10 @@ Body {
   }
   /*----------------------- CampusLife End Here -----------------------*/
   /*--------------- Footer Start Here -------------*/
+  .blueBox{
+    border-radius: 0px 0px 280px 280px;
+    padding: 40px;
+  }
   .educationbox {
     width: 100%;
   }

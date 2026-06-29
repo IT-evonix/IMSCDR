@@ -20,16 +20,12 @@ const InnerpageBanner: React.FC<InnerpageBannerProps> = ({
     <section className="innerbannersection">
       <div className="container">
         <div className="innerbannerinner">
-
           {/* Heading */}
           <h1 className="text-white text-center innerbannerheading whitespace-pre-line">
             {title}
           </h1>
 
-          {/*  Breadcrumb */}
-          <div className="breadcrumb_links d-flex align-items-center justify-content-center">
-
-            {/* Static Home */}
+          <div className="breadcrumb_links d-flex align-items-center justify-content-center d-none">
             <Link href="/" className="homepagelink">
               Home
             </Link>
@@ -41,9 +37,9 @@ const InnerpageBanner: React.FC<InnerpageBannerProps> = ({
               <React.Fragment key={index}>
                 
                 {item.href ? (
-                  <Link href={item.href} className="opacity-75">
+                  <span className="currentpage">
                     {item.label}
-                  </Link>
+                  </span>
                 ) : (
                   <span className="currentpage">
                     {item.label}
@@ -58,7 +54,6 @@ const InnerpageBanner: React.FC<InnerpageBannerProps> = ({
             ))}
 
           </div>
-
         </div>
       </div>
     </section>
