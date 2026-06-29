@@ -85,6 +85,9 @@ Body {
 .Header-module__RpiqDW__sticky .top-btn {
   background-color: #f0f0f0;
 }
+.top-btn{
+  background-color:#fff;
+}
 .topbar-contact a {
   color: #f9e338;
   text-decoration: none;
@@ -1050,9 +1053,7 @@ Body {
 
 /* Footer End Here */
 /*-------------- Start Here --------------------*/
-/* .innerpages{
-  margin: 104px 0 0 0;
-} */
+
 .innerbannersection {
   padding: 20px 0;
   font-family: "Metropolis-Regular";
@@ -1109,7 +1110,10 @@ Body {
 /*---------------- Inner Banner End Here --------------------*/
 
 .innerpagewrapper {
-  padding: 60px 0px;
+  padding: 0px 0px;
+}
+.contactsection{
+  padding:60px 0px 40px 0px;
 }
 /*----------------------- Inner Pages End Here --------------------*/
 
@@ -1161,7 +1165,7 @@ Body {
 }
 
 .mapwithfrom {
-  padding: 60px 0px;
+  padding:0px 0px 60px 0px;
   display: flex;
   justify-content: space-between;
 }
@@ -1192,11 +1196,11 @@ Body {
   background: none;
   border: 1.5px solid #ffffff73;
   border-radius: 10px;
-  padding: 10px 20px;
+  padding: 8px 20px;
   font-size: 16px;
 }
 .custom-input {
-  height: 46px;
+  height: 43px;
 }
 .custom-textarea {
   resize: none;
@@ -1225,18 +1229,24 @@ Body {
   margin-left: 5px;
 }
 .submit-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  background: #fff;
   color: #111;
-  border: none;
-  border-radius: 50px;
-  padding: 16px 34px;
-  font-size: 22px;
-  font-weight: 600;
-  transition: 0.3s;
+    background: #fff;
+    border: none;
+    border-radius: 50px;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all .3s;
+    display: inline-flex;
+    line-height: normal;
+    font-family: "Avenir-Next-Demi";
 }
+/* .submit-btn path{
+  fill:#000;
+  color:#000;
+} */
 .submit-btn:hover {
   transform: translateY(-3px);
   background: #f3f3f3;
@@ -1559,6 +1569,24 @@ Body {
   /*--------------- Footer End Here ---------------*/
 
   /*-------------------- Contact Us Start Here ------------*/
+  .contactinner{
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .contactbox{
+    width:48%;
+  }
+  .formbox {
+    width: 100%;
+  }
+  .mapwithfrom{
+    flex-wrap: wrap;
+    gap:20px;
+    padding: 0px 10px 40px 10px;
+  }
+  .mapbox iframe {
+    border-radius: 35px;
+  }
   .contact-form-wrapper {
     padding: 35px;
     border-radius: 35px;
@@ -1566,18 +1594,13 @@ Body {
   .contact-form-wrapper h2 {
     font-size: 38px;
   }
-  .custom-input {
-    height: 60px;
-    font-size: 18px;
-  }
-  .custom-textarea {
-    min-height: 180px;
-    font-size: 18px;
-  }
   .submit-btn {
-    width: 100%;
     justify-content: center;
-    font-size: 20px;
+    width: auto;
+    font-size: 16px;
+  }
+  .mapbox {
+    width: 100%;
   }
   /*-------------------- Contact Us End Here ------------*/
   .topbar {
@@ -1789,9 +1812,6 @@ Body {
   }
   /*--------------- Footer End Here ---------------*/
   /*-------------------- Contact Us Start Here ------------*/
-  .contact-form-section {
-    padding: 50px 0;
-  }
   .contact-form-wrapper {
     padding: 25px;
   }
@@ -1803,6 +1823,9 @@ Body {
   .custom-textarea {
     padding: 15px 20px !important;
     font-size: 16px;
+  }
+  .contactbox {
+    width: 100%;
   }
   /*-------------------- Contact Us End Here ------------*/
 }
