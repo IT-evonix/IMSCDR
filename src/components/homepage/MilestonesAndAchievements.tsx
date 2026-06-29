@@ -66,7 +66,7 @@ export default function MilestonesAndAchievements() {
       <div className="container">
         <div className="achievement-heading">
           <div className="row justify-content-center">
-            <div className="col-md-9  position-relative z-2">
+            <div className="col-md-9 position-relative z-2">
               <div className="heading text-white text-center">
                 Milestones & Achievements
               </div>
@@ -83,10 +83,10 @@ export default function MilestonesAndAchievements() {
           // modules={[Autoplay]}
           loop={true}
           centeredSlides={true}
-          // autoplay={{
-          //   delay: 2500,
-          //   disableOnInteraction: false,
-          // }}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
           speed={1000}
           slidesPerView={1.2}
           spaceBetween={20}

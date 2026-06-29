@@ -88,6 +88,13 @@ const testimonials: Testimonial[] = [
   },
 ];
 
+// Duplicate data for smoother infinite loop
+const sliderTestimonials = [
+  ...testimonials,
+  ...testimonials,
+  ...testimonials,
+];
+
 export default function OurTestimonials() {
   const swiperRef = useRef<SwiperType | null>(null);
 
@@ -99,9 +106,9 @@ export default function OurTestimonials() {
             <div className="heading text-center text-white">
               Our Testimonials
             </div>
+
             <p className="text-center mb-3 mb-sm-5 text-white">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium.
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem  accusantium doloremque laudantium,  ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt  explicabo.
             </p>
           </div>
         </div>
@@ -109,21 +116,28 @@ export default function OurTestimonials() {
         <div className="our_testimonials_inner">
           <Swiper
             modules={[Autoplay]}
-            onSwiper={(swiperInstance) => {
-              swiperRef.current = swiperInstance;
+            onSwiper={(swiper) => {
+              swiperRef.current = swiper;
             }}
             loop={true}
-            loopAdditionalSlides={10}
             speed={1000}
             spaceBetween={30}
             slidesPerView={1}
+            watchOverflow={false}
+            observer={true}
+            observeParents={true}
+            observeSlideChildren={true}
             autoplay={{
               delay: 3000,
               disableOnInteraction: false,
+              pauseOnMouseEnter: false,
             }}
             breakpoints={{
-              576: {
+              480: {
                 slidesPerView: 1,
+              },
+              576: {
+                slidesPerView: 2,
               },
               768: {
                 slidesPerView: 3,
@@ -134,8 +148,8 @@ export default function OurTestimonials() {
             }}
             className="testimonials_slider"
           >
-            {testimonials.map((testimonial) => (
-              <SwiperSlide key={testimonial.id}>
+            {sliderTestimonials.map((testimonial, index) => (
+              <SwiperSlide key={`${testimonial.id}-${index}`}>
                 <div className="testimonials_box">
                   <div className="testimonials_img">
                     <Image
@@ -148,7 +162,9 @@ export default function OurTestimonials() {
 
                   <h3 className="subheading">{testimonial.name}</h3>
 
-                  <p className="testimonials_content">{testimonial.content}</p>
+                  <p className="testimonials_content">
+                    {testimonial.content}
+                  </p>
                 </div>
               </SwiperSlide>
             ))}
@@ -160,7 +176,7 @@ export default function OurTestimonials() {
               className="testimonial-prev"
               onClick={() => swiperRef.current?.slidePrev()}
             >
-              ←
+              
             </button>
 
             <button
@@ -168,7 +184,7 @@ export default function OurTestimonials() {
               className="testimonial-next"
               onClick={() => swiperRef.current?.slideNext()}
             >
-              →
+              
             </button>
           </div>
         </div>
