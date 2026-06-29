@@ -6,7 +6,7 @@ const CoursesWeOffer = () => {
     <section className="CoursesWeOffer_sec">
       <div className="container">
         <div className="row">
-          <div className="col-md-8 mb-2 mb-sm-4">
+          <div className="col-md-8 mb-2 mb-sm-4 position-relative z-2">
             <div className="heading text-white">Courses We Offer</div>
             <p className="text-white">
               Sed ut perspiciatis unde omnis iste natus error sit voluptatem

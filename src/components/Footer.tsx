@@ -1,10 +1,12 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import CoursesStrip from "./homepage/CoursesStrip";
 
 const Footer = () => {
   return (
     <footer>
+      <CoursesStrip/>
       <div className="footer_main">
         <div className="container">
           <div className="footer_inner">

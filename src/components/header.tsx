@@ -1,11 +1,18 @@
 "use client";
+
 import { useState, useEffect } from "react";
 import Link from "next/link";
-// import { useState } from "react";
 import styles from "@/css/Header.module.css";
 import { menuItems, MenuItem } from "@/data/menuData";
 import Image from "next/image";
-import { Menu, X, ChevronDown, ChevronRight, Plus, Minus } from "lucide-react";
+import {
+  Menu,
+  X,
+  ChevronDown,
+  ChevronRight,
+  Plus,
+  Minus,
+} from "lucide-react";
 import TopBar from "./TopBar";
 
 interface MobileMenuProps {
@@ -14,7 +21,11 @@ interface MobileMenuProps {
   toggleMenu: (label: string) => void;
 }
 
-function MobileMenuItem({ item, openMenus, toggleMenu }: MobileMenuProps) {
+function MobileMenuItem({
+  item,
+  openMenus,
+  toggleMenu,
+}: MobileMenuProps) {
   const isOpen = openMenus.includes(item.label);
 
   return (
@@ -54,10 +65,13 @@ export default function Header() {
   const [openMenus, setOpenMenus] = useState<string[]>([]);
   const [isSticky, setIsSticky] = useState(false);
 
+  // Sticky Header
   useEffect(() => {
     const handleScroll = () => {
       setIsSticky(window.scrollY > 100);
     };
+
+    handleScroll();
 
     window.addEventListener("scroll", handleScroll);
 
@@ -66,11 +80,43 @@ export default function Header() {
     };
   }, []);
 
+  // Always start from top after refresh
+  useEffect(() => {
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
+
+    window.scrollTo(0, 0);
+  }, []);
+
+  // Lock background when mobile menu opens
+  useEffect(() => {
+    if (!mobileOpen) return;
+
+    const scrollY = window.scrollY;
+
+    document.body.style.position = "fixed";
+    document.body.style.top = `-${scrollY}px`;
+    document.body.style.left = "0";
+    document.body.style.right = "0";
+    document.body.style.width = "100%";
+
+    return () => {
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.left = "";
+      document.body.style.right = "";
+      document.body.style.width = "";
+
+      window.scrollTo(0, scrollY);
+    };
+  }, [mobileOpen]);
+
   const toggleMenu = (label: string) => {
     setOpenMenus((prev) =>
       prev.includes(label)
         ? prev.filter((item) => item !== label)
-        : [...prev, label],
+        : [...prev, label]
     );
   };
 
@@ -78,7 +124,6 @@ export default function Header() {
     <li className={styles.menuItem}>
       <Link href={item.href || "#"}>
         {item.label}
-
         {item.children && <ChevronDown size={16} />}
       </Link>
 
@@ -88,7 +133,6 @@ export default function Header() {
             <li key={child.label}>
               <Link href={child.href || "#"}>
                 {child.label}
-
                 {child.children && <ChevronRight size={15} />}
               </Link>
 
@@ -117,8 +161,8 @@ export default function Header() {
               src="/images/home/white_logo.webp"
               className={styles.whitelogo}
               alt="Logo"
-              width={200}
-              height={80}
+              width={240}
+              height={95}
               priority
             />
             <Image
@@ -134,6 +178,7 @@ export default function Header() {
 
         <div className="headerNavigation">
           <TopBar />
+
           <nav className={styles.desktopNav}>
             <ul>
               {menuItems.map((item) => (
@@ -145,7 +190,14 @@ export default function Header() {
 
         <button
           className={styles.mobileToggle}
-          onClick={() => setMobileOpen(!mobileOpen)}
+          onClick={() => {
+            setMobileOpen((prev) => {
+              if (prev) {
+                setOpenMenus([]);
+              }
+              return !prev;
+            });
+          }}
         >
           {mobileOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
