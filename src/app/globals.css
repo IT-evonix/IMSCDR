@@ -85,8 +85,8 @@ Body {
 .Header-module__RpiqDW__sticky .top-btn {
   background-color: #f0f0f0;
 }
-.top-btn{
-  background-color:#fff;
+.top-btn {
+  background-color: #fff;
 }
 .topbar-contact a {
   color: #f9e338;
@@ -1110,33 +1110,33 @@ Body {
 .innerpagewrapper {
   padding: 0px 0px;
 }
-.contactsection{
-  padding:60px 0px 40px 0px;
+.contactsection {
+  padding: 60px 0px 40px 0px;
 }
-.programe_main{
+.programe_main {
   position: relative;
 }
-.programe_main::after{
-  background:#1D63B5;
-  position:absolute;
-  content:"";
-  width:20%;
-  height:100%;
-  left:0;
-  top:0;
-  z-index:-1;
+.programe_main::after {
+  background: #1d63b5;
+  position: absolute;
+  content: "";
+  width: 20%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
   bottom: 0;
 }
 /*--------------- Sidebar Start Here ---------------*/
-.leftSidebarmain{
-  height:100%;
-  padding:30px 0px;
-  background-color:#1D63B5;
+.leftSidebarmain {
+  height: 100%;
+  padding: 30px 0px;
+  background-color: #1d63b5;
 }
 .left-sidebar {
   overflow: hidden;
   position: sticky;
-  top:120px;
+  top: 120px;
 }
 .sidebar-title {
   color: #fff;
@@ -1147,7 +1147,11 @@ Body {
   display: flex;
   border-radius: 50px 0px 0px 50px;
   font-family: "Roma-Bold";
-  background: linear-gradient(90deg,rgba(9, 70, 142, 1) 0%, rgba(29, 99, 181, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(9, 70, 142, 1) 0%,
+    rgba(29, 99, 181, 1) 100%
+  );
 }
 .sidebar-close {
   display: none;
@@ -1163,13 +1167,13 @@ Body {
 }
 .sidebar-menu li {
   position: relative;
-  border-bottom: 1.5px dotted #5392DB;
+  border-bottom: 1.5px dotted #5392db;
 }
 .sidebar-link {
   color: #fff;
   padding: 10px 10px 10px 15px;
   text-decoration: none;
-  transition: all .3s;
+  transition: all 0.3s;
   display: block;
   font-family: "Avenir-Next-Demi";
 }
@@ -1184,8 +1188,8 @@ Body {
   background: #fff;
   border-radius: 50%;
 }
-.sidebar-link.active::before{
-  background-color:#ffc233;
+.sidebar-link.active::before {
+  background-color: #ffc233;
 }
 .sidebar-link:hover {
   color: #ffc233;
@@ -1204,8 +1208,8 @@ Body {
   display: none;
 }
 /*--------------- Sidebar End Here ---------------*/
-.innerpagerightside{
-  padding:60px 0px 60px 30px
+.innerpagerightside {
+  padding: 60px 0px 60px 30px;
 }
 
 /*--------------- Contact Us Pages Start Here ---------------*/
@@ -1256,7 +1260,7 @@ Body {
   text-align: center;
 }
 .mapwithfrom {
-  padding:0px 0px 60px 0px;
+  padding: 0px 0px 60px 0px;
   display: flex;
   justify-content: space-between;
 }
@@ -1319,18 +1323,18 @@ Body {
   margin-left: 5px;
 }
 .submit-btn {
-    color: #111;
-    background: #fff;
-    border: none;
-    border-radius: 50px;
-    align-items: center;
-    gap: 12px;
-    padding: 12px 25px;
-    font-size: 16px;
-    transition: all .3s;
-    display: inline-flex;
-    line-height: normal;
-    font-family: "Avenir-Next-Demi";
+  color: #111;
+  background: #fff;
+  border: none;
+  border-radius: 50px;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 25px;
+  font-size: 16px;
+  transition: all 0.3s;
+  display: inline-flex;
+  line-height: normal;
+  font-family: "Avenir-Next-Demi";
 }
 .submit-btn:hover {
   transform: translateY(-3px);
@@ -1347,8 +1351,6 @@ Body {
 /*--------------- Contact Us Pages End Here ---------------*/
 
 /*----------------------- Inner Pages End Here --------------------*/
-
-
 
 /* -------------------   Responsive Pages Start here ------------------- */
 
@@ -1507,7 +1509,7 @@ Body {
   .subheading {
     font-size: 18px;
   }
-  .CoursesWeOffer_sec{
+  .CoursesWeOffer_sec {
     padding: 40px 0;
   }
   .Courses_content {
@@ -1568,16 +1570,16 @@ Body {
   .excellent_placements_sec {
     padding: 40px 0;
   }
-  .achievement-section{
+  .achievement-section {
     padding: 40px 0 0;
   }
   .companylogo-slider {
     padding: 50px 0;
   }
-  .our_testimonials{
+  .our_testimonials {
     padding: 40px 0px;
   }
-  .our_testimonials .testimonial-navigation{
+  .our_testimonials .testimonial-navigation {
     margin-top: 20px;
   }
   /*-------------------- Excellent Placements End Here ------------*/
@@ -1599,6 +1601,9 @@ Body {
   .galleryItem {
     border-radius: 20px;
   }
+  .galleryImg {
+    object-fit: contain;
+  }
   /*----------------------- CampusLife End Here -----------------------*/
   /*--------------- Footer Start Here -------------*/
   .footer_inner {
@@ -1616,29 +1621,29 @@ Body {
   }
   /*--------------- Footer End Here ---------------*/
   /*-------------------- Inner Pages Start Here ------------*/
-  .innerbannersection{
+  .innerbannersection {
     margin: 80px 0px 0px 0px;
     min-height: 150px;
   }
-  .innerbannerheading{
+  .innerbannerheading {
     margin: 20px 0 20px;
     font-size: 25px;
   }
-  
+
   /*-------------------- Contact Us Start Here ------------*/
-  .contactinner{
+  .contactinner {
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  .contactbox{
-    width:48%;
+  .contactbox {
+    width: 48%;
   }
   .formbox {
     width: 100%;
   }
-  .mapwithfrom{
+  .mapwithfrom {
     flex-wrap: wrap;
-    gap:20px;
+    gap: 20px;
     padding: 0px 10px 40px 10px;
   }
   .mapbox iframe {
@@ -1665,72 +1670,70 @@ Body {
   }
 
   /*----------- Sidebar Start Here ------------*/
-  .programe_main:after{
-    display:none;
+  .programe_main:after {
+    display: none;
   }
-  .leftSidebarmain{
-    background-color:transparent;
-    padding:0;
+  .leftSidebarmain {
+    background-color: transparent;
+    padding: 0;
   }
-  .sidebar-toggle{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    background:#0d6efd;
-    color:#fff;
-    border:none;
-    padding:14px 18px;
-    border-radius:0px 50px 50px 0px;
-    cursor:pointer;
+  .sidebar-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #045bbf;
+    border: none;
+    border-radius: 0 50px 50px 0;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    font-family: Roma-Bold;
+    display: flex;
     position: absolute;
     left: 0;
-    font-family: "Roma-Bold";
-}
-  .sidebar-toggle span{
-    display:none;
+    margin: 5px 0 0 0;
   }
-.left-sidebar{
-    position:fixed;
-    top:0;
-    left:0;
-    width:300px;
-    max-width:85%;
-    height:100vh;
-    border-radius:0;
-    z-index:9999;
-    transform:translateX(-100%);
-    transition:transform .35s ease;
-    overflow-y:auto;
+  .sidebar-toggle span {
+    display: none;
+  }
+  .left-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    max-width: 85%;
+    height: 100vh;
+    border-radius: 0;
+    z-index: 9999;
+    transform: translateX(-100%);
+    transition: transform 0.35s ease;
+    overflow-y: auto;
     background: #09478e;
-}
-.left-sidebar.show{
-    transform:translateX(0);
-}
-.sidebar-title{
-  border-radius: 0px;
-}
-.sidebar-close{
-    display:block;
-}
-.sidebar-overlay{
-    display:block;
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.45);
-    opacity:0;
-    visibility:hidden;
-    transition:.35s;
-    z-index:9998;
-}
-.sidebar-overlay.show{
-    opacity:1;
-    visibility:visible;
-}
-/*----------- Sidebar End Here ------------*/
-
-
-
-
+  }
+  .left-sidebar.show {
+    transform: translateX(0);
+  }
+  .sidebar-title {
+    border-radius: 0px;
+  }
+  .sidebar-close {
+    display: block;
+  }
+  .sidebar-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.35s;
+    z-index: 9998;
+  }
+  .sidebar-overlay.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  /*----------- Sidebar End Here ------------*/
 }
 
 @media (max-width: 767.98px) {
@@ -1738,7 +1741,7 @@ Body {
     font-size: 16px;
   }
   /* Hero Banner Start Here */
-  .herobanner_Content{
+  .herobanner_Content {
     top: 80%;
     width: 95%;
   }
@@ -1815,10 +1818,8 @@ Body {
   /*----------------------- CampusLife End Here -----------------------*/
 
   /*----------- Sidebar Start Here ------------*/
-   
+
   /*----------- Sidebar End Here ------------*/
-
-
 }
 
 @media (max-width: 575.98px) {
@@ -1836,12 +1837,12 @@ Body {
     padding: 20px;
     border-radius: 0px;
     box-shadow: 0px 4px 8px #00000026;
-        transform: inherit;
+    transform: inherit;
     left: 0;
-    top:inherit;
+    top: inherit;
   }
-  .hero-video:after{
-    display:none;
+  .hero-video:after {
+    display: none;
   }
   /* Hero Banner End Here */
   /*-------------------- Ranking Start Here ------------*/
@@ -1922,7 +1923,7 @@ Body {
   }
   /*----------------------- CampusLife End Here -----------------------*/
   /*--------------- Footer Start Here -------------*/
-  .blueBox{
+  .blueBox {
     border-radius: 0px 0px 280px 280px;
     padding: 40px;
   }

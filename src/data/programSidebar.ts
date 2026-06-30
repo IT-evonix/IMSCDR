@@ -10,6 +10,7 @@ export const programSidebar = {
       { title: "Faculty", href: "/program-mba/faculty" },
       { title: "Syllabus", href: "/program-mba/syllabus" },
       { title: "Academic Calendar", href: "/program-mba/academic-calendar" },
+      { title: "FAQ", href: "/program-mba/faq" },
     ],
   },
 
