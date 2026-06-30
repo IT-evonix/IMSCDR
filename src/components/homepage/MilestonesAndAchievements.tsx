@@ -1,7 +1,7 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-// import { Autoplay } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 
 import "swiper/css";
 
@@ -80,7 +80,7 @@ export default function MilestonesAndAchievements() {
         </div>
 
         <Swiper
-          // modules={[Autoplay]}
+          modules={[Autoplay]}
           loop={true}
           centeredSlides={true}
           autoplay={{

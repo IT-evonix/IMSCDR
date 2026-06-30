@@ -13,7 +13,7 @@ export default function Layout({
     <>
       <ProgramBanner heading={program.heading} />
 
-      <section className="innerpage_data">
+      <section className="innerpage_main programe_main">
         <div className="container">
           <div className="row">
 
