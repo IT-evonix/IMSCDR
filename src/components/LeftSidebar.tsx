@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
 
 interface SidebarItem {
   title: string;
@@ -18,33 +20,56 @@ export default function LeftSidebar({
   menuItems,
 }: LeftSidebarProps) {
   const pathname = usePathname();
+  const [open, setOpen] = useState(false);
 
   return (
-    <aside className="left-sidebar">
+    <>
+      {/* Mobile Toggle Button */}
+      <button
+        className="sidebar-toggle"
+        onClick={() => setOpen(true)}
+      >
+        <Menu size={22} />
+        <span>{heading}</span>
+      </button>
 
-      <div className="sidebar-title">
-        {heading}
-      </div>
+      {/* Overlay */}
+      <div
+        className={`sidebar-overlay ${open ? "show" : ""}`}
+        onClick={() => setOpen(false)}
+      ></div>
 
-      <ul className="sidebar-menu">
+      {/* Sidebar */}
+      <aside className={`left-sidebar ${open ? "show" : ""}`}>
 
-        {menuItems.map((item) => (
-          <li key={item.href}>
+        <div className="sidebar-title">
+          {heading}
 
-            <Link
-              href={item.href}
-              className={`sidebar-link ${
-                pathname === item.href ? "active" : ""
-              }`}
-            >
-              {item.title}
-            </Link>
+          <button
+            className="sidebar-close"
+            onClick={() => setOpen(false)}
+          >
+            <X size={22} />
+          </button>
+        </div>
 
-          </li>
-        ))}
+        <ul className="sidebar-menu">
+          {menuItems.map((item) => (
+            <li key={item.href}>
+              <Link
+                href={item.href}
+                className={`sidebar-link ${
+                  pathname === item.href ? "active" : ""
+                }`}
+                onClick={() => setOpen(false)}
+              >
+                {item.title}
+              </Link>
+            </li>
+          ))}
+        </ul>
 
-      </ul>
-
-    </aside>
+      </aside>
+    </>
   );
 }

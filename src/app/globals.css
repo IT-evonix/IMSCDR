@@ -1115,8 +1115,14 @@ Body {
 .contactsection{
   padding:60px 0px 40px 0px;
 }
-/*----------------------- Inner Pages End Here --------------------*/
+.innerpage_main{
 
+}
+.programe_main{
+
+}
+/*----------------------- Inner Pages End Here --------------------*/
+/*--------------- Contact Us Pages Start Here ---------------*/
 .contactinner {
   display: flex;
   gap: 20px;
@@ -1163,7 +1169,6 @@ Body {
   display: block;
   text-align: center;
 }
-
 .mapwithfrom {
   padding:0px 0px 60px 0px;
   display: flex;
@@ -1217,7 +1222,6 @@ Body {
   background: transparent !important;
   color: #fff !important;
 }
-
 .form-control.is-invalid {
   border-color: #ff6b6b !important;
   background-image: none !important;
@@ -1243,10 +1247,6 @@ Body {
     line-height: normal;
     font-family: "Avenir-Next-Demi";
 }
-/* .submit-btn path{
-  fill:#000;
-  color:#000;
-} */
 .submit-btn:hover {
   transform: translateY(-3px);
   background: #f3f3f3;
@@ -1259,6 +1259,8 @@ Body {
   border-radius: 12px;
   margin-bottom: 25px;
 }
+/*--------------- Contact Us Pages End Here ---------------*/
+
 
 /*--------------- Sidebar Start Here ---------------*/
 .left-sidebar {
@@ -1266,42 +1268,62 @@ Body {
   border-radius: 10px;
   border: 1px solid #e5e5e5;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 15px rgba(0,0,0,.08);
 }
+
 .sidebar-title {
   background: #0d6efd;
   color: #fff;
   padding: 18px;
   font-size: 22px;
   font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+.sidebar-close {
+  display: none;
+  background: transparent;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+}
+
 .sidebar-menu {
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
+
 .sidebar-menu li {
   border-bottom: 1px solid #eee;
 }
-.sidebar-menu li:last-child {
-  border-bottom: none;
-}
+
 .sidebar-link {
   display: block;
   padding: 15px 18px;
   color: #333;
   text-decoration: none;
-  transition: 0.3s;
+  transition: .3s;
 }
+
 .sidebar-link:hover {
   background: #f7f7f7;
   color: #0d6efd;
   padding-left: 25px;
 }
+
 .sidebar-link.active {
   background: #0d6efd;
   color: #fff;
   font-weight: 600;
+}
+.sidebar-toggle {
+  display: none;
+}
+.sidebar-overlay {
+  display: none;
 }
 /*--------------- Sidebar End Here ---------------*/
 
@@ -1606,6 +1628,65 @@ Body {
   .topbar {
     margin: 0 0 0px;
   }
+
+  /*----------- Sidebar Start Here ------------*/
+  .sidebar-toggle{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    background:#0d6efd;
+    color:#fff;
+    border:none;
+    padding:14px 18px;
+    border-radius:8px;
+    font-weight:600;
+    margin-bottom:20px;
+    cursor:pointer;
+}
+
+.left-sidebar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:300px;
+    max-width:85%;
+    height:100vh;
+    border-radius:0;
+    z-index:9999;
+
+    transform:translateX(-100%);
+    transition:transform .35s ease;
+    overflow-y:auto;
+}
+
+.left-sidebar.show{
+    transform:translateX(0);
+}
+
+.sidebar-close{
+    display:block;
+}
+
+.sidebar-overlay{
+    display:block;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.45);
+    opacity:0;
+    visibility:hidden;
+    transition:.35s;
+    z-index:9998;
+}
+
+.sidebar-overlay.show{
+    opacity:1;
+    visibility:visible;
+}
+  /*----------- Sidebar End Here ------------*/
+
+
+
+
 }
 
 @media (max-width: 767.98px) {
@@ -1688,6 +1769,12 @@ Body {
     border-radius: 18px;
   }
   /*----------------------- CampusLife End Here -----------------------*/
+
+  /*----------- Sidebar Start Here ------------*/
+   
+  /*----------- Sidebar End Here ------------*/
+
+
 }
 
 @media (max-width: 575.98px) {
