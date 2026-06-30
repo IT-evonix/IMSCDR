@@ -23,7 +23,7 @@ export default function LeftSidebar({
   const [open, setOpen] = useState(false);
 
   return (
-    <>
+    <div className="leftSidebarmain">
       {/* Mobile Toggle Button */}
       <button
         className="sidebar-toggle"
@@ -70,6 +70,6 @@ export default function LeftSidebar({
         </ul>
 
       </aside>
-    </>
+    </div>
   );
 }

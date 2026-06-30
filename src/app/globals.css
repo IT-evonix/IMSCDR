@@ -217,7 +217,6 @@ Body {
 .ranking_content p {
   margin: 0;
   font-size: 18px;
-  font-weight: 600;
   line-height: normal;
   font-family: "Roma-Bold";
 }
@@ -1052,7 +1051,7 @@ Body {
 }
 
 /* Footer End Here */
-/*-------------- Start Here --------------------*/
+/*--------------Inner Pages Start Here --------------------*/
 
 .innerbannersection {
   padding: 20px 0;
@@ -1060,7 +1059,7 @@ Body {
   font-size: 14px;
   line-height: normal;
   color: #fff;
-  min-height: 280px;
+  min-height: 220px;
   display: flex;
   align-items: center;
   position: relative;
@@ -1085,7 +1084,7 @@ Body {
   font-family: "Roma-Bold";
   position: relative;
   z-index: 3;
-  margin: 70px 0 20px 0;
+  margin: 110px 0 20px 0;
 }
 .homepagelink {
   background-color: #ffffff3d;
@@ -1107,21 +1106,108 @@ Body {
   z-index: 3;
   font-family: "Roma-Regular";
 }
-/*---------------- Inner Banner End Here --------------------*/
-
+/*---------------- Programe Start Here --------------------*/
 .innerpagewrapper {
   padding: 0px 0px;
 }
 .contactsection{
   padding:60px 0px 40px 0px;
 }
-.innerpage_main{
-
-}
 .programe_main{
-
+  position: relative;
 }
-/*----------------------- Inner Pages End Here --------------------*/
+.programe_main::after{
+  background:#1D63B5;
+  position:absolute;
+  content:"";
+  width:20%;
+  height:100%;
+  left:0;
+  top:0;
+  z-index:-1;
+  bottom: 0;
+}
+/*--------------- Sidebar Start Here ---------------*/
+.leftSidebarmain{
+  height:100%;
+  padding:30px 0px;
+  background-color:#1D63B5;
+}
+.left-sidebar {
+  overflow: hidden;
+  position: sticky;
+  top:120px;
+}
+.sidebar-title {
+  color: #fff;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px 10px 20px;
+  font-size: 21px;
+  display: flex;
+  border-radius: 50px 0px 0px 50px;
+  font-family: "Roma-Bold";
+  background: linear-gradient(90deg,rgba(9, 70, 142, 1) 0%, rgba(29, 99, 181, 1) 100%);
+}
+.sidebar-close {
+  display: none;
+  background: transparent;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+}
+.sidebar-menu {
+  list-style: none;
+  margin: 0;
+  padding: 20px 0px 0px 20px;
+}
+.sidebar-menu li {
+  position: relative;
+  border-bottom: 1.5px dotted #5392DB;
+}
+.sidebar-link {
+  color: #fff;
+  padding: 10px 10px 10px 15px;
+  text-decoration: none;
+  transition: all .3s;
+  display: block;
+  font-family: "Avenir-Next-Demi";
+}
+.sidebar-link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 5px;
+  background: #fff;
+  border-radius: 50%;
+}
+.sidebar-link.active::before{
+  background-color:#ffc233;
+}
+.sidebar-link:hover {
+  color: #ffc233;
+  padding-left: 25px;
+}
+/* .sidebar-link.active:hover::before{
+  background-color:#ffc233;
+} */
+.sidebar-link.active {
+  color: #ffc233;
+}
+.sidebar-toggle {
+  display: none;
+}
+.sidebar-overlay {
+  display: none;
+}
+/*--------------- Sidebar End Here ---------------*/
+.innerpagerightside{
+  padding:60px 0px 60px 30px
+}
+
 /*--------------- Contact Us Pages Start Here ---------------*/
 .contactinner {
   display: flex;
@@ -1233,7 +1319,7 @@ Body {
   margin-left: 5px;
 }
 .submit-btn {
-  color: #111;
+    color: #111;
     background: #fff;
     border: none;
     border-radius: 50px;
@@ -1241,7 +1327,6 @@ Body {
     gap: 12px;
     padding: 12px 25px;
     font-size: 16px;
-    font-weight: 600;
     transition: all .3s;
     display: inline-flex;
     line-height: normal;
@@ -1261,77 +1346,18 @@ Body {
 }
 /*--------------- Contact Us Pages End Here ---------------*/
 
+/*----------------------- Inner Pages End Here --------------------*/
 
-/*--------------- Sidebar Start Here ---------------*/
-.left-sidebar {
-  background: #fff;
-  border-radius: 10px;
-  border: 1px solid #e5e5e5;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0,0,0,.08);
-}
 
-.sidebar-title {
-  background: #0d6efd;
-  color: #fff;
-  padding: 18px;
-  font-size: 22px;
-  font-weight: 600;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
-.sidebar-close {
-  display: none;
-  background: transparent;
-  border: 0;
-  color: #fff;
-  cursor: pointer;
-}
+/* -------------------   Responsive Pages Start here ------------------- */
 
-.sidebar-menu {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.sidebar-menu li {
-  border-bottom: 1px solid #eee;
-}
-
-.sidebar-link {
-  display: block;
-  padding: 15px 18px;
-  color: #333;
-  text-decoration: none;
-  transition: .3s;
-}
-
-.sidebar-link:hover {
-  background: #f7f7f7;
-  color: #0d6efd;
-  padding-left: 25px;
-}
-
-.sidebar-link.active {
-  background: #0d6efd;
-  color: #fff;
-  font-weight: 600;
-}
-.sidebar-toggle {
-  display: none;
-}
-.sidebar-overlay {
-  display: none;
-}
-/*--------------- Sidebar End Here ---------------*/
-
-/* ===========================   Responsive Pages Start here =========================== */
 @media (min-width: 1365.98px) {
-  /*-------------------- Contact Us Start Here ------------*/
-
-  /*-------------------- Contact Us End Here ------------*/
+  /*------------- Inner Pages Start Here -------------*/
+  /* .programe_main::after{
+    width:27%;
+  } */
+  /*------------- Inner Pages End Here -------------*/
 }
 
 @media (max-width: 1198.98px) {
@@ -1589,7 +1615,16 @@ Body {
     width: 48%;
   }
   /*--------------- Footer End Here ---------------*/
-
+  /*-------------------- Inner Pages Start Here ------------*/
+  .innerbannersection{
+    margin: 80px 0px 0px 0px;
+    min-height: 150px;
+  }
+  .innerbannerheading{
+    margin: 20px 0 20px;
+    font-size: 25px;
+  }
+  
   /*-------------------- Contact Us Start Here ------------*/
   .contactinner{
     flex-wrap: wrap;
@@ -1630,6 +1665,13 @@ Body {
   }
 
   /*----------- Sidebar Start Here ------------*/
+  .programe_main:after{
+    display:none;
+  }
+  .leftSidebarmain{
+    background-color:transparent;
+    padding:0;
+  }
   .sidebar-toggle{
     display:flex;
     align-items:center;
@@ -1638,12 +1680,15 @@ Body {
     color:#fff;
     border:none;
     padding:14px 18px;
-    border-radius:8px;
-    font-weight:600;
-    margin-bottom:20px;
+    border-radius:0px 50px 50px 0px;
     cursor:pointer;
+    position: absolute;
+    left: 0;
+    font-family: "Roma-Bold";
 }
-
+  .sidebar-toggle span{
+    display:none;
+  }
 .left-sidebar{
     position:fixed;
     top:0;
@@ -1653,20 +1698,20 @@ Body {
     height:100vh;
     border-radius:0;
     z-index:9999;
-
     transform:translateX(-100%);
     transition:transform .35s ease;
     overflow-y:auto;
+    background: #09478e;
 }
-
 .left-sidebar.show{
     transform:translateX(0);
 }
-
+.sidebar-title{
+  border-radius: 0px;
+}
 .sidebar-close{
     display:block;
 }
-
 .sidebar-overlay{
     display:block;
     position:fixed;
@@ -1677,12 +1722,11 @@ Body {
     transition:.35s;
     z-index:9998;
 }
-
 .sidebar-overlay.show{
     opacity:1;
     visibility:visible;
 }
-  /*----------- Sidebar End Here ------------*/
+/*----------- Sidebar End Here ------------*/
 
 
 

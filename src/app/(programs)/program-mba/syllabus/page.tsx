@@ -5,7 +5,9 @@ import React from "react";
 const page = () => {
   return (
     <div className="innerpagerightside">
-      <div className="heading">Overview</div>
+      <div className="heading">
+        Syllabus
+      </div>
     </div>
   );
 };
