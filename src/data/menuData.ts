@@ -9,29 +9,53 @@ export const menuItems: MenuItem[] = [
     label: "About",
     children: [
       {
-        label: "About IMSCDR",
-        href: "/about-imscdr",
+        label: "About IMS",
+        href: "/about-ims",
       },
       {
-        label: "Leadership",
+        label: "Messages",
         children: [
           {
-            label: "Chairman",
-            href: "/leadership/chairman",
+            label: "Chairman Message",
+            href: "/messages/chairman-message",
           },
           {
-            label: "Director",
-            href: "/leadership/director",
+            label: "Directors-Message",
+            href: "/messages/directors-message",
           },
           {
-            label: "Dean",
-            href: "/leadership/dean",
+            label: "Leadership-Team",
+            href: "/messages/leadership-team",
           },
         ],
       },
       {
-        label: "Vision & Mission",
-        href: "/vision-mission",
+        label: "Governing Body",
+        href: "/governing-body",
+      },
+      {
+        label: "College Development Committee",
+        href: "/college-development-committee",
+      },
+      {
+        label: "Approvals & Affiliations",
+        href: "/approvals-and-affiliations",
+      },
+      {
+        label: "AICTE Approval",
+        href: "/AICTE-approval",
+      },
+      {
+        label: "DTE Approval",
+        href: "/DTE-approval",
+      },
+      {
+        label: "University Affiliation",
+        href: "/university-affiliation",
+      },
+      {
+        label: "NAAC Accreditation",
+        href: "/NAAC-accreditation",
       },
     ],
   },
@@ -69,7 +93,7 @@ export const menuItems: MenuItem[] = [
     href: "/student-corner",
   },
   {
-    label: "Governance",
+    label: "Governance & Compliance",
     href: "/governance",
   },
   {
