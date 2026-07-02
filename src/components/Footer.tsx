@@ -220,3 +220,4 @@ const Footer = () => {
 };
 
 export default Footer;
+<script src="https://bot247.live/widget.js?tenant=evonix-organization" async ></script>
