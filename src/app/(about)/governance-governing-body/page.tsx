@@ -1,39 +1,24 @@
+import InnerpageBanner from "@/components/InnerpageBanner";
+import Table from "@/components/ui/Table";
+import {
+  governingBodyColumns,
+  governingBodyMembers,
+} from "@/data/tablemembers";
 
-
-interface Column {
-  key: string;
-  title: string;
-}
-
-interface Props {
-  columns: Column[];
-  data: Record<string, string | number>[];
-}
-
-const MemberTable = ({ columns, data }: Props) => {
+export default function GovernanceGoverningBody() {
   return (
-    <div className="table-container">
-      <table className="member-table">
-        <thead>
-          <tr>
-            {columns.map((column) => (
-              <th key={column.key}>{column.title}</th>
-            ))}
-          </tr>
-        </thead>
+    <section className="innerpage-wrapper">
+      <InnerpageBanner
+        title="Director’s Message"
+        breadcrumbs={[{ label: "Director’s Message" }]}
+      />
+      <div className="tablemain_section">
+        <div className="container">
+          <div className="heading text-center">Governing Body</div>
 
-        <tbody>
-          {data.map((row, index) => (
-            <tr key={index}>
-              {columns.map((column) => (
-                <td key={column.key}>{row[column.key]}</td>
-              ))}
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+          <Table columns={governingBodyColumns} data={governingBodyMembers} />
+        </div>
+      </div>
+    </section>
   );
-};
-
-export default MemberTable;
+}

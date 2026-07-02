@@ -1903,7 +1903,44 @@ Body {
 .member-table tbody tr td {
   border-bottom: 1px solid #e9eef4;
 }
-/* About Us Tab End Here */
+
+
+/* //////////////////////////// */
+.tablemain_section{
+  padding: 80px 0px;
+}
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 15px;
+  border: 1px solid #d8e9f5;
+}
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.custom-table thead {
+  background: #fff;
+}
+.custom-table th {
+  padding: 20px;
+  text-align: left;
+  color: #0b6ea8;
+  font-size: 18px;
+  font-weight: 700;
+}
+.custom-table td {
+  padding: 22px 20px;
+}
+.custom-table tbody tr:nth-child(odd) {
+  background: #eef8ff;
+}
+.custom-table tbody tr:nth-child(even) {
+  background: #fff;
+}
+.custom-table tbody tr:hover {
+  background: #dff2ff;
+}
+/*------------------ About Us Tab End Here ----------------*/
 
 /* -------------------   Responsive Pages Start here ------------------- */
 
