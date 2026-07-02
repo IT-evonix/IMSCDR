@@ -65,10 +65,18 @@ export const menuItems: MenuItem[] = [
     children: [
       {
         label: "MBA",
-        href: "/mba",
+        href: "/program-mba/overview" ,
       },
       {
-        label: "BBA",
+        label: "MCA",
+        href: "/bba",
+      },
+      {
+        label: "BBA / BCA",
+        href: "/bba",
+      },
+      {
+        label: "PhD",
         href: "/bba",
       },
     ],
@@ -76,7 +84,55 @@ export const menuItems: MenuItem[] = [
 
   {
     label: "Admissions",
-    href: "/admissions",
+    children: [
+      {
+        label: "Admission Process ",
+        href: "/admission-process",
+      },
+      {
+        label: "Eligibility Criteria",
+        href: "/eligibility-criteria",
+      },
+      {
+        label: "Admission Schedule",
+        href: "/admission-schedule",
+      },
+      {
+        label: "Prospectus Download",
+        href: "/",
+      },
+      {
+        label: "Scholarships",
+        href: "/",
+      },
+      {
+        label: "Fees Structure and Refund Policy",
+        href: "/fees-structure-and-refund-policy",
+      },
+      {
+        label: "online-admission-inquiry",
+        href: "/bba",
+      },
+      {
+        label: "Reservation Policy",
+        href: "/reservation-policy",
+      },{
+        label: "FAQs",
+        href: "/faqs",
+      },
+      {
+        label: "Documents Required",
+        href: "/documents-required",
+      },
+      {
+        label: "Education Loan Assistance",
+        href: "/education-loan-assistance",
+      },
+      {
+        label: "Hostel Information",
+        href: "/hostel-information",
+      },
+    ],
   },
 
   {
@@ -84,10 +140,51 @@ export const menuItems: MenuItem[] = [
     href: "/placements",
   },
 
+  // {
+  //   label: "Faculty & Research",
+  //   href: "/faculty-and-research",
+  // },
+
   {
     label: "Faculty & Research",
-    href: "/faculty-and-research",
+    children: [
+      {
+        label: "Faculty",
+        children: [
+          {
+            label: "Members",
+            href: "/members",
+          },
+          {
+            label: "Achivements",
+            href: "/achivements",
+          },
+          {
+            label: "Publication",
+            href: "/publication",
+          },
+          {
+            label: "Research Project",
+            href: "/research-project",
+          }, 
+          {
+            label: "Patent & Design Registration",
+            href: "/patent-and-design-registration",
+          },          
+        ],
+      },
+      {
+        label: "Administrative Staff",
+        href: "/administrative-staff",
+      },
+      {
+        label: "Journels",
+        href: "/journels",
+      },
+      
+    ],
   },
+
   {
     label: "Student Corner",
     href: "/student-corner",

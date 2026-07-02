@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const CoursesWeOffer = () => {
   return (
@@ -17,7 +18,7 @@ const CoursesWeOffer = () => {
           </div>
         </div>
         <div className="CoursesWeOffer_inner">
-          <div className="course_card">
+          <Link href="/program-mba/overview" className="course_card">
             <div className="course_card_inner">
               <Image
                 src="/images/home/Coursesimg1.webp"
@@ -47,8 +48,8 @@ const CoursesWeOffer = () => {
                 </svg>
               </div>
             </div>
-          </div>
-          <div className="course_card">
+          </Link>
+          <Link href="/" className="course_card">
             <div className="course_card_inner">
               <Image
                 src="/images/home/Coursesimg2.webp"
@@ -78,8 +79,8 @@ const CoursesWeOffer = () => {
                 </svg>
               </div>
             </div>
-          </div>
-          <div className="course_card">
+          </Link>
+          <Link href="/" className="course_card">
             <div className="course_card_inner">
               <Image
                 src="/images/home/Coursesimg3.webp"
@@ -109,8 +110,8 @@ const CoursesWeOffer = () => {
                 </svg>
               </div>
             </div>
-          </div>
-          <div className="course_card">
+          </Link>
+          <Link href="/" className="course_card">
             <div className="course_card_inner">
               <Image
                 src="/images/home/Coursesimg4.webp"
@@ -140,7 +141,7 @@ const CoursesWeOffer = () => {
                 </svg>
               </div>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
     </section>
