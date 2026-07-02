@@ -14,25 +14,36 @@ export const programSidebar = {
     ],
   },
 
-  bba: {
-    heading: "BBA",
-    menuItems: [
-      { title: "Overview", href: "/program-bba/overview" },
-      { title: "Curriculum", href: "/program-bba/curriculum" },
-      { title: "Eligibility", href: "/program-bba/eligibility" },
-      { title: "Faculty", href: "/program-bba/faculty" },
-      { title: "Syllabus", href: "/program-bba/syllabus" },
-    ],
-  },
+  // bba: {
+  //   heading: "BBA",
+  //   menuItems: [
+  //     { title: "Overview", href: "/program-bba/overview" },
+  //     { title: "Curriculum", href: "/program-bba/curriculum" },
+  //     { title: "Eligibility", href: "/program-bba/eligibility" },
+  //     { title: "Faculty", href: "/program-bba/faculty" },
+  //     { title: "Syllabus", href: "/program-bba/syllabus" },
+  //   ],
+  // },
 
-  bca: {
-    heading: "BCA",
+  // bca: {
+  //   heading: "BCA",
+  //   menuItems: [
+  //     { title: "Overview", href: "/program-bca/overview" },
+  //     { title: "Curriculum", href: "/program-bca/curriculum" },
+  //     { title: "Eligibility", href: "/program-bca/eligibility" },
+  //     { title: "Faculty", href: "/program-bca/faculty" },
+  //     { title: "Syllabus", href: "/program-bca/syllabus" },
+  //   ],
+  // },
+
+  bbaBca: {
+    heading: "BBA / BCA",
     menuItems: [
-      { title: "Overview", href: "/program-bca/overview" },
-      { title: "Curriculum", href: "/program-bca/curriculum" },
-      { title: "Eligibility", href: "/program-bca/eligibility" },
-      { title: "Faculty", href: "/program-bca/faculty" },
-      { title: "Syllabus", href: "/program-bca/syllabus" },
+      { title: "Overview", href: "/program-bba-bca/overview" },
+      { title: "Curriculum", href: "/program-bba-bca/curriculum" },
+      { title: "Eligibility", href: "/program-bba-bca/eligibility" },
+      { title: "Faculty", href: "/program-bba-bca/faculty" },
+      { title: "Syllabus", href: "/program-bba-bca/syllabus" },
     ],
   },
 
