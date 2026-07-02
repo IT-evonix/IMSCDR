@@ -1,15 +1,10 @@
+import Faq from "@/components/Faq";
+import { mbaFaqs } from "@/data/faqData";
 
-import React from "react";
-
-
-const page = () => {
+export default function MBAPage() {
   return (
     <div className="innerpagerightside">
-      <div className="heading">
-        FAQ
-      </div>
+      <Faq title="MBA Frequently Asked Questions" faqs={mbaFaqs} />
     </div>
   );
-};
-
-export default page;
+}

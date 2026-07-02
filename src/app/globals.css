@@ -1258,6 +1258,61 @@ Body {
   padding: 60px 0px 60px 30px;
 }
 
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.faq-item {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+.faq-item.active {
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+.faq-question {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 24px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  text-align: left;
+}
+.faq-question .subheading {
+  font-size: 20px;
+  color: #09468e;
+}
+.faq-question svg {
+  flex-shrink: 0;
+  color: #09468e;
+  transition: 0.3s;
+}
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.4s ease,
+    padding 0.4s ease;
+  padding: 0 30px;
+}
+.faq-answer.show {
+  max-height: 500px;
+  padding: 0 30px 24px;
+}
+.faq-answer p {
+  margin: 0;
+  font-size: 16px;
+}
+/*----------------------- Inner Pages End Here --------------------*/
+
 /*--------------- Contact Us Pages Start Here ---------------*/
 .contactinner {
   display: flex;
@@ -1407,7 +1462,7 @@ Body {
   box-shadow: 0 10px 10px #0000000a;
   margin: 0px 0 0px 0;
   display: flex;
-  background-image:url(/images/news-and-events/blog-shape.webp);
+  background-image: url(/images/news-and-events/blog-shape.webp);
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: 20px;
@@ -1433,7 +1488,7 @@ Body {
 }
 .news-date {
   color: #444;
-  background:transparent;
+  background: transparent;
   border-radius: 30px;
   margin-bottom: 7px;
   padding: 0px 0px;
@@ -1468,7 +1523,7 @@ Body {
   align-items: center;
   gap: 10px;
   margin-top: 10px;
-  padding: 5px 13px;;
+  padding: 5px 13px;
   font-family: Avenir-Next-Demi;
   text-decoration: none;
   transition: all 0.4s;
@@ -1519,10 +1574,10 @@ Body {
   margin-bottom: 30px;
   line-height: 1.8;
 }
-.news-detail-content{
-  position:relative;
+.news-detail-content {
+  position: relative;
 }
-.news-detail-content .news-date{
+.news-detail-content .news-date {
   background: #f5ebd9;
   position: inherit;
   top: inherit;
@@ -1566,8 +1621,289 @@ Body {
   left: 130%;
 }
 /*------------- News And Events Details Page End Here -------------*/
+/*---------------------- About Us Tab Start Here --------------------*/
+.chancellor-section {
+  padding: 80px 0px;
+  background: #fff;
+}
+/*==========================
+   TOP SECTION
+===========================*/
 
-/*----------------------- Inner Pages End Here --------------------*/
+.chancellor-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 70px;
+  margin-bottom: 60px;
+}
+
+/*==========================
+   LEFT CONTENT
+===========================*/
+
+.chancellor-content {
+  width: 48%;
+}
+.chancellor-content .subheading span {
+  font-size: 16px;
+  color: #acacac;
+  font-family: "Roma-Regular";
+}
+/* .chancellor-content h2 {
+  font-size: 54px;
+  font-weight: 700;
+  color: #173b72;
+  line-height: 1.2;
+  margin-bottom: 18px;
+} */
+
+/* .chancellor-content h4 {
+  font-size: 32px;
+  color: #d92d2d;
+  line-height: 1.4;
+  margin-bottom: 28px;
+  font-weight: 700;
+} */
+
+/* .chancellor-content p {
+  font-size: 20px;
+  color: #555;
+  line-height: 1.9;
+  margin-bottom: 40px;
+} */
+/* .read-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 30px;
+  background: #d92d2d;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  transition: .3s;
+}
+
+.read-btn svg {
+  transition: .3s;
+}
+
+.read-btn:hover {
+  background: #173b72;
+}
+
+.read-btn:hover svg {
+  transform: translateX(5px);
+} */
+
+/*==========================
+   IMAGE
+===========================*/
+.profileDataright {
+  width: 50%;
+}
+.chancellor-image {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.profileData {
+  padding: 20px;
+  background: #fff;
+  border-radius: 20px;
+  margin: -80px 0 0 0;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  background: linear-gradient(90deg, #09468e 0%, #89004a 55%);
+}
+.profileData .heading {
+  margin: 0 0 0px;
+}
+.profileData .subheading {
+  color: #fff;
+}
+.profileData .subheading span {
+  font-size: 16px;
+  font-family: "Roma-Regular";
+}
+.chancellor-image img {
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.bg-circle {
+  width: 470px;
+  height: 470px;
+  background: #f3f5fa;
+  border-radius: 50%;
+  position: absolute;
+  right: 30px;
+  top: 60px;
+  z-index: 1;
+}
+
+/*==========================
+   DOTS
+===========================*/
+
+.dot-pattern {
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  width: 120px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  z-index: 3;
+}
+
+.dot-pattern span {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #bfc7d8;
+}
+
+/*==========================
+   QUOTE CARD
+===========================*/
+
+.quote-card {
+  position: relative;
+  background: #f8f9fc;
+  border-radius: 20px;
+  padding: 45px 50px;
+  display: flex;
+  align-items: flex-start;
+  gap: 25px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
+}
+.quote-left {
+  font-size: 90px;
+  color: #efc7c7;
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+.quote-content {
+  flex: 1;
+}
+.quote-content p {
+  color: #27467d;
+  margin-bottom: 25px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+  font-family: "Roma-Semibold";
+}
+.quote-content h5 {
+  color: #d92d2d;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.quote-content span {
+  font-size: 18px;
+  color: #666;
+}
+
+.quote-right {
+  align-self: flex-end;
+  font-size: 90px;
+  color: #cfd5df;
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+
+.member-section {
+  width: 100%;
+  padding: 80px 20px;
+  background: #f6fbff;
+}
+
+.table-title {
+  text-align: center;
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #034f84;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+
+  border-radius: 18px;
+
+  background: #fff;
+
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.08);
+
+  border: 1px solid #d8eaf7;
+}
+
+.member-table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  min-width: 900px;
+}
+
+.member-table thead {
+  background: linear-gradient(90deg, #0f6ba8, #1391d0);
+
+  color: #fff;
+}
+
+.member-table th {
+  padding: 24px;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.member-table td {
+  padding: 24px;
+  font-size: 17px;
+  color: #444;
+  transition: 0.3s;
+}
+.member-table tbody tr:nth-child(odd) {
+  background: #edf8ff;
+}
+
+.member-table tbody tr:nth-child(even) {
+  background: #ffffff;
+}
+.member-table tbody tr {
+  transition: 0.35s;
+}
+.member-table tbody tr:hover {
+  background: #d9f0ff;
+  transform: scale(1.005);
+}
+.member-table tbody tr td:first-child {
+  font-weight: 700;
+  color: #0b6fa4;
+}
+.member-table tbody tr td:nth-child(2) {
+  font-weight: 600;
+}
+.member-table tbody tr td {
+  border-bottom: 1px solid #e9eef4;
+}
+/* About Us Tab End Here */
 
 /* -------------------   Responsive Pages Start here ------------------- */
 
@@ -1666,8 +2002,8 @@ Body {
   /*--------------- News And Events End Here ---------------*/
 }
 @media (max-width: 991.98px) {
-  .heading{
-    font-size:28px;
+  .heading {
+    font-size: 28px;
   }
   /* Header Start Here */
   .topbar_inner {
@@ -1970,7 +2306,7 @@ Body {
   .news-events-section {
     padding: 40px 0;
   }
-  .news-detail-image img{
+  .news-detail-image img {
     height: inherit;
   }
   /*--------------- News And Events End Here ---------------*/
