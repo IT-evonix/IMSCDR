@@ -63,6 +63,10 @@
 .sticky .topbar-buttons .white-btn {
   background-color: #eaeaea !important;
 }
+.sticky .topbar-contact{
+    font-size: 13px;
+    font-family: "Roma-Semibold";
+}
 /* ==========================
    DESKTOP MENU
 ========================== */
@@ -77,10 +81,10 @@
 .desktopNav ul {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 14px;
   list-style: none;
   margin: 0;
-  padding: 5px 10px 5px 45px;
+  padding: 5px 10px 5px 30px;
 }
 
 .menuItem {
@@ -89,7 +93,7 @@
 .menuItem > a {
   display: flex;
   align-items: center;
-  gap: 3px;
+  gap: 2px;
   height: 40px;
   color: #fff;
   text-decoration: none;
@@ -98,7 +102,7 @@
   font-family: "Roma-Regular";
 }
 .menuItem > a:hover {
-  color: #c4161c;
+  color: #f79433;
 }
 /* ==========================
    FIRST DROPDOWN
@@ -107,12 +111,12 @@
   position: absolute;
   top: 100%;
   left: 0;
-  min-width: 200px;
+  min-width: 190px;
   background: #fff;
   list-style: none;
   padding: 10px 0;
   margin: 0;
-  border-radius: 10px;
+  border-radius: 0px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
   visibility: hidden;
   opacity: 0;
@@ -139,16 +143,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 9px 10px 9px 14px;
+  padding: 7px 10px 7px 14px;
   color: #222;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 13px;
   transition: all 0.3s ease;
 }
 .dropdown li a:hover {
   background: #f5f5f5;
-  color: #c4161c;
-  border-radius: 10px;
+  color: #f79433;
+  border-radius: 0px;
 }
 /* ==========================
    NESTED SUBMENU
@@ -157,12 +161,12 @@
   position: absolute;
   top: 0;
   left: 100%;
-  min-width: 200px;
+  min-width: 190px;
   background: #fff;
   list-style: none;
   margin: 0;
   padding: 10px 0;
-  border-radius: 10px;
+  border-radius: 0px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
   visibility: hidden;
   opacity: 0;
@@ -259,13 +263,20 @@
 ========================== */
 @media (min-width: 1365.98px) {
   .menuItem > a {
-    font-size: 16px;
+    font-size: 14px;
   }
   .topbar-contact {
     font-size: 14px;
   }
   .top-btn {
     font-size: 13px;
+  }
+  .dropdown li a {
+    padding: 7px 10px 7px 14px;
+    font-size: 14px;
+  }
+  .desktopNav ul {
+    padding: 5px 35px 5px 45px;
   }
 }
 @media (max-width: 1199.98px) {

@@ -384,7 +384,7 @@ export default function Header() {
     <li className={styles.menuItem}>
       <Link href={item.href || "#"}>
         {item.label}
-        {item.children && <ChevronDown size={16} />}
+        {item.children && <ChevronDown size={14} />}
       </Link>
 
       {item.children && (
@@ -437,7 +437,7 @@ export default function Header() {
         </div>
 
         <div className="headerNavigation">
-          <TopBar />
+          <TopBar isSticky={isSticky} />
 
           <nav className={styles.desktopNav}>
             <ul>
