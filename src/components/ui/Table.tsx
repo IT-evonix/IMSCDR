@@ -1,5 +1,3 @@
-import React from "react";
-
 interface Column {
   key: string;
   title: string;
@@ -7,21 +5,18 @@ interface Column {
 
 interface TableProps {
   columns: Column[];
-  data: Record<string, React.ReactNode>[];
+  data: Record<string, string | number>[];
 }
 
 const Table = ({ columns, data }: TableProps) => {
   return (
-    <div className="innerpage-wrapper1">   
-
-      <div className="table-responsive table-wrapper">
-        <table className="custom-table">
+    <div className="table-card shadow-sm">
+      <div className="table-responsive">
+        <table className="table governing-table align-middle mb-0">
           <thead>
             <tr>
               {columns.map((column) => (
-                <th key={column.key} scope="col">
-                  {column.title}
-                </th>
+                <th key={column.key}>{column.title}</th>
               ))}
             </tr>
           </thead>
@@ -30,7 +25,17 @@ const Table = ({ columns, data }: TableProps) => {
             {data.map((row, index) => (
               <tr key={index}>
                 {columns.map((column) => (
-                  <td key={column.key}>{row[column.key]}</td>
+                  <td
+                    key={column.key}
+                    data-label={column.title}
+                    className={column.key === "name" ? "member-name" : ""}
+                  >
+                    {column.key === "srNo" ? (
+                      <span className="sr-badge">{row[column.key]}</span>
+                    ) : (
+                      row[column.key]
+                    )}
+                  </td>
                 ))}
               </tr>
             ))}
