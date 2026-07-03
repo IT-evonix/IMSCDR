@@ -10,52 +10,52 @@ export const menuItems: MenuItem[] = [
     children: [
       {
         label: "About IMS",
-        href: "/about-ims",
+        href: "/",
       },
       {
         label: "Messages",
         children: [
           {
             label: "Chairman Message",
-            href: "/messages/chairman-message",
+            href: "/about-director-message",
           },
           {
             label: "Directors-Message",
-            href: "/messages/directors-message",
+            href: "/",
           },
           {
             label: "Leadership-Team",
-            href: "/messages/leadership-team",
+            href: "/",
           },
         ],
       },
       {
         label: "Governing Body",
-        href: "/governing-body",
+        href: "/governance-governing-body",
       },
       {
         label: "College Development Committee",
-        href: "/college-development-committee",
+        href: "/governance-college-development-commitee",
       },
       {
         label: "Approvals & Affiliations",
-        href: "/approvals-and-affiliations",
+        href: "/",
       },
       {
         label: "AICTE Approval",
-        href: "/AICTE-approval",
+        href: "/",
       },
       {
         label: "DTE Approval",
-        href: "/DTE-approval",
+        href: "/",
       },
       {
         label: "University Affiliation",
-        href: "/university-affiliation",
+        href: "/",
       },
       {
         label: "NAAC Accreditation",
-        href: "/NAAC-accreditation",
+        href: "/",
       },
     ],
   },
@@ -69,15 +69,15 @@ export const menuItems: MenuItem[] = [
       },
       {
         label: "MCA",
-        href: "/bba",
+        href: "/",
       },
       {
         label: "BBA / BCA",
-        href: "/bba",
+        href: "/",
       },
       {
         label: "PhD",
-        href: "/bba",
+        href: "/",
       },
     ],
   },
@@ -87,15 +87,15 @@ export const menuItems: MenuItem[] = [
     children: [
       {
         label: "Admission Process ",
-        href: "/admission-process",
+        href: "/",
       },
       {
         label: "Eligibility Criteria",
-        href: "/eligibility-criteria",
+        href: "/",
       },
       {
         label: "Admission Schedule",
-        href: "/admission-schedule",
+        href: "/",
       },
       {
         label: "Prospectus Download",
@@ -107,43 +107,68 @@ export const menuItems: MenuItem[] = [
       },
       {
         label: "Fees Structure and Refund Policy",
-        href: "/fees-structure-and-refund-policy",
+        href: "/",
       },
       {
         label: "online-admission-inquiry",
-        href: "/bba",
+        href: "/",
       },
       {
         label: "Reservation Policy",
-        href: "/reservation-policy",
+        href: "/",
       },{
         label: "FAQs",
-        href: "/faqs",
+        href: "/",
       },
       {
         label: "Documents Required",
-        href: "/documents-required",
+        href: "/",
       },
       {
         label: "Education Loan Assistance",
-        href: "/education-loan-assistance",
+        href: "/",
       },
       {
         label: "Hostel Information",
-        href: "/hostel-information",
+        href: "/",
       },
     ],
   },
 
   {
     label: "Placements",
-    href: "/placements",
+    children: [
+      {
+        label: "Placement Overview",
+        href: "/",
+      },
+      {
+        label: "Training & Placement Cell",
+        href: "/",
+      },
+      {
+        label: "Industry Internship",
+        href: "/",
+      },
+      {
+        label: "Industry Collobration",
+        href: "/",
+      },
+      {
+        label: "Top Recruiters",
+        href: "/",
+      },
+      {
+        label: "Placement Report",
+        href: "/",
+      },
+      {
+        label: "Testimonials",
+        href: "/",
+      },
+      
+    ],
   },
-
-  // {
-  //   label: "Faculty & Research",
-  //   href: "/faculty-and-research",
-  // },
 
   {
     label: "Faculty & Research",
@@ -153,33 +178,33 @@ export const menuItems: MenuItem[] = [
         children: [
           {
             label: "Members",
-            href: "/members",
+            href: "/",
           },
           {
             label: "Achivements",
-            href: "/achivements",
+            href: "/",
           },
           {
             label: "Publication",
-            href: "/publication",
+            href: "/",
           },
           {
             label: "Research Project",
-            href: "/research-project",
+            href: "/",
           }, 
           {
             label: "Patent & Design Registration",
-            href: "/patent-and-design-registration",
+            href: "/",
           },          
         ],
       },
       {
         label: "Administrative Staff",
-        href: "/administrative-staff",
+        href: "/",
       },
       {
         label: "Journels",
-        href: "/journels",
+        href: "/",
       },
       
     ],
@@ -187,20 +212,218 @@ export const menuItems: MenuItem[] = [
 
   {
     label: "Student Corner",
-    href: "/student-corner",
+    children: [
+      
+      {
+        label: "Academic Calendar",
+        href: "/",
+      },
+      {
+        label: "Student Projects",
+        href: "/",
+      },
+      {
+        label: "Code of Conduct",
+        href: "/",
+      },
+      {
+        label: "Anti Ragging",
+        href: "/",
+      },
+      {
+        label: "Scholarship",
+        href: "/",
+      },
+      {
+        label: "Internal Complaint Commiittee",
+        href: "/",
+      },
+      {
+        label: "Grievance",
+        href: "/",
+      },
+      {
+        label: "Student Council",
+        href: "/",
+      },
+      {
+        label: "Sports Council",
+        href: "/",
+      },
+
+      {
+        label: "Student Achivements",
+        children: [
+          {
+            label: "Curricular",
+            href: "/",
+          },
+          {
+            label: "Non Curricular",
+            href: "/",
+          },
+          {
+            label: "Report",
+            href: "/",
+          },      
+        ],
+      },
+
+      {
+        label: "Student Club",
+        href: "/",
+      },
+
+      {
+        label: "Infrastructure",
+        children: [
+          {
+            label: "Hostel",
+            href: "/",
+          },
+          {
+            label: "Library",
+            href: "/",
+          },
+          {
+            label: "Amminities",
+            href: "/",
+          },
+          // {
+          //   label: "Laboratory",
+          //   href: "/",
+          // },  
+          // {
+          //   label: "Canteen",
+          //   href: "/",
+          // },  
+          // {
+          //   label: "Computer Center",
+          //   href: "/",
+          // },       
+        ],
+      },
+
+      {
+        label: "Events",
+        children: [
+          {
+            label: "Cultural",
+            href: "/",
+          },
+          {
+            label: "Technical",
+            href: "/",
+          },
+          // {
+          //   label: "Festivals",
+          //   href: "/",
+          // },
+          // {
+          //   label: "Gender Equality",
+          //   href: "/",
+          // },  
+        ],
+      },
+      
+      {
+        label: "Alumni",
+        href: "/",
+      },
+      
+    ],
   },
+
+
   {
     label: "Governance & Compliance",
-    href: "/governance",
+    children: [
+      {
+        label: "Mandatory Disclosure ",
+        href: "/",
+      },
+      {
+        label: "AICTE Approval Letters",
+        href: "/",
+      },
+      {
+        label: "Anti-Ragging Committee",
+        href: "/",
+      },
+      {
+        label: "Grievance Redressal Committee",
+        href: "/",
+      },
+      {
+        label: "Internal Complaint Committee (ICC)",
+        href: "/",
+      },
+      {
+        label: "SC/ST Cell",
+        href: "/",
+      },
+      {
+        label: "OBC Cell",
+        href: "/",
+      },
+      {
+        label: "Women Development Cell",
+        href: "/",
+      },
+      {
+        label: "Sexual Harassment Policy",
+        href: "/",
+      },
+      {
+        label: "Equal Opportunity Cell",
+        href: "/",
+      },
+      {
+        label: "Academic Audit Reports",
+        href: "/",
+      },
+      {
+        label: "NAAC / AQAR Reports",
+        href: "/",
+      },
+      {
+        label: "Finance & Audit Statements",
+        href: "/",
+      },
+      {
+        label: "Statutory Committees",
+        href: "/",
+      },
+      // {
+      //   label: "Governing Body",
+      //   href: "/",
+      // },
+      // {
+      //   label: "College Development Committee",
+      //   href: "/",
+      // },
+    ],
   },
+
   {
     label: "News & Media",
-    href: "/news-and-media",
+    children: [
+      {
+        label: "News & Media ",
+        href: "/",
+      },
+      {
+        label: "Blogs",
+        href: "/",
+      },
+      
+    ],
   },
-  // {
-  //   label: "Contact",
-  //   href: "/contact",
-  // },
+
+  {
+    label: "IQAC",
+    href: "/iqac",
+  },
 ];
 
 

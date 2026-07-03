@@ -17,7 +17,7 @@ export default function GovernanceGoverningBody() {
           <div className="mb-4">
             <div className="heading text-center">Committee Member's</div>
             <p className="text-center">
-                The Governing Body of the B. P. H. E Society is responsible for the overall policy setting and management of each educational Institute which is established under the society, including IMS. The Governing body consists of senior academicians and professionals. The Chairman of B. P. H. E society is Dr. Sanjeevan S Arsud and the Secretary is Mr. Vishal Barnabas.
+                In accordance with the Maharashtra Public Universities Act (MPUA) 2016, Section 97 (1), IMS has constituted a College Development Committee. The working and authority of this committee is in accordance with and as stipulated under Section 97 (5) of the above said MPU Act 2016.
             </p>
           </div>
           <Table columns={collegeCommitteeColumns} data={collegeCommitteeMembers} />
