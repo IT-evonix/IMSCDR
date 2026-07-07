@@ -1,12 +1,11 @@
 import InnerpageBanner from "@/components/InnerpageBanner";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function ChancellorSection() {
   return (
     <section className="innerpage-wrapper">
       <InnerpageBanner
-        title="Director’s Message"
+        title="About Us"
         breadcrumbs={[{ label: "Director’s Message" }]}
       />
       <div className="chancellor-section">
