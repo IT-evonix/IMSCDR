@@ -342,7 +342,7 @@ Body {
   bottom: 0;
   z-index: 1;
 }
-.CoursesWeOffer_sec::before {
+/* .CoursesWeOffer_sec::before {
   content: "";
   z-index: 1;
   background-image: url(/images/home/Coursesbg_icon.webp);
@@ -354,6 +354,30 @@ Body {
   position: absolute;
   right: 14%;
   top: 9%;
+} */
+
+.CoursesWeOffer_sec::before {
+  content: "";
+  position: absolute;
+  top: 9%;
+  right: 14%;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  background: url("/images/home/Coursesbg_icon.webp") center/contain no-repeat;
+  animation: floatHorizontal 3s ease-in-out infinite;
+}
+
+@keyframes floatHorizontal {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 .CoursesWeOffer_inner {
   display: grid;
@@ -626,6 +650,28 @@ Body {
 .excellent_heading {
   font-size: 81px;
   color: #f1e5e5;
+  font-family: Roma-Bold;
+}
+/* .excellent_heading {
+  font-size: 81px;
+  font-weight: 700;
+  background: linear-gradient(
+    90deg,
+    #f1e5e5 0%,
+    #e0cccc 40%,
+    #f1e5e5 80%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s linear infinite;
+  font-family: Roma-Bold;
+} */
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
 }
 .excell_bluebox {
   float: left;

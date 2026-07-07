@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { GraduationCap, Video, CircleHelp } from "lucide-react";
+import { Phone, CircleHelp } from "lucide-react";
+// import { GraduationCap, Video, Phone, CircleHelp } from "lucide-react";
 
 interface TopBarProps {
   isSticky: boolean;
@@ -28,19 +29,24 @@ const TopBar = ({ isSticky }: TopBarProps) => {
         </div>
 
         <div className="topbar-buttons d-flex justify-content-lg-end justify-content-center flex-wrap gap-3">
-          <Link href="#" className="top-btn admission-btn">
+          {/* <Link href="#" className="top-btn admission-btn">
             <GraduationCap size={18} />
             <span>Admission</span>
-          </Link>
+          </Link> */}
 
-          <Link href="#" className="top-btn white-btn">
+          {/* <Link href="#" className="top-btn white-btn">
             <Video size={18} />
             <span>Infrastructure Video</span>
+          </Link> */}
+
+          <Link href="#" className="top-btn white-btn admission-btn">
+            <CircleHelp size={18} />
+            <span>Enquiry Now</span>
           </Link>
 
           <Link href="#" className="top-btn white-btn">
-            <CircleHelp size={18} />
-            <span>Enquiry Now</span>
+            <Phone size={15} />
+            <span>Contact Us</span>
           </Link>
         </div>
       </div>
