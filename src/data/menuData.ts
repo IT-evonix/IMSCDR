@@ -16,15 +16,11 @@ export const menuItems: MenuItem[] = [
         label: "Messages",
         children: [
           {
-            label: "Chairman Message",
+            label: "Directors Message",
             href: "/about-director-message",
           },
           {
-            label: "Directors-Message",
-            href: "/",
-          },
-          {
-            label: "Leadership-Team",
+            label: "Dy Director Message",
             href: "/",
           },
         ],
@@ -39,23 +35,24 @@ export const menuItems: MenuItem[] = [
       },
       {
         label: "Approvals & Affiliations",
-        href: "/",
-      },
-      {
-        label: "AICTE Approval",
-        href: "/",
-      },
-      {
-        label: "DTE Approval",
-        href: "/",
-      },
-      {
-        label: "University Affiliation",
-        href: "/",
-      },
-      {
-        label: "NAAC Accreditation",
-        href: "/",
+        children: [
+          {
+            label: "AICTE Approval",
+            href: "/",
+          },
+          {
+            label: "DTE Approval",
+            href: "/",
+          },
+          {
+            label: "University Affiliation",
+            href: "/",
+          },
+          {
+            label: "NAAC Accreditation",
+            href: "/",
+          },
+        ],
       },
     ],
   },
@@ -65,7 +62,7 @@ export const menuItems: MenuItem[] = [
     children: [
       {
         label: "MBA",
-        href: "/program-mba/overview" ,
+        href: "/program-mba/overview",
       },
       {
         label: "MCA",
@@ -116,7 +113,8 @@ export const menuItems: MenuItem[] = [
       {
         label: "Reservation Policy",
         href: "/",
-      },{
+      },
+      {
         label: "FAQs",
         href: "/",
       },
@@ -166,7 +164,6 @@ export const menuItems: MenuItem[] = [
         label: "Testimonials",
         href: "/",
       },
-      
     ],
   },
 
@@ -191,11 +188,11 @@ export const menuItems: MenuItem[] = [
           {
             label: "Research Project",
             href: "/",
-          }, 
+          },
           {
             label: "Patent & Design Registration",
             href: "/",
-          },          
+          },
         ],
       },
       {
@@ -206,14 +203,12 @@ export const menuItems: MenuItem[] = [
         label: "Journels",
         href: "/",
       },
-      
     ],
   },
 
   {
     label: "Student Corner",
     children: [
-      
       {
         label: "Academic Calendar",
         href: "/",
@@ -265,7 +260,7 @@ export const menuItems: MenuItem[] = [
           {
             label: "Report",
             href: "/",
-          },      
+          },
         ],
       },
 
@@ -292,15 +287,15 @@ export const menuItems: MenuItem[] = [
           // {
           //   label: "Laboratory",
           //   href: "/",
-          // },  
+          // },
           // {
           //   label: "Canteen",
           //   href: "/",
-          // },  
+          // },
           // {
           //   label: "Computer Center",
           //   href: "/",
-          // },       
+          // },
         ],
       },
 
@@ -322,18 +317,16 @@ export const menuItems: MenuItem[] = [
           // {
           //   label: "Gender Equality",
           //   href: "/",
-          // },  
+          // },
         ],
       },
-      
+
       {
         label: "Alumni",
         href: "/",
       },
-      
     ],
   },
-
 
   {
     label: "Governance & Compliance",
@@ -416,7 +409,6 @@ export const menuItems: MenuItem[] = [
         label: "Blogs",
         href: "/",
       },
-      
     ],
   },
 
@@ -425,8 +417,3 @@ export const menuItems: MenuItem[] = [
     href: "/iqac",
   },
 ];
-
-
-
-
-

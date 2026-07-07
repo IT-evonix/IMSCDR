@@ -86,11 +86,11 @@ Body {
   background-color: #f0f0f0;
 }
 .sticky-topbar .topbar-contact {
-    font-size: 13px;
-    font-family: "Roma-Semibold";
+  font-size: 13px;
+  font-family: "Roma-Semibold";
 }
 .sticky-topbar .topbar-contact a {
-    color:#09468e;
+  color: #09468e;
 }
 .top-btn {
   background-color: #fff;
@@ -137,8 +137,7 @@ Body {
 /*--------------- Hero Section Start Here ----------------*/
 .hero-video {
   position: relative;
-  min-height:700px;
-
+  min-height: 700px;
 }
 .hero-video::after {
   position: absolute;
@@ -1202,7 +1201,7 @@ Body {
   display: flex;
   border-radius: 50px 0px 0px 50px;
   font-family: "Roma-Bold";
-  background: linear-gradient(90deg, #135FB9 0%, #09468e 100%);
+  background: linear-gradient(90deg, #135fb9 0%, #09468e 100%);
 }
 .sidebar-close {
   display: none;
@@ -1262,7 +1261,195 @@ Body {
 .innerpagerightside {
   padding: 60px 0px 60px 30px;
 }
-
+/*----- Specializations Page Start Here -----*/
+.specializations_inner {
+  display: flex;
+  gap: 20px;
+}
+.specializations_box {
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: top;
+  border-radius: 20px;
+  box-shadow: 0px 10px 10px #0000000d;
+}
+.majorbox {
+  background-image: url(/images/program/Mejor-Specializations.webp);
+}
+.minorbox {
+  background-image: url(/images/program/Minor-Specializations.webp);
+}
+.majorminor_box {
+  background-color: #fff;
+  border-radius: 30px 30px 15px 15px;
+  padding: 20px;
+  margin: 120px 0 0 0;
+}
+.majorminor_box ul {
+  padding-left: 2px;
+}
+.specialization_icon {
+  display: flex;
+  justify-content: center;
+  border-radius: 100px;
+  background: #fff;
+  width: 75px;
+  height: 75px;
+  align-items: center;
+  margin: -55px auto 20px auto;
+}
+.majorbox .specialization_icon {
+  border: 1.5px solid #44ade2;
+}
+.minorbox .specialization_icon {
+  border: 1.5px solid #ffc233;
+}
+.majorbox .specialization_icon svg {
+  stroke-width: 1;
+  color: #44ade2;
+}
+.minorbox .specialization_icon svg {
+  stroke-width: 1;
+  color: #ffc233;
+}
+.specializations_box ul li {
+  font-size: 15px;
+  position: relative;
+  list-style-type: none;
+  padding: 8px 0 8px 14px;
+  border-bottom: 1.5px dotted #09468e29;
+}
+.majorbox ul li::after {
+  background: #44ade2;
+  content: "";
+  border-radius: 20px;
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  top: 43%;
+  left: 0px;
+}
+.minorbox ul li::after {
+  background-color: #ffc233;
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 20px;
+  position: absolute;
+  top: 43%;
+  left: 0px;
+}
+.specializations_box .subheading {
+  margin: 0px 0px 4px 0px;
+}
+/*----- Specializations Page End Here -----*/
+/*----- Eligibility Page Start Here -----*/
+.eligibility_main {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 244, 239, 1) 100%
+  );
+  padding: 0px 20px 20px 20px;
+  border-radius: 20px;
+}
+.eligibility_inner {
+  padding: 20px;
+  background: #fff;
+  border-radius: 20px;
+}
+.eligibility_inner img {
+  border-radius: 20px;
+}
+.intake_inner {
+  position: relative;
+  font-family: "Roma-Regular";
+}
+.intake_inner img {
+  border-radius: 20px;
+}
+.intake_content {
+  color: #fff;
+  background: #5f68726b;
+  padding: 20px;
+  transition: all 0.8s;
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+}
+.intake_content .heading {
+  margin: 0px;
+  padding: 0px;
+}
+.intake_content p {
+  margin: 0px;
+  padding: 10px 0px;
+}
+.intake_number {
+  font-size: 35px;
+  color: #ffc233;
+  font-family: "Roma-Bold";
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.intake_number span {
+  font-size: 20px;
+  color: #fff;
+}
+/*----- Eligibility Page End Here -----*/
+.overview_inner {
+  display: flex;
+  gap: 30px;
+}
+.overview_inner img {
+  border-radius: 10px;
+}
+.overview_rightleft {
+  display: flex;
+  gap: 20px;
+}
+.overview_left {
+  width: 48%;
+}
+.overview_right {
+  width: 48%;
+  display: flex;
+  gap: 20px;
+  position: sticky;
+  top: 100px;
+  align-self: flex-start;
+}
+.overview_rightinner {
+  width: 45%;
+}
+.overview_left2 {
+  width: 55%;
+}
+.overview_right1 {
+  width: 100%;
+  margin: 0 0 20px 0;
+}
+.overview_right2 {
+  color: #fff;
+  background: #f79433;
+  width: 240px;
+  padding: 15px;
+  font-family: "Avenir-Next-Regular";
+  font-size: 18px;
+  position: relative;
+  border-radius: 10px;
+  line-height: normal;
+  position: relative;
+  z-index: 99;
+}
+.overview_right2 span {
+  font-family: "Roma-Bold";
+}
+/*----- FAQ Page Start Here -----*/
 .faq-list {
   display: flex;
   flex-direction: column;
@@ -1316,6 +1503,7 @@ Body {
   margin: 0;
   font-size: 16px;
 }
+/*----- FAQ Page End Here -----*/
 /*----------------------- Inner Pages End Here --------------------*/
 
 /*--------------- Contact Us Pages Start Here ---------------*/
@@ -1627,18 +1815,19 @@ Body {
 }
 /*------------- News And Events Details Page End Here -------------*/
 /*---------------------- About Us Tab Start Here --------------------*/
+/*---------------------- Leaders Pages Start Here --------------------*/
 .chancellor-section {
   padding: 80px 0px;
   background: #fff;
   position: relative;
 }
-.chancellor-section::after{
+.chancellor-section::after {
   content: "";
   position: absolute;
   width: 25%;
   height: 100%;
   left: 0;
-  bottom:0%;
+  bottom: 0%;
   background: #09468e;
 }
 .chancellor-wrapper {
@@ -1646,44 +1835,44 @@ Body {
   justify-content: space-between;
   gap: 70px;
 }
-.chancellor-image{
-  background: #DDE7F4;
+.chancellor-image {
+  background: #dde7f4;
   border-radius: 40px;
   position: sticky;
-  z-index:2;
+  z-index: 2;
   top: 120px;
 }
-.chancellor-image img{
+.chancellor-image img {
   border-radius: 40px;
 }
-.chancellor-content .heading{
+.chancellor-content .heading {
   margin: 0 0 0px 0;
 }
-.chancellor-content .subheading span{
+.chancellor-content .subheading span {
   font-family: "Roma-regular";
   font-size: 15px;
 }
-.about-nacc{
+.about-nacc {
   justify-content: space-between;
   gap: 30px;
   display: flex;
-  background: #FFF1F0;
+  background: #fff1f0;
   border-radius: 20px;
   padding: 20px;
 }
-.about-naccimg{
+.about-naccimg {
   margin: 0 0 0 -60px;
 }
-.about-nacc-content{
+.about-nacc-content {
   width: 90%;
 }
-.aboutaward{
-  background: #FEFAEF;
-  margin-top:40px;
+.aboutaward {
+  background: #fefaef;
+  margin-top: 40px;
 }
-.aboutaward .about-naccimg{
+.aboutaward .about-naccimg {
   background: #fff;
-  border: 1px solid #F5EFDE;
+  border: 1px solid #f5efde;
   border-radius: 200px;
   padding: 10px;
   width: 90px;
@@ -1692,9 +1881,7 @@ Body {
   align-items: center;
   justify-content: center;
 }
-
-
-
+/*---------------------- Leaders Pages End Here --------------------*/
 /*----------------- Governing Body Start Here ------------------*/
 .tablemain_section {
   padding: 80px 0;
@@ -1746,7 +1933,7 @@ Body {
   border-bottom: none;
 }
 .governing-table tbody tr:hover td {
-  background: #f8fbff;
+  background: #9ed2f152;
 }
 .member-name {
   font-family: "Roma-Semibold";
@@ -1781,16 +1968,55 @@ Body {
   font-weight: 500;
   line-height: 1.8;
 }
-
 .governing-table td {
   white-space: normal;
 }
-
 .member-name {
   font-weight: 600;
 }
 /*----------------- Governing Body End Here ------------------*/
-
+/*----------- Approvals & Affiliations Start Here -----------*/
+.approval-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: all 0.35s ease;
+  border: 1px solid #f1f1f1;
+  height: 100%;
+}
+.approval-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
+}
+.approval-icon {
+  width: 65px;
+  height: 65px;
+  background: #fff4ef;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f79433;
+  flex-shrink: 0;
+}
+.approval-link {
+  color: #000;
+  font-size: 16px;
+  text-decoration: none;
+  transition: all 0.3s;
+  font-family: "Roma-Regular";
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  padding: 15px;
+}
+.approval-link:hover {
+  color: #09468e;
+}
+.approval-icon svg {
+  stroke-width: 1;
+}
+/*----------- Approvals & Affiliations End Here-----------*/
 /*------------------ About Us Tab End Here ----------------*/
 
 /* -------------------   Responsive Pages Start here ------------------- */
