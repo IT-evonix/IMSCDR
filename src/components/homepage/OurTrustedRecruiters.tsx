@@ -25,7 +25,7 @@ export default function OurTrustedRecruiters() {
   return (
     <div className="companylogo-slider">
       <div className="heading text-center mb-3 mb-4">
-        Our Trusted Recruiters
+        Our Recruiters
       </div>
       <Swiper
         modules={[Autoplay]}

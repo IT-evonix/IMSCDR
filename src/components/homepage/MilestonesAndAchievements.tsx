@@ -68,12 +68,10 @@ export default function MilestonesAndAchievements() {
           <div className="row justify-content-center">
             <div className="col-md-9 position-relative z-2">
               <div className="heading text-white text-center">
-                Milestones & Achievements
+                Awards & Accolades
               </div>
               <p className="text-center">
-                Lorem Ipsum has been the industrys standard dummy text ever
-                since the unknown printer took a galley of type and scrambled it
-                to make a type specimen book.
+                Over the years, we have earned recognition for our commitment to quality education and institutional excellence. These milestones stand as a testament to the dedication of our faculty, students, and stakeholders.
               </p>
             </div>
           </div>
