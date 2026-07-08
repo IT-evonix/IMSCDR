@@ -254,19 +254,32 @@ Body {
   position: relative;
 }
 .aboutus_left::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: -60px;
-  transform: translateY(-50%);
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  background-image: url("/images/home/aboutlogo.webp");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  z-index: 2;
+    content: "";
+    z-index: 2;
+    background-image: url("/images/home/aboutlogo.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 50%;
+    right: -60px;
+    transform: translateY(-50%);
+    animation: floatVertical 3s ease-in-out infinite;
+}
+
+@keyframes floatVertical {
+    0% {
+        transform: translateY(-50%) translateY(0);
+    }
+    50% {
+        transform: translateY(-50%) translateY(-15px);
+    }
+    100% {
+        transform: translateY(-50%) translateY(0);
+    }
 }
 .aboutus_right {
   width: 60%;
@@ -724,9 +737,24 @@ Body {
 .placement_whitebox:hover {
   background-color: #fff;
 }
-.placement_whitebox img {
+/* .placement_whitebox img {
   width: 100px;
   max-height: inherit;
+} */
+.placement_whitebox img {
+    width: 100px;
+    max-height: inherit;
+    animation: zoomInOut 3s ease-in-out infinite;
+    transform-origin: center;
+}
+
+@keyframes zoomInOut {
+    0%, 100% {
+        transform: scale(0.8);
+    }
+    50% {
+        transform: scale(1.05);
+    }
 }
 .placement_whitebox span {
   font-size: 18px;
@@ -1307,8 +1335,11 @@ Body {
 .innerpagerightside {
   padding: 60px 0px 60px 30px;
 }
+.innerpagerightside{
+   scroll-margin-top: 100px;
+}
 /*----- Specializations Page Start Here -----*/
-.specializations_inner {
+/* .specializations_inner {
   display: flex;
   gap: 20px;
 }
@@ -1387,6 +1418,104 @@ Body {
 }
 .specializations_box .subheading {
   margin: 0px 0px 4px 0px;
+} */
+
+.specialization-section{
+    position:relative;
+    margin-bottom:30px;
+}
+.specialization-section .specialization_inner2{
+  display: flex;
+  flex-direction: row-reverse;
+}
+.specialization-section .specialization_inner2 .right-box{
+  right:inherit;
+  left:0;
+  background: linear-gradient(135deg, #E0E0E0, #fff);
+}
+.specialization-section .specialization_inner2 .content {
+  right: 15px;
+  left:inherit;
+}
+.specialization-section .specialization_inner2 .right-box li{
+  color: #000;
+}
+.specialization-section .specialization_inner2 .right-box li:before {
+  color: #000;
+}
+.specialization-section .specialization_inner2 .left-box img{
+    object-position:right;
+}
+.specialization-section .left-box{
+    width:60%;
+    position:relative;
+    border-radius:30px;
+    height:309px;
+    overflow: hidden;
+}
+.specialization-section .left-box img{
+    width:100%;
+    display:block;
+    height:520px;
+    object-fit:cover;
+    object-position:left;
+    border-radius: 30px;
+    transition-duration:0.5s;
+}
+.specialization-section .left-box:hover img{
+  transform: scale(1.1);
+}
+.specialization-section .overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to top,rgba(0, 0, 0, 0.774),rgba(255, 255, 255, 0));
+    border-radius: 30px;
+}
+.specialization-section .content{
+    color: #fff;
+    width: 70%;
+    position: absolute;
+    bottom: 20px;
+    left: 25px;
+} 
+.specialization-section .content p{
+    font-size:16px;
+    line-height:normal;
+    color:#fff;
+    font-family: "Avenir-Next-Regular";
+}
+.specialization-section .right-box{
+  color: #fff;
+  background: linear-gradient(135deg, #C91C79, #89004A);
+  border-radius: 30px;
+  width: 51%;
+  padding: 20px 10px 20px 20px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+}
+.specialization-section .right-box ul{
+    list-style:none;
+    margin: 0;
+    padding: 0;
+}
+.specialization-section .right-box li{
+    font-size:16px;
+    padding: 7px 0 7px 18px;
+    font-size: 16px;
+    position: relative;
+    line-height:normal;
+}
+.specialization-section .right-box li::before{
+  content: "✓";
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  position: absolute;
+  top: 8px;
+  left: 0;
 }
 /*----- Specializations Page End Here -----*/
 /*----- Eligibility Page Start Here -----*/

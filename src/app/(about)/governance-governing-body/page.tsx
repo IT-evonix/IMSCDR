@@ -17,7 +17,7 @@ export default function GovernanceGoverningBody() {
           <div className="mb-4">
             <div className="heading text-center">Member's</div>
             <p className="text-center">
-                The Governing Body of the B. P. H. E Society is responsible for the overall policy setting and management of each educational Institute which is established under the society, including IMS. The Governing body consists of senior academicians and professionals. The Chairman of B. P. H. E society is Dr. Sanjeevan S Arsud and the Secretary is Mr. Vishal Barnabas.
+                The Governing Body of the B.P.H.E. Society, led by Chairman Dr. Sanjeevan S. Arsud and Secretary Mr. Vishal Barnabas, provides strategic direction and oversight for all educational institutes established under the society, including IMSCDR. Comprising senior academicians and experienced professionals, the body is responsible for policy setting and guiding the overall management of the institute.
             </p>
           </div>
           <Table columns={governingBodyColumns} data={governingBodyMembers} />

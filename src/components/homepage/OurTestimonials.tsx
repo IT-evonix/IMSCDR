@@ -104,11 +104,11 @@ export default function OurTestimonials() {
         <div className="row justify-content-center">
           <div className="col-md-9 position-relative z-2">
             <div className="heading text-center text-white">
-              Our Testimonials
+              Testimonials
             </div>
 
             <p className="text-center mb-3 mb-sm-5 text-white">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem  accusantium doloremque laudantium,  ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt  explicabo.
+              Hear from our students and alumni about their learning experiences and career journeys at IMSCDR.
             </p>
           </div>
         </div>

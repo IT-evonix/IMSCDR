@@ -7,8 +7,7 @@ const page = () => {
       <div className="eligibility_main">
         <div className="heading">Eligibility</div>
         <p>
-          Academic qualifications and entrance requirements for admission to the
-          MBA business management program.
+          As decided by the Admission Regulating Authority of Government of Maharashtra.
         </p>
         <div className="eligibility_inner">
           <Image

@@ -7,13 +7,10 @@ const CoursesWeOffer = () => {
     <section className="CoursesWeOffer_sec">
       <div className="container">
         <div className="row">
-          <div className="col-md-8 mb-2 mb-sm-4 position-relative z-2">
+          <div className="col-md-9 mb-2 mb-sm-4 position-relative z-2">
             <div className="heading text-white">Courses We Offer</div>
             <p className="text-white">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo.
+              We offer a diverse range of programs across management and computer applications, including MBA, MCA, BBA, and BCA, along with doctoral studies through our Ph.D. programs. All courses are affiliated to Savitribai Phule Pune University and approved by AICTE, New Delhi. Each program is designed to blend academic rigor with practical industry exposure, preparing students for successful careers in their chosen fields.
             </p>
           </div>
         </div>
