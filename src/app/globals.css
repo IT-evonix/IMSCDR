@@ -1276,6 +1276,7 @@ Body {
   border-radius: 50px 0px 0px 50px;
   font-family: "Roma-Bold";
   background: linear-gradient(90deg, #135fb9 0%, #09468e 100%);
+  line-height: normal;
 }
 .sidebar-close {
   display: none;
@@ -1446,6 +1447,9 @@ Body {
 .specialization-section .specialization_inner2 .left-box img{
     object-position:right;
 }
+.specialization-section .specialization_inner2 .left-box{
+    height: 270px;
+}
 .specialization-section .left-box{
     width:60%;
     position:relative;
@@ -1489,7 +1493,7 @@ Body {
   background: linear-gradient(135deg, #C91C79, #89004A);
   border-radius: 30px;
   width: 51%;
-  padding: 20px 10px 20px 20px;
+  padding: 20px 10px 20px 30px;
   position: absolute;
   top: 50%;
   right: 0;
@@ -2198,9 +2202,9 @@ Body {
 
 @media (min-width: 1365.98px) {
   /*------------- Inner Pages Start Here -------------*/
-  /* .programe_main::after{
-    width:27%;
-  } */
+  .excell_girlbox{
+    width: 24%;
+  }
   /*------------- Inner Pages End Here -------------*/
 }
 

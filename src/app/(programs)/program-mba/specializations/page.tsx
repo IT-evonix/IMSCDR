@@ -17,20 +17,19 @@ const page = () => {
             />
             <div className="overlay"></div>
             <div className="content">
-              <div className="subheading">The Major specializations offered at IMS</div>
+              <div className="subheading">Major Specializations</div>
               <p>
-                Our major specializations form the strategic core of your
-                management expertise.
+                Our major specializations form the strategic core of your management expertise. 
               </p>
             </div>
           </div>
           <div className="right-box">
             <ul>
-              <li>Marketing Management (MKT).</li>
-              <li>Financial Management (FIN).</li>
-              <li>Human Resources Management (HRM).</li>
-              <li>Operations & Supply Chain Management (OSCM).</li>
-              <li>Business Analytics (BA).</li>
+              <li>Marketing Management (MKT)</li>
+              <li>Financial Management (FIN)</li>
+              <li>Human Resources Management (HRM)</li>
+              <li>Operations & Supply Chain Management (OSCM)</li>
+              <li>Business Analytics (BA)</li>
             </ul>
           </div>
         </div>
@@ -48,20 +47,18 @@ const page = () => {
             />
             <div className="overlay"></div>
             <div className="content">
-              <div className="subheading">The Major specializations offered at IMS</div>
+              <div className="subheading">Minor Specializations</div>
               <p>
-                Our major specializations form the strategic core of your
-                management expertise.
+                Our minor specializations broaden your perspective and add cross-functional versatility.
               </p>
             </div>
           </div>
           <div className="right-box">
             <ul>
-              <li>Marketing Management (MKT).</li>
-              <li>Financial Management (FIN).</li>
-              <li>Human Resources Management (HRM).</li>
-              <li>Operations & Supply Chain Management (OSCM).</li>
-              <li>Business Analytics (BA).</li>
+              <li>Rural & Agribusiness Management (RABM)</li>
+              <li>Pharma & Healthcare Management (PHM)</li>
+              <li>Tourism & Hospitality Management (THM)</li>
+              <li>International Business Management (IB)</li>
             </ul>
           </div>
         </div>
