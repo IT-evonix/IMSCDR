@@ -19,7 +19,7 @@ const ExcellentPlacements = () => {
                 <div className="row">
                   <div className="col-lg-12 mb-4">
                     <b>
-                      IMS, Ahmednagar has established itself as one of the
+                      IMSCDR, BPHES Ahilyanagar has established itself as one of the
                       leading management institutes, with top-class faculty
                     </b>
                   </div>

@@ -20,25 +20,14 @@ const AboutUs = () => {
             </div>
             <div className="aboutus_right">
               <div className="aboutus_right_inner">
-                <div className="subheading">
+                {/* <div className="subheading">
                   About Institute of Management Studies
-                </div>
+                </div> */}
                 <div className="heading">
-                  Bhaskar Pandurang Hivale Education (B.P.H.E.)
+                  About BPHES IMSCDR
                 </div>
                 <p>
-                  The Bhaskar Pandurang Hivale Education (B.P.H.E.) Society’s
-                  Institute of Management Studies, Career Development and
-                  Research (IMS) is a premier management institute conducting
-                  various quality programmes in Management and Information
-                  Technology in Ahmednagar.{" "}
-                </p>
-                <p>
-                  IMS is affiliated to the Savitribai Phule Pune University,
-                  Pune and is recognized by the All India Council for Technical
-                  Education (AICTE), New Delhi. IMS has reputation for novel and
-                  need based courses, visionary leadership, well qualified and
-                  experienced faculty...
+                  BPHES Institute of Management Studies, Career Development and Research (IMSCDR), Ahilyanagar, is a premier institute offering a range of education programs including MBA, MCA, BBA, BCA, and Ph.D. Affiliated to Savitribai Phule Pune University, recognized by AICTE, New Delhi, and NAAC Re-Accredited, we are also honored with the Best Institute Award from Savitribai Phule Pune University. With over 65% of our faculty holding Ph.D. degrees, we are known as one of the best management institutes in India, delivering education through experienced teachers, modern teaching methods, and strong industry connections. Our MBA with placement support, transparent governance, and student-first approach ensure your success remains our topmost priority.
                 </p>
                 <ExploreBtn />
               </div>

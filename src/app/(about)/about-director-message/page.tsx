@@ -31,7 +31,7 @@ export default function ChancellorSection() {
                   Bhaskar Pandurang Hivale Education (B.P.H.E.)
                 </span>
               </div>
-              <p
+              {/* <p
                 className="mt-2 mt-sm-4"
                 style={{ fontFamily: "Avenir-Next-Demi" }}
               >
@@ -40,20 +40,16 @@ export default function ChancellorSection() {
                 (IMS) is a premier management institute conducting various
                 quality programmes in Management and Information Technology in
                 Ahmednagar.
+              </p> */}
+              <p className="mt-2 mt-sm-4">
+                Welcome to BPHES Institute of Management Studies, Career Development and Research (IMSCDR), Ahilyanagar. As a premier institute offering quality program in Management and Information Technology, we are proud to be affiliated with Savitribai Phule Pune University and recognized by AICTE, New Delhi.
               </p>
-              <p>
-                IMS is affiliated to the Savitribai Phule Pune University, Pune
-                and is recognized by the All India Council for Technical
-                Education (AICTE), New Delhi. IMS has reputation for novel and
-                need based courses, visionary leadership, well qualified and
-                experienced faculty members, modern and interactive teaching
-                methodology, state of the art infrastructure, innovative student
-                development initiatives, strong industry interface, good
-                placements, meticulous research, meaningful consultancy,
-                professional training, fair and transparent governance and
-                community‐oriented activities.
-              </p>
-              <div className="about-nacc">
+              <p>Our strength lies in our forward-thinking approach to education. With experienced faculty, modern teaching methods, and state-of-the-art infrastructure, we create an environment where students can truly thrive. We design our courses to meet real-world needs, ensuring you gain relevant knowledge and practical skills that employers value.</p>
+              <p>Beyond the classroom, we focus on your overall growth through strong industry connections, meaningful research opportunities, professional training, and community-oriented activities. Our consistent placement record speaks to the trust that leading companies place in our students.</p>
+              <p>I invite you to be part of a learning community that values innovation, integrity, and excellence. At IMSCDR, we are committed to shaping not just successful professionals, but responsible individuals ready to make a positive impact. Your journey toward a rewarding career begins here.</p>
+              
+              
+              <div className="about-nacc d-none">
                 <div className="about-naccimg">
                   <Image
                     src="/images/about/naac.webp"
@@ -72,7 +68,7 @@ export default function ChancellorSection() {
                 </div>
               </div>
               
-              <div className="about-nacc aboutaward">
+              <div className="about-nacc aboutaward d-none">
                 <div className="about-naccimg">
                   <Image
                     src="/images/about/award.webp"
