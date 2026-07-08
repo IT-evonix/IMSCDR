@@ -250,10 +250,10 @@ Body {
   align-items: center;
 }
 .aboutus_left {
-  width: 40%;
+  width: 45%;
   position: relative;
 }
-.aboutus_left::after {
+/* .aboutus_left::after {
     content: "";
     z-index: 2;
     background-image: url("/images/home/aboutlogo.webp");
@@ -280,10 +280,10 @@ Body {
     100% {
         transform: translateY(-50%) translateY(0);
     }
-}
+} */
 .aboutus_right {
-  width: 60%;
-  padding: 0px 0px 0px 100px;
+  width: 55%;
+  padding: 0px 0px 0px 50px;
 }
 .aboutus_left img {
   border-radius: 40px;
@@ -2356,12 +2356,12 @@ Body {
     width: 100%;
     padding: 0 0 0 0px;
   }
-  .aboutus_left:after {
+  /* .aboutus_left:after {
     top: inherit;
     right: 10px;
     transform: inherit;
     bottom: 10px;
-  }
+  } */
   /*-------------------- About Us End Here ------------*/
   /*-------------------- Courses We Offer Start Here ------------*/
   .subheading {

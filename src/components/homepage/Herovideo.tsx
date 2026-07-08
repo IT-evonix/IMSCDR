@@ -7,8 +7,8 @@ const Herovideo = () => {
         <source src="/videos/herovideo.mp4" type="video/mp4" />
       </video>
       <div className="herobanner_Content">
-        <h3>Welcome to the <br /> Bhaskar Pandurang Hivale Education (B.P.H.E.)</h3>
-        <h4>Awarded the Best Institute by</h4>
+        <h3>Welcome to BPHES Institute of Management Studies,<br /> Career Development and Research (IMSCDR)</h3>
+        <h4>Awarded the Best Institute by </h4>
         <h1>Savitribai Phule Pune University</h1>
       </div>
     </section>
