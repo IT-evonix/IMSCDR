@@ -27,7 +27,7 @@ const Footer = () => {
                   Institute of Management Studies Career Development & Research,
                   Station Road,
                 </p>
-                <p className="p-0 m-0">Ahmednagar (MH) - 414001</p>
+                <p className="p-0 m-0">Ahilyanagar (MH) - 414001</p>
               </div>
               {/* Social Icons */}
               <div className="social-icons">

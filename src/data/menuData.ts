@@ -21,7 +21,7 @@ export const menuItems: MenuItem[] = [
           },
           {
             label: "Dy Director Message",
-            href: "/",
+            href: "/about-dy-director-msg",
           },
         ],
       },
@@ -38,7 +38,7 @@ export const menuItems: MenuItem[] = [
         children: [
           {
             label: "AICTE Approval",
-            href: "/",
+            href: "/about-aicte-approval",
           },
           {
             label: "DTE Approval",
@@ -403,7 +403,7 @@ export const menuItems: MenuItem[] = [
     children: [
       {
         label: "News & Media ",
-        href: "/",
+        href: "/news-events",
       },
       {
         label: "Blogs",
@@ -414,6 +414,6 @@ export const menuItems: MenuItem[] = [
 
   {
     label: "IQAC",
-    href: "/iqac",
+    href: "/",
   },
 ];
