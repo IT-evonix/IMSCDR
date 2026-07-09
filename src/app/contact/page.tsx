@@ -60,7 +60,7 @@ const ContactPage = () => {
               <div className="contactbox contactinfo">
                 <p>
                   Institute of Management Studies Career Development &
-                  Research, Station Road, Ahmednagar (MH) – 414001
+                  Research, Station Road, Ahilyanagar (MH) – 414001
                 </p>
               </div>
             </div>

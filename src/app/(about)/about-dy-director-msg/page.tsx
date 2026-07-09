@@ -5,7 +5,7 @@ export default function ChancellorSection() {
   return (
     <section className="innerpage-wrapper">
       <InnerpageBanner
-        title="About Us"
+        title="Deputy Director’s Message"
         breadcrumbs={[{ label: "Director’s Message" }]}
       />
       <div className="chancellor-section">

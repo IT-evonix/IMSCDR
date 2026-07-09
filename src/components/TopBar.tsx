@@ -44,7 +44,7 @@ const TopBar = ({ isSticky }: TopBarProps) => {
             <span>Enquiry Now</span>
           </Link>
 
-          <Link href="#" className="top-btn white-btn">
+          <Link href="/contact" className="top-btn white-btn">
             <Phone size={15} />
             <span>Contact Us</span>
           </Link>

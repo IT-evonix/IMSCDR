@@ -74,7 +74,6 @@ const Page = () => {
                         className="news-btn"
                       >
                         <span>Read More</span>
-
                         <svg
                           width="14"
                           height="11"
