@@ -78,12 +78,12 @@ export default function CampusLife() {
 
           {/* Center */}
           <a
-            href="/images/home/gallery/CampusLife4.png"
+            href="/images/home/gallery/CampusLife4.webp"
             data-fancybox="gallery"
             className="galleryItem centerTall"
           >
             <Image
-              src="/images/home/gallery/CampusLife4.png"
+              src="/images/home/gallery/CampusLife4.webp"
               alt="Campus Life 4"
               width={800}
               height={600}
