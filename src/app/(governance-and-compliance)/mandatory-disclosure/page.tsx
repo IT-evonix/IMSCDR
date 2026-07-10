@@ -6,10 +6,13 @@ export default function Page() {
   return (
     <div>
       <InnerpageBanner
-        title="Approvals & Affiliations"
+        title="Governance & Compliance"
         breadcrumbs={[{ label: "Director’s Message" }]}
       />
-      <ApprovalList title="AICTE Approval" data={approvalData.aicte} />
+      <ApprovalList
+        title="Mandatory Disclosure"
+        data={approvalData.mandatoryDisclosure}
+      />
     </div>
   );
 }

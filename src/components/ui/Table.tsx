@@ -23,12 +23,35 @@ function isRowSpanCell(cell: TableCell): cell is RowSpanCell {
   return (
     typeof cell === "object" &&
     cell !== null &&
-    "rowSpan" in cell &&
-    "value" in cell
+    "value" in cell &&
+    "rowSpan" in cell
   );
 }
 
 const Table = ({ columns, data }: TableProps) => {
+  const getCellClass = (key: string) => {
+    switch (key) {
+      case "name":
+        return "member-name";
+      case "srNo":
+        return "sr-no";
+      default:
+        return "";
+    }
+  };
+
+  const renderCell = (cell: TableCell, key: string) => {
+    if (cell === null) return null;
+
+    const value = isRowSpanCell(cell) ? cell.value : cell;
+
+    if (key === "srNo") {
+      return <span className="sr-badge">{value}</span>;
+    }
+
+    return value;
+  };
+
   return (
     <div className="table-card shadow-sm">
       <div className="table-responsive">
@@ -47,53 +70,16 @@ const Table = ({ columns, data }: TableProps) => {
                 {columns.map((column) => {
                   const cell = row[column.key];
 
-                  // Skip merged cells
-                  if (cell === null) {
-                    return null;
-                  }
+                  if (cell === null) return null;
 
-                  // RowSpan cell
-                  if (isRowSpanCell(cell)) {
-                    return (
-                      <td
-                        key={column.key}
-                        rowSpan={cell.rowSpan}
-                        data-label={column.title}
-                        className={
-                          column.key === "name"
-                            ? "member-name"
-                            : column.key === "srNo"
-                            ? "sr-no"
-                            : ""
-                        }
-                      >
-                        {column.key === "srNo" ? (
-                          <span className="sr-badge">{cell.value}</span>
-                        ) : (
-                          cell.value
-                        )}
-                      </td>
-                    );
-                  }
-
-                  // Normal cell
                   return (
                     <td
                       key={column.key}
+                      rowSpan={isRowSpanCell(cell) ? cell.rowSpan : undefined}
                       data-label={column.title}
-                      className={
-                        column.key === "name"
-                          ? "member-name"
-                          : column.key === "srNo"
-                          ? "sr-no"
-                          : ""
-                      }
+                      className={getCellClass(column.key)}
                     >
-                      {column.key === "srNo" ? (
-                        <span className="sr-badge">{cell}</span>
-                      ) : (
-                        cell
-                      )}
+                      {renderCell(cell, column.key)}
                     </td>
                   );
                 })}

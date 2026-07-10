@@ -2156,6 +2156,9 @@ Body {
 }
 /*----------------- Governing Body End Here ------------------*/
 /*----------- Approvals & Affiliations Start Here -----------*/
+.all-3p-section{
+  padding:80px 0px;
+}
 .approval-card {
   background: #fff;
   border-radius: 15px;
