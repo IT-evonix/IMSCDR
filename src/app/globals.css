@@ -57,10 +57,6 @@ Body {
 .headerNavigation {
   padding: 10px 0px;
 }
-
-/* .headerNavigation ul .DesktopMenuItem ul{
-  background-color:#fff;
-} */
 /* TopBar Start Here */
 .topbar_inner {
   display: flex;
@@ -78,10 +74,6 @@ Body {
 .topbar-contact span {
   color: #fff;
 }
-/* .Header-module__RpiqDW__sticky .topbar-contact span {
-  color: #000;
-  font-family: "Roma-Semibold";
-} */
 .sticky-topbar .top-btn {
   background-color: #f0f0f0;
 }
@@ -99,9 +91,36 @@ Body {
   color: #f9e338;
   text-decoration: none;
 }
-.topbar_inner .admission-btn {
+/* .topbar_inner .admission-btn {
   background: #44ade2;
   color: #fff;
+} */
+.topbar_inner .admission-btn {
+  color: #fff;
+  background: linear-gradient(
+      135deg,
+      #09468e,
+      #44ade2,
+      #09468e
+  );
+  background-size: 250% 250%;
+  animation: gradientMove 4s ease infinite;
+  transition: all 0.3s ease;
+}
+.topbar_inner .admission-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(9, 70, 142, 0.35);
+}
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 .topbar_inner .admission-btn span {
   color: #fff;
@@ -137,7 +156,7 @@ Body {
 /*--------------- Hero Section Start Here ----------------*/
 .hero-video {
   position: relative;
-  min-height: 700px;
+  min-height: 680px;
 }
 .hero-video::after {
   position: absolute;
@@ -249,44 +268,24 @@ Body {
   display: flex;
   align-items: center;
 }
-.aboutus_left {
+.aboutus_left{
   width: 45%;
   position: relative;
-}
-/* .aboutus_left::after {
-    content: "";
-    z-index: 2;
-    background-image: url("/images/home/aboutlogo.webp");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    position: absolute;
-    top: 50%;
-    right: -60px;
-    transform: translateY(-50%);
-    animation: floatVertical 3s ease-in-out infinite;
-}
-
-@keyframes floatVertical {
-    0% {
-        transform: translateY(-50%) translateY(0);
-    }
-    50% {
-        transform: translateY(-50%) translateY(-15px);
-    }
-    100% {
-        transform: translateY(-50%) translateY(0);
-    }
-} */
-.aboutus_right {
-  width: 55%;
-  padding: 0px 0px 0px 50px;
+  overflow: hidden;
+  border-radius: 40px;
+  transition-duration:0.5s;
 }
 .aboutus_left img {
   border-radius: 40px;
+  transition-duration:0.5s;
+}
+.aboutus_left img:hover{
+  transition-duration:0.5s;
+  transform: scale(1.1);
+}
+.aboutus_right {
+  width: 55%;
+  padding: 0px 0px 0px 50px;
 }
 .explore_more_btn a {
   position: relative;
@@ -300,7 +299,6 @@ Body {
   text-decoration: none;
   overflow: hidden;
   transition: all 0.4s ease;
-  /* box-shadow: 0 5px 15px rgba(240, 90, 148, 0.35); */
   font-family: "Avenir-Next-Demi";
   margin-top: 10px;
 }
@@ -405,7 +403,7 @@ Body {
 .course_card::before {
   content: "";
   z-index: 6;
-  border: 1px solid #ffffff94;
+  border: 1px solid #fff;
   border-radius: 200px 0 0;
   width: 68px;
   height: 68px;
@@ -413,6 +411,16 @@ Body {
   position: absolute;
   top: 0;
   left: 0;
+  animation: pulse 4s ease-in-out infinite;
+  will-change: transform;
+}
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(0.8);
+    }
+    50% {
+        transform: scale(1);
+    }
 }
 .course_card:nth-child(2)::before {
   right: 0;
@@ -732,33 +740,38 @@ Body {
   border-radius: 30px;
   padding: 30px 10px;
   font-weight: bold;
-  transition-duration: 0.7s;
+  transition-duration: 0.3s;
 }
 .placement_whitebox:hover {
-  background-color: #fff;
+  background-color: #f05a94;
 }
-/* .placement_whitebox img {
-  width: 100px;
-  max-height: inherit;
-} */
 .placement_whitebox img {
     width: 100px;
     max-height: inherit;
-    animation: zoomInOut 3s ease-in-out infinite;
+    animation: zoomInOut 4s ease-in-out infinite;
     transform-origin: center;
 }
-
 @keyframes zoomInOut {
     0%, 100% {
         transform: scale(0.8);
     }
     50% {
-        transform: scale(1.05);
+        transform: scale(1.09);
     }
 }
 .placement_whitebox span {
   font-size: 18px;
 }
+.placement_whitebox span{
+  color:#000;
+}
+.placement_whitebox:hover .PlacementsHead{
+  color:#fff !important;
+}
+.placement_whitebox:hover .subheading span{
+  color:#fff !important;
+}
+
 /* -------------Excellent Placements END HERE----------- */
 /*------------ Our Trusted Recruiters Start Here -------------*/
 .companylogo-slider {
@@ -818,61 +831,6 @@ Body {
   pointer-events: auto;
 }
 /*----------------------- CampusLife Start Here -----------------------*/
-/* .gallerySection {
-  padding: 80px 0;
-}
-.gallerySection {
-  padding: 80px 0;
-  position: relative;
-  background-color: #ffffff47;
-}
-.gallerySection::after {
-  content: "";
-  z-index: -1;
-  background-image: url(/images/home/Coursesbg.webp);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 40px 0;
-  position: absolute;
-  inset: 0;
-}
-.galleryWrapper {
-  display: grid;
-  grid-template-columns: 1.1fr 1fr 1.15fr 1fr 1.1fr;
-  gap: 15px;
-  align-items: stretch;
-}
-.galleryItem {
-  position: relative;
-  overflow: hidden;
-  border-radius: 30px;
-}
-.galleryImg {
-  object-fit: cover;
-}
-.tall {
-  height: 420px;
-}
-.centerTall {
-  height: 420px;
-  background: #91b4dc;
-}
-.doubleColumn {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-.half {
-  height: 200;
-}
-.galleryItem img {
-  transition: transform 0.5s ease;
-}
-.galleryItem:hover img {
-  transform: scale(1.05);
-} */
-
 .gallerySection {
   padding: 80px 0;
   position: relative;
@@ -1119,6 +1077,10 @@ Body {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition-duration:0.5s;
+}
+.social-icon:hover{
+  transform: translateY(-6);
 }
 .address-content p {
   line-height: normal;
@@ -1154,8 +1116,11 @@ Body {
   display: block;
   font-family: "Roma-Regular";
   line-height: normal;
+  transition-duration:0.5s;
 }
-
+.footerbox li a:hover{
+  transform: translateX(6);
+}
 .contact-item {
   align-items: center;
   gap: 10px;
@@ -1340,87 +1305,6 @@ Body {
    scroll-margin-top: 100px;
 }
 /*----- Specializations Page Start Here -----*/
-/* .specializations_inner {
-  display: flex;
-  gap: 20px;
-}
-.specializations_box {
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: top;
-  border-radius: 20px;
-  box-shadow: 0px 10px 10px #0000000d;
-}
-.majorbox {
-  background-image: url(/images/program/Mejor-Specializations.webp);
-}
-.minorbox {
-  background-image: url(/images/program/Minor-Specializations.webp);
-}
-.majorminor_box {
-  background-color: #fff;
-  border-radius: 30px 30px 15px 15px;
-  padding: 20px;
-  margin: 120px 0 0 0;
-}
-.majorminor_box ul {
-  padding-left: 2px;
-}
-.specialization_icon {
-  display: flex;
-  justify-content: center;
-  border-radius: 100px;
-  background: #fff;
-  width: 75px;
-  height: 75px;
-  align-items: center;
-  margin: -55px auto 20px auto;
-}
-.majorbox .specialization_icon {
-  border: 1.5px solid #44ade2;
-}
-.minorbox .specialization_icon {
-  border: 1.5px solid #ffc233;
-}
-.majorbox .specialization_icon svg {
-  stroke-width: 1;
-  color: #44ade2;
-}
-.minorbox .specialization_icon svg {
-  stroke-width: 1;
-  color: #ffc233;
-}
-.specializations_box ul li {
-  font-size: 15px;
-  position: relative;
-  list-style-type: none;
-  padding: 8px 0 8px 14px;
-  border-bottom: 1.5px dotted #09468e29;
-}
-.majorbox ul li::after {
-  background: #44ade2;
-  content: "";
-  border-radius: 20px;
-  width: 6px;
-  height: 6px;
-  position: absolute;
-  top: 43%;
-  left: 0px;
-}
-.minorbox ul li::after {
-  background-color: #ffc233;
-  content: "";
-  width: 6px;
-  height: 6px;
-  border-radius: 20px;
-  position: absolute;
-  top: 43%;
-  left: 0px;
-}
-.specializations_box .subheading {
-  margin: 0px 0px 4px 0px;
-} */
-
 .specialization-section{
     position:relative;
     margin-bottom:30px;
@@ -2235,6 +2119,14 @@ Body {
     gap: 10px;
   }
   /*-------------------- Header End Here ------------*/
+  .hero-video {
+    min-height: 550px;
+  }
+  /*--------- Hero Start Hero ---------*/
+  .hero-video {
+    min-height: 450px;
+  }
+  /*--------- Hero End Hero ---------*/
   /*-------------------- Ranking Start Here ------------*/
   .ranking_content h3 {
     font-size: 25px;
@@ -2317,6 +2209,7 @@ Body {
   /*/*-------------------- Hero Banner Start Here /*--------------------*/
   .hero-video {
     margin: 80px 0 0 0;
+    min-height: 420px;
   }
   .herobanner_Content h3 {
     font-size: 20px;
@@ -2360,12 +2253,6 @@ Body {
     width: 100%;
     padding: 0 0 0 0px;
   }
-  /* .aboutus_left:after {
-    top: inherit;
-    right: 10px;
-    transform: inherit;
-    bottom: 10px;
-  } */
   /*-------------------- About Us End Here ------------*/
   /*-------------------- Courses We Offer Start Here ------------*/
   .subheading {
@@ -2530,7 +2417,6 @@ Body {
   .topbar {
     margin: 0 0 0px;
   }
-
   /*----------- Sidebar Start Here ------------*/
   .programe_main:after {
     display: none;
@@ -2617,6 +2503,9 @@ Body {
   .herobanner_Content {
     top: 80%;
     width: 95%;
+  }
+  .hero-video {
+    min-height: 300px;
   }
   /* Hero Banner End Here */
 
@@ -2714,6 +2603,9 @@ Body {
   }
   .hero-video:after {
     display: none;
+  }
+  .hero-video {
+    min-height: 300px;
   }
   /* Hero Banner End Here */
   /*-------------------- Ranking Start Here ------------*/
