@@ -70,13 +70,35 @@
 /* ==========================
    DESKTOP MENU
 ========================== */
-.desktopNav {
+/* .desktopNav {
   background: linear-gradient(
     90deg,
     rgba(9, 70, 142, 1) 0%,
     rgba(137, 0, 74, 1) 55%
   );
   border-radius: 50px 0px 0px 50px;
+} */
+
+.desktopNav {
+    background: linear-gradient(
+        90deg,
+        #09468e,
+        #89004a,
+        #09468e
+    );
+    background-size: 200% 100%;
+    border-radius: 50px 0 0 50px;
+
+    animation: gradientMove 3s linear infinite;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
 }
 .desktopNav ul {
   display: flex;
@@ -291,7 +313,9 @@
     max-height: 80px;
     width: auto;
   }
-
+  .hero-video {
+    min-height: 550px;
+  }
 }
 @media (max-width: 991.98px) {
   .header {
