@@ -240,6 +240,7 @@ Body {
   font-size: 30px;
   line-height: 1;
   font-family: "Roma-Bold";
+  min-width:120px;
 }
 .ranking_content p {
   margin: 0;
@@ -768,7 +769,7 @@ Body {
 .placement_whitebox:hover .PlacementsHead{
   color:#fff !important;
 }
-.placement_whitebox:hover .subheading span{
+.placement_whitebox:hover  .subheading span{
   color:#fff !important;
 }
 
@@ -2224,6 +2225,7 @@ Body {
   /*-------------------- Ranking Start Here ------------*/
   .ranking_content h3 {
     font-size: 20px;
+    min-width: auto;
   }
   .ranking_content p {
     font-size: 14px;

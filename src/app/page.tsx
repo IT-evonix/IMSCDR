@@ -14,7 +14,7 @@ export default function Home() {
       <Herovideo />
       <Ranking/>
       <AboutUs />
-       <CoursesWeOffer />
+      <CoursesWeOffer />
       <ExcellentPlacements/>
       <MilestonesAndAchievements/>
       <OurTrustedRecruiters/>
