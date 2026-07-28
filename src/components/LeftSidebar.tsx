@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
@@ -8,6 +9,7 @@ import { Menu, X } from "lucide-react";
 interface SidebarItem {
   title: string;
   href: string;
+  children?: SidebarItem[];
 }
 
 interface LeftSidebarProps {
@@ -20,11 +22,21 @@ export default function LeftSidebar({
   menuItems,
 }: LeftSidebarProps) {
   const pathname = usePathname();
+
   const [open, setOpen] = useState(false);
+
+  const [openMenus, setOpenMenus] = useState<Record<string, boolean>>({});
+
+  const toggleMenu = (title: string) => {
+    setOpenMenus((prev) => ({
+      ...prev,
+      [title]: !prev[title],
+    }));
+  };
 
   return (
     <div className="leftSidebarmain">
-      {/* Mobile Toggle Button */}
+      {/* Mobile Toggle */}
       <button
         className="sidebar-toggle"
         onClick={() => setOpen(true)}
@@ -37,11 +49,10 @@ export default function LeftSidebar({
       <div
         className={`sidebar-overlay ${open ? "show" : ""}`}
         onClick={() => setOpen(false)}
-      ></div>
+      />
 
       {/* Sidebar */}
       <aside className={`left-sidebar ${open ? "show" : ""}`}>
-
         <div className="sidebar-title">
           {heading}
 
@@ -54,21 +65,71 @@ export default function LeftSidebar({
         </div>
 
         <ul className="sidebar-menu">
-          {menuItems.map((item) => (
-            <li key={item.href}>
-              <Link
-                href={item.href}
-                className={`sidebar-link ${
-                  pathname === item.href ? "active" : ""
-                }`}
-                onClick={() => setOpen(false)}
-              >
-                {item.title}
-              </Link>
-            </li>
-          ))}
-        </ul>
+          {menuItems.map((item) => {
+            const isParentActive =
+              pathname === item.href ||
+              item.children?.some((child) => pathname === child.href);
 
+            return (
+              <li key={item.title}>
+                {item.children ? (
+                  <>
+                    <div
+                      className={`sidebar-link has-children ${
+                        isParentActive ? "active" : ""
+                      }`}
+                      onClick={() => toggleMenu(item.title)}
+                    >
+                      <span className="sidebar-link-text">
+                        {item.title}
+                      </span>
+
+                      <Image
+                        src="/images/about/white-arrow.webp"
+                        alt="Arrow"
+                        width={18}
+                        height={10}
+                        className={`submenu-arrow ${
+                          openMenus[item.title] ? "open" : ""
+                        }`}
+                      />
+                    </div>
+
+                    {openMenus[item.title] && (
+                      <ul className="sidebar-submenu">
+                        {item.children.map((child) => (
+                          <li key={child.title}>
+                            <Link
+                              href={child.href}
+                              className={`sidebar-sublink ${
+                                pathname === child.href
+                                  ? "active"
+                                  : ""
+                              }`}
+                              onClick={() => setOpen(false)}
+                            >
+                              {child.title}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </>
+                ) : (
+                  <Link
+                    href={item.href}
+                    className={`sidebar-link ${
+                      pathname === item.href ? "active" : ""
+                    }`}
+                    onClick={() => setOpen(false)}
+                  >
+                    {item.title}
+                  </Link>
+                )}
+              </li>
+            );
+          })}
+        </ul>
       </aside>
     </div>
   );

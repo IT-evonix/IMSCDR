@@ -97,30 +97,25 @@ Body {
 } */
 .topbar_inner .admission-btn {
   color: #fff;
-  background: linear-gradient(
-      135deg,
-      #09468e,
-      #44ade2,
-      #09468e
-  );
+  background: linear-gradient(135deg, #09468e, #44ade2, #09468e);
   background-size: 250% 250%;
   animation: gradientMove 4s ease infinite;
   transition: all 0.3s ease;
 }
 .topbar_inner .admission-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(9, 70, 142, 0.35);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(9, 70, 142, 0.35);
 }
 @keyframes gradientMove {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 .topbar_inner .admission-btn span {
   color: #fff;
@@ -240,7 +235,7 @@ Body {
   font-size: 30px;
   line-height: 1;
   font-family: "Roma-Bold";
-  min-width:120px;
+  min-width: 120px;
 }
 .ranking_content p {
   margin: 0;
@@ -269,19 +264,19 @@ Body {
   display: flex;
   align-items: center;
 }
-.aboutus_left{
+.aboutus_left {
   width: 45%;
   position: relative;
   overflow: hidden;
   border-radius: 40px;
-  transition-duration:0.5s;
+  transition-duration: 0.5s;
 }
 .aboutus_left img {
   border-radius: 40px;
-  transition-duration:0.5s;
+  transition-duration: 0.5s;
 }
-.aboutus_left img:hover{
-  transition-duration:0.5s;
+.aboutus_left img:hover {
+  transition-duration: 0.5s;
   transform: scale(1.1);
 }
 .aboutus_right {
@@ -416,12 +411,13 @@ Body {
   will-change: transform;
 }
 @keyframes pulse {
-    0%, 100% {
-        transform: scale(0.8);
-    }
-    50% {
-        transform: scale(1);
-    }
+  0%,
+  100% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1);
+  }
 }
 .course_card:nth-child(2)::before {
   right: 0;
@@ -747,30 +743,31 @@ Body {
   background-color: #f05a94;
 }
 .placement_whitebox img {
-    width: 100px;
-    max-height: inherit;
-    animation: zoomInOut 4s ease-in-out infinite;
-    transform-origin: center;
+  width: 100px;
+  max-height: inherit;
+  animation: zoomInOut 4s ease-in-out infinite;
+  transform-origin: center;
 }
 @keyframes zoomInOut {
-    0%, 100% {
-        transform: scale(0.8);
-    }
-    50% {
-        transform: scale(1.09);
-    }
+  0%,
+  100% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.09);
+  }
 }
 .placement_whitebox span {
   font-size: 18px;
 }
-.placement_whitebox span{
-  color:#000;
+.placement_whitebox span {
+  color: #000;
 }
-.placement_whitebox:hover .PlacementsHead{
-  color:#fff !important;
+.placement_whitebox:hover .PlacementsHead {
+  color: #fff !important;
 }
-.placement_whitebox:hover  .subheading span{
-  color:#fff !important;
+.placement_whitebox:hover .subheading span {
+  color: #fff !important;
 }
 
 /* -------------Excellent Placements END HERE----------- */
@@ -1078,9 +1075,9 @@ Body {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition-duration:0.5s;
+  transition-duration: 0.5s;
 }
-.social-icon:hover{
+.social-icon:hover {
   transform: translateY(-6);
 }
 .address-content p {
@@ -1117,9 +1114,9 @@ Body {
   display: block;
   font-family: "Roma-Regular";
   line-height: normal;
-  transition-duration:0.5s;
+  transition-duration: 0.5s;
 }
-.footerbox li a:hover{
+.footerbox li a:hover {
   transform: translateX(6);
 }
 .contact-item {
@@ -1222,7 +1219,7 @@ Body {
   bottom: 0;
 }
 /*--------------- Sidebar Start Here ---------------*/
-.leftSidebarmain {
+/* .leftSidebarmain {
   height: 100%;
   padding: 30px 0px;
   background-color: #09468e;
@@ -1286,9 +1283,6 @@ Body {
   color: #ffc233;
   padding-left: 25px;
 }
-/* .sidebar-link.active:hover::before{
-  background-color:#ffc233;
-} */
 .sidebar-link.active {
   color: #ffc233;
 }
@@ -1297,85 +1291,307 @@ Body {
 }
 .sidebar-overlay {
   display: none;
+} */
+.leftSidebarmain {
+  height: 100%;
+  padding: 30px 0;
+  background-color: #09468e;
 }
+
+.left-sidebar {
+  position: sticky;
+  top: 120px;
+  overflow: hidden;
+}
+
+.sidebar-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px 10px 20px;
+  color: #fff;
+  font-size: 21px;
+  line-height: normal;
+  font-family: "Roma-Bold";
+  border-radius: 50px 0 0 50px;
+  background: linear-gradient(90deg, #135fb9 0%, #09468e 100%);
+}
+
+.sidebar-close {
+  display: none;
+  background: transparent;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+}
+
+.sidebar-menu {
+  list-style: none;
+  margin: 0;
+  padding: 20px 0 0 20px;
+}
+
+.sidebar-menu > li {
+  border-bottom: 1.5px dotted #5392db;
+}
+
+/* ===========================
+   Parent Menu
+=========================== */
+
+.sidebar-link {
+  position: relative;
+  display: block;
+  padding: 10px 11px 10px 17px;
+  color: #fff;
+  text-decoration: none;
+  font-family: "Avenir-Next-Demi";
+  transition: all 0.3s ease;
+}
+
+.sidebar-link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  transform: translateY(-50%);
+  background: #fff;
+  border-radius: 50%;
+}
+
+.sidebar-link:hover {
+  color: #ffc233;
+  padding-left: 22px;
+}
+
+.sidebar-link:hover::before {
+  background: #ffc233;
+}
+
+.sidebar-link.active {
+  color: #ffc233;
+}
+
+.sidebar-link.active::before {
+  background: #ffc233;
+}
+
+/* ===========================
+   Parent with Children
+=========================== */
+
+.has-children {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  user-select: none;
+  padding: 12px 15px 12px 18px;
+  transition: all 0.3s ease;
+}
+
+.has-children::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  transform: translateY(-50%);
+  background: #fff;
+  border-radius: 50%;
+}
+
+.has-children:hover {
+  color: #ffc233;
+  padding-left: 22px;
+}
+
+.has-children:hover::before {
+  background: #ffc233;
+}
+
+.has-children.active {
+  color: #ffc233;
+}
+
+.has-children.active::before {
+  background: #ffc233;
+}
+
+.sidebar-link-text {
+  flex: 1;
+  color: inherit;
+  font-family: "Avenir-Next-Demi";
+}
+
+/* ===========================
+   Arrow
+=========================== */
+
+.submenu-arrow {
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.submenu-arrow.open {
+  transform: rotate(180deg);
+}
+
+/* ===========================
+   Submenu
+=========================== */
+
+.sidebar-submenu {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 12px 22px;
+}
+
+.sidebar-submenu li {
+  position: relative;
+}
+
+.sidebar-sublink {
+  position: relative;
+  display: block;
+  padding: 6px 10px 6px 16px;
+  color: rgba(255, 255, 255, 0.986);
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 1.5;
+  font-family: "Avenir-Next-Regular";
+  transition: all 0.3s ease;
+}
+
+.sidebar-sublink::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 5px;
+  height: 5px;
+  transform: translateY(-50%);
+  background: #8fc2ff;
+  border-radius: 50%;
+}
+
+.sidebar-sublink:hover {
+  color: #ffc233;
+  padding-left: 22px;
+}
+
+.sidebar-sublink:hover::before {
+  background: #ffc233;
+}
+
+.sidebar-sublink.active {
+  color: #ffc233;
+}
+
+.sidebar-sublink.active::before {
+  background: #ffc233;
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+.sidebar-toggle {
+  display: none;
+}
+
+.sidebar-overlay {
+  display: none;
+}
+
 /*--------------- Sidebar End Here ---------------*/
 .innerpagerightside {
   padding: 60px 0px 60px 30px;
+  scroll-margin-top: 100px;
 }
-.innerpagerightside{
-   scroll-margin-top: 100px;
+.innerpage_main {
+  scroll-margin-top: 200px;
 }
+
 /*----- Specializations Page Start Here -----*/
-.specialization-section{
-    position:relative;
-    margin-bottom:30px;
+.specialization-section {
+  position: relative;
+  margin-bottom: 30px;
 }
-.specialization-section .specialization_inner2{
+.specialization-section .specialization_inner2 {
   display: flex;
   flex-direction: row-reverse;
 }
-.specialization-section .specialization_inner2 .right-box{
-  right:inherit;
-  left:0;
-  background: linear-gradient(135deg, #E0E0E0, #fff);
+.specialization-section .specialization_inner2 .right-box {
+  right: inherit;
+  left: 0;
+  background: linear-gradient(135deg, #e0e0e0, #fff);
 }
 .specialization-section .specialization_inner2 .content {
   right: 15px;
-  left:inherit;
+  left: inherit;
 }
-.specialization-section .specialization_inner2 .right-box li{
+.specialization-section .specialization_inner2 .right-box li {
   color: #000;
 }
 .specialization-section .specialization_inner2 .right-box li:before {
   color: #000;
 }
-.specialization-section .specialization_inner2 .left-box img{
-    object-position:right;
+.specialization-section .specialization_inner2 .left-box img {
+  object-position: right;
 }
-.specialization-section .specialization_inner2 .left-box{
-    height: 270px;
+.specialization-section .specialization_inner2 .left-box {
+  height: 270px;
 }
-.specialization-section .left-box{
-    width:60%;
-    position:relative;
-    border-radius:30px;
-    height:309px;
-    overflow: hidden;
+.specialization-section .left-box {
+  width: 60%;
+  position: relative;
+  border-radius: 30px;
+  height: 309px;
+  overflow: hidden;
 }
-.specialization-section .left-box img{
-    width:100%;
-    display:block;
-    height:520px;
-    object-fit:cover;
-    object-position:left;
-    border-radius: 30px;
-    transition-duration:0.5s;
+.specialization-section .left-box img {
+  width: 100%;
+  display: block;
+  height: 520px;
+  object-fit: cover;
+  object-position: left;
+  border-radius: 30px;
+  transition-duration: 0.5s;
 }
-.specialization-section .left-box:hover img{
+.specialization-section .left-box:hover img {
   transform: scale(1.1);
 }
-.specialization-section .overlay{
-    position:absolute;
-    inset:0;
-    background:linear-gradient(to top,rgba(0, 0, 0, 0.774),rgba(255, 255, 255, 0));
-    border-radius: 30px;
+.specialization-section .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.774),
+    rgba(255, 255, 255, 0)
+  );
+  border-radius: 30px;
 }
-.specialization-section .content{
-    color: #fff;
-    width: 70%;
-    position: absolute;
-    bottom: 20px;
-    left: 25px;
-} 
-.specialization-section .content p{
-    font-size:16px;
-    line-height:normal;
-    color:#fff;
-    font-family: "Avenir-Next-Regular";
-}
-.specialization-section .right-box{
+.specialization-section .content {
   color: #fff;
-  background: linear-gradient(135deg, #C91C79, #89004A);
+  width: 70%;
+  position: absolute;
+  bottom: 20px;
+  left: 25px;
+}
+.specialization-section .content p {
+  font-size: 16px;
+  line-height: normal;
+  color: #fff;
+  font-family: "Avenir-Next-Regular";
+}
+.specialization-section .right-box {
+  color: #fff;
+  background: linear-gradient(135deg, #c91c79, #89004a);
   border-radius: 30px;
   width: 51%;
   padding: 20px 10px 20px 30px;
@@ -1385,19 +1601,19 @@ Body {
   transform: translateY(-50%);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
 }
-.specialization-section .right-box ul{
-    list-style:none;
-    margin: 0;
-    padding: 0;
+.specialization-section .right-box ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
-.specialization-section .right-box li{
-    font-size:16px;
-    padding: 7px 0 7px 18px;
-    font-size: 16px;
-    position: relative;
-    line-height:normal;
+.specialization-section .right-box li {
+  font-size: 16px;
+  padding: 7px 0 7px 18px;
+  font-size: 16px;
+  position: relative;
+  line-height: normal;
 }
-.specialization-section .right-box li::before{
+.specialization-section .right-box li::before {
   content: "✓";
   color: #fff;
   font-size: 14px;
@@ -1568,6 +1784,216 @@ Body {
   font-size: 16px;
 }
 /*----- FAQ Page End Here -----*/
+
+/* ----- Faculty Page Start Here ----- */
+
+.faculty-section {
+  padding: 80px 0;
+  background: #fff;
+}
+.faculty-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-bottom: 30px;
+}
+.faculty-item {
+  width: 100%;
+}
+.faculty-card {
+  background: #fff;
+  border-radius: 25px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); */
+  border:1px solid #dfdfdf;
+  height: 100%;
+}
+.faculty-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.059);
+}
+.faculty-image {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+.faculty-image img {
+  object-fit: cover;
+  transition: 0.5s;
+}
+.faculty-card:hover .faculty-image img {
+  transform: scale(1.08);
+}
+.faculty-content {
+  padding: 22px;
+  text-align: center;
+}
+.faculty-content h3 {
+  margin: 0;
+  font-size: 22px;
+  color: #1b1b1b;
+  font-weight: 700;
+}
+.faculty-content span {
+  color: #000000;
+  margin-top: 0px;
+  font-size: 15px;
+  display: block;
+  font-family: Avenir-Next-Demi;
+}
+/* .faculty-item.active .faculty-card {
+  border: 2px solid #c4161c;
+} */
+.faculty-details {
+  width: 100%;
+  margin-bottom: 40px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 35px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  animation: fade 0.35s ease;
+  position: relative;
+}
+.details-arrow {
+  position: absolute;
+  top: -12px;
+  width: 24px;
+  height: 24px;
+  background: #fff;
+  transform: translateX(-50%) rotate(45deg);
+  box-shadow: -3px -3px 10px rgba(0, 0, 0, 0.05);
+  border-left: 1px solid #eee;
+  border-top: 1px solid #eee;
+  z-index: 5;
+  transition: 0.35s;
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.details-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 40px;
+}
+.faculty-section .left img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+}
+.faculty-section .right .heading{
+  margin: 0px 0px 10px 0px;
+}
+.faculty-section .right h4 {
+  margin-top: 8px;
+  color: #c4161c;
+  font-size: 18px;
+  font-weight: 600;
+}
+.info_box_main{
+  display:flex;
+  gap:10px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.faculty-section .info-box {
+  margin-top: 20px;
+  width:30%;
+}
+.info-box .subheading{
+  border-bottom:1px solid #ccc;
+}
+.facultydetail-content{
+  width: 100%;
+  background: #00000005;
+  margin-top: 20px;
+  border-top: 1px solid #ffffff;
+  padding: 20px;
+  border-radius: 19px;
+}
+.faculty-section .info-box h5 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #10467f;
+}
+.faculty-section .info-box p {
+  margin: 0;
+  line-height: 1.8;
+  color: #555;
+}
+.faculty-section .info-box ul {
+  margin: 0;
+  padding-left: 18px;
+}
+.faculty-section .info-box li {
+  margin-bottom: 8px;
+  color: #555;
+}
+
+
+/* @media (max-width: 1100px) {
+  .faculty-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .left {
+    text-align: center;
+  }
+
+  .left img {
+    max-width: 300px;
+    margin: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .faculty-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .faculty-image {
+    height: 300px;
+  }
+
+  .faculty-details {
+    padding: 25px;
+  }
+
+  .right h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .faculty-image {
+    height: 260px;
+  }
+
+  .faculty-content {
+    padding: 18px;
+  }
+
+  .right h2 {
+    font-size: 24px;
+  }
+} */
+/* ----- Faculty Page End Here ----- */
+
 /*----------------------- Inner Pages End Here --------------------*/
 
 /*--------------- Contact Us Pages Start Here ---------------*/
@@ -1886,7 +2312,7 @@ Body {
   background: #fff;
   position: relative;
 }
-.chancellor-section::after {
+/* .chancellor-section::after {
   content: "";
   position: absolute;
   width: 25%;
@@ -1894,11 +2320,11 @@ Body {
   left: 0;
   bottom: 0%;
   background: #09468e;
-}
+} */
 .chancellor-wrapper {
   display: flex;
   justify-content: space-between;
-  gap: 70px;
+  gap: 40px;
 }
 .chancellor-image {
   background: #dde7f4;
@@ -2041,8 +2467,8 @@ Body {
 }
 /*----------------- Governing Body End Here ------------------*/
 /*----------- Approvals & Affiliations Start Here -----------*/
-.all-3p-section{
-  padding:80px 0px;
+.all-3p-section {
+  padding: 80px 0px;
 }
 .approval-card {
   background: #fff;
@@ -2091,7 +2517,7 @@ Body {
 
 @media (min-width: 1365.98px) {
   /*------------- Inner Pages Start Here -------------*/
-  .excell_girlbox{
+  .excell_girlbox {
     width: 24%;
   }
   /*------------- Inner Pages End Here -------------*/

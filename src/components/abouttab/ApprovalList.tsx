@@ -20,14 +20,14 @@ export default function ApprovalList({ title, data }: Props) {
   return (
     <div className="all-3p-section">
       <div className="container">
-        <div className="heading text-center">{title}</div>
+        <div className="heading">{title}</div>
 
         <div className="row g-4">
           {data.map((item) => {
             const link = item.file || item.url || item.href || "#";
 
             return (
-              <div className="col-md-4" key={item.id}>
+              <div className="col-md-6" key={item.id}>
                 <div className="approval-card h-100">
                   <Link
                     href={link}

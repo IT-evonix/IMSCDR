@@ -13,8 +13,24 @@ export const menuItems: MenuItem[] = [
         href: "/",
       },
       {
-        label: "Messages",
+        label: "Vision & Mission",
+        href: "/",
+      },
+      {
+        label: "Leadership",
         children: [
+          {
+            label: "Chairman's Message",
+            href: "/about-director-message",
+          },
+          {
+            label: "Secretary's Message",
+            href: "/about-dy-director-msg",
+          },
+          {
+            label: "Distinguished Advisor",
+            href: "/about-dy-director-msg",
+          },
           {
             label: "Directors Message",
             href: "/about-director-message",
@@ -27,29 +43,25 @@ export const menuItems: MenuItem[] = [
       },
       {
         label: "Governing Body",
-        href: "/governance-governing-body",
+        href: "/governing-body",
       },
       {
-        label: "College Development Committee",
-        href: "/governance-college-development-commitee",
+        label: "College Development Committee (CDC)",
+        href: "/college-development-commitee",
       },
       {
-        label: "Approvals & Affiliations",
+        label: "Approvals & Recognition",
         children: [
           {
-            label: "AICTE Approval",
-            href: "/about-aicte-approval",
+            label: "AICTE",
+            href: "/aicte",
           },
           {
-            label: "DTE Approval",
+            label: "Savitribai Phule Pune University",
             href: "/",
           },
           {
-            label: "University Affiliation",
-            href: "/",
-          },
-          {
-            label: "NAAC Accreditation",
+            label: "NAAC Accrediation",
             href: "/",
           },
         ],
@@ -69,11 +81,27 @@ export const menuItems: MenuItem[] = [
         href: "/",
       },
       {
-        label: "BBA / BCA",
+        label: "BBA",
         href: "/",
       },
       {
-        label: "PhD",
+        label: "BCA",
+        href: "/",
+      },
+      {
+        label: "Ph.D",
+        href: "/",
+      },
+      {
+        label: "Faculty",
+        href: "/",
+      },
+      {
+        label: "Academic Calendar",
+        href: "/",
+      },
+      {
+        label: "Research & Innovation",
         href: "/",
       },
     ],
