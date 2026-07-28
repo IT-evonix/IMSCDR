@@ -19,7 +19,7 @@ export default function ProgramBanner({ heading }: Props) {
 
   return (
     <InnerpageBanner
-      title={`${heading} ${pageTitle}`}
+      title={`${pageTitle}`}
       breadcrumbs={[
         { label: "Programmes", href: "/programmes" },
         { label: heading },

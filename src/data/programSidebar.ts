@@ -1,4 +1,65 @@
 export const programSidebar = {
+about: {
+  heading: "About",
+  menuItems: [
+    { title: "About IMS", href: "/about-ims" },
+    { title: "Vision & Mission", href: "/vision-mission" },
+
+    {
+      title: "Leadership",
+      href: "/",
+      children: [
+        {
+          title: "Chairman's Message",
+          href: "/chairmans-message",
+        },
+        {
+          title: "Secretary's Message",
+          href: "/secretarys-message",
+        },
+        {
+          title: "Distinguished Advisor",
+          href: "/distinguished-advisor",
+        },
+        {
+          title: "Director's Message",
+          href: "/about-director-message",
+        },
+        {
+          title: "Deputy Director's Message",
+          href: "/about-dy-director-msg",
+        },
+      ],
+    },
+
+    { title: "Governing Body", 
+      href: "/governing-body" 
+    },
+
+    { title: "College Development Committee (CDC)", 
+      href: "/college-development-commitee" 
+    },
+    {
+      title: "Approvals & Recognition",
+      href: "/",
+      children: [
+        {
+          title: "AICTE",
+          href: "/aicte",
+        },
+        {
+          title: "Savitribai Phule Pune University",
+          href: "/distinguished-advisor",
+        },
+        {
+          title: "NAAC Accreditation",
+          href: "/naac-accreditation",
+        },
+      ],
+    },
+  ],
+},
+
   mba: {
     heading: "MBA",
     menuItems: [
@@ -14,35 +75,5 @@ export const programSidebar = {
     ],
   },
 
-  bbaBca: {
-    heading: "BBA / BCA",
-    menuItems: [
-      { title: "Overview", href: "/program-bba-bca/overview" },
-      { title: "Curriculum", href: "/program-bba-bca/curriculum" },
-      { title: "Eligibility", href: "/program-bba-bca/eligibility" },
-      { title: "Faculty", href: "/program-bba-bca/faculty" },
-      { title: "Syllabus", href: "/program-bba-bca/syllabus" },
-    ],
-  },
-
-  mca: {
-    heading: "MCA",
-    menuItems: [
-      { title: "Overview", href: "/program-mca/overview" },
-      { title: "Curriculum", href: "/program-mca/curriculum" },
-      { title: "Eligibility", href: "/program-mca/eligibility" },
-      { title: "Faculty", href: "/program-mca/faculty" },
-      { title: "Syllabus", href: "/program-mca/syllabus" },
-    ],
-  },
-
-  phd: {
-    heading: "Ph.D.",
-    menuItems: [
-      { title: "Overview", href: "/program-phd/overview" },
-      { title: "Research Areas", href: "/program-phd/research-areas" },
-      { title: "Eligibility", href: "/program-phd/eligibility" },
-      { title: "Faculty", href: "/program-phd/faculty" },
-    ],
-  },
+  
 };
