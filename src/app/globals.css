@@ -1143,6 +1143,318 @@ Body {
 
 /* Footer End Here */
 /*--------------Inner Pages Start Here --------------------*/
+/*---------------------- About Us Tab Start Here --------------------*/
+.innerpageabout_section {
+  position: relative;
+}
+.innerpageabout_section::after {
+  background-image: url(/images/about/about-ims-bg.webp);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 450px;
+  height: 450px;
+  position: absolute;
+  right: 0;
+  top: 50px;
+  content: "";
+  z-index: -1;
+  background-position: center;
+}
+.about_inner_img {
+  position: sticky;
+  top: 100px; /* Adjust according to your fixed header height */
+  margin: 0 0 30px 0;
+}
+.about_inner_img img {
+  border-radius: 20px;
+  display: block;
+}
+.imscdr_box {
+  text-align: center;
+  background-color: #ffe293;
+  border-radius: 20px;
+  width: 95%;
+  margin: 0 auto;
+  padding: 10px;
+  font-family: Roma-Semibold;
+  font-size: 14px;
+  line-height: 17px;
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  right: 0;
+  color: #222;
+}
+.about-nacc {
+  justify-content: space-between;
+  gap: 30px;
+  display: flex;
+  background: #fff1f0;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 40px;
+}
+.about-naccimg {
+  margin: 0 0 0 -60px;
+}
+.about-nacc-content {
+  width: 90%;
+}
+.aboutaward {
+  background: #fefaef;
+}
+.aboutaward .about-naccimg {
+  background: #fff;
+  border: 1px solid #f5efde;
+  border-radius: 200px;
+  padding: 10px;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.objective_section{
+  padding:60px 0px 0px 0px;
+}
+.info_card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 25px;
+  min-height: 230px;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+.info_card:hover {
+  transform: translateY(-8px);
+}
+.info_card_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.info_card_number {
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 26px;
+  font-family: Roma-Bold;
+}
+.info_card_number.red {
+  background: #f05a94;
+}
+.info_card_number.blue {
+  background: #09468e;
+}
+.info_card_icon.red {
+  color: #f05a94;
+}
+.info_card_icon.blue {
+  color: #09468e;
+}
+.info_card p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #333;
+}
+.info_card_border {
+  position: absolute;
+  left: 28px;
+  right: 28px;
+  bottom: 18px;
+  height: 1px;
+  border-radius: 50px;
+}
+.info_card_border.red {
+  background: #f05a94;
+}
+.info_card_border.blue {
+  background: #09468e;
+}
+/*---------------------- Leaders Pages Start Here --------------------*/
+.chancellor-section {
+  padding: 80px 0px;
+  background: #fff;
+  position: relative;
+}
+/* .chancellor-section::after {
+  content: "";
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  left: 0;
+  bottom: 0%;
+  background: #09468e;
+} */
+.chancellor-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+.chancellor-image {
+  background: #dde7f4;
+  border-radius: 40px;
+  position: sticky;
+  z-index: 2;
+  top: 120px;
+}
+.chancellor-image img {
+  border-radius: 40px;
+}
+.chancellor-content .heading {
+  margin: 0 0 0px 0;
+}
+.chancellor-content .subheading span {
+  font-family: "Roma-regular";
+  font-size: 15px;
+}
+
+/*---------------------- Leaders Pages End Here --------------------*/
+/*----------------- Governing Body Start Here ------------------*/
+.tablemain_section {
+  padding: 80px 0;
+}
+.table-card {
+  background: #fff;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid #e5edf7;
+  box-shadow: 0 18px 45px rgba(9, 70, 142, 0.08);
+}
+.governing-table {
+  margin: 0;
+  min-width: 900px;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+.governing-table thead th {
+  background: #09468e;
+  color: #fff;
+  padding: 20px 28px;
+  font-size: 16px;
+  font-family: "Roma-Semibold";
+  text-transform: uppercase;
+  border: none;
+  white-space: nowrap;
+  letter-spacing: 0.4px;
+}
+.governing-table thead th:first-child {
+  border-top-left-radius: 18px;
+}
+.governing-table thead th:last-child {
+  border-top-right-radius: 18px;
+}
+.governing-table tbody td {
+  padding: 10px 20px;
+  font-size: 15px;
+  color: #000;
+  border-bottom: 1px solid #edf3fb;
+  border-right: 1px solid #edf3fb;
+  vertical-align: middle;
+  background: #fff;
+  transition: 0.3s;
+}
+.governing-table tbody td:last-child {
+  border-right: none;
+}
+.governing-table tbody tr:last-child td {
+  border-bottom: none;
+}
+.governing-table tbody tr:hover td {
+  background: #9ed2f152;
+}
+.member-name {
+  font-family: "Roma-Semibold";
+  color: #000;
+}
+.sr-badge {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #edf5ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-family: "Roma-Regular";
+  font-size: 14px;
+  margin: 0 auto;
+}
+.governing-table th:nth-child(1),
+.governing-table td:nth-child(1) {
+  width: 120px;
+}
+.table-responsive::-webkit-scrollbar {
+  height: 7px;
+}
+.table-responsive::-webkit-scrollbar-thumb {
+  background: #b5cce8;
+  border-radius: 50px;
+}
+.governing-table td[rowspan] {
+  vertical-align: middle;
+  font-weight: 500;
+  line-height: 1.8;
+}
+.governing-table td {
+  white-space: normal;
+}
+.member-name {
+  font-weight: 600;
+}
+/*----------------- Governing Body End Here ------------------*/
+/*----------- Approvals & Affiliations Start Here -----------*/
+.all-3p-section {
+  padding: 80px 0px;
+}
+.approval-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: all 0.35s ease;
+  border: 1px solid #f1f1f1;
+  height: 100%;
+}
+.approval-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
+}
+.approval-icon {
+  width: 65px;
+  height: 65px;
+  background: #fff4ef;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f79433;
+  flex-shrink: 0;
+}
+.approval-link {
+  color: #000;
+  font-size: 16px;
+  text-decoration: none;
+  transition: all 0.3s;
+  font-family: "Roma-Regular";
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  padding: 15px;
+}
+.approval-link:hover {
+  color: #09468e;
+}
+.approval-icon svg {
+  stroke-width: 1;
+}
+/*----------- Approvals & Affiliations End Here-----------*/
+/*------------------ About Us Tab End Here ----------------*/
 
 .innerbannersection {
   padding: 20px 0;
@@ -1219,91 +1531,16 @@ Body {
   bottom: 0;
 }
 /*--------------- Sidebar Start Here ---------------*/
-/* .leftSidebarmain {
-  height: 100%;
-  padding: 30px 0px;
-  background-color: #09468e;
-}
-.left-sidebar {
-  overflow: hidden;
-  position: sticky;
-  top: 120px;
-}
-.sidebar-title {
-  color: #fff;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 10px 10px 20px;
-  font-size: 21px;
-  display: flex;
-  border-radius: 50px 0px 0px 50px;
-  font-family: "Roma-Bold";
-  background: linear-gradient(90deg, #135fb9 0%, #09468e 100%);
-  line-height: normal;
-}
-.sidebar-close {
-  display: none;
-  background: transparent;
-  border: 0;
-  color: #fff;
-  cursor: pointer;
-}
-.sidebar-menu {
-  list-style: none;
-  margin: 0;
-  padding: 20px 0px 0px 20px;
-}
-.sidebar-menu li {
-  position: relative;
-  border-bottom: 1.5px dotted #5392db;
-}
-.sidebar-link {
-  color: #fff;
-  padding: 10px 10px 10px 15px;
-  text-decoration: none;
-  transition: all 0.3s;
-  display: block;
-  font-family: "Avenir-Next-Demi";
-}
-.sidebar-link::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 5px;
-  height: 5px;
-  background: #fff;
-  border-radius: 50%;
-}
-.sidebar-link.active::before {
-  background-color: #ffc233;
-}
-.sidebar-link:hover {
-  color: #ffc233;
-  padding-left: 25px;
-}
-.sidebar-link.active {
-  color: #ffc233;
-}
-.sidebar-toggle {
-  display: none;
-}
-.sidebar-overlay {
-  display: none;
-} */
 .leftSidebarmain {
   height: 100%;
   padding: 30px 0;
   background-color: #09468e;
 }
-
 .left-sidebar {
   position: sticky;
   top: 120px;
   overflow: hidden;
 }
-
 .sidebar-title {
   display: flex;
   justify-content: space-between;
@@ -1316,7 +1553,6 @@ Body {
   border-radius: 50px 0 0 50px;
   background: linear-gradient(90deg, #135fb9 0%, #09468e 100%);
 }
-
 .sidebar-close {
   display: none;
   background: transparent;
@@ -1324,21 +1560,14 @@ Body {
   color: #fff;
   cursor: pointer;
 }
-
 .sidebar-menu {
   list-style: none;
   margin: 0;
   padding: 20px 0 0 20px;
 }
-
 .sidebar-menu > li {
   border-bottom: 1.5px dotted #5392db;
 }
-
-/* ===========================
-   Parent Menu
-=========================== */
-
 .sidebar-link {
   position: relative;
   display: block;
@@ -1348,7 +1577,6 @@ Body {
   font-family: "Avenir-Next-Demi";
   transition: all 0.3s ease;
 }
-
 .sidebar-link::before {
   content: "";
   position: absolute;
@@ -1360,28 +1588,19 @@ Body {
   background: #fff;
   border-radius: 50%;
 }
-
 .sidebar-link:hover {
   color: #ffc233;
   padding-left: 22px;
 }
-
 .sidebar-link:hover::before {
   background: #ffc233;
 }
-
 .sidebar-link.active {
   color: #ffc233;
 }
-
 .sidebar-link.active::before {
   background: #ffc233;
 }
-
-/* ===========================
-   Parent with Children
-=========================== */
-
 .has-children {
   position: relative;
   display: flex;
@@ -1392,7 +1611,6 @@ Body {
   padding: 12px 15px 12px 18px;
   transition: all 0.3s ease;
 }
-
 .has-children::before {
   content: "";
   position: absolute;
@@ -1404,57 +1622,42 @@ Body {
   background: #fff;
   border-radius: 50%;
 }
-
 .has-children:hover {
   color: #ffc233;
   padding-left: 22px;
 }
-
 .has-children:hover::before {
   background: #ffc233;
 }
-
 .has-children.active {
   color: #ffc233;
 }
-
 .has-children.active::before {
   background: #ffc233;
 }
-
 .sidebar-link-text {
   flex: 1;
   color: inherit;
   font-family: "Avenir-Next-Demi";
 }
-
-/* ===========================
-   Arrow
-=========================== */
-
 .submenu-arrow {
   transition: transform 0.3s ease;
   flex-shrink: 0;
 }
-
 .submenu-arrow.open {
   transform: rotate(180deg);
 }
-
 /* ===========================
    Submenu
 =========================== */
-
 .sidebar-submenu {
   list-style: none;
   margin: 0;
   padding: 0 0 12px 22px;
 }
-
 .sidebar-submenu li {
   position: relative;
 }
-
 .sidebar-sublink {
   position: relative;
   display: block;
@@ -1466,7 +1669,6 @@ Body {
   font-family: "Avenir-Next-Regular";
   transition: all 0.3s ease;
 }
-
 .sidebar-sublink::before {
   content: "";
   position: absolute;
@@ -1478,36 +1680,25 @@ Body {
   background: #8fc2ff;
   border-radius: 50%;
 }
-
 .sidebar-sublink:hover {
   color: #ffc233;
   padding-left: 22px;
 }
-
 .sidebar-sublink:hover::before {
   background: #ffc233;
 }
-
 .sidebar-sublink.active {
   color: #ffc233;
 }
-
 .sidebar-sublink.active::before {
   background: #ffc233;
 }
-
-/* ===========================
-   Mobile
-=========================== */
-
 .sidebar-toggle {
   display: none;
 }
-
 .sidebar-overlay {
   display: none;
 }
-
 /*--------------- Sidebar End Here ---------------*/
 .innerpagerightside {
   padding: 60px 0px 60px 30px;
@@ -1516,7 +1707,6 @@ Body {
 .innerpage_main {
   scroll-margin-top: 200px;
 }
-
 /*----- Specializations Page Start Here -----*/
 .specialization-section {
   position: relative;
@@ -1807,7 +1997,7 @@ Body {
   cursor: pointer;
   transition: all 0.35s ease;
   /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); */
-  border:1px solid #dfdfdf;
+  border: 1px solid #dfdfdf;
   height: 100%;
 }
 .faculty-card:hover {
@@ -1857,6 +2047,29 @@ Body {
   animation: fade 0.35s ease;
   position: relative;
 }
+.faculty-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+  background: #9ed2f1;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+.faculty-close:hover {
+  background: #44ade2;
+  transform: rotate(90deg);
+}
 .details-arrow {
   position: absolute;
   top: -12px;
@@ -1864,7 +2077,7 @@ Body {
   height: 24px;
   background: #fff;
   transform: translateX(-50%) rotate(45deg);
-  box-shadow: -3px -3px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: -3px -3px 8px rgba(0, 0, 0, 0.05);
   border-left: 1px solid #eee;
   border-top: 1px solid #eee;
   z-index: 5;
@@ -1892,8 +2105,8 @@ Body {
   border-radius: 12px;
   display: block;
 }
-.faculty-section .right .heading{
-  margin: 0px 0px 10px 0px;
+.faculty-section .right .heading {
+  margin: 0px 0px 6px 0px;
 }
 .faculty-section .right h4 {
   margin-top: 8px;
@@ -1901,26 +2114,33 @@ Body {
   font-size: 18px;
   font-weight: 600;
 }
-.info_box_main{
-  display:flex;
-  gap:10px;
+.info_box_main {
+  display: flex;
+  gap: 10px;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 .faculty-section .info-box {
   margin-top: 20px;
-  width:30%;
+  width: 24%;
 }
-.info-box .subheading{
-  border-bottom:1px solid #ccc;
+.info-box .subheading {
+  border-bottom: 1px solid #ccc;
+  padding: 0 0 7px 0;
+  margin: 0 0 7px 0;
+  line-height: normal;
+  font-size: 16px;
 }
-.facultydetail-content{
+.facultydetail-content {
   width: 100%;
   background: #00000005;
   margin-top: 20px;
   border-top: 1px solid #ffffff;
   padding: 20px;
-  border-radius: 19px;
+  border-radius: 15px;
+}
+.facultydetail-content p {
+  margin: 0px;
 }
 .faculty-section .info-box h5 {
   margin-bottom: 10px;
@@ -1929,8 +2149,8 @@ Body {
 }
 .faculty-section .info-box p {
   margin: 0;
-  line-height: 1.8;
-  color: #555;
+  color: #000;
+  font-size: 14px;
 }
 .faculty-section .info-box ul {
   margin: 0;
@@ -1938,9 +2158,10 @@ Body {
 }
 .faculty-section .info-box li {
   margin-bottom: 8px;
-  color: #555;
+  color: #000;
+  font-size: 14px;
+  line-height: normal;
 }
-
 
 /* @media (max-width: 1100px) {
   .faculty-grid {
@@ -2305,213 +2526,6 @@ Body {
   left: 130%;
 }
 /*------------- News And Events Details Page End Here -------------*/
-/*---------------------- About Us Tab Start Here --------------------*/
-/*---------------------- Leaders Pages Start Here --------------------*/
-.chancellor-section {
-  padding: 80px 0px;
-  background: #fff;
-  position: relative;
-}
-/* .chancellor-section::after {
-  content: "";
-  position: absolute;
-  width: 25%;
-  height: 100%;
-  left: 0;
-  bottom: 0%;
-  background: #09468e;
-} */
-.chancellor-wrapper {
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
-}
-.chancellor-image {
-  background: #dde7f4;
-  border-radius: 40px;
-  position: sticky;
-  z-index: 2;
-  top: 120px;
-}
-.chancellor-image img {
-  border-radius: 40px;
-}
-.chancellor-content .heading {
-  margin: 0 0 0px 0;
-}
-.chancellor-content .subheading span {
-  font-family: "Roma-regular";
-  font-size: 15px;
-}
-.about-nacc {
-  justify-content: space-between;
-  gap: 30px;
-  display: flex;
-  background: #fff1f0;
-  border-radius: 20px;
-  padding: 20px;
-}
-.about-naccimg {
-  margin: 0 0 0 -60px;
-}
-.about-nacc-content {
-  width: 90%;
-}
-.aboutaward {
-  background: #fefaef;
-  margin-top: 40px;
-}
-.aboutaward .about-naccimg {
-  background: #fff;
-  border: 1px solid #f5efde;
-  border-radius: 200px;
-  padding: 10px;
-  width: 90px;
-  height: 90px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-/*---------------------- Leaders Pages End Here --------------------*/
-/*----------------- Governing Body Start Here ------------------*/
-.tablemain_section {
-  padding: 80px 0;
-}
-.table-card {
-  background: #fff;
-  border-radius: 22px;
-  overflow: hidden;
-  border: 1px solid #e5edf7;
-  box-shadow: 0 18px 45px rgba(9, 70, 142, 0.08);
-}
-.governing-table {
-  margin: 0;
-  min-width: 900px;
-  border-collapse: separate;
-  border-spacing: 0;
-}
-.governing-table thead th {
-  background: #09468e;
-  color: #fff;
-  padding: 20px 28px;
-  font-size: 16px;
-  font-family: "Roma-Semibold";
-  text-transform: uppercase;
-  border: none;
-  white-space: nowrap;
-  letter-spacing: 0.4px;
-}
-.governing-table thead th:first-child {
-  border-top-left-radius: 18px;
-}
-.governing-table thead th:last-child {
-  border-top-right-radius: 18px;
-}
-.governing-table tbody td {
-  padding: 10px 20px;
-  font-size: 15px;
-  color: #000;
-  border-bottom: 1px solid #edf3fb;
-  border-right: 1px solid #edf3fb;
-  vertical-align: middle;
-  background: #fff;
-  transition: 0.3s;
-}
-.governing-table tbody td:last-child {
-  border-right: none;
-}
-.governing-table tbody tr:last-child td {
-  border-bottom: none;
-}
-.governing-table tbody tr:hover td {
-  background: #9ed2f152;
-}
-.member-name {
-  font-family: "Roma-Semibold";
-  color: #000;
-}
-.sr-badge {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: #edf5ff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #000;
-  font-family: "Roma-Regular";
-  font-size: 14px;
-  margin: 0 auto;
-}
-.governing-table th:nth-child(1),
-.governing-table td:nth-child(1) {
-  width: 120px;
-}
-.table-responsive::-webkit-scrollbar {
-  height: 7px;
-}
-.table-responsive::-webkit-scrollbar-thumb {
-  background: #b5cce8;
-  border-radius: 50px;
-}
-.governing-table td[rowspan] {
-  vertical-align: middle;
-  font-weight: 500;
-  line-height: 1.8;
-}
-.governing-table td {
-  white-space: normal;
-}
-.member-name {
-  font-weight: 600;
-}
-/*----------------- Governing Body End Here ------------------*/
-/*----------- Approvals & Affiliations Start Here -----------*/
-.all-3p-section {
-  padding: 80px 0px;
-}
-.approval-card {
-  background: #fff;
-  border-radius: 15px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  transition: all 0.35s ease;
-  border: 1px solid #f1f1f1;
-  height: 100%;
-}
-.approval-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
-}
-.approval-icon {
-  width: 65px;
-  height: 65px;
-  background: #fff4ef;
-  border-radius: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #f79433;
-  flex-shrink: 0;
-}
-.approval-link {
-  color: #000;
-  font-size: 16px;
-  text-decoration: none;
-  transition: all 0.3s;
-  font-family: "Roma-Regular";
-  display: flex;
-  gap: 15px;
-  align-items: center;
-  padding: 15px;
-}
-.approval-link:hover {
-  color: #09468e;
-}
-.approval-icon svg {
-  stroke-width: 1;
-}
-/*----------- Approvals & Affiliations End Here-----------*/
-/*------------------ About Us Tab End Here ----------------*/
 
 /* -------------------   Responsive Pages Start here ------------------- */
 
