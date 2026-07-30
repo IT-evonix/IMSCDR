@@ -1168,6 +1168,7 @@ Body {
 .about_inner_img img {
   border-radius: 20px;
   display: block;
+  width: 100%;
 }
 .imscdr_box {
   text-align: center;
@@ -1214,14 +1215,68 @@ Body {
   align-items: center;
   justify-content: center;
 }
-.objective_section{
-  padding:60px 0px 0px 0px;
+.vision_mision_section {
+  padding: 80px 0px 0px 0px;
+  scroll-margin-top: 100px;
+}
+.vision_mision_inner {
+  display: flex;
+  gap: 20px;
+}
+.vision_box {
+  border-radius: 20px;
+  padding: 20px;
+  background-color: #09468e;
+  color: #fff;
+  text-align: center;
+  background-image: url(/images/about/visionmision.webp);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  transition: transform 0.5s ease;
+}
+.vision_box .heading {
+  margin: 0 0 12px;
+}
+.vision_mision_icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 80px;
+  background: #09468e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -60px auto 25px auto;
+  box-shadow: 0px 10px 10px #00000026;
+}
+.mision_box {
+  background-color: #89004a;
+  transition: transform 0.5s ease;
+}
+.vision_box:hover,
+.mision_box:hover {
+  transform: translateY(-15px);
+}
+
+.objective_section {
+  padding: 60px 0px 0px 0px;
+}
+.mision_box .vision_mision_icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 80px;
+  background: #89004a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -60px auto 25px auto;
+  box-shadow: 0px 10px 10px #00000026;
 }
 .info_card {
   background: #fff;
   border-radius: 20px;
   padding: 25px;
-  min-height: 230px;
+  min-height: 210px;
   position: relative;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   transition: 0.3s;
@@ -1236,21 +1291,23 @@ Body {
   margin-bottom: 25px;
 }
 .info_card_number {
-  width: 58px;
-  height: 58px;
-  border-radius: 16px;
-  display: flex;
+  color: #fff;
+  border-radius: 14px;
   justify-content: center;
   align-items: center;
-  color: #fff;
-  font-size: 26px;
+  width: 50px;
+  height: 50px;
   font-family: Roma-Bold;
+  font-size: 22px;
+  display: flex;
 }
 .info_card_number.red {
-  background: #f05a94;
+  background: #8b044d1f;
+  color: #8c064e;
 }
 .info_card_number.blue {
-  background: #09468e;
+  background: #eef2f7;
+  color: #09468e;
 }
 .info_card_icon.red {
   color: #f05a94;
@@ -1283,15 +1340,6 @@ Body {
   background: #fff;
   position: relative;
 }
-/* .chancellor-section::after {
-  content: "";
-  position: absolute;
-  width: 25%;
-  height: 100%;
-  left: 0;
-  bottom: 0%;
-  background: #09468e;
-} */
 .chancellor-wrapper {
   display: flex;
   justify-content: space-between;
@@ -1453,6 +1501,49 @@ Body {
 .approval-icon svg {
   stroke-width: 1;
 }
+/* New Design Start Here */
+  .zigzag-row{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 80px;
+  }
+  .zigzag-row.reverse {
+    flex-direction: row-reverse;
+  }
+  .zigzag-section .parallaximg_image{
+    width: 50%;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  .parallaximg_image img{
+    max-height: 370px;
+    overflow: hidden;
+    min-height: 370px;
+    object-fit: cover;
+    border-radius: 20px;
+    width:100%;
+    transition-duration:0.5s;
+}
+  .parallaximg_image:hover img{
+    transform: scale(1.1);
+  }
+  
+  .zigzag-section .content-box {
+    width: 50%;
+  }
+  .zigzag-section .btn {
+    display: inline-block;
+    padding: 14px 30px;
+    background: #c51c2f;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 40px;
+    transition: 0.3s;
+  }
+  .zigzag-section .btn:hover {
+    background: #000;
+  }
 /*----------- Approvals & Affiliations End Here-----------*/
 /*------------------ About Us Tab End Here ----------------*/
 
@@ -1919,6 +2010,64 @@ Body {
 .overview_right2 span {
   font-family: "Roma-Bold";
 }
+/* Programe Wise Faculty listing Start Here */
+.faculty_listing_page {
+    padding: 70px 0;
+}
+.faculty_listing_page .faculty-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.faculty_listing_page .faculty-card {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 25px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+    transition: 0.3s ease;
+}
+.faculty_listing_page .faculty-card:hover {
+    transform: translateY(-8px);
+}
+.faculty_listing_page .faculty-image-box {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 2px solid #8900495a;
+}
+.faculty_listing_page .faculty-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.faculty_listing_page .subheading{
+    line-height: normal;
+}
+.faculty_listing_page .faculty-designation {
+    margin: 4px 0;
+    color: #09468e;
+    line-height: normal;
+}
+.faculty_listing_page .faculty-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 14px;
+}
+/* .faculty_listing_page .explore_more_btn a {
+    gap: 7px;
+    margin-top: 7px;
+    padding: 6px 14px;
+    font-size: 12px;
+} */
+/* Programe Wise Faculty listing End Here */
+
+  
 /*----- FAQ Page Start Here -----*/
 .faq-list {
   display: flex;
@@ -3013,7 +3162,6 @@ Body {
   .half {
     height: auto;
   }
-
   .galleryItem {
     border-radius: 18px;
   }
@@ -3022,6 +3170,22 @@ Body {
   /*----------- Sidebar Start Here ------------*/
 
   /*----------- Sidebar End Here ------------*/
+  /*--------------------- Inner Pages Start Here ---------------------*/
+  /* Programe Wise Faculty listing Start Here */
+@media(max-width:768px){
+    .facultyListing{
+        grid-template-columns:1fr;
+    }
+    .faculty-card{
+        flex-direction:column;
+        text-align:center;
+    }
+    .faculty-info{
+        align-items:center;
+    }
+  }
+  /* Programe Wise Faculty listing End Here */
+  /*--------------------- Inner Pages End Here ---------------------*/
 }
 
 @media (max-width: 575.98px) {
