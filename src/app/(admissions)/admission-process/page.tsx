@@ -1,6 +1,6 @@
 import React from "react";
 // import Image from "next/image";
-import { ClipboardCheck, UserPlus, PenTool, FilePlus } from "lucide-react";
+import { ClipboardCheck, UserPlus, FilePlus } from "lucide-react";
 import ChevronPattern from "@/components/admission/ChevronPattern";
 const page = () => {
   return (
