@@ -8,21 +8,21 @@ const page = () => {
       <div className="admission_process_main">
         <div className="admission_process_inner">
           <div className="heading">Your Admission Journey</div>
-          <div className="admission_process_phase admission_phase1">
+          <div className="admission_process_phase">
             <div className="admission_process_top">
               <div className="phaseNum_Name">
                 <div className="phaseNumber">Phase 01</div>
                 <div className="phaseName">CET Examination</div>
               </div>
               <div className="phaseiconimage">
-                <ClipboardCheck size={30} strokeWidth={1} />
+                <ClipboardCheck size={150} strokeWidth={1} />
               </div>
             </div>
             <div className="admission_process_content">
               <div className="processCrad_main">
                 <div className="processCrad">
                   <div className="processIcon">
-                    <ClipboardCheck size={30} strokeWidth={1} color="#44ade2" />
+                    <ClipboardCheck size={45} strokeWidth={1} color="#44ade2" />
                   </div>
                   <div className="processText">
                     <div className="subheading">
@@ -37,7 +37,7 @@ const page = () => {
                 </div>
                 <div className="processCrad">
                   <div className="processIcon">
-                    <UserPlus size={30} strokeWidth={1} color="#44ade2" />
+                    <UserPlus size={45} strokeWidth={1} color="#44ade2" />
                   </div>
                   <div className="processText">
                     <div className="subheading">
@@ -52,7 +52,7 @@ const page = () => {
                 </div>
                 <div className="processCrad">
                   <div className="processIcon">
-                    <ClipboardCheck size={30} strokeWidth={1} color="#44ade2" />
+                    <ClipboardCheck size={45} strokeWidth={1} color="#44ade2" />
                   </div>
                   <div className="processText">
                     <div className="subheading">
@@ -67,7 +67,7 @@ const page = () => {
                 </div>
                 <div className="processCrad">
                   <div className="processIcon">
-                    <FilePlus size={30} strokeWidth={1} color="#44ade2" />
+                    <FilePlus size={45} strokeWidth={1} color="#44ade2" />
                   </div>
                   <div className="processText">
                     <div className="subheading">
@@ -80,21 +80,21 @@ const page = () => {
           </div>
 
           {/* phase 2 start */}
-          <div className="admission_process_phase admission_phase2">
+          <div className="admission_process_phase">
             <div className="admission_process_top">
               <div className="phaseNum_Name">
                 <div className="phaseNumber">Phase 02</div>
                 <div className="phaseName">Course Registration & Merit List</div>
               </div>
               <div className="phaseiconimage">
-                <ClipboardCheck size={30} strokeWidth={1} />
+                <ClipboardCheck size={150} strokeWidth={1} />
               </div>
             </div>
             <div className="admission_process_content">
               <div className="processCrad_main">
                 <div className="processCrad">
                   <div className="processIcon">
-                    <ClipboardCheck size={30} strokeWidth={1} color="#7159a6" />
+                    <ClipboardCheck size={45} strokeWidth={1} color="#44ade2" />
                   </div>
                   <div className="processText">
                     <div className="subheading">
@@ -109,7 +109,7 @@ const page = () => {
                 </div>
                 <div className="processCrad">
                   <div className="processIcon">
-                    <UserPlus size={30} strokeWidth={1} color="#7159a6" />
+                    <UserPlus size={45} strokeWidth={1} color="#44ade2" />
                   </div>
                   <div className="processText">
                     <div className="subheading">
@@ -124,7 +124,7 @@ const page = () => {
                 </div>
                 <div className="processCrad">
                   <div className="processIcon">
-                    <ClipboardCheck size={30} strokeWidth={1} color="#7159a6" />
+                    <ClipboardCheck size={45} strokeWidth={1} color="#44ade2" />
                   </div>
                   <div className="processText">
                     <div className="subheading">
@@ -139,7 +139,7 @@ const page = () => {
                 </div>
                 <div className="processCrad">
                   <div className="processIcon">
-                    <FilePlus size={30} strokeWidth={1} color="#7159a6" />
+                    <FilePlus size={45} strokeWidth={1} color="#44ade2" />
                   </div>
                   <div className="processText">
                     <div className="subheading">
@@ -154,7 +154,7 @@ const page = () => {
                 </div>
                 <div className="processCrad">
                   <div className="processIcon">
-                    <FilePlus size={30} strokeWidth={1} color="#7159a6" />
+                    <FilePlus size={45} strokeWidth={1} color="#44ade2" />
                   </div>
                   <div className="processText">
                     <div className="subheading">
@@ -166,21 +166,21 @@ const page = () => {
             </div>
           </div>
           {/* phase 3 start here */}
-          <div className="admission_process_phase admission_phase3">
+          <div className="admission_process_phase">
             <div className="admission_process_top">
               <div className="phaseNum_Name">
                 <div className="phaseNumber">Phase 03</div>
                 <div className="phaseName">Option Filing & Seat Allotment</div>
               </div>
               <div className="phaseiconimage">
-                <ClipboardCheck size={30} strokeWidth={1} />
+                <ClipboardCheck size={150} strokeWidth={1} />
               </div>
             </div>
             <div className="admission_process_content">
               <div className="processCrad_main">
                 <div className="processCrad">
                   <div className="processIcon">
-                    <ClipboardCheck size={30} strokeWidth={1} color="#f58232" />
+                    <ClipboardCheck size={45} strokeWidth={1} color="#44ade2" />
                   </div>
                   <div className="processText">
                     <div className="subheading">
@@ -195,7 +195,7 @@ const page = () => {
                 </div>
                 <div className="processCrad">
                   <div className="processIcon">
-                    <UserPlus size={30} strokeWidth={1} color="#f58232" />
+                    <UserPlus size={45} strokeWidth={1} color="#44ade2" />
                   </div>
                   <div className="processText">
                     <div className="subheading">
@@ -210,7 +210,7 @@ const page = () => {
                 </div>
                 <div className="processCrad">
                   <div className="processIcon">
-                    <ClipboardCheck size={30} strokeWidth={1} color="#f58232" />
+                    <ClipboardCheck size={45} strokeWidth={1} color="#44ade2" />
                   </div>
                   <div className="processText">
                     <div className="subheading">
@@ -223,21 +223,21 @@ const page = () => {
           </div>
 
           {/* phase 4 start here  */}
-          <div className="admission_process_phase admission_phase4">
+          <div className="admission_process_phase">
             <div className="admission_process_top">
               <div className="phaseNum_Name">
                 <div className="phaseNumber">Phase 04</div>
                 <div className="phaseName">Allotment Response</div>
               </div>
               <div className="phaseiconimage">
-                <ClipboardCheck size={30} strokeWidth={1} />
+                <ClipboardCheck size={150} strokeWidth={1} />
               </div>
             </div>
             <div className="admission_process_content">
               <div className="processCrad_main">
                 <div className="processCrad">
                   <div className="processIcon">
-                    <ClipboardCheck size={30} strokeWidth={1} color="#f05a94" />
+                    <ClipboardCheck size={45} strokeWidth={1} color="#44ade2" />
                   </div>
                   <div className="processText">
                     <div className="subheading">
@@ -252,7 +252,7 @@ const page = () => {
                 </div>
                 <div className="processCrad">
                   <div className="processIcon">
-                    <UserPlus size={30} strokeWidth={1} color="#f05a94" />
+                    <UserPlus size={45} strokeWidth={1} color="#44ade2" />
                   </div>
                   <div className="processText">
                     <div className="subheading">

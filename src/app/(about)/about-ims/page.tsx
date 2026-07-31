@@ -116,6 +116,41 @@ const page = () => {
           </div>
         </div>
 
+        <div className="privacy_policyand_motto">
+          <div className="privacy_policy_inner">
+            <div className="mottoleft">
+              <Image 
+                src="/images/about/privacy-policy.webp"
+                alt=""
+                width={400}
+                height={300}
+              />
+              <div className="motto_content">
+                <div className="heading">
+                  Quality Policy
+                </div>
+                <p>We are committed to impart to our students, leading knowledge and experience for developing appropriate attitude, skills and competency to meet the corporate and organizational requirements.</p>
+              </div>
+            </div>
+            <div className="mottoleft mottoright">
+              <Image 
+                src="/images/about/ourmotto.webp"
+                alt=""
+                width={400}
+                height={300}
+              />
+              <div className="motto_content">
+                <div className="heading">
+                  Our Motto
+                </div>
+                <div className="motto_quotes">
+                  Not Things But Men, I Dare You !
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <section className="objective_section">
           <div className="row">
             {aboutObjectives.map((item) => (

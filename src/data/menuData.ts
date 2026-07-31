@@ -140,11 +140,7 @@ export const menuItems: MenuItem[] = [
         href: "/",
       },
       {
-        label: "Industry Internship",
-        href: "/",
-      },
-      {
-        label: "Industry Collobration",
+        label: "Internship & Industry Connect",
         href: "/",
       },
       {
@@ -152,11 +148,11 @@ export const menuItems: MenuItem[] = [
         href: "/",
       },
       {
-        label: "Placement Report",
+        label: "Placement Statistics",
         href: "/",
       },
       {
-        label: "Testimonials",
+        label: "Success Stories",
         href: "/",
       },
     ],

@@ -1160,9 +1160,10 @@ Body {
   z-index: -1;
   background-position: center;
 }
+/* About IMS Page Start Here */
 .about_inner_img {
   position: sticky;
-  top: 100px; /* Adjust according to your fixed header height */
+  top: 100px;
   margin: 0 0 30px 0;
 }
 .about_inner_img img {
@@ -1334,6 +1335,90 @@ Body {
 .info_card_border.blue {
   background: #09468e;
 }
+
+.privacy_policyand_motto {
+  padding: 60px 0px 0px 0px;
+}
+.privacy_policy_inner {
+  display: flex;
+  gap: 10px;
+}
+.mottoleft {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.mottoleft img {
+  border-radius: 20px;
+}
+.mottoright {
+  position: relative;
+}
+.mottoleft::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 1;
+  background-color: #09478ed4;
+}
+.mottoright::after {
+  background-color: #961719b0;
+}
+.motto_content {
+  z-index: 2;
+  position: absolute;
+  inset: 0;
+  padding: 25px;
+  color: #fff;
+  line-height: normal;
+  top: 100px;
+  height: auto;
+}
+.motto_quotes {
+  text-align: center;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+  font-family: "Roma-Semibold";
+  font-size: 18px;
+}
+.motto_quotes::after {
+  position: absolute;
+  content: "";
+  top: -10px;
+  left: -10px;
+  z-index: 3;
+  width: 30px;
+  height: 30px;
+  background-image: url("/images/about/quotes.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: rotate(187deg);
+  background-color: #781f21;
+}
+.motto_quotes::before {
+  content: "";
+  z-index: 3;
+  background-image: url(/images/about/quotes.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  bottom: -9px;
+  right: -10px;
+  background-color: #781f21;
+  border-radius: 40px;
+}
+/* About IMS Page End Here */
+
 /*---------------------- Leaders Pages Start Here --------------------*/
 .chancellor-section {
   padding: 80px 0px;
@@ -1502,48 +1587,48 @@ Body {
   stroke-width: 1;
 }
 /* New Design Start Here */
-  .zigzag-row{
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    margin-bottom: 80px;
-  }
-  .zigzag-row.reverse {
-    flex-direction: row-reverse;
-  }
-  .zigzag-section .parallaximg_image{
-    width: 50%;
-    border-radius: 20px;
-    overflow: hidden;
-  }
-  .parallaximg_image img{
-    max-height: 370px;
-    overflow: hidden;
-    min-height: 370px;
-    object-fit: cover;
-    border-radius: 20px;
-    width:100%;
-    transition-duration:0.5s;
+.zigzag-row {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 80px;
 }
-  .parallaximg_image:hover img{
-    transform: scale(1.1);
-  }
-  
-  .zigzag-section .content-box {
-    width: 50%;
-  }
-  .zigzag-section .btn {
-    display: inline-block;
-    padding: 14px 30px;
-    background: #c51c2f;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 40px;
-    transition: 0.3s;
-  }
-  .zigzag-section .btn:hover {
-    background: #000;
-  }
+.zigzag-row.reverse {
+  flex-direction: row-reverse;
+}
+.zigzag-section .parallaximg_image {
+  width: 50%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.parallaximg_image img {
+  max-height: 370px;
+  overflow: hidden;
+  min-height: 370px;
+  object-fit: cover;
+  border-radius: 20px;
+  width: 100%;
+  transition-duration: 0.5s;
+}
+.parallaximg_image:hover img {
+  transform: scale(1.1);
+}
+
+.zigzag-section .content-box {
+  width: 50%;
+}
+.zigzag-section .btn {
+  display: inline-block;
+  padding: 14px 30px;
+  background: #c51c2f;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 40px;
+  transition: 0.3s;
+}
+.zigzag-section .btn:hover {
+  background: #000;
+}
 /*----------- Approvals & Affiliations End Here-----------*/
 /*------------------ About Us Tab End Here ----------------*/
 
@@ -2012,52 +2097,52 @@ Body {
 }
 /* Programe Wise Faculty listing Start Here */
 .faculty_listing_page {
-    padding: 70px 0;
+  padding: 70px 0;
 }
 .faculty_listing_page .faculty-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
 .faculty_listing_page .faculty-card {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    padding: 25px;
-    background: #fff;
-    border-radius: 20px;
-    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
-    transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding: 25px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
 }
 .faculty_listing_page .faculty-card:hover {
-    transform: translateY(-8px);
+  transform: translateY(-8px);
 }
 .faculty_listing_page .faculty-image-box {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    overflow: hidden;
-    flex-shrink: 0;
-    border: 2px solid #8900495a;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 2px solid #8900495a;
 }
 .faculty_listing_page .faculty-image-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-.faculty_listing_page .subheading{
-    line-height: normal;
+.faculty_listing_page .subheading {
+  line-height: normal;
 }
 .faculty_listing_page .faculty-designation {
-    margin: 4px 0;
-    color: #09468e;
-    line-height: normal;
+  margin: 4px 0;
+  color: #09468e;
+  line-height: normal;
 }
 .faculty_listing_page .faculty-info {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 14px;
 }
 /* .faculty_listing_page .explore_more_btn a {
     gap: 7px;
@@ -2067,7 +2152,6 @@ Body {
 } */
 /* Programe Wise Faculty listing End Here */
 
-  
 /*----- FAQ Page Start Here -----*/
 .faq-list {
   display: flex;
@@ -2363,7 +2447,204 @@ Body {
   }
 } */
 /* ----- Faculty Page End Here ----- */
+/*----- ADMISSION PROCESS Page Start Here -------*/
+.admission_process_phase {
+  margin: 0px 0px 60px 0px;
+}
+.admission-phase {
+  position: relative;
+  margin: 0 0 70px;
+  padding: 40px;
+  border-radius: 28px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+}
 
+.admission_process_top {
+  background-color: #dff3ff;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  display: flex;
+  position: relative;
+  padding: 6px 0;
+}
+.phaseNum_Name {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.phaseNumber {
+  clip-path: polygon(0 0, 80% 0, 100% 100%, 0% 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(9, 70, 142, 1) 31%,
+    rgba(68, 173, 226, 1) 93%
+  );
+  font-family: Avenir-Next-Demi;
+  font-size: 16px;
+  line-height: normal;
+  border-radius: 10px 0px 0px 0px;
+  color: #fff;
+  display: flex;
+  padding: 12px 30px 12px 15px;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  text-transform: uppercase;
+}
+.phaseName {
+  font-family: Roma-Bold;
+  font-size: 20px;
+  line-height: normal;
+  padding: 0 0px 0 130px;
+}
+.phaseiconimage {
+  color: rgb(255, 255, 255);
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  background: linear-gradient(
+    280deg,
+    rgba(9, 70, 142, 1) 31%,
+    rgba(68, 173, 226, 1) 93%
+  );
+  border-radius: 30px;
+  padding: 10px;
+  position: absolute;
+  right: 0px;
+  bottom: 0;
+}
+.processCrad_main {
+  display: flex;
+  justify-content: start;
+}
+.processCrad {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 150px;
+}
+.processIcon {
+  width: 70px;
+  height: 70px;
+  border-radius: 200px;
+  margin-bottom: 20px;
+  border: 1px solid #9ed2f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.processText .subheading {
+  text-align: center;
+  font-size: 14px;
+  line-height: normal;
+  font-family: "Avenir-Next-Regular";
+}
+.processText {
+  width: 100%;
+}
+.processCrad_Arrow {
+  width: 50px;
+  margin: 28px 0 0 0;
+}
+.processCrad .processCrad_Arrow svg {
+  width: 100%;
+}
+.admission_process_content {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 10px 30px #00000012;
+  padding: 25px;
+  position: relative;
+  z-index: 1;
+  border-radius: 0px 0px 20px 20px;
+}
+/* phase2 start */
+.admission_phase2 .phaseNumber {
+  background: linear-gradient(
+    90deg,
+    rgba(93, 46, 139, 1) 31%,
+    rgba(188, 166, 208, 1) 93%
+  );
+}
+.admission_phase2 .phaseiconimage {
+  background: linear-gradient(
+    280deg,
+    rgba(93, 46, 139, 1) 31%,
+    rgba(188, 166, 208, 1) 93%
+  );
+}
+.admission_phase2 .admission_process_top {
+  background-color: #f0e5fa;
+}
+.admission_phase2 .processIcon {
+  border: 1px solid #bca6d0;
+}
+/* phase3 start */
+.admission_phase3 .phaseNumber {
+  background: linear-gradient(
+    90deg,
+    rgba(150, 23, 26, 1) 31%,
+    rgba(253, 198, 146, 1) 93%
+  );
+}
+.admission_phase3 .phaseiconimage {
+  background: linear-gradient(
+    280deg,
+    rgba(150, 23, 26, 1) 31%,
+    rgba(253, 198, 146, 1) 93%
+  );
+}
+.admission_phase3 .admission_process_top {
+  background-color: #fcedde;
+}
+.admission_phase3 .processIcon {
+  border: 1px solid #fdc692;
+}
+/* phase4 start */
+.admission_phase4 .phaseNumber {
+  background: linear-gradient(
+    90deg,
+    rgba(137, 0, 74, 1) 31%,
+    rgba(245, 164, 199, 1) 93%
+  );
+}
+.admission_phase4 .phaseiconimage {
+  background: linear-gradient(
+    280deg,
+    rgba(137, 0, 74, 1) 31%,
+    rgba(245, 164, 199, 1) 93%
+  );
+}
+.admission_phase4 .admission_process_top {
+  background-color: #ffe9f3;
+}
+.admission_phase4 .processIcon {
+  border: 1px solid #f5a4c7;
+}
+
+.processCrad_Arrow svg {
+  animation: arrowMove 1.4s ease-in-out infinite;
+}
+@keyframes arrowMove {
+  0% {
+    transform: translateX(0);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateX(10px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 0.4;
+  }
+}
+/* ------------- Admission Tab End Here ---------------*/
 /*----------------------- Inner Pages End Here --------------------*/
 
 /*--------------- Contact Us Pages Start Here ---------------*/
@@ -3172,16 +3453,16 @@ Body {
   /*----------- Sidebar End Here ------------*/
   /*--------------------- Inner Pages Start Here ---------------------*/
   /* Programe Wise Faculty listing Start Here */
-@media(max-width:768px){
-    .facultyListing{
-        grid-template-columns:1fr;
+  @media (max-width: 768px) {
+    .facultyListing {
+      grid-template-columns: 1fr;
     }
-    .faculty-card{
-        flex-direction:column;
-        text-align:center;
+    .faculty-card {
+      flex-direction: column;
+      text-align: center;
     }
-    .faculty-info{
-        align-items:center;
+    .faculty-info {
+      align-items: center;
     }
   }
   /* Programe Wise Faculty listing End Here */

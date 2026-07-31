@@ -2,8 +2,6 @@ import FacultyCard from "@/components/FacultyCard";
 import ExploreBtn from "@/components/ui/ExploreBtn";
 import { facultyListing } from "@/data/facultyListing";
 
-// import "@/styles/faculty.css";
-
 export default function FacultyPage() {
   return (
     <section className="faculty_listing_page">
