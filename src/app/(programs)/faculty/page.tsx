@@ -30,11 +30,11 @@ const FacultySection = () => {
     }
   };
 
-  // Desktop : 3 cards per row
+  // Desktop : 4 cards per row
   const groupedFaculty = useMemo(() => {
     const rows: Faculty[][] = [];
 
-    for (let i = 0; i < facultyData.length; i += 3) {
+    for (let i = 0; i < facultyData.length; i += 4) {
       rows.push(facultyData.slice(i, i + 4));
     }
 
@@ -93,6 +93,13 @@ const FacultySection = () => {
                       className="details-arrow"
                       style={{ left: `${arrowLeft}px` }}
                     />
+                    <button
+                      className="faculty-close"
+                      onClick={() => setSelectedFaculty(null)}
+                      aria-label="Close Faculty Details"
+                    >
+                      ✕
+                    </button>
                     <div className="details-grid">
                       <div className="left">
                         <Image
@@ -106,40 +113,46 @@ const FacultySection = () => {
                       <div className="right">
                         <div className="heading">{selectedInRow.name}</div>
 
-                        <div className="subheading">{selectedInRow.designation}</div>
+                        <div className="subheading">
+                          {selectedInRow.designation}
+                        </div>
 
                         <div className="info_box_main">
-                            <div className="info-box">
-                                <div className="subheading">Qualification</div>
-                                <p>{selectedInRow.qualification}</p>
-                                </div>
+                          <div className="info-box">
+                            <div className="subheading">Qualification</div>
+                            <p>{selectedInRow.qualification}</p>
+                          </div>
 
-                                <div className="info-box">
-                                <div className="subheading">Research Areas</div>
-                                <ul>
-                                    {selectedInRow.researchAreas.map((item, index) => (
-                                    <li key={index}>{item}</li>
-                                    ))}
-                                </ul>
-                                </div>
+                          <div className="info-box">
+                            <div className="subheading">Research Areas</div>
+                            <ul>
+                              {selectedInRow.researchAreas.map(
+                                (item, index) => (
+                                  <li key={index}>{item}</li>
+                                ),
+                              )}
+                            </ul>
+                          </div>
 
-                                <div className="info-box">
-                                <div className="subheading">Specialization</div>
-                                <ul>
-                                    {selectedInRow.specialization.map((item, index) => (
-                                    <li key={index}>{item}</li>
-                                    ))}
-                                </ul>
-                                </div>
+                          <div className="info-box">
+                            <div className="subheading">Specialization</div>
+                            <ul>
+                              {selectedInRow.specialization.map(
+                                (item, index) => (
+                                  <li key={index}>{item}</li>
+                                ),
+                              )}
+                            </ul>
+                          </div>
 
-                                <div className="info-box">
-                                <div className="subheading">Email</div>
-                                <p>{selectedInRow.email}</p>
-                                </div>
+                          <div className="info-box">
+                            <div className="subheading">Email</div>
+                            <p>{selectedInRow.email}</p>
+                          </div>
                         </div>
 
                         <div className="facultydetail-content">
-                          <div className="subheading">Profile</div>
+                          {/* <div className="subheading">Profile</div> */}
                           <p>{selectedInRow.profileContent}</p>
                         </div>
                       </div>

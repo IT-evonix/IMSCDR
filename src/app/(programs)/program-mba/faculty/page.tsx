@@ -1,15 +1,26 @@
+import FacultyCard from "@/components/FacultyCard";
+import ExploreBtn from "@/components/ui/ExploreBtn";
+import { facultyListing } from "@/data/facultyListing";
 
-import React from "react";
-
-
-const page = () => {
+export default function FacultyPage() {
   return (
-    <div className="innerpagerightside">
-      <div className="heading">
-        Faculty
+    <section className="faculty_listing_page">
+      <div className="faculty-heading">
+        <div className="heading">Faculty Listing</div>
       </div>
-    </div>
-  );
-};
 
-export default page;
+      <div className="faculty-grid">
+        {facultyListing.map((faculty) => (
+          <FacultyCard
+            key={faculty.id}
+            faculty={faculty}
+            showButton={false}
+          />
+        ))}
+      </div>
+      <div className="text-center">
+        <ExploreBtn href="/faculty" text="Explore More" />
+      </div>
+    </section>
+  );
+}

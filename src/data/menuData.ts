@@ -1,6 +1,8 @@
 export interface MenuItem {
   label: string;
   href?: string;
+  target?: string;
+  isExternal?: boolean;
   children?: MenuItem[];
 }
 
@@ -10,27 +12,15 @@ export const menuItems: MenuItem[] = [
     children: [
       {
         label: "About IMS",
-        href: "/",
+        href: "/about-ims",
       },
       {
         label: "Vision & Mission",
-        href: "/",
+         href: "/about-ims#vision-and-mision",
       },
       {
         label: "Leadership",
         children: [
-          {
-            label: "Chairman's Message",
-            href: "/about-director-message",
-          },
-          {
-            label: "Secretary's Message",
-            href: "/about-dy-director-msg",
-          },
-          {
-            label: "Distinguished Advisor",
-            href: "/about-dy-director-msg",
-          },
           {
             label: "Directors Message",
             href: "/about-director-message",
@@ -50,21 +40,8 @@ export const menuItems: MenuItem[] = [
         href: "/college-development-commitee",
       },
       {
-        label: "Approvals & Recognition",
-        children: [
-          {
-            label: "AICTE",
-            href: "/aicte",
-          },
-          {
-            label: "Savitribai Phule Pune University",
-            href: "/",
-          },
-          {
-            label: "NAAC Accrediation",
-            href: "/",
-          },
-        ],
+        label: "Approvals & Affiliations",
+        href: "/approvals-and-affiliations",
       },
     ],
   },
@@ -115,15 +92,11 @@ export const menuItems: MenuItem[] = [
         href: "/",
       },
       {
-        label: "Eligibility Criteria",
+        label: "Eligibility",
         href: "/",
       },
       {
-        label: "Admission Schedule",
-        href: "/",
-      },
-      {
-        label: "Prospectus Download",
+        label: "Fee Structure",
         href: "/",
       },
       {
@@ -131,31 +104,25 @@ export const menuItems: MenuItem[] = [
         href: "/",
       },
       {
-        label: "Fees Structure and Refund Policy",
+        label: "Apply Online",
         href: "/",
       },
       {
-        label: "online-admission-inquiry",
+        label: "Downloads",
         href: "/",
       },
       {
-        label: "Reservation Policy",
-        href: "/",
-      },
-      {
-        label: "FAQs",
-        href: "/",
+        label: "Prospectus",
+        href: "/pdf/admission/IMS-MBA-MCA-Prospectus25-26.pdf",
+        target: "_blank",
+        isExternal: true,
       },
       {
         label: "Documents Required",
         href: "/",
       },
       {
-        label: "Education Loan Assistance",
-        href: "/",
-      },
-      {
-        label: "Hostel Information",
+        label: "Reservation Policy",
         href: "/",
       },
     ],
@@ -173,11 +140,7 @@ export const menuItems: MenuItem[] = [
         href: "/",
       },
       {
-        label: "Industry Internship",
-        href: "/",
-      },
-      {
-        label: "Industry Collobration",
+        label: "Internship & Industry Connect",
         href: "/",
       },
       {
@@ -185,11 +148,11 @@ export const menuItems: MenuItem[] = [
         href: "/",
       },
       {
-        label: "Placement Report",
+        label: "Placement Statistics",
         href: "/",
       },
       {
-        label: "Testimonials",
+        label: "Success Stories",
         href: "/",
       },
     ],
