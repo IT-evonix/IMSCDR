@@ -2493,6 +2493,29 @@ Body {
   position: absolute;
   left: 0;
   text-transform: uppercase;
+  overflow: hidden;
+  position: absolute;
+}
+
+.phaseNumber::before {
+  content: "";
+  position: absolute;
+  left: -100%;
+  top: 0;
+  width: 70%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.5),
+    transparent
+  );
+  animation: shine 3s linear infinite;
+}
+@keyframes shine {
+  100% {
+    left: 150%;
+  }
 }
 .phaseName {
   font-family: Roma-Bold;
@@ -2527,6 +2550,14 @@ Body {
   justify-content: center;
   flex-wrap: wrap;
   width: 150px;
+  transition: 0.35s;
+}
+.processCrad:hover {
+  transform: translateY(-10px);
+}
+.processCrad:hover svg {
+  transform: rotate(12deg) scale(1.1);
+  transition: 0.35s;
 }
 .processIcon {
   width: 70px;
@@ -2550,6 +2581,23 @@ Body {
 .processCrad_Arrow {
   width: 50px;
   margin: 28px 0 0 0;
+}
+.processCrad_Arrow svg {
+  animation: arrowMove 1.4s ease-in-out infinite;
+}
+@keyframes arrowMove {
+  0% {
+    transform: translateX(0);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateX(10px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 0.4;
+  }
 }
 .processCrad .processCrad_Arrow svg {
   width: 100%;
@@ -2627,23 +2675,10 @@ Body {
   border: 1px solid #f5a4c7;
 }
 
-.processCrad_Arrow svg {
-  animation: arrowMove 1.4s ease-in-out infinite;
-}
-@keyframes arrowMove {
-  0% {
-    transform: translateX(0);
-    opacity: 0.4;
-  }
-  50% {
-    transform: translateX(10px);
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 0.4;
-  }
-}
+
+
+
+
 /* ------------- Admission Tab End Here ---------------*/
 /*----------------------- Inner Pages End Here --------------------*/
 
