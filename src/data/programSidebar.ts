@@ -38,16 +38,32 @@ export const programSidebar = {
     heading: "MBA",
     menuItems: [
       { title: "Overview", href: "/program-mba/overview" },
-      { title: "Specializations", href: "/program-mba/specializations" },
-      { title: "Curriculum", href: "/program-mba/curriculum" },
-      { title: "Eligibility", href: "/program-mba/eligibility" },
       { title: "Intake", href: "/program-mba/intake" },
+      { title: "Eligibility", href: "/program-mba/eligibility" },
+      { title: "Curriculum / Syllabus", href: "/program-mba/curriculum" },
+      { title: "Programme Outcomes", href: "/program-mba/programme-outcomes" },
+      { title: "Career Opportunities", href: "/program-mba/career-opportunities" },
       { title: "Faculty", href: "/program-mba/faculty" },
-      { title: "Syllabus", href: "/program-mba/syllabus" },
-      { title: "Academic Calendar", href: "/program-mba/academic-calendar" },
+      { title: "Laboratories / Facilities", href: "/program-mba/laboratories" },
+      { title: "Downloads", href: "/program-mba/downloads" },
       { title: "FAQ", href: "/program-mba/faq" },
     ],
   },
+
+  // mba: {
+  //   heading: "MBA",
+  //   menuItems: [
+  //     { title: "Overview", href: "/program-mba/overview" },
+  //     { title: "Specializations", href: "/program-mba/specializations" },
+  //     { title: "Curriculum", href: "/program-mba/curriculum" },
+  //     { title: "Eligibility", href: "/program-mba/eligibility" },
+  //     { title: "Intake", href: "/program-mba/intake" },
+  //     { title: "Faculty", href: "/program-mba/faculty" },
+  //     { title: "Syllabus", href: "/program-mba/syllabus" },
+  //     { title: "Academic Calendar", href: "/program-mba/academic-calendar" },
+  //     { title: "FAQ", href: "/program-mba/faq" },
+  //   ],
+  // },
 
   admission: {
     heading: "Admission",

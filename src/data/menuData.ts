@@ -89,7 +89,7 @@ export const menuItems: MenuItem[] = [
     children: [
       {
         label: "Admission Process ",
-        href: "/",
+        href: "/admission-process",
       },
       {
         label: "Eligibility",

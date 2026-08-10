@@ -2096,9 +2096,6 @@ Body {
   font-family: "Roma-Bold";
 }
 /* Programe Wise Faculty listing Start Here */
-.faculty_listing_page {
-  padding: 70px 0;
-}
 .faculty_listing_page .faculty-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -2354,15 +2351,15 @@ Body {
   flex-wrap: wrap;
 }
 .faculty-section .info-box {
-  margin-top: 20px;
-  width: 24%;
+  margin-top: 15px;
+  width: 30%;
 }
 .info-box .subheading {
   border-bottom: 1px solid #ccc;
   padding: 0 0 7px 0;
   margin: 0 0 7px 0;
   line-height: normal;
-  font-size: 16px;
+  font-size: 14px;
 }
 .facultydetail-content {
   width: 100%;
@@ -2390,7 +2387,7 @@ Body {
   padding-left: 18px;
 }
 .faculty-section .info-box li {
-  margin-bottom: 8px;
+  margin-bottom: 5px;
   color: #000;
   font-size: 14px;
   line-height: normal;
