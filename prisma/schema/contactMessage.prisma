@@ -1,0 +1,18 @@
+// ContactMessage Model Schema
+
+model ContactMessage {
+  id        Int      @id @default(autoincrement())
+  firstName String
+  lastName  String
+  email     String
+  mobile    String
+  subject   String
+  message   String   @db.Text
+  status    String   @default("Unread") // Unread, Read, Replied
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([email])
+  @@index([status])
+  @@index([createdAt])
+}

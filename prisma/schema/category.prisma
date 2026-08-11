@@ -1,0 +1,11 @@
+// Industry Standard Categories Model
+model Category {
+  id        Int      @id @default(autoincrement())
+  name      String   @unique
+  slug      String   @unique
+  type      String   @default("NewsEvent")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("categories")
+}
