@@ -25,37 +25,37 @@ export default function Faq({
 
   return (
     <section className="faq-section">
-        <div className="heading">{title}</div>
+      <div className="heading">{title}</div>
 
-        <div className="faq-list">
-          {faqs.map((faq, index) => {
-            const isOpen = activeIndex === index;
+      <div className="faq-list">
+        {faqs.map((faq, index) => {
+          const isOpen = activeIndex === index;
 
-            return (
-              <div
-                key={index}
-                className={`faq-item ${isOpen ? "active" : ""}`}
+          return (
+            <div
+              key={index}
+              className={`faq-item ${isOpen ? "active" : ""}`}
+            >
+              <button
+                className="faq-question"
+                onClick={() => toggleFaq(index)}
               >
-                <button
-                  className="faq-question"
-                  onClick={() => toggleFaq(index)}
-                >
-                  <span className="subheading">{faq.question}</span>
+                <span className="subheading">{faq.question}</span>
 
-                  {isOpen ? (
-                    <ChevronUp size={22} />
-                  ) : (
-                    <ChevronDown size={22} />
-                  )}
-                </button>
+                {isOpen ? (
+                  <ChevronUp size={22} />
+                ) : (
+                  <ChevronDown size={22} />
+                )}
+              </button>
 
-                <div className={`faq-answer ${isOpen ? "show" : ""}`}>
-                  <p>{faq.answer}</p>
-                </div>
+              <div className={`faq-answer ${isOpen ? "show" : ""}`}>
+                <p>{faq.answer}</p>
               </div>
-            );
-          })}
-        </div>
+            </div>
+          );
+        })}
+      </div>
     </section>
   );
 }

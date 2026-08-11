@@ -8,6 +8,7 @@ import { contactSchema, ContactFormData } from "@/data/contactSchema";
 
 const ContactForm = () => {
   const [success, setSuccess] = useState("");
+  const [errorMsg, setErrorMsg] = useState("");
 
   const {
     register,
@@ -19,16 +20,32 @@ const ContactForm = () => {
   });
 
   const onSubmit = async (data: ContactFormData) => {
-    console.log(data);
+    setSuccess("");
+    setErrorMsg("");
 
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
 
-    setSuccess("Your message has been submitted successfully.");
-    reset();
+      const resData = await res.json();
 
-    setTimeout(() => {
-      setSuccess("");
-    }, 3000);
+      if (res.ok && resData.status === "success") {
+        setSuccess(resData.message || "Your message has been submitted successfully.");
+        reset();
+        setTimeout(() => {
+          setSuccess("");
+        }, 5000);
+      } else {
+        throw new Error(resData.message || "Failed to submit message. Please try again.");
+      }
+    } catch (err: any) {
+      setErrorMsg(err.message || "Something went wrong. Please try again.");
+    }
   };
 
   return (
@@ -130,6 +147,7 @@ const ContactForm = () => {
 
             <div className="col-12">
               {success && <div className="alert alert-success">{success}</div>}
+              {errorMsg && <div className="alert alert-danger">{errorMsg}</div>}
 
               <button
                 type="submit"
