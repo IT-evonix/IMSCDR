@@ -1,15 +1,13 @@
-
-import React from "react";
-
+import React from 'react'
 
 const page = () => {
   return (
     <div className="innerpagerightside">
       <div className="heading">
-        Curriculum / Syllabus
+        Laboratories / Facilities
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default page;
+export default page

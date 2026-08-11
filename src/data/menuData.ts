@@ -27,7 +27,7 @@ export const menuItems: MenuItem[] = [
           },
           {
             label: "Dy Director Message",
-            href: "/about-dy-director-msg",
+            href: "/about-dy-director-message",
           },
         ],
       },
@@ -71,7 +71,7 @@ export const menuItems: MenuItem[] = [
       },
       {
         label: "Faculty",
-        href: "/",
+        href: "/faculty",
       },
       {
         label: "Academic Calendar",
@@ -89,7 +89,7 @@ export const menuItems: MenuItem[] = [
     children: [
       {
         label: "Admission Process ",
-        href: "/",
+        href: "/admission-process",
       },
       {
         label: "Eligibility",
