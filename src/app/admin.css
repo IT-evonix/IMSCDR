@@ -14,6 +14,7 @@
   font-family: "Avenir-Next-Regular", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
+
 .admin-root {
   background-color: #f9f9ff;
 }
@@ -26,7 +27,8 @@
 .admin-root input:not([type="checkbox"]):not([type="radio"]),
 .admin-root select {
   font-weight: 400 !important;
-  font-size: 0.75rem !important; /* 12px */
+  font-size: 0.75rem !important;
+  /* 12px */
   color: #1a1c20 !important;
   padding-top: 0.5rem !important;
   padding-bottom: 0.5rem !important;
@@ -223,7 +225,8 @@
 /* Override Bootstrap button & heading resets for admin panel */
 .admin-root h1,
 .admin-root .admin-page-heading {
-  font-size: 1.125rem !important; /* 18px */
+  font-size: 1.125rem !important;
+  /* 18px */
   font-weight: 700 !important;
   margin-bottom: 0 !important;
   line-height: 1.3 !important;
