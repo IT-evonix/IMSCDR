@@ -189,7 +189,14 @@ const FacultySection = () => {
                               <div className="subheading">Research Profile</div>
                               <div className="info-boxrow">
                                 <div className="subheading">ORCID ID</div>
-                                <p>{selectedInRow.orcidId || "-"}</p>
+                                {/* <p>{selectedInRow.orcidId || "-"}</p> */}
+                                <a
+                                    href={selectedInRow.orcidId || "-"}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                  >
+                                    ORCID ID Profile
+                                  </a>
                               </div>
                               <div className="info-boxrow">
                                 <div className="subheading">

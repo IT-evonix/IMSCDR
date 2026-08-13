@@ -1347,12 +1347,14 @@ Body {
   position: relative;
   overflow: hidden;
   border-radius: 20px;
+  width:50%;
 }
 .mottoleft img {
   border-radius: 20px;
 }
 .mottoright {
   position: relative;
+  width:50%;
 }
 .mottoleft::after {
   position: absolute;
@@ -1401,6 +1403,7 @@ Body {
   background-size: contain;
   transform: rotate(187deg);
   background-color: #781f21;
+  border-radius: 40px;
 }
 .motto_quotes::before {
   content: "";
@@ -2732,11 +2735,281 @@ Body {
   border: 1px solid #f5a4c7;
 }
 
-
-
-
-
 /* ------------- Admission Tab End Here ---------------*/
+/* ------------- LifeatIMS Tab Start Here -------------*/
+.lifeat_states{
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  background: #fff;
+  box-shadow: 0px 6px 12px 3px #00000017;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 60px 0 0 0;
+}
+.lifeat_states img{
+  border-radius:20px;
+}
+.lifeat_statebox{
+  display: flex;
+  align-items: center;
+  gap:8px;
+}
+.lifeat_statetext{
+  font-size:16px;
+  line-height: normal;
+}
+.lifeat_statetext span{
+  font-size:25px;
+  font-family: "Avenir-Next-Demi";
+  width:100%;
+  display:block;
+  line-height: 30px;
+}
+.verticalseparator {
+  background-color: #09478e1f;
+  width: 1px;
+  height: 50px;
+}
+.lifeat_marquee{
+  padding:60px 0px 0px 0px;
+}
+.lifeat_marquee .marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.lifeat_marquee .marquee_content {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 25s linear infinite;
+  font-size:55px;
+  font-family: "Avenir-Next-Demi";
+  text-transform: uppercase;
+  color:#ccc;
+  line-height:normal;
+}
+.lifeat_marquee .marquee_content span{
+  font-family: "Avenir-Next-Regular";
+}
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+.lifeatcampus .motto_content{
+  top: 65px;
+}
+.lifeatcampus .motto_quotes{
+  line-height: 18px;
+  min-height: 132px;
+  align-items: center;
+  display:flex;
+  font-family: "Avenir-Next-Regular";
+  font-size:15px;
+}
+.lifeatcampus .visionleft:after{
+  background-color: #09478ed4 !important;
+}
+.lifeatcampus .misionright:after {
+    background-color: #961719b0;
+}
+.visionleft .motto_quotes:after{
+  background-color: #145795;
+  border-radius:30px;
+}
+.visionleft .motto_quotes::before{
+  background-color: #1a5491;
+}
+.ourvaluesmain{
+  border-radius:30px;
+  position: relative;
+  overflow: hidden;
+  transition-duration:0.5s;
+}
+/* .ourvaluesmain:hover{
+  margin:-20px 0px 0px 0px;
+} */
+.ourvaluesmain:hover img{
+  transform: scale(1.1);
+  transition-duration:0.5s;
+}
+.ourvaluesmain img{
+  border-radius:30px;
+  transition-duration:0.5s;
+}
+.ourvaluescontent{
+  position: absolute;
+  bottom: 0px;
+  padding: 30px;
+  width: 100%;
+  background: linear-gradient(180deg,rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.71) 20%);
+  color:#fff;
+  height: 250px;
+  border-radius:30px;
+}
+.ourvaluescontent .heading{
+  margin:0px 0px 5px 0px;
+}
+.ourvaluescontent .subheading{
+  margin:7px 0 7px 0;
+  color: #ffc233;
+}
+.ourvaluescontent ul{
+  gap: 6px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  padding:0px 0px 0px 15px;
+  margin: 0;
+  border: 1px solid #ffffff69;
+  padding:15px;
+  border-radius:25px;
+  justify-content: center;
+}
+.ourvaluescontent ul li{
+  width: 31%;
+}
+.imscdr_box{
+  border-radius:10px;
+}
+
+.image-gallery {
+  width: 100%;
+}
+
+.mainimage_gallery .gallery-card {
+  background: #fff;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  position:relative;
+}
+
+.mainimage_gallery .gallery-card:hover {
+  transform: translateY(-5px);
+}
+
+.mainimage_gallery .gallery-image-link {
+  display: block;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.mainimage_gallery .gallery-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+.mainimage_gallery .gallery-image {
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.mainimage_gallery .gallery-card:hover .gallery-image {
+  transform: scale(1.06);
+}
+
+.mainimage_gallery .gallery-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.mainimage_gallery .gallery-card:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.mainimage_gallery .gallery-view {
+  color: #000;
+  background: #fff;
+  border-radius: 30px;
+  padding: 4px 15px;
+  font-family: Avenir-Next-Regular;
+  font-size: 13px;
+}
+
+.mainimage_gallery .gallery-name {
+  color: #fff;
+  -webkit-line-clamp: 1;
+  text-align: center;
+  background: #7159a6d9;
+  border-radius: 0 0 14px 14px;
+  -webkit-box-orient: vertical;
+  width: 100%;
+  min-height: 28px;
+  padding: 5px 7px;
+  font-family: Avenir-Next-Demi;
+  font-size: 14px;
+  line-height: 22px;
+  display: -webkit-box;
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+}
+.infrastructure_main{
+  border-radius:25px;
+  position: relative;
+  /* overflow:hidden; */
+  margin:20px 0px 60px 0px;
+}
+.infrastructure_main::after{
+  content: "";
+  z-index: -1;
+  background-image: url(/images/campus/bg-shadow.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 80px;
+  position: absolute;
+  bottom: -29px;
+  left: 0;
+  right: 0;
+  width: 90%;
+  margin: 0 auto;
+}
+.infrastructure_main::before{
+  content: "";
+  z-index: 1;
+  height:70%;
+  position: absolute;
+  bottom:0px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  border-radius: 20px;
+  background: linear-gradient(180deg,rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.71) 85%);
+}
+.infrastructure_main img{
+  border-radius: 20px;
+}
+.infrastructure_main_content{
+  position:absolute;
+  z-index:9;
+  width:100%;
+  text-align: center;
+  font-size:25px;
+  font-family: "Roma-Bold";
+  bottom: 20px;
+  color:#ffc233;
+  text-transform: capitalize;
+}
+.infrapara span{
+  font-family: "Avenir-Next-Demi";
+  color:#09468e;
+}
+/* ------------- LifeatIMS Tab End Here ---------------*/
 /*----------------------- Inner Pages End Here --------------------*/
 
 /*--------------- Contact Us Pages Start Here ---------------*/

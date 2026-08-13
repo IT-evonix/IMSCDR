@@ -83,4 +83,23 @@ export const programSidebar = {
       { title: "Reservation Policy", href: "/reservation-policy" },
     ],
   },
+
+
+  lifeatims: {
+    heading: "Life at IMS",
+    menuItems: [
+      { title: "Campus Overview", href: "/lifeatims/campus-overview" },
+      { title: "Infrastructure", href: "/lifeatims/infrastructure" },
+      { title: "Library", href: "/lifeatims/library" },
+      { title: "Hostel", href: "/lifeatims/hostel" },
+      { title: "Sports", href: "/lifeatims/sports" },
+      { title: "Student Clubs", href: "/lifeatims/student-clubs" },
+      { title: "Cultural Activities", href: "/lifeatims/cultural-activities"},
+      { title: "Technical Events", href: "/lifeatims/technical-events" },
+      { title: "Student Achievements", href: "/lifeatims/student-achievements" },
+      { title: "Alumni", href: "/lifeatims/alumni" },
+      { title: "Gallery", href: "/lifeatims/gallery" },
+    ],
+  },
+
 };

@@ -159,40 +159,51 @@ export const menuItems: MenuItem[] = [
   },
 
   {
-    label: "Faculty & Research",
+    label: "Life@IMS",
     children: [
       {
-        label: "Faculty",
-        children: [
-          {
-            label: "Members",
-            href: "/",
-          },
-          {
-            label: "Achivements",
-            href: "/",
-          },
-          {
-            label: "Publication",
-            href: "/",
-          },
-          {
-            label: "Research Project",
-            href: "/",
-          },
-          {
-            label: "Patent & Design Registration",
-            href: "/",
-          },
-        ],
+        label: "Campus Overview",
+        href: "/lifeatims/campus-overview",
       },
       {
-        label: "Administrative Staff",
-        href: "/",
+        label: "Infrastructure",
+        href: "/lifeatims/infrastructure",
       },
       {
-        label: "Journels",
-        href: "/",
+        label: "Library",
+        href: "/lifeatims/library",
+      },
+      {
+        label: "Hostel",
+        href: "/lifeatims/hostel",
+      },
+      {
+        label: "Sports",
+        href: "/lifeatims/sports",
+      },
+      {
+        label: "Student Clubs",
+        href: "/lifeatims/student-clubs",
+      },
+      {
+        label: "Cultural Activities",
+        href: "/lifeatims/cultural-activities",
+      },
+      {
+        label: "Technical Events",
+        href: "/lifeatims/technical-events",
+      },
+      {
+        label: "Student Achievements",
+        href: "/lifeatims/student-achievements",
+      },
+      {
+        label: "Alumni",
+        href: "/lifeatims/alumni",
+      },
+      {
+        label: "Gallery",
+        href: "/lifeatims/gallery",
       },
     ],
   },

@@ -1,4 +1,4 @@
-import InnerpageBanner from "@/components/InnerpageBanner";
+// import InnerpageBanner from "@/components/InnerpageBanner";
 import Table from "@/components/ui/Table";
 import {
   governingBodyColumns,
