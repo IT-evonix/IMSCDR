@@ -2,8 +2,8 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div>
-        <h1 className='heading mt-4'>Approvals & Affiliations</h1>
+    <div className='innerpagerightside'>
+      <div className="heading">Programme Outcomes</div>
     </div>
   )
 }

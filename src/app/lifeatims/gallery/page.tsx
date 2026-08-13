@@ -6,7 +6,7 @@ const page = () => {
   return (
     <div className="innerpagerightside">
       <div className="heading">
-        Curriculum / Syllabus
+        Gallery
       </div>
     </div>
   );
