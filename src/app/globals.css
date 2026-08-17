@@ -1235,6 +1235,7 @@ Body {
   background-repeat: no-repeat;
   background-position: bottom;
   transition: transform 0.5s ease;
+  width:50%;
 }
 .vision_box .heading {
   margin: 0 0 12px;
@@ -1341,7 +1342,7 @@ Body {
 }
 .privacy_policy_inner {
   display: flex;
-  gap: 10px;
+  gap: 20px;
 }
 .mottoleft {
   position: relative;
@@ -1603,10 +1604,10 @@ Body {
   overflow: hidden;
 }
 .parallaximg_image img {
-  max-height: 370px;
-  overflow: hidden;
-  min-height: 370px;
+  /* max-height: 370px;
+  min-height: 370px; */
   object-fit: cover;
+  overflow: hidden;
   border-radius: 20px;
   width: 100%;
   transition-duration: 0.5s;
@@ -1887,7 +1888,10 @@ Body {
 /*----- Specializations Page Start Here -----*/
 .specialization-section {
   position: relative;
-  margin-bottom: 30px;
+  /* margin-top: 60px; */
+}
+.specialization_inner{
+  margin:30px 0px 30px 0px;
 }
 .specialization-section .specialization_inner2 {
   display: flex;
@@ -1975,7 +1979,7 @@ Body {
 }
 .specialization-section .right-box li {
   font-size: 16px;
-  padding: 7px 0 7px 18px;
+  padding: 6px 0 6px 16px;
   font-size: 16px;
   position: relative;
   line-height: normal;
@@ -1983,7 +1987,7 @@ Body {
 .specialization-section .right-box li::before {
   content: "✓";
   color: #fff;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: bold;
   position: absolute;
   top: 8px;
@@ -2007,6 +2011,7 @@ Body {
 }
 .eligibility_inner img {
   border-radius: 20px;
+  width:100%;
 }
 .intake_inner {
   position: relative;
@@ -2051,6 +2056,7 @@ Body {
 .overview_inner {
   display: flex;
   gap: 30px;
+  padding-bottom:60px;
 }
 .overview_inner img {
   border-radius: 10px;
@@ -2132,9 +2138,23 @@ Body {
   line-height: normal;
 }
 .faculty_listing_page .faculty-designation {
-  margin: 4px 0;
   color: #09468e;
+  margin: 4px 0;
   line-height: normal;
+  font-family: "Avenir-Next-Demi";
+  font-size: 14px;
+}
+.faculty-education{
+  color: #3e3e3e;
+  margin: 0;
+  font-size: 14px;
+  height: 35px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height:normal;
 }
 .faculty_listing_page .faculty-info {
   display: flex;
@@ -2150,7 +2170,120 @@ Body {
 } */
 /* Programe Wise Faculty listing End Here */
 
-/*----- FAQ Page Start Here -----*/
+/* Career Opportunities Start Here */
+.career_opportunities_images{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+  align-items:center;
+  position: relative;
+}
+.career_opportunities_img{
+  width:100%;
+  border-radius:20px;
+}
+.career_opportunities_img img{
+  width:100%;
+  border-radius:20px;
+}
+.logobox_img {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px 15px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 190px;
+  margin: 0 auto;
+}
+.logobox_img img{
+  width:100%;
+}
+/* Career Opportunities End Here */
+/* ---------- Laboratories & Facilities Start Here ---------- */
+.facilities-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+.facility-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-height: 90px;
+  padding: 10px 17px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+  overflow: hidden;
+}
+.facility-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 0;
+  background: #ffcdd3;
+  transition: height 0.35s ease;
+}
+.facility-item:hover {
+  transform: translateY(-5px);
+  border-color: #ffcdd3;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.07);
+}
+.facility-item:hover::before {
+  height: 100%;
+}
+.facility-icon {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #c51c2f;
+  background: #fdf0f2;
+  transition:
+    color 0.35s ease,
+    background 0.35s ease,
+    transform 0.35s ease;
+}
+.facility-item:hover .facility-icon {
+  color: #fff;
+  background: #c51c2f;
+  transform: rotate(-5deg);
+}
+.facility-content {
+  flex: 1;
+}
+.facility-content h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #222;
+}
+/* ---------- Laboratories & Facilities End Here ---------- */
+/* Dowanload Start Here */
+.ImageBox{
+  position:relative;
+  overflow: hidden;
+  border-radius:20px;
+}
+.ImageBox img{
+  border-radius:20px;
+  transition-duration:0.5s;
+}
+.ImageBox:hover img{
+  transform: scale(1.1);
+  transition-duration:0.5s;
+}
+/* Dowanload End Here */
+/* ---------- FAQ Start Here ---------- */
 .faq-list {
   display: flex;
   flex-direction: column;
@@ -2205,9 +2338,7 @@ Body {
   font-size: 16px;
 }
 /*----- FAQ Page End Here -----*/
-
 /* ----- Faculty Page Start Here ----- */
-
 .faculty-section {
   padding: 80px 0;
   background: #fff;
@@ -2266,9 +2397,13 @@ Body {
   font-family: "Avenir-Next-Regular";
   line-height: normal;
 }
-/* .faculty-item.active .faculty-card {
-  border: 2px solid #c4161c;
-} */
+.faculty-item.active .faculty-card {
+  background: #89004a;
+  color:#fff;
+}
+.faculty-item.active .faculty-content span{
+  color:#fff !important;
+}
 .faculty-details {
   width: 100%;
   margin-bottom: 40px;
@@ -2281,15 +2416,15 @@ Body {
 }
 .faculty-close {
   position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 30px;
-  height: 30px;
+  top: 10px;
+  right: 10px;
+  width: 23px;
+  height: 23px;
   border: none;
   border-radius: 50%;
-  background: #9ed2f1;
+  background: #89004a;
   color: #fff;
-  font-size: 15px;
+  font-size: 14px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -2390,8 +2525,17 @@ Body {
   gap:10px;
 }
 .profiledesign .info-boxrow a{
-  font-size:13px;
   color: #09468e;
+  font-size: 13px;
+  background: #ffffff;
+  line-height: normal;
+}
+.profiledesign1 .info-boxrow{
+  width:100%;
+}
+.profiledesign1 .info-boxrow .subheading{
+  text-align: start;
+  color:#000;
 }
 .profiledesign .info-boxrow p{
   margin:0px;
@@ -2405,12 +2549,20 @@ Body {
   background-color:transparent !important;
   border-radius:0px;
 }
+.profiledesign{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
 .profiledesign .subheading{
-  background-color: #fff;
-  padding: 2px 10px;
-  margin: 0 0 5px 0;
-  font-size: 16px;
-  border-radius: 5px;
+    background-color: #44ade2;
+    border-radius: 15px;
+    padding: 2px 10px 2px 10px;
+    font-size: 16px;
+    width: 100%;
+    margin: 0 0 10px 0;
+    color: #fff;
+    text-align: center;
 }
 .facultydetail-content {
   width: 100%;
@@ -2455,57 +2607,170 @@ Body {
   background-color: #f6f6f6;
   margin-top: 13px;
 }
-
-/* @media (max-width: 1100px) {
-  .faculty-grid {
-    grid-template-columns: repeat(2, 1fr);
+.research_linkbtn{
+  padding:5px 10px;
+  background-color:#ccc;
+  border-radius:20px;
+  font-size:14px;
+  text-decoration:none;
+  color:#000;
+  font-family: "Roma-Regular";
+}
+/*-------------- Faculty New Design ---------------*/
+/* =========================================
+   FACULTY POPUP OVERLAY
+========================================= */
+.faculty-modal-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  overflow-y: auto;
+  animation: facultyOverlayShow 0.25s ease;
+  font-size:14px;
+}
+/* =========================================
+   POPUP
+========================================= */
+.faculty-modal {
+  position: relative;
+  /* width: 100%;
+  max-width: 1200px;
+  max-height: calc(100vh - 60px);
+  background: #fff;
+  border-radius: 12px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  animation: facultyPopupShow 0.3s ease; */
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+/* =========================================
+   EXISTING FACULTY DETAILS
+========================================= */
+.faculty-modal .faculty-details {
+  position: relative;
+  width: 100%;
+  background: #fff;
+  padding: 40px;
+  position: relative;
+  width: 100%;
+  max-height: calc(100vh - 60px);
+  background: #fff;
+  border-radius: 12px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  animation: facultyPopupShow 0.3s ease;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+/* =========================================
+   CLOSE BUTTON
+========================================= */
+.faculty-modal .faculty-close {
+  position: absolute;
+  top: 13px;
+  right: 13px;
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 20;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition: all 0.25s ease;
+  background: #89004a;
+}
+.faculty-modal .faculty-close:hover {
+  background: #c4161c;
+  color: #fff;
+  transform: rotate(90deg);
+}
+/* =========================================
+   REMOVE OLD ARROW
+   ========================================= */
+.faculty-modal .details-arrow {
+  display: none;
+}
+/* =========================================
+   POPUP SCROLLBAR
+========================================= */
+.faculty-modal::-webkit-scrollbar {
+  width: 7px;
+}
+.faculty-modal::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.faculty-modal::-webkit-scrollbar-thumb {
+  background: #c4161c;
+  border-radius: 10px;
+}
+/* =========================================
+   ANIMATION
+======================================== */
+@keyframes facultyOverlayShow {
+  from {
+    opacity: 0;
   }
 
-  .details-grid {
-    grid-template-columns: 1fr;
+  to {
+    opacity: 1;
   }
+}
 
-  .left {
+@keyframes facultyPopupShow {
+  from {
+    opacity: 0;
+    transform: translateY(25px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.faculty-modal-overlay .info-box{
+  width: 31%;
+  margin-bottom: 0px;
+}
+.info-box ul{
+  margin-bottom: 0px;
+}
+.info-box p{
+  margin-bottom: 0px;
+}
+.faculty-modal-overlay .left .heading{
     text-align: center;
-  }
-
-  .left img {
-    max-width: 300px;
-    margin: auto;
-  }
+    margin: 0 0 6px;
+    font-size: 22px;
+}
+.faculty-modal-overlay .left .subheading {
+    text-align: center;
+    font-family: Avenir-Next-Regular;
+    font-size: 16px;
+    line-height: normal;
+}
+.faculty-modal-overlay .info-box a{
+  color: #09468e;
+  font-size: 14px;
+  text-decoration: none;
+}
+.faculty-modal-overlay .left img {
+    border-radius: 12px;
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
-@media (max-width: 768px) {
-  .faculty-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .faculty-image {
-    height: 300px;
-  }
-
-  .faculty-details {
-    padding: 25px;
-  }
-
-  .right h2 {
-    font-size: 28px;
-  }
-}
-
-@media (max-width: 480px) {
-  .faculty-image {
-    height: 260px;
-  }
-
-  .faculty-content {
-    padding: 18px;
-  }
-
-  .right h2 {
-    font-size: 24px;
-  }
-} */
 /* ----- Faculty Page End Here ----- */
 /*----- ADMISSION PROCESS Page Start Here -------*/
 .admission_process_phase {
@@ -2734,7 +2999,203 @@ Body {
 .admission_phase4 .processIcon {
   border: 1px solid #f5a4c7;
 }
+/* Admission Page End */
 
+/*------- Admission Tab Eligibility Page Start --------*/
+/* .eligibility_cardlisting{
+  flex-wrap: wrap;
+  gap: 20px;
+  display: flex;
+  justify-content: space-between;
+} */
+.eligibility_cardlisting .eligibility_card{
+  /* width:48%; */
+  display: flex;
+}
+.eligibility_cardlisting .eligibility_card{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 20px;
+    color: #000;
+    gap: 25px;
+    margin: 0 0 60px 0;
+}
+/* .eligibility_cardlisting .eligibility_card:first-child{
+  background: #bca6d0;
+} */
+.eligibility_cardlisting .eligibility_card:nth-child(1) {
+  background: #dff3ff;
+}
+
+.eligibility_cardlisting .eligibility_card:nth-child(2) {
+  background: #f0e5fa;
+}
+
+.eligibility_cardlisting .eligibility_card:nth-child(3) {
+  background: #fcedde;
+}
+
+.eligibility_cardlisting .eligibility_card:nth-child(4) {
+  background: #ffe9f3;
+}
+.eligibility_inner{
+  width:40%;
+  position: relative;
+}
+.branchname {
+  background-color:#09468e;
+  border-radius: 30px;
+  padding: 6px 20px;
+  text-align: center;
+  line-height: normal;
+  width: fit-content;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  color:#FFF;
+  font-size:16px;
+  font-family: "Roma-Semibold";
+}
+.eligibility_text{
+  width:60%;
+}
+/*------- Admission Tab Eligibility Page End -------*/
+/*----------- Fee Structure Page Start -----------*/
+.fee_structure_inner{
+  gap: 30px;
+  display: flex;
+  border: 1px solid #dedede;
+  border-radius: 30px;
+  padding: 20px;
+  height: 210px;
+}
+.fee_structure_heading {
+  color: #fff;
+  background: linear-gradient(#89004a 0%, #09468e 85%);
+  border-radius: 30px;
+  width: 30%;
+  padding: 20px;
+  font-family: Roma-Bold;
+  font-size: 30px;
+  line-height: 32px;
+  height: 218px;
+  align-items: center;
+  display: flex;
+}
+.fee_structure_content{
+  border-radius: 20px;
+  width: 69%;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.fee_structure_box{
+  border-radius: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 48%;
+  padding: 20px;
+  display: flex;
+  margin: -40px 0 60px 0;
+}
+.fee_structure_box:nth-child(1) {
+  background-color:#F4E9FF;
+  background-image:url("/images/admission/capicon1.webp");
+  background-repeat: no-repeat;
+  background-size:70px;
+  background-position:94% 50%;
+}
+
+.fee_structure_box:nth-child(2) {
+  background-color:#D2EEFF;
+  background-image:url("/images/admission/capicon2.webp");
+  background-repeat: no-repeat;
+  background-size:70px;
+  background-position:94% 50%;
+}
+
+.fee_structure_box:nth-child(3) {
+  background-color:#FFE0ED;
+  background-image:url("/images/admission/capicon3.webp");
+  background-repeat: no-repeat;
+  background-size:70px;
+  background-position:94% 50%;
+}
+
+.fee_structure_box:nth-child(4) {
+  background-color:#FFF3D3;
+  background-image:url("/images/admission/capicon4.webp");
+  background-repeat: no-repeat;
+  background-size:70px;
+  background-position:94% 50%;
+}
+.feetabboxmain{
+  gap: 10px;
+  margin: 0 0 90px;
+  display: flex;
+  position: relative;
+  box-shadow: 0px 10px 10px #0000000a;
+  border-radius: 20px;
+  padding: 40px 0px 20px 20px;
+  background: linear-gradient(90deg,rgba(255, 255, 255, 1) 0%, rgba(204, 204, 204, 0.235) 85%);
+}
+.feetabboxmain::after{
+  content: "";
+  background-image: url(/images/admission/collageimg.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 30%;
+  height: 200px;
+  right: 0;
+  position: absolute;
+  bottom: 0;
+  border-radius: 0px 0px 20px 0px;
+}
+.feetabbox{
+  background-color:#F4F4F4;
+  border:1px solid #ebebeb;
+  padding:15px 13px;
+  border-radius:15px;
+  width:auto;
+  align-items: center;
+  display: flex;
+}
+.feetabboxmain .heading{
+  font-size: 14px;
+  font-family: "Avenir-Next-Demi";
+  margin:0px;
+}
+ /* .fee_structure_box:nth-child(5) {
+ 
+}  */
+.course_name{
+  text-align: center;
+  color: #fff;
+  background-color: #7159a6;
+  border-radius: 25px;
+  margin: -31px 0 0;
+  padding: 5px 20px;
+  line-height: normal;
+  font-family: "Roma-Semibold";
+  font-size: 14px;
+  height: 23px;
+}
+.fee_text{
+  font-family: Roma-Bold;
+  font-size: 30px;
+  width: 100%;
+  line-height: normal;
+}
+.fee_structure_box p{
+  margin: 0;
+  width: 100%;
+}
+/*----------- Fee Structure Page End -----------*/
 /* ------------- Admission Tab End Here ---------------*/
 /* ------------- LifeatIMS Tab Start Here -------------*/
 .lifeat_states{
@@ -2877,28 +3338,23 @@ Body {
 .imscdr_box{
   border-radius:10px;
 }
-
 .image-gallery {
   width: 100%;
 }
-
 .mainimage_gallery .gallery-card {
   background: #fff;
   overflow: hidden;
   transition: all 0.3s ease;
   position:relative;
 }
-
 .mainimage_gallery .gallery-card:hover {
   transform: translateY(-5px);
 }
-
 .mainimage_gallery .gallery-image-link {
   display: block;
   text-decoration: none;
   overflow: hidden;
 }
-
 .mainimage_gallery .gallery-image-wrapper {
   position: relative;
   width: 100%;
@@ -2906,16 +3362,13 @@ Body {
   overflow: hidden;
   border-radius: 14px;
 }
-
 .mainimage_gallery .gallery-image {
   object-fit: cover;
   transition: transform 0.5s ease;
 }
-
 .mainimage_gallery .gallery-card:hover .gallery-image {
   transform: scale(1.06);
 }
-
 .mainimage_gallery .gallery-overlay {
   position: absolute;
   inset: 0;
@@ -2926,11 +3379,9 @@ Body {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
-
 .mainimage_gallery .gallery-card:hover .gallery-overlay {
   opacity: 1;
 }
-
 .mainimage_gallery .gallery-view {
   color: #000;
   background: #fff;
@@ -2939,7 +3390,6 @@ Body {
   font-family: Avenir-Next-Regular;
   font-size: 13px;
 }
-
 .mainimage_gallery .gallery-name {
   color: #fff;
   -webkit-line-clamp: 1;
