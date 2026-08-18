@@ -133,7 +133,7 @@
   position: absolute;
   top: 100%;
   left: 0;
-  min-width: 190px;
+  min-width: 180px;
   background: #fff;
   list-style: none;
   padding: 10px 0;
@@ -183,7 +183,7 @@
   position: absolute;
   top: 0;
   left: 100%;
-  min-width: 190px;
+  min-width: 180px;
   background: #fff;
   list-style: none;
   margin: 0;
