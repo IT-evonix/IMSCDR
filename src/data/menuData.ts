@@ -93,15 +93,15 @@ export const menuItems: MenuItem[] = [
       },
       {
         label: "Eligibility",
-        href: "/",
+        href: "/eligibility",
       },
       {
         label: "Fee Structure",
-        href: "/",
+        href: "/fee-structure",
       },
       {
         label: "Scholarships",
-        href: "/",
+        href: "/scholarships",
       },
       {
         label: "Apply Online",
@@ -109,7 +109,7 @@ export const menuItems: MenuItem[] = [
       },
       {
         label: "Downloads",
-        href: "/",
+        href: "/downloads",
       },
       {
         label: "Prospectus",
@@ -119,11 +119,11 @@ export const menuItems: MenuItem[] = [
       },
       {
         label: "Documents Required",
-        href: "/",
+        href: "/documents-required",
       },
       {
         label: "Reservation Policy",
-        href: "/",
+        href: "/reservation-policy",
       },
     ],
   },

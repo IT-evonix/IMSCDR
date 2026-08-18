@@ -5,13 +5,12 @@ const page = () => {
     <div className="innerpagerightside">
       <div className="heading">Fee Structure</div>
       <div className="fee_structure_main">
-
         <div className="feetabboxmain">
-          <div className="feetabbox">
+          {/* <div className="feetabbox">
             <div className="heading">
               FRA Approved <br /> Fee 2026-2027
             </div>
-          </div>
+          </div> */}
           <div className="feetabbox">
             <div className="heading">
               FRA Approved <br /> Fee 2025-2026
@@ -40,21 +39,76 @@ const page = () => {
               <p>Per Year</p>
             </div>
             <div className="fee_structure_box">
-              <div className="course_name" style={{background:"#44ADE2"}}>MBA-I</div>
-              <div className="fee_text">1,45,500</div>
+              <div className="course_name" style={{ background: "#44ADE2" }}>
+                MBA-II
+              </div>
+              <div className="fee_text">1,43,000</div>
               <p>Per Year</p>
             </div>
             <div className="fee_structure_box">
-              <div className="course_name" style={{background:"#F05A94"}}>MBA-I</div>
-              <div className="fee_text">1,45,500</div>
+              <div className="course_name" style={{ background: "#F05A94" }}>
+                MCA-I
+              </div>
+              <div className="fee_text">1,09,500</div>
               <p>Per Year</p>
             </div>
             <div className="fee_structure_box">
-              <div className="course_name" style={{background:"#FFC233"}}>MBA-I</div>
-              <div className="fee_text">1,45,500</div>
+              <div className="course_name" style={{ background: "#FFC233" }}>
+                MCA-II
+              </div>
+              <div className="fee_text">98,000</div>
               <p>Per Year</p>
             </div>
           </div>
+        </div>
+        <hr className="sepratorline"/>
+
+        <div
+          className="fee_structure_inner fee_structure_inner1"
+          style={{ marginBottom: "0px" }}
+        >
+          
+          <div className="fee_structure_content">
+            <div className="fee_structure_box">
+              <div className="course_name">BBA-I</div>
+              <div className="fee_text">40,000</div>
+              <p>Per Year</p>
+            </div>
+            <div className="fee_structure_box">
+              <div className="course_name" style={{ background: "#44ADE2" }}>
+                BBA-II
+              </div>
+              <div className="fee_text">38,500</div>
+              <p>Per Year</p>
+            </div>
+            <div className="lastcolumn_row">
+              <div className="fee_structure_box">
+                <div className="course_name" style={{ background: "#F05A94" }}>
+                  BCA-I
+                </div>
+                <div className="fee_text">45,500</div>
+                <p>Per Year</p>
+              </div>
+              <div className="fee_structure_box">
+                <div className="course_name" style={{ background: "#FFC233" }}>
+                  BCA-II
+                </div>
+                <div className="fee_text">44,000</div>
+                <p>Per Year</p>
+              </div>
+              <div className="fee_structure_box">
+                <div className="course_name" style={{ background: "#90c04b" }}>
+                  Ph.D
+                </div>
+                {/* <div className="fee_text">Ph.D</div> */}
+                <p>Contact the Institute</p>
+              </div>
+            </div>
+          </div>
+          <div className="fee_structure_heading">
+            Fee Structure 2026 - 2027 (As per S.P. Pune University Circulars)
+          </div>
+          
         </div>
       </div>
     </div>

@@ -39,7 +39,7 @@ export const facultyData: Faculty[] = [
     "name": "CA. D. A. Kulkarni",
     "designation": "Assistant Professor",
     "qualification": "M.Com., C.A.",
-    "image": "/images/faculty/director-1.webp",
+    "image": "/images/faculty/male.webp",
     "email": "dakulkarni@imscdr.ac.in",
     "broadAreas": [
       "Financial Management"
@@ -60,7 +60,7 @@ export const facultyData: Faculty[] = [
     "name": "Dr. Rahul K. Khandelwal",
     "designation": "Assistant Professor",
     "qualification": "Ph.D., LL.B., MMS, MBS, PGDBM, B.Com.",
-    "image": "/images/faculty/director-1.webp",
+    "image": "/images/faculty/male.webp",
     "email": "khandelwalr29@gmail.com",
     "broadAreas": [
       "Marketing Management",
@@ -91,7 +91,7 @@ export const facultyData: Faculty[] = [
     "name": "Dr. Anjali A. Vaidya",
     "designation": "Assistant Professor",
     "qualification": "",
-    "image": "/images/faculty/director-1.webp",
+    "image": "/images/faculty/female.webp",
     "email": "",
     "broadAreas": [
     
@@ -106,7 +106,7 @@ export const facultyData: Faculty[] = [
     "name": "Dr. Hatim Fakhruddin Kayumi",
     "designation": "Associate Professor",
     "qualification": "Ph. D. (Commerce, Finance): S. P. Pune University, M – SET (Commerce), M. Phil. (Commerce): Y.C.M.O.U Nashik, M.B.A. (Finance): Y.C.M.O.U Nashik, M. Com. (Cost Accounting): S. P. Pune University, B. Com. (Cost Accounting): S. P. Pune University",
-    "image": "/images/faculty/director-1.webp",
+    "image": "/images/faculty/male.webp",
     "email": "hatimkayumi@gmail.com",
     "broadAreas": [
       "International Business",
@@ -140,7 +140,7 @@ export const facultyData: Faculty[] = [
     "name": "Dr. Mahesh P. Potdar",
     "designation": "Associate Professor",
     "qualification": "MCM, MMS (System), Ph. D.",
-    "image": "/images/faculty/director-1.webp",
+    "image": "/images/faculty/male.webp",
     "email": "maheshpotdar@rediffmail.com",
     "broadAreas": [
       "Computer Management",
@@ -162,7 +162,7 @@ export const facultyData: Faculty[] = [
     "name": "Dr. Manoj Shamrao Kulkarni",
     "designation": "Assistant Professor",
     "qualification": "B.Sc., M.B.A., Ph.D.",
-    "image": "/images/faculty/director-1.webp",
+    "image": "/images/faculty/male.webp",
     "email": "mskmanoj@gmail.com",
     "broadAreas": [
       "Marketing Management"
@@ -186,7 +186,7 @@ export const facultyData: Faculty[] = [
     "name": "Dr. Pronoti V. Telore",
     "designation": "Associate Professor",
     "qualification": "PhD (Marketing), MBA (Marketing Management)",
-    "image": "/images/faculty/director-1.webp",
+    "image": "/images/faculty/female.webp",
     "email": "pronk70@yahoo.com",
     "broadAreas": [
       "Management"
@@ -208,7 +208,7 @@ export const facultyData: Faculty[] = [
     "name": "Dr. Sanjay P. Bhakkad",
     "designation": "Associate Professor",
     "qualification": "M.Sc., M.C.A, Ph.D.",
-    "image": "/images/faculty/director-1.webp",
+    "image": "/images/faculty/male.webp",
     "email": "sanjaybhakkad@rediffmail.com",
     "broadAreas": [
       "Programming Languages",
@@ -229,7 +229,7 @@ export const facultyData: Faculty[] = [
     "name": "Dr. Sayyed Mudassar Nazir",
     "designation": "Assistant Professor",
     "qualification": "Ph. D. (Management, HRM), UGC NET (Management), M-SET (Management), MBS (Materials & Production), PGDBM (Materials & Production), M.Sc. (Biochemistry), B.Sc. (Chemistry), CPM, CPED, PGDSCM",
-    "image": "/images/faculty/director-1.webp",
+    "image": "/images/faculty/male.webp",
     "email": "sayyed.mudassar@yahoo.com",
     "broadAreas": [
       "Operations Management",
@@ -257,7 +257,7 @@ export const facultyData: Faculty[] = [
     "name": "Dr. Shradha S. Bhandari",
     "designation": "Assistant Professor",
     "qualification": "Ph.D. in Commerce & Management, MBA (Financial Management), Diploma in Taxation Laws (DTL), Government Diploma in Cooperation & Accountancy (GDC&A), B.Com. (Business Administration), Diploma in Interior Design & Decoration (De. IDD)",
-    "image": "/images/faculty/director-1.webp",
+    "image": "/images/faculty/female.webp",
     "email": "bhandari.shradha31@gmail.com",
     "broadAreas": [
       "Commerce",
@@ -289,7 +289,7 @@ export const facultyData: Faculty[] = [
     "name": "Dr. Swati Barnabas",
     "designation": "Librarian",
     "qualification": "M.Sc.; M.lib.I.Sc. Ph.D (Library & Information Science)",
-    "image": "/images/faculty/director-1.webp",
+    "image": "/images/faculty/female.webp",
     "email": "swatibarnabas1@imscdr.ac.in",
     "broadAreas": [
       "Library Management",
@@ -315,7 +315,7 @@ export const facultyData: Faculty[] = [
     "name": "Prof. Gauri Patil",
     "designation": "Assistant Professor",
     "qualification": "B.C.S , M.C.S., M.C.A , Research Scholar",
-    "image": "/images/faculty/director-1.webp",
+    "image": "/images/faculty/female.webp",
     "email": "gauri.generaluse@gmail.com",
     "broadAreas": [
       "Mobile Application Development",
@@ -336,7 +336,7 @@ export const facultyData: Faculty[] = [
     "name": "Ms. Poonam Tiwari",
     "designation": "Assistant Professor & Research Scholar",
     "qualification": "Pursuing Ph.D. in Management, Charutar Vidya Mandal University (CVMU), Anand, Gujarat, MBA (Dual Specialization), B.Com.",
-    "image": "/images/faculty/director-1.webp",
+    "image": "/images/faculty/female.webp",
     "email": "poonampritamtiwari@gmail.com",
     "broadAreas": [
       "Management",
@@ -361,7 +361,7 @@ export const facultyData: Faculty[] = [
     "name": "Ass. Prof. Ajit Sanjay Kute",
     "designation": "Assistant Professor",
     "qualification": "Master of Computer Applications (MCA) in IMS, Ahmednagar",
-    "image": "/images/faculty/director-1.webp",
+    "image": "/images/faculty/male.webp",
     "email": "ajitkute1111@gmail.com",
     "broadAreas": [
       "Computer Application & Information Technology",
@@ -390,7 +390,7 @@ export const facultyData: Faculty[] = [
     "name": "Prof. Ashwini Arun Barathe",
     "designation": "Assistant Professor, Department of Bachelor of Computer Applications (BCA)",
     "qualification": "Master of Computer Applications (MCA), Bachelor of Computer Applications (BCA)",
-    "image": "/images/faculty/director-1.webp",
+    "image": "/images/faculty/female.webp",
     "email": "ashwinitkl@gmail.com",
     "broadAreas": [
       "Computer Science",
@@ -415,7 +415,7 @@ export const facultyData: Faculty[] = [
     "name": "Ms. Ashwini Thorat",
     "designation": "Assistant Professor",
     "qualification": "Ph.D. in Marketing (Pursuing) from Charutar Vidya Mandal University (CVMU), Anand, Gujarat, MMS - Marketing, MBS - Human Resources Management",
-    "image": "/images/faculty/director-1.webp",
+    "image": "/images/faculty/female.webp",
     "email": "ashwini2721@yahoo.com",
     "broadAreas": [
       "Marketing Management",
@@ -439,7 +439,7 @@ export const facultyData: Faculty[] = [
     "name": "Ms. Sakshi Madhyan",
     "designation": "Assistant Professor",
     "qualification": "Currently Pursuing Ph.D. (HRM), MBA (Finance), BBA (Finance)",
-    "image": "/images/faculty/director-1.webp",
+    "image": "/images/faculty/female.webp",
     "email": "madhyansakshi.08@gmail.com",
     "broadAreas": [
       "Commerce and Management"
@@ -462,7 +462,7 @@ export const facultyData: Faculty[] = [
     "name": "Ms. Shital Ashish Upadhyay (Nabariya)",
     "designation": "Assistant Professor,(BBA)",
     "qualification": "B.Ed. (Mathematics & Geography), M.Com. (Cost Accounting), MBA (Marketing), M.B.S. (Financial Management), P.G.D.B.M. (Marketing Management), B.Com. (Costing)",
-    "image": "/images/faculty/director-1.webp",
+    "image": "/images/faculty/female.webp",
     "email": "supadhyay97@gmail.com",
     "broadAreas": [
       "Commerce",
@@ -488,7 +488,7 @@ export const facultyData: Faculty[] = [
     "name": "Prof. Shruti M. Rao",
     "designation": "Assistant Professor",
     "qualification": "MBA (Dual Specialisation Marketing and HR), Certification course in Advertising, BBA. (Bachelors of Business Administration)",
-    "image": "/images/faculty/director-1.webp",
+    "image": "/images/faculty/female.webp",
     "email": "shrutithepopstar@gmail.com",
     "broadAreas": [
       "Marketing",
@@ -515,7 +515,7 @@ export const facultyData: Faculty[] = [
     "name": "Prof. Suresh Manohar Khanna",
     "designation": "Assistant Professor & Training and Placement Officer.",
     "qualification": "MBA Human Resource Management , MBA Marketing",
-    "image": "/images/faculty/director-1.webp",
+    "image": "/images/faculty/male.webp",
     "email": "sureshkhanna3333@gmail.com, imscdr81@gmail.com",
     "broadAreas": [
       "Management and Commerce & Placements",
@@ -540,7 +540,7 @@ export const facultyData: Faculty[] = [
     "name": "Prof. Sayali Sunil Torane",
     "designation": "Assistant Professor",
     "qualification": "MBA in Digital Media Communication Marketing (Savitribai Phule Pune University), Bachelor of Journalism & Mass Communication (BJMC) (Tilak Maharashtra Vidyapeeth), Degree / Training in Biomedical Engineering, Diploma in Bharatanatyam, Advanced Certificate Course in Digital Marketing",
-    "image": "/images/faculty/director-1.webp",
+    "image": "/images/faculty/female.webp",
     "email": "sayalitorane.me@gmail.com",
     "broadAreas": [
       "Business Administration & Marketing Management",
@@ -561,7 +561,7 @@ export const facultyData: Faculty[] = [
     "name": "Ass.Prof.Shubhangi Ashok Kharmate",
     "designation": "Assistant professor",
     "qualification": "MCA (Masters in computer Application), Certification course in Manual testing., BCA.",
-    "image": "/images/faculty/director-1.webp",
+    "image": "/images/faculty/female.webp",
     "email": "kharmateshubhangi14@gmail.com",
     "broadAreas": [
       "Computer Science",
@@ -581,7 +581,7 @@ export const facultyData: Faculty[] = [
     "name": "Swati Vaibhav Thombare",
     "designation": "Assistant Professor (BCA) Department",
     "qualification": "Master of Computer Application(MCA), Bachelor of Computer Application(BCA)",
-    "image": "/images/faculty/director-1.webp",
+    "image": "/images/faculty/female.webp",
     "email": "kulatswati@gmail.com",
     "broadAreas": [
       "Web Technology",
@@ -604,7 +604,7 @@ export const facultyData: Faculty[] = [
     "name": "Dr. Rucha Tandulwadkar",
     "designation": "Associate Professor",
     "qualification": "Ph.D. : Marketing Management from S.P.Pune University, Master's Degree MBA in Marketing and Human Resource, Bachelor's Degree Bachelor in Computer Science, Other Professional Qualifications Bachelor in Journalism",
-    "image": "/images/faculty/director-1.webp",
+    "image": "/images/faculty/female.webp",
     "email": "ruchaveda@gmail.com",
     "broadAreas": [
       "Economics",
@@ -633,7 +633,7 @@ export const facultyData: Faculty[] = [
     "name": "Supriya G Sapa",
     "designation": "Assistant Professor",
     "qualification": "Master of Technology (Information Technology) , Bachelor of Engineering (Computer Science and Engineering)",
-    "image": "/images/faculty/director-1.webp",
+    "image": "/images/faculty/female.webp",
     "email": "sapasupriya@gmail.com",
     "broadAreas": [
       "Computer Science"
@@ -656,7 +656,7 @@ export const facultyData: Faculty[] = [
     "name": "Mr. Abhishek Subhash Kawane",
     "designation": "Assistant Professor",
     "qualification": "UGC-NET, MH-SET, MCA(Commerce and Management), B.C.S.",
-    "image": "/images/faculty/director-1.webp",
+    "image": "/images/faculty/male.webp",
     "email": "",
     "broadAreas": [
       
@@ -671,7 +671,7 @@ export const facultyData: Faculty[] = [
     "name": "Ms. Utkarsha R. Dethe",
     "designation": "Assistant Professor",
     "qualification": "MCS,MCA,SET(Computer Science & Application).",
-    "image": "/images/faculty/director-1.webp",
+    "image": "/images/faculty/female.webp",
     "email": "detheutkarsha@gmail.com",
     "broadAreas": [
       "Computer Science and Application",

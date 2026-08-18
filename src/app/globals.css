@@ -3064,13 +3064,17 @@ Body {
 }
 /*------- Admission Tab Eligibility Page End -------*/
 /*----------- Fee Structure Page Start -----------*/
+.fee_structure_main{
+  padding: 0 0 50px 0;
+}
 .fee_structure_inner{
-  gap: 30px;
+  gap: 20px;
   display: flex;
   border: 1px solid #dedede;
   border-radius: 30px;
   padding: 20px;
   height: 210px;
+  margin: 0px 0 100px 0;
 }
 .fee_structure_heading {
   color: #fff;
@@ -3079,8 +3083,8 @@ Body {
   width: 30%;
   padding: 20px;
   font-family: Roma-Bold;
-  font-size: 30px;
-  line-height: 32px;
+  font-size: 26px;
+  line-height: 29px;
   height: 218px;
   align-items: center;
   display: flex;
@@ -3103,35 +3107,65 @@ Body {
   margin: -40px 0 60px 0;
 }
 .fee_structure_box:nth-child(1) {
-  background-color:#F4E9FF;
+  background-color:#f0e5fa;
   background-image:url("/images/admission/capicon1.webp");
   background-repeat: no-repeat;
-  background-size:70px;
+  background-size:65px;
   background-position:94% 50%;
 }
-
 .fee_structure_box:nth-child(2) {
-  background-color:#D2EEFF;
+  background-color:#dff3ff;
   background-image:url("/images/admission/capicon2.webp");
   background-repeat: no-repeat;
-  background-size:70px;
+  background-size:65px;
   background-position:94% 50%;
 }
-
 .fee_structure_box:nth-child(3) {
-  background-color:#FFE0ED;
+  background-color:#ffe9f3;
   background-image:url("/images/admission/capicon3.webp");
   background-repeat: no-repeat;
-  background-size:70px;
+  background-size:65px;
   background-position:94% 50%;
 }
-
 .fee_structure_box:nth-child(4) {
   background-color:#FFF3D3;
   background-image:url("/images/admission/capicon4.webp");
   background-repeat: no-repeat;
-  background-size:70px;
+  background-size:65px;
   background-position:94% 50%;
+}
+.fee_structure_box:nth-child(5) {
+  background-color:#f7ffd4;
+  background-image:url("/images/admission/capicon5.webp");
+  background-repeat: no-repeat;
+  background-size:65px;
+  background-position:94% 50%;
+}
+.lastcolumn_row .fee_structure_box{
+  background-position: 95% 80%;
+  background-size: 50px;
+}
+.lastcolumn_row .fee_structure_box:nth-child(1){
+  background-position:95% 80%;
+  background-size: 50px;
+  background-image:url("/images/admission/capicon3.webp");
+  background-color:#ffe9f3;
+}
+.lastcolumn_row .fee_structure_box:nth-child(2){
+  background-position:95% 80%;
+  background-size: 50px;
+  background-image:url("/images/admission/capicon4.webp");
+  background-color:#FFF3D3;
+}
+.lastcolumn_row .fee_structure_box:nth-child(3){
+  background: #f7ffd4;
+  background-image:url("/images/admission/capicon5.webp");
+  background-size:50px;
+  background-position:95% 80%;
+  background-repeat: no-repeat;
+}
+.fee_structure_main hr{
+  margin: 100px 0 100px 0;
 }
 .feetabboxmain{
   gap: 10px;
@@ -3145,11 +3179,11 @@ Body {
 }
 .feetabboxmain::after{
   content: "";
-  background-image: url(/images/admission/collageimg.webp);
+  background-image: url(/images/admission/collageimg1.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
-  width: 30%;
+  width: 49%;
   height: 200px;
   right: 0;
   position: absolute;
@@ -3194,6 +3228,17 @@ Body {
 .fee_structure_box p{
   margin: 0;
   width: 100%;
+}
+.fee_structure_inner1 .lastcolumn_row{
+
+}
+.lastcolumn_row{
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+.lastcolumn_row .fee_structure_box{
+  width:33%;
 }
 /*----------- Fee Structure Page End -----------*/
 /* ------------- Admission Tab End Here ---------------*/
