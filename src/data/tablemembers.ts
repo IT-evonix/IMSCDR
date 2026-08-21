@@ -719,3 +719,62 @@ export const iqacCommitteeMembers = [
   
   
 ];
+
+
+export const committeesColumns = [
+  {
+    key: "id",
+    title: "Sr. No.",
+  },
+  {
+    key: "committee",
+    title: "Committee",
+  },
+  {
+    key: "text",
+    title: "Text",
+  },
+];
+
+export const committeesText = [
+  {
+    id: 1,
+    committee: "Magazine Committee",
+    text: "Publishes the annual institute magazine featuring student contributions in the field of academics, art-work and other interests. This magazine fosters students’ creativity in their respective fields.",
+  },
+  {
+    id: 2,
+    committee: "Vidyarthini Manch Committee",
+    text: "Organizes activities for women empowerment, leadership, and personality development.",
+  },
+  {
+    id: 3,
+    committee: "Library Committee",
+    text: "Promotes effective use of library resources and a reading culture.",
+  },
+  {
+    id: 4,
+    committee: "Placement Committee",
+    text: "Supports placements, internships, corporate interactions, and career guidance.",
+  },
+  {
+    id: 5,
+    committee: "Cultural Committee",
+    text: "Organizes cultural, academic, and management events to enhance organizational and leadership skills.",
+  },
+  {
+    id: 6,
+    committee: "Media Cell (Podcast Club)",
+    text: "Produces podcasts, interviews, and digital content to strengthen communication skills.",
+  },
+  {
+    id: 7,
+    committee: "Entrepreneurship Development (ED) Cell",
+    text: "Conducts workshops and startup activities to foster innovation and entrepreneurship.",
+  },
+  {
+    id: 8,
+    committee: "Seminar Cell",
+    text: "Organizes guest lectures and expert sessions to provide industry exposure.",
+  },
+];

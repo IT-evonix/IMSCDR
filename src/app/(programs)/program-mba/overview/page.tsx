@@ -9,20 +9,11 @@ const page = () => {
           <div className="overview_left">
             <div className="heading">Overview</div>
             <p className="m-0">
-              At BPHES IMSCDR, our Master of Business Administration program is
-              driven by the mission to develop performing, productive, ethical,
-              and value-driven leaders ready for diverse careers in a borderless
-              business world. Grounded in the dynamic, industry-aligned
-              curriculum of Savitribai Phule Pune University, we blend core
-              management theory with functional specializations through
-              activity-based learning and innovative pedagogy. Recognizing each
-              student’s unique background and learning style, we focus on
-              rigorous soft skills development and strong industry engagement
-              from day one, all within a deeply supportive ecosystem of faculty,
-              industry, and community stakeholders. Our commitment extends well
-              beyond two years as an MBA with placement opportunities, that also
-              aims to transform students into lifelong learners and committed
-              corporate citizens.
+              2 year, 4 Semester, Full-time Program from Savitribai Phule Pune
+              University. The revised MBA Curriculum 2024 integrates the
+              National Education Policy, 2020 ethos with the Choice Based Credit
+              System (CBCS) and Grading System and Outcomes Based Education
+              (OBE).
             </p>
           </div>
           <div className="overview_right">
@@ -52,6 +43,72 @@ const page = () => {
           </div>
         </div>
       </div>
+      <div className="heading mb-2">Specializations Offered</div>
+      <div className="subheading m-0">
+        The following specializations shall be offered
+      </div>
+      <section className="specialization-section">
+        <div className="specialization_inner mt-2">
+          <div className="left-box">
+            <Image
+              src="/images/program/Specializationsbg.webp"
+              alt="Students"
+              fill
+              priority
+              className="image"
+            />
+            <div className="overlay"></div>
+            <div className="content">
+              {/* <div className="subheading">Major Specializations</div>
+              <p>
+                Our major specializations form the strategic core of your
+                management expertise.
+              </p> */}
+            </div>
+          </div>
+          <div className="right-box">
+            <ul>
+              <li>Marketing Management (MKT)</li>
+              <li>Financial Management (FIN)</li>
+              <li>Human Resources Management (HRM)</li>
+              <li>Operations & Supply Chain Management (OSCM)</li>
+              <li>Business Analytics (BA)</li>
+              <li>Agri -Business Management (ABM)</li>
+              <li>Pharma & Healthcare Management (PHM)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="specialization-section d-none">
+        <div className="specialization_inner specialization_inner2">
+          <div className="left-box">
+            <Image
+              src="/images/program/Specializationsbg-right.webp"
+              alt="Students"
+              fill
+              priority
+              className="image"
+            />
+            <div className="overlay"></div>
+            <div className="content">
+              {/* <div className="subheading">Minor Specializations</div>
+              <p>
+                Our minor specializations broaden your perspective and add
+                cross-functional versatility.
+              </p> */}
+            </div>
+          </div>
+          <div className="right-box">
+            <ul>
+              <li>Rural & Agribusiness Management (RABM)</li>
+              <li>Pharma & Healthcare Management (PHM)</li>
+              <li>Tourism & Hospitality Management (THM)</li>
+              <li>International Business Management (IB)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
