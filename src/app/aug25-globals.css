@@ -1010,7 +1010,6 @@ Body {
   );
   padding: 0px 0px 25px 0px;
   position: relative;
-  z-index: 5;
 }
 .footer_main::after {
   content: "";
@@ -4409,10 +4408,7 @@ Body {
     justify-content: center;
   }
   .topbar-contact span {
-color: #fff;
-    background-color: #89004a;
-    padding: 4px 10px;
-    border-radius: 100px;
+    color: #000;
   }
   .top-btn {
     background: #eaeaea;
@@ -4588,7 +4584,7 @@ color: #fff;
     min-height: 150px;
   }
   .innerbannerheading {
-    margin: 20px 30px;
+    margin: 20px 0 20px;
     font-size: 25px;
   }
 
@@ -4638,7 +4634,7 @@ color: #fff;
     background-color: transparent;
     padding: 0;
   }
-  /* .sidebar-toggle {
+  .sidebar-toggle {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -4653,27 +4649,6 @@ color: #fff;
     position: absolute;
     left: 0;
     margin: 5px 0 0 0;
-  } */
-
-  .sidebar-toggle {
-    background: #09468e;
-    border: none;
-    border-radius: 0 50px 50px 0;
-    align-items: center;
-    gap: 10px;
-    margin: 5px 0 0;
-    padding: 5px 10px 5px 8px;
-    font-family: Roma-Bold;
-    display: flex;
-    position: fixed;
-    left: 0;
-    top: 120px;
-    z-index: 5;
-  }
-  .sidebar-toggle svg{
-color: #fff;
-    width: 15px;
-    height: 20px;
   }
   .sidebar-toggle span {
     display: none;
@@ -4829,43 +4804,7 @@ color: #fff;
   }
   /* Programe Wise Faculty listing End Here */
   /*--------------------- Inner Pages End Here ---------------------*/
-
-/*---------------------- About Us Tab Start Here --------------------*/
-.vision_mision_inner{
-  display: block;
 }
-.vision_box{
-  width: 100%;
-  margin: 0 0 60px 0;
-}
-.privacy_policy_inner{
-  display: block;
-}
-.mottoleft{
-  width: 100%;
-  margin: 0 0 60px 0;
-}
-.info_card{
-  min-height: inherit;
-}
-/*---------------------- About Us Tab END Here --------------------*/
-
-
-/*---------------------- Leaders Pages Start Here --------------------*/
-.chancellor-wrapper {
-  flex-wrap: wrap;
-}
-/*---------------------- Leaders Pages Start Here --------------------*/
-
-/*--------------- Sidebar START Here ---------------*/
-.innerpagerightside {
-  padding: 60px 0px 60px 0px;
-}
-/*--------------- Sidebar End Here ---------------*/
-
-
-}
-
 
 @media (max-width: 575.98px) {
   /*--------------- Header Start Here ---------------*/
