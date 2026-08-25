@@ -12,6 +12,7 @@ const Footer = () => {
           <div className="footer_inner">
             <div className="footerbox blueBox">
               <div className="logo-wrapper">
+                <Link href="/">
                 <Image
                   src="/images/home/white_logo.webp"
                   alt="BPHES IMSCDR"
@@ -19,6 +20,7 @@ const Footer = () => {
                   height={150}
                   className="img-fluid"
                 />
+                </Link>
               </div>
 
               {/* Address */}
@@ -31,7 +33,7 @@ const Footer = () => {
               </div>
               {/* Social Icons */}
               <div className="social-icons">
-                <Link href="#" className="social-icon">
+                <Link target="_blank" href="https://www.facebook.com/people/Imscdr-Ahmednagar/100072520716086/#" className="social-icon">
                   <Image
                     src="/images/home/facebook.png"
                     alt="BPHES IMSCDR"
@@ -40,7 +42,7 @@ const Footer = () => {
                     className="img-fluid"
                   />
                 </Link>
-                <Link href="#" className="social-icon">
+                <Link target="_blank" href="https://www.instagram.com/imscdr_ahmednagar/?utm_medium=copy_link" className="social-icon">
                   <Image
                     src="/images/home/instagram.png"
                     alt="BPHES IMSCDR"
