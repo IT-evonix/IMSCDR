@@ -698,7 +698,7 @@ Body {
   border-radius: 500px 0 0 500px;
   width: 50%;
   min-height: 340px;
-  padding: 30px 190px 30px 70px;
+  padding: 30px 190px 30px 60px;
   line-height: normal;
   margin: 80px 0 0 0;
   display: flex;
@@ -805,15 +805,12 @@ Body {
 .testimonials_box img {
   width: 100%;
   border-radius: 20px;
-  /* max-height: 190px;
-  min-height: 190px;
-  overflow: hidden;
-  object-fit: cover; */
   height: auto;
 }
 .testimonials_box .subheading {
   text-align: center;
-  margin: 13px 0 4px 0;
+  margin: 13px 0 0px 0;
+  line-height: normal;
 }
 .testimonials_box p {
   text-align: center;
@@ -823,10 +820,38 @@ Body {
   position: relative;
   z-index: 999;
 }
-
 .testimonial-prev,
 .testimonial-next {
   pointer-events: auto;
+}
+.testimonials_box .designation {
+  font-size: 14px;
+  font-family: "Avenir-Next-Demi";
+  text-align: center;
+  color: #333;
+}
+.testimonials_content {
+  max-height: 100px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #999 transparent;
+  padding: 0 10px 0 0;
+  font-size: 14px;
+  margin: 5px 0 0 0;
+}
+.testimonials_content::-webkit-scrollbar {
+  width: 4px;
+}
+.testimonials_content::-webkit-scrollbar-track {
+  background: transparent;
+}
+.testimonials_content::-webkit-scrollbar-thumb {
+  background: #999;
+  border-radius: 10px;
+}
+.testimonials_content::-webkit-scrollbar-thumb:hover {
+  background: #666;
 }
 /*----------------------- CampusLife Start Here -----------------------*/
 .gallerySection {
@@ -945,7 +970,7 @@ Body {
 }
 .educationinner {
   display: flex;
-  gap: 20px;
+  gap: 15px;
   justify-content: space-between;
   align-items: center;
 }
@@ -1000,6 +1025,7 @@ Body {
   padding: 0;
   font-family: "Avenir-Next-Regular";
   line-height: normal;
+  font-size: 14px;
 }
 /*----------------------- Footer Start Here -----------------------*/
 .footer_main {
@@ -3880,42 +3906,46 @@ Body {
   transform: translateY(-5px);
 }
 /* /////////////////////////////////////// */
-.librarianImg{
-  position:sticky;
-  top:150px;
-  padding-left:25px;
+.librarianImg {
+  position: sticky;
+  top: 150px;
+  padding-left: 25px;
 }
-.librarianImg img{
-  border-radius:20px;
-  position:relative;
+.librarianImg img {
+  border-radius: 20px;
+  position: relative;
 }
-.librarianImginner{
-  position:relative;
+.librarianImginner {
+  position: relative;
 }
-.librarianImginner::after{
+.librarianImginner::after {
   content: "";
   width: 250px;
   height: 100%;
   position: absolute;
-  right:-20px;
+  right: -20px;
   top: -20px;
   z-index: -1;
-  background: linear-gradient(180deg,rgba(9, 70, 142, 1) 0%, rgba(137, 0, 74, 1) 85%);
-  border-radius:20px;
+  background: linear-gradient(
+    180deg,
+    rgba(9, 70, 142, 1) 0%,
+    rgba(137, 0, 74, 1) 85%
+  );
+  border-radius: 20px;
 }
-.librarianPara{
+.librarianPara {
   background-color: #e8f6ff;
-  padding:20px;
-  border-radius:25px;
-  margin:60px 0px;
+  padding: 20px;
+  border-radius: 25px;
+  margin: 60px 0px;
 }
-.library_statistical_data{
+.library_statistical_data {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 26px;
-  margin-top:20px;
+  margin-top: 20px;
 }
-.library_card{
+.library_card {
   border: 1px solid #ccc;
   border-radius: 15px;
   padding: 20px;
@@ -3924,7 +3954,7 @@ Body {
   min-height: 100px;
   border: 1px solid #ddd;
   border-radius: 20px;
-  font-size:14px;
+  font-size: 14px;
 }
 .library_card:nth-child(7) {
   grid-column: span 1;
@@ -3932,44 +3962,46 @@ Body {
 .library_card:nth-child(8) {
   grid-column: span 2;
 }
-.library_icons{
+.library_icons {
   background-color: #f5ebd9;
   border-radius: 10px;
   width: 65px;
-  height:65px;
+  height: 65px;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width:65px;
+  min-width: 65px;
 }
-.library_card_content{line-height:normal;}
-.library_card_content .librarytags{
+.library_card_content {
+  line-height: normal;
+}
+.library_card_content .librarytags {
   font-size: 12px;
   background: #cbecff;
   padding: 3px 12px;
   border-radius: 20px;
   line-height: normal;
-  width:fit-content;
-  margin-bottom:10px;
+  width: fit-content;
+  margin-bottom: 10px;
 }
-.library_card_content .librarytags2{
+.library_card_content .librarytags2 {
   background: #bca6d0;
-  margin-bottom:0px;
+  margin-bottom: 0px;
 }
-.librarynumtext{
-  margin:0px 25px 0px 0px;
+.librarynumtext {
+  margin: 0px 25px 0px 0px;
 }
-.library_main .zigzag-section{
-  padding:80px 0px;
+.library_main .zigzag-section {
+  padding: 80px 0px;
 }
-.library_servicesinner{
+.library_servicesinner {
   background-color: #e8f6ff;
-  padding:30px;
-  border-radius:20px;
-  position:relative;
-  font-size:14px;
+  padding: 30px;
+  border-radius: 20px;
+  position: relative;
+  font-size: 14px;
 }
-.library_servicesinner::after{
+.library_servicesinner::after {
   content: "";
   z-index: 1;
   background-image: url(/images/campus/library/library-services1.webp);
@@ -4409,8 +4441,8 @@ Body {
     justify-content: center;
   }
   .topbar-contact span {
-color: #fff;
-    background-color: #89004a;
+    color: #fff;
+    /* background-color: #89004a; */
     padding: 4px 10px;
     border-radius: 100px;
   }
@@ -4591,7 +4623,9 @@ color: #fff;
     margin: 20px 30px;
     font-size: 25px;
   }
-
+  .innerpagerightside {
+    padding: 60px 0 60px 0px;
+  }
   /*-------------------- Contact Us Start Here ------------*/
   .contactinner {
     flex-wrap: wrap;
@@ -4670,8 +4704,8 @@ color: #fff;
     top: 120px;
     z-index: 5;
   }
-  .sidebar-toggle svg{
-color: #fff;
+  .sidebar-toggle svg {
+    color: #fff;
     width: 15px;
     height: 20px;
   }
@@ -4727,6 +4761,52 @@ color: #fff;
     height: inherit;
   }
   /*--------------- News And Events End Here ---------------*/
+  /*--------------- Programee Tab Start Here ---------------*/
+  .overview_inner {
+    padding-bottom: 30px;
+    flex-wrap: wrap;
+  }
+  .specialization_inner {
+    margin: 0px 0;
+  }
+  .coursesstrip {
+    padding: 30px 0;
+  }
+  .overview_left {
+    width: 100%;
+  }
+  .overview_right {
+    width: 100%;
+  }
+  .specialization-section .left-box {
+    width: 100%;
+    border-radius: 0px;
+  }
+  .specialization-section .overlay {
+    border-radius: 0px;
+  }
+  .specialization-section .right-box {
+    position: inherit;
+    padding: 20px;
+    width: 100%;
+    transform: translateY(0%);
+    border-radius: 0px 0px 30px 30px;
+  }
+  .specialization-section .left-box img {
+    border-radius: 30px 30px 0px 0px;
+  }
+  .intake_content{
+    position: inherit;
+    top: 0%;
+    left: 0px;
+    transform: translateY(0%);
+    border-radius: 0px 0px 20px 20px;
+    background: #5f6872;
+  }
+  .intake_inner img{
+    border-radius: 20px 20px 0px 0px;
+  }
+  /*--------------- Programee Tab End Here ---------------*/
 }
 
 @media (max-width: 767.98px) {
@@ -4830,42 +4910,38 @@ color: #fff;
   /* Programe Wise Faculty listing End Here */
   /*--------------------- Inner Pages End Here ---------------------*/
 
-/*---------------------- About Us Tab Start Here --------------------*/
-.vision_mision_inner{
-  display: block;
-}
-.vision_box{
-  width: 100%;
-  margin: 0 0 60px 0;
-}
-.privacy_policy_inner{
-  display: block;
-}
-.mottoleft{
-  width: 100%;
-  margin: 0 0 60px 0;
-}
-.info_card{
-  min-height: inherit;
-}
-/*---------------------- About Us Tab END Here --------------------*/
+  /*---------------------- About Us Tab Start Here --------------------*/
+  .vision_mision_inner {
+    display: block;
+  }
+  .vision_box {
+    width: 100%;
+    margin: 0 0 60px 0;
+  }
+  .privacy_policy_inner {
+    display: block;
+  }
+  .mottoleft {
+    width: 100%;
+    margin: 0 0 60px 0;
+  }
+  .info_card {
+    min-height: inherit;
+  }
+  /*---------------------- About Us Tab END Here --------------------*/
 
+  /*---------------------- Leaders Pages Start Here --------------------*/
+  .chancellor-wrapper {
+    flex-wrap: wrap;
+  }
+  /*---------------------- Leaders Pages Start Here --------------------*/
 
-/*---------------------- Leaders Pages Start Here --------------------*/
-.chancellor-wrapper {
-  flex-wrap: wrap;
+  /*--------------- Sidebar START Here ---------------*/
+  .innerpagerightside {
+    padding: 60px 0px 60px 0px;
+  }
+  /*--------------- Sidebar End Here ---------------*/
 }
-/*---------------------- Leaders Pages Start Here --------------------*/
-
-/*--------------- Sidebar START Here ---------------*/
-.innerpagerightside {
-  padding: 60px 0px 60px 0px;
-}
-/*--------------- Sidebar End Here ---------------*/
-
-
-}
-
 
 @media (max-width: 575.98px) {
   /*--------------- Header Start Here ---------------*/
