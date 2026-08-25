@@ -65,8 +65,7 @@ const page = () => {
         </div>
         <hr className="sepratorline" />
 
-        <div
-          className="fee_structure_inner fee_structure_inner1"
+        <div className="fee_structure_inner fee_structure_inner1"
           style={{ marginBottom: "0px" }}
         >
           <div className="fee_structure_content">

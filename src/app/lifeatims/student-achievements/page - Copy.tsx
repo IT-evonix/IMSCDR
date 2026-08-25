@@ -6,7 +6,7 @@ const page = () => {
   return (
     <div className="innerpagerightside">
       <div className="heading">
-        Coming Soon
+        Student Achievements
       </div>
     </div>
   );

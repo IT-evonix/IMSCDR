@@ -1471,13 +1471,14 @@ Body {
 .governing-table thead th {
   background: #09468e;
   color: #fff;
-  padding: 20px 28px;
+  padding: 20px 25px 20px 20px;
   font-size: 16px;
   font-family: "Roma-Semibold";
   text-transform: uppercase;
   border: none;
   white-space: nowrap;
   letter-spacing: 0.4px;
+  vertical-align: middle;
 }
 .governing-table thead th:first-child {
   border-top-left-radius: 18px;
@@ -1494,6 +1495,7 @@ Body {
   vertical-align: middle;
   background: #fff;
   transition: 0.3s;
+  line-height: normal;
 }
 .governing-table tbody td:last-child {
   border-right: none;
@@ -1592,23 +1594,26 @@ Body {
 /* =====================================================
    APPROVAL / DOCUMENT SECTION
 ===================================================== */
-.approval-section {
+/* .approval-section {
   padding: 100px 0 0px 0;
-}
+} */
 
 .approval-card {
   background: #fff;
-    border: 1px solid #e7ebf1;
-    border-radius: 18px;
-    align-items: center;
-    min-height: 100px;
-    padding: 20px 20px;
-    text-decoration: none;
-    transition: transform .4s, box-shadow .4s, border-color .4s;
-    display: flex;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 8px 25px #10467f0f;
+  border: 1px solid #e7ebf1;
+  border-radius: 18px;
+  align-items: center;
+  min-height: 100px;
+  padding: 20px 20px;
+  text-decoration: none;
+  transition:
+    transform 0.4s,
+    box-shadow 0.4s,
+    border-color 0.4s;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 25px #10467f0f;
 }
 .approval-card:hover {
   transform: translateY(-7px);
@@ -1662,7 +1667,7 @@ Body {
 }
 .approval-type {
   z-index: 3;
-  letter-spacing: .6px;
+  letter-spacing: 0.6px;
   border: 2px solid #fff;
   border-radius: 5px;
   padding: 2px 5px;
@@ -1695,7 +1700,7 @@ Body {
   max-width: 100%;
   margin: 0;
   font-size: 16px;
-  transition: color .3s;
+  transition: color 0.3s;
 }
 .approval-card:hover .approval-title {
   color: #10467f;
@@ -1730,7 +1735,7 @@ Body {
   position: absolute;
   top: 0;
   left: -120%;
- width: 70%;
+  width: 70%;
   height: 100%;
   background: linear-gradient(
     90deg,
@@ -1749,7 +1754,7 @@ Body {
   display: flex;
   align-items: center;
   gap: 40px;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
 }
 .zigzag-row.reverse {
   flex-direction: row-reverse;
@@ -2040,6 +2045,12 @@ Body {
 }
 .innerpage_main {
   scroll-margin-top: 200px;
+}
+.fullwidth_page {
+  padding: 60px 0px;
+}
+.innerpagewrapper {
+  padding: 80px 0px;
 }
 /*----- Specializations Page Start Here -----*/
 .specialization-section {
@@ -3389,8 +3400,6 @@ Body {
   margin: 0;
   width: 100%;
 }
-.fee_structure_inner1 .lastcolumn_row {
-}
 .lastcolumn_row {
   width: 100%;
   display: flex;
@@ -3400,8 +3409,44 @@ Body {
   width: 33%;
 }
 /*----------- Fee Structure Page End -----------*/
+/*------------- Scholarships Page Start Here -------------*/
+.scholarships_page .open-category-header {
+  background: #0a4f9d;
+  text-align: center;
+}
+.scholarships_page .obc-category-header {
+  background: #0a4f9d;
+  text-align: center;
+}
+.scholarships_page .sbc-category-header {
+  background: #0a4f9d;
+  text-align: center;
+}
+.scholarships_page .scst-category-header {
+  background: #0a4f9d;
+  text-align: center;
+}
+.scholarships_page .girls-category-header {
+  background: #0a4f9d;
+  text-align: center;
+}
+.scholarships_page .governing-table thead th:first-child {
+  border-top-left-radius: 0px;
+}
+.scholarships_page .governing-table thead th:last-child {
+  border-top-right-radius: 0px;
+}
+.scholarships_page .governing-table thead tr:last-child th {
+  font-size: 12px;
+}
+.scholarships_page .governing-table thead th {
+  border-right: 1px solid #ffffff1f;
+  white-space: wrap;
+}
+/*------------- Scholarships Page End Here -------------*/
 /* ------------- Admission Tab End Here ---------------*/
 /* ------------- LifeatIMS Tab Start Here -------------*/
+/*---------- Campus Overview Page Start Here ----------*/
 .lifeat_states {
   justify-content: space-between;
   align-items: center;
@@ -3496,9 +3541,6 @@ Body {
   overflow: hidden;
   transition-duration: 0.5s;
 }
-/* .ourvaluesmain:hover{
-  margin:-20px 0px 0px 0px;
-} */
 .ourvaluesmain:hover img {
   transform: scale(1.1);
   transition-duration: 0.5s;
@@ -3616,6 +3658,8 @@ Body {
   bottom: 0;
   overflow: hidden;
 }
+/*------------ Campus Overview Page End Here ------------*/
+/*----------- Infrastructure Page Start Here -----------*/
 .infrastructure_main {
   border-radius: 25px;
   position: relative;
@@ -3671,10 +3715,276 @@ Body {
   font-family: "Avenir-Next-Demi";
   color: #09468e;
 }
+/*----------- Infrastructure Page End Here -----------*/
+/*-------------- Hostel Page Start Here --------------*/
+.facilities_listing_main .facility-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+.facilities_listing_main .facility-card {
+  width: 100%;
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  padding: 7px 15px;
+  gap: 10px;
+  background: #f8f6fb;
+  border: 1.3px dashed #8062bd;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+.facilities_listing_main .facility-card-full {
+  grid-column: 1 / -1;
+}
+.facilities_listing_main .facility-icon {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+.facilities_listing_main .facility-icon img {
+  object-fit: contain;
+  width: auto;
+  max-height: 40px;
+}
+.facilities_listing_main .facility-content {
+  flex: 1;
+}
+.facilities_listing_main .facility-content p {
+  color: #111;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: normal;
+  font-family: "Avenir-Next-Regular";
+}
+.facilities_listing_main .facility-card:hover {
+  transform: translateY(-3px);
+  background: #f5f1fa;
+  box-shadow: 0 8px 25px rgba(115, 85, 173, 0.12);
+}
+.hostel_image {
+  position: relative;
+}
+.hostel_image .subheading {
+  text-align: center;
+  background-color: #ffe293;
+  border-radius: 20px;
+  margin: 0px auto;
+  padding: 6px 20px;
+  font-size: 18px;
+  position: absolute;
+  top: -14px;
+  left: 0;
+  right: 0;
+  width: fit-content;
+  line-height: normal;
+}
+.hostel_image img {
+  width: 100%;
+}
+.hosteltopinner {
+  background-image: url(/images/campus/hostel/girls_hostel_bg.webp);
+  background-position: 70% 115px;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  padding: 0px 0px 0px 0px;
+}
+.girsandboys_hostel {
+  padding: 40px 0px 40px 0px;
+}
+.Capacitytext {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+  line-height: normal;
+}
+.Capacitytext span {
+  font-size: 20px;
+  color: #fff;
+  font-family: "Roma-Bold";
+}
+.Capacitynum {
+  font-size: 50px;
+  line-height: normal;
+  color: #ffc233;
+  font-family: "Roma-Bold";
+}
+/*-------------- Hostel Page End Here --------------*/
+.gallery-slider {
+  width: 100%;
+  position: relative;
+}
+.gallery-slider-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 10px 0;
+}
+.gallery-slider-track {
+  display: flex;
+  width: 100%;
+  will-change: transform;
+}
+.gallery-slider-item {
+  min-width: 0;
+  padding: 0 10px;
+  box-sizing: border-box;
+  border-radius: 15px;
+}
+.gallery-slider-card {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 15px;
+  background: #fff;
+  position: relative;
+}
+.gallery-slider-image {
+  width: 100%;
+  height: 250px;
+  display: block;
+  object-fit: cover;
+  border-radius: 15px;
+}
+.gallery-slider-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin-top: 25px;
+}
+.gallery-slider-prev,
+.gallery-slider-next {
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  transition: 0.3s ease;
+}
+.gallery-slider-prev:hover,
+.gallery-slider-next:hover {
+  transform: translateY(-5px);
+}
+/* /////////////////////////////////////// */
+.librarianImg{
+  position:sticky;
+  top:150px;
+  padding-left:25px;
+}
+.librarianImg img{
+  border-radius:20px;
+  position:relative;
+}
+.librarianImginner{
+  position:relative;
+}
+.librarianImginner::after{
+  content: "";
+  width: 250px;
+  height: 100%;
+  position: absolute;
+  right:-20px;
+  top: -20px;
+  z-index: -1;
+  background: linear-gradient(180deg,rgba(9, 70, 142, 1) 0%, rgba(137, 0, 74, 1) 85%);
+  border-radius:20px;
+}
+.librarianPara{
+  background-color: #e8f6ff;
+  padding:20px;
+  border-radius:25px;
+  margin:60px 0px;
+}
+.library_statistical_data{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  margin-top:20px;
+}
+.library_card{
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  gap: 19px;
+  min-height: 100px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size:14px;
+}
+.library_card:nth-child(7) {
+  grid-column: span 1;
+}
+.library_card:nth-child(8) {
+  grid-column: span 2;
+}
+.library_icons{
+  background-color: #f5ebd9;
+  border-radius: 10px;
+  width: 65px;
+  height:65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width:65px;
+}
+.library_card_content{line-height:normal;}
+.library_card_content .librarytags{
+  font-size: 12px;
+  background: #cbecff;
+  padding: 3px 12px;
+  border-radius: 20px;
+  line-height: normal;
+  width:fit-content;
+  margin-bottom:10px;
+}
+.library_card_content .librarytags2{
+  background: #bca6d0;
+  margin-bottom:0px;
+}
+.librarynumtext{
+  margin:0px 25px 0px 0px;
+}
+.library_main .zigzag-section{
+  padding:80px 0px;
+}
+.library_servicesinner{
+  background-color: #e8f6ff;
+  padding:30px;
+  border-radius:20px;
+  position:relative;
+  font-size:14px;
+}
+.library_servicesinner::after{
+  content: "";
+  z-index: 1;
+  background-image: url(/images/campus/library/library-services1.webp);
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: 320px;
+  width: 330px;
+  height: 440px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
 /* ------------- LifeatIMS Tab End Here ---------------*/
 /*----------------------- Inner Pages End Here --------------------*/
 
-/*--------------- Contact Us Pages Start Here ---------------*/
+/*--------------- Contact Us Pages Start Here --/-------------*/
 .contactinner {
   display: flex;
   gap: 20px;

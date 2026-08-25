@@ -12,6 +12,7 @@ export default function GovernanceGoverningBody() {
         title="Women Development Cell"
         breadcrumbs={[{ label: "Women Development Cell" }]}
       />
+      <div className="fullwidth_page">
       <div className="tablemain_section">
         <div className="container">
           <div className="mb-4">
@@ -19,6 +20,7 @@ export default function GovernanceGoverningBody() {
           </div>
           <Table columns={womenDevelopmentCellCommitteeColumns} data={womenDevelopmentCellCommitteeMembers} />
         </div>
+      </div>
       </div>
     </section>
   );
