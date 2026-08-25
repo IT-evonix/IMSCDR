@@ -26,10 +26,10 @@ export const programSidebar = {
         title: "College Development Committee (CDC)",
         href: "/college-development-commitee",
       },
-      {
-        title: "Approvals & Affiliations",
-        href: "/approvals-and-affiliations",
-      },
+      // {
+      //   title: "Approvals & Affiliations",
+      //   href: "/approvals-and-affiliations",
+      // },
 
     ],
   },

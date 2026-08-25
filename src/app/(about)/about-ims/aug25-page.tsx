@@ -17,7 +17,7 @@ const page = () => {
                   width={350}
                   height={350}
                 />
-                <div className="imscdr_box mb-4">
+                <div className="imscdr_box">
                   We are the NAAC Re-Accredited Institute, awarded the Best
                   Institute by Savitribai Phule Pune University, with 65% Ph.D
                   holders to teach and prepare you for a successful career.
