@@ -88,7 +88,7 @@ const CoursesWeOffer = () => {
               />
               <div className="Courses_content">
                 <div className="subheading">
-                  Doctor of <br /> Philosophy
+                  Bachelor of Computer <br /> Applications
                 </div>
                 <svg
                   width="14"

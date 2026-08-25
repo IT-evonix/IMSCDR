@@ -67,7 +67,7 @@ export default function LeftSidebar({
         className="sidebar-toggle"
         onClick={() => setOpen(true)}
       >
-        <Menu size={22} />
+        <Menu style={{color:"#fff"}} size={22} />
         <span>{heading}</span>
       </button>
 
