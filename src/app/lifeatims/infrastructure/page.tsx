@@ -46,7 +46,7 @@ const page = () => {
         </div>
       </div>
       <div className="">
-        <div className="heading mb-3">
+        <div className="subheading mb-3">
           The campus infrastructure includes:
         </div>
         <ImageGallery images={galleryData} />

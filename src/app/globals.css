@@ -1235,7 +1235,7 @@ Body {
   background-repeat: no-repeat;
   background-position: bottom;
   transition: transform 0.5s ease;
-  width:50%;
+  width: 50%;
 }
 .vision_box .heading {
   margin: 0 0 12px;
@@ -1348,14 +1348,14 @@ Body {
   position: relative;
   overflow: hidden;
   border-radius: 20px;
-  width:50%;
+  width: 50%;
 }
 .mottoleft img {
   border-radius: 20px;
 }
 .mottoright {
   position: relative;
-  width:50%;
+  width: 50%;
 }
 .mottoleft::after {
   position: absolute;
@@ -1471,13 +1471,14 @@ Body {
 .governing-table thead th {
   background: #09468e;
   color: #fff;
-  padding: 20px 28px;
+  padding: 20px 25px 20px 20px;
   font-size: 16px;
   font-family: "Roma-Semibold";
   text-transform: uppercase;
   border: none;
   white-space: nowrap;
   letter-spacing: 0.4px;
+  vertical-align: middle;
 }
 .governing-table thead th:first-child {
   border-top-left-radius: 18px;
@@ -1494,6 +1495,7 @@ Body {
   vertical-align: middle;
   background: #fff;
   transition: 0.3s;
+  line-height: normal;
 }
 .governing-table tbody td:last-child {
   border-right: none;
@@ -1545,7 +1547,7 @@ Body {
 }
 /*----------------- Governing Body End Here ------------------*/
 /*----------- Approvals & Affiliations Start Here -----------*/
-.all-3p-section {
+/* .all-3p-section {
   padding: 80px 0px;
 }
 .approval-card {
@@ -1587,13 +1589,172 @@ Body {
 }
 .approval-icon svg {
   stroke-width: 1;
+} */
+
+/* =====================================================
+   APPROVAL / DOCUMENT SECTION
+===================================================== */
+/* .approval-section {
+  padding: 100px 0 0px 0;
+} */
+
+.approval-card {
+  background: #fff;
+  border: 1px solid #e7ebf1;
+  border-radius: 18px;
+  align-items: center;
+  min-height: 100px;
+  padding: 20px 20px;
+  text-decoration: none;
+  transition:
+    transform 0.4s,
+    box-shadow 0.4s,
+    border-color 0.4s;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 25px #10467f0f;
+}
+.approval-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(196, 22, 28, 0.18);
+  box-shadow: 0 18px 45px rgba(16, 70, 127, 0.12);
+}
+.approval-card-glow {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: -90px;
+  right: -80px;
+  border-radius: 50%;
+  background: rgba(196, 22, 28, 0.08);
+  transition:
+    width 0.5s ease,
+    height 0.5s ease;
+}
+.approval-card:hover .approval-card-glow {
+  width: 240px;
+  height: 240px;
+}
+
+.approval-icon-wrap {
+  width: 65px;
+  min-width: 65px;
+  margin-right: 15px;
+  position: relative;
+}
+
+.approval-icon {
+  position: relative;
+  z-index: 2;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c4161c;
+  background: #fff5f5;
+  border-radius: 16px;
+  transition:
+    transform 0.4s ease,
+    background 0.4s ease,
+    color 0.4s ease;
+}
+.approval-card:hover .approval-icon {
+  transform: rotate(-5deg) scale(1.08);
+  color: #fff;
+  background: #c4161c;
+}
+.approval-type {
+  z-index: 3;
+  letter-spacing: 0.6px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  padding: 2px 5px;
+  font-size: 8px;
+  position: absolute;
+  bottom: -8px;
+  left: -8px;
+  font-family: "Avenir-Next-Demi";
+}
+.approval-type-pdf {
+  color: #fff;
+  background: #c4161c;
+}
+.approval-type-excel {
+  color: #fff;
+  background: #198754;
+}
+.approval-type-link {
+  color: #fff;
+  background: #10467f;
+}
+.approval-content {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  min-width: 0;
+}
+.approval-title {
+  color: #000;
+  max-width: 100%;
+  margin: 0;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+.approval-card:hover .approval-title {
+  color: #10467f;
+}
+.approval-arrow {
+  position: relative;
+  z-index: 2;
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 15px;
+  color: #10467f;
+  border: 1px solid #e5eaf0;
+  border-radius: 50%;
+  transition:
+    transform 0.4s ease,
+    color 0.4s ease,
+    background 0.4s ease,
+    border-color 0.4s ease;
+}
+.approval-card:hover .approval-arrow {
+  transform: translate(4px, -4px);
+  color: #fff;
+  background: #10467f;
+  border-color: #10467f;
+}
+.approval-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 70%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.5),
+    transparent
+  );
+  transform: skewX(-20deg);
+  transition: left 0.7s ease;
+}
+.approval-card:hover::after {
+  left: 130%;
 }
 /* New Design Start Here */
 .zigzag-row {
   display: flex;
   align-items: center;
   gap: 40px;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
 }
 .zigzag-row.reverse {
   flex-direction: row-reverse;
@@ -1885,13 +2046,19 @@ Body {
 .innerpage_main {
   scroll-margin-top: 200px;
 }
+.fullwidth_page {
+  padding: 60px 0px;
+}
+.innerpagewrapper {
+  padding: 80px 0px;
+}
 /*----- Specializations Page Start Here -----*/
 .specialization-section {
   position: relative;
   /* margin-top: 60px; */
 }
-.specialization_inner{
-  margin:30px 0px 30px 0px;
+.specialization_inner {
+  margin: 30px 0px 30px 0px;
 }
 .specialization-section .specialization_inner2 {
   display: flex;
@@ -2011,7 +2178,7 @@ Body {
 }
 .eligibility_inner img {
   border-radius: 20px;
-  width:100%;
+  width: 100%;
 }
 .intake_inner {
   position: relative;
@@ -2056,7 +2223,7 @@ Body {
 .overview_inner {
   display: flex;
   gap: 30px;
-  padding-bottom:60px;
+  padding-bottom: 60px;
 }
 .overview_inner img {
   border-radius: 10px;
@@ -2144,7 +2311,7 @@ Body {
   font-family: "Avenir-Next-Demi";
   font-size: 14px;
 }
-.faculty-education{
+.faculty-education {
   color: #3e3e3e;
   margin: 0;
   font-size: 14px;
@@ -2154,7 +2321,7 @@ Body {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  line-height:normal;
+  line-height: normal;
 }
 .faculty_listing_page .faculty-info {
   display: flex;
@@ -2171,20 +2338,20 @@ Body {
 /* Programe Wise Faculty listing End Here */
 
 /* Career Opportunities Start Here */
-.career_opportunities_images{
-  display:flex;
-  gap:20px;
-  flex-wrap:wrap;
-  align-items:center;
+.career_opportunities_images {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
   position: relative;
 }
-.career_opportunities_img{
-  width:100%;
-  border-radius:20px;
+.career_opportunities_img {
+  width: 100%;
+  border-radius: 20px;
 }
-.career_opportunities_img img{
-  width:100%;
-  border-radius:20px;
+.career_opportunities_img img {
+  width: 100%;
+  border-radius: 20px;
 }
 .logobox_img {
   background-color: #fff;
@@ -2196,8 +2363,8 @@ Body {
   width: 190px;
   margin: 0 auto;
 }
-.logobox_img img{
-  width:100%;
+.logobox_img img {
+  width: 100%;
 }
 /* Career Opportunities End Here */
 /* ---------- Laboratories & Facilities Start Here ---------- */
@@ -2269,18 +2436,18 @@ Body {
 }
 /* ---------- Laboratories & Facilities End Here ---------- */
 /* Dowanload Start Here */
-.ImageBox{
-  position:relative;
+.ImageBox {
+  position: relative;
   overflow: hidden;
-  border-radius:20px;
+  border-radius: 20px;
 }
-.ImageBox img{
-  border-radius:20px;
-  transition-duration:0.5s;
+.ImageBox img {
+  border-radius: 20px;
+  transition-duration: 0.5s;
 }
-.ImageBox:hover img{
+.ImageBox:hover img {
   transform: scale(1.1);
-  transition-duration:0.5s;
+  transition-duration: 0.5s;
 }
 /* Dowanload End Here */
 /* ---------- FAQ Start Here ---------- */
@@ -2399,10 +2566,10 @@ Body {
 }
 .faculty-item.active .faculty-card {
   background: #89004a;
-  color:#fff;
+  color: #fff;
 }
-.faculty-item.active .faculty-content span{
-  color:#fff !important;
+.faculty-item.active .faculty-content span {
+  color: #fff !important;
 }
 .faculty-details {
   width: 100%;
@@ -2471,13 +2638,13 @@ Body {
   border-radius: 12px;
   display: block;
 }
-.facultydetails_name{
+.facultydetails_name {
   background-color: #f4ead8;
   border-radius: 20px;
   margin-top: 15px;
   padding: 20px 10px;
 }
-.faculty-content .subheading{
+.faculty-content .subheading {
   line-height: normal;
 }
 .faculty-section .left .heading {
@@ -2485,7 +2652,7 @@ Body {
   margin: 0px 0 6px;
   font-size: 22px;
 }
-.faculty-section .left .subheading{
+.faculty-section .left .subheading {
   text-align: center;
   line-height: normal;
   font-size: 16px;
@@ -2503,12 +2670,12 @@ Body {
   flex-wrap: wrap;
 }
 .faculty-section .info-box {
-  margin-bottom:0px;
+  margin-bottom: 0px;
   width: 31%;
 }
-.faculty-section .info-box a{
-  font-size:14px;
-  text-decoration:none;
+.faculty-section .info-box a {
+  font-size: 14px;
+  text-decoration: none;
   color: #09468e;
 }
 .info-box .subheading {
@@ -2518,51 +2685,51 @@ Body {
   line-height: normal;
   font-size: 14px;
 }
-.profiledesign .info-boxrow{
-  font-size:14px;
-  display:flex;
-  align-items:center;
-  gap:10px;
+.profiledesign .info-boxrow {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
-.profiledesign .info-boxrow a{
+.profiledesign .info-boxrow a {
   color: #09468e;
   font-size: 13px;
   background: #ffffff;
   line-height: normal;
 }
-.profiledesign1 .info-boxrow{
-  width:100%;
+.profiledesign1 .info-boxrow {
+  width: 100%;
 }
-.profiledesign1 .info-boxrow .subheading{
+.profiledesign1 .info-boxrow .subheading {
   text-align: start;
-  color:#000;
+  color: #000;
 }
-.profiledesign .info-boxrow p{
-  margin:0px;
+.profiledesign .info-boxrow p {
+  margin: 0px;
 }
-.profiledesign .info-boxrow .subheading{
-  border-bottom:none;
+.profiledesign .info-boxrow .subheading {
+  border-bottom: none;
   margin: 0 0 0px;
   padding: 0 0 0px;
   font-size: 14px;
   line-height: normal;
-  background-color:transparent !important;
-  border-radius:0px;
+  background-color: transparent !important;
+  border-radius: 0px;
 }
-.profiledesign{
+.profiledesign {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
 }
-.profiledesign .subheading{
-    background-color: #44ade2;
-    border-radius: 15px;
-    padding: 2px 10px 2px 10px;
-    font-size: 16px;
-    width: 100%;
-    margin: 0 0 10px 0;
-    color: #fff;
-    text-align: center;
+.profiledesign .subheading {
+  background-color: #44ade2;
+  border-radius: 15px;
+  padding: 2px 10px 2px 10px;
+  font-size: 16px;
+  width: 100%;
+  margin: 0 0 10px 0;
+  color: #fff;
+  text-align: center;
 }
 .facultydetail-content {
   width: 100%;
@@ -2574,7 +2741,7 @@ Body {
 }
 .facultydetail-content p {
   margin: 0px;
-  font-size:14px;
+  font-size: 14px;
 }
 .faculty-section .info-box h5 {
   margin-bottom: 10px;
@@ -2596,24 +2763,24 @@ Body {
   font-size: 14px;
   line-height: normal;
 }
-.profiledesignbox{
-  display:flex;
-  gap:20px;
+.profiledesignbox {
+  display: flex;
+  gap: 20px;
 }
-.profiledesignbox .info-box1{
-  width:50%;
-  border-radius:20px;
-  padding:20px;
+.profiledesignbox .info-box1 {
+  width: 50%;
+  border-radius: 20px;
+  padding: 20px;
   background-color: #f6f6f6;
   margin-top: 13px;
 }
-.research_linkbtn{
-  padding:5px 10px;
-  background-color:#ccc;
-  border-radius:20px;
-  font-size:14px;
-  text-decoration:none;
-  color:#000;
+.research_linkbtn {
+  padding: 5px 10px;
+  background-color: #ccc;
+  border-radius: 20px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #000;
   font-family: "Roma-Regular";
 }
 /*-------------- Faculty New Design ---------------*/
@@ -2633,7 +2800,7 @@ Body {
   padding: 30px;
   overflow-y: auto;
   animation: facultyOverlayShow 0.25s ease;
-  font-size:14px;
+  font-size: 14px;
 }
 /* =========================================
    POPUP
@@ -2738,37 +2905,37 @@ Body {
   }
 }
 
-.faculty-modal-overlay .info-box{
+.faculty-modal-overlay .info-box {
   width: 31%;
   margin-bottom: 0px;
 }
-.info-box ul{
+.info-box ul {
   margin-bottom: 0px;
 }
-.info-box p{
+.info-box p {
   margin-bottom: 0px;
 }
-.faculty-modal-overlay .left .heading{
-    text-align: center;
-    margin: 0 0 6px;
-    font-size: 22px;
+.faculty-modal-overlay .left .heading {
+  text-align: center;
+  margin: 0 0 6px;
+  font-size: 22px;
 }
 .faculty-modal-overlay .left .subheading {
-    text-align: center;
-    font-family: Avenir-Next-Regular;
-    font-size: 16px;
-    line-height: normal;
+  text-align: center;
+  font-family: Avenir-Next-Regular;
+  font-size: 16px;
+  line-height: normal;
 }
-.faculty-modal-overlay .info-box a{
+.faculty-modal-overlay .info-box a {
   color: #09468e;
   font-size: 14px;
   text-decoration: none;
 }
 .faculty-modal-overlay .left img {
-    border-radius: 12px;
-    width: 100%;
-    height: auto;
-    display: block;
+  border-radius: 12px;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* ----- Faculty Page End Here ----- */
@@ -3008,18 +3175,18 @@ Body {
   display: flex;
   justify-content: space-between;
 } */
-.eligibility_cardlisting .eligibility_card{
+.eligibility_cardlisting .eligibility_card {
   /* width:48%; */
   display: flex;
 }
-.eligibility_cardlisting .eligibility_card{
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    border-radius: 20px;
-    color: #000;
-    gap: 25px;
-    margin: 0 0 60px 0;
+.eligibility_cardlisting .eligibility_card {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-radius: 20px;
+  color: #000;
+  gap: 25px;
+  margin: 0 0 60px 0;
 }
 /* .eligibility_cardlisting .eligibility_card:first-child{
   background: #bca6d0;
@@ -3039,12 +3206,12 @@ Body {
 .eligibility_cardlisting .eligibility_card:nth-child(4) {
   background: #ffe9f3;
 }
-.eligibility_inner{
-  width:40%;
+.eligibility_inner {
+  width: 40%;
   position: relative;
 }
 .branchname {
-  background-color:#09468e;
+  background-color: #09468e;
   border-radius: 30px;
   padding: 6px 20px;
   text-align: center;
@@ -3055,19 +3222,19 @@ Body {
   top: 0;
   right: 0;
   left: 0;
-  color:#FFF;
-  font-size:16px;
+  color: #fff;
+  font-size: 16px;
   font-family: "Roma-Semibold";
 }
-.eligibility_text{
-  width:60%;
+.eligibility_text {
+  width: 60%;
 }
 /*------- Admission Tab Eligibility Page End -------*/
 /*----------- Fee Structure Page Start -----------*/
-.fee_structure_main{
+.fee_structure_main {
   padding: 0 0 50px 0;
 }
-.fee_structure_inner{
+.fee_structure_inner {
   gap: 20px;
   display: flex;
   border: 1px solid #dedede;
@@ -3089,7 +3256,7 @@ Body {
   align-items: center;
   display: flex;
 }
-.fee_structure_content{
+.fee_structure_content {
   border-radius: 20px;
   width: 69%;
   display: flex;
@@ -3097,7 +3264,7 @@ Body {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.fee_structure_box{
+.fee_structure_box {
   border-radius: 20px;
   flex-wrap: wrap;
   gap: 10px;
@@ -3107,67 +3274,67 @@ Body {
   margin: -40px 0 60px 0;
 }
 .fee_structure_box:nth-child(1) {
-  background-color:#f0e5fa;
-  background-image:url("/images/admission/capicon1.webp");
+  background-color: #f0e5fa;
+  background-image: url("/images/admission/capicon1.webp");
   background-repeat: no-repeat;
-  background-size:65px;
-  background-position:94% 50%;
+  background-size: 65px;
+  background-position: 94% 50%;
 }
 .fee_structure_box:nth-child(2) {
-  background-color:#dff3ff;
-  background-image:url("/images/admission/capicon2.webp");
+  background-color: #dff3ff;
+  background-image: url("/images/admission/capicon2.webp");
   background-repeat: no-repeat;
-  background-size:65px;
-  background-position:94% 50%;
+  background-size: 65px;
+  background-position: 94% 50%;
 }
 .fee_structure_box:nth-child(3) {
-  background-color:#ffe9f3;
-  background-image:url("/images/admission/capicon3.webp");
+  background-color: #ffe9f3;
+  background-image: url("/images/admission/capicon3.webp");
   background-repeat: no-repeat;
-  background-size:65px;
-  background-position:94% 50%;
+  background-size: 65px;
+  background-position: 94% 50%;
 }
 .fee_structure_box:nth-child(4) {
-  background-color:#FFF3D3;
-  background-image:url("/images/admission/capicon4.webp");
+  background-color: #fff3d3;
+  background-image: url("/images/admission/capicon4.webp");
   background-repeat: no-repeat;
-  background-size:65px;
-  background-position:94% 50%;
+  background-size: 65px;
+  background-position: 94% 50%;
 }
 .fee_structure_box:nth-child(5) {
-  background-color:#f7ffd4;
-  background-image:url("/images/admission/capicon5.webp");
+  background-color: #f7ffd4;
+  background-image: url("/images/admission/capicon5.webp");
   background-repeat: no-repeat;
-  background-size:65px;
-  background-position:94% 50%;
+  background-size: 65px;
+  background-position: 94% 50%;
 }
-.lastcolumn_row .fee_structure_box{
+.lastcolumn_row .fee_structure_box {
   background-position: 95% 80%;
   background-size: 50px;
 }
-.lastcolumn_row .fee_structure_box:nth-child(1){
-  background-position:95% 80%;
+.lastcolumn_row .fee_structure_box:nth-child(1) {
+  background-position: 95% 80%;
   background-size: 50px;
-  background-image:url("/images/admission/capicon3.webp");
-  background-color:#ffe9f3;
+  background-image: url("/images/admission/capicon3.webp");
+  background-color: #ffe9f3;
 }
-.lastcolumn_row .fee_structure_box:nth-child(2){
-  background-position:95% 80%;
+.lastcolumn_row .fee_structure_box:nth-child(2) {
+  background-position: 95% 80%;
   background-size: 50px;
-  background-image:url("/images/admission/capicon4.webp");
-  background-color:#FFF3D3;
+  background-image: url("/images/admission/capicon4.webp");
+  background-color: #fff3d3;
 }
-.lastcolumn_row .fee_structure_box:nth-child(3){
+.lastcolumn_row .fee_structure_box:nth-child(3) {
   background: #f7ffd4;
-  background-image:url("/images/admission/capicon5.webp");
-  background-size:50px;
-  background-position:95% 80%;
+  background-image: url("/images/admission/capicon5.webp");
+  background-size: 50px;
+  background-position: 95% 80%;
   background-repeat: no-repeat;
 }
-.fee_structure_main hr{
+.fee_structure_main hr {
   margin: 100px 0 100px 0;
 }
-.feetabboxmain{
+.feetabboxmain {
   gap: 10px;
   margin: 0 0 90px;
   display: flex;
@@ -3175,9 +3342,13 @@ Body {
   box-shadow: 0px 10px 10px #0000000a;
   border-radius: 20px;
   padding: 40px 0px 20px 20px;
-  background: linear-gradient(90deg,rgba(255, 255, 255, 1) 0%, rgba(204, 204, 204, 0.235) 85%);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(204, 204, 204, 0.235) 85%
+  );
 }
-.feetabboxmain::after{
+.feetabboxmain::after {
   content: "";
   background-image: url(/images/admission/collageimg1.webp);
   background-position: center;
@@ -3190,24 +3361,24 @@ Body {
   bottom: 0;
   border-radius: 0px 0px 20px 0px;
 }
-.feetabbox{
-  background-color:#F4F4F4;
-  border:1px solid #ebebeb;
-  padding:15px 13px;
-  border-radius:15px;
-  width:auto;
+.feetabbox {
+  background-color: #f4f4f4;
+  border: 1px solid #ebebeb;
+  padding: 15px 13px;
+  border-radius: 15px;
+  width: auto;
   align-items: center;
   display: flex;
 }
-.feetabboxmain .heading{
+.feetabboxmain .heading {
   font-size: 14px;
   font-family: "Avenir-Next-Demi";
-  margin:0px;
+  margin: 0px;
 }
- /* .fee_structure_box:nth-child(5) {
+/* .fee_structure_box:nth-child(5) {
  
 }  */
-.course_name{
+.course_name {
   text-align: center;
   color: #fff;
   background-color: #7159a6;
@@ -3219,31 +3390,64 @@ Body {
   font-size: 14px;
   height: 23px;
 }
-.fee_text{
+.fee_text {
   font-family: Roma-Bold;
   font-size: 30px;
   width: 100%;
   line-height: normal;
 }
-.fee_structure_box p{
+.fee_structure_box p {
   margin: 0;
   width: 100%;
 }
-.fee_structure_inner1 .lastcolumn_row{
-
-}
-.lastcolumn_row{
+.lastcolumn_row {
   width: 100%;
   display: flex;
   gap: 10px;
 }
-.lastcolumn_row .fee_structure_box{
-  width:33%;
+.lastcolumn_row .fee_structure_box {
+  width: 33%;
 }
 /*----------- Fee Structure Page End -----------*/
+/*------------- Scholarships Page Start Here -------------*/
+.scholarships_page .open-category-header {
+  background: #0a4f9d;
+  text-align: center;
+}
+.scholarships_page .obc-category-header {
+  background: #0a4f9d;
+  text-align: center;
+}
+.scholarships_page .sbc-category-header {
+  background: #0a4f9d;
+  text-align: center;
+}
+.scholarships_page .scst-category-header {
+  background: #0a4f9d;
+  text-align: center;
+}
+.scholarships_page .girls-category-header {
+  background: #0a4f9d;
+  text-align: center;
+}
+.scholarships_page .governing-table thead th:first-child {
+  border-top-left-radius: 0px;
+}
+.scholarships_page .governing-table thead th:last-child {
+  border-top-right-radius: 0px;
+}
+.scholarships_page .governing-table thead tr:last-child th {
+  font-size: 12px;
+}
+.scholarships_page .governing-table thead th {
+  border-right: 1px solid #ffffff1f;
+  white-space: wrap;
+}
+/*------------- Scholarships Page End Here -------------*/
 /* ------------- Admission Tab End Here ---------------*/
 /* ------------- LifeatIMS Tab Start Here -------------*/
-.lifeat_states{
+/*---------- Campus Overview Page Start Here ----------*/
+.lifeat_states {
   justify-content: space-between;
   align-items: center;
   display: flex;
@@ -3253,23 +3457,23 @@ Body {
   padding: 20px;
   margin: 60px 0 0 0;
 }
-.lifeat_states img{
-  border-radius:20px;
+.lifeat_states img {
+  border-radius: 20px;
 }
-.lifeat_statebox{
+.lifeat_statebox {
   display: flex;
   align-items: center;
-  gap:8px;
+  gap: 8px;
 }
-.lifeat_statetext{
-  font-size:16px;
+.lifeat_statetext {
+  font-size: 16px;
   line-height: normal;
 }
-.lifeat_statetext span{
-  font-size:25px;
+.lifeat_statetext span {
+  font-size: 25px;
   font-family: "Avenir-Next-Demi";
-  width:100%;
-  display:block;
+  width: 100%;
+  display: block;
   line-height: 30px;
 }
 .verticalseparator {
@@ -3277,8 +3481,8 @@ Body {
   width: 1px;
   height: 50px;
 }
-.lifeat_marquee{
-  padding:60px 0px 0px 0px;
+.lifeat_marquee {
+  padding: 60px 0px 0px 0px;
 }
 .lifeat_marquee .marquee {
   width: 100%;
@@ -3289,13 +3493,13 @@ Body {
   display: inline-block;
   padding-left: 100%;
   animation: marquee 25s linear infinite;
-  font-size:55px;
+  font-size: 55px;
   font-family: "Avenir-Next-Demi";
   text-transform: uppercase;
-  color:#ccc;
-  line-height:normal;
+  color: #ccc;
+  line-height: normal;
 }
-.lifeat_marquee .marquee_content span{
+.lifeat_marquee .marquee_content span {
   font-family: "Avenir-Next-Regular";
 }
 @keyframes marquee {
@@ -3307,81 +3511,82 @@ Body {
     transform: translateX(-100%);
   }
 }
-.lifeatcampus .motto_content{
+.lifeatcampus .motto_content {
   top: 65px;
 }
-.lifeatcampus .motto_quotes{
+.lifeatcampus .motto_quotes {
   line-height: 18px;
   min-height: 132px;
   align-items: center;
-  display:flex;
+  display: flex;
   font-family: "Avenir-Next-Regular";
-  font-size:15px;
+  font-size: 15px;
 }
-.lifeatcampus .visionleft:after{
+.lifeatcampus .visionleft:after {
   background-color: #09478ed4 !important;
 }
 .lifeatcampus .misionright:after {
-    background-color: #961719b0;
+  background-color: #961719b0;
 }
-.visionleft .motto_quotes:after{
+.visionleft .motto_quotes:after {
   background-color: #145795;
-  border-radius:30px;
+  border-radius: 30px;
 }
-.visionleft .motto_quotes::before{
+.visionleft .motto_quotes::before {
   background-color: #1a5491;
 }
-.ourvaluesmain{
-  border-radius:30px;
+.ourvaluesmain {
+  border-radius: 30px;
   position: relative;
   overflow: hidden;
-  transition-duration:0.5s;
+  transition-duration: 0.5s;
 }
-/* .ourvaluesmain:hover{
-  margin:-20px 0px 0px 0px;
-} */
-.ourvaluesmain:hover img{
+.ourvaluesmain:hover img {
   transform: scale(1.1);
-  transition-duration:0.5s;
+  transition-duration: 0.5s;
 }
-.ourvaluesmain img{
-  border-radius:30px;
-  transition-duration:0.5s;
+.ourvaluesmain img {
+  border-radius: 30px;
+  transition-duration: 0.5s;
 }
-.ourvaluescontent{
+.ourvaluescontent {
   position: absolute;
   bottom: 0px;
   padding: 30px;
   width: 100%;
-  background: linear-gradient(180deg,rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.71) 20%);
-  color:#fff;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.71) 20%
+  );
+  color: #fff;
   height: 250px;
-  border-radius:30px;
+  border-radius: 30px;
 }
-.ourvaluescontent .heading{
-  margin:0px 0px 5px 0px;
+.ourvaluescontent .heading {
+  margin: 0px 0px 5px 0px;
 }
-.ourvaluescontent .subheading{
-  margin:7px 0 7px 0;
+.ourvaluescontent .subheading {
+  margin: 7px 0 7px 0;
   color: #ffc233;
 }
-.ourvaluescontent ul{
+.ourvaluescontent ul {
   gap: 6px;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  padding:0px 0px 0px 15px;
+  padding: 0px 0px 0px 15px;
   margin: 0;
   border: 1px solid #ffffff69;
-  padding:15px;
-  border-radius:25px;
+  padding: 15px;
+  border-radius: 25px;
   justify-content: center;
 }
-.ourvaluescontent ul li{
+.ourvaluescontent ul li {
   width: 31%;
 }
-.imscdr_box{
-  border-radius:10px;
+.imscdr_box {
+  border-radius: 10px;
 }
 .image-gallery {
   width: 100%;
@@ -3390,7 +3595,7 @@ Body {
   background: #fff;
   overflow: hidden;
   transition: all 0.3s ease;
-  position:relative;
+  position: relative;
 }
 .mainimage_gallery .gallery-card:hover {
   transform: translateY(-5px);
@@ -3453,13 +3658,15 @@ Body {
   bottom: 0;
   overflow: hidden;
 }
-.infrastructure_main{
-  border-radius:25px;
+/*------------ Campus Overview Page End Here ------------*/
+/*----------- Infrastructure Page Start Here -----------*/
+.infrastructure_main {
+  border-radius: 25px;
   position: relative;
   /* overflow:hidden; */
-  margin:20px 0px 60px 0px;
+  margin: 20px 0px 60px 0px;
 }
-.infrastructure_main::after{
+.infrastructure_main::after {
   content: "";
   z-index: -1;
   background-image: url(/images/campus/bg-shadow.webp);
@@ -3474,40 +3681,310 @@ Body {
   width: 90%;
   margin: 0 auto;
 }
-.infrastructure_main::before{
+.infrastructure_main::before {
   content: "";
   z-index: 1;
-  height:70%;
+  height: 70%;
   position: absolute;
-  bottom:0px;
+  bottom: 0px;
   left: 0;
   right: 0;
   width: 100%;
   border-radius: 20px;
-  background: linear-gradient(180deg,rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.71) 85%);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.71) 85%
+  );
 }
-.infrastructure_main img{
+.infrastructure_main img {
   border-radius: 20px;
 }
-.infrastructure_main_content{
-  position:absolute;
-  z-index:9;
-  width:100%;
+.infrastructure_main_content {
+  position: absolute;
+  z-index: 9;
+  width: 100%;
   text-align: center;
-  font-size:25px;
+  font-size: 25px;
   font-family: "Roma-Bold";
   bottom: 20px;
-  color:#ffc233;
+  color: #ffc233;
   text-transform: capitalize;
 }
-.infrapara span{
+.infrapara span {
   font-family: "Avenir-Next-Demi";
-  color:#09468e;
+  color: #09468e;
+}
+/*----------- Infrastructure Page End Here -----------*/
+/*-------------- Hostel Page Start Here --------------*/
+.facilities_listing_main .facility-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+.facilities_listing_main .facility-card {
+  width: 100%;
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  padding: 7px 15px;
+  gap: 10px;
+  background: #f8f6fb;
+  border: 1.3px dashed #8062bd;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+.facilities_listing_main .facility-card-full {
+  grid-column: 1 / -1;
+}
+.facilities_listing_main .facility-icon {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+.facilities_listing_main .facility-icon img {
+  object-fit: contain;
+  width: auto;
+  max-height: 40px;
+}
+.facilities_listing_main .facility-content {
+  flex: 1;
+}
+.facilities_listing_main .facility-content p {
+  color: #111;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: normal;
+  font-family: "Avenir-Next-Regular";
+}
+.facilities_listing_main .facility-card:hover {
+  transform: translateY(-3px);
+  background: #f5f1fa;
+  box-shadow: 0 8px 25px rgba(115, 85, 173, 0.12);
+}
+.hostel_image {
+  position: relative;
+}
+.hostel_image .subheading {
+  text-align: center;
+  background-color: #ffe293;
+  border-radius: 20px;
+  margin: 0px auto;
+  padding: 6px 20px;
+  font-size: 18px;
+  position: absolute;
+  top: -14px;
+  left: 0;
+  right: 0;
+  width: fit-content;
+  line-height: normal;
+}
+.hostel_image img {
+  width: 100%;
+}
+.hosteltopinner {
+  background-image: url(/images/campus/hostel/girls_hostel_bg.webp);
+  background-position: 70% 115px;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  padding: 0px 0px 0px 0px;
+}
+.girsandboys_hostel {
+  padding: 40px 0px 40px 0px;
+}
+.Capacitytext {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+  line-height: normal;
+}
+.Capacitytext span {
+  font-size: 20px;
+  color: #fff;
+  font-family: "Roma-Bold";
+}
+.Capacitynum {
+  font-size: 50px;
+  line-height: normal;
+  color: #ffc233;
+  font-family: "Roma-Bold";
+}
+/*-------------- Hostel Page End Here --------------*/
+.gallery-slider {
+  width: 100%;
+  position: relative;
+}
+.gallery-slider-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 10px 0;
+}
+.gallery-slider-track {
+  display: flex;
+  width: 100%;
+  will-change: transform;
+}
+.gallery-slider-item {
+  min-width: 0;
+  padding: 0 10px;
+  box-sizing: border-box;
+  border-radius: 15px;
+}
+.gallery-slider-card {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 15px;
+  background: #fff;
+  position: relative;
+}
+.gallery-slider-image {
+  width: 100%;
+  height: 250px;
+  display: block;
+  object-fit: cover;
+  border-radius: 15px;
+}
+.gallery-slider-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin-top: 25px;
+}
+.gallery-slider-prev,
+.gallery-slider-next {
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  transition: 0.3s ease;
+}
+.gallery-slider-prev:hover,
+.gallery-slider-next:hover {
+  transform: translateY(-5px);
+}
+/* /////////////////////////////////////// */
+.librarianImg{
+  position:sticky;
+  top:150px;
+  padding-left:25px;
+}
+.librarianImg img{
+  border-radius:20px;
+  position:relative;
+}
+.librarianImginner{
+  position:relative;
+}
+.librarianImginner::after{
+  content: "";
+  width: 250px;
+  height: 100%;
+  position: absolute;
+  right:-20px;
+  top: -20px;
+  z-index: -1;
+  background: linear-gradient(180deg,rgba(9, 70, 142, 1) 0%, rgba(137, 0, 74, 1) 85%);
+  border-radius:20px;
+}
+.librarianPara{
+  background-color: #e8f6ff;
+  padding:20px;
+  border-radius:25px;
+  margin:60px 0px;
+}
+.library_statistical_data{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  margin-top:20px;
+}
+.library_card{
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  gap: 19px;
+  min-height: 100px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size:14px;
+}
+.library_card:nth-child(7) {
+  grid-column: span 1;
+}
+.library_card:nth-child(8) {
+  grid-column: span 2;
+}
+.library_icons{
+  background-color: #f5ebd9;
+  border-radius: 10px;
+  width: 65px;
+  height:65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width:65px;
+}
+.library_card_content{line-height:normal;}
+.library_card_content .librarytags{
+  font-size: 12px;
+  background: #cbecff;
+  padding: 3px 12px;
+  border-radius: 20px;
+  line-height: normal;
+  width:fit-content;
+  margin-bottom:10px;
+}
+.library_card_content .librarytags2{
+  background: #bca6d0;
+  margin-bottom:0px;
+}
+.librarynumtext{
+  margin:0px 25px 0px 0px;
+}
+.library_main .zigzag-section{
+  padding:80px 0px;
+}
+.library_servicesinner{
+  background-color: #e8f6ff;
+  padding:30px;
+  border-radius:20px;
+  position:relative;
+  font-size:14px;
+}
+.library_servicesinner::after{
+  content: "";
+  z-index: 1;
+  background-image: url(/images/campus/library/library-services1.webp);
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: 320px;
+  width: 330px;
+  height: 440px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 /* ------------- LifeatIMS Tab End Here ---------------*/
 /*----------------------- Inner Pages End Here --------------------*/
 
-/*--------------- Contact Us Pages Start Here ---------------*/
+/*--------------- Contact Us Pages Start Here --/-------------*/
 .contactinner {
   display: flex;
   gap: 20px;

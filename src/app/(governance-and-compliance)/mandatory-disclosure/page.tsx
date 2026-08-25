@@ -9,10 +9,12 @@ export default function Page() {
         title="Governance & Compliance"
         breadcrumbs={[{ label: "Director’s Message" }]}
       />
-      <ApprovalList
-        title="Mandatory Disclosure"
-        data={approvalData.mandatoryDisclosure}
-      />
+      <div className="fullwidth_page">
+        <ApprovalList
+          title="Mandatory Disclosure"
+          data={approvalData.mandatoryDisclosure}
+        />
+      </div>
     </div>
   );
 }

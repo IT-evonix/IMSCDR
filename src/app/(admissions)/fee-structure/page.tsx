@@ -1,3 +1,5 @@
+import ApprovalList from "@/components/abouttab/ApprovalList";
+import { approvalData } from "@/data/approvalData";
 import React from "react";
 
 const page = () => {
@@ -61,13 +63,11 @@ const page = () => {
             </div>
           </div>
         </div>
-        <hr className="sepratorline"/>
+        <hr className="sepratorline" />
 
-        <div
-          className="fee_structure_inner fee_structure_inner1"
+        <div className="fee_structure_inner fee_structure_inner1"
           style={{ marginBottom: "0px" }}
         >
-          
           <div className="fee_structure_content">
             <div className="fee_structure_box">
               <div className="course_name">BBA-I</div>
@@ -108,8 +108,12 @@ const page = () => {
           <div className="fee_structure_heading">
             Fee Structure 2026 - 2027 (As per S.P. Pune University Circulars)
           </div>
-          
         </div>
+
+        <ApprovalList
+      title="AICTE Approvals"
+      data={approvalData.feestructureims}
+    />
       </div>
     </div>
   );
