@@ -2202,6 +2202,7 @@ Body {
   padding: 20px;
   background: #fff;
   border-radius: 20px;
+  width:100%;
 }
 .eligibility_inner img {
   border-radius: 20px;
@@ -3233,7 +3234,7 @@ Body {
 .eligibility_cardlisting .eligibility_card:nth-child(4) {
   background: #ffe9f3;
 }
-.eligibility_inner {
+.eligibility_card .eligibility_inner {
   width: 40%;
   position: relative;
 }
@@ -4430,6 +4431,13 @@ Body {
     min-height: 170px;
   }
   /*--------------- News And Events End Here ---------------*/
+  /*---------------- Programe tab Start Here ----------------*/
+  .facility-item{
+    padding: 10px 12px;
+    gap: 10px;
+    min-height: 70px;
+  }
+  /*---------------- Programe Tab End Here ----------------*/
 }
 @media (max-width: 991.98px) {
   .heading {
@@ -4806,6 +4814,17 @@ Body {
   .intake_inner img{
     border-radius: 20px 20px 0px 0px;
   }
+  .overview_right2{
+    width: 100%;
+  }
+  .imscdr_box{
+    bottom: 20px;
+    padding: 20px;
+    width: 75%;
+  }
+  .facilities-wrapper{
+    grid-template-columns: repeat(1, 1fr);
+  }
   /*--------------- Programee Tab End Here ---------------*/
 }
 
@@ -4889,27 +4908,6 @@ Body {
     border-radius: 18px;
   }
   /*----------------------- CampusLife End Here -----------------------*/
-
-  /*----------- Sidebar Start Here ------------*/
-
-  /*----------- Sidebar End Here ------------*/
-  /*--------------------- Inner Pages Start Here ---------------------*/
-  /* Programe Wise Faculty listing Start Here */
-  @media (max-width: 768px) {
-    .facultyListing {
-      grid-template-columns: 1fr;
-    }
-    .faculty-card {
-      flex-direction: column;
-      text-align: center;
-    }
-    .faculty-info {
-      align-items: center;
-    }
-  }
-  /* Programe Wise Faculty listing End Here */
-  /*--------------------- Inner Pages End Here ---------------------*/
-
   /*---------------------- About Us Tab Start Here --------------------*/
   .vision_mision_inner {
     display: block;
@@ -4941,6 +4939,39 @@ Body {
     padding: 60px 0px 60px 0px;
   }
   /*--------------- Sidebar End Here ---------------*/
+
+  /*------------ Programe Tab Start Here ------------*/
+  .facultyListing {
+    grid-template-columns: 1fr;
+  }
+  .faculty-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .faculty-info {
+    align-items: center;
+  }
+  .career_opportunities_images{
+    margin: 0 0 10px 0;
+  }
+  .ImageBox img{
+    width:100%;
+  }
+  .ImageBox{
+    margin: 0 0 20px 0;
+  }
+  .faq-question{
+    padding: 15px;
+    gap: 10px;
+  }
+  .faq-question .subheading{
+    font-size:16px;
+  }
+  .faq-answer.show{
+    padding: 0 15px 24px;;
+  }
+  
+  /*------------ Programe Tab End Here ------------*/
 }
 
 @media (max-width: 575.98px) {
@@ -5081,4 +5112,43 @@ Body {
     min-height: inherit;
   }
   /*--------------- News And Events End Here ---------------*/
+  /*--------------- Programe Pages Start Here ---------------*/
+  .overview_right{
+    gap: 10px;
+  }
+  .overview_right1{
+    margin: 0 0 10px;
+  }
+  .specialization-section .left-box{
+    height: 250px;
+  }
+  .eligibility_inner{
+    padding: 10px;
+  }
+  /*--------------- Programe Pages End Here ---------------*/
+}
+@media (max-width: 575.98px) {
+  /*--------------- Programe Pages Start Here ---------------*/
+  .faculty_listing_page .faculty-grid{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .faculty-card{
+    flex-direction: row;
+  }
+  .faculty_listing_content{
+    text-align: start;
+  }
+  .faculty-education{
+    height: inherit;
+  }
+  .faculty_listing_page .faculty-card{
+    padding: 15px;
+    gap:20px;
+  }
+  .faculty_listing_page .faculty-grid{
+    gap:15px;
+    margin-bottom: 20px;
+  }
+
+  /*--------------- Programe Pages End Here ---------------*/
 }
