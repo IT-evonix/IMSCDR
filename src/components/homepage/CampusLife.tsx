@@ -140,7 +140,7 @@ export default function CampusLife() {
 
         <div className="row justify-content-center">
           <div className="col-md-5 text-center mt-4">
-             <ExploreBtn href="/" />
+             <ExploreBtn href="/lifeatims/gallery" />
           </div>
         </div>
       </div>
