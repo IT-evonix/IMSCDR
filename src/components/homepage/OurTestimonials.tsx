@@ -13,79 +13,97 @@ interface Testimonial {
   name: string;
   image: string;
   content: string;
+  designation:string;
 }
 
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: "Dr. Reshama Avhad",
-    image: "/images/home/testimonials/testimonials1.webp",
-    content:
-      "Being from a science background with an M.Sc. to my name, I was extremely nervous to be starting.",
+    name: "Payal Avhad",
+    designation:"Management Trainee , Eaton",
+    image: "/images/home/testimonials/testimonials-1.webp",
+    content: "Before joining IMS , I dreamt of being on a good position in a multinational company , IMS gave me the platform in the third semester of MBA in US MNC Eaton Corporation as a Management Trainee in HR . IMS polished my skills both theoretical and practical and it was easy to crack the interview.",
   },
   {
     id: 2,
-    name: "Yuvraj Jadhav",
-    image: "/images/home/testimonials/testimonials2.webp",
-    content:
-      "Being from a science background with an M.Sc. to my name, I was extremely nervous to be starting.",
+    name: "Shubham Kaswa", 
+    designation:"Bajaj Finance",
+    image: "/images/home/testimonials/testimonials-2.webp",
+    content: "I got placed in third semester with pre placement offer in Bajaj Finance as a deputy manager . It’s a dream come true as college campus placement gives you a promise and assurance that wherever we will be placed it will be a better place.",
   },
   {
     id: 3,
-    name: "Mansha Sakhrani",
-    image: "/images/home/testimonials/testimonials3.webp",
-    content:
-      "Being from a science background with an M.Sc. to my name, I was extremely nervous to be starting.",
+    name: "Afrin Shaikh",
+    designation:"MCA - Bajaj General Vistaar",
+    image: "/images/home/testimonials/testimonials-3.webp",
+    content: "I will be passing out in 2027 and I am happy that I got an opportunity to work with Bajaj General’s Project Vistaar before the start of the second year . IMS gives you the platform to spread your wings and fly high.",
   },
   {
     id: 4,
-    name: "Dev Agarwal",
-    image: "/images/home/testimonials/testimonials4.webp",
-    content:
-      "Being from a science background with an M.Sc. to my name, I was extremely nervous to be starting.",
+    name: "Prachi Shinde",
+    designation:"MCA - Bajaj General Vistaar",
+    image: "/images/home/testimonials/testimonials-4.webp",
+    content: "I will be passing out in 2027 and I am happy that I got an opportunity to work with Bajaj General’s Project Vistaar before the start of the second year . IMS gives you the platform to spread your wings and fly high.",
   },
   {
     id: 5,
-    name: "Pradip Patkal",
-    image: "/images/home/testimonials/testimonials5.webp",
-    content:
-      "Being from a science background with an M.Sc. to my name, I was extremely nervous to be starting.",
+    name: "Rifat Bagwan",
+    designation:"Trainee DRDO Ahmednagar",
+    image: "/images/home/testimonials/testimonials-5.webp",
+    content: "The platform which IMS gives you for your self development and career development is at par with the corporate . The free hand which the students get to do anything during the college functions makes you fearless and ready to face the world. I had three offers in my hand from the placement department  and I had to choose the best among three.",
   },
   {
     id: 6,
-    name: "Dr. Reshama Avhad",
-    image: "/images/home/testimonials/testimonials1.webp",
-    content:
-      "Being from a science background with an M.Sc. to my name, I was extremely nervous to be starting.",
+    name: "Sharjil Iqbal",
+    designation:"MCA - Arham IT solutions",
+    image: "/images/home/testimonials/testimonials-6.webp",
+    content: "The stage which IMS gives you during the college annual and mid functions and free hand in each thing makes you matured and responsible. I got placed through internship provided by the IMS placement Cell.",
   },
+
   {
     id: 7,
-    name: "Yuvraj Jadhav",
-    image: "/images/home/testimonials/testimonials2.webp",
-    content:
-      "Being from a science background with an M.Sc. to my name, I was extremely nervous to be starting.",
+    name: "Payal Avhad",
+    designation:"Management Trainee , Eaton",
+    image: "/images/home/testimonials/testimonials-1.webp",
+    content: "Before joining IMS , I dreamt of being on a good position in a multinational company , IMS gave me the platform in the third semester of MBA in US MNC Eaton Corporation as a Management Trainee in HR . IMS polished my skills both theoretical and practical and it was easy to crack the interview.",
   },
   {
     id: 8,
-    name: "Mansha Sakhrani",
-    image: "/images/home/testimonials/testimonials3.webp",
-    content:
-      "Being from a science background with an M.Sc. to my name, I was extremely nervous to be starting.",
+    name: "Shubham Kaswa", 
+    designation:"Bajaj Finance",
+    image: "/images/home/testimonials/testimonials-2.webp",
+    content: "I got placed in third semester with pre placement offer in Bajaj Finance as a deputy manager . It’s a dream come true as college campus placement gives you a promise and assurance that wherever we will be placed it will be a better place.",
   },
   {
     id: 9,
-    name: "Dev Agarwal",
-    image: "/images/home/testimonials/testimonials4.webp",
-    content:
-      "Being from a science background with an M.Sc. to my name, I was extremely nervous to be starting.",
+    name: "Afrin Shaikh",
+    designation:"MCA - Bajaj General Vistaar",
+    image: "/images/home/testimonials/testimonials-3.webp",
+    content: "I will be passing out in 2027 and I am happy that I got an opportunity to work with Bajaj General’s Project Vistaar before the start of the second year . IMS gives you the platform to spread your wings and fly high.",
   },
   {
     id: 10,
-    name: "Pradip Patkal",
-    image: "/images/home/testimonials/testimonials5.webp",
-    content:
-      "Being from a science background with an M.Sc. to my name, I was extremely nervous to be starting.",
+    name: "Prachi Shinde",
+    designation:"MCA - Bajaj General Vistaar",
+    image: "/images/home/testimonials/testimonials-4.webp",
+    content: "I will be passing out in 2027 and I am happy that I got an opportunity to work with Bajaj General’s Project Vistaar before the start of the second year . IMS gives you the platform to spread your wings and fly high.",
   },
+  {
+    id: 11,
+    name: "Rifat Bagwan",
+    designation:"Trainee DRDO Ahmednagar",
+    image: "/images/home/testimonials/testimonials-5.webp",
+    content: "The platform which IMS gives you for your self development and career development is at par with the corporate . The free hand which the students get to do anything during the college functions makes you fearless and ready to face the world. I had three offers in my hand from the placement department  and I had to choose the best among three.",
+  },
+  {
+    id: 12,
+    name: "Sharjil Iqbal",
+    designation:"MCA - Arham IT solutions",
+    image: "/images/home/testimonials/testimonials-6.webp",
+    content: "The stage which IMS gives you during the college annual and mid functions and free hand in each thing makes you matured and responsible. I got placed through internship provided by the IMS placement Cell.",
+  },
+
+
 ];
 
 // Duplicate data for smoother infinite loop
@@ -161,7 +179,7 @@ export default function OurTestimonials() {
                   </div>
 
                   <h3 className="subheading">{testimonial.name}</h3>
-
+                  <div className="designation">{testimonial.designation}</div>
                   <p className="testimonials_content">
                     {testimonial.content}
                   </p>

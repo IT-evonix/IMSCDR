@@ -27,9 +27,9 @@ const AboutUs = () => {
                   About BPHES IMSCDR
                 </div>
                 <p>
-                  BPHES Institute of Management Studies, Career Development and Research (IMSCDR), Ahilyanagar, is a premier institute offering a range of education programs including MBA, MCA, BBA, BCA, and Ph.D. Affiliated to Savitribai Phule Pune University, recognized by AICTE, New Delhi, and NAAC Re-Accredited, we are also honored with the Best Institute Award from Savitribai Phule Pune University. With over 65% of our faculty holding Ph.D. degrees, we are known as one of the best management institutes in India, delivering education through experienced teachers, modern teaching methods, and strong industry connections. Our MBA with placement support, transparent governance, and student-first approach ensure your success remains our topmost priority.
+                  BPHES’s Institute of Management Studies, Career Development and Research (IMSCDR), Ahilyanagar, is a premier institute offering a range of education programs including MBA, MCA, BBA, BCA, and Ph.D. Affiliated to Savitribai Phule Pune University, recognized by AICTE, New Delhi, and NAAC Re-Accredited, we are also honored with the Best Institute Award from Savitribai Phule Pune University. With over 65% of our faculty holding Ph.D. degrees, we are known as one of the best management institutes in India, delivering education through experienced teachers, modern teaching methods, and strong industry connections. Our MBA with placement support, transparent governance, and student-first approach ensure your success remains our topmost priority.
                 </p>
-                <ExploreBtn />
+                 <ExploreBtn href="/about-ims" />
               </div>
             </div>
           </div>

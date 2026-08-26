@@ -12,13 +12,15 @@ export default function GovernanceGoverningBody() {
         title="Anti-Ragging And Discipline Cell"
         breadcrumbs={[{ label: "Anti-Ragging And Discipline Cell" }]}
       />
-      <div className="tablemain_section">
+      <div className="fullwidth_page">
+        <div className="tablemain_section">
         <div className="container">
           <div className="mb-4">
             <div className="heading text-center">Committee Members </div>
           </div>
           <Table columns={antiRaggingCommitteeColumns} data={antiRaggingCommitteeMembers} />
         </div>
+      </div>
       </div>
     </section>
   );

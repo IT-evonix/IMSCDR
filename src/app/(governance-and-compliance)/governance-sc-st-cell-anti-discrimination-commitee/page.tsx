@@ -12,6 +12,7 @@ export default function GovernanceGoverningBody() {
         title="SC/ ST Cell and Caste Based Discrimination Committee"
         breadcrumbs={[{ label: "Women Development Cell" }]}
       />
+      <div className="fullwidth_page">
       <div className="tablemain_section">
         <div className="container">
           <div className="mb-4">
@@ -19,6 +20,7 @@ export default function GovernanceGoverningBody() {
           </div>
           <Table columns={casteBasedCommitteeColumns} data={casteBasedCommitteeMembers} />
         </div>
+      </div>
       </div>
     </section>
   );

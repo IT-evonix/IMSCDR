@@ -1,11 +1,21 @@
 import Link from "next/link";
-import React from "react";
 
-const ExploreBtn = () => {
+interface ExploreBtnProps {
+  href: string;
+  text?: string;
+  target?: "_blank" | "_self";
+}
+
+const ExploreBtn = ({
+  href,
+  text = "Explore More",
+  target = "_self",
+}: ExploreBtnProps) => {
   return (
     <div className="explore_more_btn">
-      <Link href="/about">
-        <span>Explore More</span>
+      <Link href={href} target={target}>
+        <span>{text}</span>
+
         <svg
           width="14"
           height="11"

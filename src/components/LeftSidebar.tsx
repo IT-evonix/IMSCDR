@@ -10,12 +10,38 @@ interface SidebarItem {
   title: string;
   href: string;
   children?: SidebarItem[];
+  target?: string;
+  isExternal?: boolean;
 }
 
 interface LeftSidebarProps {
   heading: string;
   menuItems: SidebarItem[];
 }
+
+const isExternalHref = (
+  href?: string,
+  isExternal?: boolean,
+  target?: string
+) => {
+  if (isExternal || target === "_blank") return true;
+  if (!href) return false;
+  return /^https?:\/\//i.test(href) || href.toLowerCase().endsWith(".pdf");
+};
+
+const getLinkAttributes = (
+  href?: string,
+  isExternal?: boolean,
+  target?: string
+) => {
+  const shouldOpenNewTab = isExternalHref(href, isExternal, target);
+
+  return {
+    href: href || "#",
+    target: shouldOpenNewTab ? ("_blank" as const) : undefined,
+    rel: shouldOpenNewTab ? "noopener noreferrer" : undefined,
+  };
+};
 
 export default function LeftSidebar({
   heading,
@@ -41,7 +67,7 @@ export default function LeftSidebar({
         className="sidebar-toggle"
         onClick={() => setOpen(true)}
       >
-        <Menu size={22} />
+        <Menu style={{color:"#fff"}} size={22} />
         <span>{heading}</span>
       </button>
 
@@ -69,6 +95,7 @@ export default function LeftSidebar({
             const isParentActive =
               pathname === item.href ||
               item.children?.some((child) => pathname === child.href);
+            const linkAttrs = getLinkAttributes(item.href, item.isExternal, item.target);
 
             return (
               <li key={item.title}>
@@ -97,27 +124,61 @@ export default function LeftSidebar({
 
                     {openMenus[item.title] && (
                       <ul className="sidebar-submenu">
-                        {item.children.map((child) => (
-                          <li key={child.title}>
-                            <Link
-                              href={child.href}
-                              className={`sidebar-sublink ${
-                                pathname === child.href
-                                  ? "active"
-                                  : ""
-                              }`}
-                              onClick={() => setOpen(false)}
-                            >
-                              {child.title}
-                            </Link>
-                          </li>
-                        ))}
+                        {item.children.map((child) => {
+                          const childLinkAttrs = getLinkAttributes(
+                            child.href,
+                            child.isExternal,
+                            child.target
+                          );
+
+                          return (
+                            <li key={child.title}>
+                              {isExternalHref(child.href, child.isExternal, child.target) ? (
+                                <a
+                                  href={childLinkAttrs.href}
+                                  target={childLinkAttrs.target}
+                                  rel={childLinkAttrs.rel}
+                                  className={`sidebar-sublink ${
+                                    pathname === child.href ? "active" : ""
+                                  }`}
+                                  onClick={() => setOpen(false)}
+                                >
+                                  {child.title}
+                                </a>
+                              ) : (
+                                <Link
+                                  href={childLinkAttrs.href}
+                                  className={`sidebar-sublink ${
+                                    pathname === child.href
+                                      ? "active"
+                                      : ""
+                                  }`}
+                                  onClick={() => setOpen(false)}
+                                >
+                                  {child.title}
+                                </Link>
+                              )}
+                            </li>
+                          );
+                        })}
                       </ul>
                     )}
                   </>
+                ) : isExternalHref(item.href, item.isExternal, item.target) ? (
+                  <a
+                    href={linkAttrs.href}
+                    target={linkAttrs.target}
+                    rel={linkAttrs.rel}
+                    className={`sidebar-link ${
+                      pathname === item.href ? "active" : ""
+                    }`}
+                    onClick={() => setOpen(false)}
+                  >
+                    {item.title}
+                  </a>
                 ) : (
                   <Link
-                    href={item.href}
+                    href={linkAttrs.href}
                     className={`sidebar-link ${
                       pathname === item.href ? "active" : ""
                     }`}

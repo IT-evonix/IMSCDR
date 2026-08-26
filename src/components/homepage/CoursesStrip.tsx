@@ -15,8 +15,8 @@ const CoursesStrip = () => {
                 <Image
                   src="/images/home/education-cap.png"
                   alt="Excellent-img"
-                  width={65}
-                  height={65}
+                  width={55}
+                  height={55}
                   className="img-fluid"
                 />
               </div>
@@ -32,8 +32,8 @@ const CoursesStrip = () => {
                 <Image
                   src="/images/home/education-cap.png"
                   alt="Excellent-img"
-                  width={65}
-                  height={65}
+                  width={55}
+                  height={55}
                   className="img-fluid"
                 />
               </div>
@@ -49,14 +49,14 @@ const CoursesStrip = () => {
                 <Image
                   src="/images/home/education-cap.png"
                   alt="Excellent-img"
-                  width={65}
-                  height={65}
+                  width={55}
+                  height={55}
                   className="img-fluid"
                 />
               </div>
               <div className="educationtext">
-                <h6>PH.D</h6>
-                <p>Doctor of Philosophy </p>
+                <h6>BBA</h6>
+                <p>Program </p>
               </div>
             </Link>
           </div>
@@ -66,14 +66,31 @@ const CoursesStrip = () => {
                 <Image
                   src="/images/home/education-cap.png"
                   alt="Excellent-img"
-                  width={65}
-                  height={65}
+                  width={55}
+                  height={55}
                   className="img-fluid"
                 />
               </div>
               <div className="educationtext">
-                <h6>BBA/BCA</h6>
+                <h6>BCA</h6>
                 <p>Program </p>
+              </div>
+            </Link>
+          </div>
+          <div className="educationbox">
+            <Link href="/">
+              <div className="eduiconbox">
+                <Image
+                  src="/images/home/education-cap.png"
+                  alt="Excellent-img"
+                  width={55}
+                  height={55}
+                  className="img-fluid"
+                />
+              </div>
+              <div className="educationtext">
+                <h6>PH.D</h6>
+                <p>Doctor of Philosophy </p>
               </div>
             </Link>
           </div>

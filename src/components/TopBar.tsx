@@ -39,7 +39,7 @@ const TopBar = ({ isSticky }: TopBarProps) => {
             <span>Infrastructure Video</span>
           </Link> */}
 
-          <Link href="#" className="top-btn white-btn admission-btn">
+          <Link href="/contact" className="top-btn white-btn admission-btn">
             <CircleHelp size={18} />
             <span>Enquiry Now</span>
           </Link>

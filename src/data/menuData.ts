@@ -1,6 +1,8 @@
 export interface MenuItem {
   label: string;
   href?: string;
+  target?: string;
+  isExternal?: boolean;
   children?: MenuItem[];
 }
 
@@ -10,34 +12,22 @@ export const menuItems: MenuItem[] = [
     children: [
       {
         label: "About IMS",
-        href: "/",
+        href: "/about-ims",
       },
       {
         label: "Vision & Mission",
-        href: "/",
+        href: "/about-ims#vision-and-mision",
       },
       {
         label: "Leadership",
         children: [
-          {
-            label: "Chairman's Message",
-            href: "/about-director-message",
-          },
-          {
-            label: "Secretary's Message",
-            href: "/about-dy-director-msg",
-          },
-          {
-            label: "Distinguished Advisor",
-            href: "/about-dy-director-msg",
-          },
           {
             label: "Directors Message",
             href: "/about-director-message",
           },
           {
             label: "Dy Director Message",
-            href: "/about-dy-director-msg",
+            href: "/about-dy-director-message",
           },
         ],
       },
@@ -49,23 +39,10 @@ export const menuItems: MenuItem[] = [
         label: "College Development Committee (CDC)",
         href: "/college-development-commitee",
       },
-      {
-        label: "Approvals & Recognition",
-        children: [
-          {
-            label: "AICTE",
-            href: "/aicte",
-          },
-          {
-            label: "Savitribai Phule Pune University",
-            href: "/",
-          },
-          {
-            label: "NAAC Accrediation",
-            href: "/",
-          },
-        ],
-      },
+      // {
+      //   label: "Approvals & Affiliations",
+      //   href: "/approvals-and-affiliations",
+      // },
     ],
   },
 
@@ -94,7 +71,7 @@ export const menuItems: MenuItem[] = [
       },
       {
         label: "Faculty",
-        href: "/",
+        href: "/faculty",
       },
       {
         label: "Academic Calendar",
@@ -112,317 +89,302 @@ export const menuItems: MenuItem[] = [
     children: [
       {
         label: "Admission Process ",
-        href: "/",
+        href: "/admission-process",
       },
       {
-        label: "Eligibility Criteria",
-        href: "/",
+        label: "Eligibility",
+        href: "/eligibility",
       },
       {
-        label: "Admission Schedule",
-        href: "/",
-      },
-      {
-        label: "Prospectus Download",
-        href: "/",
+        label: "Fee Structure",
+        href: "/fee-structure",
       },
       {
         label: "Scholarships",
+        href: "/scholarships",
+      },
+      {
+        label: "Apply Online",
         href: "/",
       },
       {
-        label: "Fees Structure and Refund Policy",
-        href: "/",
+        label: "Downloads",
+        href: "/downloads",
       },
       {
-        label: "online-admission-inquiry",
-        href: "/",
-      },
-      {
-        label: "Reservation Policy",
-        href: "/",
-      },
-      {
-        label: "FAQs",
-        href: "/",
+        label: "Prospectus",
+        href: "/pdf/admission/IMS-MBA-MCA-Prospectus25-26.pdf",
+        target: "_blank",
+        isExternal: true,
       },
       {
         label: "Documents Required",
-        href: "/",
+        href: "/documents-required",
       },
       {
-        label: "Education Loan Assistance",
-        href: "/",
-      },
-      {
-        label: "Hostel Information",
-        href: "/",
+        label: "Reservation Policy",
+        href: "/reservation-policy",
       },
     ],
   },
-
   {
     label: "Placements",
-    children: [
-      {
-        label: "Placement Overview",
-        href: "/",
-      },
-      {
-        label: "Training & Placement Cell",
-        href: "/",
-      },
-      {
-        label: "Industry Internship",
-        href: "/",
-      },
-      {
-        label: "Industry Collobration",
-        href: "/",
-      },
-      {
-        label: "Top Recruiters",
-        href: "/",
-      },
-      {
-        label: "Placement Report",
-        href: "/",
-      },
-      {
-        label: "Testimonials",
-        href: "/",
-      },
-    ],
+    href: "/",
   },
 
+  // {
+  //   label: "Placements",
+  //   children: [
+  //     {
+  //       label: "Placement Overview",
+  //       href: "/",
+  //     },
+  //     {
+  //       label: "Training & Placement Cell",
+  //       href: "/",
+  //     },
+  //     {
+  //       label: "Internship & Industry Connect",
+  //       href: "/",
+  //     },
+  //     {
+  //       label: "Top Recruiters",
+  //       href: "/",
+  //     },
+  //     {
+  //       label: "Placement Statistics",
+  //       href: "/",
+  //     },
+  //     {
+  //       label: "Success Stories",
+  //       href: "/",
+  //     },
+  //   ],
+  // },
+
   {
-    label: "Faculty & Research",
-    children: [
-      {
-        label: "Faculty",
-        children: [
-          {
-            label: "Members",
-            href: "/",
-          },
-          {
-            label: "Achivements",
-            href: "/",
-          },
-          {
-            label: "Publication",
-            href: "/",
-          },
-          {
-            label: "Research Project",
-            href: "/",
-          },
-          {
-            label: "Patent & Design Registration",
-            href: "/",
-          },
-        ],
-      },
-      {
-        label: "Administrative Staff",
-        href: "/",
-      },
-      {
-        label: "Journels",
-        href: "/",
-      },
-    ],
+    label: "Life@IMS",
+    href: "/lifeatims/campus-overview",
   },
+
+  // {
+  //   label: "Life@IMS",
+  //   children: [
+  //     {
+  //       label: "Campus Overview",
+  //       href: "/lifeatims/campus-overview",
+  //     },
+  //     {
+  //       label: "Infrastructure",
+  //       href: "/lifeatims/infrastructure",
+  //     },
+  //     {
+  //       label: "Library",
+  //       href: "/lifeatims/library",
+  //     },
+  //     {
+  //       label: "Hostel",
+  //       href: "/lifeatims/hostel",
+  //     },
+  //     {
+  //       label: "Sports",
+  //       href: "/lifeatims/sports",
+  //     },
+  //     {
+  //       label: "Student Clubs",
+  //       href: "/lifeatims/student-clubs",
+  //     },
+  //     {
+  //       label: "Cultural Activities",
+  //       href: "/lifeatims/cultural-activities",
+  //     },
+  //     {
+  //       label: "Technical Events",
+  //       href: "/lifeatims/technical-events",
+  //     },
+  //     {
+  //       label: "Student Achievements",
+  //       href: "/lifeatims/student-achievements",
+  //     },
+  //     {
+  //       label: "Alumni",
+  //       href: "/lifeatims/alumni",
+  //     },
+  //     {
+  //       label: "Gallery",
+  //       href: "/lifeatims/gallery",
+  //     },
+  //   ],
+  // },
 
   {
     label: "Student Corner",
-    children: [
-      {
-        label: "Academic Calendar",
-        href: "/",
-      },
-      {
-        label: "Student Projects",
-        href: "/",
-      },
-      {
-        label: "Code of Conduct",
-        href: "/",
-      },
-      {
-        label: "Anti Ragging",
-        href: "/",
-      },
-      {
-        label: "Scholarship",
-        href: "/",
-      },
-      {
-        label: "Internal Complaint Commiittee",
-        href: "/",
-      },
-      {
-        label: "Grievance",
-        href: "/",
-      },
-      {
-        label: "Student Council",
-        href: "/",
-      },
-      {
-        label: "Sports Council",
-        href: "/",
-      },
-
-      {
-        label: "Student Achivements",
-        children: [
-          {
-            label: "Curricular",
-            href: "/",
-          },
-          {
-            label: "Non Curricular",
-            href: "/",
-          },
-          {
-            label: "Report",
-            href: "/",
-          },
-        ],
-      },
-
-      {
-        label: "Student Club",
-        href: "/",
-      },
-
-      {
-        label: "Infrastructure",
-        children: [
-          {
-            label: "Hostel",
-            href: "/",
-          },
-          {
-            label: "Library",
-            href: "/",
-          },
-          {
-            label: "Amminities",
-            href: "/",
-          },
-          // {
-          //   label: "Laboratory",
-          //   href: "/",
-          // },
-          // {
-          //   label: "Canteen",
-          //   href: "/",
-          // },
-          // {
-          //   label: "Computer Center",
-          //   href: "/",
-          // },
-        ],
-      },
-
-      {
-        label: "Events",
-        children: [
-          {
-            label: "Cultural",
-            href: "/",
-          },
-          {
-            label: "Technical",
-            href: "/",
-          },
-          // {
-          //   label: "Festivals",
-          //   href: "/",
-          // },
-          // {
-          //   label: "Gender Equality",
-          //   href: "/",
-          // },
-        ],
-      },
-
-      {
-        label: "Alumni",
-        href: "/",
-      },
-    ],
+    href: "/",
   },
+
+  // {
+  //   label: "Student Corner",
+  //   children: [
+  //     {
+  //       label: "Academic Calendar",
+  //       href: "/",
+  //     },
+  //     {
+  //       label: "Student Projects",
+  //       href: "/",
+  //     },
+  //     {
+  //       label: "Code of Conduct",
+  //       href: "/",
+  //     },
+  //     {
+  //       label: "Anti Ragging",
+  //       href: "/",
+  //     },
+  //     {
+  //       label: "Scholarship",
+  //       href: "/",
+  //     },
+  //     {
+  //       label: "Internal Complaint Commiittee",
+  //       href: "/",
+  //     },
+  //     {
+  //       label: "Grievance",
+  //       href: "/",
+  //     },
+  //     {
+  //       label: "Student Council",
+  //       href: "/",
+  //     },
+  //     {
+  //       label: "Sports Council",
+  //       href: "/",
+  //     },
+
+  //     {
+  //       label: "Student Achivements",
+  //       children: [
+  //         {
+  //           label: "Curricular",
+  //           href: "/",
+  //         },
+  //         {
+  //           label: "Non Curricular",
+  //           href: "/",
+  //         },
+  //         {
+  //           label: "Report",
+  //           href: "/",
+  //         },
+  //       ],
+  //     },
+
+  //     {
+  //       label: "Student Club",
+  //       href: "/",
+  //     },
+
+  //     {
+  //       label: "Infrastructure",
+  //       children: [
+  //         {
+  //           label: "Hostel",
+  //           href: "/",
+  //         },
+  //         {
+  //           label: "Library",
+  //           href: "/",
+  //         },
+  //         {
+  //           label: "Amminities",
+  //           href: "/",
+  //         },
+  //       ],
+  //     },
+
+  //     {
+  //       label: "Events",
+  //       children: [
+  //         {
+  //           label: "Cultural",
+  //           href: "/",
+  //         },
+  //         {
+  //           label: "Technical",
+  //           href: "/",
+  //         },
+  //         // {
+  //         //   label: "Festivals",
+  //         //   href: "/",
+  //         // },
+  //         // {
+  //         //   label: "Gender Equality",
+  //         //   href: "/",
+  //         // },
+  //       ],
+  //     },
+
+  //     {
+  //       label: "Alumni",
+  //       href: "/",
+  //     },
+  //   ],
+  // },
 
   {
     label: "Governance & Compliance",
     children: [
       {
-        label: "Mandatory Disclosure ",
+        label: "FRA Fee Structure ",
         href: "/",
       },
       {
-        label: "AICTE Approval Letters",
+        label: "Mandatory Disclosure",
         href: "/",
       },
       {
-        label: "Anti-Ragging Committee",
+        label: "IQAC",
         href: "/",
       },
       {
-        label: "Grievance Redressal Committee",
+        label: "Policies",
         href: "/",
       },
-      {
-        label: "Internal Complaint Committee (ICC)",
-        href: "/",
-      },
-      {
-        label: "SC/ST Cell",
-        href: "/",
-      },
-      {
-        label: "OBC Cell",
-        href: "/",
-      },
-      {
-        label: "Women Development Cell",
-        href: "/",
-      },
-      {
-        label: "Sexual Harassment Policy",
-        href: "/",
-      },
-      {
-        label: "Equal Opportunity Cell",
-        href: "/",
-      },
-      {
-        label: "Academic Audit Reports",
-        href: "/",
-      },
-      {
-        label: "NAAC / AQAR Reports",
-        href: "/",
-      },
-      {
-        label: "Finance & Audit Statements",
-        href: "/",
-      },
+
       {
         label: "Statutory Committees",
-        href: "/",
+        children: [
+          {
+            label: "Anti-Ragging Committee",
+            href: "/",
+          },
+          {
+            label: "Anti-Ragging Squad",
+            href: "/",
+          },
+          {
+            label: "Student Grievance Redressal Committee",
+            href: "/",
+          },
+          {
+            label: "Internal Committee (ICC/POSH)",
+            href: "/",
+          },
+          {
+            label: "SC/ST Cell",
+            href: "/",
+          },
+          {
+            label: "Equal Opportunity Cell",
+            href: "/",
+          },
+          {
+            label: "Online Grievance Portal",
+            href: "/",
+          },
+        ],
       },
-      // {
-      //   label: "Governing Body",
-      //   href: "/",
-      // },
-      // {
-      //   label: "College Development Committee",
-      //   href: "/",
-      // },
     ],
   },
 

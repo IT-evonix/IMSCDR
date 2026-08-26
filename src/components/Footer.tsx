@@ -6,12 +6,13 @@ import CoursesStrip from "./homepage/CoursesStrip";
 const Footer = () => {
   return (
     <footer>
-      <CoursesStrip/>
+      <CoursesStrip />
       <div className="footer_main">
         <div className="container">
           <div className="footer_inner">
             <div className="footerbox blueBox">
               <div className="logo-wrapper">
+                <Link href="/">
                 <Image
                   src="/images/home/white_logo.webp"
                   alt="BPHES IMSCDR"
@@ -19,6 +20,7 @@ const Footer = () => {
                   height={150}
                   className="img-fluid"
                 />
+                </Link>
               </div>
 
               {/* Address */}
@@ -31,7 +33,7 @@ const Footer = () => {
               </div>
               {/* Social Icons */}
               <div className="social-icons">
-                <Link href="#" className="social-icon">
+                <Link target="_blank" href="https://www.facebook.com/people/Imscdr-Ahmednagar/100072520716086/#" className="social-icon">
                   <Image
                     src="/images/home/facebook.png"
                     alt="BPHES IMSCDR"
@@ -40,7 +42,7 @@ const Footer = () => {
                     className="img-fluid"
                   />
                 </Link>
-                <Link href="#" className="social-icon">
+                <Link target="_blank" href="https://www.instagram.com/imscdr_ahmednagar/?utm_medium=copy_link" className="social-icon">
                   <Image
                     src="/images/home/instagram.png"
                     alt="BPHES IMSCDR"
@@ -82,7 +84,7 @@ const Footer = () => {
                   <Link href="/">IQAC</Link>
                 </li>
                 <li>
-                  <Link href="/">People</Link>
+                  <Link href="/">Faculty</Link>
                 </li>
                 <li>
                   <Link href="/">Careers</Link>
@@ -97,14 +99,10 @@ const Footer = () => {
               <div className="footerheading">Important Links</div>
               <ul>
                 <li>
-                  <Link href="/">
-                    Anti Ragging Committee
-                  </Link>
+                  <Link href="/">Anti Ragging Committee</Link>
                 </li>
                 <li>
-                  <Link href="/">
-                    Anti Sexual Harassment Committee
-                  </Link>
+                  <Link href="/">Anti Sexual Harassment Committee</Link>
                 </li>
                 <li>
                   <Link href="/">
@@ -112,9 +110,7 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/">
-                    Grievance Redressal Committee
-                  </Link>
+                  <Link href="/">Grievance Redressal Committee</Link>
                 </li>
                 <li>
                   <Link href="/">NIRF</Link>
@@ -159,9 +155,9 @@ const Footer = () => {
                       fill="white"
                     />
                   </svg>
-                  <Link href="tel:0241 - 2324830">0241 - 2324830</Link>
+                  <Link href="tel:9890070077">+91 9890070077</Link>
                 </div>
-                <div className="contact-item">
+                {/* <div className="contact-item">
                   <svg
                     width="13"
                     height="13"
@@ -175,7 +171,7 @@ const Footer = () => {
                     />
                   </svg>
                   <Link href="tel:0241 - 2346529">0241 - 2346529</Link>
-                </div>
+                </div> */}
                 <div className="contact-item mt-3">
                   <svg
                     width="15"
@@ -189,7 +185,9 @@ const Footer = () => {
                       fill="white"
                     />
                   </svg>
-                  <Link href="mailto:imscdr.ac@gmail.com">imscdr.ac@gmail.com</Link>
+                  <Link href="mailto:imscdr.ac@gmail.com">
+                    imscdr.ac@gmail.com
+                  </Link>
                 </div>
               </div>
             </div>
@@ -202,7 +200,11 @@ const Footer = () => {
             <p className="p-0 m-0">Copyright ©2026 IMS. All rights reserved.</p>
             <div className="div">
               Crafted by{" "}
-              <Link target="_blank" href="https://www.evonix.co/" className="img-fluid">
+              <Link
+                target="_blank"
+                href="https://www.evonix.co/"
+                className="img-fluid"
+              >
                 <Image
                   src="/images/home/footerlogo.webp"
                   alt="BPHES IMSCDR"
@@ -220,4 +222,7 @@ const Footer = () => {
 };
 
 export default Footer;
-<script src="https://bot247.live/widget.js?tenant=evonix-organization" async ></script>
+<script
+  src="https://bot247.live/widget.js?tenant=evonix-organization"
+  async
+></script>;

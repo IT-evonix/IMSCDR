@@ -24,12 +24,7 @@ const ExcellentPlacements = () => {
                     </b>
                   </div>
                   <div className="col-lg-12">
-                    Our students are exposed to challenging research-based
-                    education along with a variety of cultural, sport and
-                    organizational activities. In this era of knowledge,
-                    companies know the value of talent and of Innovation. We
-                    invite all such corporations, working in the forefront of
-                    different verticals to visit IMS for recruitment.
+                    Our dedicated Placement Cell has been bridging the gap between industry expectations and student talent since our inception. With consistent placement records and skill development training, we prepare students to confidently face the professional world. We welcome leading corporations across various sectors to recruit from our pool of capable, well-rounded graduates.
                   </div>
                 </div>
               </div>
