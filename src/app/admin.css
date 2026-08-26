@@ -1,0 +1,313 @@
+@import "tailwindcss";
+
+/* ====================================================
+   Admin Panel — Dedicated Stylesheet
+   Matching IMSCDR Website Theme (#09468e & #89004a)
+   ==================================================== */
+
+/* ---- Website Typography Match from globals.css ---- */
+.admin-root,
+.admin-root input,
+.admin-root select,
+.admin-root textarea,
+.admin-root button {
+  font-family: "Avenir-Next-Regular", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+
+.admin-root {
+  background-color: #f9f9ff;
+}
+
+.admin-root label svg {
+  display: inline-block !important;
+}
+
+/* Light, thin, clean Input & Placeholder Typography */
+.admin-root input:not([type="checkbox"]):not([type="radio"]),
+.admin-root select {
+  font-weight: 400 !important;
+  font-size: 0.75rem !important;
+  /* 12px */
+  color: #1a1c20 !important;
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+}
+
+.admin-root input::placeholder,
+.admin-root textarea::placeholder {
+  font-weight: 400 !important;
+  font-size: 0.75rem !important;
+  color: #94a3b8 !important;
+  opacity: 1 !important;
+}
+
+/* Rich Text Editor contentEditable Placeholder */
+.admin-root [contenteditable]:empty::before {
+  content: attr(data-placeholder);
+  color: #94a3b8 !important;
+  font-weight: 400 !important;
+  font-size: 0.75rem !important;
+  cursor: text;
+  display: block;
+}
+
+/* ---- React Quill Styles & Custom Overrides ---- */
+.react-quill-container .ql-toolbar.ql-snow {
+  background-color: #f3f7fc !important;
+  border: none !important;
+  border-bottom: 1px solid rgba(9, 70, 142, 0.15) !important;
+  padding: 0.375rem 0.5rem !important;
+  border-top-left-radius: 0.5rem !important;
+  border-top-right-radius: 0.5rem !important;
+}
+
+.react-quill-container .ql-container.ql-snow {
+  border: none !important;
+  min-height: 160px !important;
+  font-size: 0.75rem !important;
+  font-weight: 400 !important;
+  color: #1a1c20 !important;
+}
+
+.react-quill-container .ql-editor {
+  min-height: 160px !important;
+  font-size: 0.75rem !important;
+  font-weight: 400 !important;
+  line-height: 1.6 !important;
+  padding: 0.75rem 0.875rem !important;
+}
+
+.react-quill-container .ql-editor.ql-blank::before {
+  color: #94a3b8 !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 0.75rem !important;
+  left: 0.875rem !important;
+}
+
+.react-quill-container .ql-snow .ql-stroke {
+  stroke: #434751 !important;
+}
+
+.react-quill-container .ql-snow .ql-fill {
+  fill: #434751 !important;
+}
+
+.react-quill-container .ql-snow button:hover .ql-stroke,
+.react-quill-container .ql-snow .ql-picker-label:hover .ql-stroke {
+  stroke: #09468e !important;
+}
+
+.react-quill-container .ql-snow button:hover .ql-fill,
+.react-quill-container .ql-snow .ql-picker-label:hover .ql-fill {
+  fill: #09468e !important;
+}
+
+.react-quill-container .ql-snow button.ql-active .ql-stroke {
+  stroke: #ad2865 !important;
+}
+
+.react-quill-container .ql-snow button.ql-active .ql-fill {
+  fill: #ad2865 !important;
+}
+
+/* React Quill Inline Tooltip Popup (.ql-tooltip) */
+.react-quill-container .ql-tooltip {
+  background-color: #ffffff !important;
+  border: 1px solid rgba(9, 70, 142, 0.25) !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.14) !important;
+  border-radius: 0.625rem !important;
+  padding: 0.5rem 0.75rem !important;
+  z-index: 50 !important;
+  align-items: center !important;
+  gap: 0.625rem !important;
+  white-space: nowrap !important;
+  left: 12px !important;
+  margin-left: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.react-quill-container .ql-tooltip:not(.ql-hidden) {
+  display: flex !important;
+}
+
+.react-quill-container .ql-tooltip.ql-hidden {
+  display: none !important;
+}
+
+.react-quill-container .ql-tooltip input[type="text"] {
+  border: 1px solid rgba(115, 119, 130, 0.25) !important;
+  border-radius: 0.5rem !important;
+  padding: 0.375rem 0.75rem !important;
+  font-size: 0.75rem !important;
+  font-weight: 400 !important;
+  width: 240px !important;
+  outline: none !important;
+  height: 32px !important;
+  background: #ffffff !important;
+  color: #1a1c20 !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.react-quill-container .ql-tooltip input[type="text"]:focus {
+  border-color: #09468e !important;
+  box-shadow: 0 0 0 2px rgba(9, 70, 142, 0.12) !important;
+}
+
+.react-quill-container .ql-tooltip a.ql-action {
+  background: linear-gradient(90deg, #09468e 0%, #89004a 100%) !important;
+  color: #ffffff !important;
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  padding: 0.375rem 0.875rem !important;
+  border-radius: 9999px !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 32px !important;
+  box-shadow: 0 2px 6px rgba(137, 0, 74, 0.25) !important;
+  transition: opacity 0.15s ease !important;
+}
+
+.react-quill-container .ql-tooltip a.ql-action:hover {
+  opacity: 0.9 !important;
+}
+
+.react-quill-container .ql-tooltip a.ql-remove {
+  color: #dc2626 !important;
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  margin-left: 0.25rem !important;
+  cursor: pointer !important;
+}
+
+/* Remove link underlines globally inside admin panel */
+.admin-root a,
+.admin-root a:hover,
+.admin-root a:visited,
+.admin-root a:focus,
+.admin-root button,
+.admin-root button:hover {
+  text-decoration: none !important;
+}
+
+/* Sidebar link text color override (forces black text & prevents global <a> blue override) */
+.admin-root aside a {
+  color: #1a1c20 !important;
+  text-decoration: none !important;
+}
+
+.admin-root aside a.brand-gradient,
+.admin-root aside a.brand-gradient span,
+.admin-root aside a.brand-gradient svg {
+  color: #ffffff !important;
+}
+
+/* Mobile Bottom Footer Nav text color override */
+.admin-root footer a {
+  color: #1a1c20 !important;
+  text-decoration: none !important;
+}
+
+.admin-root footer a.active-tab {
+  color: #09468e !important;
+}
+
+.admin-root footer a.brand-gradient,
+.admin-root footer a.brand-gradient svg {
+  color: #ffffff !important;
+}
+
+/* Override Bootstrap button & heading resets for admin panel */
+.admin-root h1,
+.admin-root .admin-page-heading {
+  font-size: 1.125rem !important;
+  /* 18px */
+  font-weight: 700 !important;
+  margin-bottom: 0 !important;
+  line-height: 1.3 !important;
+  color: #003067 !important;
+}
+
+.admin-root button {
+  border-radius: 10px !important;
+}
+
+.admin-root .rounded-full {
+  border-radius: 9999px !important;
+}
+
+.admin-root .rounded-2xl {
+  border-radius: 1rem !important;
+}
+
+.admin-root .rounded-xl {
+  border-radius: 0.75rem !important;
+}
+
+.admin-root .rounded-lg {
+  border-radius: 0.5rem !important;
+}
+
+.admin-root .rounded-md {
+  border-radius: 0.375rem !important;
+}
+
+/* ---- Website Brand Gradient (#09468e -> #89004a) ---- */
+.brand-gradient {
+  background: linear-gradient(90deg, #09468e 0%, #89004a 100%);
+}
+
+.brand-gradient-hover:hover {
+  background: linear-gradient(90deg, #073873 0%, #6d003a 100%);
+}
+
+/* ---- Borders ---- */
+.brand-border {
+  border: 1.5px solid rgba(9, 70, 142, 0.18);
+}
+
+.brand-border-focus:focus-within {
+  border-color: #09468e;
+  box-shadow: 0 0 0 2px rgba(9, 70, 142, 0.1);
+}
+
+.card-border {
+  border: 1.5px solid rgba(9, 70, 142, 0.18);
+}
+
+.secondary-btn-border {
+  border: 1.5px solid rgba(137, 0, 74, 0.3);
+}
+
+/* ---- Status Pills ---- */
+.status-pill {
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* ---- Table Row Hover ---- */
+.table-row-hover:hover {
+  background-color: #f3f7fc;
+}
+
+/* ---- Custom Scrollbar ---- */
+.overflow-x-auto::-webkit-scrollbar {
+  height: 6px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb {
+  background: #c3c6d2;
+  border-radius: 10px;
+}
