@@ -1,16 +1,16 @@
 import InnerpageBanner from "@/components/InnerpageBanner";
 import Table from "@/components/ui/Table";
 import {
-  grievanceRedressalCommitteeColumns,
-  agrievanceRedressalCommitteeMembers,
+  StudentGrievanceRedressalCommitteeColumns,
+  StudentGrievanceRedressalCommitteeMembers,
 } from "@/data/tablemembers";
 
 export default function GovernanceGoverningBody() {
   return (
     <section className="innerpage-wrapper">
       <InnerpageBanner
-        title="Grievance Redressal Committee"
-        breadcrumbs={[{ label: "Grievance Redressal Committee" }]}
+        title="Student Grievance Redressal Committee"
+        breadcrumbs={[{ label: "Student Grievance Redressal Committee" }]}
       />
       <div className="fullwidth_page">
         <div className="tablemain_section">
@@ -18,7 +18,7 @@ export default function GovernanceGoverningBody() {
             <div className="mb-4">
               <div className="heading text-center">Committee Members </div>
             </div>
-            <Table columns={grievanceRedressalCommitteeColumns} data={agrievanceRedressalCommitteeMembers} />
+            <Table columns={StudentGrievanceRedressalCommitteeColumns} data={StudentGrievanceRedressalCommitteeMembers} />
           </div>
         </div>
       </div>

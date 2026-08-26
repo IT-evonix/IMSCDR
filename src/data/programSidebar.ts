@@ -26,11 +26,10 @@ export const programSidebar = {
         title: "College Development Committee (CDC)",
         href: "/college-development-commitee",
       },
-      // {
-      //   title: "Approvals & Affiliations",
-      //   href: "/approvals-and-affiliations",
-      // },
-
+      {
+        title: "Approvals & Affiliations",
+        href: "/approvals-and-affiliations",
+      },
     ],
   },
 
@@ -42,7 +41,10 @@ export const programSidebar = {
       { title: "Eligibility", href: "/program-mba/eligibility" },
       { title: "Curriculum / Syllabus", href: "/program-mba/curriculum" },
       { title: "Programme Outcomes", href: "/program-mba/programme-outcomes" },
-      { title: "Career Opportunities", href: "/program-mba/career-opportunities" },
+      {
+        title: "Career Opportunities",
+        href: "/program-mba/career-opportunities",
+      },
       { title: "Faculty", href: "/program-mba/faculty" },
       { title: "Laboratories / Facilities", href: "/program-mba/laboratories" },
       { title: "Downloads", href: "/program-mba/downloads" },
@@ -50,20 +52,62 @@ export const programSidebar = {
     ],
   },
 
-  // mba: {
-  //   heading: "MBA",
-  //   menuItems: [
-  //     { title: "Overview", href: "/program-mba/overview" },
-  //     { title: "Specializations", href: "/program-mba/specializations" },
-  //     { title: "Curriculum", href: "/program-mba/curriculum" },
-  //     { title: "Eligibility", href: "/program-mba/eligibility" },
-  //     { title: "Intake", href: "/program-mba/intake" },
-  //     { title: "Faculty", href: "/program-mba/faculty" },
-  //     { title: "Syllabus", href: "/program-mba/syllabus" },
-  //     { title: "Academic Calendar", href: "/program-mba/academic-calendar" },
-  //     { title: "FAQ", href: "/program-mba/faq" },
-  //   ],
-  // },
+  mca: {
+    heading: "MCA",
+    menuItems: [
+      { title: "Overview", href: "/program-mca/overview" },
+      { title: "Intake", href: "/program-mca/intake" },
+      { title: "Eligibility", href: "/program-mca/eligibility" },
+      { title: "Curriculum / Syllabus", href: "/program-mca/curriculum" },
+      { title: "Programme Outcomes", href: "/program-mca/programme-outcomes" },
+      {
+        title: "Career Opportunities",
+        href: "/program-mca/career-opportunities",
+      },
+      { title: "Faculty", href: "/program-mca/faculty" },
+      { title: "Laboratories / Facilities", href: "/program-mca/laboratories" },
+      { title: "Downloads", href: "/program-mca/downloads" },
+      { title: "FAQ", href: "/program-mca/faq" },
+    ],
+  },
+
+  bba: {
+    heading: "BBA",
+    menuItems: [
+      { title: "Overview", href: "/program-bba/overview" },
+      { title: "Intake", href: "/program-bba/intake" },
+      { title: "Eligibility", href: "/program-bba/eligibility" },
+      { title: "Curriculum / Syllabus", href: "/program-bba/curriculum" },
+      { title: "Programme Outcomes", href: "/program-bba/programme-outcomes" },
+      {
+        title: "Career Opportunities",
+        href: "/program-bba/career-opportunities",
+      },
+      { title: "Faculty", href: "/program-bba/faculty" },
+      { title: "Laboratories / Facilities", href: "/program-bba/laboratories" },
+      { title: "Downloads", href: "/program-bba/downloads" },
+      { title: "FAQ", href: "/program-bba/faq" },
+    ],
+  },
+
+  bca: {
+    heading: "BCA",
+    menuItems: [
+      { title: "Overview", href: "/program-bca/overview" },
+      { title: "Intake", href: "/program-bca/intake" },
+      { title: "Eligibility", href: "/program-bca/eligibility" },
+      { title: "Curriculum / Syllabus", href: "/program-bca/curriculum" },
+      { title: "Programme Outcomes", href: "/program-bca/programme-outcomes" },
+      {
+        title: "Career Opportunities",
+        href: "/program-bca/career-opportunities",
+      },
+      { title: "Faculty", href: "/program-bca/faculty" },
+      { title: "Laboratories / Facilities", href: "/program-bca/laboratories" },
+      { title: "Downloads", href: "/program-bca/downloads" },
+      { title: "FAQ", href: "/program-bca/faq" },
+    ],
+  },
 
   admission: {
     heading: "Admission",
@@ -74,7 +118,8 @@ export const programSidebar = {
       { title: "Scholarships", href: "/scholarships" },
       { title: "Apply Online", href: "/" },
       { title: "Downloads", href: "/downloads" },
-      { title: "Prospectus", 
+      {
+        title: "Prospectus",
         href: "pdf/admission/IMS-MBA-MCA-Prospectus25-26.pdf",
         target: "_blank",
         isExternal: true,
@@ -83,7 +128,6 @@ export const programSidebar = {
       { title: "Reservation Policy", href: "/reservation-policy" },
     ],
   },
-
 
   lifeatims: {
     heading: "Life at IMS",
@@ -94,12 +138,14 @@ export const programSidebar = {
       { title: "Hostel", href: "/lifeatims/hostel" },
       { title: "Sports", href: "/lifeatims/sports" },
       { title: "Student Clubs", href: "/lifeatims/student-clubs" },
-      { title: "Cultural Activities", href: "/lifeatims/cultural-activities"},
+      { title: "Cultural Activities", href: "/lifeatims/cultural-activities" },
       { title: "Technical Events", href: "/lifeatims/technical-events" },
-      { title: "Student Achievements", href: "/lifeatims/student-achievements" },
+      {
+        title: "Student Achievements",
+        href: "/lifeatims/student-achievements",
+      },
       { title: "Alumni", href: "/lifeatims/alumni" },
       { title: "Gallery", href: "/lifeatims/gallery" },
     ],
   },
-
 };

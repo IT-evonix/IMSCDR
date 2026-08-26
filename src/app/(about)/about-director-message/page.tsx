@@ -8,7 +8,7 @@ export default function ChancellorSection() {
           <div className="chancellor-left">
             <div className="chancellor-image">
               <Image
-                src="/images/about/director.webp"
+                src="/images/about/In-Charge-director.webp"
                 alt="Dr. S. B. Mujumdar"
                 width={333}
                 height={325}
@@ -18,9 +18,9 @@ export default function ChancellorSection() {
           </div>
 
           <div className="chancellor-content">
-            <div className="heading">M. B. Mehta</div>
+            <div className="heading">Dr. Pronoti V. Telore</div>
             <div className="subheading">
-              Director
+              In-Charge Director
               <span className="w-100 d-block">
                 Bhaskar Pandurang Hivale Education (B.P.H.E.)
               </span>

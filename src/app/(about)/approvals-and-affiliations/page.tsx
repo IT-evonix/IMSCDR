@@ -4,7 +4,7 @@ import ExploreBtn from "@/components/ui/ExploreBtn";
 const page = () => {
   return (
     <div className="innerpagerightside">
-      <section className="zigzag-section">
+      <section className="zigzag-section d-none">
         <div className="zigzag-row">
           <div className="parallaximg_image">
             <Image
@@ -84,6 +84,7 @@ const page = () => {
           </div>
         </div>
       </section>
+      <div className="heading">Coming Soon</div>
     </div>
   );
 };

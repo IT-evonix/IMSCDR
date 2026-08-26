@@ -39,10 +39,10 @@ export const menuItems: MenuItem[] = [
         label: "College Development Committee (CDC)",
         href: "/college-development-commitee",
       },
-      // {
-      //   label: "Approvals & Affiliations",
-      //   href: "/approvals-and-affiliations",
-      // },
+      {
+        label: "Approvals & Affiliations",
+        href: "/approvals-and-affiliations",
+      },
     ],
   },
 
@@ -55,15 +55,15 @@ export const menuItems: MenuItem[] = [
       },
       {
         label: "MCA",
-        href: "/",
+        href: "/program-mca/overview",
       },
       {
         label: "BBA",
-        href: "/",
+        href: "/program-bba/overview",
       },
       {
         label: "BCA",
-        href: "/",
+        href: "/program-bca/overview",
       },
       {
         label: "Ph.D",
@@ -75,11 +75,11 @@ export const menuItems: MenuItem[] = [
       },
       {
         label: "Academic Calendar",
-        href: "/",
+        href: "/academic-calendar",
       },
       {
         label: "Research & Innovation",
-        href: "/",
+        href: "/research-and-innovation",
       },
     ],
   },
@@ -357,27 +357,27 @@ export const menuItems: MenuItem[] = [
         children: [
           {
             label: "Anti-Ragging Committee",
-            href: "/",
+            href: "/anti-ragging-committee",
           },
           {
             label: "Anti-Ragging Squad",
-            href: "/",
+            href: "/anti-ragging-squad",
           },
           {
             label: "Student Grievance Redressal Committee",
-            href: "/",
+            href: "/student-grievance-redressal-committee",
           },
           {
             label: "Internal Committee (ICC/POSH)",
-            href: "/",
+            href: "/internal-commitee",
           },
           {
             label: "SC/ST Cell",
-            href: "/",
+            href: "/sc-st-cell",
           },
           {
             label: "Equal Opportunity Cell",
-            href: "/",
+            href: "/equal-opportunity-cell",
           },
           {
             label: "Online Grievance Portal",
@@ -397,7 +397,7 @@ export const menuItems: MenuItem[] = [
       },
       {
         label: "Blogs",
-        href: "/",
+        href: "/blogs",
       },
     ],
   },

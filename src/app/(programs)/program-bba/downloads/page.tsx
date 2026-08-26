@@ -2,10 +2,11 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div>
-        <h1>BBA-BCA</h1>
+    <div className='innerpagerightside'>
+      <div className="heading">Coming Soon</div>
     </div>
   )
 }
 
 export default page
+

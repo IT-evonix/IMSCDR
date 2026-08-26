@@ -113,7 +113,7 @@ const Footer = () => {
                   <Link href="/">Grievance Redressal Committee</Link>
                 </li>
                 <li>
-                  <Link href="/">NIRF</Link>
+                  <Link target="_blank" href="/pdf/home/NIRF.pdf">NIRF</Link>
                 </li>
                 <li>
                   <Link href="/">IQAC</Link>

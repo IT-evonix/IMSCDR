@@ -65,8 +65,8 @@ const page = () => {
         </div>
         <hr className="sepratorline" />
 
-        <div className="fee_structure_inner fee_structure_inner1"
-          style={{ marginBottom: "0px" }}
+        <div
+          className="fee_structure_inner fee_structure_inner1"
         >
           <div className="fee_structure_content">
             <div className="fee_structure_box">
@@ -110,10 +110,12 @@ const page = () => {
           </div>
         </div>
 
-        <ApprovalList
-      title="AICTE Approvals"
-      data={approvalData.feestructureims}
-    />
+        <div className="fee_structure_pdf">
+          <ApprovalList
+            title="AICTE Approvals"
+            data={approvalData.feestructureims}
+          />
+        </div>
       </div>
     </div>
   );

@@ -3284,6 +3284,9 @@ Body {
   align-items: center;
   display: flex;
 }
+.fee_structure_pdf{
+  
+}
 .fee_structure_content {
   border-radius: 20px;
   width: 69%;
@@ -4972,6 +4975,22 @@ Body {
   }
   
   /*------------ Programe Tab End Here ------------*/
+
+/*---------- Campus Overview Page Start Here ----------*/
+.lifeat_states {
+  display: block;
+}
+.lifeat_states .verticalseparator{
+  display: none;
+}
+.lifeat_statebox{
+  margin: 0 0 20px 0;
+}
+.ourvaluescontent{
+position: relative;
+  height: inherit;
+}
+/*---------- Campus Overview Page Start Here ----------*/
 }
 
 @media (max-width: 575.98px) {

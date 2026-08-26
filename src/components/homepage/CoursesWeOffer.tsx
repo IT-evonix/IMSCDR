@@ -46,7 +46,7 @@ const CoursesWeOffer = () => {
               </div>
             </div>
           </Link>
-          <Link href="/" className="course_card">
+          <Link href="/program-mca/overview" className="course_card">
             <div className="course_card_inner">
               <Image
                 src="/images/home/Coursesimg2.webp"
@@ -77,7 +77,7 @@ const CoursesWeOffer = () => {
               </div>
             </div>
           </Link>
-          <Link href="/" className="course_card">
+          <Link href="/program-bca/overview" className="course_card">
             <div className="course_card_inner">
               <Image
                 src="/images/home/Coursesimg3.webp"
@@ -108,7 +108,7 @@ const CoursesWeOffer = () => {
               </div>
             </div>
           </Link>
-          <Link href="/" className="course_card">
+          <Link href="/program-bba/overview" className="course_card">
             <div className="course_card_inner">
               <Image
                 src="/images/home/Coursesimg4.webp"

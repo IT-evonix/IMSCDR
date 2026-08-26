@@ -1,3 +1,4 @@
+// Governing Body Start Here ----------------
 export const governingBodyColumns = [
   {
     key: "srNo",
@@ -16,11 +17,10 @@ export const governingBodyColumns = [
   //   title: "Profession",
   // },
 ];
-
 export const governingBodyMembers = [
   {
     srNo: "01",
-    name: "Dr. Rajneesh J Barnabas",
+    name: "Dr. Rajneesh Barnabas",
     designation: "Chairman",
     // profession: "Educationist",
   },
@@ -38,75 +38,50 @@ export const governingBodyMembers = [
   },
   {
     srNo: "04",
-    name: "Dr. Abhay J Khandagle",
+    name: "Dr. Abhay Khandagale",
     designation: "Member",
     // profession: "Educationist",
   },
   {
     srNo: "05",
-    name: "Dr. Ashish Uzgare",
-    designation: "Member",
-    // profession: "Educationist",
-  },
-  {
-    srNo: "06",
     name: "Mr. Vishram Bhave",
     designation: "Member",
     // profession: "Educationist",
   },
   {
-    srNo: "07",
-    name: "Ms. Rita Katawati",
-    designation: "Member",
-    // profession: "Architect and Interior designer",
-  },
-  {
-    srNo: "08",
-    name: "Mr. Shailesh Bhonsle",
-    designation: "Member",
-    // profession: "Social Work",
-  },
-  {
-    srNo: "09",
+    srNo: "06",
     name: "Dr. Anthony Rose",
     designation: "Member",
     // profession: "Educationist",
   },
   {
-    srNo: "10",
+    srNo: "07",
+    name: "Dr. Ashish Uzgare",
+    designation: "Member",
+    // profession: "Architect and Interior designer",
+  },
+  {
+    srNo: "08",
+    name: "Mr. Shailesh S Bhonsle",
+    designation: "Member",
+    // profession: "Social Work",
+  },
+  {
+    srNo: "09",
     name: "Mr. Surendra Mohite",
     designation: "Member",
     // profession: "Educationist",
   },
   {
-    srNo: "11",
+    srNo: "10",
     name: "Dr. Dipti Christian",
     designation: "Member",
-    // profession: "Industry Expert",
+    // profession: "Educationist",
   },
 ];
 
 
-
-// College Development Committee Start Here
-
-// export const collegeCommitteeColumns = [
-//   {
-//     key: "srNo",
-//     title: "Sr. No",
-//     width: "100px",
-//   },
-//   {
-//     key: "name",
-//     title: "Name Of The Member",
-//   },
-//   {
-//     key: "designation",
-//     title: "Designation",
-//   },
-// ];
-
-
+// College Development Committee Start Here --------------------
 export const collegeCommitteeColumns = [
   {
     key: "srNo",
@@ -121,7 +96,6 @@ export const collegeCommitteeColumns = [
     title: "Designation",
   },
 ];
-
 export const collegeCommitteeMembers = [
   {
     srNo: "01",
@@ -233,8 +207,7 @@ export const collegeCommitteeMembers = [
 ];
 
 
-
-
+// Anti Ragging Commitee Start Here ----------------------------
 export const antiRaggingCommitteeColumns = [
   {
     key: "srNo",
@@ -257,12 +230,11 @@ export const antiRaggingCommitteeColumns = [
     title: "Contact Number",
   },
 ];
-
 export const antiRaggingCommitteeMembers = [
   {
     srNo: "1",
-    name: "Dr. M.B. Mehta",
-    role: "Director - Head of the Institute",
+    name: "Dr. Pronoti Telore",
+    role: "Director - Member Secretary",
     representation: "Associated with the Institute as Director of the Institute",
     contactNumber: "9822079675",
   },
@@ -273,66 +245,65 @@ export const antiRaggingCommitteeMembers = [
     representation: "Representative of Civil and Police Administration",
     contactNumber: "-",
   },
-
-    {
+  {
     srNo: "3",
     name: "Mr. Pramod Gandhi",
     role: "Press Reporter",
     representation: "Associated with the Institute as Media Person",
     contactNumber: "9822049287",
   },
-
-    {
+  {
     srNo: "4",
     name: "Mr. Harjeetsingh Wadhwa",
     role: "NGO",
     representation: "Non- Government Organizations involved in youth activities",
     contactNumber: "9423162727",
   },
-
-    {
+  {
     srNo: "5",
     name: "Dr. Vikram Barnabas",
     role: "Representative of Faculty Members",
     representation: "Associated with the Institute a Faculty Member",
     contactNumber: "9890937793",
   },
-
-    {
+  {
     srNo: "6",
-    name: "Mrs. S.D. Kulkarni",
-    role: "Associated with the Institute as an O.S.",
-    representation: "Associated with the Institute as an O.S.",
-    contactNumber: "9860187448",
+    name: "Mr.Mahesh Dixit",
+    role: "-",
+    representation: "-",
+    contactNumber: "-",
   },
-
-    {
+  {
     srNo: "7",
-    name: "Mr. Bade Rahul Sitaram",
-    role: "MBA I student",
+    name: "Udhare Yash Ashok",
+    role: "Student Representative",
     representation: "Associated with the Institute as MBA student (fresher)",
     contactNumber: "8087792002",
   },
-
-    {
+  {
     srNo: "8",
-    name: "Mr. Walzade Onkar Arvind",
-    role: "MBA I student",
+    name: "Thorat Yuvraj Santosh ",
+    role: "Student Representative",
     representation: "Associated with the Institute as MBA student (fresher)",
     contactNumber: "9689165727",
   },
-
-    {
+  {
     srNo: "9",
     name: "Ms. Angre Karishma Rangnath",
-    role: "MBA I student",
+    role: "Student Representative",
     representation: "Associated with the Institute as MBA student (fresher)",
     contactNumber: "9860482135",
   },
-
-    {
+  {
     srNo: "10",
-    name: "Mr. Pratap Gaikwad",
+    name: "Shinde Prachi Rahul",
+    role: "Student Representative",
+    representation: "Associated with the Institute as Non- teaching staff",
+    contactNumber: "9881544447",
+  },
+  {
+    srNo: "11",
+    name: "Dr. Mudassar I Sayyed",
     role: "IMS staff & Rector, Ladies hostel",
     representation: "Associated with the Institute as Non- teaching staff",
     contactNumber: "9881544447",
@@ -341,8 +312,74 @@ export const antiRaggingCommitteeMembers = [
 ];
 
 
+// Anti Ragging Squad Start Here ----------------------------
+export const antiRaggingSqualColumns = [
+  {
+    key: "srNo",
+    title: "Sr. No",
+  },
+  {
+    key: "name",
+    title: "Name Of The Member",
+  },
+  {
+    key: "role",
+    title: "Role",
+  },
+  {
+    key: "representation",
+    title: "Representation",
+  },
+  {
+    key: "contactNumber",
+    title: "Contact Number",
+  },
+];
+export const antiRaggingSqualMembers = [
+  {
+    srNo: "1",
+    name: "Dr. Pronoti Telore",
+    role: "In-Charge Director",
+    representation: "Associated with the Institute as Director of the Institute",
+    contactNumber: "-",
+  },
+  {
+    srNo: "2",
+    name: "Dr. Vikram Barnabas",
+    role: "-",
+    representation: "-",
+    contactNumber: "-",
+  },
 
-export const grievanceRedressalCommitteeColumns = [
+    {
+    srNo: "3",
+    name: "Mr. Mahesh Dixit",
+    role: "-",
+    representation: "-",
+    contactNumber: "-",
+  },
+
+    {
+    srNo: "4",
+    name: "Prof. Pratap Gaikwad",
+    role: "-",
+    representation: "-",
+    contactNumber: "-",
+  },
+
+    {
+    srNo: "5",
+    name: "Dr. Mudassar I Sayyed",
+    role: "-",
+    representation: "-",
+    contactNumber: "-",
+  },
+
+];
+
+
+// Student grievance redressal committee Start Here --------------------
+export const StudentGrievanceRedressalCommitteeColumns = [
   {
     key: "srNo",
     title: "Sr. No",
@@ -372,13 +409,12 @@ export const grievanceRedressalCommitteeColumns = [
     title: "Contact Number",
   },
 ];
-
-export const agrievanceRedressalCommitteeMembers = [
+export const StudentGrievanceRedressalCommitteeMembers = [
   {
     srNo: "1",
     referenceNumber:"GR/IMS/2022",
     date:"5/1/2022",
-    name: "Dr. M.B. Mehta",
+    name: "Dr. Pronoti Telore",
     role: "Director",
     representation: "Director of the Institute",
     contactNumber: "9822079675",
@@ -406,32 +442,18 @@ export const agrievanceRedressalCommitteeMembers = [
   {
     srNo: "4",
     referenceNumber:"GR/IMS/2022",
-    date:"5/1/2022",
-    name: "Prof. Ms. G.A. Patil",
-    role: "Co-cordinator",
-    representation: "Teaching staff of the Institute",
-    contactNumber: "9822545039",
+    date:"-",
+    name: "Dr. Hatim Kayumi",
+    role: "-",
+    representation: "-",
+    contactNumber: "-",
   },
 
-  {
-    srNo: "5",
-    referenceNumber:"GR/IMS/2022",
-    date:"5/1/2022",
-    name: "Mr Walzade Onkar Arvind",
-    role: "MBA I Student",
-    representation: "Associated with the Institute as MBA student ( Fresher)",
-    contactNumber: "9689165727",
-  },
 ];
 
 
-
-
-
-
-
-
-export const womenDevelopmentCellCommitteeColumns = [
+// Internal committee Start Here ---------------------------------
+export const InternalCommitteeCommitteeColumns = [
   {
     key: "srNo",
     title: "Sr. No",
@@ -453,80 +475,74 @@ export const womenDevelopmentCellCommitteeColumns = [
     title: "Email ID",
   },
 ];
-
-export const womenDevelopmentCellCommitteeMembers = [
-  {
+export const InternalCommitteeCommitteeMembers = [
+    {
     srNo: "1",
-    name: "Dr. Ms. P. V. Telore",
-    designation: "Chair Person",
-    mobileNumber: "9823256539",
-    emailId: "pronk70@yahoo.com",
-    
+    name: "Dr. Swati Barnabas",
+    designation: "-",
+    mobileNumber: "-",
+    emailId: "-",
   },
   {
     srNo: "2",
     name: "Dr. Vikram Barnabas",
-    designation: "Member",
-    mobileNumber: "9890937793",
-    emailId: "vikram.barnabas@rediffmail.com",
-    
+    designation: "-",
+    mobileNumber: "-",
+    emailId: "-",
   },
   {
     srNo: "3",
-    name: "Dr. U.H. Nagarkar",
-    designation: "Member",
-    mobileNumber: "9404125580",
-    emailId: "uhnagarkar@rediffmail.com",
-    
+    name: "Dr. Mahesh Potdar",
+    designation: "-",
+    mobileNumber: "-",
+    emailId: "-",
   },
   {
     srNo: "4",
-    name: "Dr. Mrs. S.R. Barnabas",
-    designation: "Member",
-    mobileNumber: "9689576448",
-    emailId: "swatibarnabas1@yahoo.com",
-    
+    name: "Mr.Mahesh Dixit",
+    designation: "-",
+    mobileNumber: "-",
+    emailId: "-",
   },
   {
     srNo: "5",
-    name: "Mrs. S.D. Kulkarni",
-    designation: "Member",
-    mobileNumber: "9860187448",
-    emailId: "sharayu_poonam@yahoo.com",
-    
+    name: "Ms. Divya Jadhav",
+    designation: "-",
+    mobileNumber: "-",
+    emailId: "-",
   },
   {
     srNo: "6",
-    name: "Ms. Jadhav Divya Vijay",
-    designation: "Student",
-    mobileNumber: "9322658752",
-    emailId: "divyaja354@gmail.com",
-    
-  },
+    name: "Mr. Kanawade Avishkar",
+    designation: "-",
+    mobileNumber: "-",
+    emailId: "-",
+  }, 
   {
     srNo: "7",
-    name: "Mr. Kanwade Avishkar",
-    designation: "Student",
-    mobileNumber: "9372895638",
-    emailId: "avishkark2001@gmail.com",
-    
-  },
+    name: "Mr. Shinde Datta Angad",
+    designation: "-",
+    mobileNumber: "-",
+    emailId: "-",
+  }, 
   {
     srNo: "8",
-    name: "Mr Shinge Datta Angad",
-    designation: "Student",
-    mobileNumber: "8767889957",
-    emailId: "Dattashinge8@gmail.com",
-    
-  },
-  
+    name: "Dr. Hatim Kayyuni",
+    designation: "-",
+    mobileNumber: "-",
+    emailId: "-",
+  }, 
+  {
+    srNo: "9",
+    name: "Mr. Jitin Adhav",
+    designation: "-",
+    mobileNumber: "-",
+    emailId: "-",
+  },  
 ];
 
 
-
-
-
-
+// SC/ ST Cell Start Here ---------------------------------------
 export const casteBasedCommitteeColumns = [
 {
     key: "srNo",
@@ -570,34 +586,21 @@ export const casteBasedCommitteeColumns = [
   },
 
 ];
-
 export const casteBasedCommitteeMembers = [
   {
     srNo: "1",
     referenceNumber:"IMS/SC/ST",
-    date:"2/7/2018",
-    name: "Dr. M.B. Mehta",
-    role: "Director",
-    associatedWith: "Director of the Institute",
-    mobileNumber: "9822079675",
-    emailId: "mmehernosh@gmail.com",
-    caste:"OTHER",
-    gender:"MALE",
+    date:"-",
+    name: "Dr. Pronoti Telore",
+    role: "In-Charge Director",
+    associatedWith: "-",
+    mobileNumber: "-",
+    emailId: "-",
+    caste:"-",
+    gender:"-",
   },
   {
     srNo: "2",
-    referenceNumber:"IMS/SC/ST",
-    date:"2/7/2023",
-    name: "Ms. K.S. Thore",
-    role: "Member",
-    associatedWith: "Non Teaching staff of the Institute",
-    mobileNumber: "8482910184",
-    emailId: "Krushnathore99@gmail.com",
-    caste:"OTHER",
-    gender:"FEMALE",
-  },
-  {
-    srNo: "3",
     referenceNumber:"IMS/SC/ST",
     date:"2/7/2018",
     name: "Mr. P.M. Gaikwad",
@@ -606,22 +609,22 @@ export const casteBasedCommitteeMembers = [
     mobileNumber: "9673678383",
     emailId: "pratap_gaikwad3842@rediffmail.com",
     caste:"SC",
-    gender:"MALE",
+    gender:"Male",
   },
   {
-    srNo: "4",
+    srNo: "3",
     referenceNumber:"IMS/SC/ST",
-    date:"2/7/2018",
+    date:"5/1/2022",
     name: "Dr. V. P. Barnabas",
     role: "Member",
     associatedWith: "Teaching staff of the Institute",
     mobileNumber: "9890937793",
     emailId: "vikram.barnabas@rediffmail.com",
-    caste:"OTHER",
-    gender:"MALE",
+    caste:"Other",
+    gender:"Male",
   },
   {
-    srNo: "5",
+    srNo: "4",
     referenceNumber:"IMS/SC/ST",
     date:"2/7/2018",
     name: "Dr. M. P. Potdar",
@@ -629,27 +632,289 @@ export const casteBasedCommitteeMembers = [
     associatedWith: "Teaching staff of the Institute",
     mobileNumber: "9422727198",
     emailId: "maheshpotdar@rediffmail.com",
-    caste:"OTHER",
-    gender:"MALE",
+    caste:"Other",
+    gender:"Male",
+  },
+  {
+    srNo: "5",
+    referenceNumber:"IMS/SC/ST",
+    date:"-",
+    name: "Dr.Anjali Vaidya",
+    role: "-",
+    associatedWith: "-",
+    mobileNumber: "-",
+    emailId: "-",
+    caste:"-",
+    gender:"-",
   },
   {
     srNo: "6",
     referenceNumber:"IMS/SC/ST",
-    date:"2/7/2018",
-    name: "Mr. N. P. Adhav",
-    role: "Non Teaching staff",
-    associatedWith: "Non Teaching staff of the Institute",
-    mobileNumber: "9881662686",
-    emailId: "jitinadhav_2011@rediffmail.com",
-    caste:"SC",
-    gender:"MALE",
+    date:"-",
+    name: "Prof.Supriya Sapa",
+    role: "-",
+    associatedWith: "-",
+    mobileNumber: "-",
+    emailId: "-",
+    caste:"-",
+    gender:"-",
+  },
+  {
+    srNo: "7",
+    referenceNumber:"IMS/SC/ST",
+    date:"-",
+    name: "Mr. Jitin Adhav",
+    role: "-",
+    associatedWith: "-",
+    mobileNumber: "-",
+    emailId: "-",
+    caste:"-",
+    gender:"-",
   },
   
 ];
 
 
-// IQAC Page Start Here ---------------------------------
+// Equal Opportunity Cell Start Here ---------------------------------
+export const EqualOpportunityCellCommitteeColumns = [
+{
+    key: "srNo",
+    title: "Sr. No",
+  },
+  {
+    key: "referenceNumber",
+    title: "Appointment Order Reference Number",
+  },
+  {
+    key: "date",
+    title: "Date of Appointment",
+  },
+  {
+    key: "name",
+    title: "Name of the Member",
+  },
+   {
+    key: "role",
+    title: "Role",
+  },
+  {
+    key: "associatedWith",
+    title: "Associated with",
+  },
+  {
+    key: "mobileNumber",
+    title: "Mobile Number",
+  },
+  {
+    key: "emailId",
+    title: "Email ID",
+  },
+  {
+    key: "caste",
+    title: "Caste",
+  },
+  {
+    key: "gender",
+    title: "Gender",
+  },
 
+];
+export const EqualOpportunityCellCommitteeMembers = [
+  {
+    srNo: "1",
+    referenceNumber:"IMS/SC/ST",
+    date:"-",
+    name: "Dr. Pronoti Telore",
+    role: "In-Charge Director",
+    associatedWith: "-",
+    mobileNumber: "-",
+    emailId: "-",
+    caste:"-",
+    gender:"-",
+  },
+  {
+    srNo: "2",
+    referenceNumber:"IMS/SC/ST",
+    date:"2/7/2018",
+    name: "Mr. P.M. Gaikwad",
+    role: "Member",
+    associatedWith: "Non teaching staff of the Institute",
+    mobileNumber: "9673678383",
+    emailId: "pratap_gaikwad3842@rediffmail.com",
+    caste:"SC",
+    gender:"Male",
+  },
+  {
+    srNo: "3",
+    referenceNumber:"IMS/SC/ST",
+    date:"5/1/2022",
+    name: "Dr. V. P. Barnabas",
+    role: "Member",
+    associatedWith: "Teaching staff of the Institute",
+    mobileNumber: "9890937793",
+    emailId: "vikram.barnabas@rediffmail.com",
+    caste:"Other",
+    gender:"Male",
+  },
+  {
+    srNo: "4",
+    referenceNumber:"IMS/SC/ST",
+    date:"2/7/2018",
+    name: "Dr. M. P. Potdar",
+    role: "Coordinator",
+    associatedWith: "Teaching staff of the Institute",
+    mobileNumber: "9422727198",
+    emailId: "maheshpotdar@rediffmail.com",
+    caste:"Other",
+    gender:"Male",
+  },
+  {
+    srNo: "5",
+    referenceNumber:"IMS/SC/ST",
+    date:"-",
+    name: "Dr.Anjali Vaidya",
+    role: "-",
+    associatedWith: "-",
+    mobileNumber: "-",
+    emailId: "-",
+    caste:"-",
+    gender:"-",
+  },
+  {
+    srNo: "6",
+    referenceNumber:"IMS/SC/ST",
+    date:"-",
+    name: "Prof.Supriya Sapa",
+    role: "-",
+    associatedWith: "-",
+    mobileNumber: "-",
+    emailId: "-",
+    caste:"-",
+    gender:"-",
+  },
+  
+];
+
+
+// Board of control Start Here -------------------------
+export const boardofcontrolCommitteeColumns = [
+  {
+    key: "srNo",
+    title: "Sr. No",
+  },
+  {
+    key: "name",
+    title: "Name Of The Member",
+  },
+  {
+    key: "designation",
+    title: "Designation",
+  },
+];
+export const boardofcontrolCommitteeMembers = [
+  {
+    srNo: "01",
+    name: "Dr. Rajneesh Barnabas",
+    designation: "Chairman",
+  },
+  {
+    srNo: "02",
+    name: "Mr. Vishal Barnabas",
+    designation: "Secretary",
+  },
+  {
+    srNo: "03",
+    name: "Mr. R.M. Khisty",
+    designation: "Treasurer",
+  },
+  {
+    srNo: "04",
+    name: "Dr. Pronoti Telore",
+    designation: "Director - Member Secretary",
+  },
+  {
+    srNo: "05",
+    name: "Dr. Abhay Khandagale",
+    designation: "Member - Trustee",
+  },
+  {
+    srNo: "06",
+    name: "Dr. Anthony Rose",
+    designation: "Member - Trustee",
+  },
+  {
+    srNo: "07",
+    name: "Mr. Vishal Dethe",
+    designation: "Member",
+  },
+  {
+    srNo: "08",
+    name: "Mr. Emmanuel Braggs",
+    designation: "Member",
+  },
+];
+
+
+// Student Clubs Start Here ----------------------------
+export const committeesColumns = [
+  {
+    key: "id",
+    title: "Sr. No.",
+  },
+  {
+    key: "committee",
+    title: "Committee",
+  },
+  {
+    key: "text",
+    title: "Text",
+  },
+];
+export const committeesText = [
+  {
+    id: 1,
+    committee: "Magazine Committee",
+    text: "Publishes the annual institute magazine featuring student contributions in the field of academics, art-work and other interests. This magazine fosters students’ creativity in their respective fields.",
+  },
+  {
+    id: 2,
+    committee: "Vidyarthini Manch Committee",
+    text: "Organizes activities for women empowerment, leadership, and personality development.",
+  },
+  {
+    id: 3,
+    committee: "Library Committee",
+    text: "Promotes effective use of library resources and a reading culture.",
+  },
+  {
+    id: 4,
+    committee: "Placement Committee",
+    text: "Supports placements, internships, corporate interactions, and career guidance.",
+  },
+  {
+    id: 5,
+    committee: "Cultural Committee",
+    text: "Organizes cultural, academic, and management events to enhance organizational and leadership skills.",
+  },
+  {
+    id: 6,
+    committee: "Media Cell (Podcast Club)",
+    text: "Produces podcasts, interviews, and digital content to strengthen communication skills.",
+  },
+  {
+    id: 7,
+    committee: "Entrepreneurship Development (ED) Cell",
+    text: "Conducts workshops and startup activities to foster innovation and entrepreneurship.",
+  },
+  {
+    id: 8,
+    committee: "Seminar Cell",
+    text: "Organizes guest lectures and expert sessions to provide industry exposure.",
+  },
+];
+
+
+// IQAC Page Start Here ---------------------------------
 export const iqacCommitteeColumns = [
   {
     key: "srNo",
@@ -664,7 +929,6 @@ export const iqacCommitteeColumns = [
     title: "Designation",
   },
 ];
-
 export const iqacCommitteeMembers = [
   {
     srNo: "1",
@@ -718,63 +982,4 @@ export const iqacCommitteeMembers = [
   },
   
   
-];
-
-
-export const committeesColumns = [
-  {
-    key: "id",
-    title: "Sr. No.",
-  },
-  {
-    key: "committee",
-    title: "Committee",
-  },
-  {
-    key: "text",
-    title: "Text",
-  },
-];
-
-export const committeesText = [
-  {
-    id: 1,
-    committee: "Magazine Committee",
-    text: "Publishes the annual institute magazine featuring student contributions in the field of academics, art-work and other interests. This magazine fosters students’ creativity in their respective fields.",
-  },
-  {
-    id: 2,
-    committee: "Vidyarthini Manch Committee",
-    text: "Organizes activities for women empowerment, leadership, and personality development.",
-  },
-  {
-    id: 3,
-    committee: "Library Committee",
-    text: "Promotes effective use of library resources and a reading culture.",
-  },
-  {
-    id: 4,
-    committee: "Placement Committee",
-    text: "Supports placements, internships, corporate interactions, and career guidance.",
-  },
-  {
-    id: 5,
-    committee: "Cultural Committee",
-    text: "Organizes cultural, academic, and management events to enhance organizational and leadership skills.",
-  },
-  {
-    id: 6,
-    committee: "Media Cell (Podcast Club)",
-    text: "Produces podcasts, interviews, and digital content to strengthen communication skills.",
-  },
-  {
-    id: 7,
-    committee: "Entrepreneurship Development (ED) Cell",
-    text: "Conducts workshops and startup activities to foster innovation and entrepreneurship.",
-  },
-  {
-    id: 8,
-    committee: "Seminar Cell",
-    text: "Organizes guest lectures and expert sessions to provide industry exposure.",
-  },
 ];
