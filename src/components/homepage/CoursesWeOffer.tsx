@@ -80,7 +80,7 @@ const CoursesWeOffer = () => {
           <Link href="/program-bca/overview" className="course_card">
             <div className="course_card_inner">
               <Image
-                src="/images/home/Coursesimg3.webp"
+                src="/images/home/Coursesimg3new.webp"
                 alt="Master of Business Administration"
                 width={1200}
                 height={600}
