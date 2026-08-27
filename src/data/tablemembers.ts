@@ -983,3 +983,61 @@ export const iqacCommitteeMembers = [
   
   
 ];
+
+// Documents Required Start Here ----------------------------
+export const DocumentsRequiredColumns = [
+  {
+    key: "id",
+    title: "Sr. No.",
+  },
+  {
+    key: "text",
+    title: "LIST OF SUBMITTED DOCUMENTS AT THE TIME OF VERIFICATION IN FC ",
+  },
+];
+export const DocumentsRequiredText = [
+  {
+    id: 1,
+    text: "Statement of marks obtained at 10th/SSC or its Equivalent Examination",
+  },
+  {
+    id: 2,
+    text: "Statement of marks obtained at 12th/HSC or its Equivalent Examination.",
+  },
+  {
+    id: 3,
+    text: "Certificate of the Indian Nationality of the candidate",
+  },
+  {
+    id: 4,
+    text: "Domicile Certificate of Candidate indicating that he/she is Domiciled in the State of Maharashtra",
+  },
+  {
+    id: 5,
+    text: "Caste Certificate stating that the caste is recognised under backward class category in Maharashtra",
+  },
+  {
+    id: 6,
+    text: "Caste / Tribe Validity Certificate issued by Caste / Tribe Certificate Scrutiny Committee",
+  },
+  {
+    id: 7,
+    text: "Non-Creamy Layer Certificate valid upto 31st March 2027",
+  },
+  {
+    id: 8,
+    text: "Graduation Marksheet",
+  },
+  {
+    id: 9,
+    text: "Score Card of MAH-MCA-CET-2026",
+  },
+  {
+    id: 10,
+    text: "CGPA TO Equivalent Percentage certificate",
+  },
+  {
+    id: 11,
+    text: "APAAR ID CARD",
+  },
+];

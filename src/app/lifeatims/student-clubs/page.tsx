@@ -14,7 +14,6 @@ const Page = () => {
         columns={committeesColumns}
         data={committeesText}
       />
-
       <p className="mt-4">These committees provide students with valuable opportunities to develop leadership, communication, teamwork, and organizational skills beyond the classroom.</p>
     </div>
   );

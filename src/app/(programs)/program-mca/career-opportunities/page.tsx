@@ -138,73 +138,75 @@ const higherEducation: Facility[] = [
 
 const page = () => {
   return (
-    <div className="innerpagerightside">
-      <div className="heading">Career opportunities after MBA</div>
-      <div className="row flex-sm-row-reverse">
-        <div className="col-md-6">
-          <div className="careerimages_sticky">
-            <div className="career_opportunities_images">
-              <div className="career_opportunities_img ">
-                <Image
-                  src="/images/program/career_opportunities1.webp"
-                  alt="Students"
-                  width={400}
-                  height={250}
-                  className="img-fluid"
-                />
-              </div>
-              <div className="logobox_img ">
-                <Image
-                  src="/images/home/black_logo.webp"
-                  alt="Students"
-                  width={200}
-                  height={150}
-                  className="img-fluid"
-                />
-              </div>
-              <div className="career_opportunities_img ">
-                <Image
-                  src="/images/program/career_opportunities2.webp"
-                  alt="Students"
-                  width={400}
-                  height={250}
-                  className="img-fluid"
-                />
+    <div className="innerpagerightside career_opportunities_main">
+      {/* <div className="heading">Career Opportunities</div> */}
+      <div className="mca_career_opportunities_main">
+        <div className="row flex-sm-row-reverse mb-5">
+          <div className="col-md-6">
+            <div className="careerimages_sticky">
+              <div className="career_opportunities_images">
+                <div className="career_opportunities_img ">
+                  <Image
+                    src="/images/program/career_opportunities1.webp"
+                    alt="Students"
+                    width={400}
+                    height={250}
+                    className="img-fluid"
+                  />
+                </div>
+                <div className="logobox_img ">
+                  <Image
+                    src="/images/home/black_logo.webp"
+                    alt="Students"
+                    width={200}
+                    height={150}
+                    className="img-fluid"
+                  />
+                </div>
+                <div className="career_opportunities_img ">
+                  <Image
+                    src="/images/program/career_opportunities2.webp"
+                    alt="Students"
+                    width={400}
+                    height={250}
+                    className="img-fluid"
+                  />
+                </div>
               </div>
             </div>
           </div>
-        </div>
+          <div className="col-md-6">
+            <div className="mca_career_opportunities">
+              <p>
+                Graduates of the MCA programme are well prepared for careers in
+                software development, data analytics, cloud computing, cyber
+                security, artificial intelligence, and IT consulting.
+              </p>
+              <div className="col-lg-12">
+                <div className="subheading">Career Roles</div>
+                <div className="facilities-wrapper">
+                  {facilities.map((facility) => {
+                    const Icon = facility.icon;
 
-        <div className="col-md-6">
-          <p>
-            Graduates of the MCA programme are well prepared for careers in
-            software development, data analytics, cloud computing, cyber
-            security, artificial intelligence, and IT consulting.
-          </p>
-          <div className="col-lg-12">
-            <div className="subheading">Career Roles</div>
+                    return (
+                      <div className="facility-item" key={facility.title}>
+                        <div className="facility-icon">
+                          <Icon size={25} strokeWidth={1.7} />
+                        </div>
 
-            <div className="facilities-wrapper">
-              {facilities.map((facility) => {
-                const Icon = facility.icon;
-
-                return (
-                  <div className="facility-item" key={facility.title}>
-                    <div className="facility-icon">
-                      <Icon size={25} strokeWidth={1.7} />
-                    </div>
-
-                    <div className="facility-content">
-                      <h3>{facility.title}</h3>
-                    </div>
-                  </div>
-                );
-              })}
+                        <div className="facility-content">
+                          <h3>{facility.title}</h3>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <br></br>
+
       <div className="higher_education row">
         <div className="col-lg-12">
           <div className="subheading">Higher Education</div>

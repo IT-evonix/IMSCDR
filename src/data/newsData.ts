@@ -29,7 +29,7 @@ export const newsData: NewsItem[] = [
   {
     id: 3,
     slug: "NAAC-Cycle-3-SSR-Revised-(June-2024).pdf",
-    title: "Holiday Notice",
+    title: "NAAC Cycle-3 Revised SSR",
     image: "/images/news-and-events/newsandevents.webp",
     type: "pdf",
     link: "/pdf/news-and-events/NAAC-Cycle-3-SSR-Revised-(June-2024).pdf",
@@ -37,7 +37,7 @@ export const newsData: NewsItem[] = [
   {
     id: 4,
     slug: "news1",
-    title: "News 1",
+    title: "Fee Fixation Proposal 2025-2026",
     image: "/images/news-and-events/newsandevents.webp",
     type: "pdf",
     link: "/pdf/news-and-events/news1.pdf",
@@ -45,7 +45,7 @@ export const newsData: NewsItem[] = [
   {
     id: 5,
     slug: "news2",
-    title: "News 2",
+    title: "Circular 35 - Holiday on 14th April 2023.",
     image: "/images/news-and-events/newsandevents.webp",
     type: "pdf",
     link: "/pdf/news-and-events/news2.pdf",
@@ -62,20 +62,20 @@ export const newsData: NewsItem[] = [
 //     type: "detail",
 //     link: "/news-events/sports-meet-2026",
 //   },
-  {
-    id: 6,
-    slug: "annual-cultural-festival-2026",
-    title: "Lorem Ipsum is simply dummy text of the printing and typesetting",
-    description: [
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets.",
+  // {
+  //   id: 6,
+  //   slug: "annual-cultural-festival-2026",
+  //   title: "Lorem Ipsum is simply dummy text of the printing and typesetting",
+  //   description: [
+  //     "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets.",
 
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets.",
+  //     "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets.",
 
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets.",
-    ],
-    image: "/images/news-and-events/newsandevents.webp",
-    date: "12 July 2026",
-    type: "detail",
-    link: "/news-events/annual-cultural-festival-2026",
-  },
+  //     "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets.",
+  //   ],
+  //   image: "/images/news-and-events/newsandevents.webp",
+  //   date: "12 July 2026",
+  //   type: "detail",
+  //   link: "/news-events/annual-cultural-festival-2026",
+  // },
 ];
