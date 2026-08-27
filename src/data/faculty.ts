@@ -36,6 +36,28 @@ export interface Faculty {
 export const facultyData: Faculty[] = [
   {
     "id": 1,
+    "name": "Dr. Pronoti V. Telore",
+    "designation": "In-Charge Director",
+    "qualification": "PhD (Marketing), MBA (Marketing Management)",
+    "image": "/images/about/In-Charge-director.webp",
+    "email": "pronk70@yahoo.com",
+    "broadAreas": [
+      "Management"
+    ],
+    "specificAreas": [
+      "Marketing and Human Resource Management"
+    ],
+    "orcidId": "https://orcid.org/0009-0006-8353-3612",
+    "googleScholar": "https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=pronoti+telore&btnG=",
+    "researchPapersPublished": 18,
+    "booksPublished": 3,
+    "sponsoredResearchProjects": 1,
+    "phdAwarded": 3,
+    "phdScholarsInProcess": 3,
+    "profileContent": "A Management academic and a leader with 25 years at IMSCD&R Currently serving as an In - Charge Director, former Head of the MBA Department, supported by 8 years of prior Corporate experience. An SPPU-approved Research Guide with 18 published research papers and a strong record across teaching, research supervision, accreditation, and institutional governance. Experienced in leading academic departments, managing change, and building systems that endure, with direct involvement in NAAC accreditation, University-level academic duties, and statutory committees across the BPHE Society. Committed to building IMSCD&R into a leading Management institute for emerging India, grounded in academic rigour, inclusive excellence, and strong industry connect."
+  },
+  {
+    "id": 2,
     "name": "CA. D. A. Kulkarni",
     "designation": "Assistant Professor",
     "qualification": "M.Com., C.A.",
@@ -56,7 +78,7 @@ export const facultyData: Faculty[] = [
     "profileContent": "Prof. (CA) DNYANESH A. KULKARNI is having huge experience in the area of Financial Management, Management Accounting & Taxation at Institute of Management Studies Career Development & Research, Ahmednagar of Savitribai Phule Pune University, Pune. He is having academic experience of 25 years at graduate & post- graduate level. He is also having Professional & Industrial experience of 25 years. He has completed his masters in Commerce. He is a fellow member of Institute of Chartered Accountants of India and is a former Chairman of Ahmednagar Branch of WIRC of ICAI. He is an Accredited Management Teacher by AIMA, New Delhi. He was on panel of 'Financial Education Resource Person' of SEBI form 2010- 2016. He has also conducted various training sessions for corporates on various topics. His areas of interest are Finance, Accountancy, Economics, Investments and Taxation. He is a co-author of three books published by Nirali Prakashan. He is column writer for Newspaper and has published more than 200 articles on various topics."
   },
   {
-    "id": 2,
+    "id": 3,
     "name": "Dr. Rahul K. Khandelwal",
     "designation": "Assistant Professor",
     "qualification": "Ph.D., LL.B., MMS, MBS, PGDBM, B.Com.",
@@ -87,7 +109,7 @@ export const facultyData: Faculty[] = [
     "profileContent": "Dr Rahul Khandelwal faculty and Academic Research coordinator at Institute of Management Studies Career Development & Research, Ahilyanagar with 11 years of teaching experience.  He is recognized research guide from Savitribai   Phule Pune University in Marketing and Organizational Management with three research scholars awarded Ph.D. under his guidance. He is Co-director of two minor research projects sponsored by Ministry of Human Resource through Indian Council of Social Science Research.  He has published   research papers in ABDC /Scopus/UGC and peer-reviewed journals. He has presented research papers at major IIMs and attended FDP at IITs and IIMs in the country. His area of expertise is Marketing and general management."
   },
   {
-    "id": 3,
+    "id": 4,
     "name": "Dr. Anjali A. Vaidya",
     "designation": "Assistant Professor",
     "qualification": "",
@@ -102,7 +124,7 @@ export const facultyData: Faculty[] = [
     "profileContent": "Dr. Anjali A. Vaidya is an accomplished academician with over 23 years of teaching experience in Computer Applications and Information Technology. She holds an M.Sc. in Physics (Electronics), MCA, and Ph.D. Throughout her career, she has served in key academic roles, including MCA Coordinator, Placement Coordinator, Alumni Association Coordinator, and Web In-charge, contributing to academic administration, student mentoring, and institutional development. She has also served Savitribai Phule Pune University (SPPU) as a Syllabus Framing Committee Member, Examiner, and Question Paper Setter. Her areas of interest include Artificial Intelligence, Natural Language Processing, Speech Technology, Web Technologies, Educational Technology, and Software Development. Dr. Vaidya is committed to fostering innovation, industry-academia collaboration, and outcome-based learning while mentoring students to become skilled professionals and lifelong learners."
   },
   {
-    "id": 4,
+    "id": 5,
     "name": "Dr. Hatim Fakhruddin Kayumi",
     "designation": "Associate Professor, H.O.D",
     "qualification": "Ph. D. (Commerce, Finance): S. P. Pune University, M – SET (Commerce), M. Phil. (Commerce): Y.C.M.O.U Nashik, M.B.A. (Finance): Y.C.M.O.U Nashik, M. Com. (Cost Accounting): S. P. Pune University, B. Com. (Cost Accounting): S. P. Pune University",
@@ -136,7 +158,7 @@ export const facultyData: Faculty[] = [
     "profileContent": "Dr. Hatim Fakhruddin Kayumi is a proficient academician, researcher, and management educator with extensive and rich experience of over 25 years in academia, research, industry and administration.\n\nHe holds a Ph. D. in Commerce (Mutual Fund Investments) from Savitribai Phule Pune University. He possesses diverse academic qualifications, including M-SET (Commerce), M.Phil. in Commerce, MBA (Finance), M.Com. (Cost Accounting), and B.Com. (Cost Accounting).\n\nHe is committed to integrating contemporary global business developments with classroom teaching and research, enabling students to develop analytical thinking and practical managerial competencies.\n\nHe has made significant contributions to academic and management research, having published 32 research papers and authored two books. He has presented several research papers in national and international conferences and published research articles and case studies in conference proceedings.\n\nHis research accomplishments include the successful completion of two research projects funded by BCUD, S. P. Pune University, and the submission of one research project funded by the Indian Council of Social Science Research (ICSSR), New Delhi.\n\nA recognized Ph.D. Guide under the Faculty of Commerce and Management, Pune University, he has successfully guided ten doctoral scholars to the award of Ph. D. degrees in the disciplines of Financial Management and Organizational Management. He has successfully registered a design patent. His doctoral research work has been awarded with ‘Best Ph. D. Thesis’ by the PIM, Gwalior.\n\nHis academic pursuits are driven by passion for quality education, impactful research, ethical leadership, and the promotion of sustainable financial and management practices. Through his teaching, research, and mentorship, he continues to contribute meaningfully to the advancement of higher education and the development of future business leaders."
   },
   {
-    "id": 5,
+    "id": 6,
     "name": "Dr. Mahesh P. Potdar",
     "designation": "Associate Professor",
     "qualification": "MCM, MMS (System), Ph. D.",
@@ -158,7 +180,7 @@ export const facultyData: Faculty[] = [
     "profileContent": "Dr. Mahesh Potdar holds a Ph.D. in Organisation Management from Savitribai Phule Pune University and possesses multidisciplinary qualifications in Computer Management, Systems, Management, Law, and Chemistry. With 26 years of teaching, 10 years of research, and 2 years of industry experience, he brings a rich blend of academic and professional expertise. He is a recognized Ph.D. Research Guide in Computer Management and Organisation Management and actively contributes to teaching, research, curriculum development, and academic administration.\n\nDr. Mahesh Potdar's research focuses on Software Engineering, Software Cost Estimation, Project Management, Cloud Computing, Cyber Security, Service-Oriented Architecture, and Digital Transformation. He has published 15 international research papers, presented 5 papers at national and international conferences, and successfully guided one Ph.D. scholar. He also conducts funded workshops, FDPs, and expert sessions, contributing significantly to research, innovation, and technology-driven."
   },
   {
-    "id": 6,
+    "id": 7,
     "name": "Dr. Manoj Shamrao Kulkarni",
     "designation": "Assistant Professor",
     "qualification": "B.Sc., M.B.A., Ph.D.",
@@ -181,28 +203,7 @@ export const facultyData: Faculty[] = [
     "patents": 1,
     "profileContent": "Dr. Manoj Shamrao Kulkarni received his Doctor of Philosophy (Ph.D) from Savitribai Phule Pune University in Marketing Management. He has completed MBA - Marketing Management from Shivaji University, Kolhapur. Presently, he is working as an Assistant Professor at Institute of Management Studies Career Development & Research, Ahmednagar. He has 21 years of Teaching and 2 years of corporate experience. His expertise lies in the core subjects such as Sales and Distribution Management, Product & Brand Management, Marketing 4.0 Consumerism, Marketing Management and Integrated Marketing Communication. He has published one E- book titled’ Consumer Protection Measures’. He has co-authored three books and published one patent. He has also published research papers in UGC CARE listed journals. He has completed one BCUD minor research project of S. P. Pune University. He was the member of Ahmednagar District Consumer Protection Council from 2014to 2017."
   },
-  {
-    "id": 7,
-    "name": "Dr. Pronoti V. Telore",
-    "designation": "Associate Professor",
-    "qualification": "PhD (Marketing), MBA (Marketing Management)",
-    "image": "/images/faculty/female.webp",
-    "email": "pronk70@yahoo.com",
-    "broadAreas": [
-      "Management"
-    ],
-    "specificAreas": [
-      "Marketing and Human Resource Management"
-    ],
-    "orcidId": "https://orcid.org/0009-0006-8353-3612",
-    "googleScholar": "https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=pronoti+telore&btnG=",
-    "researchPapersPublished": 18,
-    "booksPublished": 3,
-    "sponsoredResearchProjects": 1,
-    "phdAwarded": 3,
-    "phdScholarsInProcess": 3,
-    "profileContent": "A Management academic and a leader with 25 years at IMSCD&R Currently serving as an In - Charge Director, former Head of the MBA Department, supported by 8 years of prior Corporate experience. An SPPU-approved Research Guide with 18 published research papers and a strong record across teaching, research supervision, accreditation, and institutional governance. Experienced in leading academic departments, managing change, and building systems that endure, with direct involvement in NAAC accreditation, University-level academic duties, and statutory committees across the BPHE Society. Committed to building IMSCD&R into a leading Management institute for emerging India, grounded in academic rigour, inclusive excellence, and strong industry connect."
-  },
+  
   {
     "id": 8,
     "name": "Dr. Sanjay P. Bhakkad",

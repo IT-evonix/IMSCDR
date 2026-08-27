@@ -23,6 +23,14 @@ export interface FacultyCardProps {
 export const facultyListing: Faculty[] = [
   {
     id: 1,
+    name: "Dr. Pronoti V. Telore",
+    designation: "In-Charge Director",
+    education: "PhD (Marketing), MBA (Marketing Management)",
+    image: "/images/about/In-Charge-director.webp",
+    department: "MBA",
+  },
+  {
+    id: 2,
     name: "CA. D. A. Kulkarni",
     designation: "Assistant Professor",
     education: "M.Com., C.A.",
@@ -30,7 +38,7 @@ export const facultyListing: Faculty[] = [
     department: "MBA",
   },
   {
-    id: 2,
+    id: 3,
     name: "Dr. Rahul K. Khandelwal",
     designation: "Assistant Professor",
     education: "Ph.D., LL.B., MMS, MBS, PGDBM, B.Com.",
@@ -38,7 +46,7 @@ export const facultyListing: Faculty[] = [
     department: "MBA",
   },
   {
-    id: 3,
+    id: 4,
     name: "Dr. Anjali A. Vaidya",
     designation: "Assistant Professor",
     education: "M.Sc. in Physics (Electronics), MCA, and Ph.D.",
@@ -46,7 +54,7 @@ export const facultyListing: Faculty[] = [
     department: "MBA",
   },
   {
-    id: 4,
+    id: 5,
     name: "Dr. Hatim Fakhruddin Kayumi",
     designation: "Associate Professor, H.O.D",
     education: "Ph. D. (Commerce, Finance)",
@@ -54,7 +62,7 @@ export const facultyListing: Faculty[] = [
     department: "MBA",
   },
   {
-    id: 5,
+    id: 6,
     name: "Dr. Mahesh P. Potdar",
     designation: "Associate Professor",
     education: "MCM, MMS (System), Ph. D.",
@@ -62,21 +70,14 @@ export const facultyListing: Faculty[] = [
     department: "MBA",
   },
   {
-    id: 6,
+    id: 7,
     name: "Dr. Manoj Shamrao Kulkarni",
     designation: "Associate Professor",
     education: "B.Sc., M.B.A., Ph.D.",
     image: "/images/faculty/male.webp",
     department: "MBA",
   },
-  {
-    id: 7,
-    name: "Dr. Pronoti V. Telore",
-    designation: "Associate Professor",
-    education: "PhD (Marketing), MBA (Marketing Management)",
-    image: "/images/faculty/male.webp",
-    department: "MBA",
-  },
+
   {
     id: 8,
     name: "Dr. Sanjay P. Bhakkad",
