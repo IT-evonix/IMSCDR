@@ -12,8 +12,7 @@ export default function GovernanceGoverningBody() {
         <div className="mb-4">
           <div className="heading">Board of Governance </div>
           <p className="">
-            The Governing Body of the B.P.H.E. Society, led by Chairman Dr.
-            Sanjeevan S. Arsud and Secretary Mr. Vishal Barnabas, provides
+            The Governing Body of the B.P.H.E. Society, led by Chairman Dr. Rajneesh Barnabas and Secretary Mr. Vishal Barnabas, provides
             strategic direction and oversight for all educational institutes
             established under the society, including IMSCDR. Comprising senior
             academicians and experienced professionals, the body is responsible

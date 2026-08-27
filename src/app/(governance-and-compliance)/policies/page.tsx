@@ -26,10 +26,10 @@ const page = () => {
   return (
     <div>
     <InnerpageBanner
-        title="Mandatory Disclosure"
+        title="Policies"
         breadcrumbs={[
           {
-            label: "Mandatory Disclosure",
+            label: "Policies",
           },
         ]}
       />

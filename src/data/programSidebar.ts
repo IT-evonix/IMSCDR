@@ -116,7 +116,7 @@ export const programSidebar = {
       { title: "Eligibility", href: "/eligibility" },
       { title: "Fee Structure", href: "/fee-structure" },
       { title: "Scholarships", href: "/scholarships" },
-      { title: "Apply Online", href: "/" },
+      { title: "Apply Online", href: "https://admissions.imscdr.ac.in/" },
       { title: "Downloads", href: "/downloads" },
       {
         title: "Prospectus",

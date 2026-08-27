@@ -4,11 +4,11 @@ import React from "react";
 const page = () => {
   return (
     <div>
-    <InnerpageBanner
-        title="Research & Innovation"
+      <InnerpageBanner
+        title="Student Corner"
         breadcrumbs={[
           {
-            label: "Research & Innovation",
+            label: "Student Corner",
           },
         ]}
       />

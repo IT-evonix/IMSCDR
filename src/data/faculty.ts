@@ -104,7 +104,7 @@ export const facultyData: Faculty[] = [
   {
     "id": 4,
     "name": "Dr. Hatim Fakhruddin Kayumi",
-    "designation": "Associate Professor",
+    "designation": "Associate Professor, H.O.D",
     "qualification": "Ph. D. (Commerce, Finance): S. P. Pune University, M – SET (Commerce), M. Phil. (Commerce): Y.C.M.O.U Nashik, M.B.A. (Finance): Y.C.M.O.U Nashik, M. Com. (Cost Accounting): S. P. Pune University, B. Com. (Cost Accounting): S. P. Pune University",
     "image": "/images/faculty/male.webp",
     "email": "hatimkayumi@gmail.com",

@@ -67,7 +67,7 @@ export const menuItems: MenuItem[] = [
       },
       {
         label: "Ph.D",
-        href: "/",
+        href: "/program-phd",
       },
       {
         label: "Faculty",
@@ -105,7 +105,7 @@ export const menuItems: MenuItem[] = [
       },
       {
         label: "Apply Online",
-        href: "/",
+        href: "https://admissions.imscdr.ac.in/",
       },
       {
         label: "Downloads",
@@ -129,7 +129,7 @@ export const menuItems: MenuItem[] = [
   },
   {
     label: "Placements",
-    href: "/",
+    href: "/placement",
   },
 
   // {
@@ -219,7 +219,7 @@ export const menuItems: MenuItem[] = [
 
   {
     label: "Student Corner",
-    href: "/",
+    href: "/student-corner",
   },
 
   // {
@@ -337,19 +337,19 @@ export const menuItems: MenuItem[] = [
     children: [
       {
         label: "FRA Fee Structure ",
-        href: "/",
+        href: "/frafeesstructure",
       },
       {
         label: "Mandatory Disclosure",
-        href: "/",
+        href: "/mandatory-disclosure",
       },
       {
         label: "IQAC",
-        href: "/",
+        href: "/IQAC",
       },
       {
         label: "Policies",
-        href: "/",
+        href: "/policies",
       },
 
       {
@@ -380,9 +380,17 @@ export const menuItems: MenuItem[] = [
             href: "/equal-opportunity-cell",
           },
           {
+            label: "Governing Body",
+            href: "/governing-body",
+          },
+          {
+            label: "College Development Committee (CDC)",
+            href: "/college-development-commitee",
+          },
+          {
             label: "Online Grievance Portal",
             href: "/",
-          },
+          },          
         ],
       },
     ],
@@ -404,6 +412,6 @@ export const menuItems: MenuItem[] = [
 
   {
     label: "IQAC",
-    href: "/",
+    href: "/IQAC",
   },
 ];

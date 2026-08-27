@@ -10,7 +10,7 @@ const ContactPage = () => {
         title="Contact Us"
         breadcrumbs={[{ label: "Contact" }]}
       />
-      <div className="innerpagewrapper">
+      <div className="">
         <section className="contactsection">
           <div className="container">
             <div className="contactinner">
@@ -27,8 +27,8 @@ const ContactPage = () => {
                 <Link href="tel:02412346532">
                   0241-2346532
                 </Link>
-                <Link href="tel:02412324830">
-                  0241-2324830
+                <Link href="tel:9890070077">
+                  +91 9890070077
                 </Link>
               </div>
               <div className="contactbox">

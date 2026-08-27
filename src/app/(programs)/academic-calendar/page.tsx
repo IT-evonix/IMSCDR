@@ -4,15 +4,19 @@ import React from "react";
 const page = () => {
   return (
     <div>
-      <InnerpageBanner
-        title="Faculty"
+    <InnerpageBanner
+        title="Academic Calendar"
         breadcrumbs={[
           {
             label: "Academic Calendar",
           },
         ]}
       />
-      <div className="heading">Academic Calendar</div>
+      <div className="innerpagewrapper">
+        <div className="container">
+            <div className="heading">Coming Soon</div>
+        </div>
+      </div>
     </div>
   );
 };

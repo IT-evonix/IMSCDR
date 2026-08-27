@@ -4,12 +4,12 @@ import Image from "next/image";
 import {
   FolderCode,
   Monitor,
-  Projector,
-  Library,
-  BookOpen,
+  // Projector,
+  // Library,
+  // BookOpen,
   FlaskConical,
   BriefcaseBusiness,
-  Presentation,
+  // Presentation,
   Lightbulb,
   Code,
   CodeXml,
@@ -142,41 +142,45 @@ const page = () => {
       <div className="heading">Career opportunities after MBA</div>
       <div className="row flex-sm-row-reverse">
         <div className="col-md-6">
-          <div className="career_opportunities_images">
-            <div className="career_opportunities_img ">
-              <Image
-                src="/images/program/career_opportunities1.webp"
-                alt="Students"
-                width={400}
-                height={250}
-                className="img-fluid"
-              />
-            </div>
-            <div className="logobox_img ">
-              <Image
-                src="/images/home/black_logo.webp"
-                alt="Students"
-                width={200}
-                height={150}
-                className="img-fluid"
-              />
-            </div>
-            <div className="career_opportunities_img ">
-              <Image
-                src="/images/program/career_opportunities2.webp"
-                alt="Students"
-                width={400}
-                height={250}
-                className="img-fluid"
-              />
+          <div className="careerimages_sticky">
+            <div className="career_opportunities_images">
+              <div className="career_opportunities_img ">
+                <Image
+                  src="/images/program/career_opportunities1.webp"
+                  alt="Students"
+                  width={400}
+                  height={250}
+                  className="img-fluid"
+                />
+              </div>
+              <div className="logobox_img ">
+                <Image
+                  src="/images/home/black_logo.webp"
+                  alt="Students"
+                  width={200}
+                  height={150}
+                  className="img-fluid"
+                />
+              </div>
+              <div className="career_opportunities_img ">
+                <Image
+                  src="/images/program/career_opportunities2.webp"
+                  alt="Students"
+                  width={400}
+                  height={250}
+                  className="img-fluid"
+                />
+              </div>
             </div>
           </div>
         </div>
 
         <div className="col-md-6">
           <p>
-           Graduates of the MCA programme are well prepared for careers in software development, data analytics, cloud computing, cyber security, artificial intelligence, and IT consulting.
-</p>
+            Graduates of the MCA programme are well prepared for careers in
+            software development, data analytics, cloud computing, cyber
+            security, artificial intelligence, and IT consulting.
+          </p>
           <div className="col-lg-12">
             <div className="subheading">Career Roles</div>
 
@@ -200,8 +204,7 @@ const page = () => {
           </div>
         </div>
       </div>
-      <br>
-      </br>
+      <br></br>
       <div className="higher_education row">
         <div className="col-lg-12">
           <div className="subheading">Higher Education</div>

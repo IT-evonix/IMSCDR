@@ -5,10 +5,10 @@ const page = () => {
   return (
     <div>
     <InnerpageBanner
-        title="Research & Innovation"
+        title="PhD"
         breadcrumbs={[
           {
-            label: "Research & Innovation",
+            label: "PhD",
           },
         ]}
       />
