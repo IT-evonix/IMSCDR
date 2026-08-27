@@ -5,8 +5,8 @@ import Image from "next/image";
 const page = () => {
   return (
     <div className="innerpagerightside">
-          <div className="heading">Cultural Activities & Flagship Events</div>
-          <div className="row">
+          <div className="heading">Coming Soon</div>
+          <div className="row d-none">
             <div className="col-md-6">
               <p className="infrapara">
                 IMSCDR organizes a variety of academic, cultural, management, and technical events that promote experiential learning and holistic student development. <span>Management Games</span> offers competitions such as Ad-Mad, HR Team Building, Mock Stock, Brand Wagon, and the <span>Best Manager</span> contest to enhance leadership, teamwork, creativity, and decision-making skills. <span>Fusion</span> follows a similar format, featuring the Best Intern competition. Aagneyum is an inter-collegiate event that provides undergraduate students with a platform to showcase their talents and management skills. <span>IT Waves</span> encourages creativity and teamwork through activities like poster presentations, team games, board decoration, and dance. <span>Fest Der Tech</span> develops technical and problem-solving skills through competitions in coding, website development, C programming, and aptitude. The <span>Elevator Pitch</span> competition challenges students to present innovative business ideas in just 100 seconds, fostering entrepreneurship, confidence, and effective communication.

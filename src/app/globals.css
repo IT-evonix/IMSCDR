@@ -2552,6 +2552,15 @@ Body {
   padding: 80px 0;
   background: #fff;
 }
+.faculty-category{
+  padding:40px 0px;
+}
+.faculty-category:first-child{
+  padding-top: 0px;
+}
+.faculty-category:last-child{
+  padding-bottom: 0px;
+}
 .faculty-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -4454,6 +4463,12 @@ Body {
     gap: 10px;
     min-height: 70px;
   }
+  .mca_career_opportunities_main .facilities-wrapper{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .higher_education .facilities-wrapper{
+    grid-template-columns: repeat(2, 1fr);
+  }
   /*---------------- Programe Tab End Here ----------------*/
 }
 @media (max-width: 991.98px) {
@@ -4840,7 +4855,7 @@ Body {
     width: 75%;
   }
   .facilities-wrapper{
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
   /*--------------- Programee Tab End Here ---------------*/
 }
@@ -4931,17 +4946,44 @@ Body {
   }
   .vision_box {
     width: 100%;
-    margin: 0 0 60px 0;
+    margin: 0 0 30px 0;
   }
   .privacy_policy_inner {
     display: block;
   }
   .mottoleft {
     width: 100%;
-    margin: 0 0 60px 0;
+    margin: 0 0 30px 0;
   }
   .info_card {
     min-height: inherit;
+  }
+  .about-nacc{
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  .about-nacc-content {
+    width: 100%;
+    text-align: center;
+  }
+  .about-naccimg{
+    margin: -40px auto 0px auto;
+  }
+  .privacy_policyand_motto{
+    padding: 0px 0 0;
+  }
+  .objective_section{
+        padding: 30px 0 0;
+  }
+  .mision_box .vision_mision_icon{
+    margin: -40px auto 25px;
+  }
+  .vision_mision_icon{
+    margin: -40px auto 25px;
+  }
+  .governing-table{
+    min-width: 600px;
   }
   /*---------------------- About Us Tab END Here --------------------*/
 
@@ -4988,7 +5030,22 @@ Body {
     padding: 0 15px 24px;;
   }
   
-  /*------------ Programe Tab End Here ------------*/
+  .mca_career_opportunities_main .facilities-wrapper{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .mca_career_opportunities{
+    margin-top:10px;
+  }
+  .higher_education .facilities-wrapper{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .career_opportunities_main .subheading{
+    margin-bottom:10px;
+  }
+  /* .higher_education .facilities-wrapper{
+    grid-template-columns: repeat(2, 1fr);
+  } */
+  /*---------------- Programe Tab End Here ----------------*/
 
 /*---------- Campus Overview Page Start Here ----------*/
 .lifeat_states {
@@ -5158,7 +5215,10 @@ position: relative;
   .eligibility_inner{
     padding: 10px;
   }
-  /*--------------- Programe Pages End Here ---------------*/
+  .facilities-wrapper{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  /*--------------- Programee Tab End Here ---------------*/
 }
 @media (max-width: 575.98px) {
   /*--------------- Programe Pages Start Here ---------------*/
