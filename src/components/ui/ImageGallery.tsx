@@ -28,9 +28,9 @@ const ImageGallery = ({ images, className = "" }: ImageGalleryProps) => {
   return (
     <div className="mainimage_gallery">
       <div className={`image-gallery ${className}`}>
-        <div className="row g-4">
+        <div className="row g-2 g-md-4">
           {images.map((item) => (
-            <div className="col-lg-4 col-md-6 col-12" key={item.id}>
+            <div className="col-lg-4 col-sm-6 col-6" key={item.id}>
               <div className="gallery-card">
                 <a
                   href={item.src}

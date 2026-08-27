@@ -56,10 +56,8 @@ const HostelPage = () => {
         <hr />
 
         <div className="girsandboys_hostel ">
-          <div className="row">
-            <div className="col-md-7">
-              <FacilityGrid data={hostelboysFacilities} />
-            </div>
+          <div className="row flex-sm-row-reverse">
+            
             <div className="col-md-5">
               <div className="hostel_image">
                 <Image
@@ -77,10 +75,13 @@ const HostelPage = () => {
                 </div>
               </div>
             </div>
+            <div className="col-md-7 mb-5 mb-md-0">
+              <FacilityGrid data={hostelboysFacilities} />
+            </div>
           </div>
         </div>
 
-        <div className="lastpara_hostel pb-5">
+        <div className="lastpara_hostel pb-3 pb-md-5">
           The hostels are designed to create a home-like environment where students can focus on academics while developing independence, responsibility, and lifelong friendships.
         </div>
 

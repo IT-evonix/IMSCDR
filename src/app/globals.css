@@ -3932,6 +3932,7 @@ Body {
 .gallery-slider-next:hover {
   transform: translateY(-5px);
 }
+
 /* /////////////////////////////////////// */
 .librarianImg {
   position: sticky;
@@ -4736,7 +4737,7 @@ Body {
     align-items: center;
     gap: 10px;
     margin: 5px 0 0;
-    padding: 5px 10px 5px 8px;
+    padding: 7px 13px 7px 8px;
     font-family: Roma-Bold;
     display: flex;
     position: fixed;
@@ -4746,7 +4747,7 @@ Body {
   }
   .sidebar-toggle svg {
     color: #fff;
-    width: 15px;
+    width: 20px;
     height: 20px;
   }
   .sidebar-toggle span {
@@ -4858,6 +4859,23 @@ Body {
     grid-template-columns: repeat(2, 1fr);
   }
   /*--------------- Programee Tab End Here ---------------*/
+  /*--------------- Campus Tab Start Here ---------------*/
+  .lifeat_states{
+    margin: 30px 0 0;
+  }
+  .lifeat_marquee {
+    padding: 30px 0 0;
+  }
+  .privacy_policyand_motto {
+      padding: 30px 0 0;
+  }
+  .lifeat_marquee .marquee_content{
+        font-size: 35px;
+  }
+  .infrastructure_main{
+    margin: 20px 0 30px;
+  }
+/*---------- Campus Overview Page Start Here ----------*/
 }
 
 @media (max-width: 767.98px) {
@@ -4974,7 +4992,7 @@ Body {
     padding: 0px 0 0;
   }
   .objective_section{
-        padding: 30px 0 0;
+    padding: 30px 0 0;
   }
   .mision_box .vision_mision_icon{
     margin: -40px auto 25px;
@@ -5049,7 +5067,8 @@ Body {
 
 /*---------- Campus Overview Page Start Here ----------*/
 .lifeat_states {
-  display: block;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .lifeat_states .verticalseparator{
   display: none;
@@ -5058,8 +5077,41 @@ Body {
   margin: 0 0 20px 0;
 }
 .ourvaluescontent{
-position: relative;
+  position: relative;
   height: inherit;
+}
+.lifeatcampus .motto_quotes{
+  min-height: inherit;
+}
+.lifeat_marquee, .privacy_policyand_motto {
+  padding: 30px 0px 0px;
+}
+.ourvaluescontent{
+  background: linear-gradient(#4a4a4a 0%, #000000b5 20%);
+  border-radius: 0px 0px 30px 30px;
+}
+.ourvaluesmain img {
+    border-radius: 30px 30px 0px 0px;
+    transition-duration: .5s;
+}
+.ourvaluescontent ul li {
+    width: 49%;
+}
+.ourvaluescontent ul{
+  gap: 4px;
+  padding: 10px 4px;
+  border:none;
+}
+.ourvaluescontent{
+  padding: 20px;
+}
+.hostel_image img {
+  width: 100%;
+  height: auto;
+  margin: 0px 0 30px 0;
+}
+.girsandboys_hostel{
+    padding: 20px 0;
 }
 /*---------- Campus Overview Page Start Here ----------*/
 }
@@ -5219,8 +5271,26 @@ position: relative;
     grid-template-columns: repeat(1, 1fr);
   }
   /*--------------- Programee Tab End Here ---------------*/
+/*---------- Campus Overview Page Start Here ----------*/
+  .infrastructure_main{
+    margin: 20px 0 30px;
+  }
+  .mainimage_gallery .gallery-image-wrapper{
+    height: 140px;
+  }
+  .mainimage_gallery .gallery-name{
+    padding: 3px 0;
+    padding: 3px 0;
+    min-height: 20px;
+  }
+  .infrastructure_main_content{
+    font-size: 16px;
+    bottom: 10px;
+  }
+  
+/*---------- Campus Overview Page End Here ----------*/
 }
-@media (max-width: 575.98px) {
+@media (max-width: 449.98px) {
   /*--------------- Programe Pages Start Here ---------------*/
   .faculty_listing_page .faculty-grid{
     grid-template-columns: repeat(1, 1fr);
@@ -5244,4 +5314,12 @@ position: relative;
   }
 
   /*--------------- Programe Pages End Here ---------------*/
+  /*---------- Campus Overview Page End Here ----------*/
+    .mainimage_gallery .gallery-image-wrapper{
+      height: 120px;
+    }
+    .gallery-slider .gallery-image-wrapper{
+      height: 160px;
+    }
+  /*---------- Campus Overview Page End Here ----------*/
 }

@@ -19,30 +19,49 @@ export default function GallerySlider({
   autoplayDelay = 7000,
   slidesToShow = 3,
 }: GallerySliderProps) {
+  const [visibleSlides, setVisibleSlides] = useState(slidesToShow);
   const [currentIndex, setCurrentIndex] = useState(slidesToShow);
   const [enableTransition, setEnableTransition] = useState(true);
 
   const autoplayRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  /*
-   * ==========================================
-   * Clone slides for infinite loop
-   * ==========================================
-   */
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 767) {
+        setVisibleSlides(1);
+      } else if (window.innerWidth <= 991) {
+        setVisibleSlides(2);
+      } else {
+        setVisibleSlides(slidesToShow);
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [slidesToShow]);
+
+  useEffect(() => {
+    setEnableTransition(false);
+    setCurrentIndex(visibleSlides);
+
+    const timer = setTimeout(() => {
+      setEnableTransition(true);
+    }, 50);
+
+    return () => clearTimeout(timer);
+  }, [visibleSlides]);
 
   const clonedItems = [
-    ...items.slice(-slidesToShow),
+    ...items.slice(-visibleSlides),
     ...items,
-    ...items.slice(0, slidesToShow),
+    ...items.slice(0, visibleSlides),
   ];
 
-  const maxIndex = items.length + slidesToShow;
-
-  /*
-   * ==========================================
-   * Fancybox
-   * ==========================================
-   */
+  const maxIndex = items.length + visibleSlides;
 
   useEffect(() => {
     Fancybox.bind("[data-fancybox='gallery']");
@@ -53,58 +72,30 @@ export default function GallerySlider({
     };
   }, []);
 
-  /*
-   * ==========================================
-   * Next Button
-   * ==========================================
-   */
-
   const handleNext = useCallback(() => {
     setEnableTransition(true);
-
     setCurrentIndex((prev) => prev + 1);
   }, []);
 
-  /*
-   * ==========================================
-   * Previous Button
-   * ==========================================
-   */
-
   const handlePrev = useCallback(() => {
     setEnableTransition(true);
-
     setCurrentIndex((prev) => prev - 1);
   }, []);
-
-  /*
-   * ==========================================
-   * Infinite Loop
-   * ==========================================
-   */
 
   useEffect(() => {
     if (!enableTransition) {
       return;
     }
 
-    /*
-     * Last clone reached
-     * Move silently to first real slide
-     */
     if (currentIndex === maxIndex) {
       const timer = setTimeout(() => {
         setEnableTransition(false);
-        setCurrentIndex(slidesToShow);
+        setCurrentIndex(visibleSlides);
       }, 500);
 
       return () => clearTimeout(timer);
     }
 
-    /*
-     * First clone reached
-     * Move silently to last real slide
-     */
     if (currentIndex === 0) {
       const timer = setTimeout(() => {
         setEnableTransition(false);
@@ -113,16 +104,16 @@ export default function GallerySlider({
 
       return () => clearTimeout(timer);
     }
-  }, [currentIndex, maxIndex, slidesToShow, items.length, enableTransition]);
-
-  /*
-   * ==========================================
-   * Autoplay
-   * ==========================================
-   */
+  }, [
+    currentIndex,
+    maxIndex,
+    visibleSlides,
+    items.length,
+    enableTransition,
+  ]);
 
   const startAutoplay = useCallback(() => {
-    if (!autoplay || items.length <= slidesToShow) {
+    if (!autoplay || items.length <= visibleSlides) {
       return;
     }
 
@@ -132,16 +123,14 @@ export default function GallerySlider({
 
     autoplayRef.current = setInterval(() => {
       setEnableTransition(true);
-
       setCurrentIndex((prev) => prev + 1);
     }, autoplayDelay);
-  }, [autoplay, autoplayDelay, items.length, slidesToShow]);
-
-  /*
-   * ==========================================
-   * Start Autoplay
-   * ==========================================
-   */
+  }, [
+    autoplay,
+    autoplayDelay,
+    items.length,
+    visibleSlides,
+  ]);
 
   useEffect(() => {
     startAutoplay();
@@ -153,23 +142,12 @@ export default function GallerySlider({
     };
   }, [startAutoplay]);
 
-  /*
-   * ==========================================
-   * Empty State
-   * ==========================================
-   */
-
   if (!items.length) {
     return null;
   }
 
-  /*
-   * ==========================================
-   * Slider Position
-   * ==========================================
-   */
-
-  const translatePercentage = (currentIndex * 100) / slidesToShow;
+  const translatePercentage =
+    (currentIndex * 100) / visibleSlides;
 
   return (
     <div className="gallery-slider mainimage_gallery">
@@ -188,7 +166,7 @@ export default function GallerySlider({
               className="gallery-slider-item"
               key={`${item.id}-${index}`}
               style={{
-                flex: `0 0 ${100 / slidesToShow}%`,
+                flex: `0 0 ${100 / visibleSlides}%`,
               }}
             >
               <div className="gallery-card">
@@ -203,22 +181,27 @@ export default function GallerySlider({
                       src={item.src}
                       alt={item.name}
                       fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      sizes="(max-width: 767px) 100vw, (max-width: 991px) 50vw, 33vw"
                       className="gallery-image"
                     />
 
                     <div className="gallery-overlay">
-                      <span className="gallery-view">View Image</span>
+                      <span className="gallery-view">
+                        View Image
+                      </span>
                     </div>
                   </div>
                 </a>
 
-                <div className="gallery-name">{item.name}</div>
+                <div className="gallery-name">
+                  {item.name}
+                </div>
               </div>
             </div>
           ))}
         </div>
       </div>
+
       <div className="gallery-slider-controls">
         <button
           type="button"
@@ -233,7 +216,7 @@ export default function GallerySlider({
             width={100}
             height={100}
             src="/images/campus/leftarrow.png"
-            alt="Value"
+            alt="Previous"
             className="img-fluid"
           />
         </button>
@@ -251,7 +234,7 @@ export default function GallerySlider({
             width={100}
             height={100}
             src="/images/campus/rightarrow.png"
-            alt="Value"
+            alt="Next"
             className="img-fluid"
           />
         </button>
