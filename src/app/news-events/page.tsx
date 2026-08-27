@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import InnerpageBanner from '@/components/InnerpageBanner';
 import { newsData } from '@/data/newsData';
+import { ComingSoonState } from '@/components/ui/ComingSoonState';
 
 /* ─── Types ─────────────────────────────────────── */
 interface NewsEventItem {
@@ -62,8 +63,12 @@ const Page = () => {
       const res = await fetch('/api/news-events?page=1&limit=50&status=Published');
       const data = await res.json();
       if (res.ok && data.status === 'success' && Array.isArray(data.data)) {
-        // Only display published/active posts on website
-        const publishedOnly = data.data.filter((item: any) => item.status === 'Published');
+        // Only display published/active News and Events (exclude Blogs)
+        const publishedOnly = data.data.filter(
+          (item: any) =>
+            item.status === 'Published' &&
+            item.contentType?.toLowerCase() !== 'blog'
+        );
         setDynamicItems(publishedOnly);
       }
     } catch {
@@ -247,6 +252,10 @@ const Page = () => {
               </div>
             ))}
 
+            {/* ── Empty State: Coming Soon ── */}
+            {!loading && dynamicItems.length === 0 && newsData.length === 0 && (
+              <ComingSoonState />
+            )}
           </div>
         </div>
       </section>
