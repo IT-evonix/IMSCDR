@@ -97,8 +97,9 @@ export default function ContentLibraryPage() {
     } else if (item.contentFormat === 'link' && item.externalUrl) {
       window.open(item.externalUrl, '_blank');
     } else {
-      const targetSlug = item.rawSlug || item.slug.replace('/post/', '').replace('/news-events/', '');
-      window.open(`/news-events/${targetSlug}`, '_blank');
+      const targetSlug = item.rawSlug || item.slug.replace('/post/', '').replace('/news-events/', '').replace('/blogs/', '');
+      const pathPrefix = (item.type || '').toUpperCase() === 'BLOG' ? '/blogs/' : '/news-events/';
+      window.open(`${pathPrefix}${targetSlug}`, '_blank');
     }
   };
 
