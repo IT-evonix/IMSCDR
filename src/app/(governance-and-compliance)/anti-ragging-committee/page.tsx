@@ -5,6 +5,7 @@ import {
   antiRaggingCommitteeMembers,
 } from "@/data/tablemembers";
 
+
 export default function AntiRaggingCommitteePage() {
   return (
     <section className="innerpage-wrapper">
@@ -25,3 +26,4 @@ export default function AntiRaggingCommitteePage() {
     </section>
   );
 }
+
