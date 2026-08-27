@@ -10,7 +10,7 @@ const CoursesStrip = () => {
       <div className="container">
         <div className="educationinner">
           <div className="educationbox">
-            <Link href="/">
+            <Link href="/program-mba/overview">
               <div className="eduiconbox">
                 <Image
                   src="/images/home/education-cap.png"
@@ -27,7 +27,7 @@ const CoursesStrip = () => {
             </Link>
           </div>
           <div className="educationbox">
-            <Link href="/">
+            <Link href="/program-mca/overview">
               <div className="eduiconbox">
                 <Image
                   src="/images/home/education-cap.png"
@@ -44,7 +44,7 @@ const CoursesStrip = () => {
             </Link>
           </div>
           <div className="educationbox">
-            <Link href="/">
+            <Link href="/program-bba/overview">
               <div className="eduiconbox">
                 <Image
                   src="/images/home/education-cap.png"
@@ -56,12 +56,12 @@ const CoursesStrip = () => {
               </div>
               <div className="educationtext">
                 <h6>BBA</h6>
-                <p>Program </p>
+                <p>Programme</p>
               </div>
             </Link>
           </div>
           <div className="educationbox">
-            <Link href="/">
+            <Link href="/program-bca/overview">
               <div className="eduiconbox">
                 <Image
                   src="/images/home/education-cap.png"
@@ -73,12 +73,12 @@ const CoursesStrip = () => {
               </div>
               <div className="educationtext">
                 <h6>BCA</h6>
-                <p>Program </p>
+                <p>Programme</p>
               </div>
             </Link>
           </div>
           <div className="educationbox">
-            <Link href="/">
+            <Link href="/program-phd">
               <div className="eduiconbox">
                 <Image
                   src="/images/home/education-cap.png"
@@ -89,7 +89,7 @@ const CoursesStrip = () => {
                 />
               </div>
               <div className="educationtext">
-                <h6>PH.D</h6>
+                <h6>Ph.D</h6>
                 <p>Doctor of Philosophy </p>
               </div>
             </Link>

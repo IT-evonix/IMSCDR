@@ -39,10 +39,10 @@ export const menuItems: MenuItem[] = [
         label: "College Development Committee (CDC)",
         href: "/college-development-commitee",
       },
-      // {
-      //   label: "Approvals & Affiliations",
-      //   href: "/approvals-and-affiliations",
-      // },
+      {
+        label: "Approvals & Affiliations",
+        href: "/approvals-and-affiliations",
+      },
     ],
   },
 
@@ -55,19 +55,19 @@ export const menuItems: MenuItem[] = [
       },
       {
         label: "MCA",
-        href: "/",
+        href: "/program-mca/overview",
       },
       {
         label: "BBA",
-        href: "/",
+        href: "/program-bba/overview",
       },
       {
         label: "BCA",
-        href: "/",
+        href: "/program-bca/overview",
       },
       {
         label: "Ph.D",
-        href: "/",
+        href: "/program-phd",
       },
       {
         label: "Faculty",
@@ -75,11 +75,11 @@ export const menuItems: MenuItem[] = [
       },
       {
         label: "Academic Calendar",
-        href: "/",
+        href: "/academic-calendar",
       },
       {
         label: "Research & Innovation",
-        href: "/",
+        href: "/research-and-innovation",
       },
     ],
   },
@@ -105,7 +105,7 @@ export const menuItems: MenuItem[] = [
       },
       {
         label: "Apply Online",
-        href: "/",
+        href: "https://admissions.imscdr.ac.in/",
       },
       {
         label: "Downloads",
@@ -129,7 +129,7 @@ export const menuItems: MenuItem[] = [
   },
   {
     label: "Placements",
-    href: "/",
+    href: "/placement",
   },
 
   // {
@@ -219,7 +219,7 @@ export const menuItems: MenuItem[] = [
 
   {
     label: "Student Corner",
-    href: "/",
+    href: "/student-corner",
   },
 
   // {
@@ -337,19 +337,19 @@ export const menuItems: MenuItem[] = [
     children: [
       {
         label: "FRA Fee Structure ",
-        href: "/",
+        href: "/frafeesstructure",
       },
       {
         label: "Mandatory Disclosure",
-        href: "/",
+        href: "/mandatory-disclosure",
       },
       {
         label: "IQAC",
-        href: "/",
+        href: "/IQAC",
       },
       {
         label: "Policies",
-        href: "/",
+        href: "/policies",
       },
 
       {
@@ -357,32 +357,40 @@ export const menuItems: MenuItem[] = [
         children: [
           {
             label: "Anti-Ragging Committee",
-            href: "/",
+            href: "/anti-ragging-committee",
           },
           {
             label: "Anti-Ragging Squad",
-            href: "/",
+            href: "/anti-ragging-squad",
           },
           {
             label: "Student Grievance Redressal Committee",
-            href: "/",
+            href: "/student-grievance-redressal-committee",
           },
           {
             label: "Internal Committee (ICC/POSH)",
-            href: "/",
+            href: "/internal-commitee",
           },
           {
             label: "SC/ST Cell",
-            href: "/",
+            href: "/sc-st-cell",
           },
           {
             label: "Equal Opportunity Cell",
-            href: "/",
+            href: "/equal-opportunity-cell",
+          },
+          {
+            label: "Governing Body",
+            href: "/governing-body",
+          },
+          {
+            label: "College Development Committee (CDC)",
+            href: "/college-development-commitee",
           },
           {
             label: "Online Grievance Portal",
             href: "/",
-          },
+          },          
         ],
       },
     ],
@@ -397,13 +405,13 @@ export const menuItems: MenuItem[] = [
       },
       {
         label: "Blogs",
-        href: "/",
+        href: "/blogs",
       },
     ],
   },
 
   {
     label: "IQAC",
-    href: "/",
+    href: "/IQAC",
   },
 ];

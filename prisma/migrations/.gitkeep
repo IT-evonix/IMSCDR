@@ -1,0 +1,2 @@
+# Prisma Migrations Folder
+# When you run `npx prisma migrate dev --name init`, migrations will be generated here automatically.

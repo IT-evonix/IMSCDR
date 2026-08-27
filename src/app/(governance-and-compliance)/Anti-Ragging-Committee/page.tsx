@@ -5,22 +5,22 @@ import {
   antiRaggingCommitteeMembers,
 } from "@/data/tablemembers";
 
-export default function GovernanceGoverningBody() {
+export default function AntiRaggingCommitteePage() {
   return (
     <section className="innerpage-wrapper">
       <InnerpageBanner
-        title="Anti-Ragging And Discipline Cell"
-        breadcrumbs={[{ label: "Anti-Ragging And Discipline Cell" }]}
+        title="Anti Ragging Committee"
+        breadcrumbs={[{ label: "Anti Ragging Committee" }]}
       />
       <div className="fullwidth_page">
         <div className="tablemain_section">
-        <div className="container">
-          <div className="mb-4">
-            <div className="heading text-center">Committee Members </div>
+          <div className="container">
+            <div className="mb-4">
+              <div className="heading text-center">Committee Members</div>
+            </div>
+            <Table columns={antiRaggingCommitteeColumns} data={antiRaggingCommitteeMembers} />
           </div>
-          <Table columns={antiRaggingCommitteeColumns} data={antiRaggingCommitteeMembers} />
         </div>
-      </div>
       </div>
     </section>
   );

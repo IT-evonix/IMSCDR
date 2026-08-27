@@ -60,37 +60,37 @@ const Footer = () => {
                   <Link href="/">Home</Link>
                 </li>
                 <li>
-                  <Link href="/">About</Link>
+                  <Link href="/about-ims">About</Link>
                 </li>
                 <li>
-                  <Link href="/">Program</Link>
+                  <Link href="/program-mba/overview">Program</Link>
                 </li>
                 <li>
                   <Link href="/">Governance</Link>
                 </li>
                 <li>
-                  <Link href="/">Placement</Link>
+                  <Link href="/placement">Placement</Link>
                 </li>
                 <li>
-                  <Link href="/">Library</Link>
+                  <Link href="/lifeatims/library">Library</Link>
                 </li>
                 <li>
-                  <Link href="/">Admission</Link>
+                  <Link href="/admission-process">Admission</Link>
                 </li>
                 <li>
                   <Link href="/">R & D</Link>
                 </li>
                 <li>
-                  <Link href="/">IQAC</Link>
+                  <Link href="/IQAC">IQAC</Link>
                 </li>
                 <li>
-                  <Link href="/">Faculty</Link>
+                  <Link href="/">People</Link>
                 </li>
                 <li>
                   <Link href="/">Careers</Link>
                 </li>
                 <li>
-                  <Link href="/">Contact</Link>
+                  <Link href="/contact">Contact</Link>
                 </li>
               </ul>
             </div>
@@ -99,24 +99,24 @@ const Footer = () => {
               <div className="footerheading">Important Links</div>
               <ul>
                 <li>
-                  <Link href="/">Anti Ragging Committee</Link>
+                  <Link href="/anti-ragging-committee">Anti Ragging Committee</Link>
                 </li>
                 <li>
                   <Link href="/">Anti Sexual Harassment Committee</Link>
                 </li>
                 <li>
-                  <Link href="/">
+                  <Link href="/sc-st-cell">
                     SC/ST Cell & Anti Discrimination Committee
                   </Link>
                 </li>
                 <li>
-                  <Link href="/">Grievance Redressal Committee</Link>
+                  <Link href="/student-grievance-redressal-committee">Grievance Redressal Committee</Link>
                 </li>
                 <li>
-                  <Link href="/">NIRF</Link>
+                  <Link target="_blank" href="/pdf/home/NIRF.pdf">NIRF</Link>
                 </li>
                 <li>
-                  <Link href="/">IQAC</Link>
+                  <Link href="/IQAC">IQAC</Link>
                 </li>
                 <li>
                   <Link href="/">Mandatory Disclosure</Link>
