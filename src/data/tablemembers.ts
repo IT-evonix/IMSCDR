@@ -318,10 +318,10 @@ export const antiRaggingSqualColumns = [
     key: "srNo",
     title: "Sr. No",
   },
-  // {
-  //   key: "name",
-  //   title: "Name Of The Member",
-  // },
+  {
+    key: "name",
+    title: "Name Of The Member",
+  },
   {
     key: "role",
     title: "Role",
@@ -338,14 +338,14 @@ export const antiRaggingSqualColumns = [
 export const antiRaggingSqualMembers = [
   {
     srNo: "1",
-    // name: "Dr. Pronoti Telore",
+    name: "Dr. Pronoti Telore",
     role: "Committee Head",
     representation: "In-charge Director of the Institute",
     contactNumber: "9823256539",
   },
   {
     srNo: "2",
-    // name: "Dr. Vikram Barnabas",
+    name: "Dr. Vikram Barnabas",
     role: "Member",
     representation: "Deputy Director of the Institute",
     contactNumber: "9890937793",
@@ -353,7 +353,7 @@ export const antiRaggingSqualMembers = [
 
     {
     srNo: "3",
-    // name: "Mr. Mahesh Dixit",
+    name: "Mr. Mahesh Dixit",
     role: "Member",
     representation: "OS of the Institute",
     contactNumber: "9271225106",
@@ -361,7 +361,7 @@ export const antiRaggingSqualMembers = [
 
     {
     srNo: "4",
-    // name: "Prof. Pratap Gaikwad",
+    name: "Prof. Pratap Gaikwad",
     role: "Member",
     representation: "Assistant Professor and Rector of Ladies hostel",
     contactNumber: "9673678383",
@@ -369,7 +369,7 @@ export const antiRaggingSqualMembers = [
 
     {
     srNo: "5",
-    // name: "Dr. Mudassar I Sayyed",
+    name: "Dr. Mudassar I Sayyed",
     role: "Member",
     representation: "Assistant Professor",
     contactNumber: "9823100756",
@@ -392,10 +392,10 @@ export const StudentGrievanceRedressalCommitteeColumns = [
   //   key: "date",
   //   title: "Date of Appointment",
   // },
-  // {
-  //   key: "name",
-  //   title: "Name of the Member",
-  // },
+  {
+    key: "name",
+    title: "Name of the Member",
+  },
    {
     key: "role",
     title: "Role",
@@ -458,10 +458,10 @@ export const InternalCommitteeCommitteeColumns = [
     key: "srNo",
     title: "Sr. No",
   },
-  // {
-  //   key: "name",
-  //   title: "Name of the Member",
-  // },
+  {
+    key: "name",
+    title: "Name of the Member",
+  },
    {
     key: "role",
     title: "Role",
@@ -485,42 +485,56 @@ export const InternalCommitteeCommitteeMembers = [
   },
     {
     srNo: "2",
-    name: "Dr. Swati Barnabas",
+    name: "Dr. Vikram Barnabas",
     role: "Member",
     representation: "In-charge Director of the Institute",
     mobileNumber: "9823256539",
   },
     {
     srNo: "3",
-    name: "Dr. Swati Barnabas",
+    name: "Dr. Mahesh Potdar",
     role: "Member",
     representation: "Teaching staff of the Institute",
     mobileNumber: "9422727198",
   },
     {
     srNo: "4",
-    name: "Dr. Swati Barnabas",
+    name: "Mr.Mahesh Dixit",
     role: "Member",
     representation: "OS of the Institute",
     mobileNumber: "9271225106",
   },
     {
     srNo: "5",
-    name: "Dr. Swati Barnabas",
+    name: "Ms. Divya Jadhav",
     role: "Member",
     representation: "Student of the Institute",
     mobileNumber: "-",
   },
     {
     srNo: "6",
-    name: "Dr. Swati Barnabas",
+    name: "Mr. Kanawade Avishkar",
     role: "Member",
     representation: "Student of the Institute",
     mobileNumber: "-",
   },
     {
     srNo: "7",
-    name: "Dr. Swati Barnabas",
+    name: "Mr. Shinde Datta Angad",
+    role: "Member",
+    representation: "Student of the Institute",
+    mobileNumber: "-",
+  },
+    {
+    srNo: "8",
+    name: "Dr. Hatim Kayyuni",
+    role: "Member",
+    representation: "Student of the Institute",
+    mobileNumber: "-",
+  },
+    {
+    srNo: "9",
+    name: "Mr. Jitin Adhav",
     role: "Member",
     representation: "Student of the Institute",
     mobileNumber: "-",
