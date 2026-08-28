@@ -231,7 +231,7 @@ export const antiRaggingCommitteeColumns = [
   },
 ];
 export const antiRaggingCommitteeMembers = [
-  {
+  { 
     srNo: "1",
     name: "Dr. Pronoti Telore",
     role: "Director - Member Secretary",

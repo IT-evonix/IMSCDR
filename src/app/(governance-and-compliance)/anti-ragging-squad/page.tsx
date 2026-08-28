@@ -12,7 +12,7 @@ export default function GovernanceGoverningBody() {
         title="Anti-Ragging Squad"
         breadcrumbs={[{ label: "Anti-Ragging Squad" }]}
       />
-      <div className="fullwidth_page">
+      <div className="fullwidth_page test">
         <div className="tablemain_section">
         <div className="container">
           <div className="mb-4">
