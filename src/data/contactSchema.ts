@@ -4,12 +4,14 @@ export const contactSchema = z.object({
   firstName: z
     .string()
     .trim()
-    .min(2, "First name is required."),
+    .min(2, "First name is required.")
+    .regex(/^[a-zA-Z\s]+$/, "First name must contain only alphabets."),
 
   lastName: z
     .string()
     .trim()
-    .min(2, "Last name is required."),
+    .min(2, "Last name is required.")
+    .regex(/^[a-zA-Z\s]+$/, "Last name must contain only alphabets."),
 
   email: z
     .string()

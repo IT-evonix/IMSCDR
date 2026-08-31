@@ -62,7 +62,11 @@ const ContactForm = () => {
                 className={`form-control custom-input ${
                   errors.firstName ? "is-invalid" : ""
                 }`}
-                {...register("firstName")}
+                {...register("firstName", {
+                  onChange: (e) => {
+                    e.target.value = e.target.value.replace(/[^a-zA-Z\s]/g, "");
+                  },
+                })}
               />
 
               {errors.firstName && (
@@ -77,7 +81,11 @@ const ContactForm = () => {
                 className={`form-control custom-input ${
                   errors.lastName ? "is-invalid" : ""
                 }`}
-                {...register("lastName")}
+                {...register("lastName", {
+                  onChange: (e) => {
+                    e.target.value = e.target.value.replace(/[^a-zA-Z\s]/g, "");
+                  },
+                })}
               />
 
               {errors.lastName && (
@@ -102,12 +110,17 @@ const ContactForm = () => {
 
             <div className="col-lg-6 mb-4">
               <input
-                type="text"
+                type="tel"
                 placeholder="Mobile Number"
+                maxLength={10}
                 className={`form-control custom-input ${
                   errors.mobile ? "is-invalid" : ""
                 }`}
-                {...register("mobile")}
+                {...register("mobile", {
+                  onChange: (e) => {
+                    e.target.value = e.target.value.replace(/\D/g, "").slice(0, 10);
+                  },
+                })}
               />
 
               {errors.mobile && (
