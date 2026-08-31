@@ -234,6 +234,7 @@ export const antiRaggingCommitteeMembers = [
   { 
     srNo: "1",
     name: "Dr. Pronoti Telore",
+    highlight: true,
     role: "Director - Member Secretary",
     representation: "Associated with the Institute as Director of the Institute",
     contactNumber: "9822079675",
@@ -339,6 +340,7 @@ export const antiRaggingSqualMembers = [
   {
     srNo: "1",
     name: "Dr. Pronoti Telore",
+    highlight: true,
     role: "Committee Head",
     representation: "In-charge Director of the Institute",
     contactNumber: "9823256539",
@@ -400,14 +402,14 @@ export const StudentGrievanceRedressalCommitteeColumns = [
     key: "role",
     title: "Role",
   },
-  {
-    key: "representation",
-    title: "Representation",
-  },
-  {
-    key: "contactNumber",
-    title: "Contact Number",
-  },
+  // {
+  //   key: "representation",
+  //   title: "Representation",
+  // },
+  // {
+  //   key: "contactNumber",
+  //   title: "Contact Number",
+  // },
 ];
 export const StudentGrievanceRedressalCommitteeMembers = [
   {
@@ -416,8 +418,8 @@ export const StudentGrievanceRedressalCommitteeMembers = [
     date:"5/1/2022",
     name: "Dr. Pronoti Telore",
     role: "Member",
-    representation: "In-charge Director of the Institute",
-    contactNumber: "9823256539",
+    // representation: "In-charge Director of the Institute",
+    // contactNumber: "9823256539",
   },
   {
     srNo: "2",
@@ -425,28 +427,37 @@ export const StudentGrievanceRedressalCommitteeMembers = [
     date:"5/1/2022",
     name: "Dr. V. P. Barnabas",
     role: "Member",
-    representation: "Deputy Director of the Institute",
-    contactNumber: "9890937793",
+    // representation: "Deputy Director of the Institute",
+    // contactNumber: "9890937793",
   },
-
   {
     srNo: "3",
     referenceNumber:"GR/IMS/2022",
     date:"5/1/2022",
+    name: "Dr.M.B.Mehta",
+    role: "Member",
+    // representation: "Deputy Director of the Institute",
+    // contactNumber: "9890937793",
+  },
+  {
+    srNo: "4",
+    referenceNumber:"GR/IMS/2022",
+    date:"5/1/2022",
     name: "Dr. M. P. Potdar",
     role: "Committee Head",
-    representation: "Associate Professor",
-    contactNumber: "9422727198",
+    highlight: true,
+    // representation: "Associate Professor",
+    // contactNumber: "9422727198",
   },
 
   {
-    srNo: "4",
+    srNo: "5",
     referenceNumber:"GR/IMS/2022",
     date:"-",
     name: "Dr. Hatim Kayumi",
     role: "Member",
-    representation: "Associate Professor",
-    contactNumber: "9860076110",
+    // representation: "Associate Professor",
+    // contactNumber: "9860076110",
   },
 
 ];
@@ -571,22 +582,22 @@ export const casteBasedCommitteeColumns = [
     key: "role",
     title: "Role",
   },
-  {
-    key: "representation",
-    title: "Representation",
-  },
-  {
-    key: "caste",
-    title: "Caste",
-  },
-  {
-    key: "gender",
-    title: "Gender",
-  },
-  {
-    key: "mobileNumber",
-    title: "Mobile Number",
-  },
+  // {
+  //   key: "representation",
+  //   title: "Representation",
+  // },
+  // {
+  //   key: "caste",
+  //   title: "Caste",
+  // },
+  // {
+  //   key: "gender",
+  //   title: "Gender",
+  // },
+  // {
+  //   key: "mobileNumber",
+  //   title: "Mobile Number",
+  // },
 
 
 ];
@@ -675,14 +686,14 @@ export const EqualOpportunityCellCommitteeColumns = [
     key: "srNo",
     title: "Sr. No",
   },
-  {
-    key: "referenceNumber",
-    title: "Appointment Order Reference Number",
-  },
-  {
-    key: "date",
-    title: "Date of Appointment",
-  },
+  // {
+  //   key: "referenceNumber",
+  //   title: "Appointment Order Reference Number",
+  // },
+  // {
+  //   key: "date",
+  //   title: "Date of Appointment",
+  // },
   {
     key: "name",
     title: "Name of the Member",
@@ -691,101 +702,102 @@ export const EqualOpportunityCellCommitteeColumns = [
     key: "role",
     title: "Role",
   },
-  {
-    key: "associatedWith",
-    title: "Associated with",
-  },
-  {
-    key: "mobileNumber",
-    title: "Mobile Number",
-  },
-  {
-    key: "emailId",
-    title: "Email ID",
-  },
-  {
-    key: "caste",
-    title: "Caste",
-  },
-  {
-    key: "gender",
-    title: "Gender",
-  },
+  // {
+  //   key: "associatedWith",
+  //   title: "Associated with",
+  // },
+  // {
+  //   key: "mobileNumber",
+  //   title: "Mobile Number",
+  // },
+  // {
+  //   key: "emailId",
+  //   title: "Email ID",
+  // },
+  // {
+  //   key: "caste",
+  //   title: "Caste",
+  // },
+  // {
+  //   key: "gender",
+  //   title: "Gender",
+  // },
 
 ];
 export const EqualOpportunityCellCommitteeMembers = [
   {
     srNo: "1",
-    referenceNumber:"IMS/SC/ST",
-    date:"-",
     name: "Dr. Pronoti Telore",
-    role: "In-Charge Director",
-    associatedWith: "-",
-    mobileNumber: "-",
-    emailId: "-",
-    caste:"-",
-    gender:"-",
+    role: "Member",
+    // representation: "Teaching staff of the Institute",
+    // caste: "SBC",
+    // gender: "Female",
+    // mobileNumber:"9326224999",
   },
   {
     srNo: "2",
-    referenceNumber:"IMS/SC/ST",
-    date:"2/7/2018",
     name: "Mr. P.M. Gaikwad",
     role: "Member",
-    associatedWith: "Non teaching staff of the Institute",
-    mobileNumber: "9673678383",
-    emailId: "pratap_gaikwad3842@rediffmail.com",
-    caste:"SC",
-    gender:"Male",
+    // representation: "Teaching staff and Rector of Ladies Hostel",
+    // caste: "SC",
+    // gender: "Male",
+    // mobileNumber:"9673678383",
   },
   {
     srNo: "3",
-    referenceNumber:"IMS/SC/ST",
-    date:"5/1/2022",
     name: "Dr. V. P. Barnabas",
     role: "Member",
-    associatedWith: "Teaching staff of the Institute",
-    mobileNumber: "9890937793",
-    emailId: "vikram.barnabas@rediffmail.com",
-    caste:"Other",
-    gender:"Male",
+    // representation: "non-teaching staff member of the Institute",
+    // caste: "SC",
+    // gender: "Male",
+    // mobileNumber:"9881662686",
   },
   {
     srNo: "4",
-    referenceNumber:"IMS/SC/ST",
-    date:"2/7/2018",
     name: "Dr. M. P. Potdar",
-    role: "Coordinator",
-    associatedWith: "Teaching staff of the Institute",
-    mobileNumber: "9422727198",
-    emailId: "maheshpotdar@rediffmail.com",
-    caste:"Other",
-    gender:"Male",
+    role: "Member",
+    // representation: "Member",
+    // caste: "Parsi - Minority",
+    // gender: "Male",
+    // mobileNumber:"9822079675",
   },
   {
     srNo: "5",
-    referenceNumber:"IMS/SC/ST",
-    date:"-",
-    name: "Dr.Anjali Vaidya",
-    role: "-",
-    associatedWith: "-",
-    mobileNumber: "-",
-    emailId: "-",
-    caste:"-",
-    gender:"-",
+    name: "Prof.Supriya Sapa",
+    role: "Member",
+    // representation: "Deputy Director of the Institute",
+    // caste: "Christian - Minority",
+    // gender: "Male",
+    // mobileNumber:"9890937793",
   },
   {
     srNo: "6",
-    referenceNumber:"IMS/SC/ST",
-    date:"-",
     name: "Prof.Supriya Sapa",
-    role: "-",
-    associatedWith: "-",
-    mobileNumber: "-",
-    emailId: "-",
-    caste:"-",
-    gender:"-",
+    role: "Committee Head",
+    highlight: true,
+    // representation: "Teaching staff of the Institute",
+    // caste: "OBC",
+    // gender: "Male",
+    // mobileNumber:"9422727198",
   },
+  // {
+  //   srNo: "7",
+  //   name: "Dr. Anjali Vaidya",
+  //   role: "Member",
+  //   representation: "Teaching staff of the Institute",
+  //   caste: "Open",
+  //   gender: "Female",
+  //   mobileNumber:"9850242840",
+  // },
+  // {
+  //   srNo: "8",
+  //   name: "Prof. Shubhangi Kharmate",
+  //   role: "Member",
+  //   representation: "Teaching staff of the Institute",
+  //   caste: "NTD",
+  //   gender: "Female",
+  //   mobileNumber:"9850866888",
+  // },
   
 ];
 

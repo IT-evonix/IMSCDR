@@ -2838,6 +2838,25 @@ Body {
   color: #000;
   font-family: "Roma-Regular";
 }
+.faculty-category:first-child .faculty-grid{
+  grid-template-columns: repeat(2, 1fr);
+}
+.faculty-category:first-child .faculty-grid .faculty-item .faculty-card{
+  display: flex;
+}
+.faculty-category:first-child .faculty-grid .faculty-item .faculty-image{
+    width: 48%;
+    height: 260px;
+}
+.faculty-category:first-child .faculty-grid .faculty-content{
+  text-align: start;
+}
+.faculty-content a{
+  text-decoration:none;
+  color: rgb(9, 70, 142);
+  font-size:14px;
+  margin:5px 0px 5px 0px;
+}
 /*-------------- Faculty New Design ---------------*/
 /* =========================================
    FACULTY POPUP OVERLAY
