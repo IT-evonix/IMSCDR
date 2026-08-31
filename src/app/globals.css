@@ -5367,6 +5367,34 @@ Body {
     width: 100%;
   }
 /*---------- Campus Overview Page End Here ----------*/
+
+/* New Home Page Banner */
+  .homepage .herobanner_Content{
+    position: absolute;
+    bottom: 0%;
+    height: auto;
+    align-items: center;
+    background: transparent;
+  }
+  .homepage .hero-video video{
+    height: 300px;
+    overflow: hidden;
+    object-fit: cover;
+  }
+  .homepage .hero-video:after{
+    display:block;
+  }
+  /* .herobanner_Content h4 {
+    padding: 10px 0;
+    font-size: 28px;
+  }
+  .herobanner_Content h4 {
+    padding: 10px 0;
+    font-size: 28px;
+  }
+  .herobanner_Content h1 {
+      font-size: 40px;
+  } */
 }
 @media (max-width: 449.98px) {
   /*--------------- Programe Pages Start Here ---------------*/
