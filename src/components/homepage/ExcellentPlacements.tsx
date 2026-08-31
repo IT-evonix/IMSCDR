@@ -30,7 +30,7 @@ const ExcellentPlacements = () => {
               </div>
               <div className="excell_redbox">
                 <div className="row">
-                  <div className="col-sm-6">
+                  <div className="col-sm-6 col-6">
                     <div className="placement_whitebox">
                       <div className="row">
                         <div className="col-lg-12 mb-3">
@@ -49,7 +49,7 @@ const ExcellentPlacements = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="col-sm-6">
+                  <div className="col-sm-6 col-6">
                     <div className="placement_whitebox">
                       <div className="row">
                         <div className="col-lg-12 mb-3">
