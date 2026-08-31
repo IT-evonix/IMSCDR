@@ -16,7 +16,7 @@ export default function GovernanceGoverningBody() {
         <div className="tablemain_section">
         <div className="container">
           <div className="mb-4">
-            <div className="heading text-center">Committee Members </div>
+            <div className="heading text-center">Committee Members</div>
           </div>
           <Table columns={antiRaggingSqualColumns} data={antiRaggingSqualMembers} />
         </div>

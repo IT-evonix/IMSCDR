@@ -2,7 +2,7 @@
   font-family: "Roma-Light";
   src: url("/fonts/ROMA_LIGHT.woff2") format("woff2");
   font-display: swap;
-}
+} 
 @font-face {
   font-family: "Roma-Regular";
   src: url("/fonts/ROMA_REGULAR.woff2") format("woff2");
