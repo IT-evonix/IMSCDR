@@ -1,5 +1,6 @@
 const prisma = require('../config/db');
 const { generateCsv } = require('../utils/exportHelper');
+const contactExcelService = require('../services/contactExcelService');
 
 // Submit Contact Us Form (Public API for website visitors)
 exports.submitContactForm = async (req, res, next) => {
@@ -25,23 +26,65 @@ exports.submitContactForm = async (req, res, next) => {
       return res.status(400).json({ status: 'fail', message: 'Message content is required.' });
     }
 
-    const newMessage = await prisma.contactMessage.create({
-      data: {
-        firstName: firstName.trim(),
-        lastName: lastName.trim(),
-        email: email.trim().toLowerCase(),
-        mobile: mobile.trim(),
-        subject: subject.trim(),
-        message: message.trim(),
-        status: 'Unread',
-      },
-    });
+    const storageMode = process.env.CONTACT_STORAGE_MODE || 'excel';
+    let savedData;
+
+    if (storageMode === 'database') {
+      try {
+        savedData = await prisma.contactMessage.create({
+          data: {
+            firstName: firstName.trim(),
+            lastName: lastName.trim(),
+            email: email.trim().toLowerCase(),
+            mobile: mobile.trim(),
+            subject: subject.trim(),
+            message: message.trim(),
+            status: 'Unread',
+          },
+        });
+      } catch (dbErr) {
+        console.warn('Database unreachable. Falling back to Excel storage:', dbErr.message);
+        savedData = contactExcelService.appendContactToExcel({
+          firstName,
+          lastName,
+          email,
+          mobile,
+          subject,
+          message,
+        });
+      }
+    } else {
+      // Excel Storage Mode (Default when PostgreSQL is not ready)
+      savedData = contactExcelService.appendContactToExcel({
+        firstName,
+        lastName,
+        email,
+        mobile,
+        subject,
+        message,
+      });
+    }
 
     return res.status(201).json({
       status: 'success',
       message: 'Your message has been submitted successfully. Our team will contact you soon!',
-      data: newMessage,
+      data: savedData,
     });
+  } catch (error) {
+    next(error);
+  }
+};
+
+// Download Contact Enquiries File
+exports.downloadContactsCsv = (req, res, next) => {
+  try {
+    const csvData = contactExcelService.getContactsAsCsv();
+    const today = new Date().toISOString().split('T')[0];
+    const filename = `IMSCDR_Contact_Enquiries_${today}.csv`;
+
+    res.setHeader('Content-Type', 'text/csv; charset=utf-8');
+    res.setHeader('Content-Disposition', `attachment; filename="${filename}"`);
+    return res.status(200).send(csvData);
   } catch (error) {
     next(error);
   }
