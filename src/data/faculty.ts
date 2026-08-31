@@ -2,8 +2,8 @@
 //   id: number;
 //   category:
 //   | "Administration"
-//   | "Faculty-Information-Technology"
-//   | "Faculty-Management-Programme"
+//   | "Faculty - Information Technology"
+//   | "Faculty - Management Programme"
 //   | "BCA-Staff"
 //   | "BBA-Staff"
 //   | "Library-Staff"
@@ -45,8 +45,9 @@ export interface Faculty {
 
   category:
     | "Administration"
-    | "Faculty-Information-Technology"
-    | "Faculty-Management-Programme"
+    | "Admin Team"
+    | "Faculty - Information Technology"
+    | "Faculty - Management Programme"
     | "BCA-Staff"
     | "BBA-Staff"
     | "Library-Staff"
@@ -84,6 +85,7 @@ export interface Faculty {
 
   // Description
   profileContent?: string;
+  number?:string;
 }
 
 export const facultyData: Faculty[] = [
@@ -115,10 +117,53 @@ export const facultyData: Faculty[] = [
     "email": "deputydirector@imscdr.ac.in",
   },
 
-  // Faculty-Management-Programme Start Here
+
+
+// Technical Support ---------------------------------------
   {
     "id": 1,
-    category: "Faculty-Management-Programme",
+    category: "Admin Team",
+    "name": "Mr. Mahesh Dixit",
+    "designation": "Office Superintendent",
+    "image": "/images/faculty/Mahesh-Dixit.png",
+    "email": "exam@imscdr.ac.in",
+    "number": "9272125106"
+  },
+  {
+    "id": 2,
+    category: "Admin Team",
+    "name": "Mr. C. D. Mohite",
+    "designation": "Clerk (B. A. LLB)",
+    "image": "/images/faculty/C-D-Mohite.png",
+    "email": "admission@imscdr.ac.in",
+    "number": "9850642379"
+  },
+  {
+    "id": 3,
+    category: "Admin Team",
+    "name": "Mr. Dipak Tungar",
+    "designation": "Sr. Clerk",
+    "image": "/images/faculty/Dipak-Tungar.png",
+    "email": "scholorship@imscdr.ac.in",
+    "number": "9766618195"
+  },
+
+
+
+
+  // Faculty - Management Programme Start Here
+  {
+    "id": 1,
+    category: "Faculty - Management Programme",
+    "name": "Prof. Vikram P. Barnabas",
+    "designation": "Deputy Director",
+    "qualification": "Ph.D",
+    "image": "/images/faculty/dy-director.webp",
+    "email": "deputydirector@imscdr.ac.in",
+  },
+  {
+    "id": 2,
+    category: "Faculty - Management Programme",
     "name": "Dr. Hatim Fakhruddin Kayumi",
     "designation": "Associate Professor, H.O.D",
     "qualification": "Ph. D. (Commerce, Finance): S. P. Pune University, M – SET (Commerce), M. Phil. (Commerce): Y.C.M.O.U Nashik, M.B.A. (Finance): Y.C.M.O.U Nashik, M. Com. (Cost Accounting): S. P. Pune University, B. Com. (Cost Accounting): S. P. Pune University",
@@ -151,10 +196,9 @@ export const facultyData: Faculty[] = [
     "patents": "1",
     "profileContent": "Dr. Hatim Fakhruddin Kayumi is a proficient academician, researcher, and management educator with extensive and rich experience of over 25 years in academia, research, industry and administration.\n\nHe holds a Ph. D. in Commerce (Mutual Fund Investments) from Savitribai Phule Pune University. He possesses diverse academic qualifications, including M-SET (Commerce), M.Phil. in Commerce, MBA (Finance), M.Com. (Cost Accounting), and B.Com. (Cost Accounting).\n\nHe is committed to integrating contemporary global business developments with classroom teaching and research, enabling students to develop analytical thinking and practical managerial competencies.\n\nHe has made significant contributions to academic and management research, having published 32 research papers and authored two books. He has presented several research papers in national and international conferences and published research articles and case studies in conference proceedings.\n\nHis research accomplishments include the successful completion of two research projects funded by BCUD, S. P. Pune University, and the submission of one research project funded by the Indian Council of Social Science Research (ICSSR), New Delhi.\n\nA recognized Ph.D. Guide under the Faculty of Commerce and Management, Pune University, he has successfully guided ten doctoral scholars to the award of Ph. D. degrees in the disciplines of Financial Management and Organizational Management. He has successfully registered a design patent. His doctoral research work has been awarded with ‘Best Ph. D. Thesis’ by the PIM, Gwalior.\n\nHis academic pursuits are driven by passion for quality education, impactful research, ethical leadership, and the promotion of sustainable financial and management practices. Through his teaching, research, and mentorship, he continues to contribute meaningfully to the advancement of higher education and the development of future business leaders."
   },
-
   {
-    "id": 2,
-    category: "Faculty-Management-Programme",
+    "id": 3,
+    category: "Faculty - Management Programme",
     "name": "Dr. Rucha Tandulwadkar",
     "designation": "Associate Professor",
     "qualification": "Ph.D. : Marketing Management from S.P.Pune University, Master's Degree MBA in Marketing and Human Resource, Bachelor's Degree Bachelor in Computer Science, Other Professional Qualifications Bachelor in Journalism",
@@ -183,8 +227,8 @@ export const facultyData: Faculty[] = [
     "profileContent": "Dr. Rucha Tandulwadkar is a distinguished academician, researcher, Ph.D. guide, and management educator with over two decades of experience in higher education. Her expertise lies in Economics, Entrepreneurship, Marketing Management, and Women Entrepreneurship, with a strong focus on fostering innovation, entrepreneurial thinking, and sustainable development through learner-centric and experiential teaching practices.\n\nHer research interests include Entrepreneurship Development, Women Entrepreneurship and Marketing Management. As a recognized Ph.D. guide, she has successfully guided one doctoral scholar to completion, while four research scholars are currently pursuing their Ph.D. under her supervision. Dr. Tandulwadkar received a research grant from Savitribai Phule Pune University to study the challenges and opportunities of Self-Help Groups. She has presented and published research papers at numerous national and international conferences and journals and has been honoured with two Best Research Paper Awards for her scholarly contributions.\n\nBeyond academics, Dr. Tandulwadkar serves as the Coordinator of the Skill Enhancement and Entrepreneurship Development Centre (SEEDC), where she actively nurtures entrepreneurial aspirations among students and promotes women empowerment through training, mentoring, networking initiatives, and industry-academia collaborations. She also coordinates the IMS Academy of Fine and Performing Arts (AFPA), where she has introduced new academic programmes, strengthened student participation, and contributed to the promotion of Indian classical dance and cultural education. Her unwavering commitment to academic excellence, research, entrepreneurship, and holistic student development continues to create a lasting impact on higher education.\n\nHer Academic contribution and women empowerment work has been recognized by several institutions which include Best Teacher Award and Vocational Excellence Award"
   },
   {
-    "id":3,
-    category: "Faculty-Management-Programme",
+    "id":4,
+    category: "Faculty - Management Programme",
     "name": "CA. D. A. Kulkarni",
     "designation": "Assistant Professor",
     "qualification": "M.Com., C.A.",
@@ -205,8 +249,8 @@ export const facultyData: Faculty[] = [
     "profileContent": "Prof. (CA) DNYANESH A. KULKARNI is having huge experience in the area of Financial Management, Management Accounting & Taxation at Institute of Management Studies Career Development & Research, Ahmednagar of Savitribai Phule Pune University, Pune. He is having academic experience of 25 years at graduate & post- graduate level. He is also having Professional & Industrial experience of 25 years. He has completed his masters in Commerce. He is a fellow member of Institute of Chartered Accountants of India and is a former Chairman of Ahmednagar Branch of WIRC of ICAI. He is an Accredited Management Teacher by AIMA, New Delhi. He was on panel of 'Financial Education Resource Person' of SEBI form 2010- 2016. He has also conducted various training sessions for corporates on various topics. His areas of interest are Finance, Accountancy, Economics, Investments and Taxation. He is a co-author of three books published by Nirali Prakashan. He is column writer for Newspaper and has published more than 200 articles on various topics."
   },
   {
-    "id": 4,
-    category: "Faculty-Management-Programme",
+    "id": 5,
+    category: "Faculty - Management Programme",
     "name": "Ms. Ashwini Thorat",
     "designation": "Assistant Professor",
     "qualification": "Ph.D. in Marketing (Pursuing) from Charutar Vidya Mandal University (CVMU), Anand, Gujarat, MMS - Marketing, MBS - Human Resources Management",
@@ -230,8 +274,8 @@ export const facultyData: Faculty[] = [
     "profileContent": "Ms. Ashwini Thorat is an Assistant Professor and Research Scholar with over 30 years of professional experience, including 10 years of Industry experience and 20 years of teaching experience in management education. She is currently pursuing her Ph.D. in Marketing Management at Charutar Vidya Mandal University (CVMU), Anand, Gujarat.\n\nShe holds dual specialization in management education and possesses extensive expertise in both industry and academia, enabling her to bridge theoretical concepts with practical business applications. She has taught across PGDBM, MMS, MBS, MPM and MBA programs, delivering courses in Basics of marketing, Marketing Management, Employee Engagement, Strategic Human Resource Management, Consumer Behavior.\n\nShe actively participates in research, faculty development programs, curriculum design, and academic quality initiatives.\n\nIn addition to her teaching and research responsibilities, Ms. Thorat is actively involved in student mentoring, academic administration, university examination work, outcome-based education implementation, and institutional development activities. Her extensive industry exposure combined with her academic expertise enables her to provide students with practical insights and industry-oriented learning experiences. She remains committed to academic excellence, research, innovation, and the holistic development of future management professionals."
   },
   {
-    "id": 5,
-    category: "Faculty-Management-Programme",
+    "id": 6,
+    category: "Faculty - Management Programme",
     "name": "Dr. Manoj Shamrao Kulkarni",
     "designation": "Assistant Professor",
     "qualification": "B.Sc., M.B.A., Ph.D.",
@@ -255,37 +299,26 @@ export const facultyData: Faculty[] = [
     "profileContent": "Dr. Manoj Shamrao Kulkarni received his Doctor of Philosophy (Ph.D) from Savitribai Phule Pune University in Marketing Management. He has completed MBA - Marketing Management from Shivaji University, Kolhapur. Presently, he is working as an Assistant Professor at Institute of Management Studies Career Development & Research, Ahmednagar. He has 21 years of Teaching and 2 years of corporate experience. His expertise lies in the core subjects such as Sales and Distribution Management, Product & Brand Management, Marketing 4.0 Consumerism, Marketing Management and Integrated Marketing Communication. He has published one E- book titled’ Consumer Protection Measures’. He has co-authored three books and published one patent. He has also published research papers in UGC CARE listed journals. He has completed one BCUD minor research project of S. P. Pune University. He was the member of Ahmednagar District Consumer Protection Council from 2014to 2017."
   },
   {
-    "id": 6,
-    category: "Faculty-Information-Technology",
-    "name": "Dr. Sayyed Mudassar Nazir",
+    "id": 7,
+    category: "Faculty - Management Programme",
+    "name": "Vijay Shinde",
     "designation": "Assistant Professor",
-    "qualification": "Ph. D. (Management, HRM), UGC NET (Management), M-SET (Management), MBS (Materials & Production), PGDBM (Materials & Production), M.Sc. (Biochemistry), B.Sc. (Chemistry), CPM, CPED, PGDSCM",
-    "image": "/images/faculty/Sayyed-Mudassar-Nazir.webp",
-    "email": "sayyed.mudassar@yahoo.com",
-    "broadAreas": [
-      "Operations Management",
-      "Supply Chain Management",
-      "General Management",
-      "Human Resources Management"
-    ],
-    "specificAreas": [
-      "Succession Planning",
-      "World Class Manufacturing Practices",
-      "Theory of Constraints",
-      "Lean Management",
-      "Materials Management"
-    ],
-    "orcidId": "https://orcid.org/0009-0002-8533-2567",
-    "googleScholar": "https://scholar.google.com/citations?user=dwRDcjAAAAAJ&hl=en",
-    "researchPapersPublished": 23,
-    "booksPublished": 2,
-    "bookChaptersPublished": 2,
-    "patents": "UK Design Patent titled 'AI-POWERED SUPPLY CHAIN MANAGEMENT DEVICE' (Design No.: 6477012)",
-    "profileContent": "Dr. Sayyed Mudassar Nazir is an accomplished academician, researcher, and management educator with over 24 years of combined experience spanning academia, research, and industry. He is currently serving as an Assistant Professor at the Institute of Management Studies, Career Development & Research (IMSCD&R), Ahilyanagar, where he has been contributing to management education since 2013. He holds a Ph.D. in Management (Human Resource Management) from Savitribai Phule Pune University, with his doctoral research focusing on Succession Planning in Family-Owned Enterprises. He is also qualified in UGC-NET and Maharashtra SET in Management and possesses multidisciplinary academic credentials in Operations Management, Supply Chain Management, Entrepreneurship Development, Project Management, and Biochemistry. His teaching and research interests encompass Operations and Supply Chain Management, Human Resource Management, Business Strategy, Lean Management, Theory of Constraints, World-Class Manufacturing Practices, and Family Business Management.Dr. Mudassar has established himself as an active researcher and academic contributor with 23 research publications, 13 conference presentations, 2 authored books, 2 book chapters, and a UK-registered Design Patent titled AI-Powered Supply Chain Management Device. He has been invited as a resource person by several universities and institutions, contributed to the MBA curriculum development of Savitribai Phule Pune University, and has coordinated and served on numerous institutional quality, research, admission, and accreditation committees. His academic excellence has been recognized through multiple distinctions, including the Best Teacher Award (2020 and twice in 2025), the Best Paper Presentation Award (2023), and several professional recognitions. Driven by a passion for quality education, research, innovation, and student development, Dr. Mudassar continues to bridge academic theory with industry practice while fostering critical thinking, ethical leadership, and lifelong learning among future management professionals."
+    "qualification": "MPM",
+    "image": "/images/faculty/Vijay-Shinde.png",
+    "email": "vijayshinde@imscdr.ac.in",
   },
   {
-    "id": 7,
-    category: "Faculty-Management-Programme",
+    "id": 8,
+    category: "Faculty - Management Programme",
+    "name": "Sayyed Mudassar",
+    "designation": "Assistant Professor",
+    "qualification": "Ph.D (Pursuing)",
+    "image": "/images/faculty/Sayyed-Mudassar.webp",
+    "email": "sayyedmudassar@imscdr.ac.in",
+  },
+  {
+    "id": 9,
+    category: "Faculty - Management Programme",
     "name": "Dr. Rahul K. Khandelwal",
     "designation": "Assistant Professor",
     "qualification": "Ph.D., LL.B., MMS, MBS, PGDBM, B.Com.",
@@ -316,8 +349,8 @@ export const facultyData: Faculty[] = [
     "profileContent": "Dr Rahul Khandelwal faculty and Academic Research coordinator at Institute of Management Studies Career Development & Research, Ahilyanagar with 11 years of teaching experience.  He is recognized research guide from Savitribai   Phule Pune University in Marketing and Organizational Management with three research scholars awarded Ph.D. under his guidance. He is Co-director of two minor research projects sponsored by Ministry of Human Resource through Indian Council of Social Science Research.  He has published   research papers in ABDC /Scopus/UGC and peer-reviewed journals. He has presented research papers at major IIMs and attended FDP at IITs and IIMs in the country. His area of expertise is Marketing and general management."
   },
   {
-    "id": 8,
-    category: "Faculty-Management-Programme",
+    "id": 10,
+    category: "Faculty - Management Programme",
     "name": "Dr. Harshvardhan Nandkishor Bhavsar",
     "designation": "Assistant Professor",
     "qualification": "Ph. D. (Management): R.T.M. Nagpur University, UGC NET (Management), MH SET (Management), M.B.A. (Marketing): PUMBA, S. P. Pune University, B. Sc. (Chemistry): S. P. Pune University,",
@@ -350,8 +383,8 @@ export const facultyData: Faculty[] = [
     "profileContent": "Dr. Harshvardhan N. Bhavsar is an accomplished academician, researcher, and management educator with 15 years of teaching experience. He currently serves as an Assistant Professor, where he also holds key academic and administrative responsibilities as the BBA Coordinator and College Examination Officer (CEO). He holds a Ph.D. in Management from R.T.M. Nagpur University, along with UGC-NET and MH-SET in Management. He completed his MBA in Marketing from PUMBA, S. P. Pune University. His areas of expertise include Marketing Strategy, Marketing Research, Services Marketing, Consumer Behaviour, Business Research Methodology, and Business Analytics. Dr. Bhavsar has 22 research papers, one book, and two book chapters to his credit. He is a recognized Ph.D. Guide under S. P. Pune University and has successfully guided three Ph.D. scholars who have completed their doctoral research, with two scholars currently pursuing their Ph.D. under his guidance. He has also been associated with two sponsored research projects sanctioned by the Indian Council of Social Science Research (ICSSR), New Delhi, and S. P. Pune University (SPPU). He has presented research papers at academic conferences organized by prestigious institutions including IIMs and IITs. His academic philosophy emphasizes research-driven teaching, critical thinking, practical learning, and the holistic development of students."
   },
   {
-    "id": 9,
-    category: "Faculty-Management-Programme",
+    "id": 11,
+    category: "Faculty - Management Programme",
     "name": "Ms. Sakshi Madhyan",
     "designation": "Assistant Professor",
     "qualification": "Currently Pursuing Ph.D. (HRM), MBA (Finance), BBA (Finance)",
@@ -373,9 +406,18 @@ export const facultyData: Faculty[] = [
     "researchPapersPublished": 2,
     "profileContent": "I am an Assistant Professor with an MBA specializing in Finance and I am currently pursuing Ph.D. at BPHES IMSCDR, (Affiliated to Savitribai Phule Pune University). My research focuses on Sustainable Human Resource Management (HRM) practices and Employee Engagement in Small and Medium Enterprises (SMEs). My academic interests include Human Resource Management, Organizational Behaviour, Financial Management andCurrent Trends and Cases in Finance. I teach courses in both Human Resource Management and Finance, integrating theoretical concepts with practical applications. I adopt innovative teaching methodologies such as case studies, role plays, flipped classrooms, and experiential learning to enhance student engagement. I have also presented Research Papers at National and International Conferences and actively participate in Faculty Development Programmes, workshops and seminars to continuously strengthen my academic and professional expertise."
   },
-{
-    "id": 10,
-    category: "Faculty-Management-Programme",
+  {
+    "id": 12,
+    category: "Faculty - Management Programme",
+    "name": "Pratap Gaikwad",
+    "designation": "Assistant Professor",
+    "qualification": "MBA",
+    "image": "/images/faculty/Pratap-Gaikwad.png",
+    "email": "pgaikwad@imscdr.ac.in",
+  },
+  {
+    "id": 13,
+    category: "Faculty - Management Programme",
     "name": "Ms. Poonam Tiwari",
     "designation": "Assistant Professor & Research Scholar",
     "qualification": "Pursuing Ph.D. in Management, Charutar Vidya Mandal University (CVMU), Anand, Gujarat, MBA (Dual Specialization), B.Com.",
@@ -400,8 +442,8 @@ export const facultyData: Faculty[] = [
     "profileContent": "Ms. Poonam Tiwari is an Assistant Professor and Research Scholar with over nine years of teaching experience in the field of Management. She is currently pursuing her Ph.D. in Management at Charutar Vidya Mandal University (CVMU), Anand, Gujarat. She holds an MBA with Dual Specialization and a Bachelor of Commerce (B.Com.), which together provide her with a strong academic foundation in management and commerce.\n\nPrior to her academic career, she gained valuable corporate experience with The Hindu Group, which strengthened her practical understanding of business operations and industry practices. Her teaching expertise spans Financial Management, Indian Financial System, Business Valuation, Technical Analysis, Stock Market, Research Methodology, Strategic Management, and Mentoring & Coaching for undergraduate and postgraduate students.\n\nHer research interests include Financial Management, Technical Analysis, Stock Market, Indian Financial System, Business Valuation, Higher Education, and Mentoring & Coaching. She has published more than six research papers in reputed national and international journals and actively participates in academic conferences, faculty development programmes, and research activities. She also serves as a Board of Studies (BoS) Member at Parul University, contributing to curriculum design and academic development.\n\nIn addition to teaching and research, Ms. Tiwari is committed to mentoring and coaching students, fostering their academic, professional, and personal growth. She actively contributes to academic administration, university examination responsibilities, institutional development initiatives, and quality assurance activities, reflecting her dedication to excellence in higher education and holistic student development."
   },  
   {
-    "id": 11,
-    category: "Faculty-Management-Programme",
+    "id": 14,
+    category: "Faculty - Management Programme",
     "name": "Prof. Shruti M. Rao",
     "designation": "Assistant Professor",
     "qualification": "MBA (Dual Specialisation Marketing and HR), Certification course in Advertising, BBA. (Bachelors of Business Administration)",
@@ -428,8 +470,8 @@ export const facultyData: Faculty[] = [
     "profileContent": "Ms. Shruti Rao is working as Assistant Professor and holds a Bachelor of Business Administration (BBA) and a Master of Business Administration (MBA) with dual specialization in Marketing and Human Resource Management. She has four years of professional experience in the insurance and marketing sectors where she gained practical expertise in strategic marketing, customer relationship management, business development and organizational practices. Her academic background complemented by industry experience enables her to effectively integrate theoretical concepts with practical business applications in the classroom. She has also served as a Certified Examiner for Savitribai Phule Pune University (SPPU) contributing to the university's examination and evaluation processes with professionalism and academic integrity. Her areas of academic interest include Marketing Management, Human Resource Management, Consumer Behaviour, Organizational Behaviour and Strategic Management. She is committed to fostering a student-centred learning environment, encouraging critical thinking and contributing to academic excellence through teaching, research, continuous learning and professional development."
   },
   {
-    "id": 12,
-    category: "Faculty-Management-Programme",
+    "id": 15,
+    category: "Faculty - Management Programme",
     "name": "Prof. Suresh Manohar Khanna",
     "designation": "Assistant Professor & Training and Placement Officer.",
     "qualification": "MBA Human Resource Management , MBA Marketing",
@@ -454,8 +496,8 @@ export const facultyData: Faculty[] = [
     "profileContent": "I am an Assistant Professor with an MBA specializing in Human resource management and Marketing.I am working with IMS since 2014 handling responsibilities which include but not limited to Placements, Alumni engagement and Outreach , collaboration and connect with the corporate’s , establishing, nurturing and building long term corporate relations for the betterment of the students in form of internships and placements . Conducting the placement sessions for the students which include practical learning, case studies , GD and PI preparation. Arranging the Industrial visits for the students to give them an exposure and real time know how of the corporate world. In short to make the students placement ready and to make them competent in the world of competition."
   },
   {
-    "id": 13,
-    category: "Faculty-Management-Programme",
+    "id": 16,
+    category: "Faculty - Management Programme",
     "name": "Dr. Shradha S. Bhandari",
     "designation": "Assistant Professor",
     "qualification": "Ph.D. in Commerce & Management, MBA (Financial Management), Diploma in Taxation Laws (DTL), Government Diploma in Cooperation & Accountancy (GDC&A), B.Com. (Business Administration), Diploma in Interior Design & Decoration (De. IDD)",
@@ -490,10 +532,10 @@ export const facultyData: Faculty[] = [
   
 
 
-// Faculty-Information-Technology Start Here------------------------ 
+// Faculty - Information Technology Start Here------------------------ 
   {
     "id": 1,
-    category: "Faculty-Information-Technology",
+    category: "Faculty - Information Technology",
     "name": "Dr. Mahesh P. Potdar",
     "designation": "Associate Professor",
     "qualification": "MCM, MMS (System), Ph. D.",
@@ -516,7 +558,7 @@ export const facultyData: Faculty[] = [
   },
   {
     "id": 2,
-    category: "Faculty-Information-Technology",
+    category: "Faculty - Information Technology",
     "name": "Dr. Anjali A. Vaidya",
     "designation": "Assistant Professor",
     "qualification": "",
@@ -532,7 +574,7 @@ export const facultyData: Faculty[] = [
   },  
   {
     "id": 3,
-    category: "Faculty-Information-Technology",
+    category: "Faculty - Information Technology",
     "name": "Dr. Sanjay P. Bhakkad",
     "designation": "Associate Professor",
     "qualification": "M.Sc., M.C.A, Ph.D.",
@@ -554,7 +596,7 @@ export const facultyData: Faculty[] = [
   },
   {
     "id": 4,
-    category: "Faculty-Information-Technology",
+    category: "Faculty - Information Technology",
     "name": "Ms. Utkarsha R. Dethe",
     "designation": "Assistant Professor",
     "qualification": "MCS,MCA,SET(Computer Science & Application).",
@@ -581,8 +623,17 @@ export const facultyData: Faculty[] = [
     "profileContent": "Ms. Utkarsha R. Dethe has been serving as an Assistant Professor since 2007 and has nearly two decades of experience in higher education. She holds a Master's degree in Computer Science (MCS), a Master's degree in Computer Applications (MCA), and has qualified the State Eligibility Test (SET). She is currently pursuing her Ph.D. Her teaching and research interests include Artificial Intelligence, Knowledge Representation, Machine Learning, Deep Learning, Design and Analysis of Algorithms, Web Technologies, and Data Science.\n\nShe has taught a wide range postgraduate courses, including Knowledge Representation & AI:Machine Learning, Deep Learning, Design and Analysis of Algorithms, C++, Java, Data Structures, Advanced UNIX, Web Technologies, PHP, Software Testing & Quality Assurance, and Computer Organization and guided student internship projects.\n\nShe has actively participated in national and international conferences, presented research papers, and successfully completed a sponsored research project funded by BCUD. She has also contributed to curriculum development for the MCA Programme under the 2024 Pattern of Savitribai Phule Pune.\n\nApart from teaching and research, she actively contributes to institutional development by coordinating the Student Counselling and Mentorship Programme and serving on various institutional committees, including the IMS Newsletter Committee, Student Magazine Committee, and IMS Vidyarthini Manch. She remains committed to promoting academic excellence, research, and student-centric learning."
   },
   {
-    "id":5,
-    category: "Faculty-Information-Technology",
+    "id": 5,
+    category: "Faculty - Information Technology",
+    "name": "Madhuri Godbole",
+    "designation": "Assistant Professor",
+    "qualification": "Ph.D",
+    "image": "/images/faculty/Madhuri-Godbole.png",
+    "email": "madhurigodbole@imscdr.ac.in",
+  },
+  {
+    "id":6,
+    category: "Faculty - Information Technology",
     "name": "Supriya G Sapa",
     "designation": "Assistant Professor",
     "qualification": "Master of Technology (Information Technology) , Bachelor of Engineering (Computer Science and Engineering)",
@@ -605,8 +656,8 @@ export const facultyData: Faculty[] = [
     "profileContent": "Ms. Supriya Sapa is an academician with more than 20 years of teaching experience in the field of Computer Science and Information Technology. She is currently associated with Institute of Management Studies Career Development and Research (IMSCDR), Ahilyanagar, where she teaches postgraduate students. Over the years, she has been actively involved in teaching, mentoring students, curriculum development, project guidance, and various academic and institutional activities. Alongside her teaching career, Ms. Sapa is pursuing her Ph.D. in Information Technology at MGM University, Chhatrapati Sambhajinagar. Her research focuses on the application of Artificial Intelligence and Machine Learning in Digital Health and Insurance Analytics. Her areas of research include Machine Learning, Artificial Intelligence, Digital Health, Wearable Health Technologies, Healthcare Data Analytics, Predictive Analytics, Health Risk Assessment, Insurance Analytics, and Explainable AI. Through her teaching and research, she aims to bridge the gap between academic knowledge and practical applications, preparing students to address real-world challenges using emerging technologies."
   },
   {
-    "id": 6,
-    category: "Faculty-Information-Technology",
+    "id": 7,
+    category: "Faculty - Information Technology",
     "name": "Prof. Gauri Patil",
     "designation": "Assistant Professor",
     "qualification": "B.C.S , M.C.S., M.C.A , Research Scholar",
@@ -627,8 +678,53 @@ export const facultyData: Faculty[] = [
     "profileContent": "Prof. Gauri Patil is an Assistant Professor in the Information Technology Department at BPHE Society's Institute of Management Studies, Career Development & Research (IMSCDR), Ahilyanagar, with over 20 years of teaching experience. She holds M.C.A., M.C.S., and B.C.S. degrees. Throughout her academic career, she has undertaken several key institutional responsibilities, including Placement Coordinator, Student Mentor, and active membership in the IMS SEEDC and Industry Interface Committee. At the university level, she has contributed as a Paper Setter and Examiner for SPPU and has actively participated in the curriculum development and syllabus framing for the MCA (Management) programme under both NEP and Non-NEP frameworks. She has also served as a Resource Person for Visual Basic .NET and has delivered career guidance sessions on \"Career Opportunities after 10th Standard\" for students at various Schools in Ahilyanagar. Her research interests include Cyber Security, Artificial Intelligence, and emerging technologies, with a focus on their applications in higher education and industry."
   },
   {
-    "id": 7,
-    category: "Faculty-Information-Technology",
+    "id": 8,
+    category: "Faculty - Information Technology",
+    "name": "Dr. Sayyed Mudassar Nazir",
+    "designation": "Assistant Professor",
+    "qualification": "Ph. D. (Management, HRM), UGC NET (Management), M-SET (Management), MBS (Materials & Production), PGDBM (Materials & Production), M.Sc. (Biochemistry), B.Sc. (Chemistry), CPM, CPED, PGDSCM",
+    "image": "/images/faculty/Sayyed-Mudassar-Nazir.webp",
+    "email": "sayyed.mudassar@yahoo.com",
+    "broadAreas": [
+      "Operations Management",
+      "Supply Chain Management",
+      "General Management",
+      "Human Resources Management"
+    ],
+    "specificAreas": [
+      "Succession Planning",
+      "World Class Manufacturing Practices",
+      "Theory of Constraints",
+      "Lean Management",
+      "Materials Management"
+    ],
+    "orcidId": "https://orcid.org/0009-0002-8533-2567",
+    "googleScholar": "https://scholar.google.com/citations?user=dwRDcjAAAAAJ&hl=en",
+    "researchPapersPublished": 23,
+    "booksPublished": 2,
+    "bookChaptersPublished": 2,
+    "patents": "UK Design Patent titled 'AI-POWERED SUPPLY CHAIN MANAGEMENT DEVICE' (Design No.: 6477012)",
+    "profileContent": "Dr. Sayyed Mudassar Nazir is an accomplished academician, researcher, and management educator with over 24 years of combined experience spanning academia, research, and industry. He is currently serving as an Assistant Professor at the Institute of Management Studies, Career Development & Research (IMSCD&R), Ahilyanagar, where he has been contributing to management education since 2013. He holds a Ph.D. in Management (Human Resource Management) from Savitribai Phule Pune University, with his doctoral research focusing on Succession Planning in Family-Owned Enterprises. He is also qualified in UGC-NET and Maharashtra SET in Management and possesses multidisciplinary academic credentials in Operations Management, Supply Chain Management, Entrepreneurship Development, Project Management, and Biochemistry. His teaching and research interests encompass Operations and Supply Chain Management, Human Resource Management, Business Strategy, Lean Management, Theory of Constraints, World-Class Manufacturing Practices, and Family Business Management.Dr. Mudassar has established himself as an active researcher and academic contributor with 23 research publications, 13 conference presentations, 2 authored books, 2 book chapters, and a UK-registered Design Patent titled AI-Powered Supply Chain Management Device. He has been invited as a resource person by several universities and institutions, contributed to the MBA curriculum development of Savitribai Phule Pune University, and has coordinated and served on numerous institutional quality, research, admission, and accreditation committees. His academic excellence has been recognized through multiple distinctions, including the Best Teacher Award (2020 and twice in 2025), the Best Paper Presentation Award (2023), and several professional recognitions. Driven by a passion for quality education, research, innovation, and student development, Dr. Mudassar continues to bridge academic theory with industry practice while fostering critical thinking, ethical leadership, and lifelong learning among future management professionals."
+  },
+  {
+    "id": 9,
+    category: "Faculty - Information Technology",
+    "name": "Mr. Abhishek Subhash Kawane",
+    "designation": "Assistant Professor",
+    "qualification": "UGC-NET, MH-SET, MCA(Commerce and Management), B.C.S.",
+    "image": "/images/faculty/AbhishekKawane.webp",
+    "email": "",
+    "broadAreas": [
+      
+    ],
+    "specificAreas": [
+      
+    ],
+    "profileContent": ""
+  },
+  {
+    "id": 10,
+    category: "Faculty - Information Technology",
     "name": "Ass.Prof.Shubhangi Ashok Kharmate",
     "designation": "Assistant professor",
     "qualification": "MCA (Masters in computer Application), Certification course in Manual testing., BCA.",
@@ -646,32 +742,38 @@ export const facultyData: Faculty[] = [
       "Python programming"
     ],
     "profileContent": "I am Shubhangi Ashok Kharmate, working as an Assistant Professor in the Department of Computer Applications. I completed my Bachelor of Computer Applications (BCA) in 2019 and Master of Computer Applications (MCA) in 2022.\n\nMy academic background has provided me with a strong foundation in programming, software development, databases, data structures, and cyber security. I am committed to continuous learning and enhancing my teaching through practical, student-centric, and innovative methodologies.\n\nExperience \n\n I have teaching experience in undergraduate and postgraduate computer application programs. As an Assistant Professor, I teach subjects including Python Programming, Java Programming, and Cyber Security to MCA students.\n\nIn addition to teaching, I actively contribute to departmental and institutional activities such as academic coordination, student mentoring, practical sessions, technical events, cultural activities, documentation, and NAAC-related work. I believe in fostering an engaging learning environment that promotes analytical thinking, practical skills, and continuous professional development.\n\nResearch Interests \n\n My research interests include: \n\n - Cyber Security\n\n- Information Security\n\n- Network Security\n\n- Python Programming\n\n- Artificial Intelligence Applications in Cyber Security\n\n- Secure Software Development\n\n- Data Privacy and Digital Forensics\n\nI am interested in exploring emerging technologies and contributing to research through academic publications, conferences, and collaborative projects, with a particular focus on Cyber Security."
-  },
+  },  
+
   
   
-  
-  {
-    "id": 8,
-    category: "Faculty-Information-Technology",
-    "name": "Mr. Abhishek Subhash Kawane",
-    "designation": "Assistant Professor",
-    "qualification": "UGC-NET, MH-SET, MCA(Commerce and Management), B.C.S.",
-    "image": "/images/faculty/AbhishekKawane.webp",
-    "email": "",
-    "broadAreas": [
-      
-    ],
-    "specificAreas": [
-      
-    ],
-    "profileContent": ""
-  },
 
 
 
 
   
   // BBA-Staff Start Here--------------------
+    {
+      "id": 1,
+      category: "BBA-Staff",
+      "name": "Prof. Sayali Sunil Torane",
+      "designation": "Assistant Professor",
+      "qualification": "MBA in Digital Media Communication Marketing (Savitribai Phule Pune University), Bachelor of Journalism & Mass Communication (BJMC) (Tilak Maharashtra Vidyapeeth), Degree / Training in Biomedical Engineering, Diploma in Bharatanatyam, Advanced Certificate Course in Digital Marketing",
+      "image": "/images/faculty/SayaliTorane.webp",
+      "email": "sayalitorane.me@gmail.com",
+      "broadAreas": [
+        "Business Administration & Marketing Management",
+        "AI in Education & Digital Media",
+        "Strategic Media Production & Communication"
+      ],
+      "specificAreas": [
+        "Microeconomics & Demand Forecasting",
+        "AI-Driven Video Production & Digital Branding",
+        "Podcasting Curriculum & Media Production Management",
+        "Social Media Marketing & SEO Strategy",
+        "Cross-Functional Business Development"
+      ],
+      "profileContent": "Prof. Sayali Sunil Torane is a multi-disciplinary educator and strategist with over 13 years of cross-functional experience bridging higher education, digital marketing, media production, and engineering technology. She holds a Master of Business Administration (MBA) in Digital Media Communication Marketing from Savitribai Phule Pune University, a Bachelor’s degree in Journalism & Mass Communication (BJMC), and a background in Biomedical Engineering. Complemented by a formal foundation in the classical arts with a Diploma in Bharatanatyam and advanced credentials in digital marketing, her diverse background brings a rich, multi-dimensional perspective to higher education.\n\nHer academic instruction focuses on business administration, microeconomics, demand forecasting, and digital marketing strategies. Beyond traditional pedagogy, Prof. Torane’s industry experience includes serving as a Executive Producer and Production Manager for prominent broadcast channels like Star Pravaha and Colors Marathi, as well as managing global business development projects utilizing emerging technologies like Virtual Reality.\n\nHer key research interests and creative practice center on the integration of Artificial Intelligence in educational frameworks, AI-driven video production, academic podcasting management, and search engine optimization (SEO). Prof. Torane is dedicated to developing hands-on, industry-aligned curricula that prepare students to navigate the evolving digital economy through strategic branding, media technology, and analytical problem-solving."
+    },
     {
     "id": 2,
     category: "BBA-Staff",
@@ -699,28 +801,7 @@ export const facultyData: Faculty[] = [
     "researchPapersPublished": "4",
     "profileContent": "Ms. Shital Ashish Upadhyay (Nabariya) is an Assistant Professor with 13 years of teaching experience in the fields of Commerce and Management. She holds a Master of Commerce (M.Com.) in Cost Accounting from Savitribai Phule Pune University, an MBA in Marketing from Dr. Babasaheb Ambedkar Marathwada University, an M.B.S. in Financial Management, a Post Graduate Diploma in Business Management (Marketing Management) from the University of Pune, and a Bachelor of Education (B.Ed.) from S.N.D.T. Women's University. Throughout her academic career, she has taught undergraduate and junior college students in a wide range of commerce and management subjects. Her teaching expertise includes Business Analytics, Human Resource Management, Organizational Behaviour, Communication Skills, Cost Accounting, Financial Accounting, Corporate Accounting, Marketing Management, Economics, and Business Communication. Her academic interests focus on Business Analytics, Accounting and Finance, Marketing, Human Resource Management, innovative teaching pedagogies, and the application of Artificial Intelligence in higher education. She has actively participated in Faculty Development Programmes, national conferences, workshops, and professional certification programmes to enhance her academic and professional competencies. In addition to her teaching responsibilities, she has served as Chairman and Member of University Paper Setting Panels, and actively contributes to institutional development through university examination work, student mentoring, seminar coordination, cultural activities, and admission and promotion initiatives. Her commitment to continuous learning, academic excellence, and student-centric teaching reflects her dedication to fostering quality higher education and holistic student development."
   },
-  {
-    "id": 1,
-    category: "BBA-Staff",
-    "name": "Prof. Sayali Sunil Torane",
-    "designation": "Assistant Professor",
-    "qualification": "MBA in Digital Media Communication Marketing (Savitribai Phule Pune University), Bachelor of Journalism & Mass Communication (BJMC) (Tilak Maharashtra Vidyapeeth), Degree / Training in Biomedical Engineering, Diploma in Bharatanatyam, Advanced Certificate Course in Digital Marketing",
-    "image": "/images/faculty/SayaliTorane.webp",
-    "email": "sayalitorane.me@gmail.com",
-    "broadAreas": [
-      "Business Administration & Marketing Management",
-      "AI in Education & Digital Media",
-      "Strategic Media Production & Communication"
-    ],
-    "specificAreas": [
-      "Microeconomics & Demand Forecasting",
-      "AI-Driven Video Production & Digital Branding",
-      "Podcasting Curriculum & Media Production Management",
-      "Social Media Marketing & SEO Strategy",
-      "Cross-Functional Business Development"
-    ],
-    "profileContent": "Prof. Sayali Sunil Torane is a multi-disciplinary educator and strategist with over 13 years of cross-functional experience bridging higher education, digital marketing, media production, and engineering technology. She holds a Master of Business Administration (MBA) in Digital Media Communication Marketing from Savitribai Phule Pune University, a Bachelor’s degree in Journalism & Mass Communication (BJMC), and a background in Biomedical Engineering. Complemented by a formal foundation in the classical arts with a Diploma in Bharatanatyam and advanced credentials in digital marketing, her diverse background brings a rich, multi-dimensional perspective to higher education.\n\nHer academic instruction focuses on business administration, microeconomics, demand forecasting, and digital marketing strategies. Beyond traditional pedagogy, Prof. Torane’s industry experience includes serving as a Executive Producer and Production Manager for prominent broadcast channels like Star Pravaha and Colors Marathi, as well as managing global business development projects utilizing emerging technologies like Virtual Reality.\n\nHer key research interests and creative practice center on the integration of Artificial Intelligence in educational frameworks, AI-driven video production, academic podcasting management, and search engine optimization (SEO). Prof. Torane is dedicated to developing hands-on, industry-aligned curricula that prepare students to navigate the evolving digital economy through strategic branding, media technology, and analytical problem-solving."
-  },
+  
   
   
   
@@ -841,5 +922,49 @@ export const facultyData: Faculty[] = [
     "sponsoredResearchProjects": "1",
     "profileContent": "Dr. Swati Barnabas has been associated with the field of Library and Information Science since 1995 and has three decades of professional experience. She has worked in academic, corporate, and special libraries and is presently serving as Librarian at the Institute of Management Studies (CD&R), Ahilyanagar, India. Under her leadership, the IMS Library has been awarded Grade 'A' in the Library Audit on two occasions and has successfully undergone both Internal and External Library Audits during 2020–21 and 2023–24. The IMS Library received the Best B-School Library Award 2013 from Discovery Education India Pvt. Ltd.\n\nShe has published 30 research papers in peer-reviewed national and international journals and has participated in 60 national and international conferences, seminars, workshops, and faculty development programmes. Her areas of expertise include Library Management, Library Organization, Information and Communication Technology (ICT) Applications in Libraries, Innovative Library Practices, Digital Library Services, Information Literacy Programmes, User Education, and Knowledge Resource Management. The area of expertise includes -Academic librarianship, digital libraries, information literacy, library automation, emerging technologies in libraries, and AI applications in library services. She is the recipient of the Outstanding Management Librarian Award conferred by AIMS International in 2019 and the prestigious Best Librarian Award from Savitribai Phule Pune University in 2023. These recognitions reflect her significant contributions to library management, innovation, and the advancement of library and information services.\n\nShe is frequently invited as a resource person for library and information science programmes, faculty development programmes, workshops, seminars, and conferences. She also serves as a judge for various academic and professional competitions and provides consultancy and guidance to college librarians on library management, NAAC documentation, ICT applications, and other library-related activities."
   },
+  {
+    "id": 2,
+    category: "Library-Staff",
+    "name": "Siraj Shaikh",
+    "designation": "Assistant in Library",
+    "image": "/images/faculty/Siraj-Shaikh.png",
+  },
+  {
+    "id": 3,
+    category: "Library-Staff",
+    "name": "Jitin Adhav",
+    "designation": "Assistant in Library",
+    "image": "/images/faculty/Jitin-Adhav.png",
+  },
+  {
+    "id": 4,
+    category: "Library-Staff",
+    "name": "Rajesh Kamble",
+    "designation": "Assistant in Library",
+    "image": "/images/faculty/Rajesh-Kamble.png",
+  },
+
+
+  // Technical Support ---------------------------------------
+  {
+    "id": 1,
+    category: "Technical-Support",
+    "name": "Pratap Gaikwad",
+    "designation": "Additional Charge - Technical Support",
+    "image": "/images/faculty/Pratap-Gaikwad.png",
+  },
+  {
+    "id": 2,
+    category: "Technical-Support",
+    "name": "Kiran Sable",
+    "designation": "Technician",
+    "image": "/images/faculty/Kiran-Sable.png",
+  },
 
 ];
+
+
+
+
+
+

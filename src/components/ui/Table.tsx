@@ -20,14 +20,10 @@ export interface RowSpanCell {
   rowSpan: number;
 }
 
-export type TableCell =
-  | string
-  | number
-  | RowSpanCell
-  | null;
+export type TableCell = string | number | RowSpanCell | null;
 
 export interface TableRow {
-  [key: string]: TableCell;
+  [key: string]: TableCell | boolean | undefined;
 }
 
 interface TableProps {
@@ -36,9 +32,7 @@ interface TableProps {
   headerGroups?: HeaderGroup[];
 }
 
-function isRowSpanCell(
-  cell: TableCell
-): cell is RowSpanCell {
+function isRowSpanCell(cell: TableCell): cell is RowSpanCell {
   return (
     typeof cell === "object" &&
     cell !== null &&
@@ -47,16 +41,12 @@ function isRowSpanCell(
   );
 }
 
-const Table = ({
-  columns,
-  data,
-  headerGroups,
-}: TableProps) => {
-  const getCellClass = (key: string) => {
+const Table = ({ columns, data, headerGroups }: TableProps) => {
+  const getCellClass = (key: string, row: TableRow) => {
     switch (key) {
       case "name":
       case "course":
-        return "member-name";
+        return `member-name ${row.highlight ? "highlight-name" : ""}`;
 
       case "srNo":
         return "sr-no";
@@ -66,24 +56,15 @@ const Table = ({
     }
   };
 
-  const renderCell = (
-    cell: TableCell,
-    key: string
-  ) => {
+  const renderCell = (cell: TableCell, key: string) => {
     if (cell === null) {
       return null;
     }
 
-    const value = isRowSpanCell(cell)
-      ? cell.value
-      : cell;
+    const value = isRowSpanCell(cell) ? cell.value : cell;
 
     if (key === "srNo") {
-      return (
-        <span className="sr-badge">
-          {value}
-        </span>
-      );
+      return <span className="sr-badge">{value}</span>;
     }
 
     return value;
@@ -94,50 +75,35 @@ const Table = ({
       <div className="table-responsive">
         <table className="table governing-table align-middle mb-0">
           <thead>
-            {headerGroups &&
-            headerGroups.length > 0 ? (
+            {headerGroups && headerGroups.length > 0 ? (
               <>
                 {/* Main Header */}
                 <tr>
-                  {headerGroups.map(
-                    (group, index) => (
-                      <th
-                        key={`${group.title}-${index}`}
-                        colSpan={group.colSpan}
-                        rowSpan={group.rowSpan}
-                        className={
-                          group.className ?? ""
-                        }
-                      >
-                        {group.title}
-                      </th>
-                    )
-                  )}
+                  {headerGroups.map((group, index) => (
+                    <th
+                      key={`${group.title}-${index}`}
+                      colSpan={group.colSpan}
+                      rowSpan={group.rowSpan}
+                      className={group.className ?? ""}
+                    >
+                      {group.title}
+                    </th>
+                  ))}
                 </tr>
 
                 {/* Sub Header */}
                 <tr>
                   {columns
-                    .filter(
-                      (column) =>
-                        !column.rowSpan
-                    )
+                    .filter((column) => !column.rowSpan)
                     .map((column) => (
-                      <th
-                        key={column.key}
-                      >
-                        {column.title}
-                      </th>
+                      <th key={column.key}>{column.title}</th>
                     ))}
                 </tr>
               </>
             ) : (
               <tr>
                 {columns.map((column) => (
-                  <th
-                    key={column.key}
-                    rowSpan={column.rowSpan}
-                  >
+                  <th key={column.key} rowSpan={column.rowSpan}>
                     {column.title}
                   </th>
                 ))}
@@ -146,46 +112,28 @@ const Table = ({
           </thead>
 
           <tbody>
-            {data.map(
-              (row, rowIndex) => (
-                <tr key={rowIndex}>
-                  {columns.map(
-                    (column) => {
-                      const cell =
-                        row[column.key];
+            {data.map((row, rowIndex) => (
+              <tr key={rowIndex}>
+                {columns.map((column) => {
+                  const cell = row[column.key] as TableCell;
 
-                      if (cell === null) {
-                        return null;
-                      }
+                  if (cell === null) {
+                    return null;
+                  }
 
-                      return (
-                        <td
-                          key={column.key}
-                          rowSpan={
-                            isRowSpanCell(
-                              cell
-                            )
-                              ? cell.rowSpan
-                              : undefined
-                          }
-                          data-label={
-                            column.title
-                          }
-                          className={getCellClass(
-                            column.key
-                          )}
-                        >
-                          {renderCell(
-                            cell,
-                            column.key
-                          )}
-                        </td>
-                      );
-                    }
-                  )}
-                </tr>
-              )
-            )}
+                  return (
+                    <td
+                      key={column.key}
+                      rowSpan={isRowSpanCell(cell) ? cell.rowSpan : undefined}
+                      data-label={column.title}
+                      className={getCellClass(column.key, row)}
+                    >
+                      {renderCell(cell, column.key)}
+                    </td>
+                  );
+                })}
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>

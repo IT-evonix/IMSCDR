@@ -13,7 +13,7 @@ const Page = () => {
         columns={DocumentsRequiredColumns}
         data={DocumentsRequiredText}
       />
-      <div className="mt-4 subheading">Facilitation Center Officer Remark: The date on caste validity referring to caste certificate is 20/06/2025 but the actual date on caste certificate is 21/06/2025</div>
+      {/* <div className="mt-4 subheading">Facilitation Center Officer Remark: The date on caste validity referring to caste certificate is 20/06/2025 but the actual date on caste certificate is 21/06/2025</div> */}
     </div>
   );
 };
