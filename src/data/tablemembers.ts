@@ -640,7 +640,7 @@ export const casteBasedCommitteeMembers = [
   },
   {
     srNo: "5",
-    name: "Prof.Supriya Sapa",
+    name: "Dr.Anjali Vaidya ",
     role: "Member",
     // representation: "Deputy Director of the Institute",
     // caste: "Christian - Minority",
@@ -763,7 +763,7 @@ export const EqualOpportunityCellCommitteeMembers = [
   },
   {
     srNo: "5",
-    name: "Prof.Supriya Sapa",
+    name: "Dr.Anjali Vaidya ",
     role: "Member",
     // representation: "Deputy Director of the Institute",
     // caste: "Christian - Minority",

@@ -4,8 +4,8 @@
 //   | "Administration"
 //   | "Faculty - Information Technology"
 //   | "Faculty - Management Programme"
-//   | "BCA-Staff"
-//   | "BBA-Staff"
+//   | "BCA Staff"
+//   | "BBA Staff"
 //   | "Library-Staff"
 //   | "Technical-Support";
 //   // Basic Details
@@ -48,8 +48,8 @@ export interface Faculty {
     | "Admin Team"
     | "Faculty - Information Technology"
     | "Faculty - Management Programme"
-    | "BCA-Staff"
-    | "BBA-Staff"
+    | "BCA Staff"
+    | "BBA Staff"
     | "Library-Staff"
     | "Technical-Support";
 
@@ -110,7 +110,7 @@ export const facultyData: Faculty[] = [
   {
     "id": 2,
     category: "Administration",
-    "name": "Prof. Vikram P. Barnabas",
+    "name": "Vikram P. Barnabas",
     "designation": "Deputy Director",
     "qualification": "Ph.D",
     "image": "/images/faculty/dy-director.webp",
@@ -123,7 +123,7 @@ export const facultyData: Faculty[] = [
   {
     "id": 1,
     category: "Admin Team",
-    "name": "Mr. Mahesh Dixit",
+    "name": "Mahesh Dixit",
     "designation": "Office Superintendent",
     "image": "/images/faculty/Mahesh-Dixit.png",
     "email": "exam@imscdr.ac.in",
@@ -132,7 +132,7 @@ export const facultyData: Faculty[] = [
   {
     "id": 2,
     category: "Admin Team",
-    "name": "Mr. C. D. Mohite",
+    "name": "C. D. Mohite",
     "designation": "Clerk (B. A. LLB)",
     "image": "/images/faculty/C-D-Mohite.png",
     "email": "admission@imscdr.ac.in",
@@ -141,7 +141,7 @@ export const facultyData: Faculty[] = [
   {
     "id": 3,
     category: "Admin Team",
-    "name": "Mr. Dipak Tungar",
+    "name": "Dipak Tungar",
     "designation": "Sr. Clerk",
     "image": "/images/faculty/Dipak-Tungar.png",
     "email": "scholorship@imscdr.ac.in",
@@ -155,7 +155,7 @@ export const facultyData: Faculty[] = [
   {
     "id": 1,
     category: "Faculty - Management Programme",
-    "name": "Prof. Vikram P. Barnabas",
+    "name": "Vikram P. Barnabas",
     "designation": "Deputy Director",
     "qualification": "Ph.D",
     "image": "/images/faculty/dy-director.webp",
@@ -229,7 +229,7 @@ export const facultyData: Faculty[] = [
   {
     "id":4,
     category: "Faculty - Management Programme",
-    "name": "CA. D. A. Kulkarni",
+    "name": "D. A. Kulkarni",
     "designation": "Assistant Professor",
     "qualification": "M.Com., C.A.",
     "image": "/images/faculty/D-A-Kulkarni.png",
@@ -251,7 +251,7 @@ export const facultyData: Faculty[] = [
   {
     "id": 5,
     category: "Faculty - Management Programme",
-    "name": "Ms. Ashwini Thorat",
+    "name": "Ashwini Thorat",
     "designation": "Assistant Professor",
     "qualification": "Ph.D. in Marketing (Pursuing) from Charutar Vidya Mandal University (CVMU), Anand, Gujarat, MMS - Marketing, MBS - Human Resources Management",
     "image": "/images/faculty/Ashwini-Thorat.png",
@@ -310,7 +310,7 @@ export const facultyData: Faculty[] = [
   {
     "id": 8,
     category: "Faculty - Management Programme",
-    "name": "Sayyed Mudassar",
+    "name": "Dr. Sayyed Mudassar",
     "designation": "Assistant Professor",
     "qualification": "Ph.D (Pursuing)",
     "image": "/images/faculty/Sayyed-Mudassar.webp",
@@ -385,7 +385,7 @@ export const facultyData: Faculty[] = [
   {
     "id": 11,
     category: "Faculty - Management Programme",
-    "name": "Ms. Sakshi Madhyan",
+    "name": "Sakshi Madhyan",
     "designation": "Assistant Professor",
     "qualification": "Currently Pursuing Ph.D. (HRM), MBA (Finance), BBA (Finance)",
     "image": "/images/faculty/Sakshi-Madhyan.webp",
@@ -418,7 +418,7 @@ export const facultyData: Faculty[] = [
   {
     "id": 13,
     category: "Faculty - Management Programme",
-    "name": "Ms. Poonam Tiwari",
+    "name": "Poonam Tiwari",
     "designation": "Assistant Professor & Research Scholar",
     "qualification": "Pursuing Ph.D. in Management, Charutar Vidya Mandal University (CVMU), Anand, Gujarat, MBA (Dual Specialization), B.Com.",
     "image": "/images/faculty/PoonamTiwari.webp",
@@ -444,7 +444,7 @@ export const facultyData: Faculty[] = [
   {
     "id": 14,
     category: "Faculty - Management Programme",
-    "name": "Prof. Shruti M. Rao",
+    "name": "Shruti M. Rao",
     "designation": "Assistant Professor",
     "qualification": "MBA (Dual Specialisation Marketing and HR), Certification course in Advertising, BBA. (Bachelors of Business Administration)",
     "image": "/images/faculty/ShrutiRao.webp",
@@ -472,7 +472,7 @@ export const facultyData: Faculty[] = [
   {
     "id": 15,
     category: "Faculty - Management Programme",
-    "name": "Prof. Suresh Manohar Khanna",
+    "name": "Suresh Manohar Khanna",
     "designation": "Assistant Professor & Training and Placement Officer.",
     "qualification": "MBA Human Resource Management , MBA Marketing",
     "image": "/images/faculty/SureshKhanna.webp",
@@ -537,7 +537,7 @@ export const facultyData: Faculty[] = [
     "id": 1,
     category: "Faculty - Information Technology",
     "name": "Dr. Mahesh P. Potdar",
-    "designation": "Associate Professor",
+    "designation": "Associate Professor, H.O.D - IT",
     "qualification": "MCM, MMS (System), Ph. D.",
     "image": "/images/faculty/Mahesh-Potdar.png",
     "email": "maheshpotdar@rediffmail.com",
@@ -597,7 +597,7 @@ export const facultyData: Faculty[] = [
   {
     "id": 4,
     category: "Faculty - Information Technology",
-    "name": "Ms. Utkarsha R. Dethe",
+    "name": "Utkarsha R. Dethe",
     "designation": "Assistant Professor",
     "qualification": "MCS,MCA,SET(Computer Science & Application).",
     "image": "/images/faculty/Utkarsha-Dethe.png",
@@ -625,7 +625,7 @@ export const facultyData: Faculty[] = [
   {
     "id": 5,
     category: "Faculty - Information Technology",
-    "name": "Madhuri Godbole",
+    "name": "Dr. Madhuri Godbole",
     "designation": "Assistant Professor",
     "qualification": "Ph.D",
     "image": "/images/faculty/Madhuri-Godbole.png",
@@ -658,7 +658,7 @@ export const facultyData: Faculty[] = [
   {
     "id": 7,
     category: "Faculty - Information Technology",
-    "name": "Prof. Gauri Patil",
+    "name": "Gauri Patil",
     "designation": "Assistant Professor",
     "qualification": "B.C.S , M.C.S., M.C.A , Research Scholar",
     "image": "/images/faculty/gauri-patil.png",
@@ -680,7 +680,7 @@ export const facultyData: Faculty[] = [
   {
     "id": 8,
     category: "Faculty - Information Technology",
-    "name": "Dr. Sayyed Mudassar Nazir",
+    "name": "Dr. Mudassar I Sayyed",
     "designation": "Assistant Professor",
     "qualification": "Ph. D. (Management, HRM), UGC NET (Management), M-SET (Management), MBS (Materials & Production), PGDBM (Materials & Production), M.Sc. (Biochemistry), B.Sc. (Chemistry), CPM, CPED, PGDSCM",
     "image": "/images/faculty/Sayyed-Mudassar-Nazir.webp",
@@ -709,7 +709,7 @@ export const facultyData: Faculty[] = [
   {
     "id": 9,
     category: "Faculty - Information Technology",
-    "name": "Mr. Abhishek Subhash Kawane",
+    "name": "Abhishek Subhash Kawane",
     "designation": "Assistant Professor",
     "qualification": "UGC-NET, MH-SET, MCA(Commerce and Management), B.C.S.",
     "image": "/images/faculty/AbhishekKawane.webp",
@@ -725,7 +725,7 @@ export const facultyData: Faculty[] = [
   {
     "id": 10,
     category: "Faculty - Information Technology",
-    "name": "Ass.Prof.Shubhangi Ashok Kharmate",
+    "name": "Shubhangi Ashok Kharmate",
     "designation": "Assistant professor",
     "qualification": "MCA (Masters in computer Application), Certification course in Manual testing., BCA.",
     "image": "/images/faculty/Shubhangi-Kharmate.webp",
@@ -751,11 +751,11 @@ export const facultyData: Faculty[] = [
 
 
   
-  // BBA-Staff Start Here--------------------
+  // BBA Staff Start Here--------------------
     {
       "id": 1,
-      category: "BBA-Staff",
-      "name": "Prof. Sayali Sunil Torane",
+      category: "BBA Staff",
+      "name": "Sayali Sunil Torane",
       "designation": "Assistant Professor",
       "qualification": "MBA in Digital Media Communication Marketing (Savitribai Phule Pune University), Bachelor of Journalism & Mass Communication (BJMC) (Tilak Maharashtra Vidyapeeth), Degree / Training in Biomedical Engineering, Diploma in Bharatanatyam, Advanced Certificate Course in Digital Marketing",
       "image": "/images/faculty/SayaliTorane.webp",
@@ -776,8 +776,8 @@ export const facultyData: Faculty[] = [
     },
     {
     "id": 2,
-    category: "BBA-Staff",
-    "name": "Ms. Shital Ashish Upadhyay (Nabariya)",
+    category: "BBA Staff",
+    "name": "Shital Ashish Upadhyay (Nabariya)",
     "designation": "Assistant Professor,(BBA)",
     "qualification": "B.Ed. (Mathematics & Geography), M.Com. (Cost Accounting), MBA (Marketing), M.B.S. (Financial Management), P.G.D.B.M. (Marketing Management), B.Com. (Costing)",
     "image": "/images/faculty/ShitalNabariya.webp",
@@ -805,11 +805,11 @@ export const facultyData: Faculty[] = [
   
   
   
-  // BCA-Staff Start Here--------------------------
+  // BCA Staff Start Here--------------------------
   {
     "id": 1,
-    category: "BCA-Staff",
-    "name": "Ass. Prof. Ajit Sanjay Kute",
+    category: "BCA Staff",
+    "name": "Ajit Sanjay Kute",
     "designation": "Assistant Professor",
     "qualification": "Master of Computer Applications (MCA) in IMS, Ahmednagar",
     "image": "/images/faculty/AjitKute.webp",
@@ -838,8 +838,8 @@ export const facultyData: Faculty[] = [
   },
   {
     "id": 2,
-    category: "BCA-Staff",
-    "name": "Prof. Ashwini Arun Barathe",
+    category: "BCA Staff",
+    "name": "Ashwini Arun Barathe",
     "designation": "Assistant Professor, Department of Bachelor of Computer Applications (BCA)",
     "qualification": "Master of Computer Applications (MCA), Bachelor of Computer Applications (BCA)",
     "image": "/images/faculty/BaratheAshwini.webp",
@@ -864,7 +864,7 @@ export const facultyData: Faculty[] = [
   },
   {
     "id": 3,
-    category: "BCA-Staff",
+    category: "BCA Staff",
     "name": "Swati Vaibhav Thombare",
     "designation": "Assistant Professor (BCA) Department",
     "qualification": "Master of Computer Application(MCA), Bachelor of Computer Application(BCA)",
