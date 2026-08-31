@@ -1540,6 +1540,10 @@ Body {
   font-family: "Roma-Semibold";
   color: #000;
 }
+.highlight-name{
+  font-family: "Roma-Bold";
+  color:#f58232 !important;
+}
 .sr-badge {
   width: 30px;
   height: 30px;
