@@ -57,6 +57,23 @@ const page = () => {
               </p>
             </div>
           </div>
+
+
+          <div className="eligibility_card">
+            <p className="m-0 eligibility_text">
+              Passed the 10+2 (Higher Secondary) examination or equivalent from a recognized central or state board.  Specific percentage requirements, subject combinations, and merit lists follow the rules of the affiliating university where the college is registered. For detailed eligibility please see APH 2024-2027.
+            </p>
+            <div className="eligibility_inner">
+              <div className="branchname">BBA / BCA Eligibility</div>
+              <Image
+                src="/images/program/Eligibility1.webp"
+                alt="Eligibility Page UI Design"
+                width={250}
+                height={250}
+                className="img-fluid"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -529,7 +529,7 @@ export const InternalCommitteeCommitteeMembers = [
     srNo: "8",
     name: "Dr. Hatim Kayyuni",
     role: "Member",
-    representation: "Student of the Institute",
+    representation: "Associate Professor, H.O.D",
     mobileNumber: "-",
   },
     {
