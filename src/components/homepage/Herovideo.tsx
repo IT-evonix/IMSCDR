@@ -5,7 +5,7 @@ const Herovideo = () => {
   return (
     <section className="hero-video w-100 position-relative">
       <video className="w-100" autoPlay muted loop playsInline>
-        <source src="/videos/herovideoNew.mp4" type="video/mp4" />
+        <source src="/videos/homepage-banner.mp4" type="video/mp4" />
       </video>
 
       {/* <Image
