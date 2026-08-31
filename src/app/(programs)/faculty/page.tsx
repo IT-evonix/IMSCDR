@@ -12,8 +12,8 @@ const FacultySection = () => {
     "Admin Team",
     "Faculty - Information Technology",
     "Faculty - Management Programme",
-    "BCA-Staff",
-    "BBA-Staff",
+    "BCA Staff",
+    "BBA Staff",
     "Library-Staff",
     "Technical-Support",
   ];
@@ -104,7 +104,9 @@ const FacultySection = () => {
 
             return (
               <div className="faculty-category" key={category}>
-                <div className="heading">{category}</div>
+                {category !== "Admin Team" && (
+                  <div className="heading">{category}</div>
+                )}
                 {rows.map((row, rowIndex) => (
                   <div className="faculty-grid" key={`${category}-${rowIndex}`}>
                     {row.map((faculty) => (
