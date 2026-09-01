@@ -103,10 +103,10 @@
 .desktopNav ul {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 25px;
   list-style: none;
   margin: 0;
-  padding: 5px 10px 5px 30px;
+  padding: 5px 50px 5px 30px;
 }
 
 .menuItem {

@@ -8,11 +8,6 @@ const page = () => {
       <div className="heading">Fee Structure</div>
       <div className="fee_structure_main">
         <div className="feetabboxmain">
-          {/* <div className="feetabbox">
-            <div className="heading">
-              FRA Approved <br /> Fee 2026-2027
-            </div>
-          </div> */}
           <div className="feetabbox">
             <div className="heading">
               FRA Approved <br /> Fee 2025-2026
@@ -29,7 +24,6 @@ const page = () => {
             </div>
           </div>
         </div>
-
         <div className="fee_structure_inner">
           <div className="fee_structure_heading">
             Fee Structure 2026 - 2027 (Approved by FRA)
@@ -64,7 +58,6 @@ const page = () => {
           </div>
         </div>
         <hr className="sepratorline" />
-
         <div
           className="fee_structure_inner fee_structure_inner1"
         >
@@ -109,7 +102,6 @@ const page = () => {
             Fee Structure 2026 - 2027 (As per S.P. Pune University Circulars)
           </div>
         </div>
-
         <div className="fee_structure_pdf">
           <ApprovalList
             title="AICTE Approvals"

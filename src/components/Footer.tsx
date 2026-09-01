@@ -65,30 +65,30 @@ const Footer = () => {
                 <li>
                   <Link href="/program-mba/overview">Program</Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link href="/">Governance</Link>
-                </li>
+                </li> */}
                 <li>
                   <Link href="/placement">Placement</Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link href="/lifeatims/library">Library</Link>
-                </li>
+                </li> */}
                 <li>
                   <Link href="/admission-process">Admission</Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link href="/">R & D</Link>
-                </li>
-                <li>
+                </li> */}
+                {/* <li>
                   <Link href="/IQAC">IQAC</Link>
-                </li>
+                </li> */}
                 <li>
-                  <Link href="/">People</Link>
+                  <Link href="/faculty">Faculty</Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link href="/">Careers</Link>
-                </li>
+                </li> */}
                 <li>
                   <Link href="/contact">Contact</Link>
                 </li>
@@ -102,7 +102,7 @@ const Footer = () => {
                   <Link href="/anti-ragging-committee">Anti Ragging Committee</Link>
                 </li>
                 <li>
-                  <Link href="/">Anti Sexual Harassment Committee</Link>
+                  <Link href="/internal-commitee">Anti Sexual Harassment Committee</Link>
                 </li>
                 <li>
                   <Link href="/sc-st-cell">
@@ -115,9 +115,9 @@ const Footer = () => {
                 <li>
                   <Link target="_blank" href="/pdf/home/NIRF.pdf">NIRF</Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link href="/IQAC">IQAC</Link>
-                </li>
+                </li> */}
                 <li>
                   <Link href="/">Mandatory Disclosure</Link>
                 </li>
