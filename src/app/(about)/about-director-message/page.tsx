@@ -37,7 +37,7 @@ export default function ChancellorSection() {
               </p> */}
             <p className="mt-2 mt-sm-4">
               Welcome to BPHES Institute of Management Studies, Career
-              Development and Research (IMSCDR), Ahilyanagar. As a premier
+              Development and Research (IMS-CDR), Ahilyanagar. As a premier
               institute offering quality program in Management and Information
               Technology, we are proud to be affiliated with Savitribai Phule
               Pune University and recognized by AICTE, New Delhi.
@@ -59,7 +59,7 @@ export default function ChancellorSection() {
             </p>
             <p>
               I invite you to be part of a learning community that values
-              innovation, integrity, and excellence. At IMSCDR, we are committed
+              innovation, integrity, and excellence. At IMS-CDR, we are committed
               to shaping not just successful professionals, but responsible
               individuals ready to make a positive impact. Your journey toward a
               rewarding career begins here.
@@ -76,10 +76,10 @@ export default function ChancellorSection() {
                 />
               </div>
               <div className="about-nacc-content">
-                IMS has been Re‐accredited as NAAC Re-Accredited Institute by
+                IMS-CDR has been Re‐accredited as NAAC Re-Accredited Institute by
                 National Assessment & Accreditation Council of India (NAAC),
                 Bengaluru. As per the exclusive survey conducted by Nationally
-                well known magazine Business Baron, November 2019, IMS
+                well known magazine Business Baron, November 2019, IMS-CDR
                 Ahmednagar is ranked 25 in India’s Top B‐School Brands.
               </div>
             </div>
@@ -95,7 +95,7 @@ export default function ChancellorSection() {
                 />
               </div>
               <div className="about-nacc-content">
-                IMS has received many prestigious awards like the Best Institute
+                IMS-CDR has received many prestigious awards like the Best Institute
                 Award from S. P. Pune University, National Award for Leadership
                 in IT Education from Canon India Pvt. Ltd., Best B‐ School
                 Library Award from Discovery Education Media ‐ MBA by Choice,

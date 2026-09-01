@@ -22,7 +22,7 @@ export default function CampusLife() {
       <div className="container-fluid">
         <div className="row justify-content-center">
           <div className="col-md-7">
-            <div className="heading text-center">Life at BPHES IMSCDR</div>
+            <div className="heading text-center">Life at BPHES IMS-CDR</div>
             <p className="text-center mb-5">
               Experience a vibrant campus where academic pursuits go hand-in-hand with cultural, sports, and organizational activities, fostering holistic development and lifelong connections.
             </p>

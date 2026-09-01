@@ -13,7 +13,7 @@ export default function GovernanceGoverningBody() {
           <div className="heading">Committee Member's</div>
           <p className="">
             In accordance with the Maharashtra Public Universities Act (MPUA)
-            2016, Section 97 (1), IMS has constituted a College Development
+            2016, Section 97 (1), IMS-CDR has constituted a College Development
             Committee. The working and authority of this committee is in
             accordance with and as stipulated under Section 97 (5) of the above
             said MPU Act 2016.

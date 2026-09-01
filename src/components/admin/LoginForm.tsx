@@ -142,7 +142,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onSuccess }) => {
         {/* Bottom subtle divider line */}
         <div className="pt-3 border-t border-[#737782]/10 text-center">
           <p className="text-[10px] text-[#737782] font-medium">
-            IMSCDR Enterprise Portal &copy; {new Date().getFullYear()}
+            IMS-CDR Enterprise Portal &copy; {new Date().getFullYear()}
           </p>
         </div>
       </div>

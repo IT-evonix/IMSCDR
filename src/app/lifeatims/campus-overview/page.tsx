@@ -23,14 +23,14 @@ const page = () => {
               <p>
                 At Bhaskar Pandurang Hivale Education Society's Institute of
                 Management Studies, Career Development & Research (BPHES
-                IMSCDR), Ahilyanagar, we believe that education is the
+                IMS-CDR), Ahilyanagar, we believe that education is the
                 foundation of transformation. For over three decades, the
                 institute has been committed to academic excellence,
                 industry-oriented education, innovation, research, and holistic
                 student development.
               </p>
               <p>
-                IMSCDR provides a dynamic learning environment supported by
+                IMS-CDR provides a dynamic learning environment supported by
                 experienced faculty, state-of-the-art infrastructure, and strong
                 industry collaborations. Through experiential learning,
                 research, skill development, and value-based education, we
@@ -165,7 +165,7 @@ const page = () => {
           />
           <div className="ourvaluescontent">
               <div className="heading">Organisational Values</div>
-              <div className="subheading" style={{ color: "#fff" }}>IMSCD&R practices following values:</div>
+              <div className="subheading" style={{ color: "#fff" }}>IMS-CDR practices following values:</div>
               <ul>
                 <li>Inclusive Policy</li>
                 <li>Fairness </li>

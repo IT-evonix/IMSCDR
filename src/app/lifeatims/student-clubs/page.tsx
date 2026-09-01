@@ -9,7 +9,7 @@ const Page = () => {
   return (
     <div className="innerpagerightside">
       <div className="heading">Student Committees & Clubs</div>
-      <p className="mb-3">IMSCDR promotes leadership, teamwork, and holistic development through active student participation in various committees and clubs.</p>
+      <p className="mb-3">IMS-CDR promotes leadership, teamwork, and holistic development through active student participation in various committees and clubs.</p>
       <Table
         columns={committeesColumns}
         data={committeesText}

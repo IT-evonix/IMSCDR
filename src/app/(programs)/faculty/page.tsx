@@ -142,8 +142,11 @@ const FacultySection = () => {
                             <div className="subheading">{faculty.name}</div>
 
                             <span>{faculty.designation}</span>
+                            <span>{faculty.number}</span>
+                            <span>{faculty.qualification}</span>
+                            <span>{faculty.email}</span> 
 
-                            {faculty.designation
+                            {/* {faculty.designation
                               ?.toLowerCase()
                               .includes("director") && (
                               <>
@@ -163,7 +166,7 @@ const FacultySection = () => {
                                   </div>
                                 )}
                               </>
-                            )}
+                            )} */}
                           </div>
                         </div>
                       </div>

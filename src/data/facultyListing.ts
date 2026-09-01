@@ -130,7 +130,7 @@ export const facultyListing: Faculty[] = [
     id: 14,
     name: "Ass. Prof. Ajit Sanjay Kute",
     designation: "Associate Professor",
-    education: "Master of Computer Applications (MCA) in IMS, Ahmednagar",
+    education: "Master of Computer Applications (MCA) in IMS-CDR, Ahmednagar",
     image: "/images/faculty/male.webp",
     department: "MBA",
   },

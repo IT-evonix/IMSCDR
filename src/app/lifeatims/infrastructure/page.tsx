@@ -12,7 +12,7 @@ const page = () => {
             A Modern Campus Designed for Learning
           </div>
           <div className="infrapara">
-            Spread <span>across 2.62 acres</span>, IMSCDR offers a state-of-the-art campus
+            Spread <span>across 2.62 acres</span>, IMS-CDR offers a state-of-the-art campus
             that provides an ideal environment for academic excellence and
             holistic development. The institute is housed in a well-planned
             <span>three-storeyed academic building</span> along with an additional <span>SEED-C
@@ -40,7 +40,7 @@ const page = () => {
               className="img-fluid"
             />
             <div className="infrastructure_main_content">
-              IMSCDR spread across 2.62 acres
+              IMS-CDR spread across 2.62 acres
             </div>
           </div>
         </div>
