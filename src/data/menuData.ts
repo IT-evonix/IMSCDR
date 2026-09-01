@@ -364,11 +364,11 @@ export const menuItems: MenuItem[] = [
             href: "/anti-ragging-squad",
           },
           {
-            label: "Student Grievance Redressal Committee",
+            label: "Grievance Redressal  Committee",
             href: "/student-grievance-redressal-committee",
           },
           {
-            label: "Internal Committee (ICC/POSH)",
+            label: "Internal Complaint Committee",
             href: "/internal-commitee",
           },
           {

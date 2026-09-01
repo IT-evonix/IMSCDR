@@ -99,10 +99,10 @@ const Footer = () => {
               <div className="footerheading">Important Links</div>
               <ul>
                 <li>
-                  <Link href="/anti-ragging-committee">Anti Ragging Committee</Link>
+                  <Link href="/anti-ragging-committee">Anti-Ragging Committee</Link>
                 </li>
                 <li>
-                  <Link href="/internal-commitee">Anti Sexual Harassment Committee</Link>
+                  <Link href="/internal-commitee">Internal Complaint Committee</Link>
                 </li>
                 <li>
                   <Link href="/sc-st-cell">
@@ -110,7 +110,7 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/student-grievance-redressal-committee">Grievance Redressal Committee</Link>
+                  <Link href="/student-grievance-redressal-committee">Grievance Redressal  Committee</Link>
                 </li>
                 <li>
                   <Link target="_blank" href="/pdf/home/NIRF.pdf">NIRF</Link>
