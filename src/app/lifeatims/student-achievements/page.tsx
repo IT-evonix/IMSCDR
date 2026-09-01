@@ -14,7 +14,7 @@ const page = () => {
            Creating Future Leaders
           </div>
           <div className="infrapara">
-            Students of IMSCDR consistently excel in academics, management competitions, research, sports, cultural activities, and community engagement. Their achievements reflect the institute's commitment to excellence in education and overall personality development.
+            Students of IMS-CDR consistently excel in academics, management competitions, research, sports, cultural activities, and community engagement. Their achievements reflect the institute's commitment to excellence in education and overall personality development.
           </div>
         </div>
         <div className="col-md-5">

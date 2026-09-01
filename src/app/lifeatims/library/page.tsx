@@ -10,12 +10,12 @@ const page = () => {
           <div className="col-md-7">
             <p>
               In the historic city of Ahmednagar, which takes its name from
-              Ahmad Nizam Shah I, who founded the town in 1494, IMS was estd. in
+              Ahmad Nizam Shah I, who founded the town in 1494, IMS-CDR was estd. in
               1990 & has reputation for need based and novel educational
               Programmes, community-oriented activities, and innovative
               practices. The primary aim of an institutional library is to aid
               and support the academic programmes offered and administer all
-              facets of the Learning Resources. Thus IMS Library imparts leading
+              facets of the Learning Resources. Thus IMS-CDR Library imparts leading
               knowledge to develop appropriate attitude, skills and competencies
               to meet corporate and organizational requirements to develop the
               overall personality of students so as to make them responsible
@@ -245,7 +245,7 @@ const page = () => {
                 Management Librarian Award from International Association of
                 Management Scholars (AIMS). Professionally qualified staff with
                 Master’s and PhD degrees in Library and Information Science. The
-                IMS library has been automated since 2000. It is spread over the
+                IMS-CDR library has been automated since 2000. It is spread over the
                 area 457.96 Sq.mt. comprising of Circulation Counter and
                 Stacking area, Newspaper section, Extracurricular section,
                 General Knowledge section, Research and Referencesection,

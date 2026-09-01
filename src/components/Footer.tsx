@@ -15,7 +15,7 @@ const Footer = () => {
                 <Link href="/">
                 <Image
                   src="/images/home/white_logo.webp"
-                  alt="BPHES IMSCDR"
+                  alt="BPHES IMS-CDR"
                   width={220}
                   height={150}
                   className="img-fluid"

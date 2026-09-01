@@ -16,7 +16,7 @@ const HostelPage = () => {
                 Safe, Comfortable and Student-Friendly Accommodation
               </div>
               <p>
-                IMSCDR provides separate hostel facilities for boys and girls,
+                IMS-CDR provides separate hostel facilities for boys and girls,
                 ensuring a secure, disciplined, and comfortable residential
                 environment that supports academic success and personal
                 development.

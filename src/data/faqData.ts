@@ -28,19 +28,19 @@ import { FAQItem } from "@/components/Faq";
 
 export const mbaFaqs: FAQItem[] = [
   {
-    question: "What is the Master of Business Administration (MBA) program at BPHES IMSCDR?",
+    question: "What is the Master of Business Administration (MBA) program at BPHES IMS-CDR?",
     answer: "It is a two-year postgraduate management course designed to develop capable and ethical business professionals. The program combines classroom learning with practical exposure, preparing students for roles across various industries.",
   },
   {
-    question: "Why choose BPHES IMSCDR among MBA colleges in Ahmednagar (now Ahilyanagar)?",
+    question: "Why choose BPHES IMS-CDR among MBA colleges in Ahmednagar (now Ahilyanagar)?",
     answer: "We offer a supportive learning environment with experienced faculty, a curriculum aligned with Savitribai Phule Pune University, and consistent industry interaction. Our long-standing presence and inclusive campus culture provide a solid foundation for management education.",
   },
   {
-    question: "Does BPHES IMSCDR offer an MBA with placement support?",
+    question: "Does BPHES IMS-CDR offer an MBA with placement support?",
     answer: "Yes. We have a dedicated placement cell that works to connect students with job opportunities. Through soft skills training, industry engagement, and placement drives, we help students transition smoothly into their careers.",
   },
   {
-    question: "Does BPHES IMSCDR offer an MBA with placement support?",
+    question: "Does BPHES IMS-CDR offer an MBA with placement support?",
     answer: "Yes. Our dedicated Placement Cell has been active since our inception, working to bridge the gap between industry competition and student talent. It offers skill development training programs and facilitates recruitment for all eligible students. Our consistent placement record, including strong performance even during challenging economic periods, reflects the quality of our students and the efforts of the cell.",
   },
   {

@@ -11,7 +11,7 @@ export const menuItems: MenuItem[] = [
     label: "About",
     children: [
       {
-        label: "About IMS",
+        label: "About IMS-CDR",
         href: "/about-ims",
       },
       {
@@ -387,10 +387,10 @@ export const menuItems: MenuItem[] = [
             label: "College Development Committee (CDC)",
             href: "/college-development-commitee",
           },
-          {
-            label: "Online Grievance Portal",
-            href: "/",
-          },          
+          // {
+          //   label: "Online Grievance Portal",
+          //   href: "/",
+          // },          
         ],
       },
     ],

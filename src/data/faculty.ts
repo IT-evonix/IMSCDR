@@ -105,7 +105,7 @@ export const facultyData: Faculty[] = [
     ],
    
     
-    "profileContent": "A Management academic and a leader with 25 years at IMSCD&R Currently serving as an In - Charge Director, former Head of the MBA Department, supported by 8 years of prior Corporate experience. An SPPU-approved Research Guide with 18 published research papers and a strong record across teaching, research supervision, accreditation, and institutional governance. Experienced in leading academic departments, managing change, and building systems that endure, with direct involvement in NAAC accreditation, University-level academic duties, and statutory committees across the BPHE Society. Committed to building IMSCD&R into a leading Management institute for emerging India, grounded in academic rigour, inclusive excellence, and strong industry connect."
+    "profileContent": "A Management academic and a leader with 25 years at IMS-CDR Currently serving as an In - Charge Director, former Head of the MBA Department, supported by 8 years of prior Corporate experience. An SPPU-approved Research Guide with 18 published research papers and a strong record across teaching, research supervision, accreditation, and institutional governance. Experienced in leading academic departments, managing change, and building systems that endure, with direct involvement in NAAC accreditation, University-level academic duties, and statutory committees across the BPHE Society. Committed to building IMS-CDR into a leading Management institute for emerging India, grounded in academic rigour, inclusive excellence, and strong industry connect."
   },
   {
     "id": 2,
@@ -155,7 +155,7 @@ export const facultyData: Faculty[] = [
   {
     "id": 1,
     category: "Faculty - Management Programme",
-    "name": "Vikram P. Barnabas",
+    "name": "Vikram Barnabas",
     "designation": "Deputy Director",
     "qualification": "Ph.D",
     "image": "/images/faculty/dy-director.webp",
@@ -164,11 +164,11 @@ export const facultyData: Faculty[] = [
   {
     "id": 2,
     category: "Faculty - Management Programme",
-    "name": "Hatim Fakhruddin Kayumi",
-    "designation": "Associate Professor, H.O.D",
-    "qualification": "Ph. D. (Commerce, Finance): S. P. Pune University, M – SET (Commerce), M. Phil. (Commerce): Y.C.M.O.U Nashik, M.B.A. (Finance): Y.C.M.O.U Nashik, M. Com. (Cost Accounting): S. P. Pune University, B. Com. (Cost Accounting): S. P. Pune University",
+    "name": "Hatim Kayyumi",
+    "designation": "Assistant Professor",
+    "qualification": "Ph.D",
     "image": "/images/faculty/Hatim-Kayyumi.png",
-    "email": "hatimkayumi@gmail.com",
+    "email": "hatimkayumi@imscdr.ac.in",
     "broadAreas": [
       "International Business",
       "Financial Management",
@@ -201,9 +201,9 @@ export const facultyData: Faculty[] = [
     category: "Faculty - Management Programme",
     "name": "Rucha Tandulwadkar",
     "designation": "Associate Professor",
-    "qualification": "Ph.D. : Marketing Management from S.P.Pune University, Master's Degree MBA in Marketing and Human Resource, Bachelor's Degree Bachelor in Computer Science, Other Professional Qualifications Bachelor in Journalism",
+    "qualification": "Ph.D",
     "image": "/images/faculty/Rucha-Tandulwadkar.png",
-    "email": "ruchaveda@gmail.com",
+    "email": "ruchatmba@imscdr.ac.in",
     "broadAreas": [
       "Economics",
       "Entrepreneurship",
@@ -224,7 +224,7 @@ export const facultyData: Faculty[] = [
     "researchGuidance": "Recognized Ph.D. Guide with expertise in Marketing Management and Entrepreneurship",
     "phdAwarded": 1,
     "phdScholarsInProcess": 3,
-    "profileContent": "Dr. Rucha Tandulwadkar is a distinguished academician, researcher, Ph.D. guide, and management educator with over two decades of experience in higher education. Her expertise lies in Economics, Entrepreneurship, Marketing Management, and Women Entrepreneurship, with a strong focus on fostering innovation, entrepreneurial thinking, and sustainable development through learner-centric and experiential teaching practices.\n\nHer research interests include Entrepreneurship Development, Women Entrepreneurship and Marketing Management. As a recognized Ph.D. guide, she has successfully guided one doctoral scholar to completion, while four research scholars are currently pursuing their Ph.D. under her supervision. Dr. Tandulwadkar received a research grant from Savitribai Phule Pune University to study the challenges and opportunities of Self-Help Groups. She has presented and published research papers at numerous national and international conferences and journals and has been honoured with two Best Research Paper Awards for her scholarly contributions.\n\nBeyond academics, Dr. Tandulwadkar serves as the Coordinator of the Skill Enhancement and Entrepreneurship Development Centre (SEEDC), where she actively nurtures entrepreneurial aspirations among students and promotes women empowerment through training, mentoring, networking initiatives, and industry-academia collaborations. She also coordinates the IMS Academy of Fine and Performing Arts (AFPA), where she has introduced new academic programmes, strengthened student participation, and contributed to the promotion of Indian classical dance and cultural education. Her unwavering commitment to academic excellence, research, entrepreneurship, and holistic student development continues to create a lasting impact on higher education.\n\nHer Academic contribution and women empowerment work has been recognized by several institutions which include Best Teacher Award and Vocational Excellence Award"
+    "profileContent": "Dr. Rucha Tandulwadkar is a distinguished academician, researcher, Ph.D. guide, and management educator with over two decades of experience in higher education. Her expertise lies in Economics, Entrepreneurship, Marketing Management, and Women Entrepreneurship, with a strong focus on fostering innovation, entrepreneurial thinking, and sustainable development through learner-centric and experiential teaching practices.\n\nHer research interests include Entrepreneurship Development, Women Entrepreneurship and Marketing Management. As a recognized Ph.D. guide, she has successfully guided one doctoral scholar to completion, while four research scholars are currently pursuing their Ph.D. under her supervision. Dr. Tandulwadkar received a research grant from Savitribai Phule Pune University to study the challenges and opportunities of Self-Help Groups. She has presented and published research papers at numerous national and international conferences and journals and has been honoured with two Best Research Paper Awards for her scholarly contributions.\n\nBeyond academics, Dr. Tandulwadkar serves as the Coordinator of the Skill Enhancement and Entrepreneurship Development Centre (SEEDC), where she actively nurtures entrepreneurial aspirations among students and promotes women empowerment through training, mentoring, networking initiatives, and industry-academia collaborations. She also coordinates the IMS-CDR Academy of Fine and Performing Arts (AFPA), where she has introduced new academic programmes, strengthened student participation, and contributed to the promotion of Indian classical dance and cultural education. Her unwavering commitment to academic excellence, research, entrepreneurship, and holistic student development continues to create a lasting impact on higher education.\n\nHer Academic contribution and women empowerment work has been recognized by several institutions which include Best Teacher Award and Vocational Excellence Award"
   },
   {
     "id":4,
@@ -233,7 +233,7 @@ export const facultyData: Faculty[] = [
     "designation": "Assistant Professor",
     "qualification": "M.Com., C.A.",
     "image": "/images/faculty/D-A-Kulkarni.png",
-    "email": "dakulkarni@imscdr.ac.in",
+    "email": "dakulkarni@imscdr.ac.in ",
     "broadAreas": [
       "Financial Management"
     ],
@@ -253,9 +253,9 @@ export const facultyData: Faculty[] = [
     category: "Faculty - Management Programme",
     "name": "Ashwini Thorat",
     "designation": "Assistant Professor",
-    "qualification": "Ph.D. in Marketing (Pursuing) from Charutar Vidya Mandal University (CVMU), Anand, Gujarat, MMS - Marketing, MBS - Human Resources Management",
+    "qualification": "MMS -Marketing, HR",
     "image": "/images/faculty/Ashwini-Thorat.png",
-    "email": "ashwini2721@yahoo.com",
+    "email": "ashwinithorat9@imscdr.ac.in",
     "broadAreas": [
       "Marketing Management",
       "Human Resource Management"
@@ -276,11 +276,11 @@ export const facultyData: Faculty[] = [
   {
     "id": 6,
     category: "Faculty - Management Programme",
-    "name": "Dr. Manoj Shamrao Kulkarni",
+    "name": "Manoj Kulkarni",
     "designation": "Assistant Professor",
-    "qualification": "B.Sc., M.B.A., Ph.D.",
+    "qualification": "MBA (Ph.D)",
     "image": "/images/faculty/Manoj-Kulkarni.png",
-    "email": "mskmanoj@gmail.com",
+    "email": "mskmanoj@imscdr.ac.in",
     "broadAreas": [
       "Marketing Management"
     ],
@@ -310,7 +310,7 @@ export const facultyData: Faculty[] = [
   {
     "id": 8,
     category: "Faculty - Management Programme",
-    "name": "Dr. Sayyed Mudassar",
+    "name": "Sayyed Mudassar",
     "designation": "Assistant Professor",
     "qualification": "Ph.D (Pursuing)",
     "image": "/images/faculty/Sayyed-Mudassar.webp",
@@ -319,11 +319,11 @@ export const facultyData: Faculty[] = [
   {
     "id": 9,
     category: "Faculty - Management Programme",
-    "name": "Dr. Rahul K. Khandelwal",
+    "name": "Rahul Khandelwal",
     "designation": "Assistant Professor",
-    "qualification": "Ph.D., LL.B., MMS, MBS, PGDBM, B.Com.",
+    "qualification": "Ph.D",
     "image": "/images/faculty/Rahul-Khandelwal.png",
-    "email": "khandelwalr29@gmail.com",
+    "email": "rahulkhandelwal29@imscdr.ac.in",
     "broadAreas": [
       "Marketing Management",
       "Strategic Management",
@@ -351,11 +351,11 @@ export const facultyData: Faculty[] = [
   {
     "id": 10,
     category: "Faculty - Management Programme",
-    "name": "Dr. Harshvardhan Nandkishor Bhavsar",
+    "name": "Harshvardhan Bhavsar",
     "designation": "Assistant Professor",
-    "qualification": "Ph. D. (Management): R.T.M. Nagpur University, UGC NET (Management), MH SET (Management), M.B.A. (Marketing): PUMBA, S. P. Pune University, B. Sc. (Chemistry): S. P. Pune University,",
+    "qualification": "Ph.D",
     "image": "/images/faculty/Harshvardhan-Bhavsar.png",
-    "email": "harshvardhanbhavsar@yahoo.co.in",
+    "email": "hnbhavsar@imscdr.ac.in",
     "broadAreas": [
       "Marketing Management",
       "Strategic Management",
@@ -387,9 +387,9 @@ export const facultyData: Faculty[] = [
     category: "Faculty - Management Programme",
     "name": "Sakshi Madhyan",
     "designation": "Assistant Professor",
-    "qualification": "Currently Pursuing Ph.D. (HRM), MBA (Finance), BBA (Finance)",
+    "qualification": "MBA",
     "image": "/images/faculty/Sakshi-Madhyan.webp",
-    "email": "madhyansakshi.08@gmail.com",
+    "email": "madhyansakshi.08@imscdr.ac.in",
     "broadAreas": [
       "Commerce and Management"
     ],
@@ -404,7 +404,7 @@ export const facultyData: Faculty[] = [
     ],
     "orcidId": "https://orcid.org/0009-0003-1308-9163",
     "researchPapersPublished": 2,
-    "profileContent": "I am an Assistant Professor with an MBA specializing in Finance and I am currently pursuing Ph.D. at BPHES IMSCDR, (Affiliated to Savitribai Phule Pune University). My research focuses on Sustainable Human Resource Management (HRM) practices and Employee Engagement in Small and Medium Enterprises (SMEs). My academic interests include Human Resource Management, Organizational Behaviour, Financial Management andCurrent Trends and Cases in Finance. I teach courses in both Human Resource Management and Finance, integrating theoretical concepts with practical applications. I adopt innovative teaching methodologies such as case studies, role plays, flipped classrooms, and experiential learning to enhance student engagement. I have also presented Research Papers at National and International Conferences and actively participate in Faculty Development Programmes, workshops and seminars to continuously strengthen my academic and professional expertise."
+    "profileContent": "I am an Assistant Professor with an MBA specializing in Finance and I am currently pursuing Ph.D. at BPHES IMS-CDR, (Affiliated to Savitribai Phule Pune University). My research focuses on Sustainable Human Resource Management (HRM) practices and Employee Engagement in Small and Medium Enterprises (SMEs). My academic interests include Human Resource Management, Organizational Behaviour, Financial Management andCurrent Trends and Cases in Finance. I teach courses in both Human Resource Management and Finance, integrating theoretical concepts with practical applications. I adopt innovative teaching methodologies such as case studies, role plays, flipped classrooms, and experiential learning to enhance student engagement. I have also presented Research Papers at National and International Conferences and actively participate in Faculty Development Programmes, workshops and seminars to continuously strengthen my academic and professional expertise."
   },
   {
     "id": 12,
@@ -419,10 +419,10 @@ export const facultyData: Faculty[] = [
     "id": 13,
     category: "Faculty - Management Programme",
     "name": "Poonam Tiwari",
-    "designation": "Assistant Professor & Research Scholar",
-    "qualification": "Pursuing Ph.D. in Management, Charutar Vidya Mandal University (CVMU), Anand, Gujarat, MBA (Dual Specialization), B.Com.",
+    "designation": "Assistant Professor",
+    "qualification": "Ph.D (Pursuing)",
     "image": "/images/faculty/PoonamTiwari.webp",
-    "email": "poonampritamtiwari@gmail.com",
+    "email": "poonamtiwari@imscdr.ac.in",
     "broadAreas": [
       "Management",
       "Finance",
@@ -444,11 +444,11 @@ export const facultyData: Faculty[] = [
   {
     "id": 14,
     category: "Faculty - Management Programme",
-    "name": "Shruti M. Rao",
+    "name": "Shruti Rao",
     "designation": "Assistant Professor",
-    "qualification": "MBA (Dual Specialisation Marketing and HR), Certification course in Advertising, BBA. (Bachelors of Business Administration)",
+    "qualification": "MBA",
     "image": "/images/faculty/ShrutiRao.webp",
-    "email": "shrutithepopstar@gmail.com",
+    "email": "",
     "broadAreas": [
       "Marketing",
       "Human Resource",
@@ -472,9 +472,9 @@ export const facultyData: Faculty[] = [
   {
     "id": 15,
     category: "Faculty - Management Programme",
-    "name": "Suresh Manohar Khanna",
-    "designation": "Assistant Professor & Training and Placement Officer.",
-    "qualification": "MBA Human Resource Management , MBA Marketing",
+    "name": "Suresh Khanna",
+    "designation": "Assistant Professor",
+    "qualification": "MBA",
     "image": "/images/faculty/SureshKhanna.webp",
     "email": "sureshkhanna3333@gmail.com, imscdr81@gmail.com",
     "broadAreas": [
@@ -493,16 +493,16 @@ export const facultyData: Faculty[] = [
       "Business Development & Lead Generation.",
       "Soft skills and Communication."
     ],
-    "profileContent": "I am an Assistant Professor with an MBA specializing in Human resource management and Marketing.I am working with IMS since 2014 handling responsibilities which include but not limited to Placements, Alumni engagement and Outreach , collaboration and connect with the corporate’s , establishing, nurturing and building long term corporate relations for the betterment of the students in form of internships and placements . Conducting the placement sessions for the students which include practical learning, case studies , GD and PI preparation. Arranging the Industrial visits for the students to give them an exposure and real time know how of the corporate world. In short to make the students placement ready and to make them competent in the world of competition."
+    "profileContent": "I am an Assistant Professor with an MBA specializing in Human resource management and Marketing.I am working with IMS-CDR since 2014 handling responsibilities which include but not limited to Placements, Alumni engagement and Outreach , collaboration and connect with the corporate’s , establishing, nurturing and building long term corporate relations for the betterment of the students in form of internships and placements . Conducting the placement sessions for the students which include practical learning, case studies , GD and PI preparation. Arranging the Industrial visits for the students to give them an exposure and real time know how of the corporate world. In short to make the students placement ready and to make them competent in the world of competition."
   },
   {
     "id": 16,
     category: "Faculty - Management Programme",
-    "name": "Dr. Shradha S. Bhandari",
-    "designation": "Assistant Professor",
-    "qualification": "Ph.D. in Commerce & Management, MBA (Financial Management), Diploma in Taxation Laws (DTL), Government Diploma in Cooperation & Accountancy (GDC&A), B.Com. (Business Administration), Diploma in Interior Design & Decoration (De. IDD)",
+    "name": "Shradha Bhandari",
+    "designation": "",
+    "qualification": "MBA Assistant Professor",
     "image": "/images/faculty/ShradhaBhandari.webp",
-    "email": "bhandari.shradha31@gmail.com",
+    "email": "",
     "broadAreas": [
       "Commerce",
       "Management",
@@ -536,11 +536,11 @@ export const facultyData: Faculty[] = [
   {
     "id": 1,
     category: "Faculty - Information Technology",
-    "name": "Dr. Mahesh P. Potdar",
+    "name": "Mahesh Potdar",
     "designation": "Associate Professor, H.O.D - IT",
-    "qualification": "MCM, MMS (System), Ph. D.",
+    "qualification": "Ph.D ",
     "image": "/images/faculty/Mahesh-Potdar.png",
-    "email": "maheshpotdar@rediffmail.com",
+    "email": "maheshpotdar@imscdr.ac.in",
     "broadAreas": [
       "Computer Management",
       "Organizational Management"
@@ -559,11 +559,11 @@ export const facultyData: Faculty[] = [
   {
     "id": 2,
     category: "Faculty - Information Technology",
-    "name": "Dr. Anjali A. Vaidya",
-    "designation": "Assistant Professor",
-    "qualification": "",
+    "name": "Anjali Vaidya",
+    "designation": "Associate Professor",
+    "qualification": "Ph.D",
     "image": "/images/faculty/Anjali-Vaidya.png",
-    "email": "",
+    "email": "anjalivamca@imscdr.ac.in",
     "broadAreas": [
     
     ],
@@ -575,11 +575,11 @@ export const facultyData: Faculty[] = [
   {
     "id": 3,
     category: "Faculty - Information Technology",
-    "name": "Dr. Sanjay P. Bhakkad",
+    "name": "Sanjay Bhakkad",
     "designation": "Associate Professor",
-    "qualification": "M.Sc., M.C.A, Ph.D.",
+    "qualification": "Ph.D",
     "image": "/images/faculty/Sanjay-Bhakkad.webp",
-    "email": "sanjaybhakkad@rediffmail.com",
+    "email": "sanjaybhakkad@imscdr.ac.in",
     "broadAreas": [
       "Programming Languages",
       "Logic building",
@@ -597,11 +597,11 @@ export const facultyData: Faculty[] = [
   {
     "id": 4,
     category: "Faculty - Information Technology",
-    "name": "Utkarsha R. Dethe",
+    "name": "Utkarsha Dethe",
     "designation": "Assistant Professor",
-    "qualification": "MCS,MCA,SET(Computer Science & Application).",
+    "qualification": "MCA, SET Qualified",
     "image": "/images/faculty/Utkarsha-Dethe.png",
-    "email": "detheutkarsha@gmail.com",
+    "email": "udethe@imscdr.ac.in",
     "broadAreas": [
       "Computer Science and Application",
       "Information Technology",
@@ -620,12 +620,12 @@ export const facultyData: Faculty[] = [
     ],
     "researchPapersPublished": 3,
     "sponsoredResearchProjects": "1",
-    "profileContent": "Ms. Utkarsha R. Dethe has been serving as an Assistant Professor since 2007 and has nearly two decades of experience in higher education. She holds a Master's degree in Computer Science (MCS), a Master's degree in Computer Applications (MCA), and has qualified the State Eligibility Test (SET). She is currently pursuing her Ph.D. Her teaching and research interests include Artificial Intelligence, Knowledge Representation, Machine Learning, Deep Learning, Design and Analysis of Algorithms, Web Technologies, and Data Science.\n\nShe has taught a wide range postgraduate courses, including Knowledge Representation & AI:Machine Learning, Deep Learning, Design and Analysis of Algorithms, C++, Java, Data Structures, Advanced UNIX, Web Technologies, PHP, Software Testing & Quality Assurance, and Computer Organization and guided student internship projects.\n\nShe has actively participated in national and international conferences, presented research papers, and successfully completed a sponsored research project funded by BCUD. She has also contributed to curriculum development for the MCA Programme under the 2024 Pattern of Savitribai Phule Pune.\n\nApart from teaching and research, she actively contributes to institutional development by coordinating the Student Counselling and Mentorship Programme and serving on various institutional committees, including the IMS Newsletter Committee, Student Magazine Committee, and IMS Vidyarthini Manch. She remains committed to promoting academic excellence, research, and student-centric learning."
+    "profileContent": "Ms. Utkarsha R. Dethe has been serving as an Assistant Professor since 2007 and has nearly two decades of experience in higher education. She holds a Master's degree in Computer Science (MCS), a Master's degree in Computer Applications (MCA), and has qualified the State Eligibility Test (SET). She is currently pursuing her Ph.D. Her teaching and research interests include Artificial Intelligence, Knowledge Representation, Machine Learning, Deep Learning, Design and Analysis of Algorithms, Web Technologies, and Data Science.\n\nShe has taught a wide range postgraduate courses, including Knowledge Representation & AI:Machine Learning, Deep Learning, Design and Analysis of Algorithms, C++, Java, Data Structures, Advanced UNIX, Web Technologies, PHP, Software Testing & Quality Assurance, and Computer Organization and guided student internship projects.\n\nShe has actively participated in national and international conferences, presented research papers, and successfully completed a sponsored research project funded by BCUD. She has also contributed to curriculum development for the MCA Programme under the 2024 Pattern of Savitribai Phule Pune.\n\nApart from teaching and research, she actively contributes to institutional development by coordinating the Student Counselling and Mentorship Programme and serving on various institutional committees, including the IMS-CDR Newsletter Committee, Student Magazine Committee, and IMS Vidyarthini Manch. She remains committed to promoting academic excellence, research, and student-centric learning."
   },
   {
     "id": 5,
     category: "Faculty - Information Technology",
-    "name": "Dr. Madhuri Godbole",
+    "name": "Madhuri Godbole",
     "designation": "Assistant Professor",
     "qualification": "Ph.D",
     "image": "/images/faculty/Madhuri-Godbole.png",
@@ -634,11 +634,11 @@ export const facultyData: Faculty[] = [
   {
     "id":6,
     category: "Faculty - Information Technology",
-    "name": "Supriya G Sapa",
+    "name": "Supriya Sapa",
     "designation": "Assistant Professor",
-    "qualification": "Master of Technology (Information Technology) , Bachelor of Engineering (Computer Science and Engineering)",
+    "qualification": "M. Tech IT (Ph.D pursuing)",
     "image": "/images/faculty/Supriya-Sapa.png",
-    "email": "sapasupriya@gmail.com",
+    "email": "sapasupriya@imscdr.ac.in",
     "broadAreas": [
       "Computer Science"
     ],
@@ -653,16 +653,16 @@ export const facultyData: Faculty[] = [
     "booksPublished": 3,
     "bookChaptersPublished": 1,
     "sponsoredResearchProjects": 1,
-    "profileContent": "Ms. Supriya Sapa is an academician with more than 20 years of teaching experience in the field of Computer Science and Information Technology. She is currently associated with Institute of Management Studies Career Development and Research (IMSCDR), Ahilyanagar, where she teaches postgraduate students. Over the years, she has been actively involved in teaching, mentoring students, curriculum development, project guidance, and various academic and institutional activities. Alongside her teaching career, Ms. Sapa is pursuing her Ph.D. in Information Technology at MGM University, Chhatrapati Sambhajinagar. Her research focuses on the application of Artificial Intelligence and Machine Learning in Digital Health and Insurance Analytics. Her areas of research include Machine Learning, Artificial Intelligence, Digital Health, Wearable Health Technologies, Healthcare Data Analytics, Predictive Analytics, Health Risk Assessment, Insurance Analytics, and Explainable AI. Through her teaching and research, she aims to bridge the gap between academic knowledge and practical applications, preparing students to address real-world challenges using emerging technologies."
+    "profileContent": "Ms. Supriya Sapa is an academician with more than 20 years of teaching experience in the field of Computer Science and Information Technology. She is currently associated with Institute of Management Studies Career Development and Research (IMS-CDR), Ahilyanagar, where she teaches postgraduate students. Over the years, she has been actively involved in teaching, mentoring students, curriculum development, project guidance, and various academic and institutional activities. Alongside her teaching career, Ms. Sapa is pursuing her Ph.D. in Information Technology at MGM University, Chhatrapati Sambhajinagar. Her research focuses on the application of Artificial Intelligence and Machine Learning in Digital Health and Insurance Analytics. Her areas of research include Machine Learning, Artificial Intelligence, Digital Health, Wearable Health Technologies, Healthcare Data Analytics, Predictive Analytics, Health Risk Assessment, Insurance Analytics, and Explainable AI. Through her teaching and research, she aims to bridge the gap between academic knowledge and practical applications, preparing students to address real-world challenges using emerging technologies."
   },
   {
     "id": 7,
     category: "Faculty - Information Technology",
     "name": "Gauri Patil",
     "designation": "Assistant Professor",
-    "qualification": "B.C.S , M.C.S., M.C.A , Research Scholar",
+    "qualification": "MCA (Ph.D pursuing) ",
     "image": "/images/faculty/gauri-patil.png",
-    "email": "gauri.generaluse@gmail.com",
+    "email": "gauripatil@imscdr.ac.in",
     "broadAreas": [
       "Mobile Application Development",
       "Web Development",
@@ -675,16 +675,16 @@ export const facultyData: Faculty[] = [
     ],
     "researchPapersPublished": 5,
     "sponsoredResearchProjects": 1,
-    "profileContent": "Prof. Gauri Patil is an Assistant Professor in the Information Technology Department at BPHE Society's Institute of Management Studies, Career Development & Research (IMSCDR), Ahilyanagar, with over 20 years of teaching experience. She holds M.C.A., M.C.S., and B.C.S. degrees. Throughout her academic career, she has undertaken several key institutional responsibilities, including Placement Coordinator, Student Mentor, and active membership in the IMS SEEDC and Industry Interface Committee. At the university level, she has contributed as a Paper Setter and Examiner for SPPU and has actively participated in the curriculum development and syllabus framing for the MCA (Management) programme under both NEP and Non-NEP frameworks. She has also served as a Resource Person for Visual Basic .NET and has delivered career guidance sessions on \"Career Opportunities after 10th Standard\" for students at various Schools in Ahilyanagar. Her research interests include Cyber Security, Artificial Intelligence, and emerging technologies, with a focus on their applications in higher education and industry."
+    "profileContent": "Prof. Gauri Patil is an Assistant Professor in the Information Technology Department at BPHE Society's Institute of Management Studies, Career Development & Research (IMS-CDR), Ahilyanagar, with over 20 years of teaching experience. She holds M.C.A., M.C.S., and B.C.S. degrees. Throughout her academic career, she has undertaken several key institutional responsibilities, including Placement Coordinator, Student Mentor, and active membership in the IMS-CDR SEEDC and Industry Interface Committee. At the university level, she has contributed as a Paper Setter and Examiner for SPPU and has actively participated in the curriculum development and syllabus framing for the MCA (Management) programme under both NEP and Non-NEP frameworks. She has also served as a Resource Person for Visual Basic .NET and has delivered career guidance sessions on \"Career Opportunities after 10th Standard\" for students at various Schools in Ahilyanagar. Her research interests include Cyber Security, Artificial Intelligence, and emerging technologies, with a focus on their applications in higher education and industry."
   },
   {
     "id": 8,
     category: "Faculty - Information Technology",
-    "name": "Dr. Mudassar I Sayyed",
+    "name": "Mudassar Sayyed",
     "designation": "Assistant Professor",
-    "qualification": "Ph. D. (Management, HRM), UGC NET (Management), M-SET (Management), MBS (Materials & Production), PGDBM (Materials & Production), M.Sc. (Biochemistry), B.Sc. (Chemistry), CPM, CPED, PGDSCM",
+    "qualification": "Ph.D",
     "image": "/images/faculty/Sayyed-Mudassar-Nazir.webp",
-    "email": "sayyed.mudassar@yahoo.com",
+    "email": "mudassar@imscdr.ac.in",
     "broadAreas": [
       "Operations Management",
       "Supply Chain Management",
@@ -704,14 +704,14 @@ export const facultyData: Faculty[] = [
     "booksPublished": 2,
     "bookChaptersPublished": 2,
     "patents": "UK Design Patent titled 'AI-POWERED SUPPLY CHAIN MANAGEMENT DEVICE' (Design No.: 6477012)",
-    "profileContent": "Dr. Sayyed Mudassar Nazir is an accomplished academician, researcher, and management educator with over 24 years of combined experience spanning academia, research, and industry. He is currently serving as an Assistant Professor at the Institute of Management Studies, Career Development & Research (IMSCD&R), Ahilyanagar, where he has been contributing to management education since 2013. He holds a Ph.D. in Management (Human Resource Management) from Savitribai Phule Pune University, with his doctoral research focusing on Succession Planning in Family-Owned Enterprises. He is also qualified in UGC-NET and Maharashtra SET in Management and possesses multidisciplinary academic credentials in Operations Management, Supply Chain Management, Entrepreneurship Development, Project Management, and Biochemistry. His teaching and research interests encompass Operations and Supply Chain Management, Human Resource Management, Business Strategy, Lean Management, Theory of Constraints, World-Class Manufacturing Practices, and Family Business Management.Dr. Mudassar has established himself as an active researcher and academic contributor with 23 research publications, 13 conference presentations, 2 authored books, 2 book chapters, and a UK-registered Design Patent titled AI-Powered Supply Chain Management Device. He has been invited as a resource person by several universities and institutions, contributed to the MBA curriculum development of Savitribai Phule Pune University, and has coordinated and served on numerous institutional quality, research, admission, and accreditation committees. His academic excellence has been recognized through multiple distinctions, including the Best Teacher Award (2020 and twice in 2025), the Best Paper Presentation Award (2023), and several professional recognitions. Driven by a passion for quality education, research, innovation, and student development, Dr. Mudassar continues to bridge academic theory with industry practice while fostering critical thinking, ethical leadership, and lifelong learning among future management professionals."
+    "profileContent": "Dr. Sayyed Mudassar Nazir is an accomplished academician, researcher, and management educator with over 24 years of combined experience spanning academia, research, and industry. He is currently serving as an Assistant Professor at the Institute of Management Studies, Career Development & Research (IMS-CDR), Ahilyanagar, where he has been contributing to management education since 2013. He holds a Ph.D. in Management (Human Resource Management) from Savitribai Phule Pune University, with his doctoral research focusing on Succession Planning in Family-Owned Enterprises. He is also qualified in UGC-NET and Maharashtra SET in Management and possesses multidisciplinary academic credentials in Operations Management, Supply Chain Management, Entrepreneurship Development, Project Management, and Biochemistry. His teaching and research interests encompass Operations and Supply Chain Management, Human Resource Management, Business Strategy, Lean Management, Theory of Constraints, World-Class Manufacturing Practices, and Family Business Management.Dr. Mudassar has established himself as an active researcher and academic contributor with 23 research publications, 13 conference presentations, 2 authored books, 2 book chapters, and a UK-registered Design Patent titled AI-Powered Supply Chain Management Device. He has been invited as a resource person by several universities and institutions, contributed to the MBA curriculum development of Savitribai Phule Pune University, and has coordinated and served on numerous institutional quality, research, admission, and accreditation committees. His academic excellence has been recognized through multiple distinctions, including the Best Teacher Award (2020 and twice in 2025), the Best Paper Presentation Award (2023), and several professional recognitions. Driven by a passion for quality education, research, innovation, and student development, Dr. Mudassar continues to bridge academic theory with industry practice while fostering critical thinking, ethical leadership, and lifelong learning among future management professionals."
   },
   {
     "id": 9,
     category: "Faculty - Information Technology",
-    "name": "Abhishek Subhash Kawane",
+    "name": "Abhishek Kawane",
     "designation": "Assistant Professor",
-    "qualification": "UGC-NET, MH-SET, MCA(Commerce and Management), B.C.S.",
+    "qualification": "MCA",
     "image": "/images/faculty/AbhishekKawane.webp",
     "email": "",
     "broadAreas": [
@@ -725,11 +725,11 @@ export const facultyData: Faculty[] = [
   {
     "id": 10,
     category: "Faculty - Information Technology",
-    "name": "Shubhangi Ashok Kharmate",
+    "name": "Shubhangi Kharmate",
     "designation": "Assistant professor",
-    "qualification": "MCA (Masters in computer Application), Certification course in Manual testing., BCA.",
+    "qualification": "MCA",
     "image": "/images/faculty/Shubhangi-Kharmate.webp",
-    "email": "kharmateshubhangi14@gmail.com",
+    "email": "",
     "broadAreas": [
       "Computer Science",
       "Cyber Security",
@@ -755,11 +755,11 @@ export const facultyData: Faculty[] = [
     {
       "id": 1,
       category: "BBA Staff",
-      "name": "Sayali Sunil Torane",
-      "designation": "Assistant Professor",
-      "qualification": "MBA in Digital Media Communication Marketing (Savitribai Phule Pune University), Bachelor of Journalism & Mass Communication (BJMC) (Tilak Maharashtra Vidyapeeth), Degree / Training in Biomedical Engineering, Diploma in Bharatanatyam, Advanced Certificate Course in Digital Marketing",
+      "name": "Sayali Torane",
+      "designation": "MBA Assistant Professor",
+      "qualification": "",
       "image": "/images/faculty/SayaliTorane.webp",
-      "email": "sayalitorane.me@gmail.com",
+      "email": "",
       "broadAreas": [
         "Business Administration & Marketing Management",
         "AI in Education & Digital Media",
@@ -777,11 +777,11 @@ export const facultyData: Faculty[] = [
     {
     "id": 2,
     category: "BBA Staff",
-    "name": "Shital Ashish Upadhyay (Nabariya)",
-    "designation": "Assistant Professor,(BBA)",
-    "qualification": "B.Ed. (Mathematics & Geography), M.Com. (Cost Accounting), MBA (Marketing), M.B.S. (Financial Management), P.G.D.B.M. (Marketing Management), B.Com. (Costing)",
+    "name": "Shital Nabariya",
+    "designation": "MBA Assistant Professor",
+    "qualification": "",
     "image": "/images/faculty/ShitalNabariya.webp",
-    "email": "supadhyay97@gmail.com",
+    "email": "",
     "broadAreas": [
       "Commerce",
       "Management",
@@ -809,11 +809,11 @@ export const facultyData: Faculty[] = [
   {
     "id": 1,
     category: "BCA Staff",
-    "name": "Ajit Sanjay Kute",
-    "designation": "Assistant Professor",
-    "qualification": "Master of Computer Applications (MCA) in IMS, Ahmednagar",
+    "name": "Ajit Kute",
+    "designation": "MCA Assistant Professor",
+    "qualification": "",
     "image": "/images/faculty/AjitKute.webp",
-    "email": "ajitkute1111@gmail.com",
+    "email": "",
     "broadAreas": [
       "Computer Application & Information Technology",
       "Programming and Software Development",
@@ -839,11 +839,11 @@ export const facultyData: Faculty[] = [
   {
     "id": 2,
     category: "BCA Staff",
-    "name": "Ashwini Arun Barathe",
-    "designation": "Assistant Professor, Department of Bachelor of Computer Applications (BCA)",
-    "qualification": "Master of Computer Applications (MCA), Bachelor of Computer Applications (BCA)",
+    "name": "Barathe Ashwini",
+    "designation": "MCA Assistant Professor",
+    "qualification": "",
     "image": "/images/faculty/BaratheAshwini.webp",
-    "email": "ashwinitkl@gmail.com",
+    "email": "",
     "broadAreas": [
       "Computer Science",
       "Programming",
@@ -865,11 +865,11 @@ export const facultyData: Faculty[] = [
   {
     "id": 3,
     category: "BCA Staff",
-    "name": "Swati Vaibhav Thombare",
-    "designation": "Assistant Professor (BCA) Department",
-    "qualification": "Master of Computer Application(MCA), Bachelor of Computer Application(BCA)",
+    "name": "Swati Thombare",
+    "designation": "MCA Assistant Professor",
+    "qualification": "",
     "image": "/images/faculty/SwatiThombare.webp",
-    "email": "kulatswati@gmail.com",
+    "email": "",
     "broadAreas": [
       "Web Technology",
       "Software Development and Applications",
@@ -898,11 +898,11 @@ export const facultyData: Faculty[] = [
   {
     "id": 1,
     category: "Library-Staff",
-    "name": "Dr. Swati Barnabas",
+    "name": "Swati Barnabas(Phd)",
     "designation": "Librarian",
-    "qualification": "M.Sc.; M.lib.I.Sc. Ph.D (Library & Information Science)",
+    "qualification": "",
     "image": "/images/faculty/swatibarnabas.png",
-    "email": "swatibarnabas1@imscdr.ac.in",
+    "email": "",
     "broadAreas": [
       "Library Management",
       "Organisation & innovative practices in Information Literacy"
@@ -920,7 +920,7 @@ export const facultyData: Faculty[] = [
     "booksPublished": 5,
     "bookChaptersPublished": 2,
     "sponsoredResearchProjects": "1",
-    "profileContent": "Dr. Swati Barnabas has been associated with the field of Library and Information Science since 1995 and has three decades of professional experience. She has worked in academic, corporate, and special libraries and is presently serving as Librarian at the Institute of Management Studies (CD&R), Ahilyanagar, India. Under her leadership, the IMS Library has been awarded Grade 'A' in the Library Audit on two occasions and has successfully undergone both Internal and External Library Audits during 2020–21 and 2023–24. The IMS Library received the Best B-School Library Award 2013 from Discovery Education India Pvt. Ltd.\n\nShe has published 30 research papers in peer-reviewed national and international journals and has participated in 60 national and international conferences, seminars, workshops, and faculty development programmes. Her areas of expertise include Library Management, Library Organization, Information and Communication Technology (ICT) Applications in Libraries, Innovative Library Practices, Digital Library Services, Information Literacy Programmes, User Education, and Knowledge Resource Management. The area of expertise includes -Academic librarianship, digital libraries, information literacy, library automation, emerging technologies in libraries, and AI applications in library services. She is the recipient of the Outstanding Management Librarian Award conferred by AIMS International in 2019 and the prestigious Best Librarian Award from Savitribai Phule Pune University in 2023. These recognitions reflect her significant contributions to library management, innovation, and the advancement of library and information services.\n\nShe is frequently invited as a resource person for library and information science programmes, faculty development programmes, workshops, seminars, and conferences. She also serves as a judge for various academic and professional competitions and provides consultancy and guidance to college librarians on library management, NAAC documentation, ICT applications, and other library-related activities."
+    "profileContent": "Dr. Swati Barnabas has been associated with the field of Library and Information Science since 1995 and has three decades of professional experience. She has worked in academic, corporate, and special libraries and is presently serving as Librarian at the Institute of Management Studies (CD&R), Ahilyanagar, India. Under her leadership, the IMS-CDR Library has been awarded Grade 'A' in the Library Audit on two occasions and has successfully undergone both Internal and External Library Audits during 2020–21 and 2023–24. The IMS-CDR Library received the Best B-School Library Award 2013 from Discovery Education India Pvt. Ltd.\n\nShe has published 30 research papers in peer-reviewed national and international journals and has participated in 60 national and international conferences, seminars, workshops, and faculty development programmes. Her areas of expertise include Library Management, Library Organization, Information and Communication Technology (ICT) Applications in Libraries, Innovative Library Practices, Digital Library Services, Information Literacy Programmes, User Education, and Knowledge Resource Management. The area of expertise includes -Academic librarianship, digital libraries, information literacy, library automation, emerging technologies in libraries, and AI applications in library services. She is the recipient of the Outstanding Management Librarian Award conferred by AIMS International in 2019 and the prestigious Best Librarian Award from Savitribai Phule Pune University in 2023. These recognitions reflect her significant contributions to library management, innovation, and the advancement of library and information services.\n\nShe is frequently invited as a resource person for library and information science programmes, faculty development programmes, workshops, seminars, and conferences. She also serves as a judge for various academic and professional competitions and provides consultancy and guidance to college librarians on library management, NAAC documentation, ICT applications, and other library-related activities."
   },
   {
     "id": 2,
@@ -940,10 +940,9 @@ export const facultyData: Faculty[] = [
     "id": 4,
     category: "Library-Staff",
     "name": "Rajesh Kamble",
-    "designation": "Assistant in Library",
+    "designation": "Library maintenance staff",
     "image": "/images/faculty/Rajesh-Kamble.png",
   },
-
 
   // Technical Support ---------------------------------------
   {

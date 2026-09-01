@@ -151,7 +151,17 @@ Body {
 /*--------------- Hero Section Start Here ----------------*/
 .hero-video {
   position: relative;
-  min-height: 600px;
+  min-height: 650px;
+  /* background-image:url(/images/banners/herobanner-img.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; */
+}
+.hero-video > video {
+  width: 100%;
+  height: 650px;
+  object-fit: cover;
+  display: block;
 }
 .hero-video img{
   width:100%;
@@ -5218,18 +5228,21 @@ Body {
     left: 0;
     top: inherit;
   }
-  .hero-video:after {
+  .hero-video::after {
     display: none;
   }
   .hero-video {
-    min-height: 300px;
+    min-height: 350px;
+  }
+  .hero-video > video{
+    height: 350px;
   }
   /* Hero Banner End Here */
+  /*------------ About Us Start Here ------------*/
+  .aboutus_section .aboutsec_inner .aboutus_left{
+    display:none;
+  }
   /*-------------------- Ranking Start Here ------------*/
-  /* .ranking_card {
-    width: 100%;
-    gap: 20px;
-  } */
   .ranking_card {
     gap: 10px;
     width: 47%;
@@ -5432,7 +5445,7 @@ Body {
     overflow: hidden;
     object-fit: cover;
   }
-  .homepage .hero-video:after{
+  .homepage .hero-video::after{
     display:block;
   }
   /* .herobanner_Content h4 {

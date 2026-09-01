@@ -25,15 +25,15 @@ const page = () => {
               </div>
             </div>
             <div className="col-md-7">
-              <div className="heading">About IMS</div>
+              <div className="heading">About IMS-CDR</div>
               <p>
                 The Bhaskar Pandurang Hivale Education (B.P.H.E.) Society’s
                 Institute of Management Studies, Career Development and Research
-                (IMS) is a premier management institute conducting various
+                (IMS-CDR) is a premier management institute conducting various
                 quality programmes in Management and Information Technology in
-                Ahmednagar. IMS is affiliated to the Savitribai Phule Pune
+                Ahmednagar. IMS-CDR is affiliated to the Savitribai Phule Pune
                 University, Pune and is recognized by the All India Council for
-                Technical Education (AICTE), New Delhi. IMS has reputation for
+                Technical Education (AICTE), New Delhi. IMS-CDR has reputation for
                 novel and need based courses, visionary leadership, well
                 qualified and experienced faculty members, modern and
                 interactive teaching methodology, state of the art
@@ -57,10 +57,10 @@ const page = () => {
             />
           </div>
           <div className="about-nacc-content">
-            IMS has been Re‐accredited as NAAC Re-Accredited Institute by
+            IMS-CDR has been Re‐accredited as NAAC Re-Accredited Institute by
             National Assessment & Accreditation Council of India (NAAC),
             Bengaluru. As per the exclusive survey conducted by Nationally
-            well known magazine Business Baron, November 2019, IMS Ahmednagar
+            well known magazine Business Baron, November 2019, IMS-CDR Ahmednagar
             is ranked 25 in India’s Top B‐School Brands.
           </div>
         </div>
@@ -76,7 +76,7 @@ const page = () => {
             />
           </div>
           <div className="about-nacc-content">
-            IMS has received many prestigious awards like the Best Institute
+            IMS-CDR has received many prestigious awards like the Best Institute
             Award from S. P. Pune University, National Award for Leadership in
             IT Education from Canon India Pvt. Ltd., Best B‐ School Library
             Award from Discovery Education Media ‐ MBA by Choice, Most
@@ -111,7 +111,7 @@ const page = () => {
                 </svg>
               </div>
               <div className="heading">Our Mission</div>
-              <p>“The mission of IMSCD&R is to provide equal opportunity for quality education for students from diverse backgrounds, which will help to enrich themselves and make them responsible citizens of India and the world.”</p>
+              <p>“The mission of IMS-CDR is to provide equal opportunity for quality education for students from diverse backgrounds, which will help to enrich themselves and make them responsible citizens of India and the world.”</p>
             </div>
           </div>
         </div>

@@ -269,7 +269,7 @@ export const antiRaggingCommitteeMembers = [
   },
   {
     srNo: "6",
-    name: "Mr.Mahesh Dixit",
+    name: "Mr. Mahesh Dixit",
     role: "-",
     // representation: "-",
     // contactNumber: "-",
@@ -434,7 +434,7 @@ export const StudentGrievanceRedressalCommitteeMembers = [
     srNo: "3",
     referenceNumber:"GR/IMS/2022",
     date:"5/1/2022",
-    name: "Dr.M.B.Mehta",
+    name: "Dr. M. B. Mehta",
     role: "Member",
     // representation: "Deputy Director of the Institute",
     // contactNumber: "9890937793",
@@ -504,7 +504,7 @@ export const InternalCommitteeCommitteeMembers = [
   },
     {
     srNo: "3",
-    name: "Dr.M.B.Mehta",
+    name: "Dr. M. B. Mehta",
     role: "Member",
     // representation: "Teaching staff of the Institute",
     // mobileNumber: "9422727198",
@@ -518,7 +518,7 @@ export const InternalCommitteeCommitteeMembers = [
   },
     {
     srNo: "5",
-    name: "Mr.Mahesh Dixit",
+    name: "Mr. Mahesh Dixit",
     role: "Member",
     // representation: "Student of the Institute",
     // mobileNumber: "-",
@@ -546,21 +546,21 @@ export const InternalCommitteeCommitteeMembers = [
   },
   {
     srNo: "9",
-    name: "Prof.Gauri Patil",
+    name: "Prof. Gauri Patil",
     role: "Member",
     // representation: "Student of the Institute",
     // mobileNumber: "-",
   },
   {
     srNo: "10",
-    name: "Prof.Aswini Thorat",
+    name: "Prof. Aswini Thorat",
     role: "Member",
     // representation: "Student of the Institute",
     // mobileNumber: "-",
   },
   {
     srNo: "11",
-    name: "Dr.Hatim Kayumi",
+    name: "Dr. Hatim Kayumi",
     role: "Member",
     // representation: "Student of the Institute",
     // mobileNumber: "-",
@@ -640,7 +640,7 @@ export const casteBasedCommitteeMembers = [
   },
   {
     srNo: "5",
-    name: "Dr.Anjali Vaidya ",
+    name: "Dr. Anjali Vaidya ",
     role: "Member",
     // representation: "Deputy Director of the Institute",
     // caste: "Christian - Minority",
@@ -649,7 +649,7 @@ export const casteBasedCommitteeMembers = [
   },
   {
     srNo: "6",
-    name: "Prof.Supriya Sapa",
+    name: "Prof. Supriya Sapa",
     role: "Committee Head",
     highlight: true,
     // representation: "Teaching staff of the Institute",
@@ -763,7 +763,7 @@ export const EqualOpportunityCellCommitteeMembers = [
   },
   {
     srNo: "5",
-    name: "Dr.Anjali Vaidya ",
+    name: "Dr. Anjali Vaidya ",
     role: "Member",
     // representation: "Deputy Director of the Institute",
     // caste: "Christian - Minority",
@@ -772,7 +772,7 @@ export const EqualOpportunityCellCommitteeMembers = [
   },
   {
     srNo: "6",
-    name: "Prof.Supriya Sapa",
+    name: "Prof. Supriya Sapa",
     role: "Committee Head",
     highlight: true,
     // representation: "Teaching staff of the Institute",

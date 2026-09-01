@@ -29,7 +29,7 @@ export default function ChancellorSection() {
               className="mt-2 mt-sm-4"
               style={{ fontFamily: "Avenir-Next-Demi" }}
             >
-              I am delighted to welcome you to IMS. The institute is approved by
+              I am delighted to welcome you to IMS-CDR. The institute is approved by
               AICTE, and is built on the core idea of “Not Things But Men, I
               Dare You !”
             </p>

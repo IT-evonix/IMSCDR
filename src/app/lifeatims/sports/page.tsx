@@ -14,7 +14,7 @@ const page = () => {
             Sports & Recreation
           </div>
           <div className="infrapara">
-            At IMSCDR, physical fitness and recreational activities are considered integral to the overall development of students. The institute provides excellent sports facilities that encourage students to participate in both competitive and recreational activities.
+            At IMS-CDR, physical fitness and recreational activities are considered integral to the overall development of students. The institute provides excellent sports facilities that encourage students to participate in both competitive and recreational activities.
           </div>
         </div>
         <div className="col-md-5">
