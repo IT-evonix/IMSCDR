@@ -110,7 +110,7 @@ export const facultyData: Faculty[] = [
   {
     "id": 2,
     category: "Administration",
-    "name": "Vikram P. Barnabas",
+    "name": "Dr. Vikram P. Barnabas",
     "designation": "Deputy Director",
     "qualification": "Ph.D",
     "image": "/images/faculty/dy-director.webp",
@@ -164,7 +164,7 @@ export const facultyData: Faculty[] = [
   {
     "id": 2,
     category: "Faculty - Management Programme",
-    "name": "Dr. Hatim Fakhruddin Kayumi",
+    "name": "Hatim Fakhruddin Kayumi",
     "designation": "Associate Professor, H.O.D",
     "qualification": "Ph. D. (Commerce, Finance): S. P. Pune University, M – SET (Commerce), M. Phil. (Commerce): Y.C.M.O.U Nashik, M.B.A. (Finance): Y.C.M.O.U Nashik, M. Com. (Cost Accounting): S. P. Pune University, B. Com. (Cost Accounting): S. P. Pune University",
     "image": "/images/faculty/Hatim-Kayyumi.png",
@@ -199,7 +199,7 @@ export const facultyData: Faculty[] = [
   {
     "id": 3,
     category: "Faculty - Management Programme",
-    "name": "Dr. Rucha Tandulwadkar",
+    "name": "Rucha Tandulwadkar",
     "designation": "Associate Professor",
     "qualification": "Ph.D. : Marketing Management from S.P.Pune University, Master's Degree MBA in Marketing and Human Resource, Bachelor's Degree Bachelor in Computer Science, Other Professional Qualifications Bachelor in Journalism",
     "image": "/images/faculty/Rucha-Tandulwadkar.png",

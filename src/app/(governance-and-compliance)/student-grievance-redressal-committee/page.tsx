@@ -9,8 +9,8 @@ export default function GovernanceGoverningBody() {
   return (
     <section className="innerpage-wrapper">
       <InnerpageBanner
-        title="Student Grievance Redressal Committee"
-        breadcrumbs={[{ label: "Student Grievance Redressal Committee" }]}
+        title="Grievance Redressal  Committee"
+        breadcrumbs={[{ label: "Grievance Redressal  Committee" }]}
       />
       <div className="fullwidth_page">
         <div className="tablemain_section">

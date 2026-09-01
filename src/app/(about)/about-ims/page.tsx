@@ -144,7 +144,7 @@ const page = () => {
                   Our Motto
                 </div>
                 <div className="motto_quotes">
-                  Not Things But Men, I Dare You !
+                  Believe, Become
                 </div>
               </div>
             </div>
