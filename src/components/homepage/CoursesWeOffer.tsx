@@ -10,7 +10,7 @@ const CoursesWeOffer = () => {
           <div className="col-md-9 mb-2 mb-sm-4 position-relative z-2">
             <div className="heading text-white">Our Courses</div>
             <p className="text-white">
-              We offer a diverse range of programs across management and computer applications, including MBA, MCA, BBA, and BCA, along with doctoral studies through our Ph.D. programs. All courses are affiliated to Savitribai Phule Pune University and approved by AICTE, New Delhi. Each program is designed to blend academic rigor with practical industry exposure, preparing students for successful careers in their chosen fields.
+              We offer a diverse range of programmes across management and computer applications, including MBA, MCA, BBA, and BCA, along with doctoral studies through our Ph.D. programmes. All courses are affiliated to Savitribai Phule Pune University and approved by AICTE, New Delhi. Each programme is designed to blend academic rigor with practical industry exposure, preparing students for successful careers in their chosen fields.
             </p>
           </div>
         </div>

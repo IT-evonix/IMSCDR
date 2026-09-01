@@ -1,7 +1,10 @@
 import FacilityGrid from "@/components/ui/FacilityListing";
 import GallerySlider from "@/components/ui/GallerySlider";
 import { galleryData } from "@/data/GallerySlider";
-import { hostelFacilities, hostelboysFacilities } from "@/data/hostelFacilities";
+import {
+  hostelFacilities,
+  hostelboysFacilities,
+} from "@/data/hostelFacilities";
 import Image from "next/image";
 
 const HostelPage = () => {
@@ -46,6 +49,11 @@ const HostelPage = () => {
                   height={426}
                 />
                 <div className="subheading mb-2">Girls Hostel Facilities</div>
+                <div className="Capacitytext">
+                  <span>Capacity</span>
+                  <div className="Capacitynum">50</div>
+                  <span>Students</span>
+                </div>
               </div>
             </div>
             <div className="col-md-7">
@@ -57,7 +65,6 @@ const HostelPage = () => {
 
         <div className="girsandboys_hostel ">
           <div className="row flex-sm-row-reverse">
-            
             <div className="col-md-5">
               <div className="hostel_image">
                 <Image
@@ -70,7 +77,7 @@ const HostelPage = () => {
                 <div className="subheading mb-2">Boys Hostel Facilities</div>
                 <div className="Capacitytext">
                   <span>Capacity</span>
-                  <div className="Capacitynum">50</div>
+                  <div className="Capacitynum">36</div>
                   <span>Students</span>
                 </div>
               </div>
@@ -82,11 +89,12 @@ const HostelPage = () => {
         </div>
 
         <div className="lastpara_hostel pb-3 pb-md-5">
-          The hostels are designed to create a home-like environment where students can focus on academics while developing independence, responsibility, and lifelong friendships.
+          The hostels are designed to create a home-like environment where
+          students can focus on academics while developing independence,
+          responsibility, and lifelong friendships.
         </div>
 
         <GallerySlider items={galleryData} />
-
       </div>
     </section>
   );

@@ -28,8 +28,8 @@ import { FAQItem } from "@/components/Faq";
 
 export const mbaFaqs: FAQItem[] = [
   {
-    question: "What is the Master of Business Administration (MBA) program at BPHES IMS-CDR?",
-    answer: "It is a two-year postgraduate management course designed to develop capable and ethical business professionals. The program combines classroom learning with practical exposure, preparing students for roles across various industries.",
+    question: "What is the Master of Business Administration (MBA) programme at BPHES IMS-CDR?",
+    answer: "It is a two-year postgraduate management course designed to develop capable and ethical business professionals. The programme combines classroom learning with practical exposure, preparing students for roles across various industries.",
   },
   {
     question: "Why choose BPHES IMS-CDR among MBA colleges in Ahmednagar (now Ahilyanagar)?",
@@ -41,10 +41,10 @@ export const mbaFaqs: FAQItem[] = [
   },
   {
     question: "Does BPHES IMS-CDR offer an MBA with placement support?",
-    answer: "Yes. Our dedicated Placement Cell has been active since our inception, working to bridge the gap between industry competition and student talent. It offers skill development training programs and facilitates recruitment for all eligible students. Our consistent placement record, including strong performance even during challenging economic periods, reflects the quality of our students and the efforts of the cell.",
+    answer: "Yes. Our dedicated Placement Cell has been active since our inception, working to bridge the gap between industry competition and student talent. It offers skill development training programmes and facilitates recruitment for all eligible students. Our consistent placement record, including strong performance even during challenging economic periods, reflects the quality of our students and the efforts of the cell.",
   },
   {
-    question: "How does the Master of Business Administration program prepare students for successful careers?",
+    question: "How does the Master of Business Administration programme prepare students for successful careers?",
     answer: "We focus on more than just academics. Alongside classroom learning, our Placement Cell ensures students are trained in significant professional skills and are well equipped for workplace challenges. Through activity-based learning, industry exposure, and a culture rooted in ethics and professionalism, we prepare students to become capable, lifelong learners who can navigate and succeed in their chosen careers.",
   },
 ];

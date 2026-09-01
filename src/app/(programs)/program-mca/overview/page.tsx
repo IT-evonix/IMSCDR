@@ -7,7 +7,7 @@ const page = () => {
       <div className="overview_main">
         <div className="overview_inner pb-0">
           <div className="overview_left">
-            <div className="heading">Overview</div>
+            {/* <div className="heading">Overview</div> */}
             <p className="m-0">
               The Master of Computer Applications (MCA) is a two-year, four-semester postgraduate programme affiliated with Savitribai Phule Pune University (SPPU) and designed as per the NEP 2020 framework. The programme equips students with strong theoretical foundations, practical skills, research orientation, and industry exposure in modern computing technologies.
               The curriculum emphasizes Outcome-Based Education (OBE), project-based learning, internships, MOOCs, and multidisciplinary electives to prepare graduates for leadership roles in the IT industry and higher research.
@@ -26,7 +26,7 @@ const page = () => {
                 />
               </div>
               <div className="overview_right2">
-                <span>Master in Computer</span> Administration Program
+                <span>Master in Computer</span> Administration Programme
               </div>
             </div>
             <div className="overview_left2">

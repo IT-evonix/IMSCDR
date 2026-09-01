@@ -8,7 +8,7 @@ export default function ChancellorSection() {
           <div className="chancellor-left">
             <div className="chancellor-image">
               <Image
-                src="/images/about/In-Charge-director.webp"
+                src="/images/about/In-Charge-directorNew.webp"
                 alt="Dr. S. B. Mujumdar"
                 width={333}
                 height={325}
@@ -38,7 +38,7 @@ export default function ChancellorSection() {
             <p className="mt-2 mt-sm-4">
               Welcome to BPHES Institute of Management Studies, Career
               Development and Research (IMS-CDR), Ahilyanagar. As a premier
-              institute offering quality program in Management and Information
+              institute offering quality programme in Management and Information
               Technology, we are proud to be affiliated with Savitribai Phule
               Pune University and recognized by AICTE, New Delhi.
             </p>

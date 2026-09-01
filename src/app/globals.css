@@ -994,7 +994,7 @@ Body {
   background: #fff;
   border-radius: 15px;
   width: 23%;
-  padding: 10px;
+  padding: 10px 8px;
   box-shadow: 0 2px 10px #00000014;
   transition-duration: 0.5s;
 }
@@ -1041,7 +1041,7 @@ Body {
   padding: 0;
   font-family: "Avenir-Next-Regular";
   line-height: normal;
-  font-size: 14px;
+  font-size: 13px;
 }
 /*----------------------- Footer Start Here -----------------------*/
 .footer_main {
@@ -1240,7 +1240,7 @@ Body {
   margin-top: 40px;
 }
 .about-naccimg {
-  margin: 0 0 0 -60px;
+  margin: 0 0 0 -50px;
 }
 .about-nacc-content {
   width: 90%;

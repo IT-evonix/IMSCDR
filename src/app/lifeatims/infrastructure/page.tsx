@@ -15,7 +15,7 @@ const page = () => {
             Spread <span>across 2.62 acres</span>, IMS-CDR offers a state-of-the-art campus
             that provides an ideal environment for academic excellence and
             holistic development. The institute is housed in a well-planned
-            <span>three-storeyed academic building</span> along with an additional <span>SEED-C
+             <span> three-storeyed academic building</span> along with an additional <span>SEED-C
             Building</span>, offering excellent facilities for teaching, learning,
             research, and student engagement.
           </div>

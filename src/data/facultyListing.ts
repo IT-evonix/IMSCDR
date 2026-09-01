@@ -26,7 +26,7 @@ export const facultyListing: Faculty[] = [
     name: "Dr. Pronoti V. Telore",
     designation: "In-Charge Director",
     education: "PhD (Marketing), MBA (Marketing Management)",
-    image: "/images/about/In-Charge-director.webp",
+    image: "/images/about/In-Charge-directorNew.webp",
     department: "MBA",
   },
   {
