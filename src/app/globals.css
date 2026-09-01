@@ -5454,6 +5454,14 @@ Body {
       width: 100%;
       height: 360px;
   }
+
+  .faculty-grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .faculty-image{
+    width: 100%;
+    height: 360px;
+  }
   .faculty-page  .faculty-grid{
     gap: 15px;
     margin-bottom: 0px;

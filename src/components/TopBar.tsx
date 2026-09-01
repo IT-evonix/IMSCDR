@@ -41,7 +41,7 @@ const TopBar = ({ isSticky }: TopBarProps) => {
 
           <Link href="/contact" className="top-btn white-btn admission-btn">
             <CircleHelp size={18} />
-            <span>Enquiry Now</span>
+            <span>Enquire Now</span>
           </Link>
 
           <Link href="/contact" className="top-btn white-btn">
