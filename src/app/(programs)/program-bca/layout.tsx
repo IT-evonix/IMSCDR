@@ -11,12 +11,14 @@ export default function Layout({
 
   return (
     <>
-      <ProgramBanner heading={program.heading} />
+      <ProgramBanner
+        heading={program.heading}
+        bannerTitle="Bachelor of Computer Applications"
+      />
 
       <section className="innerpage_main programe_main">
         <div className="container">
           <div className="row">
-
             <div className="col-lg-3">
               <LeftSidebar
                 heading={program.heading}
@@ -27,7 +29,6 @@ export default function Layout({
             <div className="col-lg-9">
               {children}
             </div>
-
           </div>
         </div>
       </section>

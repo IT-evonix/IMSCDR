@@ -1,3 +1,41 @@
+// import LeftSidebar from "@/components/LeftSidebar";
+// import ProgramBanner from "@/components/ProgramBanner";
+// import { programSidebar } from "@/data/programSidebar";
+
+// export default function Layout({
+//   children,
+// }: {
+//   children: React.ReactNode;
+// }) {
+//   const program = programSidebar.lifeatims;
+
+//   return (
+//     <>
+//       <ProgramBanner heading={program.heading} />
+
+//       <section className="innerpage_main programe_main">
+//         <div className="container">
+//           <div className="row">
+
+//             <div className="col-lg-3">
+//               <LeftSidebar
+//                 heading={program.heading}
+//                 menuItems={program.menuItems}
+//               />
+//             </div>
+
+//             <div className="col-lg-9">
+//               {children}
+//             </div>
+
+//           </div>
+//         </div>
+//       </section>
+//     </>
+//   );
+// }
+
+
 import LeftSidebar from "@/components/LeftSidebar";
 import ProgramBanner from "@/components/ProgramBanner";
 import { programSidebar } from "@/data/programSidebar";
@@ -11,12 +49,14 @@ export default function Layout({
 
   return (
     <>
-      <ProgramBanner heading={program.heading} />
+      <ProgramBanner
+        heading={program.heading}
+        bannerTitle="Campus Life"
+      />
 
       <section className="innerpage_main programe_main">
         <div className="container">
           <div className="row">
-
             <div className="col-lg-3">
               <LeftSidebar
                 heading={program.heading}
@@ -27,7 +67,6 @@ export default function Layout({
             <div className="col-lg-9">
               {children}
             </div>
-
           </div>
         </div>
       </section>

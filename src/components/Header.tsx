@@ -5,14 +5,7 @@ import Link from "next/link";
 import styles from "@/css/Header.module.css";
 import { menuItems, MenuItem } from "@/data/menuData";
 import Image from "next/image";
-import {
-  Menu,
-  X,
-  ChevronDown,
-  ChevronRight,
-  Plus,
-  Minus,
-} from "lucide-react";
+import { Menu, X, ChevronDown, ChevronRight, Plus, Minus } from "lucide-react";
 import TopBar from "./TopBar";
 
 interface MobileMenuProps {
@@ -25,7 +18,7 @@ interface MobileMenuProps {
 const isExternalHref = (
   href?: string,
   isExternal?: boolean,
-  target?: string
+  target?: string,
 ) => {
   if (isExternal || target === "_blank") return true;
   if (!href) return false;
@@ -35,7 +28,7 @@ const isExternalHref = (
 const getLinkAttributes = (
   href?: string,
   isExternal?: boolean,
-  target?: string
+  target?: string,
 ) => {
   const shouldOpenNewTab = isExternalHref(href, isExternal, target);
 
@@ -148,44 +141,44 @@ export default function Header() {
   const scrollPosition = useRef(0);
 
   useEffect(() => {
-  if (mobileOpen) {
-    scrollPosition.current = window.scrollY;
+    if (mobileOpen) {
+      scrollPosition.current = window.scrollY;
 
-    document.body.style.position = "fixed";
-    document.body.style.top = `-${scrollPosition.current}px`;
-    document.body.style.left = "0";
-    document.body.style.right = "0";
-    document.body.style.width = "100%";
-    document.body.style.overflow = "hidden";
-  } else {
-    document.body.style.position = "";
-    document.body.style.top = "";
-    document.body.style.left = "";
-    document.body.style.right = "";
-    document.body.style.width = "";
-    document.body.style.overflow = "";
+      document.body.style.position = "fixed";
+      document.body.style.top = `-${scrollPosition.current}px`;
+      document.body.style.left = "0";
+      document.body.style.right = "0";
+      document.body.style.width = "100%";
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.left = "";
+      document.body.style.right = "";
+      document.body.style.width = "";
+      document.body.style.overflow = "";
 
-    window.scrollTo({
-      top: scrollPosition.current,
-      behavior: "instant",
-    });
-  }
+      window.scrollTo({
+        top: scrollPosition.current,
+        behavior: "instant",
+      });
+    }
 
-  return () => {
-    document.body.style.position = "";
-    document.body.style.top = "";
-    document.body.style.left = "";
-    document.body.style.right = "";
-    document.body.style.width = "";
-    document.body.style.overflow = "";
-  };
-}, [mobileOpen]);
+    return () => {
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.left = "";
+      document.body.style.right = "";
+      document.body.style.width = "";
+      document.body.style.overflow = "";
+    };
+  }, [mobileOpen]);
 
   const toggleMenu = (label: string) => {
     setOpenMenus((prev) =>
       prev.includes(label)
         ? prev.filter((item) => item !== label)
-        : [...prev, label]
+        : [...prev, label],
     );
   };
 
@@ -193,13 +186,21 @@ export default function Header() {
     setMobileOpen(false);
     setOpenMenus([]);
   };
-    const DesktopMenuItem = ({ item }: { item: MenuItem }) => {
-    const linkAttrs = getLinkAttributes(item.href, item.isExternal, item.target);
+  const DesktopMenuItem = ({ item }: { item: MenuItem }) => {
+    const linkAttrs = getLinkAttributes(
+      item.href,
+      item.isExternal,
+      item.target,
+    );
 
     return (
       <li className={styles.menuItem}>
         {isExternalHref(item.href, item.isExternal, item.target) ? (
-          <a href={linkAttrs.href} target={linkAttrs.target} rel={linkAttrs.rel}>
+          <a
+            href={linkAttrs.href}
+            target={linkAttrs.target}
+            rel={linkAttrs.rel}
+          >
             {item.label}
             {item.children && <ChevronDown size={14} />}
           </a>
@@ -216,12 +217,16 @@ export default function Header() {
               const childLinkAttrs = getLinkAttributes(
                 child.href,
                 child.isExternal,
-                child.target
+                child.target,
               );
 
               return (
                 <li key={child.label}>
-                  {isExternalHref(child.href, child.isExternal, child.target) ? (
+                  {isExternalHref(
+                    child.href,
+                    child.isExternal,
+                    child.target,
+                  ) ? (
                     <a
                       href={childLinkAttrs.href}
                       target={childLinkAttrs.target}
@@ -243,12 +248,16 @@ export default function Header() {
                         const subLinkAttrs = getLinkAttributes(
                           sub.href,
                           sub.isExternal,
-                          sub.target
+                          sub.target,
                         );
 
                         return (
                           <li key={sub.label}>
-                            {isExternalHref(sub.href, sub.isExternal, sub.target) ? (
+                            {isExternalHref(
+                              sub.href,
+                              sub.isExternal,
+                              sub.target,
+                            ) ? (
                               <a
                                 href={subLinkAttrs.href}
                                 target={subLinkAttrs.target}
@@ -335,6 +344,11 @@ export default function Header() {
               closeMenu={closeMenu}
             />
           ))}
+          <div className="onlyformobile">
+            <div className={styles.mobileTopBar}>
+              <TopBar isSticky={isSticky} />
+            </div>
+          </div>
         </div>
       )}
     </header>

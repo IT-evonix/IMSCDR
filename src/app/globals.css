@@ -57,6 +57,9 @@ Body {
 .headerNavigation {
   padding: 10px 0px;
 }
+.onlyformobile{
+  display:none;
+}
 /* TopBar Start Here */
 .topbar_inner {
   display: flex;
@@ -4526,7 +4529,7 @@ Body {
     justify-content: center;
   }
   .topbar-contact span {
-    color: #fff;
+    color: #000;
     /* background-color: #89004a; */
     padding: 4px 10px;
     border-radius: 100px;
@@ -4951,6 +4954,40 @@ Body {
 }
 
 @media (max-width: 767.98px) {
+  /*--------------- Header Start Here ---------------*/
+  .headerNavigation {
+    display: none;
+  }
+  .onlyformobile{
+    display:block;
+  }
+  .topbar-contact {
+    font-size: 13px;
+  }
+  .topbar-contact span{
+    padding: 4px 0px;
+  }
+  .top-btn {
+    padding: 5px 16px;
+    font-size: 14px;
+  }
+  .topbar_inner {
+    justify-content: start;
+    padding: 20px;
+    background: #f5f5f5;
+    border-radius: 10px;
+  }
+  .top-btn {
+    background: #ffffff;
+  }
+  .topbar {
+    padding: 10px;
+  }
+  .topbar-contact a {
+    color: #44ade2;
+    text-decoration: none;
+  }
+  /*--------------- Header End Here ---------------*/
   .subheading {
     font-size: 16px;
   }
@@ -5211,9 +5248,7 @@ Body {
 
 @media (max-width: 575.98px) {
   /*--------------- Header Start Here ---------------*/
-  .headerNavigation {
-    display: none;
-  }
+  
   /*--------------- Header End Here ---------------*/
   /* Hero Banner Start Here */
   .herobanner_Content {
