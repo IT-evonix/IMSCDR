@@ -103,7 +103,7 @@ const FacultySection = () => {
             const rows = groupIntoRows(categoryFaculty);
 
             return (
-              <div className="faculty-category" key={category}>
+              <div className="faculty-category" id={category.toLowerCase().replace(/\s+/g, "")} key={category}>
                 {category !== "Admin Team" && (
                   <div className="heading">{category}</div>
                 )}

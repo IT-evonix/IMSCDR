@@ -39,10 +39,10 @@ export const menuItems: MenuItem[] = [
         label: "College Development Committee (CDC)",
         href: "/college-development-commitee",
       },
-      {
-        label: "Approvals & Affiliations",
-        href: "/approvals-and-affiliations",
-      },
+      // {
+      //   label: "Approvals & Affiliations",
+      //   href: "/approvals-and-affiliations",
+      // },
     ],
   },
 
@@ -65,22 +65,22 @@ export const menuItems: MenuItem[] = [
         label: "BCA",
         href: "/program-bca/overview",
       },
-      {
-        label: "Ph.D",
-        href: "/program-phd",
-      },
+      // {
+      //   label: "Ph.D",
+      //   href: "/program-phd",
+      // },
       {
         label: "Faculty",
         href: "/faculty",
       },
-      {
-        label: "Academic Calendar",
-        href: "/academic-calendar",
-      },
-      {
-        label: "Research & Innovation",
-        href: "/research-and-innovation",
-      },
+      // {
+      //   label: "Academic Calendar",
+      //   href: "/academic-calendar",
+      // },
+      // {
+      //   label: "Research & Innovation",
+      //   href: "/research-and-innovation",
+      // },
     ],
   },
 
@@ -107,24 +107,24 @@ export const menuItems: MenuItem[] = [
         label: "Apply Online",
         href: "https://admissions.imscdr.ac.in/",
       },
-      {
-        label: "Downloads",
-        href: "/downloads",
-      },
-      {
-        label: "Prospectus",
-        href: "/pdf/admission/IMS-MBA-MCA-Prospectus25-26.pdf",
-        target: "_blank",
-        isExternal: true,
-      },
+      // {
+      //   label: "Downloads",
+      //   href: "/downloads",
+      // },
+      // {
+      //   label: "Prospectus",
+      //   href: "/pdf/admission/IMS-MBA-MCA-Prospectus25-26.pdf",
+      //   target: "_blank",
+      //   isExternal: true,
+      // },
       {
         label: "Documents Required",
         href: "/documents-required",
       },
-      {
-        label: "Reservation Policy",
-        href: "/reservation-policy",
-      },
+      // {
+      //   label: "Reservation Policy",
+      //   href: "/reservation-policy",
+      // },
     ],
   },
   {
@@ -217,10 +217,10 @@ export const menuItems: MenuItem[] = [
   //   ],
   // },
 
-  {
-    label: "Student Corner",
-    href: "/student-corner",
-  },
+  // {
+  //   label: "Student Corner",
+  //   href: "/student-corner",
+  // },
 
   // {
   //   label: "Student Corner",
@@ -343,14 +343,14 @@ export const menuItems: MenuItem[] = [
         label: "Mandatory Disclosure",
         href: "/mandatory-disclosure",
       },
-      {
-        label: "IQAC",
-        href: "/IQAC",
-      },
-      {
-        label: "Policies",
-        href: "/policies",
-      },
+      // {
+      //   label: "IQAC",
+      //   href: "/IQAC",
+      // },
+      // {
+      //   label: "Policies",
+      //   href: "/policies",
+      // },
 
       {
         label: "Statutory Committees",
@@ -410,8 +410,8 @@ export const menuItems: MenuItem[] = [
     ],
   },
 
-  {
-    label: "IQAC",
-    href: "/IQAC",
-  },
+  // {
+  //   label: "IQAC",
+  //   href: "/IQAC",
+  // },
 ];

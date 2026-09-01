@@ -35,7 +35,8 @@ const page = () => {
       />
       <div className="innerpagewrapper">
         <div className="container">
-            <div className="heading">Coming Soon</div>
+            {/* <div className="heading">Coming Soon</div> */}
+            <p className="text-center subheading">Mandatory Disclosure for the Academic Year 2026–2027</p>
         </div>
       </div>
     </div>
