@@ -111,12 +111,12 @@ export const menuItems: MenuItem[] = [
       //   label: "Downloads",
       //   href: "/downloads",
       // },
-      // {
-      //   label: "Prospectus",
-      //   href: "/pdf/admission/IMS-MBA-MCA-Prospectus25-26.pdf",
-      //   target: "_blank",
-      //   isExternal: true,
-      // },
+      {
+        label: "Prospectus",
+        href: "/pdf/admission/IMS-BBA-BCA-Prospectus-2026-27.pdf",
+        target: "_blank",
+        isExternal: true,
+      },
       {
         label: "Documents Required",
         href: "/documents-required",
@@ -129,7 +129,7 @@ export const menuItems: MenuItem[] = [
   },
   {
     label: "Placements",
-    href: "/placement",
+    href: "/placement/placement-overview",
   },
 
   // {

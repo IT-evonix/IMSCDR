@@ -40,7 +40,7 @@ export const programSidebar = {
       { title: "Intake", href: "/program-mba/intake" },
       { title: "Eligibility", href: "/program-mba/eligibility" },
       // { title: "Curriculum / Syllabus", href: "/program-mba/curriculum" },
-      // { title: "Programme Outcomes", href: "/program-mba/programme-outcomes" },
+      { title: "Programme Outcomes", href: "/program-mba/programme-outcomes" },
       {
         title: "Career Opportunities",
         href: "/program-mba/career-opportunities",
@@ -78,7 +78,7 @@ export const programSidebar = {
       { title: "Intake", href: "/program-bba/intake" },
       { title: "Eligibility", href: "/program-bba/eligibility" },
       // { title: "Curriculum / Syllabus", href: "/program-bba/curriculum" },
-      // { title: "Programme Outcomes", href: "/program-bba/programme-outcomes" },
+      { title: "Programme Outcomes", href: "/program-bba/programme-outcomes" },
       {
         title: "Career Opportunities",
         href: "/program-bba/career-opportunities",
@@ -118,14 +118,27 @@ export const programSidebar = {
       { title: "Scholarships", href: "/scholarships" },
       { title: "Apply Online", href: "https://admissions.imscdr.ac.in/" },
       // { title: "Downloads", href: "/downloads" },
-      // {
-      //   title: "Prospectus",
-      //   href: "pdf/admission/IMS-MBA-MCA-Prospectus25-26.pdf",
-      //   target: "_blank",
-      //   isExternal: true,
-      // },
+      {
+        title: "Prospectus",
+        href: "pdf/admission/IMS-BBA-BCA-Prospectus-2026-27.pdf",
+        target: "_blank",
+        isExternal: true,
+      },
       { title: "Documents Required", href: "/documents-required" },
       // { title: "Reservation Policy", href: "/reservation-policy" },
+    ],
+  },
+
+  placement: {
+    heading: "Placements",
+    menuItems: [
+      { title: "Placement Overview", href: "/placement/placement-overview" },
+      { title: "Training & Placement Cell", href: "/placement/training-placement" },
+      { title: "Industry Internship", href: "/placement/industry-internship" },
+      { title: "Industry Collobration", href: "/placement/industry-collobration" },
+      { title: "Top Recruiters", href: "/placement/top-recruiters" },
+      { title: "Placement Report", href: "/placement/placement-report" },
+      { title: "Testimonials", href: "/placement/testimonials" },
     ],
   },
 
@@ -148,4 +161,7 @@ export const programSidebar = {
       { title: "Gallery", href: "/lifeatims/gallery" },
     ],
   },
+
+
 };
+
