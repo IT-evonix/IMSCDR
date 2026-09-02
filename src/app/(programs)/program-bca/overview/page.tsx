@@ -7,7 +7,7 @@ const page = () => {
       <div className="overview_main">
         <div className="overview_inner">
           <div className="overview_left">
-            <div className="heading">Overview</div>
+            {/* <div className="heading">Overview</div> */}
             <p className="m-0">
               The Bachelor of Computer Applications (BCA) is a future-focused undergraduate programme that equips students with the technical knowledge and practical skills required to thrive in the rapidly evolving IT industry. Approved by the All India Council for Technical Education (AICTE) and affiliated with Savitribai Phule Pune University (SPPU), Maharashtra, the programme offers a strong foundation in programming, software development, database management, web technologies, cloud computing, cybersecurity, data analytics, and emerging technologies such as Artificial Intelligence. With a curriculum that blends theoretical concepts, hands-on laboratory experience, industry projects, and internships, students are prepared for rewarding careers as software developers, system analysts, application developers, data professionals, and IT consultants, while also building a strong foundation for higher studies and research in computing.
             </p>
@@ -24,7 +24,7 @@ const page = () => {
                 />
               </div>
               <div className="overview_right2">
-                <span>Bachelor of Computer</span> Administration Program
+                <span>Bachelor of Computer</span> Administration Programme
               </div>
             </div>
             <div className="overview_left2">

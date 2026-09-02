@@ -63,7 +63,7 @@ const Footer = () => {
                   <Link href="/about-ims">About</Link>
                 </li>
                 <li>
-                  <Link href="/program-mba/overview">Program</Link>
+                  <Link href="/program-mba/overview">Programme</Link>
                 </li>
                 {/* <li>
                   <Link href="/">Governance</Link>
@@ -119,7 +119,7 @@ const Footer = () => {
                   <Link href="/IQAC">IQAC</Link>
                 </li> */}
                 <li>
-                  <Link href="/">Mandatory Disclosure</Link>
+                  <Link href="/mandatory-disclosure">Mandatory Disclosure</Link>
                 </li>
               </ul>
             </div>

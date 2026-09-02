@@ -7,7 +7,7 @@ const page = () => {
       <div className="overview_main">
         <div className="overview_inner">
           <div className="overview_left">
-            <div className="heading">Overview</div>
+            {/* <div className="heading">Overview</div> */}
             <p className="m-0">
              The Bachelor of Business Administration (BBA) is a dynamic undergraduate programme designed to develop future business leaders, entrepreneurs, and management professionals. Approved by the All India Council for Technical Education (AICTE) and affiliated with Savitribai Phule Pune University (SPPU), Maharashtra, the programme combines strong academic foundations with practical industry exposure. Students gain comprehensive knowledge in areas such as marketing, finance, human resource management, business analytics, entrepreneurship, economics, and organizational behaviour while developing essential leadership, communication, and problem-solving skills. Through case studies, projects, internships, and experiential learning, the programme prepares graduates to excel in the corporate world, pursue entrepreneurial ventures, or continue higher education such as MBA and other management specialisations.
             </p>
@@ -24,7 +24,7 @@ const page = () => {
                 />
               </div>
               <div className="overview_right2">
-                <span>Master of Business</span> Administration Program
+                <span>Master of Business</span> Administration Programme
               </div>
             </div>
             <div className="overview_left2">

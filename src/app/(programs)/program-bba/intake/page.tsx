@@ -14,7 +14,7 @@ const page = () => {
           />
           <div className="intake_content">
             <div className="heading">Intake</div>
-            <p>The sanctioned number of seats for the MBA batch.</p>
+            <p>The sanctioned number of seats for the BBA batch.</p>
             <div className="intake_number"> 60<span>+3 Supernumerary </span></div>
           </div>
         </div>

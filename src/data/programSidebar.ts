@@ -2,7 +2,7 @@ export const programSidebar = {
   about: {
     heading: "About",
     menuItems: [
-      { title: "About IMS-CDR", href: "/about-ims" },
+      { title: "About Overview", href: "/about-ims" },
       { title: "Vision & Mission", href: "/about-ims/#vision-and-mision" },
 
       {

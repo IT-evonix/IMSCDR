@@ -7,9 +7,9 @@ const page = () => {
       <div className="overview_main">
         <div className="overview_inner">
           <div className="overview_left">
-            <div className="heading">Overview</div>
+            {/* <div className="heading">Overview</div> */}
             <p className="m-0">
-              2 year, 4 Semester, Full-time Program from Savitribai Phule Pune
+              2 year, 4 Semester, Full-time programme from Savitribai Phule Pune
               University. The revised MBA Curriculum 2024 integrates the
               National Education Policy, 2020 ethos with the Choice Based Credit
               System (CBCS) and Grading System and Outcomes Based Education
@@ -28,7 +28,7 @@ const page = () => {
                 />
               </div>
               <div className="overview_right2">
-                <span>Master of Business</span> Administration Program
+                <span>Master of Business</span> Administration Programme
               </div>
             </div>
             <div className="overview_left2">

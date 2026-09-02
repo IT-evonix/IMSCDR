@@ -18,33 +18,26 @@ export default function ChancellorSection() {
           </div>
 
           <div className="chancellor-content">
-            <div className="heading">Vikram P. Barnabas</div>
+            <div className="heading">Dr. Vikram P. Barnabas</div>
             <div className="subheading">
               Deputy Director
               <span className="w-100 d-block">
                 Bhaskar Pandurang Hivale Education (B.P.H.E.)
               </span>
             </div>
-            <p
+            {/* <p
               className="mt-2 mt-sm-4"
               style={{ fontFamily: "Avenir-Next-Demi" }}
             >
               I am delighted to welcome you to IMS-CDR. The institute is approved by
               AICTE, and is built on the core idea of “Not Things But Men, I
               Dare You !”
-            </p>
+            </p> */}
+            <p className="mt-2 mt-sm-4">It is my privilege to welcome you to IMS-CDR. As an AICTE-approved institute, our foundation rests on the enduring philosophy of "Not Things But Men, I Dare You!," a commitment to nurturing character and competence above all.</p>
             <p>
-              The Institute stands at the frontiers of excellence in curricular
-              and extra curricular activities that make education whole. I
-              invite you to peruse the extensive range of resources and
-              opportunities that we offer to all the members of the Institute.
-              From spacious classrooms to sports facilities, the amenities are
-              first-class. Most important of all, the teaching and non-teaching
-              staff at the Institute cultivate among them the culture to help
-              students fulfil their higher education goals. I hope that you will
-              take the time to learn more about Us and be inspired to join
-              hands.
+              We take pride in maintaining high standards across academic and co-curricular activities, for we believe true education extends beyond the classroom. Our campus offers well-equipped classrooms, sports facilities, and a range of resources designed to support your holistic growth. Most importantly, our dedicated teaching and non-teaching staff remain deeply invested in guiding students toward their higher education aspirations. 
             </p>
+            <p>I invite you to explore what IMS-CDR has to offer and consider joining us in this journey of learning and self-discovery. We look forward to welcoming you into our community. </p>
           </div>
         </div>
       </div>

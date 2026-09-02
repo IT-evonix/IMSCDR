@@ -25,7 +25,7 @@ const page = () => {
               </div>
             </div>
             <div className="col-md-7">
-              <div className="heading">About IMS-CDR</div>
+              {/* <div className="heading">About IMS-CDR</div> */}
               <p>
                 The Bhaskar Pandurang Hivale Education (B.P.H.E.) Society’s
                 Institute of Management Studies, Career Development and Research

@@ -56,7 +56,7 @@ const CoursesStrip = () => {
               </div>
               <div className="educationtext">
                 <h6>BBA</h6>
-                <p>Programme</p>
+                <p>Bachelor of Business Administration</p>
               </div>
             </Link>
           </div>
@@ -73,7 +73,7 @@ const CoursesStrip = () => {
               </div>
               <div className="educationtext">
                 <h6>BCA</h6>
-                <p>Programme</p>
+                <p>Bachelor of Computer Applications</p>
               </div>
             </Link>
           </div>

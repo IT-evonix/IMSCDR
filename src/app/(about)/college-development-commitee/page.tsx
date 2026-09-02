@@ -10,7 +10,7 @@ export default function GovernanceGoverningBody() {
     <section className="innerpage-wrapper innerpagerightside">
       <div className="tablemain_section">
         <div className="mb-4">
-          <div className="heading">Committee Member's</div>
+          <div className="heading">College Development Committee (CDC)</div>
           <p className="">
             In accordance with the Maharashtra Public Universities Act (MPUA)
             2016, Section 97 (1), IMS-CDR has constituted a College Development

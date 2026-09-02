@@ -53,7 +53,7 @@ const page = () => {
                 invaluable. The purpose of the institutional library is to
                 familiarize the users i.e. students, staff and stakeholders with
                 the reading culture, search strategy, building informal
-                education by conducting information literacy programs,
+                education by conducting information literacy programmes,
                 professional deliberations and usage of tools and technologies
                 in accessing E-resources like E-Books, E-Journals, E-Library,
                 Online Databases, and Streaming Videos with current tools and
@@ -296,7 +296,7 @@ const page = () => {
                   and Services, Extent of use of service and Use of technology.
                   The services can be broadly categorized as Current Awareness
                   Service; Selective Dissemination of Information; Information
-                  Literacy Program and ICT and Bibliographic Services. The
+                  Literacy programme and ICT and Bibliographic Services. The
                   digital initiatives include Automated circulation upgraded to
                   Barcode technology, CD / DVD Carousel for CD Library,
                   digitization of Ph. D. Theses, e-visitor count with Door Metal

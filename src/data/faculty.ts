@@ -95,7 +95,7 @@ export const facultyData: Faculty[] = [
     "name": "Dr. Pronoti V. Telore",
     "designation": "In-Charge Director",
     "qualification": "PhD (Marketing), MBA (Marketing Management)",
-    "image": "/images/faculty/In-Charge-director.webp",
+    "image": "/images/faculty/In-Charge-directorNew.webp",
     "email": "pronk70@yahoo.com",
     "broadAreas": [
       "Management"

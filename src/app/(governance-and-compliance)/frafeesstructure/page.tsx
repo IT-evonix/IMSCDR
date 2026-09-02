@@ -7,8 +7,8 @@ const page = () => {
   return (
     <div className="innerpage-wrapper">
       <InnerpageBanner
-        title="Governance & Compliance"
-        breadcrumbs={[{ label: "Director’s Message" }]}
+        title="FRA Fee Structure"
+        breadcrumbs={[{ label: "Fee Structure" }]}
       />
       <div className="container">
         <div className="innerpagewrapper">
