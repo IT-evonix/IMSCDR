@@ -71,12 +71,14 @@ export default function MilestonesAndAchievements() {
                 Awards & Accolades
               </div>
               <p className="text-center">
-                Over the years, we have earned recognition for our commitment to quality education and institutional excellence. These milestones stand as a testament to the dedication of our faculty, students, and stakeholders.
+                Over the years, we have earned recognition for our commitment to
+                quality education and institutional excellence. These milestones
+                stand as a testament to the dedication of our faculty, students,
+                and stakeholders.
               </p>
             </div>
           </div>
         </div>
-
         <Swiper
           modules={[Autoplay]}
           loop={true}
@@ -101,7 +103,7 @@ export default function MilestonesAndAchievements() {
           }}
           className="achievement-swiper"
         >
-          {achievements.map((item, index) => ( 
+          {achievements.map((item, index) => (
             <SwiperSlide key={index}>
               <div className="achievement-card">
                 <div className="achievement-content">

@@ -307,14 +307,35 @@ export const facultyData: Faculty[] = [
     "image": "/images/faculty/Vijay-Shinde.png",
     "email": "vijayshinde@imscdr.ac.in",
   },
+
   {
     "id": 8,
     category: "Faculty - Management Programme",
-    "name": "Sayyed Mudassar",
+    "name": "Mudassar Sayyed",
     "designation": "Assistant Professor",
-    "qualification": "Ph.D (Pursuing)",
+    "qualification": "Ph.D",
     "image": "/images/faculty/Sayyed-Mudassar.webp",
-    "email": "sayyedmudassar@imscdr.ac.in",
+    "email": "mudassar@imscdr.ac.in",
+    "broadAreas": [
+      "Operations Management",
+      "Supply Chain Management",
+      "General Management",
+      "Human Resources Management"
+    ],
+    "specificAreas": [
+      "Succession Planning",
+      "World Class Manufacturing Practices",
+      "Theory of Constraints",
+      "Lean Management",
+      "Materials Management"
+    ],
+    "orcidId": "https://orcid.org/0009-0002-8533-2567",
+    "googleScholar": "https://scholar.google.com/citations?user=dwRDcjAAAAAJ&hl=en",
+    "researchPapersPublished": 23,
+    "booksPublished": 2,
+    "bookChaptersPublished": 2,
+    "patents": "UK Design Patent titled 'AI-POWERED SUPPLY CHAIN MANAGEMENT DEVICE' (Design No.: 6477012)",
+    "profileContent": "Dr. Sayyed Mudassar Nazir is an accomplished academician, researcher, and management educator with over 24 years of combined experience spanning academia, research, and industry. He is currently serving as an Assistant Professor at the Institute of Management Studies, Career Development & Research (IMS-CDR), Ahilyanagar, where he has been contributing to management education since 2013. He holds a Ph.D. in Management (Human Resource Management) from Savitribai Phule Pune University, with his doctoral research focusing on Succession Planning in Family-Owned Enterprises. He is also qualified in UGC-NET and Maharashtra SET in Management and possesses multidisciplinary academic credentials in Operations Management, Supply Chain Management, Entrepreneurship Development, Project Management, and Biochemistry. His teaching and research interests encompass Operations and Supply Chain Management, Human Resource Management, Business Strategy, Lean Management, Theory of Constraints, World-Class Manufacturing Practices, and Family Business Management.Dr. Mudassar has established himself as an active researcher and academic contributor with 23 research publications, 13 conference presentations, 2 authored books, 2 book chapters, and a UK-registered Design Patent titled AI-Powered Supply Chain Management Device. He has been invited as a resource person by several universities and institutions, contributed to the MBA curriculum development of Savitribai Phule Pune University, and has coordinated and served on numerous institutional quality, research, admission, and accreditation committees. His academic excellence has been recognized through multiple distinctions, including the Best Teacher Award (2020 and twice in 2025), the Best Paper Presentation Award (2023), and several professional recognitions. Driven by a passion for quality education, research, innovation, and student development, Dr. Mudassar continues to bridge academic theory with industry practice while fostering critical thinking, ethical leadership, and lifelong learning among future management professionals."
   },
   {
     "id": 9,
@@ -677,34 +698,43 @@ export const facultyData: Faculty[] = [
     "sponsoredResearchProjects": 1,
     "profileContent": "Prof. Gauri Patil is an Assistant Professor in the Information Technology Department at BPHE Society's Institute of Management Studies, Career Development & Research (IMS-CDR), Ahilyanagar, with over 20 years of teaching experience. She holds M.C.A., M.C.S., and B.C.S. degrees. Throughout her academic career, she has undertaken several key institutional responsibilities, including Placement Coordinator, Student Mentor, and active membership in the IMS-CDR SEEDC and Industry Interface Committee. At the university level, she has contributed as a Paper Setter and Examiner for SPPU and has actively participated in the curriculum development and syllabus framing for the MCA (Management) programme under both NEP and Non-NEP frameworks. She has also served as a Resource Person for Visual Basic .NET and has delivered career guidance sessions on \"Career Opportunities after 10th Standard\" for students at various Schools in Ahilyanagar. Her research interests include Cyber Security, Artificial Intelligence, and emerging technologies, with a focus on their applications in higher education and industry."
   },
+  // {
+  //   "id": 8,
+  //   category: "Faculty - Information Technology",
+  //   "name": "Mudassar Sayyed",
+  //   "designation": "Assistant Professor",
+  //   "qualification": "Ph.D",
+  //   "image": "/images/faculty/Sayyed-Mudassar-Nazir.webp",
+  //   "email": "mudassar@imscdr.ac.in",
+  //   "broadAreas": [
+  //     "Operations Management",
+  //     "Supply Chain Management",
+  //     "General Management",
+  //     "Human Resources Management"
+  //   ],
+  //   "specificAreas": [
+  //     "Succession Planning",
+  //     "World Class Manufacturing Practices",
+  //     "Theory of Constraints",
+  //     "Lean Management",
+  //     "Materials Management"
+  //   ],
+  //   "orcidId": "https://orcid.org/0009-0002-8533-2567",
+  //   "googleScholar": "https://scholar.google.com/citations?user=dwRDcjAAAAAJ&hl=en",
+  //   "researchPapersPublished": 23,
+  //   "booksPublished": 2,
+  //   "bookChaptersPublished": 2,
+  //   "patents": "UK Design Patent titled 'AI-POWERED SUPPLY CHAIN MANAGEMENT DEVICE' (Design No.: 6477012)",
+  //   "profileContent": "Dr. Sayyed Mudassar Nazir is an accomplished academician, researcher, and management educator with over 24 years of combined experience spanning academia, research, and industry. He is currently serving as an Assistant Professor at the Institute of Management Studies, Career Development & Research (IMS-CDR), Ahilyanagar, where he has been contributing to management education since 2013. He holds a Ph.D. in Management (Human Resource Management) from Savitribai Phule Pune University, with his doctoral research focusing on Succession Planning in Family-Owned Enterprises. He is also qualified in UGC-NET and Maharashtra SET in Management and possesses multidisciplinary academic credentials in Operations Management, Supply Chain Management, Entrepreneurship Development, Project Management, and Biochemistry. His teaching and research interests encompass Operations and Supply Chain Management, Human Resource Management, Business Strategy, Lean Management, Theory of Constraints, World-Class Manufacturing Practices, and Family Business Management.Dr. Mudassar has established himself as an active researcher and academic contributor with 23 research publications, 13 conference presentations, 2 authored books, 2 book chapters, and a UK-registered Design Patent titled AI-Powered Supply Chain Management Device. He has been invited as a resource person by several universities and institutions, contributed to the MBA curriculum development of Savitribai Phule Pune University, and has coordinated and served on numerous institutional quality, research, admission, and accreditation committees. His academic excellence has been recognized through multiple distinctions, including the Best Teacher Award (2020 and twice in 2025), the Best Paper Presentation Award (2023), and several professional recognitions. Driven by a passion for quality education, research, innovation, and student development, Dr. Mudassar continues to bridge academic theory with industry practice while fostering critical thinking, ethical leadership, and lifelong learning among future management professionals."
+  // },
   {
     "id": 8,
     category: "Faculty - Information Technology",
-    "name": "Mudassar Sayyed",
+    "name": "Sayyed Mudassar",
     "designation": "Assistant Professor",
     "qualification": "Ph.D",
     "image": "/images/faculty/Sayyed-Mudassar-Nazir.webp",
     "email": "mudassar@imscdr.ac.in",
-    "broadAreas": [
-      "Operations Management",
-      "Supply Chain Management",
-      "General Management",
-      "Human Resources Management"
-    ],
-    "specificAreas": [
-      "Succession Planning",
-      "World Class Manufacturing Practices",
-      "Theory of Constraints",
-      "Lean Management",
-      "Materials Management"
-    ],
-    "orcidId": "https://orcid.org/0009-0002-8533-2567",
-    "googleScholar": "https://scholar.google.com/citations?user=dwRDcjAAAAAJ&hl=en",
-    "researchPapersPublished": 23,
-    "booksPublished": 2,
-    "bookChaptersPublished": 2,
-    "patents": "UK Design Patent titled 'AI-POWERED SUPPLY CHAIN MANAGEMENT DEVICE' (Design No.: 6477012)",
-    "profileContent": "Dr. Sayyed Mudassar Nazir is an accomplished academician, researcher, and management educator with over 24 years of combined experience spanning academia, research, and industry. He is currently serving as an Assistant Professor at the Institute of Management Studies, Career Development & Research (IMS-CDR), Ahilyanagar, where he has been contributing to management education since 2013. He holds a Ph.D. in Management (Human Resource Management) from Savitribai Phule Pune University, with his doctoral research focusing on Succession Planning in Family-Owned Enterprises. He is also qualified in UGC-NET and Maharashtra SET in Management and possesses multidisciplinary academic credentials in Operations Management, Supply Chain Management, Entrepreneurship Development, Project Management, and Biochemistry. His teaching and research interests encompass Operations and Supply Chain Management, Human Resource Management, Business Strategy, Lean Management, Theory of Constraints, World-Class Manufacturing Practices, and Family Business Management.Dr. Mudassar has established himself as an active researcher and academic contributor with 23 research publications, 13 conference presentations, 2 authored books, 2 book chapters, and a UK-registered Design Patent titled AI-Powered Supply Chain Management Device. He has been invited as a resource person by several universities and institutions, contributed to the MBA curriculum development of Savitribai Phule Pune University, and has coordinated and served on numerous institutional quality, research, admission, and accreditation committees. His academic excellence has been recognized through multiple distinctions, including the Best Teacher Award (2020 and twice in 2025), the Best Paper Presentation Award (2023), and several professional recognitions. Driven by a passion for quality education, research, innovation, and student development, Dr. Mudassar continues to bridge academic theory with industry practice while fostering critical thinking, ethical leadership, and lifelong learning among future management professionals."
   },
   {
     "id": 9,
