@@ -8,7 +8,7 @@ const page = () => {
         <div className="col-lg-12 heading">Training & Placement Cell</div>
       </div>
       <div className="row">
-        <div className="col-lg-12 mb-5">
+        <div className="col-lg-12 mb-4 mb-md-5">
           The IMS Placement Cell  ensures  its commitment to provide 100 percent placement assistance to the students . With the rising competition in the corporate world and the challenges with respect to the jobs , the placement cell works and strives for the students placements . The Training and Placement Cell is to guide students to choose right career and to give knowledge, skill, and aptitude and meet the manpower requirements of the Industry.
         </div>
       </div>

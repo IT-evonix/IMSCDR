@@ -8,7 +8,7 @@ const page = () => {
         <div className="col-lg-12 heading">Top Recruiters</div>
       </div>
       <div className="row">
-        <div className="col-lg-12 mb-4">
+        <div className="col-lg-12 mb-4 d-flex flex-wrap gap-1 justify-content-between">
           <div className="top_recru_list">
             <Image src="/images/placements/recruiters/finance.webp" alt="Recruiters" width={1200} height={900} className="img-fluid" />
           </div>
