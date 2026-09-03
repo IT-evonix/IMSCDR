@@ -2,7 +2,7 @@
   font-family: "Roma-Light";
   src: url("/fonts/ROMA_LIGHT.woff2") format("woff2");
   font-display: swap;
-} 
+}
 @font-face {
   font-family: "Roma-Regular";
   src: url("/fonts/ROMA_REGULAR.woff2") format("woff2");
@@ -57,8 +57,8 @@ Body {
 .headerNavigation {
   padding: 10px 0px;
 }
-.onlyformobile{
-  display:none;
+.onlyformobile {
+  display: none;
 }
 /* TopBar Start Here */
 .topbar_inner {
@@ -166,8 +166,8 @@ Body {
   object-fit: cover;
   display: block;
 }
-.hero-video img{
-  width:100%;
+.hero-video img {
+  width: 100%;
 }
 .hero-video::after {
   position: absolute;
@@ -178,7 +178,7 @@ Body {
   content: "";
   z-index: 1;
   background-color: #0000008b;
-  height:99%;
+  height: 99%;
 }
 .herobanner_Content {
   position: absolute;
@@ -554,6 +554,9 @@ Body {
   );
   position: relative;
 }
+.achievement-section .container {
+  min-width: 0;
+}
 .achievement-section::after {
   background-image: url(/images/home/achievement-waves.webp);
   background-position: center;
@@ -571,9 +574,11 @@ Body {
   line-height: normal;
 }
 .achievement-swiper {
-  padding: 60px 0 0 0 !important;
+  width: 100%;
+  max-width: 100%;
+  padding: 45px 0 0 !important;
 }
-.achievement-card {
+/* .achievement-card {
   position: relative;
   height: 230px;
   display: flex;
@@ -582,6 +587,15 @@ Body {
   transition: all 0.5s ease;
   width: 90%;
   margin: 0px auto;
+} */
+.achievement-card {
+  position: relative;
+  height: 230px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease;
 }
 .achievement-content {
   text-align: center;
@@ -646,11 +660,14 @@ Body {
 /* .swiper-slide-active .achievement-card::after {
   height: 190px;
 } */
-.achievement-swiper .swiper-slide-active .achievement-card {
+/* .achievement-swiper .swiper-slide-active .achievement-card {
   transform: scale(1.3);
   margin: -25px auto 0px auto;
+} */
+.achievement-swiper .swiper-slide-active .achievement-card {
+  transform: scale(1.15);
+  margin: -10px auto 0;
 }
-
 .achievement-swiper .swiper-slide-active .achievement-card::before {
   content: "";
   position: absolute;
@@ -668,6 +685,7 @@ Body {
 }
 .achievement-swiper .swiper-slide {
   transition: all 0.5s ease;
+   min-width: 0;
 }
 .achievement-swiper .swiper-slide:not(.swiper-slide-active) {
   opacity: 0.85;
@@ -1553,9 +1571,9 @@ Body {
   font-family: "Roma-Semibold";
   color: #000;
 }
-.highlight-name{
+.highlight-name {
   font-family: "Roma-Bold";
-  color:#f58232 !important;
+  color: #f58232 !important;
 }
 .sr-badge {
   width: 30px;
@@ -2222,7 +2240,7 @@ Body {
   padding: 20px;
   background: #fff;
   border-radius: 20px;
-  width:100%;
+  width: 100%;
 }
 .eligibility_inner img {
   border-radius: 20px;
@@ -2414,9 +2432,9 @@ Body {
 .logobox_img img {
   width: 100%;
 }
-.careerimages_sticky{
-  position:sticky;
-  top:100px;
+.careerimages_sticky {
+  position: sticky;
+  top: 100px;
 }
 /* Career Opportunities End Here */
 /* ---------- Laboratories & Facilities Start Here ---------- */
@@ -2487,8 +2505,8 @@ Body {
   font-size: 14px;
   color: #222;
 }
-.higher_education{
-  margin-top:40px;
+.higher_education {
+  margin-top: 40px;
 }
 .higher_education .facilities-wrapper {
   grid-template-columns: repeat(4, 1fr);
@@ -2514,7 +2532,7 @@ Body {
   display: flex;
   align-items: center;
   gap: 20px;
-  margin-bottom:40px;
+  margin-bottom: 40px;
 }
 /* .programme_outcome_box:nth-child(odd) {
   flex-direction: row-reverse;
@@ -2522,51 +2540,51 @@ Body {
 .programme_outcome_box:nth-child(even) {
   flex-direction: row-reverse;
 }
-.programme_outcome_box:nth-child(even) .programme_outcome_right{
-  background-color:#E0EAF6;
+.programme_outcome_box:nth-child(even) .programme_outcome_right {
+  background-color: #e0eaf6;
 }
-.programme_outcome_left{
+.programme_outcome_left {
   width: 57%;
 }
-.programme_outcome_left{
+.programme_outcome_left {
   display: flex;
   flex-wrap: wrap;
 }
-.programme_outcome_tags{
+.programme_outcome_tags {
   display: flex;
-  gap:9px;
+  gap: 9px;
   width: 100%;
   margin: 0 0 12px 0;
   align-items: center;
 }
-.programme_outcome_tags span{
-  background:#F5F5F5;
+.programme_outcome_tags span {
+  background: #f5f5f5;
   color: #000;
   padding: 3px 12px;
   border-radius: 20px;
   font-size: 13px;
-  line-height:normal;
+  line-height: normal;
 }
-.programme_outcome_image{
-  width:100%;
+.programme_outcome_image {
+  width: 100%;
 }
-.programme_outcome_image img{
+.programme_outcome_image img {
   width: 100%;
   height: 180px;
   overflow: hidden;
   border-radius: 20px;
   object-fit: cover;
 }
-.programme_outcome_right{
+.programme_outcome_right {
   width: 40%;
-  padding:25px;
+  padding: 25px;
   border-radius: 20px;
-  background-color:#F7E8F1;
+  background-color: #f7e8f1;
   line-height: normal;
   text-align: center;
   min-height: 220px;
 }
-.programme_outcome_right .subheading{
+.programme_outcome_right .subheading {
   margin: 0px 0px 10px 0px;
 }
 /*----------- Programme Outcome End Here -----------*/
@@ -2630,14 +2648,14 @@ Body {
   padding: 80px 0;
   background: #fff;
 }
-.faculty-category{
-  padding:40px 0px;
-  scroll-margin-top:100px;
+.faculty-category {
+  padding: 40px 0px;
+  scroll-margin-top: 100px;
 }
-.faculty-category:first-child{
+.faculty-category:first-child {
   padding-top: 0px;
 }
-.faculty-category:last-child{
+.faculty-category:last-child {
   padding-bottom: 0px;
 }
 .faculty-grid {
@@ -2913,24 +2931,24 @@ Body {
   color: #000;
   font-family: "Roma-Regular";
 }
-.faculty-category:first-child .faculty-grid{
+.faculty-category:first-child .faculty-grid {
   grid-template-columns: repeat(2, 1fr);
 }
-.faculty-category:first-child .faculty-grid .faculty-item .faculty-card{
+.faculty-category:first-child .faculty-grid .faculty-item .faculty-card {
   display: flex;
 }
-.faculty-category:first-child .faculty-grid .faculty-item .faculty-image{
-    width: 48%;
-    height: 260px;
+.faculty-category:first-child .faculty-grid .faculty-item .faculty-image {
+  width: 48%;
+  height: 260px;
 }
-.faculty-category:first-child .faculty-grid .faculty-content{
+.faculty-category:first-child .faculty-grid .faculty-content {
   text-align: start;
 }
-.faculty-content a{
-  text-decoration:none;
+.faculty-content a {
+  text-decoration: none;
   color: rgb(9, 70, 142);
-  font-size:14px;
-  margin:5px 0px 5px 0px;
+  font-size: 14px;
+  margin: 5px 0px 5px 0px;
 }
 /*-------------- Faculty New Design ---------------*/
 /* =========================================
@@ -3405,9 +3423,7 @@ Body {
   align-items: center;
   display: flex;
 }
-.fee_structure_pdf{
-  
-}
+
 .fee_structure_content {
   border-radius: 20px;
   width: 69%;
@@ -4454,22 +4470,22 @@ Body {
 /*------------- News And Events Details Page End Here -------------*/
 
 /*------------- PLACEMENTS-PAGE-START -------------*/
-.place_training_box{
-background-color: #dde7f3;
+.place_training_box {
+  background-color: #dde7f3;
   padding: 30px;
   border-radius: 30px;
 }
-.place_training_box span{
-float: left;
+.place_training_box span {
+  float: left;
   width: 100%;
   margin: 0 0 20px;
   font-size: 15px;
   line-height: normal;
   padding: 0 0 0 20px;
 }
-.place_training_box span::before{
+.place_training_box span::before {
   content: "";
-position: absolute;
+  position: absolute;
   width: 6px;
   height: 6px;
   background-color: #09468e;
@@ -4477,8 +4493,8 @@ position: absolute;
   margin: 8px 0 0 -18px;
 }
 
-.top_recru_list{
-background-color: #ebeff3;
+.top_recru_list {
+  background-color: #ebeff3;
   width: 30%;
   float: left;
   padding: 20px;
@@ -4489,13 +4505,11 @@ background-color: #ebeff3;
   align-items: center;
   border-radius: 10px;
 }
-.top_recru_list img{
-width: auto;
+.top_recru_list img {
+  width: auto;
   max-height: 70px;
 }
 /*------------- PLACEMENTS-PAGE-END -------------*/
-
-
 
 /* -------------------   Responsive Pages Start here ------------------- */
 
@@ -4601,26 +4615,26 @@ width: auto;
   }
   /*--------------- News And Events End Here ---------------*/
   /*---------------- Programe tab Start Here ----------------*/
-  .facility-item{
+  .facility-item {
     padding: 10px 12px;
     gap: 10px;
     min-height: 70px;
   }
-  .mca_career_opportunities_main .facilities-wrapper{
+  .mca_career_opportunities_main .facilities-wrapper {
     grid-template-columns: repeat(1, 1fr);
   }
-  .higher_education .facilities-wrapper{
+  .higher_education .facilities-wrapper {
     grid-template-columns: repeat(2, 1fr);
   }
-  .details-grid{
+  .details-grid {
     gap: 20px;
   }
-  .info_box_main{
+  .info_box_main {
     gap: 15px;
   }
-  .faculty-modal-overlay .info-box{
-    font-size:13px;
-    line-height:normal;
+  .faculty-modal-overlay .info-box {
+    font-size: 13px;
+    line-height: normal;
   }
   /*---------------- Programe Tab End Here ----------------*/
 }
@@ -4988,7 +5002,7 @@ width: auto;
   .specialization-section .left-box img {
     border-radius: 30px 30px 0px 0px;
   }
-  .intake_content{
+  .intake_content {
     position: inherit;
     top: 0%;
     left: 0px;
@@ -4996,66 +5010,65 @@ width: auto;
     border-radius: 0px 0px 20px 20px;
     background: #5f6872;
   }
-  .intake_inner img{
+  .intake_inner img {
     border-radius: 20px 20px 0px 0px;
   }
-  .overview_right2{
+  .overview_right2 {
     width: 100%;
   }
-  .imscdr_box{
+  .imscdr_box {
     bottom: 20px;
     padding: 20px;
     width: 75%;
   }
-  .facilities-wrapper{
+  .facilities-wrapper {
     grid-template-columns: repeat(2, 1fr);
     /* grid-template-columns: repeat(2, minmax(0, 1fr)); */
   }
-  .faculty-grid{
+  .faculty-grid {
     grid-template-columns: repeat(2, 1fr);
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .details-grid{
+  .details-grid {
     grid-template-columns: 1fr;
   }
-  .faculty-modal .faculty-details{
+  .faculty-modal .faculty-details {
     padding: 30px;
   }
 
-
-.faculty-category:first-child .faculty-grid{
-  /* grid-template-columns: repeat(2, 1fr); */
-   grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-.faculty-category:first-child .faculty-grid .faculty-item .faculty-card {
+  .faculty-category:first-child .faculty-grid {
+    /* grid-template-columns: repeat(2, 1fr); */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .faculty-category:first-child .faculty-grid .faculty-item .faculty-card {
     display: flex;
     flex-wrap: wrap;
-}
-.faculty-category:first-child .faculty-grid .faculty-item .faculty-image {
+  }
+  .faculty-category:first-child .faculty-grid .faculty-item .faculty-image {
     width: 100%;
     height: 260px;
-}
-.faculty-section{
-  padding: 30px 0;
-}
+  }
+  .faculty-section {
+    padding: 30px 0;
+  }
   /*--------------- Programee Tab End Here ---------------*/
   /*--------------- Campus Tab Start Here ---------------*/
-  .lifeat_states{
+  .lifeat_states {
     margin: 30px 0 0;
   }
   .lifeat_marquee {
     padding: 30px 0 0;
   }
   .privacy_policyand_motto {
-      padding: 30px 0 0;
+    padding: 30px 0 0;
   }
-  .lifeat_marquee .marquee_content{
-        font-size: 35px;
+  .lifeat_marquee .marquee_content {
+    font-size: 35px;
   }
-  .infrastructure_main{
+  .infrastructure_main {
     margin: 20px 0 30px;
   }
-/*---------- Campus Overview Page Start Here ----------*/
+  /*---------- Campus Overview Page Start Here ----------*/
 }
 
 @media (max-width: 767.98px) {
@@ -5063,13 +5076,13 @@ width: auto;
   .headerNavigation {
     display: none;
   }
-  .onlyformobile{
-    display:block;
+  .onlyformobile {
+    display: block;
   }
   .topbar-contact {
     font-size: 13px;
   }
-  .topbar-contact span{
+  .topbar-contact span {
     padding: 4px 0px;
   }
   .top-btn {
@@ -5190,7 +5203,7 @@ width: auto;
   .info_card {
     min-height: inherit;
   }
-  .about-nacc{
+  .about-nacc {
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
@@ -5199,22 +5212,22 @@ width: auto;
     width: 100%;
     text-align: center;
   }
-  .about-naccimg{
+  .about-naccimg {
     margin: -40px auto 0px auto;
   }
-  .privacy_policyand_motto{
+  .privacy_policyand_motto {
     padding: 0px 0 0;
   }
-  .objective_section{
+  .objective_section {
     padding: 30px 0 0;
   }
-  .mision_box .vision_mision_icon{
+  .mision_box .vision_mision_icon {
     margin: -40px auto 25px;
   }
-  .vision_mision_icon{
+  .vision_mision_icon {
     margin: -40px auto 25px;
   }
-  .governing-table{
+  .governing-table {
     min-width: 600px;
   }
   /*---------------------- About Us Tab END Here --------------------*/
@@ -5242,118 +5255,119 @@ width: auto;
   .faculty-info {
     align-items: center;
   }
-  .career_opportunities_images{
+  .career_opportunities_images {
     margin: 0 0 10px 0;
   }
-  .ImageBox img{
-    width:100%;
+  .ImageBox img {
+    width: 100%;
   }
-  .ImageBox{
+  .ImageBox {
     margin: 0 0 20px 0;
   }
-  .faq-question{
+  .faq-question {
     padding: 15px;
     gap: 10px;
   }
-  .faq-question .subheading{
-    font-size:16px;
+  .faq-question .subheading {
+    font-size: 16px;
   }
-  .faq-answer.show{
-    padding: 0 15px 24px;;
+  .faq-answer.show {
+    padding: 0 15px 24px;
   }
-  
-  .mca_career_opportunities_main .facilities-wrapper{
+
+  .mca_career_opportunities_main .facilities-wrapper {
     grid-template-columns: repeat(1, 1fr);
   }
-  .mca_career_opportunities{
-    margin-top:10px;
+  .mca_career_opportunities {
+    margin-top: 10px;
   }
-  .higher_education .facilities-wrapper{
+  .higher_education .facilities-wrapper {
     grid-template-columns: repeat(1, 1fr);
   }
-  .career_opportunities_main .subheading{
-    margin-bottom:10px;
+  .career_opportunities_main .subheading {
+    margin-bottom: 10px;
   }
   /* .higher_education .facilities-wrapper{
     grid-template-columns: repeat(2, 1fr);
   } */
-  .profiledesignbox{
+  .profiledesignbox {
     flex-wrap: wrap;
   }
-  .profiledesignbox .info-box1{
+  .profiledesignbox .info-box1 {
     width: 100%;
     padding: 12px;
     border-radius: 15px;
   }
-  .facultydetail-content{
+  .facultydetail-content {
     margin-top: 10px;
     padding: 12px;
   }
-  .facultydetails_name{
-     border-radius: 15px;
+  .facultydetails_name {
+    border-radius: 15px;
   }
-  .faculty-modal-overlay .info-box{
+  .faculty-modal-overlay .info-box {
     width: 48%;
   }
   /*---------------- Programe Tab End Here ----------------*/
 
-/*---------- Campus Overview Page Start Here ----------*/
-.lifeat_states {
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.lifeat_states .verticalseparator{
-  display: none;
-}
-.lifeat_statebox{
-  margin: 0 0 20px 0;
-}
-.ourvaluescontent{
-  position: relative;
-  height: inherit;
-}
-.lifeatcampus .motto_quotes{
-  min-height: inherit;
-}
-.lifeat_marquee, .privacy_policyand_motto {
-  padding: 30px 0px 0px;
-}
-.ourvaluescontent{
-  background: linear-gradient(#4a4a4a 0%, #000000b5 20%);
-  border-radius: 0px 0px 30px 30px;
-}
-.ourvaluesmain img {
+  /*---------- Campus Overview Page Start Here ----------*/
+  .lifeat_states {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .lifeat_states .verticalseparator {
+    display: none;
+  }
+  .lifeat_statebox {
+    margin: 0 0 20px 0;
+  }
+  .ourvaluescontent {
+    position: relative;
+    height: inherit;
+  }
+  .lifeatcampus .motto_quotes {
+    min-height: inherit;
+  }
+  .lifeat_marquee,
+  .privacy_policyand_motto {
+    padding: 30px 0px 0px;
+  }
+  .ourvaluescontent {
+    background: linear-gradient(#4a4a4a 0%, #000000b5 20%);
+    border-radius: 0px 0px 30px 30px;
+  }
+  .ourvaluesmain img {
     border-radius: 30px 30px 0px 0px;
-    transition-duration: .5s;
-}
-.ourvaluescontent ul li {
+    transition-duration: 0.5s;
+  }
+  .ourvaluescontent ul li {
     width: 49%;
-}
-.ourvaluescontent ul{
-  gap: 4px;
-  padding: 10px 4px;
-  border:none;
-}
-.ourvaluescontent{
-  padding: 20px;
-}
-.hostel_image img {
-  width: 100%;
-  height: auto;
-  margin: 0px 0 30px 0;
-}
-.girsandboys_hostel{
+  }
+  .ourvaluescontent ul {
+    gap: 4px;
+    padding: 10px 4px;
+    border: none;
+  }
+  .ourvaluescontent {
+    padding: 20px;
+  }
+  .hostel_image img {
+    width: 100%;
+    height: auto;
+    margin: 0px 0 30px 0;
+  }
+  .girsandboys_hostel {
     padding: 20px 0;
-}
-.faculty-modal-overlay{
-  padding:10px;
-}
-/*---------- Campus Overview Page Start Here ----------*/
+  }
+  .faculty-modal-overlay {
+    padding: 10px;
+  }
+  /*---------- Campus Overview Page Start Here ----------*/
 }
 
 @media (max-width: 575.98px) {
   /*--------------- Header Start Here ---------------*/
-  
+
   /*--------------- Header End Here ---------------*/
   /* Hero Banner Start Here */
   .herobanner_Content {
@@ -5374,13 +5388,13 @@ width: auto;
   .hero-video {
     min-height: 350px;
   }
-  .hero-video > video{
+  .hero-video > video {
     height: 350px;
   }
   /* Hero Banner End Here */
   /*------------ About Us Start Here ------------*/
-  .aboutus_section .aboutsec_inner .aboutus_left{
-    display:none;
+  .aboutus_section .aboutsec_inner .aboutus_left {
+    display: none;
   }
   /*-------------------- Ranking Start Here ------------*/
   .ranking_card {
@@ -5402,9 +5416,6 @@ width: auto;
   } */
   .ranking_icon {
     width: 100%;
-  }
-  .ranking_wrapper{
-
   }
   /*-------------------- Ranking End Here ------------*/
   /*-------------------- Courses We Offer Start Here ------------*/
@@ -5450,7 +5461,7 @@ width: auto;
     border-radius: 10px !important;
   }
   /*-------------------- Courses We Offer End Here ------------*/
-  .excell_redbox{
+  .excell_redbox {
     padding: 10px 15px;
   }
   /*----------------------- CampusLife Start Here -----------------------*/
@@ -5508,25 +5519,25 @@ width: auto;
   }
   /*--------------- News And Events End Here ---------------*/
   /*--------------- Programe Pages Start Here ---------------*/
-  .overview_right{
+  .overview_right {
     gap: 10px;
   }
-  .overview_right1{
+  .overview_right1 {
     margin: 0 0 10px;
   }
-  .specialization-section .left-box{
+  .specialization-section .left-box {
     height: 250px;
   }
-  .eligibility_inner{
+  .eligibility_inner {
     padding: 10px;
   }
-  .facilities-wrapper{
+  .facilities-wrapper {
     grid-template-columns: repeat(1, 1fr);
   }
-  
+
   /*--------------- Programee Tab End Here ---------------*/
   /* Addmision tab Start here */
-  .processIcon{
+  .processIcon {
     width: 55px;
     height: 55px;
   }
@@ -5537,56 +5548,56 @@ width: auto;
     width: 45px;
     margin: 10px 0 0;
   }
-  .processCrad_main{
+  .processCrad_main {
     flex-wrap: wrap;
     gap: 20px;
   }
-  .processCrad{
+  .processCrad {
     width: 100%;
   }
-  .processCrad_Arrow{
+  .processCrad_Arrow {
     transform: rotate(90deg);
   }
-  .phaseiconimage{
+  .phaseiconimage {
     width: 50px;
     height: 50px;
   }
-/*---------- Campus Overview Page Start Here ----------*/
-  .infrastructure_main{
+  /*---------- Campus Overview Page Start Here ----------*/
+  .infrastructure_main {
     margin: 20px 0 30px;
   }
-  .mainimage_gallery .gallery-image-wrapper{
+  .mainimage_gallery .gallery-image-wrapper {
     height: 140px;
   }
-  .mainimage_gallery .gallery-name{
+  .mainimage_gallery .gallery-name {
     padding: 3px 0;
     padding: 3px 0;
     min-height: 20px;
   }
-  .infrastructure_main_content{
+  .infrastructure_main_content {
     font-size: 16px;
     bottom: 10px;
   }
-  .faculty-modal-overlay .info-box{
+  .faculty-modal-overlay .info-box {
     width: 100%;
   }
-/*---------- Campus Overview Page End Here ----------*/
+  /*---------- Campus Overview Page End Here ----------*/
 
-/* New Home Page Banner */
-  .homepage .herobanner_Content{
+  /* New Home Page Banner */
+  .homepage .herobanner_Content {
     position: absolute;
     bottom: 0%;
     height: auto;
     align-items: center;
     background: transparent;
   }
-  .homepage .hero-video video{
+  .homepage .hero-video video {
     height: 300px;
     overflow: hidden;
     object-fit: cover;
   }
-  .homepage .hero-video::after{
-    display:block;
+  .homepage .hero-video::after {
+    display: block;
   }
   /* .herobanner_Content h4 {
     padding: 10px 0;
@@ -5602,48 +5613,48 @@ width: auto;
 }
 @media (max-width: 449.98px) {
   /*--------------- Programe Pages Start Here ---------------*/
-  .faculty_listing_page .faculty-grid{
+  .faculty_listing_page .faculty-grid {
     grid-template-columns: repeat(1, 1fr);
   }
-  .faculty-card{
+  .faculty-card {
     flex-direction: row;
   }
-  .faculty_listing_content{
+  .faculty_listing_content {
     text-align: start;
   }
-  .faculty-education{
+  .faculty-education {
     height: inherit;
   }
-  .faculty_listing_page .faculty-card{
+  .faculty_listing_page .faculty-card {
     padding: 15px;
-    gap:20px;
+    gap: 20px;
   }
-  .faculty_listing_page .faculty-grid{
-    gap:15px;
+  .faculty_listing_page .faculty-grid {
+    gap: 15px;
     margin-bottom: 20px;
   }
-  .faculty-image{
+  .faculty-image {
     height: 150px;
   }
-  .faculty-content{
-    padding:10px;
+  .faculty-content {
+    padding: 10px;
   }
   .faculty-category:first-child .faculty-grid {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
   .faculty-category:first-child .faculty-grid .faculty-item .faculty-image {
-      width: 100%;
-      height: 360px;
+    width: 100%;
+    height: 360px;
   }
 
   .faculty-grid {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
-  .faculty-image{
+  .faculty-image {
     width: 100%;
     height: 360px;
   }
-  .faculty-page  .faculty-grid{
+  .faculty-page .faculty-grid {
     gap: 15px;
     margin-bottom: 0px;
   }
@@ -5652,11 +5663,11 @@ width: auto;
   }
   /*--------------- Programe Pages End Here ---------------*/
   /*---------- Campus Overview Page End Here ----------*/
-    .mainimage_gallery .gallery-image-wrapper{
-      height: 120px;
-    }
-    .gallery-slider .gallery-image-wrapper{
-      height: 160px;
-    }
+  .mainimage_gallery .gallery-image-wrapper {
+    height: 120px;
+  }
+  .gallery-slider .gallery-image-wrapper {
+    height: 160px;
+  }
   /*---------- Campus Overview Page End Here ----------*/
 }
