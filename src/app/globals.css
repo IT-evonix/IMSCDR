@@ -178,7 +178,7 @@ Body {
   content: "";
   z-index: 1;
   background-color: #0000008b;
-  height: 99%;
+  height: 100%;
 }
 .herobanner_Content {
   position: absolute;
@@ -835,6 +835,7 @@ Body {
   background: #f1f1f1;
   padding: 10px;
   border-radius: 30px;
+  min-height: 350px;
 }
 .testimonials_box img {
   width: 100%;
@@ -3368,6 +3369,7 @@ Body {
 
 .eligibility_cardlisting .eligibility_card:nth-child(3) {
   background: #fcedde;
+  margin: 0 0 0px;
 }
 
 .eligibility_cardlisting .eligibility_card:nth-child(4) {
@@ -4084,19 +4086,25 @@ Body {
 .library_statistical_data {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 26px;
-  margin-top: 20px;
+  gap: 15px;
+  margin-top: 15px;
 }
 .library_card {
   border: 1px solid #ccc;
   border-radius: 15px;
-  padding: 20px;
+  padding: 13px;
   display: flex;
-  gap: 19px;
-  min-height: 100px;
+  gap: 10px;
+  min-height: 80px;
   border: 1px solid #ddd;
   border-radius: 20px;
   font-size: 14px;
+}
+.library_card:nth-child(2) {
+  grid-column: span 2;
+}
+.library_card:nth-child(4) {
+  grid-column: span 2;
 }
 .library_card:nth-child(7) {
   grid-column: span 1;
@@ -4104,34 +4112,40 @@ Body {
 .library_card:nth-child(8) {
   grid-column: span 2;
 }
+
+
+
+
+
+
 .library_icons {
   background-color: #f5ebd9;
   border-radius: 10px;
-  width: 65px;
-  height: 65px;
+  width: 55px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 65px;
+  min-width: 55px;
 }
 .library_card_content {
   line-height: normal;
 }
 .library_card_content .librarytags {
-  font-size: 12px;
+  font-size: 11px;
   background: #cbecff;
-  padding: 3px 12px;
+  padding: 3px 7px;
   border-radius: 20px;
   line-height: normal;
   width: fit-content;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 .library_card_content .librarytags2 {
   background: #bca6d0;
   margin-bottom: 0px;
 }
 .librarynumtext {
-  margin: 0px 25px 0px 0px;
+  margin:0 8px 0 8px;
 }
 .library_main .zigzag-section {
   padding: 80px 0px;
@@ -4155,6 +4169,13 @@ Body {
   position: absolute;
   bottom: 0;
   right: 0;
+}
+.libraryNum{
+  color: #f79433;
+  margin: 4px 0 0;
+  font-family: Avenir-Next-Demi;
+  line-height: normal;
+  font-size: 18px;
 }
 /* ------------- LifeatIMS Tab End Here ---------------*/
 /*----------------------- Inner Pages End Here --------------------*/
@@ -4509,11 +4530,43 @@ Body {
   width: auto;
   max-height: 70px;
 }
+
+
+
+
+.placement_testi_list{
+background-color: #dff3ff;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.placement_testi_list:nth-child(even){
+  background-color: #f0e5fa;
+}
+.placement_testi_list:nth-child(even) .row{
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.placement_testi_img{
+border: 10px solid #fff;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.placement_testi_img img{
+  border-radius: 10px;
+}
+
 /*------------- PLACEMENTS-PAGE-END -------------*/
 
 /* -------------------   Responsive Pages Start here ------------------- */
 
 @media (min-width: 1365.98px) {
+  /*------------- Home Page Start Here  -------------*/
+  .testimonials_box{
+    min-height: 390px;
+  }
+  /*------------- Home Page End Here  -------------*/
   /*------------- Inner Pages Start Here -------------*/
   .excell_girlbox {
     width: 24%;
@@ -5309,7 +5362,43 @@ Body {
     width: 48%;
   }
   /*---------------- Programe Tab End Here ----------------*/
-
+  /*-------------- Addmision tab Start here --------------*/
+  .admission_process_content{
+    padding: 15px;
+  }
+  .phaseName{
+    font-size: 14px;
+  }
+  .phaseName{
+    padding: 0px 0 0 120px;
+  }
+  .processIcon{
+    width: 55px;
+    height: 55px;
+  }
+  .processCrad_Arrow{
+    width: 25px;
+    margin: 10px 0 0;
+  }
+  .phaseNumber{
+    font-size: 14px;
+  }
+  .eligibility_cardlisting .eligibility_card{
+    flex-direction: column-reverse;
+  }
+  .eligibility_text {
+    width: 100%;
+  }
+  .eligibility_card .eligibility_inner{
+    width: 100%;
+  }
+  .eligibility_cardlisting .eligibility_card:nth-child(2){
+    flex-direction: column;
+  }
+  .scholarships_page .governing-table thead tr:last-child th {
+    padding: 10px 15px 10px 10px;
+  }
+  /*-------------- Addmision tab End here --------------*/
   /*---------- Campus Overview Page Start Here ----------*/
   .lifeat_states {
     flex-wrap: wrap;
@@ -5536,11 +5625,7 @@ Body {
   }
 
   /*--------------- Programee Tab End Here ---------------*/
-  /* Addmision tab Start here */
-  .processIcon {
-    width: 55px;
-    height: 55px;
-  }
+  /*-------------- Addmision tab Start here --------------*/
   .processCrad .processCrad_Arrow svg {
     width: 80%;
   }
@@ -5561,7 +5646,9 @@ Body {
   .phaseiconimage {
     width: 50px;
     height: 50px;
+    display:none;
   }
+   /*-------------- Addmision tab End here --------------*/
   /*---------- Campus Overview Page Start Here ----------*/
   .infrastructure_main {
     margin: 20px 0 30px;
@@ -5582,8 +5669,13 @@ Body {
     width: 100%;
   }
   /*---------- Campus Overview Page End Here ----------*/
+/*------------- PLACEMENTS-PAGE-START -------------*/
 
-  /* New Home Page Banner */
+.placement_testi_img{
+  margin: 0 0 20px 0;
+}
+/*------------- PLACEMENTS-PAGE-END -------------*/
+  /*--------------- New Home Page Banner ---------------*/
   .homepage .herobanner_Content {
     position: absolute;
     bottom: 0%;
@@ -5599,17 +5691,13 @@ Body {
   .homepage .hero-video::after {
     display: block;
   }
-  /* .herobanner_Content h4 {
-    padding: 10px 0;
-    font-size: 28px;
+
+  /*------------- Placement Tab Start Here -------------*/
+  .top_recru_list{
+    width: 49%;
   }
-  .herobanner_Content h4 {
-    padding: 10px 0;
-    font-size: 28px;
-  }
-  .herobanner_Content h1 {
-      font-size: 40px;
-  } */
+
+
 }
 @media (max-width: 449.98px) {
   /*--------------- Programe Pages Start Here ---------------*/

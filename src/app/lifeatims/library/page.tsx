@@ -4,27 +4,28 @@ import Image from "next/image";
 const page = () => {
   return (
     <div className="innerpagerightside">
-      <div className="heading">Coming Soon</div>
-      <div className="library_main d-none">
+      <div className="heading d-none">Coming Soon</div>
+      <div className="library_main">
         <div className="row">
           <div className="col-md-7">
             <p>
               In the historic city of Ahmednagar, which takes its name from
-              Ahmad Nizam Shah I, who founded the town in 1494, IMS-CDR was estd. in
-              1990 & has reputation for need based and novel educational
-              Programmes, community-oriented activities, and innovative
-              practices. The primary aim of an institutional library is to aid
-              and support the academic programmes offered and administer all
-              facets of the Learning Resources. Thus IMS-CDR Library imparts leading
-              knowledge to develop appropriate attitude, skills and competencies
-              to meet corporate and organizational requirements to develop the
-              overall personality of students so as to make them responsible
-              citizens. It conducts student-centric and library-oriented
-              activities and online dissemination of information not only
-              empowers its enduring institution but also helps it to continue to
-              grow from strength to strength! It is a celebration of
-              Librarianship and also showcases the library staff’s selfless and
-              diligent contributions and invaluable service.
+              Ahmad Nizam Shah I, who founded the town in 1494, IMS-CDR was
+              estd. in 1990 & has reputation for need based and novel
+              educational Programmes, community-oriented activities, and
+              innovative practices. The primary aim of an institutional library
+              is to aid and support the academic programmes offered and
+              administer all facets of the Learning Resources. Thus IMS-CDR
+              Library imparts leading knowledge to develop appropriate attitude,
+              skills and competencies to meet corporate and organizational
+              requirements to develop the overall personality of students so as
+              to make them responsible citizens. It conducts student-centric and
+              library-oriented activities and online dissemination of
+              information not only empowers its enduring institution but also
+              helps it to continue to grow from strength to strength! It is a
+              celebration of Librarianship and also showcases the library
+              staff’s selfless and diligent contributions and invaluable
+              service.
             </p>
           </div>
           <div className="col-md-5">
@@ -105,9 +106,9 @@ const page = () => {
               <div className="library_card_content">
                 <div className="subheading">Volumes Titles</div>
                 <div className="w-100 d-flex gap-2 flex-wrap">
-                  <div className="librarytext">36565 13249</div>
-                  <div className="librarytext">22240 7334</div>
-                  <div className="librarytext">14325 5915</div>
+                  <div className="librarytext libraryNum">36565 13249</div> |
+                  <div className="librarytext libraryNum">22240 7334</div> |
+                  <div className="librarytext libraryNum">14325 5915</div> |
                 </div>
               </div>
             </div>
@@ -124,7 +125,7 @@ const page = () => {
               <div className="library_card_content">
                 <div className="subheading">Journals :National</div>
                 <div className="w-100">
-                  <div className="librarynumtext">51</div>
+                  <div className="librarynumtext libraryNum">51</div>
                 </div>
               </div>
             </div>
@@ -141,7 +142,20 @@ const page = () => {
               <div className="library_card_content">
                 <div className="subheading">Online Resources</div>
                 <div className="w-100">
-                  <div className="librarynumtext">05</div>
+                  <div className="librarynumtext libraryNum">05</div>
+                  <div className="w-100 d-flex flex-wrap">
+                    <div className="librarynumtext">
+                      DELNET: <span>New Discovery Portal</span>
+                    </div>
+                    <div className="librarynumtext">N-LIST Consortia</div>
+                    <div className="librarynumtext">
+                      NPTEL Video Streaming Library
+                    </div>
+                    <div className="librarynumtext">NDLI-Club</div>
+                    <div className="librarynumtext">
+                      User Experience Design (UXd)
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -158,7 +172,7 @@ const page = () => {
               <div className="library_card_content">
                 <div className="subheading">Periodicals</div>
                 <div className="w-100">
-                  <div className="librarynumtext">17</div>
+                  <div className="librarynumtext libraryNum">17</div>
                 </div>
               </div>
             </div>
@@ -175,7 +189,7 @@ const page = () => {
               <div className="library_card_content">
                 <div className="subheading">Projects & CDs</div>
                 <div className="w-100">
-                  <div className="librarynumtext">2462 & 1193</div>
+                  <div className="librarynumtext libraryNum">2462 & 1193</div>
                 </div>
               </div>
             </div>
@@ -245,8 +259,8 @@ const page = () => {
                 Management Librarian Award from International Association of
                 Management Scholars (AIMS). Professionally qualified staff with
                 Master’s and PhD degrees in Library and Information Science. The
-                IMS-CDR library has been automated since 2000. It is spread over the
-                area 457.96 Sq.mt. comprising of Circulation Counter and
+                IMS-CDR library has been automated since 2000. It is spread over
+                the area 457.96 Sq.mt. comprising of Circulation Counter and
                 Stacking area, Newspaper section, Extracurricular section,
                 General Knowledge section, Research and Referencesection,
                 Librarians cabin, Photocopying section, Journal and Periodical

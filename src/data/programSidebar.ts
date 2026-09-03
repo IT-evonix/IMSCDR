@@ -40,7 +40,7 @@ export const programSidebar = {
       { title: "Intake", href: "/program-mba/intake" },
       { title: "Eligibility", href: "/program-mba/eligibility" },
       // { title: "Curriculum / Syllabus", href: "/program-mba/curriculum" },
-      { title: "Programme Outcomes", href: "/program-mba/programme-outcomes" },
+      // { title: "Programme Outcomes", href: "/program-mba/programme-outcomes" },
       {
         title: "Career Opportunities",
         href: "/program-mba/career-opportunities",
@@ -78,7 +78,7 @@ export const programSidebar = {
       { title: "Intake", href: "/program-bba/intake" },
       { title: "Eligibility", href: "/program-bba/eligibility" },
       // { title: "Curriculum / Syllabus", href: "/program-bba/curriculum" },
-      { title: "Programme Outcomes", href: "/program-bba/programme-outcomes" },
+      // { title: "Programme Outcomes", href: "/program-bba/programme-outcomes" },
       {
         title: "Career Opportunities",
         href: "/program-bba/career-opportunities",
