@@ -197,7 +197,7 @@ const Footer = () => {
       <div className="footerstrip">
         <div className="container">
           <div className="footerstripinner">
-            <p className="p-0 m-0">Copyright ©2026 IMS. All rights reserved.</p>
+            <p className="p-0 m-0">Copyright ©2026 IMS-CDR. All Rights Reserved.</p>
             <div className="div">
               Crafted by{" "}
               <Link

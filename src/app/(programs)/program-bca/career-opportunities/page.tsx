@@ -3,7 +3,7 @@ import Image from "next/image";
 const page = () => {
   return (
     <div className="innerpagerightside">
-      <div className="heading">Career opportunities after MBA</div>
+      <div className="heading">Career opportunities after BCA</div>
       <div className="row flex-sm-row-reverse">
         <div className="col-md-6">
           <div className="career_opportunities_images">

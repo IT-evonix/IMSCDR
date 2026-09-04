@@ -1,57 +1,15 @@
-// export interface Faculty {
-//   id: number;
-//   category:
-//   | "Administration"
-//   | "Faculty - Information Technology"
-//   | "Faculty - Management Programme"
-//   | "BCA Staff"
-//   | "BBA Staff"
-//   | "Library-Staff"
-//   | "Technical-Support";
-//   // Basic Details
-//   name: string;
-//   designation: string;
-//   qualification: string;
-//   image: string;
-//   email: string;
-
-//   // Research Areas
-//   broadAreas: string[];
-//   specificAreas: string[];
-
-//   // Research Profile
-//   orcidId?: string;
-//   googleScholar?: string;
-//   scopusId?: string;
-
-//   // Publications
-//   researchPapersPublished?: number | string;
-//   booksPublished?: number | string;
-//   bookChaptersPublished?: number | string;
-//   sponsoredResearchProjects?: number | string;
-
-//   // Research Guidance
-//   researchGuidance?: string;
-//   phdAwarded?: number | string;
-//   phdScholarsInProcess?: number | string;
-//   patents?: number | string;
-
-//   // Description
-//   profileContent: string;
-// }
-
 export interface Faculty {
   id: number;
 
   category:
-    | "Administration"
-    | "Admin Team"
-    | "Faculty - Information Technology"
-    | "Faculty - Management Programme"
-    | "BCA Staff"
-    | "BBA Staff"
-    | "Library-Staff"
-    | "Technical-Support";
+  | "Administration"
+  | "Admin Team"
+  | "Faculty - Information Technology"
+  | "Faculty - Management Programme"
+  | "BCA Staff"
+  | "BBA Staff"
+  | "Library-Staff"
+  | "Technical-Support";
 
   // Basic Details
   name: string;
@@ -551,6 +509,7 @@ export const facultyData: Faculty[] = [
   },
   
   
+  
 
 
 // Faculty - Information Technology Start Here------------------------ 
@@ -745,12 +704,19 @@ export const facultyData: Faculty[] = [
     "image": "/images/faculty/AbhishekKawane.webp",
     "email": "",
     "broadAreas": [
-      
+      "Computer Application And Management",
     ],
     "specificAreas": [
-      
+      "Software Development",
+      "Data Science and Analytics",
+      "Full Stack Web Development",
+      "Python Programming",
+      "Java Programming"
     ],
-    "profileContent": ""
+    "researchPapersPublished": 5,
+    "booksPublished": 3,
+    "patents": "1",
+    "profileContent": "Prof. Abhishek S. Kawane is an accomplished academician and technology professional with 8 years of teaching experience and 2 years of industry experience in software development. He holds a Master of Computer Applications (MCA) from Savitribai Phule Pune University, has qualified UGC-NET and SET in Computer Science, and is currently pursuing a Ph.D. in Computer Management. His areas of technical expertise include Angular Full Stack Development, Node.js, Data Science, Data Analytics, Artificial Intelligence, and Machine Learning. He has published 5 research papers, 1 patent, and 3 books. His research interests focus on Artificial Intelligence, Machine Learning, Data Science, Data Analytics, and emerging technologies."
   },
   {
     "id": 10,
