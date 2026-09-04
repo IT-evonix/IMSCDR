@@ -139,7 +139,7 @@ const higherEducation: Facility[] = [
 const page = () => {
   return (
     <div className="innerpagerightside career_opportunities_main">
-      {/* <div className="heading">Career Opportunities</div> */}
+      <div className="heading">Career opportunities after MCA</div>
       <div className="mca_career_opportunities_main">
         <div className="row flex-sm-row-reverse mb-5">
           <div className="col-md-6">

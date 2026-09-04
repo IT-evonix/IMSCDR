@@ -10,17 +10,35 @@ const page = () => {
         <div className="feetabboxmain">
           <div className="feetabbox">
             <div className="heading">
-              FRA Approved <br /> Fee 2025-2026
+              <a
+                href="/pdf/admission/2-FRA-Approved-Fee-2025-26-24.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                FRA Approved <br /> Fee 2025-2026
+              </a>
             </div>
           </div>
           <div className="feetabbox">
             <div className="heading">
-              CAP & Against <br /> CAP / Management <br /> & NRI Seats Fees
+              <a
+                href="/pdf/admission/3-CAP-Against-CAP-NRI-Fee.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                CAP & Against <br /> CAP / Management <br /> & NRI Seats Fees
+              </a>
             </div>
           </div>
           <div className="feetabbox">
             <div className="heading">
-              Fee Proposal <br /> 2026 - 2027
+              <a
+                href="/pdf/admission/FeeProposal2026-2027.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Fee Proposal <br /> 2026 - 2027
+              </a>
             </div>
           </div>
         </div>
@@ -58,9 +76,7 @@ const page = () => {
           </div>
         </div>
         <hr className="sepratorline" />
-        <div
-          className="fee_structure_inner fee_structure_inner1"
-        >
+        <div className="fee_structure_inner fee_structure_inner1">
           <div className="fee_structure_content">
             <div className="fee_structure_box">
               <div className="course_name">BBA-I</div>
