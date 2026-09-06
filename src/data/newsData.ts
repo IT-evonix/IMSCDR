@@ -12,6 +12,14 @@ export interface NewsItem {
 export const newsData: NewsItem[] = [
   {
     id: 1,
+    slug: "For-Upload-MCA-Against-Cap",
+    title: "Admission Against Vacant Seats MCA 2026-27",
+    image: "/images/news-and-events/newsandevents.webp",
+    type: "pdf",
+    link: "/pdf/news-and-events/For-Upload-MCA-Against-Cap-2026-27.pdf",
+  },
+  {
+    id: 2,
     slug: "feedback-action-taken-reports",
     title: "Feedback Action Taken Reports",
     image: "/images/news-and-events/newsandevents.webp",
@@ -19,7 +27,7 @@ export const newsData: NewsItem[] = [
     link: "/pdf/news-and-events/Feedback-Action-Taken-Report.pdf",
   },
   {
-    id: 2,
+    id: 3,
     slug: "Feedback-Analysis",
     title: "Feedback Analysis",
     image: "/images/news-and-events/newsandevents.webp",
@@ -27,7 +35,7 @@ export const newsData: NewsItem[] = [
     link: "/pdf/news-and-events/Feedback-Analysis.pdf",
   },
   {
-    id: 3,
+    id: 4,
     slug: "NAAC-Cycle-3-SSR-Revised-(June-2024).pdf",
     title: "NAAC Cycle-3 Revised SSR",
     image: "/images/news-and-events/newsandevents.webp",
@@ -35,7 +43,7 @@ export const newsData: NewsItem[] = [
     link: "/pdf/news-and-events/NAAC-Cycle-3-SSR-Revised-(June-2024).pdf",
   },
   {
-    id: 4,
+    id:5,
     slug: "news1",
     title: "Fee Fixation Proposal 2025-2026",
     image: "/images/news-and-events/newsandevents.webp",
@@ -43,7 +51,7 @@ export const newsData: NewsItem[] = [
     link: "/pdf/news-and-events/news1.pdf",
   },
   {
-    id: 5,
+    id: 6,
     slug: "news2",
     title: "Circular 35 - Holiday on 14th April 2023.",
     image: "/images/news-and-events/newsandevents.webp",
