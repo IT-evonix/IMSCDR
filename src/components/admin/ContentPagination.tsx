@@ -50,7 +50,7 @@ export const ContentPagination: React.FC<ContentPaginationProps> = ({
         <button
           onClick={() => onPageChange(currentPage - 1)}
           disabled={currentPage === 1}
-          className="p-1 text-[#ad2865] hover:bg-[#ffd9e3]/50 disabled:opacity-30 rounded-md transition-colors cursor-pointer"
+          className="pagination-btn p-1 text-[#ad2865] hover:bg-[#ffd9e3]/50 disabled:opacity-30 rounded-md transition-colors cursor-pointer flex items-center justify-center font-['Avenir-Next-Demi']"
           title="Previous Page"
         >
           <ChevronLeft className="w-4 h-4" />
@@ -60,7 +60,7 @@ export const ContentPagination: React.FC<ContentPaginationProps> = ({
           <button
             key={page}
             onClick={() => onPageChange(page)}
-            className={`w-6 h-6 sm:w-7 sm:h-7 rounded-md font-bold text-[11px] sm:text-xs transition-all cursor-pointer ${
+            className={`pagination-btn w-6 h-6 sm:w-7 sm:h-7 rounded-md font-bold text-[11px] sm:text-xs transition-all cursor-pointer flex items-center justify-center font-['Avenir-Next-Demi'] ${
               currentPage === page
                 ? 'bg-[#ad2865] text-white shadow-xs scale-105'
                 : 'hover:bg-[#ffd9e3]/50 text-[#434751] hover:text-[#ad2865]'
@@ -73,7 +73,7 @@ export const ContentPagination: React.FC<ContentPaginationProps> = ({
         <button
           onClick={() => onPageChange(currentPage + 1)}
           disabled={currentPage === totalPages || totalPages === 0}
-          className="p-1 text-[#ad2865] hover:bg-[#ffd9e3]/50 disabled:opacity-30 rounded-md transition-colors cursor-pointer"
+          className="pagination-btn p-1 text-[#ad2865] hover:bg-[#ffd9e3]/50 disabled:opacity-30 rounded-md transition-colors cursor-pointer flex items-center justify-center font-['Avenir-Next-Demi']"
           title="Next Page"
         >
           <ChevronRight className="w-4 h-4" />

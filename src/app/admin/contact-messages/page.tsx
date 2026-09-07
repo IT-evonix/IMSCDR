@@ -284,32 +284,32 @@ ${item.message}
 
                     {/* Actions */}
                     <td className="py-3 px-4 text-center align-middle whitespace-nowrap">
-                      <div className="flex items-center justify-center gap-1.5" onClick={(e) => e.stopPropagation()}>
+                      <div className="flex items-center justify-center gap-1" onClick={(e) => e.stopPropagation()}>
                         <button
                           type="button"
                           onClick={() => setSelectedMsg(item)}
-                          className="p-1.5 text-[#09468e] hover:bg-blue-50 rounded-md transition-colors cursor-pointer"
+                          className="table-action-btn table-btn-view"
                           title="Read Full Message"
                         >
-                          <Eye className="w-4 h-4" />
+                          <Eye className="w-3.5 h-3.5" />
                         </button>
 
-                        <button
+                        {/* <button
                           type="button"
                           onClick={() => handleDownloadSingle(item)}
-                          className="p-1.5 text-emerald-600 hover:bg-emerald-50 rounded-md transition-colors cursor-pointer"
+                          className="table-action-btn table-btn-download"
                           title="Download Enquiry File"
                         >
-                          <Download className="w-4 h-4" />
-                        </button>
+                          <Download className="w-3.5 h-3.5" />
+                        </button> */}
 
                         <button
                           type="button"
                           onClick={() => setMsgToDelete(item)}
-                          className="p-1.5 text-rose-600 hover:bg-rose-50 rounded-md transition-colors cursor-pointer"
+                          className="table-action-btn table-btn-delete"
                           title="Delete Enquiry"
                         >
-                          <Trash2 className="w-4 h-4" />
+                          <Trash2 className="w-3.5 h-3.5" />
                         </button>
                       </div>
                     </td>
@@ -342,9 +342,9 @@ ${item.message}
             <div className="p-3.5 sm:p-4 border-b border-slate-100 flex items-center justify-between gap-2.5">
               <div className="flex items-center gap-2.5 min-w-0 flex-1">
                 <div className="w-7 h-7 rounded-md bg-[#09468e]/10 text-[#09468e] shrink-0 flex items-center justify-center">
-                  <Mail className="w-4 h-4" />
+                  <Mail className="w-4 h-4 text-[#09468e]" />
                 </div>
-                <h4 className="text-xs sm:text-sm font-bold text-[#1a1c20] truncate leading-tight my-auto">
+                <h4 className="modal-title text-sm font-bold text-[#003067] truncate leading-tight my-auto">
                   Enquiry Details
                 </h4>
               </div>
@@ -363,7 +363,7 @@ ${item.message}
                 <button
                   type="button"
                   onClick={() => setSelectedMsg(null)}
-                  className="w-7 h-7 rounded-md text-slate-400 hover:text-slate-600 hover:bg-slate-100 shrink-0 flex items-center justify-center transition-colors cursor-pointer"
+                  className="modal-close-btn"
                   title="Close modal"
                 >
                   <X className="w-4 h-4" />

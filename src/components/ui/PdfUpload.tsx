@@ -63,7 +63,7 @@ export const PdfUpload: React.FC<PdfUploadProps> = ({
               <button
                 type="button"
                 onClick={onRemovePdf}
-                className="p-0.5 bg-red-600 hover:bg-red-700 text-white rounded-full transition-all cursor-pointer shadow-xs z-10"
+                className="upload-remove-btn"
                 title="Remove PDF"
               >
                 <X className="w-2.5 h-2.5" />

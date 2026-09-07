@@ -4,8 +4,10 @@ model Category {
   name      String   @unique
   slug      String   @unique
   type      String   @default("NewsEvent")
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  deletedAt DateTime?
 
+  @@index([deletedAt])
   @@map("categories")
 }

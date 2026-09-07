@@ -12,7 +12,7 @@ exports.createNewsEvent = async (req, res, next) => {
   try {
     const {
       title,
-      contentType = 'News',
+      contentType = '',
       category = '',
       startDate,
       endDate,
@@ -24,6 +24,15 @@ exports.createNewsEvent = async (req, res, next) => {
       images = [],
       status = 'Published',
     } = req.body;
+
+    let normalizedContentType = '';
+    if (contentType && contentType.trim()) {
+      const lower = contentType.trim().toLowerCase();
+      if (lower === 'news') normalizedContentType = 'News';
+      else if (lower === 'event') normalizedContentType = 'Event';
+      else if (lower === 'blog') normalizedContentType = 'Blog';
+      else normalizedContentType = contentType.trim().charAt(0).toUpperCase() + contentType.trim().slice(1);
+    }
 
     if (!title || !title.trim()) {
       return res.status(400).json({
@@ -86,11 +95,11 @@ exports.createNewsEvent = async (req, res, next) => {
       data: {
         title: title.trim(),
         slug: uniqueSlug,
-        contentType,
+        contentType: normalizedContentType,
         category: category ? category.trim() : '',
         startDate: startDate ? new Date(startDate) : null,
         endDate: endDate ? new Date(endDate) : null,
-        summary: summary ? summary.trim() : null,
+        summary: (summary && summary.trim()) ? summary.trim() : null,
         contentFormat,
         contentHtml: contentFormat === 'description' ? contentHtml : null,
         pdfUrl: contentFormat === 'pdf' ? pdfUrl : null,
@@ -259,6 +268,20 @@ exports.updateNewsEvent = async (req, res, next) => {
       });
     }
 
+    // Normalize contentType if provided
+    let normalizedContentType = existing.contentType;
+    if (contentType !== undefined) {
+      if (!contentType || !contentType.trim()) {
+        normalizedContentType = '';
+      } else {
+        const lower = contentType.trim().toLowerCase();
+        if (lower === 'news') normalizedContentType = 'News';
+        else if (lower === 'event') normalizedContentType = 'Event';
+        else if (lower === 'blog') normalizedContentType = 'Blog';
+        else normalizedContentType = contentType.trim().charAt(0).toUpperCase() + contentType.trim().slice(1);
+      }
+    }
+
     // Determine Thumbnail URL
     let thumbnailUrl = existing.thumbnailUrl;
     if (Array.isArray(images)) {
@@ -273,11 +296,11 @@ exports.updateNewsEvent = async (req, res, next) => {
       where: { id: Number(id) },
       data: {
         title: title ? title.trim() : existing.title,
-        contentType: contentType || existing.contentType,
+        contentType: normalizedContentType,
         category: category !== undefined ? (category ? category.trim() : '') : existing.category,
         startDate: startDate !== undefined ? (startDate ? new Date(startDate) : null) : existing.startDate,
         endDate: endDate !== undefined ? (endDate ? new Date(endDate) : null) : existing.endDate,
-        summary: summary !== undefined ? (summary ? summary.trim() : null) : existing.summary,
+        summary: summary !== undefined ? ((summary && summary.trim()) ? summary.trim() : null) : existing.summary,
         contentFormat: contentFormat || existing.contentFormat,
         contentHtml: (contentFormat || existing.contentFormat) === 'description' ? (contentHtml !== undefined ? contentHtml : existing.contentHtml) : null,
         pdfUrl: (contentFormat || existing.contentFormat) === 'pdf' ? (pdfUrl || existing.pdfUrl) : null,

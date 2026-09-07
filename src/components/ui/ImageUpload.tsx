@@ -66,14 +66,14 @@ export const ImageUpload: React.FC<ImageUploadProps> = ({
             <button
               type="button"
               onClick={() => onRemoveImage(img.id)}
-              className="absolute top-0.5 right-0.5 p-0.5 bg-red-600 hover:bg-red-700 text-white rounded-full transition-all cursor-pointer shadow-xs z-10"
+              className="upload-remove-btn absolute top-1 right-1"
               title="Remove Image"
             >
               <X className="w-2.5 h-2.5" />
             </button>
 
             {/* Hover Caption */}
-            <div className="absolute inset-x-0 bottom-0 bg-black/60 p-0.5 opacity-0 group-hover:opacity-100 transition-opacity">
+            <div className="absolute inset-x-0 bottom-0 bg-black/60 p-0.5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
               <p className="text-[8px] font-semibold text-white truncate text-center leading-none">
                 {img.name}
               </p>

@@ -37,7 +37,8 @@ const StatusDropdownCell: React.FC<{
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className={`inline-flex items-center gap-1.5 pl-3 pr-2.5 py-1 rounded-full text-[10px] font-extrabold outline-none cursor-pointer transition-all border shadow-2xs ${
+        style={{ width: 'auto', minWidth: 'auto', height: '24px', minHeight: '24px' }}
+        className={`status-trigger-btn inline-flex items-center gap-1.5 pl-3 pr-2.5 py-0.5 rounded-full text-[10px] font-extrabold outline-none cursor-pointer transition-all border shadow-2xs font-['Roma-Semibold'] ${
           status === 'Active'
             ? 'bg-emerald-50 text-emerald-700 border-emerald-300 hover:bg-emerald-100'
             : 'bg-rose-50 text-rose-700 border-rose-300 hover:bg-rose-100'
@@ -50,14 +51,15 @@ const StatusDropdownCell: React.FC<{
       {isOpen && (
         <>
           <div className="fixed inset-0 z-30" onClick={() => setIsOpen(false)} />
-          <div className="absolute right-0 sm:left-1/2 sm:-translate-x-1/2 mt-1.5 w-28 bg-white rounded-xl border border-slate-200 shadow-xl z-40 overflow-hidden py-1 animate-in fade-in zoom-in-95 duration-100">
+          <div className="status-dropdown-menu absolute right-0 sm:left-1/2 sm:-translate-x-1/2 mt-1.5 w-28 bg-white rounded-xl border border-slate-200 shadow-xl z-40 overflow-hidden py-1 animate-in fade-in zoom-in-95 duration-100 flex flex-col font-['Avenir-Next-Demi']">
             <button
               type="button"
               onClick={() => {
                 onStatusChange && onStatusChange('Active');
                 setIsOpen(false);
               }}
-              className={`w-full text-left px-3 py-1.5 text-xs font-bold flex items-center justify-between hover:bg-emerald-50 hover:text-emerald-700 transition-colors ${
+              style={{ width: '100%', height: 'auto', minHeight: 'auto', borderRadius: '0px' }}
+              className={`w-full text-left px-3 py-1.5 text-xs font-bold flex items-center justify-between hover:bg-emerald-50 hover:text-emerald-700 transition-colors font-['Avenir-Next-Demi'] ${
                 status === 'Active' ? 'text-emerald-700 bg-emerald-50/60' : 'text-slate-700'
               }`}
             >
@@ -71,6 +73,7 @@ const StatusDropdownCell: React.FC<{
                 onStatusChange && onStatusChange('Inactive');
                 setIsOpen(false);
               }}
+              style={{ width: '100%', height: 'auto', minHeight: 'auto', borderRadius: '0px' }}
               className={`w-full text-left px-3 py-1.5 text-xs font-bold flex items-center justify-between hover:bg-rose-50 hover:text-rose-700 transition-colors ${
                 status === 'Inactive' ? 'text-rose-700 bg-rose-50/60' : 'text-slate-700'
               }`}
@@ -203,11 +206,15 @@ export const ContentTable: React.FC<ContentTableProps> = ({
 
                   {/* Type Badge */}
                   <td className="py-2 px-3 align-middle">
-                    <span
-                      className={`px-2 py-0.5 rounded-full text-[9px] font-extrabold tracking-widest uppercase ${getTypeBadgeClass(item.type)}`}
-                    >
-                      {item.type.toUpperCase()}
-                    </span>
+                    {item.type ? (
+                      <span
+                        className={`px-2 py-0.5 rounded-full text-[9px] font-extrabold tracking-widest uppercase ${getTypeBadgeClass(item.type)}`}
+                      >
+                        {item.type.toUpperCase()}
+                      </span>
+                    ) : (
+                      <span className="text-[11px] font-medium text-[#737782]">—</span>
+                    )}
                   </td>
 
                   {/* Category */}
@@ -234,22 +241,25 @@ export const ContentTable: React.FC<ContentTableProps> = ({
                   <td className="py-2 px-3 text-center whitespace-nowrap align-middle">
                     <div className="flex justify-center items-center gap-1">
                       <button
+                        type="button"
                         onClick={() => onView && onView(item)}
-                        className="p-1.5 text-[#09468e] hover:bg-[#09468e]/10 rounded-md cursor-pointer transition-all"
+                        className="table-action-btn table-btn-view"
                         title="View"
                       >
                         <Eye className="w-3.5 h-3.5" />
                       </button>
                       <button
+                        type="button"
                         onClick={() => onEdit && onEdit(item)}
-                        className="p-1.5 text-[#89004a] hover:bg-[#89004a]/10 rounded-md cursor-pointer transition-all"
+                        className="table-action-btn table-btn-edit"
                         title="Edit"
                       >
                         <Edit3 className="w-3.5 h-3.5" />
                       </button>
                       <button
+                        type="button"
                         onClick={() => onDelete && onDelete(item)}
-                        className="p-1.5 text-red-500 hover:bg-red-50 rounded-md cursor-pointer transition-all"
+                        className="table-action-btn table-btn-delete"
                         title="Delete"
                       >
                         <Trash2 className="w-3.5 h-3.5" />

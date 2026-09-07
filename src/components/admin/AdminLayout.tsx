@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { AdminSidebar } from './AdminSidebar';
 import { AdminHeader } from './AdminHeader';
-import { LayoutDashboard, Newspaper, Plus, User, FolderKanban } from 'lucide-react';
+import { LayoutDashboard, Newspaper, Plus, User, FolderKanban, Mail } from 'lucide-react';
 import Link from 'next/link';
 
 export const AdminLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -15,7 +15,8 @@ export const AdminLayout: React.FC<{ children: React.ReactNode }> = ({ children 
   const isDashboardActive = pathname === '/admin';
   const isContentActive = pathname.startsWith('/admin/news-events') && pathname !== '/admin/news-events/create';
   const isCreateActive = pathname === '/admin/news-events/create';
-  const isProfileActive = pathname.startsWith('/admin/profile');
+  const isCategoriesActive = pathname.startsWith('/admin/categories');
+  const isContactActive = pathname.startsWith('/admin/contact-messages');
 
   return (
     <div className="admin-root min-h-screen bg-[#f9f9ff] text-[#1a1c20]">
@@ -41,35 +42,35 @@ export const AdminLayout: React.FC<{ children: React.ReactNode }> = ({ children 
         </div>
 
         {/* Mobile Bottom Navigation Bar / Toggle */}
-        <footer className="lg:hidden w-full h-16 bg-white/95 backdrop-blur-md border-t border-slate-200/80 flex items-center justify-around px-3 fixed bottom-0 z-40 shadow-[0_-4px_20px_rgba(0,0,0,0.08)]" style={{ paddingBottom: 'env(safe-area-inset-bottom, 0px)' }}>
+        <footer className="lg:hidden w-full h-16 bg-white/95 backdrop-blur-md border-t border-slate-200/80 flex items-center justify-around px-2 fixed bottom-0 z-40 shadow-[0_-4px_20px_rgba(0,0,0,0.06)]" style={{ paddingBottom: 'env(safe-area-inset-bottom, 0px)' }}>
           <Link
             href="/admin"
-            className={`flex flex-col items-center justify-center py-1 px-3 rounded-xl transition-all ${
+            className={`flex flex-col items-center justify-center py-1 px-2.5 rounded-xl transition-all ${
               isDashboardActive
                 ? 'active-tab text-[#09468e] bg-[#09468e]/10 font-bold'
-                : 'text-[#1a1c20] hover:text-[#09468e] font-semibold'
+                : 'text-[#434751] hover:text-[#09468e] font-medium'
             }`}
           >
             <LayoutDashboard className="w-4 h-4" />
-            <span className="text-[10px] mt-0.5">Dashboard</span>
+            <span className="text-[10px] mt-0.5 font-['Roma-Semibold'] tracking-tight">Dashboard</span>
           </Link>
 
           <Link
             href="/admin/news-events"
-            className={`flex flex-col items-center justify-center py-1 px-3 rounded-xl transition-all ${
+            className={`flex flex-col items-center justify-center py-1 px-2.5 rounded-xl transition-all ${
               isContentActive
                 ? 'active-tab text-[#09468e] bg-[#09468e]/10 font-bold'
-                : 'text-[#1a1c20] hover:text-[#09468e] font-semibold'
+                : 'text-[#434751] hover:text-[#09468e] font-medium'
             }`}
           >
             <Newspaper className="w-4 h-4" />
-            <span className="text-[10px] mt-0.5">Content</span>
+            <span className="text-[10px] mt-0.5 font-['Roma-Semibold'] tracking-tight">Posts</span>
           </Link>
 
           <div className="-mt-5">
             <Link
               href="/admin/news-events/create"
-              aria-label="Create New"
+              aria-label="Create New Post"
               className={`w-11 h-11 rounded-full brand-gradient text-white flex items-center justify-center shadow-lg border-2 border-white transition-all transform active:scale-95 ${
                 isCreateActive ? 'ring-2 ring-[#09468e] ring-offset-2' : ''
               }`}
@@ -81,25 +82,25 @@ export const AdminLayout: React.FC<{ children: React.ReactNode }> = ({ children 
           <Link
             href="/admin/categories"
             className={`flex flex-col items-center justify-center py-1 px-2 rounded-xl transition-all ${
-              pathname.startsWith('/admin/categories')
+              isCategoriesActive
                 ? 'active-tab text-[#09468e] bg-[#09468e]/10 font-bold'
-                : 'text-[#1a1c20] hover:text-[#09468e] font-semibold'
+                : 'text-[#434751] hover:text-[#09468e] font-medium'
             }`}
           >
             <FolderKanban className="w-4 h-4" />
-            <span className="text-[10px] mt-0.5">Categories</span>
+            <span className="text-[10px] mt-0.5 font-['Roma-Semibold'] tracking-tight">Categories</span>
           </Link>
 
           <Link
-            href="/admin/profile"
+            href="/admin/contact-messages"
             className={`flex flex-col items-center justify-center py-1 px-2 rounded-xl transition-all ${
-              isProfileActive
+              isContactActive
                 ? 'active-tab text-[#09468e] bg-[#09468e]/10 font-bold'
-                : 'text-[#1a1c20] hover:text-[#09468e] font-semibold'
+                : 'text-[#434751] hover:text-[#09468e] font-medium'
             }`}
           >
-            <User className="w-4 h-4" />
-            <span className="text-[10px] mt-0.5">Profile</span>
+            <Mail className="w-4 h-4" />
+            <span className="text-[10px] mt-0.5 font-['Roma-Semibold'] tracking-tight">Messages</span>
           </Link>
         </footer>
       </main>

@@ -34,19 +34,19 @@ export const PageTitle: React.FC<PageTitleProps> = ({
         <div className="flex items-center gap-2 mb-1">
           {shouldShowBack && <BackButton href={backHref} />}
           {subtitle && (
-            <span className="text-[9px] font-bold uppercase tracking-widest text-[#ad2865] block leading-none">
+            <span className="text-[9px] font-bold uppercase tracking-widest text-[#ad2865] block leading-none font-['Roma-Semibold']">
               {subtitle}
             </span>
           )}
         </div>
         <h1
           style={{ fontSize: '18px', fontWeight: 700, color: '#003067', marginBottom: 0 }}
-          className="admin-page-heading text-lg font-bold text-[#003067] leading-tight"
+          className="admin-page-heading text-lg font-bold text-[#003067] leading-tight font-['Roma-Bold']"
         >
           {title}
         </h1>
         {description && (
-          <p className="text-xs text-[#737782] mt-1 leading-normal">
+          <p className="text-xs text-[#737782] mt-1 leading-normal font-['Avenir-Next-Regular']">
             {description}
           </p>
         )}

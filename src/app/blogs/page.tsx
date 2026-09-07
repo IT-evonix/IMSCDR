@@ -15,6 +15,7 @@ interface BlogItem {
   category: string;
   summary?: string;
   thumbnailUrl?: string;
+  images?: string[];
   startDate?: string;
   endDate?: string;
   createdAt: string;
@@ -83,9 +84,11 @@ const BlogsPage = () => {
 
   const formatDate = (dateStr?: string) => {
     if (!dateStr) return '';
-    return new Date(dateStr).toLocaleDateString('en-IN', {
+    const d = new Date(dateStr);
+    if (isNaN(d.getTime())) return dateStr;
+    return d.toLocaleDateString('en-IN', {
       day: 'numeric',
-      month: 'long',
+      month: 'short',
       year: 'numeric',
     });
   };
@@ -113,7 +116,9 @@ const BlogsPage = () => {
                         src={
                           item.thumbnailUrl && !item.thumbnailUrl.includes('black_logo')
                             ? item.thumbnailUrl
-                            : DEFAULT_LOGO
+                            : Array.isArray(item.images) && item.images.length > 0 && item.images[0]
+                              ? item.images[0]
+                              : DEFAULT_LOGO
                         }
                         alt={item.title}
                         width={600}

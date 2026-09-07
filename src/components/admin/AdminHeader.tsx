@@ -65,8 +65,8 @@ export const AdminHeader: React.FC<AdminHeaderProps> = ({ onToggleSidebar }) => 
     <header className="w-full h-14 flex items-center bg-white border-b border-[#737782]/15 sticky top-0 z-40 shadow-[0_1px_4px_rgba(0,0,0,0.04)]">
       <div className="relative flex items-center px-4 lg:px-6 w-full max-w-[1200px] mx-auto">
 
-        {/* Left: Mobile Hamburger */}
-        <div className="flex items-center gap-3 shrink-0">
+        {/* Left: Mobile Hamburger (Only visible on screens < 1024px) */}
+        <div className="lg:hidden flex items-center gap-3 shrink-0">
           <button
             onClick={onToggleSidebar}
             className="lg:hidden p-1.5 text-[#434751] hover:bg-[#f3f3fa] rounded-md transition-colors"
@@ -77,7 +77,7 @@ export const AdminHeader: React.FC<AdminHeaderProps> = ({ onToggleSidebar }) => 
         </div>
 
         {/* Center: Global Search Bar Trigger (absolutely centered) */}
-        <div className="absolute left-1/2 -translate-x-1/2 hidden sm:block w-72">
+        {/* <div className="absolute left-1/2 -translate-x-1/2 hidden sm:block w-72">
           <button
             type="button"
             onClick={() => setSearchModalOpen(true)}
@@ -89,7 +89,7 @@ export const AdminHeader: React.FC<AdminHeaderProps> = ({ onToggleSidebar }) => 
             </div>
           </button>
         </div>
-
+ */}
         {/* Right: Profile Dropdown & Mobile Search Button */}
         <div className="flex items-center gap-2 ml-auto relative" ref={dropdownRef}>
           {/* Mobile Search Button */}
