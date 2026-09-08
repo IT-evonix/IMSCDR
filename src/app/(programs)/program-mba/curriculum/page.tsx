@@ -1,15 +1,9 @@
+import MBASyllabus from "@/components/program/MBASyllabus";
 
-import Syllabus from "@/components/Syllabus";
-import React from "react";
-
-
-const page = () => {
+export default function MBASyllabusPage() {
   return (
     <div className="innerpagerightside">
-
-      <Syllabus />
+      <MBASyllabus />
     </div>
   );
-};
-
-export default page;
+}
