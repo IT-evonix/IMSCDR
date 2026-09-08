@@ -77,7 +77,7 @@ export const programSidebar = {
       { title: "Overview", href: "/program-bba/overview" },
       { title: "Intake", href: "/program-bba/intake" },
       { title: "Eligibility", href: "/program-bba/eligibility" },
-      // { title: "Curriculum / Syllabus", href: "/program-bba/curriculum" },
+      { title: "Curriculum / Syllabus", href: "/program-bba/curriculum" },
       // { title: "Programme Outcomes", href: "/program-bba/programme-outcomes" },
       {
         title: "Career Opportunities",
@@ -96,7 +96,7 @@ export const programSidebar = {
       { title: "Overview", href: "/program-bca/overview" },
       { title: "Intake", href: "/program-bca/intake" },
       { title: "Eligibility", href: "/program-bca/eligibility" },
-      // { title: "Curriculum / Syllabus", href: "/program-bca/curriculum" },
+      { title: "Curriculum / Syllabus", href: "/program-bca/curriculum" },
       // { title: "Programme Outcomes", href: "/program-bca/programme-outcomes" },
       {
         title: "Career Opportunities",
@@ -158,6 +158,13 @@ export const programSidebar = {
         href: "/lifeatims/student-achievements",
       },
       { title: "Alumni", href: "/lifeatims/alumni" },
+      { title: "Gallery", href: "/lifeatims/gallery" },
+    ],
+  },
+
+  studentCorner: {
+    heading: "Student Corner",
+    menuItems: [
       { title: "Gallery", href: "/lifeatims/gallery" },
     ],
   },

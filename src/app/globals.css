@@ -1605,9 +1605,6 @@ Body {
 .governing-table td {
   white-space: normal;
 }
-.member-name {
-  font-weight: 600;
-}
 /*----------------- Governing Body End Here ------------------*/
 /*----------- Approvals & Affiliations Start Here -----------*/
 /* .all-3p-section {
@@ -2510,7 +2507,29 @@ Body {
   grid-template-columns: repeat(4, 1fr);
 }
 /* ---------- Laboratories & Facilities End Here ---------- */
-/* Dowanload Start Here */
+/*----------- Curriculum Page Start Here -----------*/
+.mca_curriculum .mca-elective-heading .member-name {
+  background-color:#fffdf5;
+  font-size: 16px;
+  color:#f79433;
+}
+.mca-soft-skills-section .member-name{
+  background: #88004a12;
+  font-size: 16px;
+  color:#89004a;
+}
+.mca-practical-section .member-name{
+  background: #88004a12;
+  font-size: 16px;
+  color:#89004a;
+}
+.mca-total-row{
+  font-size:16px;
+  font-family: "Avenir-Next-Demi";
+}
+
+/*----------- Curriculum Page End Here -----------*/
+/*------------- Dowanload Start Here -------------*/
 .ImageBox {
   position: relative;
   overflow: hidden;
@@ -5425,6 +5444,7 @@ border: 10px solid #fff;
   .career_opportunities_main .subheading {
     margin-bottom: 10px;
   }
+
   /* .higher_education .facilities-wrapper{
     grid-template-columns: repeat(2, 1fr);
   } */
