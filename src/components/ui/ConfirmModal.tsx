@@ -66,14 +66,15 @@ export const ConfirmModal: React.FC<ConfirmModalProps> = ({
               <div className={`w-7 h-7 rounded-md border ${currentVariant.iconBg} shrink-0 flex items-center justify-center`}>
                 <VariantIcon className="w-3.5 h-3.5" />
               </div>
-              <h4 className="text-xs sm:text-sm font-bold text-[#1a1c20] truncate leading-tight my-auto">{title}</h4>
+              <h4 className="modal-title text-sm font-bold text-[#003067] truncate leading-tight my-auto">{title}</h4>
             </div>
 
             <button
               type="button"
               onClick={onClose}
               disabled={isLoading}
-              className="w-7 h-7 rounded-md text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors cursor-pointer disabled:opacity-50 shrink-0 flex items-center justify-center"
+              className="modal-close-btn"
+              title="Close dialog"
             >
               <X className="w-4 h-4" />
             </button>

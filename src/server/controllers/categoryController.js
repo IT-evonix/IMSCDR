@@ -1,17 +1,20 @@
 const prisma = require('../config/db');
 
 /**
- * Get All Categories (Supports search and type filters)
+ * Get All Categories (Supports search and type filters - Soft deleted excluded)
  * Handles GET /api/categories
  */
 exports.getAllCategories = async (req, res, next) => {
   try {
     const { search, type } = req.query;
 
-    const whereConditions = [];
+    const whereConditions = [{ deletedAt: null }];
     if (type && type !== 'All') {
       whereConditions.push({
-        OR: [{ type: type }, { type: 'NewsEvent' }],
+        OR: [
+          { type: { equals: type, mode: 'insensitive' } },
+          { type: { equals: 'NewsEvent', mode: 'insensitive' } },
+        ],
       });
     }
     if (search && search.trim()) {
@@ -23,7 +26,7 @@ exports.getAllCategories = async (req, res, next) => {
       });
     }
 
-    const where = whereConditions.length > 0 ? { AND: whereConditions } : {};
+    const where = { AND: whereConditions };
 
     const categories = await prisma.category.findMany({
       where,
@@ -74,9 +77,10 @@ exports.createCategory = async (req, res, next) => {
       .replace(/[^a-z0-9]+/g, '-')
       .replace(/(^-|-$)/g, '');
 
-    // Check if category already exists
+    // Check if active category already exists
     const existing = await prisma.category.findFirst({
       where: {
+        deletedAt: null,
         OR: [{ name: { equals: trimmedName, mode: 'insensitive' } }, { slug }],
       },
     });
@@ -88,14 +92,34 @@ exports.createCategory = async (req, res, next) => {
       });
     }
 
-    // Create Category in PostgreSQL
-    const newCategory = await prisma.category.create({
-      data: {
-        name: trimmedName,
-        slug,
-        type: type || 'NewsEvent',
+    // Check if soft-deleted category exists with same name/slug to restore
+    const softDeleted = await prisma.category.findFirst({
+      where: {
+        OR: [{ name: { equals: trimmedName, mode: 'insensitive' } }, { slug }],
       },
     });
+
+    let newCategory;
+    if (softDeleted) {
+      newCategory = await prisma.category.update({
+        where: { id: softDeleted.id },
+        data: {
+          name: trimmedName,
+          slug,
+          type: type || 'NewsEvent',
+          deletedAt: null,
+        },
+      });
+    } else {
+      // Create Category in PostgreSQL
+      newCategory = await prisma.category.create({
+        data: {
+          name: trimmedName,
+          slug,
+          type: type || 'NewsEvent',
+        },
+      });
+    }
 
     return res.status(201).json({
       status: 'success',
@@ -121,9 +145,11 @@ exports.updateCategory = async (req, res, next) => {
       return res.status(400).json({ status: 'fail', message: 'Invalid category ID.' });
     }
 
-    const existingCat = await prisma.category.findUnique({ where: { id: catId } });
+    const existingCat = await prisma.category.findFirst({
+      where: { id: catId, deletedAt: null },
+    });
     if (!existingCat) {
-      return res.status(404).json({ status: 'fail', message: 'Category not found.' });
+      return res.status(404).json({ status: 'fail', message: 'Category not found or deleted.' });
     }
 
     const updateData = {};
@@ -140,6 +166,7 @@ exports.updateCategory = async (req, res, next) => {
       if (trimmedName.toLowerCase() !== existingCat.name.toLowerCase()) {
         const nameDuplicate = await prisma.category.findFirst({
           where: {
+            deletedAt: null,
             name: { equals: trimmedName, mode: 'insensitive' },
             id: { not: catId },
           },
@@ -157,7 +184,7 @@ exports.updateCategory = async (req, res, next) => {
 
       // Also update existing NewsEvents using old category name to new category name
       await prisma.newsEvent.updateMany({
-        where: { category: existingCat.name },
+        where: { category: existingCat.name, deletedAt: null },
         data: { category: trimmedName },
       });
     }
@@ -178,7 +205,7 @@ exports.updateCategory = async (req, res, next) => {
 };
 
 /**
- * Delete Category
+ * Soft Delete Category
  * Handles DELETE /api/categories/:id (Protected Route)
  */
 exports.deleteCategory = async (req, res, next) => {
@@ -190,19 +217,22 @@ exports.deleteCategory = async (req, res, next) => {
       return res.status(400).json({ status: 'fail', message: 'Invalid category ID.' });
     }
 
-    const category = await prisma.category.findUnique({ where: { id: catId } });
+    const category = await prisma.category.findFirst({
+      where: { id: catId, deletedAt: null },
+    });
     if (!category) {
-      return res.status(404).json({ status: 'fail', message: 'Category not found.' });
+      return res.status(404).json({ status: 'fail', message: 'Category not found or already deleted.' });
     }
 
-    // Delete category from PostgreSQL database
-    await prisma.category.delete({
+    // Perform SOFT DELETE (preserve data in database)
+    await prisma.category.update({
       where: { id: catId },
+      data: { deletedAt: new Date() },
     });
 
     return res.status(200).json({
       status: 'success',
-      message: 'Category deleted successfully!',
+      message: 'Category soft deleted successfully!',
     });
   } catch (error) {
     next(error);

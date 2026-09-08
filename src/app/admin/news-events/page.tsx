@@ -63,7 +63,7 @@ export default function ContentLibraryPage() {
           title: item.title,
           slug: `/news-events/${item.slug}`,
           rawSlug: item.slug,
-          type: item.contentType?.toUpperCase() || 'NEWS',
+          type: item.contentType ? item.contentType.trim().toUpperCase() : '',
           category: (item.category && item.category !== 'General') ? item.category : '—',
           status: item.status === 'Published' ? 'Active' : 'Inactive',
           thumbnailUrl: item.thumbnailUrl || '/images/news-and-events/newsandevents.webp',
@@ -155,7 +155,7 @@ export default function ContentLibraryPage() {
 
 
   return (
-    <div className="space-y-4 w-full mx-auto">
+    <div className="space-y-2.5 w-full mx-auto">
       {/* Page Header */}
       <PageTitle
         subtitle="IMSCDR Management"

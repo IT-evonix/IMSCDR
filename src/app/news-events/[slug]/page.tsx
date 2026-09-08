@@ -45,9 +45,11 @@ const BACK_SVG = (
 
 const formatDate = (dateStr?: string) => {
   if (!dateStr) return '';
-  return new Date(dateStr).toLocaleDateString('en-IN', {
+  const d = new Date(dateStr);
+  if (isNaN(d.getTime())) return dateStr;
+  return d.toLocaleDateString('en-IN', {
     day: 'numeric',
-    month: 'long',
+    month: 'short',
     year: 'numeric',
   });
 };
@@ -148,14 +150,14 @@ export default function NewsDetailPage() {
           ? item.thumbnailUrl
           : DEFAULT_IMAGE;
 
-    // Date range formatting: Start Date - End Date
+    // Date range formatting: Start Date - End Date (only if manually provided)
     let dateDisplay = '';
     if (item.startDate && item.endDate) {
       dateDisplay = `${formatDate(item.startDate)} - ${formatDate(item.endDate)}`;
     } else if (item.startDate) {
       dateDisplay = formatDate(item.startDate);
-    } else if (item.createdAt) {
-      dateDisplay = formatDate(item.createdAt);
+    } else if (item.endDate) {
+      dateDisplay = formatDate(item.endDate);
     }
 
     return (

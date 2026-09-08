@@ -1,8 +1,7 @@
 const prisma = require('../config/db');
 const { generateCsv } = require('../utils/exportHelper');
-const contactExcelService = require('../services/contactExcelService');
 
-// Submit Contact Us Form (Public API for website visitors)
+// Submit Contact Us Form (Public API for website visitors - Saves to Database)
 exports.submitContactForm = async (req, res, next) => {
   try {
     const { firstName, lastName, email, mobile, subject, message } = req.body;
@@ -26,44 +25,17 @@ exports.submitContactForm = async (req, res, next) => {
       return res.status(400).json({ status: 'fail', message: 'Message content is required.' });
     }
 
-    const storageMode = process.env.CONTACT_STORAGE_MODE || 'excel';
-    let savedData;
-
-    if (storageMode === 'database') {
-      try {
-        savedData = await prisma.contactMessage.create({
-          data: {
-            firstName: firstName.trim(),
-            lastName: lastName.trim(),
-            email: email.trim().toLowerCase(),
-            mobile: mobile.trim(),
-            subject: subject.trim(),
-            message: message.trim(),
-            status: 'Unread',
-          },
-        });
-      } catch (dbErr) {
-        console.warn('Database unreachable. Falling back to Excel storage:', dbErr.message);
-        savedData = contactExcelService.appendContactToExcel({
-          firstName,
-          lastName,
-          email,
-          mobile,
-          subject,
-          message,
-        });
-      }
-    } else {
-      // Excel Storage Mode (Default when PostgreSQL is not ready)
-      savedData = contactExcelService.appendContactToExcel({
-        firstName,
-        lastName,
-        email,
-        mobile,
-        subject,
-        message,
-      });
-    }
+    const savedData = await prisma.contactMessage.create({
+      data: {
+        firstName: firstName.trim(),
+        lastName: lastName.trim(),
+        email: email.trim().toLowerCase(),
+        mobile: mobile.trim(),
+        subject: subject.trim(),
+        message: message.trim(),
+        status: 'Unread',
+      },
+    });
 
     return res.status(201).json({
       status: 'success',
@@ -75,10 +47,27 @@ exports.submitContactForm = async (req, res, next) => {
   }
 };
 
-// Download Contact Enquiries File
-exports.downloadContactsCsv = (req, res, next) => {
+// Download Contact Enquiries File from Database (Active/Non-deleted records only)
+exports.downloadContactsCsv = async (req, res, next) => {
   try {
-    const csvData = contactExcelService.getContactsAsCsv();
+    const messages = await prisma.contactMessage.findMany({
+      where: { deletedAt: null },
+      orderBy: { createdAt: 'desc' },
+    });
+
+    const columns = [
+      { label: 'ID', key: 'id' },
+      { label: 'First Name', key: 'firstName' },
+      { label: 'Last Name', key: 'lastName' },
+      { label: 'Email', key: 'email' },
+      { label: 'Mobile', key: 'mobile' },
+      { label: 'Subject', key: 'subject' },
+      { label: 'Message', key: 'message' },
+      { label: 'Status', key: 'status' },
+      { label: 'Received Date', key: (row) => new Date(row.createdAt).toLocaleString() },
+    ];
+
+    const csvData = generateCsv(messages, columns);
     const today = new Date().toISOString().split('T')[0];
     const filename = `IMSCDR_Contact_Enquiries_${today}.csv`;
 
@@ -90,7 +79,7 @@ exports.downloadContactsCsv = (req, res, next) => {
   }
 };
 
-// Get All Contact Messages (Admin Protected Route)
+// Get All Contact Messages (Admin Protected Route - Soft Deleted records excluded)
 exports.getAllContactMessages = async (req, res, next) => {
   try {
     const { search, status, startDate, endDate, page = 1, limit = 10 } = req.query;
@@ -99,7 +88,9 @@ exports.getAllContactMessages = async (req, res, next) => {
     const limitNum = parseInt(limit, 10) || 10;
     const skip = (pageNum - 1) * limitNum;
 
-    const where = {};
+    const where = {
+      deletedAt: null,
+    };
 
     if (status && status !== 'All') {
       where.status = status;
@@ -131,7 +122,7 @@ exports.getAllContactMessages = async (req, res, next) => {
         take: limitNum,
       }),
       prisma.contactMessage.count({ where }),
-      prisma.contactMessage.count({ where: { status: 'Unread' } }),
+      prisma.contactMessage.count({ where: { status: 'Unread', deletedAt: null } }),
     ]);
 
     const totalPages = Math.ceil(totalItems / limitNum) || 1;
@@ -154,6 +145,7 @@ exports.updateContactStatus = async (req, res, next) => {
   try {
     const { id } = req.params;
     const { status } = req.body;
+    const msgId = parseInt(id, 10);
 
     const validStatuses = ['Unread', 'Read', 'Replied'];
     if (!status || !validStatuses.includes(status)) {
@@ -163,8 +155,19 @@ exports.updateContactStatus = async (req, res, next) => {
       });
     }
 
+    const existing = await prisma.contactMessage.findFirst({
+      where: { id: msgId, deletedAt: null },
+    });
+
+    if (!existing) {
+      return res.status(404).json({
+        status: 'fail',
+        message: 'Contact message not found or deleted.',
+      });
+    }
+
     const updated = await prisma.contactMessage.update({
-      where: { id: parseInt(id, 10) },
+      where: { id: msgId },
       data: { status },
     });
 
@@ -178,30 +181,46 @@ exports.updateContactStatus = async (req, res, next) => {
   }
 };
 
-// Delete Contact Message (Admin Protected Route)
+// Soft Delete Contact Message (Admin Protected Route)
 exports.deleteContactMessage = async (req, res, next) => {
   try {
     const { id } = req.params;
+    const msgId = parseInt(id, 10);
 
-    await prisma.contactMessage.delete({
-      where: { id: parseInt(id, 10) },
+    const existing = await prisma.contactMessage.findFirst({
+      where: { id: msgId, deletedAt: null },
+    });
+
+    if (!existing) {
+      return res.status(404).json({
+        status: 'fail',
+        message: 'Contact message not found or already deleted.',
+      });
+    }
+
+    // Perform SOFT DELETE (preserve data in database)
+    await prisma.contactMessage.update({
+      where: { id: msgId },
+      data: { deletedAt: new Date() },
     });
 
     return res.status(200).json({
       status: 'success',
-      message: 'Contact message deleted successfully.',
+      message: 'Contact message soft deleted successfully.',
     });
   } catch (error) {
     next(error);
   }
 };
 
-// Export Contact Messages to CSV/Excel Format (Admin Protected Route)
+// Export Contact Messages to CSV/Excel Format (Admin Protected Route - Soft Deleted excluded)
 exports.exportContactMessages = async (req, res, next) => {
   try {
     const { search, startDate, endDate } = req.query;
 
-    const where = {};
+    const where = {
+      deletedAt: null,
+    };
 
     if (search && search.trim()) {
       const q = search.trim();

@@ -20,8 +20,9 @@ const FORM_CONFIG = {
   },
   POST_TYPE: {
     label: 'Type of Post',
-    required: true,
+    required: false,
     options: [
+      { value: '', label: 'Select Type' },
       { value: 'News', label: 'News' },
       { value: 'Event', label: 'Event' },
       { value: 'Blog', label: 'Blog' },
@@ -30,7 +31,6 @@ const FORM_CONFIG = {
   CATEGORY: {
     label: 'Category (Optional)',
     required: false,
-    addNewLabel: 'Add New Category',
   },
   START_DATE: {
     label: 'Start Date',
@@ -48,8 +48,8 @@ const FORM_CONFIG = {
   },
   SUMMARY: {
     label: 'Short Description',
-    placeholder: 'Write a brief 1-2 sentence summary to display in list preview...',
-    required: true,
+    placeholder: 'Write a brief 1-2 sentence summary to display in list preview (Optional)...',
+    required: false,
   },
   DETAIL_FORMAT: {
     label: 'How do you want to add details?',
@@ -86,6 +86,23 @@ const FORM_CONFIG = {
   },
 };
 
+const normalizeType = (t?: string | null): string => {
+  if (!t || !t.trim()) return '';
+  const clean = t.trim().toLowerCase();
+  if (clean === 'news') return 'News';
+  if (clean === 'event') return 'Event';
+  if (clean === 'blog') return 'Blog';
+  return t.trim().charAt(0).toUpperCase() + t.trim().slice(1);
+};
+
+const normalizeFormat = (format?: string | null): 'description' | 'pdf' | 'link' => {
+  if (!format) return 'description';
+  const clean = format.trim().toLowerCase();
+  if (clean === 'pdf') return 'pdf';
+  if (clean === 'link') return 'link';
+  return 'description';
+};
+
 export default function CreateNewsEventPage() {
   const [editId, setEditId] = useState<string | null>(null);
   const [title, setTitle] = useState('');
@@ -118,7 +135,7 @@ export default function CreateNewsEventPage() {
   const [showCategoryModal, setShowCategoryModal] = useState(false);
   const [newCategoryInput, setNewCategoryInput] = useState('');
 
-  const [contentType, setContentType] = useState('News');
+  const [contentType, setContentType] = useState('');
   const [summary, setSummary] = useState('');
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
@@ -127,12 +144,18 @@ export default function CreateNewsEventPage() {
   // Content Format Type State: 'description' (Text Editor) vs 'pdf' (PDF Upload) vs 'link' (External Link)
   const [contentTypeOption, setContentTypeOption] = useState<'description' | 'pdf' | 'link'>('description');
 
-  const fetchCategories = async (typeToFetch: string) => {
+  const fetchCategories = async (typeToFetch: string, retainCategory?: string) => {
     try {
-      const res = await fetch(`/api/categories?type=${encodeURIComponent(typeToFetch)}`);
+      const url = (typeToFetch && typeToFetch.trim() && typeToFetch !== 'All')
+        ? `/api/categories?type=${encodeURIComponent(typeToFetch.trim())}`
+        : '/api/categories';
+      const res = await fetch(url);
       const data = await res.json();
       if (res.ok && data.status === 'success' && Array.isArray(data.data)) {
-        const names = data.data.map((c: any) => c.name);
+        const names: string[] = data.data.map((c: any) => c.name);
+        if (retainCategory && retainCategory.trim() && !names.includes(retainCategory.trim())) {
+          names.unshift(retainCategory.trim());
+        }
         setCategories(names);
       }
     } catch (err) {
@@ -141,7 +164,7 @@ export default function CreateNewsEventPage() {
   };
 
   useEffect(() => {
-    fetchCategories(contentType);
+    fetchCategories(contentType, selectedCategory);
   }, [contentType]);
 
   useEffect(() => {
@@ -161,8 +184,12 @@ export default function CreateNewsEventPage() {
         const item = data.data;
         setTitle(item.title || '');
         setSlug(item.slug || '');
-        setContentType(item.contentType || 'News');
-        setSelectedCategory(item.category || '');
+        const normType = normalizeType(item.contentType);
+        setContentType(normType);
+        const existingCat = item.category || '';
+        setSelectedCategory(existingCat);
+        fetchCategories(normType, existingCat);
+
         setSummary(item.summary || '');
         if (item.startDate) {
           setStartDate(new Date(item.startDate).toISOString().split('T')[0]);
@@ -170,12 +197,13 @@ export default function CreateNewsEventPage() {
         if (item.endDate) {
           setEndDate(new Date(item.endDate).toISOString().split('T')[0]);
         }
-        setContentTypeOption(item.contentFormat === 'pdf' ? 'pdf' : item.contentFormat === 'link' ? 'link' : 'description');
+        setContentTypeOption(normalizeFormat(item.contentFormat));
         setContentHtml(item.contentHtml || '');
         setExternalUrl(item.externalUrl || '');
 
         if (item.pdfUrl && !item.pdfUrl.startsWith('blob:')) {
-          const fileName = item.pdfUrl.split('/').pop() || 'Attached PDF Document.pdf';
+          const rawFileName = item.pdfUrl.split('/').pop() || 'Attached PDF Document.pdf';
+          const fileName = decodeURIComponent(rawFileName);
           setAttachedPdf({
             id: 'pdf-existing',
             name: fileName,
@@ -204,11 +232,6 @@ export default function CreateNewsEventPage() {
 
     if (!title.trim()) {
       showAlertModal('Please enter a Title / Heading for this post before publishing.', 'Title Required', 'warning');
-      return;
-    }
-
-    if (!summary.trim()) {
-      showAlertModal('Please write a short summary / description for this post before publishing.', 'Summary Required', 'warning');
       return;
     }
 
@@ -245,11 +268,11 @@ export default function CreateNewsEventPage() {
         },
         body: JSON.stringify({
           title: title.trim(),
-          contentType: contentType.toLowerCase(),
+          contentType: normalizeType(contentType),
           category: selectedCategory,
           startDate: startDate || null,
           endDate: endDate || null,
-          summary: summary.trim(),
+          summary: summary.trim() ? summary.trim() : null,
           contentFormat: contentTypeOption,
           contentHtml: contentTypeOption === 'description' ? contentHtml : null,
           pdfUrl: contentTypeOption === 'pdf' ? attachedPdf?.url : null,
@@ -424,7 +447,11 @@ export default function CreateNewsEventPage() {
               </label>
               <select
                 value={contentType}
-                onChange={(e) => setContentType(e.target.value)}
+                onChange={(e) => {
+                  const val = normalizeType(e.target.value);
+                  setContentType(val);
+                  fetchCategories(val);
+                }}
                 className="w-full px-3.5 py-2 rounded-lg brand-border focus:border-[#09468e] text-xs bg-white cursor-pointer outline-none font-normal text-[#1a1c20]"
               >
                 {FORM_CONFIG.POST_TYPE.options.map((type) => (
@@ -436,25 +463,20 @@ export default function CreateNewsEventPage() {
             </div>
 
             <div className="space-y-1">
-              <div className="flex justify-between items-center">
-                <label className="text-[10px] font-bold text-[#434751] uppercase tracking-wider">
-                  {FORM_CONFIG.CATEGORY.label} {FORM_CONFIG.CATEGORY.required && <span className="text-red-500">*</span>}
-                </label>
-                <button
-                  type="button"
-                  onClick={() => setShowCategoryModal(true)}
-                  className="flex items-center gap-1 text-[#09468e] hover:text-[#073873] text-[10px] font-bold cursor-pointer transition-colors"
-                >
-                  <Plus className="w-3 h-3 text-[#09468e]" />
-                  <span>{FORM_CONFIG.CATEGORY.addNewLabel}</span>
-                </button>
-              </div>
+              <label className="text-[10px] font-bold text-[#434751] uppercase tracking-wider block">
+                {FORM_CONFIG.CATEGORY.label} {FORM_CONFIG.CATEGORY.required && <span className="text-red-500">*</span>}
+              </label>
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
                 className="w-full px-3.5 py-2 rounded-lg brand-border focus:border-[#09468e] text-xs bg-white outline-none font-normal text-[#1a1c20] cursor-pointer"
               >
                 <option value="">Select Category</option>
+                {selectedCategory && !categories.includes(selectedCategory) && (
+                  <option key={selectedCategory} value={selectedCategory}>
+                    {selectedCategory}
+                  </option>
+                )}
                 {categories.map((cat) => (
                   <option key={cat} value={cat}>
                     {cat}
@@ -493,8 +515,6 @@ export default function CreateNewsEventPage() {
             </div>
           </div>
 
-
-
           {/* Short Summary */}
           <div className="space-y-1">
             <label className="text-[10px] font-bold text-[#434751] uppercase tracking-wider">
@@ -506,32 +526,39 @@ export default function CreateNewsEventPage() {
               value={summary}
               onChange={(e) => setSummary(e.target.value)}
               placeholder={FORM_CONFIG.SUMMARY.placeholder}
-              className="w-full px-3.5 py-2 rounded-lg brand-border focus:border-[#09468e] text-xs transition-all outline-none resize-none font-normal text-[#1a1c20]"
+              className="w-full px-3.5 py-2.5 rounded-lg brand-border focus:border-[#09468e] text-xs transition-all outline-none resize-none font-normal text-[#1a1c20] leading-relaxed"
             />
           </div>
 
           {/* Radio Button Format Selector (Text vs PDF vs External Link) */}
-          <div className="space-y-1.5 p-3 rounded-xl bg-[#f8fafc] border border-[#09468e]/15">
-            <label className="text-[10px] font-bold text-[#003067] uppercase tracking-wider block">
+          <div className="space-y-2 p-3 sm:p-3.5 rounded-xl bg-[#f8fafc] border border-[#09468e]/15">
+            <label className="text-[10px] font-bold text-[#003067] uppercase tracking-wider block font-['Roma-Semibold']">
               {FORM_CONFIG.DETAIL_FORMAT.label} {FORM_CONFIG.DETAIL_FORMAT.required && <span className="text-red-500">*</span>}
             </label>
-            <div className="flex flex-col sm:flex-row sm:items-center gap-2.5 sm:gap-6 pt-0.5">
-              {FORM_CONFIG.DETAIL_FORMAT.options.map((opt) => (
-                <label
-                  key={opt.id}
-                  className="flex items-center gap-2 text-xs font-semibold text-[#1a1c20] cursor-pointer hover:text-[#09468e] transition-colors"
-                >
-                  <input
-                    type="radio"
-                    name="contentTypeOption"
-                    value={opt.id}
-                    checked={contentTypeOption === opt.id}
-                    onChange={() => setContentTypeOption(opt.id as any)}
-                    className="w-3.5 h-3.5 text-[#09468e] focus:ring-[#09468e] cursor-pointer"
-                  />
-                  <span>{opt.label}</span>
-                </label>
-              ))}
+            <div className="flex flex-col sm:flex-row sm:items-center gap-2.5 sm:gap-3 pt-1">
+              {FORM_CONFIG.DETAIL_FORMAT.options.map((opt) => {
+                const isSelected = contentTypeOption === opt.id;
+                return (
+                  <label
+                    key={opt.id}
+                    onClick={() => setContentTypeOption(opt.id as any)}
+                    className={`!inline-flex !items-center gap-2 px-3.5 py-2 rounded-lg border text-xs font-semibold cursor-pointer transition-all select-none ${isSelected
+                        ? 'bg-blue-50/90 border-[#09468e] text-[#09468e] shadow-xs'
+                        : 'bg-white border-slate-200 text-slate-700 hover:border-slate-300'
+                      }`}
+                  >
+                    <input
+                      type="radio"
+                      name="contentTypeOption"
+                      value={opt.id}
+                      checked={isSelected}
+                      onChange={() => setContentTypeOption(opt.id as any)}
+                      className="w-3.5 h-3.5 text-[#09468e] focus:ring-[#09468e] cursor-pointer shrink-0 accent-[#09468e]"
+                    />
+                    <span className="font-['Avenir-Next-Demi'] leading-none">{opt.label}</span>
+                  </label>
+                );
+              })}
             </div>
           </div>
 
@@ -615,9 +642,9 @@ export default function CreateNewsEventPage() {
                 <div className="flex items-center justify-between gap-3 border-b border-slate-100 pb-2.5">
                   <div className="flex items-center gap-2.5 min-w-0 flex-1">
                     <div className="w-7 h-7 rounded-md border bg-blue-50 text-[#09468e] border-blue-200 shrink-0 flex items-center justify-center">
-                      <Plus className="w-3.5 h-3.5" />
+                      <Plus className="w-3.5 h-3.5 text-[#09468e]" />
                     </div>
-                    <h4 className="text-xs sm:text-sm font-bold text-[#1a1c20] truncate leading-tight my-auto">
+                    <h4 className="modal-title text-sm font-bold text-[#003067] truncate leading-tight my-auto">
                       Add New Category
                     </h4>
                   </div>
@@ -625,7 +652,8 @@ export default function CreateNewsEventPage() {
                   <button
                     type="button"
                     onClick={() => setShowCategoryModal(false)}
-                    className="w-7 h-7 rounded-md text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors cursor-pointer shrink-0 flex items-center justify-center"
+                    className="modal-close-btn"
+                    title="Close modal"
                   >
                     <X className="w-4 h-4" />
                   </button>

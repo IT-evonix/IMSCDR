@@ -44,9 +44,11 @@ const BACK_SVG = (
 
 const formatDate = (dateStr?: string) => {
   if (!dateStr) return '';
-  return new Date(dateStr).toLocaleDateString('en-IN', {
+  const d = new Date(dateStr);
+  if (isNaN(d.getTime())) return dateStr;
+  return d.toLocaleDateString('en-IN', {
     day: 'numeric',
-    month: 'long',
+    month: 'short',
     year: 'numeric',
   });
 };
@@ -141,7 +143,11 @@ export default function BlogDetailPage() {
           ? item.thumbnailUrl
           : DEFAULT_IMAGE;
 
-    const dateDisplay = formatDate(item.startDate || item.createdAt);
+    const dateDisplay = item.startDate
+      ? formatDate(item.startDate)
+      : item.endDate
+        ? formatDate(item.endDate)
+        : '';
 
     return (
       <div className="innerpage-wrapper">

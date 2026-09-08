@@ -100,10 +100,10 @@ export const ContentStats: React.FC<ContentStatsProps> = ({ stats = [], classNam
               {renderIcon(stat.icon)}
             </div>
             <div>
-              <div className="text-[10px] font-extrabold text-[#737782] uppercase tracking-wider">
+              <div className="stat-label text-[10px] font-extrabold text-[#737782] uppercase tracking-wider font-['Roma-Semibold']">
                 {stat.label}
               </div>
-              <div className={`text-lg font-black ${stat.textColor || styles.textVal}`}>
+              <div className={`stat-value text-lg font-black ${stat.textColor || styles.textVal} font-['Roma-Bold']`}>
                 {stat.value}
               </div>
             </div>

@@ -235,14 +235,14 @@ export default function CategoryManagementPage() {
 
       {/* Controls Bar: Search & Type Filter */}
       <div className="bg-white p-3 rounded-xl brand-border shadow-2xs flex flex-wrap items-center justify-between gap-3">
-        <div className="relative flex-1 min-w-[200px] max-w-sm">
-          <Search className="w-3.5 h-3.5 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
+        <div className="relative flex-1 min-w-[200px] max-w-sm flex items-center">
+          <Search className="w-3.5 h-3.5 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none z-10" />
           <input
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Search categories..."
-            className="pl-9 pr-4 h-8 bg-[#f8fafc] border border-slate-200 rounded-lg text-xs text-[#1a1c20] placeholder:text-slate-400 focus:border-[#09468e] focus:ring-1 focus:ring-[#09468e]/20 w-full outline-none transition-all"
+            className="pl-9 pr-4 h-8 bg-[#f8fafc] border border-slate-200 rounded-lg text-xs text-[#1a1c20] placeholder:text-slate-400 hover:border-[#09468e] focus:border-[#09468e] focus:ring-1 focus:ring-[#09468e]/20 w-full outline-none transition-all search-input"
           />
         </div>
 
@@ -251,7 +251,7 @@ export default function CategoryManagementPage() {
           <select
             value={filterType}
             onChange={(e) => setFilterType(e.target.value)}
-            className="bg-[#f8fafc] border border-slate-200 rounded-lg px-2.5 h-8 text-xs font-semibold text-[#1a1c20] focus:ring-1 focus:ring-[#09468e] outline-none cursor-pointer"
+            className="bg-[#f8fafc] border border-slate-200 rounded-lg px-2.5 h-8 text-xs font-semibold text-[#1a1c20] hover:border-[#09468e] focus:border-[#09468e] focus:ring-1 focus:ring-[#09468e]/20 outline-none cursor-pointer transition-all"
           >
             <option value="All">All Types</option>
             <option value="NewsEvent">NewsEvent</option>
@@ -309,7 +309,7 @@ export default function CategoryManagementPage() {
                           <button
                             type="button"
                             onClick={() => handleOpenEditModal(cat)}
-                            className="p-1.5 text-[#09468e] hover:bg-[#09468e]/10 rounded-md cursor-pointer transition-all"
+                            className="table-action-btn table-btn-edit"
                             title="Edit Category"
                           >
                             <Edit3 className="w-3.5 h-3.5" />
@@ -317,7 +317,7 @@ export default function CategoryManagementPage() {
                           <button
                             type="button"
                             onClick={() => promptDelete(cat)}
-                            className="p-1.5 text-red-500 hover:bg-red-50 rounded-md cursor-pointer transition-all"
+                            className="table-action-btn table-btn-delete"
                             title="Delete Category"
                           >
                             <Trash2 className="w-3.5 h-3.5" />
@@ -341,9 +341,9 @@ export default function CategoryManagementPage() {
             <div className="p-3.5 sm:p-4 border-b border-slate-100 flex items-center justify-between gap-3">
               <div className="flex items-center gap-2.5 min-w-0 flex-1">
                 <div className="w-7 h-7 rounded-md bg-[#09468e]/10 text-[#09468e] shrink-0 flex items-center justify-center">
-                  <FolderKanban className="w-4 h-4" />
+                  <FolderKanban className="w-4 h-4 text-[#09468e]" />
                 </div>
-                <h4 className="text-xs sm:text-sm font-bold text-[#1a1c20] truncate whitespace-nowrap leading-tight my-auto">
+                <h4 className="modal-title text-sm font-bold text-[#003067] truncate whitespace-nowrap leading-tight my-auto">
                   {editingCategory ? 'Edit Category' : 'Create New Category'}
                 </h4>
               </div>
@@ -351,7 +351,8 @@ export default function CategoryManagementPage() {
               <button
                 type="button"
                 onClick={() => setShowModal(false)}
-                className="w-7 h-7 rounded-md text-slate-400 hover:text-slate-600 hover:bg-slate-100 shrink-0 flex items-center justify-center transition-colors cursor-pointer"
+                className="modal-close-btn"
+                title="Close modal"
               >
                 <X className="w-4 h-4" />
               </button>

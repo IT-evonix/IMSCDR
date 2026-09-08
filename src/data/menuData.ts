@@ -397,10 +397,10 @@ export const menuItems: MenuItem[] = [
   },
 
   {
-    label: "News & Media",
+    label: "News & Events",
     children: [
       {
-        label: "News & Media ",
+        label: "News & Events",
         href: "/news-events",
       },
       {

@@ -10,9 +10,26 @@ const pdfStorage = multer.diskStorage({
     cb(null, dir);
   },
   filename: (req, file, cb) => {
-    const uniqueSuffix = `${Date.now()}-${Math.round(Math.random() * 1e6)}`;
-    const ext = path.extname(file.originalname);
-    cb(null, `pdf-${uniqueSuffix}${ext}`);
+    // Preserve the original filename, sanitizing invalid filesystem characters
+    const parsed = path.parse(file.originalname);
+    const cleanBaseName = parsed.name
+      .replace(/[\\/:*?"<>|]/g, '')
+      .trim() || 'document';
+    const ext = (parsed.ext || '.pdf').toLowerCase();
+
+    const dir = path.join(process.cwd(), 'public', 'uploads', 'pdfs');
+    let finalName = `${cleanBaseName}${ext}`;
+
+    // If file with exact same name exists, append counter e.g. Notice_1.pdf
+    if (fs.existsSync(path.join(dir, finalName))) {
+      let counter = 1;
+      while (fs.existsSync(path.join(dir, `${cleanBaseName}_${counter}${ext}`))) {
+        counter++;
+      }
+      finalName = `${cleanBaseName}_${counter}${ext}`;
+    }
+
+    cb(null, finalName);
   },
 });
 
