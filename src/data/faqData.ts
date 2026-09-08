@@ -27,7 +27,7 @@ export const mbaFaqs: FAQItem[] = [
 export const libraryFaqs: FAQItem[] = [
   {
     question: "Who can become a regular member?",
-    answer: "Students who have taken Students who have taken admission for Management Programmes at IMS can become a regular member of the Library for that academic year.",
+    answer: "Students who have taken admission for Management Programmes at IMS can become a regular member of the Library for that academic year.",
   },
   {
     question: "I am an external post graduate student of the University of Pune. Can I avail the library book lending facility?",

@@ -40,7 +40,7 @@ export const programSidebar = {
       { title: "Intake", href: "/program-mba/intake" },
       { title: "Eligibility", href: "/program-mba/eligibility" },
       { title: "Curriculum / Syllabus", href: "/program-mba/curriculum" },
-      // { title: "Programme Outcomes", href: "/program-mba/programme-outcomes" },
+      { title: "Programme Outcomes", href: "/program-mba/programme-outcomes" },
       {
         title: "Career Opportunities",
         href: "/program-mba/career-opportunities",
@@ -58,8 +58,8 @@ export const programSidebar = {
       { title: "Overview", href: "/program-mca/overview" },
       { title: "Intake", href: "/program-mca/intake" },
       { title: "Eligibility", href: "/program-mca/eligibility" },
-      // { title: "Curriculum / Syllabus", href: "/program-mca/curriculum" },
-      // { title: "Programme Outcomes", href: "/program-mca/programme-outcomes" },
+      { title: "Curriculum / Syllabus", href: "/program-mca/curriculum" },
+      { title: "Programme Outcomes", href: "/program-mca/programme-outcomes" },
       {
         title: "Career Opportunities",
         href: "/program-mca/career-opportunities",
@@ -78,7 +78,7 @@ export const programSidebar = {
       { title: "Intake", href: "/program-bba/intake" },
       { title: "Eligibility", href: "/program-bba/eligibility" },
       { title: "Curriculum / Syllabus", href: "/program-bba/curriculum" },
-      // { title: "Programme Outcomes", href: "/program-bba/programme-outcomes" },
+      { title: "Programme Outcomes", href: "/program-bba/programme-outcomes" },
       {
         title: "Career Opportunities",
         href: "/program-bba/career-opportunities",
@@ -97,7 +97,7 @@ export const programSidebar = {
       { title: "Intake", href: "/program-bca/intake" },
       { title: "Eligibility", href: "/program-bca/eligibility" },
       { title: "Curriculum / Syllabus", href: "/program-bca/curriculum" },
-      // { title: "Programme Outcomes", href: "/program-bca/programme-outcomes" },
+      { title: "Programme Outcomes", href: "/program-bca/programme-outcomes" },
       {
         title: "Career Opportunities",
         href: "/program-bca/career-opportunities",

@@ -103,7 +103,9 @@ const page = () => {
           <div className="programme_outcome_right">
             <div className="subheading">Critical Thinking</div>
             <p className="p-0 m-0">
-              Ability to conduct investigation of multidimensional business problems using research based knowledge and research methods to arrive at data driven decisions
+              Ability to conduct investigation of multidimensional business
+              problems using research based knowledge and research methods to
+              arrive at data driven decisions
             </p>
           </div>
         </div>
@@ -135,7 +137,9 @@ const page = () => {
           <div className="programme_outcome_right">
             <div className="subheading">Effective Communication</div>
             <p className="p-0 m-0">
-              Ability to effectively communicate in cross-cultural settings, in technology mediated environments, especially in the business context and with society at large
+              Ability to effectively communicate in cross-cultural settings, in
+              technology mediated environments, especially in the business
+              context and with society at large
             </p>
           </div>
         </div>
@@ -167,7 +171,10 @@ const page = () => {
           <div className="programme_outcome_right">
             <div className="subheading">Leadership and Team Work</div>
             <p className="p-0 m-0">
-                Ability to collaborate in an organizational context and across organizational boundaries and lead themselves and others in the achievement of organizational goals and optimize outcomes for all stakeholders.
+              Ability to collaborate in an organizational context and across
+              organizational boundaries and lead themselves and others in the
+              achievement of organizational goals and optimize outcomes for all
+              stakeholders.
             </p>
           </div>
         </div>
@@ -197,9 +204,13 @@ const page = () => {
             </div>
           </div>
           <div className="programme_outcome_right">
-            <div className="subheading">Global Orientation and Cross-Cultural Appreciation</div>
+            <div className="subheading">
+              Global Orientation and Cross-Cultural Appreciation
+            </div>
             <p className="p-0 m-0">
-                Ability to approach any relevant business issues from a global perspective and exhibit an appreciation of Cross Cultural aspects of business and management.
+              Ability to approach any relevant business issues from a global
+              perspective and exhibit an appreciation of Cross Cultural aspects
+              of business and management.
             </p>
           </div>
         </div>
@@ -231,7 +242,10 @@ const page = () => {
           <div className="programme_outcome_right">
             <div className="subheading">Entrepreneurship </div>
             <p className="p-0 m-0">
-                Ability to identify entrepreneurial opportunities and leverage managerial & leadership skills for founding, leading & managing startups as well as professionalizing and growing family businesses.
+              Ability to identify entrepreneurial opportunities and leverage
+              managerial & leadership skills for founding, leading & managing
+              startups as well as professionalizing and growing family
+              businesses.
             </p>
           </div>
         </div>
@@ -263,7 +277,10 @@ const page = () => {
           <div className="programme_outcome_right">
             <div className="subheading">Environment and Sustainability</div>
             <p className="p-0 m-0">
-                Ability to demonstrate knowledge of and need for sustainable development and assess the impact of managerial decisions and business priorities on the societal, economic and environmental aspects.
+              Ability to demonstrate knowledge of and need for sustainable
+              development and assess the impact of managerial decisions and
+              business priorities on the societal, economic and environmental
+              aspects.
             </p>
           </div>
         </div>
@@ -296,7 +313,11 @@ const page = () => {
           <div className="programme_outcome_right">
             <div className="subheading">Social Responsiveness and Ethics</div>
             <p className="p-0 m-0">
-                Ability to exhibit a broad appreciation of the ethical and value underpinnings of managerial choices in a political, cross-cultural, globalized, digitized, socio-economic environment and distinguish between ethical and unethical behaviors & act with integrity.
+              Ability to exhibit a broad appreciation of the ethical and value
+              underpinnings of managerial choices in a political,
+              cross-cultural, globalized, digitized, socio-economic environment
+              and distinguish between ethical and unethical behaviors & act with
+              integrity.
             </p>
           </div>
         </div>
@@ -329,11 +350,12 @@ const page = () => {
           <div className="programme_outcome_right">
             <div className="subheading">Life Long Learning</div>
             <p className="p-0 m-0">
-                Ability to operate independently in new environment, acquire new knowledge and skills and assimilate them into the internalized knowledge and skills.
+              Ability to operate independently in new environment, acquire new
+              knowledge and skills and assimilate them into the internalized
+              knowledge and skills.
             </p>
           </div>
         </div>
-
       </div>
     </div>
   );

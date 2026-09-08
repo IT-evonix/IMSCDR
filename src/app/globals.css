@@ -1605,6 +1605,13 @@ Body {
 .governing-table td {
   white-space: normal;
 }
+.bba-bca-curriculum .governing-table th:first-child, .governing-table td:first-child {
+    width: inherit;
+} 
+.bba-bca-total-row{
+    font-size: 16px;
+    font-family: "Avenir-Next-Demi";
+}
 /*----------------- Governing Body End Here ------------------*/
 /*----------- Approvals & Affiliations Start Here -----------*/
 /* .all-3p-section {
