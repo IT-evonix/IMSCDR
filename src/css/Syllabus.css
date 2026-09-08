@@ -1,0 +1,85 @@
+.mba-syllabus-section {
+  padding: 0px 0;
+  background: #fff;
+  font-size: 15px;
+}
+
+.mba-syllabus-table-section {
+  margin-bottom: 50px;
+}
+
+.mba-syllabus-section .governing-table thead th {
+  background: #09468e;
+  color: #fff;
+  padding: 20px 25px 20px 20px;
+  font-size: 16px;
+  font-family: "Roma-Semibold";
+  text-transform: uppercase;
+  border-right: 1px solid #ffffff1f;
+  white-space: nowrap;
+  letter-spacing: 0.4px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.mba-syllabus-section .governing-table tbody td {
+  padding: 12px 15px;
+  font-size: 16px;
+  line-height: 1.35;
+  text-align: center;
+  vertical-align: middle;
+  border-bottom: 1px solid #edf3fb;
+  border-right: 1px solid #edf3fb;
+}
+
+.mba-blue-row td {
+  background: #f2faff !important;
+  color: #111;
+  font-family: Roma-Semibold;
+}
+
+.mba-exit-row td {
+  background: #fff8e3 !important;
+  color: #111;
+  text-align: center !important;
+}
+
+.mba-light-pink-row td {
+  background: rgb(255, 240, 247) !important;
+  color: #111;
+  font-family: Roma-Semibold;
+}
+
+.mba-pink-row td {
+  background: #ffe4f0 !important;
+  color: #111;
+  font-family: Roma-Semibold;
+}
+.mba-yellow-row td {
+  background: #fff8e3 !important;
+  color: #111;
+
+  font-family: Roma-Semibold;
+}
+
+.mba-blue-final-row td {
+  background: #ceebfb !important;
+  color: #111;
+  font-family: Roma-Semibold;
+}
+.mba-nep-title-row th {
+  background: #fff7e0 !important;
+  color: #111 !important;
+  font-size: 18px !important;
+  font-family: "Roma-Semibold";
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  padding: 7px 10px !important;
+  font-family: Roma-Semibold;
+  border-right: 1px solid #ffffff1f;
+}
+.governing-table thead .electivesmandatory_th {
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+    background: #0a4f9d !important;
+}

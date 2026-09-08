@@ -39,7 +39,7 @@ export const programSidebar = {
       { title: "Overview", href: "/program-mba/overview" },
       { title: "Intake", href: "/program-mba/intake" },
       { title: "Eligibility", href: "/program-mba/eligibility" },
-      // { title: "Curriculum / Syllabus", href: "/program-mba/curriculum" },
+      { title: "Curriculum / Syllabus", href: "/program-mba/curriculum" },
       // { title: "Programme Outcomes", href: "/program-mba/programme-outcomes" },
       {
         title: "Career Opportunities",
@@ -147,7 +147,7 @@ export const programSidebar = {
     menuItems: [
       { title: "Campus Overview", href: "/lifeatims/campus-overview" },
       { title: "Infrastructure", href: "/lifeatims/infrastructure" },
-      // { title: "Library", href: "/lifeatims/library" },
+      { title: "Library", href: "/lifeatims/library" },
       { title: "Hostel", href: "/lifeatims/hostel" },
       { title: "Sports", href: "/lifeatims/sports" },
       { title: "Student Clubs", href: "/lifeatims/student-clubs" },

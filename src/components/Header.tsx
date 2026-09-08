@@ -286,7 +286,7 @@ export default function Header() {
     <header className={`${styles.header} ${isSticky ? styles.sticky : ""}`}>
       <div className={styles.headerinner}>
         <div className={styles.logo}>
-          <Link href="/" onClick={closeMenu}>
+          <Link style={{ outline: 'none' }} href="/" onClick={closeMenu}>
             <Image
               src="/images/home/white_logo.webp"
               className={styles.whitelogo}

@@ -4416,7 +4416,7 @@ Body {
   margin: 0 0 6px 0px;
 }
 .news-content .subheading {
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   text-overflow: ellipsis;
   -webkit-box-orient: vertical;
   line-height: normal;
@@ -5818,10 +5818,12 @@ border: 10px solid #fff;
   .homepage .hero-video::after {
     display: block;
   }
-
   /*------------- Placement Tab Start Here -------------*/
   .top_recru_list{
-    width: 49%;
+    width: 47%;
+  }
+  .top_recru_list{
+    min-height: 90px;
   }
   /*---------------- Life @ IMS Start Here ----------------*/
   .BestPractices_innerlist span {
