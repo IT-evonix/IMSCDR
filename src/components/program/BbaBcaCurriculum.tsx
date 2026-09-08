@@ -11,7 +11,11 @@ function renderCell(cell: CurriculumCell | null) {
     return null;
   }
 
-  return cell.value;
+  if (typeof cell === "object") {
+    return cell.value;
+  }
+
+  return cell;
 }
 
 export default function BbaBcaCurriculum() {
@@ -26,6 +30,7 @@ export default function BbaBcaCurriculum() {
               ))}
             </tr>
           </thead>
+
           <tbody>
             {bbaBcaCurriculumData.map((row, rowIndex) => (
               <tr key={rowIndex} className={row.className ?? ""}>
@@ -36,11 +41,17 @@ export default function BbaBcaCurriculum() {
                     return null;
                   }
 
+                  const isObjectCell = typeof cell === "object";
+
                   return (
                     <td
                       key={column.key}
-                      rowSpan={cell.rowSpan}
-                      colSpan={cell.colSpan}
+                      rowSpan={
+                        isObjectCell ? cell.rowSpan : undefined
+                      }
+                      colSpan={
+                        isObjectCell ? cell.colSpan : undefined
+                      }
                       data-label={column.title}
                     >
                       {renderCell(cell)}

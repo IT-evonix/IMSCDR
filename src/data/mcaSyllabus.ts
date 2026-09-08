@@ -154,7 +154,7 @@ export const mcaSem1Data: TableRow[] = [
   {
     srNo: null,
     rowClass: "mca-total-row",
-    course: { value: "Semester-I Total", colSpan: 3 },
+    course: { value: "Total", colSpan: 3 },
     courseCode: null,
     cp: 26,
     ext: 270,
@@ -341,7 +341,7 @@ export const mcaSem2Data: TableRow[] = [
   {
     srNo: null,
     rowClass: "mca-total-row",
-    course: { value: "Semester-II Total", colSpan: 3 },
+    course: { value: "Total", colSpan: 3 },
     courseCode: null,
     cp: 26,
     ext: 270,
@@ -547,7 +547,7 @@ export const mcaSem3Data: TableRow[] = [
   {
     srNo: null,
     rowClass: "mca-total-row",
-    course: { value: "Semester-III Total", colSpan: 3 },
+    course: { value: "Total", colSpan: 3 },
     courseCode: null,
     cp: 25,
     ext: 225,
@@ -586,7 +586,7 @@ export const mcaSem4Data: TableRow[] = [
   {
     srNo: null,
     rowClass: "mca-total-row",
-    course: { value: "Semester-IV Total", colSpan: 3 },
+    course: { value: "Total", colSpan: 3 },
     courseCode: null,
     cp: 18,
     ext: 270,
