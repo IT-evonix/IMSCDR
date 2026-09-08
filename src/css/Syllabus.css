@@ -3,11 +3,9 @@
   background: #fff;
   font-size: 15px;
 }
-
 .mba-syllabus-table-section {
   margin-bottom: 50px;
 }
-
 .mba-syllabus-section .governing-table thead th {
   background: #09468e;
   color: #fff;
@@ -21,17 +19,14 @@
   vertical-align: middle;
   text-align: center;
 }
-
 .mba-syllabus-section .governing-table tbody td {
   padding: 12px 15px;
   font-size: 16px;
-  line-height: 1.35;
   text-align: center;
   vertical-align: middle;
   border-bottom: 1px solid #edf3fb;
   border-right: 1px solid #edf3fb;
 }
-
 .mba-blue-row td {
   background: #f2faff !important;
   color: #111;

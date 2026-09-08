@@ -20,10 +20,16 @@ export interface RowSpanCell {
   rowSpan: number;
 }
 
-export type TableCell = string | number | RowSpanCell | null;
+export interface ColSpanCell {
+  value: string | number;
+  colSpan: number;
+}
+
+export type TableCell = string | number | RowSpanCell | ColSpanCell | null;
 
 export interface TableRow {
   [key: string]: TableCell | boolean | undefined;
+  rowClass?: string;
 }
 
 interface TableProps {
@@ -38,6 +44,15 @@ function isRowSpanCell(cell: TableCell): cell is RowSpanCell {
     cell !== null &&
     "value" in cell &&
     "rowSpan" in cell
+  );
+}
+
+function isColSpanCell(cell: TableCell): cell is ColSpanCell {
+  return (
+    typeof cell === "object" &&
+    cell !== null &&
+    "value" in cell &&
+    "colSpan" in cell
   );
 }
 
@@ -61,7 +76,8 @@ const Table = ({ columns, data, headerGroups }: TableProps) => {
       return null;
     }
 
-    const value = isRowSpanCell(cell) ? cell.value : cell;
+    const value =
+      isRowSpanCell(cell) || isColSpanCell(cell) ? cell.value : cell;
 
     if (key === "srNo") {
       return <span className="sr-badge">{value}</span>;
@@ -113,7 +129,7 @@ const Table = ({ columns, data, headerGroups }: TableProps) => {
 
           <tbody>
             {data.map((row, rowIndex) => (
-              <tr key={rowIndex}>
+              <tr key={rowIndex} className={row.rowClass}>
                 {columns.map((column) => {
                   const cell = row[column.key] as TableCell;
 
@@ -125,6 +141,7 @@ const Table = ({ columns, data, headerGroups }: TableProps) => {
                     <td
                       key={column.key}
                       rowSpan={isRowSpanCell(cell) ? cell.rowSpan : undefined}
+                      colSpan={isColSpanCell(cell) ? cell.colSpan : undefined}
                       data-label={column.title}
                       className={getCellClass(column.key, row)}
                     >
