@@ -148,10 +148,14 @@ const BlogsPage = () => {
 
                     <div className="news-content" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                       <div>
-                        {/* Date / Date Range at top */}
-                        <span className="news-date">
-                          {formatDate(item.startDate || item.createdAt)}
-                        </span>
+                        {/* Date / Date Range at top (only displayed if manually provided) */}
+                        {(item.startDate || item.endDate) && (
+                          <span className="news-date">
+                            {item.startDate && item.endDate
+                              ? `${formatDate(item.startDate)} - ${formatDate(item.endDate)}`
+                              : formatDate(item.startDate || item.endDate)}
+                          </span>
+                        )}
 
                         {/* Title */}
                         <div className="subheading" style={{ margin: '2px 0 4px 0' }}>

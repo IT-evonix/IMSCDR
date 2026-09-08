@@ -143,7 +143,11 @@ export default function BlogDetailPage() {
           ? item.thumbnailUrl
           : DEFAULT_IMAGE;
 
-    const dateDisplay = formatDate(item.startDate || item.createdAt);
+    const dateDisplay = item.startDate
+      ? formatDate(item.startDate)
+      : item.endDate
+        ? formatDate(item.endDate)
+        : '';
 
     return (
       <div className="innerpage-wrapper">

@@ -150,14 +150,14 @@ export default function NewsDetailPage() {
           ? item.thumbnailUrl
           : DEFAULT_IMAGE;
 
-    // Date range formatting: Start Date - End Date
+    // Date range formatting: Start Date - End Date (only if manually provided)
     let dateDisplay = '';
     if (item.startDate && item.endDate) {
       dateDisplay = `${formatDate(item.startDate)} - ${formatDate(item.endDate)}`;
     } else if (item.startDate) {
       dateDisplay = formatDate(item.startDate);
-    } else if (item.createdAt) {
-      dateDisplay = formatDate(item.createdAt);
+    } else if (item.endDate) {
+      dateDisplay = formatDate(item.endDate);
     }
 
     return (
