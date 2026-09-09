@@ -1530,7 +1530,7 @@ Body {
 .governing-table thead th {
   background: #09468e;
   color: #fff;
-  padding: 20px 25px 20px 20px;
+  padding: 17px 25px 17px 20px;
   font-size: 16px;
   font-family: "Roma-Semibold";
   text-transform: uppercase;
@@ -1556,9 +1556,9 @@ Body {
   transition: 0.3s;
   line-height: normal;
 }
-.governing-table tbody td:last-child {
+/* .governing-table tbody td:last-child {
   border-right: none;
-}
+} */
 .governing-table tbody tr:last-child td {
   border-bottom: none;
 }
@@ -1611,6 +1611,9 @@ Body {
 .bba-bca-total-row{
     font-size: 16px;
     font-family: "Avenir-Next-Demi";
+}
+.pdf_section{
+  padding:60px 0px 0px 0px;
 }
 /*----------------- Governing Body End Here ------------------*/
 /*----------- Approvals & Affiliations Start Here -----------*/
@@ -3573,9 +3576,6 @@ Body {
   font-size: 14px;
   text-decoration: none;
 }
-/* .fee_structure_box:nth-child(5) {
- 
-}  */
 .course_name {
   text-align: center;
   color: #fff;
@@ -3640,6 +3640,19 @@ Body {
 .scholarships_page .governing-table thead th {
   border-right: 1px solid #ffffff1f;
   white-space: wrap;
+}
+.academic_calendar_table  .governing-table thead th:first-child{
+    border-top-left-radius: 0px;
+}
+.academic_calendar_table  .governing-table thead th:last-child{
+    border-top-right-radius: 0px;
+}
+.academic_calendar_table .governing-table thead th {
+    white-space: wrap;
+    border-right: 1px solid #ffffff1f;
+}
+.VacationColumn{
+  background: #0a4f9d !important;
 }
 /*------------- Scholarships Page End Here -------------*/
 /* ------------- Admission Tab End Here ---------------*/
@@ -4565,7 +4578,6 @@ Body {
   left: 130%;
 }
 /*------------- News And Events Details Page End Here -------------*/
-
 /*------------- PLACEMENTS-PAGE-START -------------*/
 .place_training_box {
   background-color: #e8f6ff;
@@ -4593,7 +4605,6 @@ Body {
   border-radius: 100px;
   margin: 8px 0 0 -18px;
 }
-
 .top_recru_list {
   background-color: #ebeff3;
   width: 30%;
@@ -4610,16 +4621,11 @@ Body {
   width: auto;
   max-height: 70px;
 }
-
-
-
-
 .placement_testi_list{
 background-color: #dff3ff;
   padding: 30px;
   border-radius: 20px;
 }
-
 .placement_testi_list:nth-child(even){
   background-color: #f0e5fa;
 }
@@ -4627,7 +4633,6 @@ background-color: #dff3ff;
   display: flex;
   flex-direction: row-reverse;
 }
-
 .placement_testi_img{
 border: 10px solid #fff;
   border-radius: 10px;

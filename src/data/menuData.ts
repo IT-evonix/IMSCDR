@@ -73,10 +73,10 @@ export const menuItems: MenuItem[] = [
         label: "Faculty",
         href: "/faculty",
       },
-      // {
-      //   label: "Academic Calendar",
-      //   href: "/academic-calendar",
-      // },
+      {
+        label: "Academic Calendar",
+        href: "/academic-calendar",
+      },
       // {
       //   label: "Research & Innovation",
       //   href: "/research-and-innovation",
@@ -343,10 +343,10 @@ export const menuItems: MenuItem[] = [
         label: "Mandatory Disclosure",
         href: "/mandatory-disclosure",
       },
-      // {
-      //   label: "IQAC",
-      //   href: "/IQAC",
-      // },
+      {
+        label: "IQAC",
+        href: "/IQAC",
+      },
       // {
       //   label: "Policies",
       //   href: "/policies",
@@ -409,9 +409,4 @@ export const menuItems: MenuItem[] = [
       },
     ],
   },
-
-  // {
-  //   label: "IQAC",
-  //   href: "/IQAC",
-  // },
 ];
