@@ -28,84 +28,12 @@ export const approvalData = {
   // DTE
   // ============================================
 
-  dte: [
+  NAACCycle3: [
     {
       id: 1,
-      title: "DTE Approval 2023-24",
-      file: "/pdf/dte-2023.pdf",
-    },
-    {
-      id: 2,
-      title: "DTE Approval 2024-25",
-      file: "/pdf/dte-2024.pdf",
+      title: "NAAC Cycle - 3 Revised SSR",
+      file: "/pdf/governance/NAAC-Cycle-3-SSR-Revised-June-2024.pdf",
     },
   ] as ApprovalItem[],
-
-  // ============================================
-  // UNIVERSITY AFFILIATION
-  // ============================================
-
-  universityAffiliation: [
-    {
-      id: 1,
-      title: "University Affiliation 2023-24",
-      file: "/pdf/university-2023.pdf",
-    },
-    {
-      id: 2,
-      title: "University Affiliation 2024-25",
-      file: "/pdf/university-2024.pdf",
-    },
-  ] as ApprovalItem[],
-
-  // ============================================
-  // NAAC
-  // ============================================
-
-  naac: [
-    {
-      id: 1,
-      title: "NAAC Accreditation Report",
-      file: "/pdf/naac-report.pdf",
-    },
-    {
-      id: 2,
-      title: "NAAC Certificate",
-      file: "/pdf/naac-certificate.pdf",
-    },
-  ] as ApprovalItem[],
-
-  // ============================================
-  // MANDATORY DISCLOSURE
-  // ============================================
-
-  mandatoryDisclosure: [
-    {
-      id: 1,
-      title: "Time Table MCA",
-      file:
-        "/pdf/governance/division_wise_MCA_time_tables_workload_calendar__2023-24.xlsx",
-    },
-
-    {
-      id: 2,
-      title: "Time Table MBA Sem I",
-      file:
-        "/pdf/governance/MBA-SEM-I-2023-24.xls",
-    },
-
   
-    // {
-    //   id: 15,
-    //   title: "Student / Faculty Feedback on AICTE Website",
-    //   url:
-    //     "https://www.aicte.gov.in/feedback/index.php",
-    // },
-
-    {
-      id: 16,
-      title: "Click here to see Geotagged Photos",
-      href: "/",
-    },
-  ] as ApprovalItem[],
 };
