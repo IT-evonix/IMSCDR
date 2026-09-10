@@ -200,7 +200,7 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                 <div className="col-12 col-md-6 mb-2">
                   <input
                     type="text"
-                    placeholder="Candidate Full Name *"
+                    placeholder="Full Name *"
                     value={formData.name}
                     onChange={(e) => {
                       const val = e.target.value.replace(/[^a-zA-Z\s]/g, '');
@@ -244,9 +244,8 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                   <select
                     value={formData.course}
                     onChange={(e) => setFormData({ ...formData, course: e.target.value })}
-                    className={`enquiry-select ${
-                      errors.course ? 'is-invalid' : ''
-                    } ${!formData.course ? 'is-placeholder' : ''}`}
+                    className={`enquiry-select ${errors.course ? 'is-invalid' : ''
+                      } ${!formData.course ? 'is-placeholder' : ''}`}
                   >
                     <option value="" disabled>
                       Select Program / Course *

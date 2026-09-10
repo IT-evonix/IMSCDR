@@ -94,7 +94,7 @@ export default function NoticesCircularsPage() {
             <div className="notices-empty-icon-wrap">
               <Bell />
             </div>
-            <h4 className="notices-empty-title">No Notices or Circulars Found</h4>
+            <h4 className="notices-empty-title">Coming Soon....</h4>
             <p className="notices-empty-desc">
               There are currently no active notices or circulars published.
             </p>

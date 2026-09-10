@@ -762,7 +762,7 @@
 }
 
 .enquiry-modal-title {
-  color: #000000;
+  color: #003067;
   font-family: "Roma-Bold", sans-serif;
   font-size: 22px;
   font-weight: 700;
@@ -787,32 +787,37 @@
   padding: 6px 14px;
   font-size: 13px;
   border-radius: 8px;
-  background-color: #ffffff;
-  color: #000000;
-  border: 1px solid #d1d5db;
+  background-color: #f8fafc;
+  color: #0f172a;
+  border: 1px solid #cbd5e1;
   box-sizing: border-box;
   outline: none;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .enquiry-input::placeholder {
-  color: #94a3b8;
+  color: #475569;
+  opacity: 1;
+  font-size: 12.5px;
 }
 
 .enquiry-input:hover {
-  border-color: #94a3b8;
+  border-color: #09468e;
+  background-color: #ffffff;
 }
 
 .enquiry-input:focus {
   border-color: #09468e;
-  box-shadow: 0 0 0 3px rgba(9, 70, 142, 0.12);
-  color: #000000;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3.5px rgba(9, 70, 142, 0.14);
+  color: #0f172a;
 }
 
 .enquiry-input.is-invalid,
 .enquiry-textarea.is-invalid,
 .enquiry-select.is-invalid {
-  border-color: #dc2626;
+  border-color: #dc2626 !important;
+  background-color: #fffaf0;
 }
 
 .enquiry-textarea {
@@ -823,26 +828,30 @@
   font-size: 13px;
   border-radius: 8px;
   resize: none;
-  background-color: #ffffff;
-  color: #000000;
-  border: 1px solid #d1d5db;
+  background-color: #f8fafc;
+  color: #0f172a;
+  border: 1px solid #cbd5e1;
   box-sizing: border-box;
   outline: none;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .enquiry-textarea::placeholder {
-  color: #94a3b8;
+  color: #475569;
+  opacity: 1;
+  font-size: 12.5px;
 }
 
 .enquiry-textarea:hover {
-  border-color: #94a3b8;
+  border-color: #09468e;
+  background-color: #ffffff;
 }
 
 .enquiry-textarea:focus {
   border-color: #09468e;
-  box-shadow: 0 0 0 3px rgba(9, 70, 142, 0.12);
-  color: #000000;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3.5px rgba(9, 70, 142, 0.14);
+  color: #0f172a;
 }
 
 .enquiry-select {
@@ -851,37 +860,41 @@
   padding: 6px 36px 6px 14px;
   font-size: 13px;
   border-radius: 8px;
-  background-color: #ffffff;
-  color: #000000;
-  border: 1px solid #d1d5db;
+  background-color: #f8fafc;
+  color: #0f172a;
+  border: 1px solid #cbd5e1;
   box-sizing: border-box;
   outline: none;
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3path d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23475569' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3path d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 12px center;
   background-size: 14px 14px;
   cursor: pointer;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .enquiry-select.is-placeholder {
-  color: #94a3b8;
+  color: #475569;
+  opacity: 1;
 }
 
 .enquiry-select:not(.is-placeholder) {
-  color: #000000;
+  color: #0f172a;
+  font-weight: 500;
 }
 
 .enquiry-select:hover {
-  border-color: #94a3b8;
+  border-color: #09468e;
+  background-color: #ffffff;
 }
 
 .enquiry-select:focus {
   border-color: #09468e;
-  box-shadow: 0 0 0 3px rgba(9, 70, 142, 0.12);
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3.5px rgba(9, 70, 142, 0.14);
 }
 
 .enquiry-select option {
