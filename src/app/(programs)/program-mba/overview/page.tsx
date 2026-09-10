@@ -9,11 +9,12 @@ const page = () => {
           <div className="overview_left">
             {/* <div className="heading">Overview</div> */}
             <p className="m-0">
-              2 year, 4 Semester, Full-time programme from Savitribai Phule Pune
+              {/* 2 year, 4 Semester, Full-time programme from Savitribai Phule Pune
               University. The revised MBA Curriculum 2024 integrates the
               National Education Policy, 2020 ethos with the Choice Based Credit
               System (CBCS) and Grading System and Outcomes Based Education
-              (OBE).
+              (OBE). */}
+              Our Master of Business Administration programme is driven by the mission to develop performing, productive, ethical, and value-driven leaders ready for diverse careers in a borderless business world. It is a 2-year, 4-semester, full-time programme affiliated to Savitribai Phule Pune University. The revised MBA Curriculum 2024 integrates the ethos of the National Education Policy 2020 with the Choice Based Credit System (CBCS), Grading System, and Outcomes Based Education (OBE). Through activity-based learning, innovative pedagogy, and strong industry engagement, our students graduate MBA with placement, becoming lifelong learners and committed corporate citizens. 
             </p>
           </div>
           <div className="overview_right">

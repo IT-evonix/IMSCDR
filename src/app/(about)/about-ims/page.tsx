@@ -27,21 +27,9 @@ const page = () => {
             <div className="col-md-7">
               <div className="heading">About IMS-CDR</div>
               <p>
-                The Bhaskar Pandurang Hivale Education (B.P.H.E.) Society’s
-                Institute of Management Studies, Career Development and Research
-                (IMS-CDR) is a premier management institute conducting various
-                quality programmes in Management and Information Technology in
-                Ahmednagar. IMS-CDR is affiliated to the Savitribai Phule Pune
-                University, Pune and is recognized by the All India Council for
-                Technical Education (AICTE), New Delhi. IMS-CDR has reputation for
-                novel and need based courses, visionary leadership, well
-                qualified and experienced faculty members, modern and
-                interactive teaching methodology, state of the art
-                infrastructure, innovative student development initiatives,
-                strong industry interface, good placements, meticulous research,
-                meaningful consultancy, professional training, fair and
-                transparent governance and community‐oriented activities.
+                Bhaskar Pandurang Hivale Education (B.P.H.E.) Society’s Institute of Management Studies, Career Development and Research (IMS-CDR), is one of the leading MBA colleges in Ahilyanagar, offering a Master of Business Administration programme alongside quality courses in MCA, BBA, BCA, and Ph.D. Affiliated to Savitribai Phule Pune University and recognized by AICTE, New Delhi, the institute is known for its need-based courses, experienced faculty, modern teaching methods, and strong industry interface. With a focus on holistic student development, IMS-CDR ensures good placements, meaningful research, and professional training in a transparent and community-oriented environment. 
               </p>
+              <p>IMS-CDR, Ahilyanagar, is an NAAC Re-Accredited institute and has been ranked 25th among India's Top B-School Brands by Business Baron (November 2019). IMS-CDR has also received several prestigious awards, including the Best Institute Award from Savitribai Phule Pune University and recognition from ASSOCHAM, New Delhi. </p>
             </div>
           </div>
         </div>
@@ -111,7 +99,7 @@ const page = () => {
                 </svg>
               </div>
               <div className="heading">Our Mission</div>
-              <p>“The mission of IMS-CDR is to provide equal opportunity for quality education for students from diverse backgrounds, which will help to enrich themselves and make them responsible citizens of India and the world.”</p>
+              <p>To provide equal opportunity for quality education for students from diverse backgrounds, which will help to enrich themselves and make them responsible citizens of India and the world. ”</p>
             </div>
           </div>
         </div>
@@ -152,9 +140,10 @@ const page = () => {
         </div>
 
         <section className="objective_section">
+          <div className="heading">Our Aim</div>
           <div className="row">
             {aboutObjectives.map((item) => (
-              <div className="col-lg-4 col-md-6 mb-4" key={item.number}>
+              <div className="col-lg-3 col-md-6 mb-4" key={item.number}>
                 <InfoCard
                   number={item.number}
                   title={item.title}

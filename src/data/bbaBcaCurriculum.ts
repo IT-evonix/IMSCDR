@@ -1,8 +1,10 @@
-export interface CurriculumCell {
+export interface CurriculumCellObject {
   value: string | number;
   rowSpan?: number;
   colSpan?: number;
 }
+
+export type CurriculumCell = string | number | CurriculumCellObject;
 
 export interface CurriculumRow {
   cells: Record<string, CurriculumCell | null>;
@@ -175,6 +177,213 @@ export const bbaBcaCurriculumData: CurriculumRow[] = [
       courseType: { value: "Total", colSpan: 3 },
       course: null,
       paperTitle: null,
+      credits: 22,
+    },
+  },
+];
+
+export const bcaCurriculumColumns = [
+  { key: "courseCode", title: "Course Code" },
+  { key: "courseType", title: "Course Type" },
+  { key: "courseName", title: "Course Name" },
+  { key: "credits", title: "Credits" },
+];
+
+export const bcaSemesterOneData: CurriculumRow[] = [
+  {
+    cells: {
+      courseCode: "CA-101-T",
+      courseType: { value: "Subject 1", rowSpan: 2 },
+      courseName: "Problem Solving and Programming in C",
+      credits: 2,
+    },
+  },
+  {
+    cells: {
+      courseCode: "CA-102-P",
+      courseType: null,
+      courseName: "Lab course on CA-101 - T",
+      credits: 2,
+    },
+  },
+  {
+    cells: {
+      courseCode: "CA-103-T",
+      courseType: { value: "BCA", rowSpan: 2 },
+      courseName: "Computer Organization & Architecture",
+      credits: 2,
+    },
+  },
+  {
+    cells: {
+      courseCode: "CA-104-P",
+      courseType: null,
+      courseName: "Lab course on CA-103 - T",
+      credits: 2,
+    },
+  },
+  {
+    cells: {
+      courseCode: "CA-105-T",
+      courseType: { value: "BCA", rowSpan: 2 },
+      courseName: "Discrete Mathematics and Statistics",
+      credits: 2,
+    },
+  },
+  {
+    cells: {
+      courseCode: "CA-106-P",
+      courseType: null,
+      courseName: "Laboratory course on CA-105 - T",
+      credits: 2,
+    },
+  },
+  {
+    cells: {
+      courseCode: "OE-101-CA",
+      courseType: "GE/OE",
+      courseName: "Introduction to Data Science",
+      credits: 2,
+    },
+  },
+  {
+    cells: {
+      courseCode: "VSEC-101-CA",
+      courseType: "VSEC",
+      courseName: "HTML and Web Page Designing",
+      credits: 2,
+    },
+  },
+  {
+    cells: {
+      courseCode: "IKS - 100 - T",
+      courseType: "IKS Generic",
+      courseName: "Course from Basket of courses prepared by the University",
+      credits: 2,
+    },
+  },
+  {
+    cells: {
+      courseCode: "AEC - 101 - ENG",
+      courseType: "AEC",
+      courseName: "Course from University Basket",
+      credits: 2,
+    },
+  },
+  {
+    cells: {
+      courseCode: "VEC - 101 - ENG",
+      courseType: "VEC",
+      courseName: "Course from University Basket",
+      credits: 2,
+    },
+  },
+  {
+    className: "bba-bca-total-row",
+    cells: {
+      courseCode: { value: "Total", colSpan: 3 },
+      courseType: null,
+      courseName: null,
+      credits: 22,
+    },
+  },
+];
+
+export const bcaSemesterTwoData: CurriculumRow[] = [
+  {
+    cells: {
+      courseCode: "CA-151-T",
+      courseType: { value: "Subject 1", rowSpan: 2 },
+      courseName: "Advanced C Programming",
+      credits: 2,
+    },
+  },
+  {
+    cells: {
+      courseCode: "CA-152-P",
+      courseType: null,
+      courseName: "Lab course on CA-151 - T",
+      credits: 2,
+    },
+  },
+  {
+    cells: {
+      courseCode: "CA-153-T",
+      courseType: { value: "BCA", rowSpan: 2 },
+      courseName: "Introduction to Microcontrollers",
+      credits: 2,
+    },
+  },
+  {
+    cells: {
+      courseCode: "CA-154-P",
+      courseType: null,
+      courseName: "Lab course on CA-153 - T",
+      credits: 2,
+    },
+  },
+  {
+    cells: {
+      courseCode: "CA-155-T",
+      courseType: { value: "BCA", rowSpan: 2 },
+      courseName: "Linear Algebra",
+      credits: 2,
+    },
+  },
+  {
+    cells: {
+      courseCode: "CA-106-P",
+      courseType: null,
+      courseName: "Laboratory course on CA-155 - T",
+      credits: 2,
+    },
+  },
+  {
+    cells: {
+      courseCode: "OE-151-CA",
+      courseType: "GE/OE",
+      courseName: "Data Science Using Spreadsheet Software",
+      credits: 2,
+    },
+  },
+  {
+    cells: {
+      courseCode: "VSEC-151-CA",
+      courseType: "VSEC",
+      courseName: "Software Tools for Business Communications",
+      credits: 2,
+    },
+  },
+  {
+    cells: {
+      courseCode: "AEC-151-ENG",
+      courseType: "AEC",
+      courseName: "Course from University Basket",
+      credits: 2,
+    },
+  },
+  {
+    cells: {
+      courseCode: "VEC-151-ENV",
+      courseType: "VEC",
+      courseName: "Course from University Basket",
+      credits: 2,
+    },
+  },
+  {
+    cells: {
+      courseCode: "CC-151-PE",
+      courseType: "CC",
+      courseName: "Course from University Basket",
+      credits: 2,
+    },
+  },
+  {
+    className: "bba-bca-total-row",
+    cells: {
+      courseCode: { value: "Total", colSpan: 3 },
+      courseType: null,
+      courseName: null,
       credits: 22,
     },
   },

@@ -241,7 +241,7 @@ const page = () => {
                   </div>
                   <div className="processText">
                     <div className="subheading">
-                      Student accept (freeze) or float the allotted college
+                      Student freezes or floats their allotted seat
                     </div>
                   </div>
                 </div>

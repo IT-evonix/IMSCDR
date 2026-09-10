@@ -1,11 +1,9 @@
-
 import {
   bbaBcaCurriculumColumns,
   bbaBcaCurriculumData,
-  type CurriculumRow,
 } from "@/data/bbaBcaCurriculum";
 
-const semesterTwoData: CurriculumRow[] = [
+const semesterTwoData = [
   {
     cells: {
       courseType: { value: "Major Mandatory (06)", rowSpan: 11 },
@@ -17,42 +15,90 @@ const semesterTwoData: CurriculumRow[] = [
   {
     cells: {
       courseType: null,
-      course: { value: "Major Mandatory 5 (As per the specialization selected in Semester I)", rowSpan: 5 },
+      course: {
+        value:
+          "Major Mandatory 5 (As per the specialization selected in Semester I)",
+        rowSpan: 5,
+      },
       paperTitle: "Finance: Business Accounting",
       credits: { value: 50, rowSpan: 5 },
     },
-  },
-  {
-    cells: { courseType: null, course: null, paperTitle: "Marketing: Consumer Behavior and Sales Management", credits: null },
-  },
-  {
-    cells: { courseType: null, course: null, paperTitle: "HRM: Organizational Behavior", credits: null },
-  },
-  {
-    cells: { courseType: null, course: null, paperTitle: "Agri. Bussi.: Essentials of Rural Development", credits: null },
-  },
-  {
-    cells: { courseType: null, course: null, paperTitle: "Service Mgmt.: Essentials of Services Management", credits: null },
   },
   {
     cells: {
       courseType: null,
-      course: { value: "Major Mandatory 6 (As per the specialization selected in Semester I)", rowSpan: 5 },
+      course: null,
+      paperTitle: "Marketing: Consumer Behavior and Sales Management",
+      credits: null,
+    },
+  },
+  {
+    cells: {
+      courseType: null,
+      course: null,
+      paperTitle: "HRM: Organizational Behavior",
+      credits: null,
+    },
+  },
+  {
+    cells: {
+      courseType: null,
+      course: null,
+      paperTitle: "Agri. Bussi.: Essentials of Rural Development",
+      credits: null,
+    },
+  },
+  {
+    cells: {
+      courseType: null,
+      course: null,
+      paperTitle: "Service Mgmt.: Essentials of Services Management",
+      credits: null,
+    },
+  },
+  {
+    cells: {
+      courseType: null,
+      course: {
+        value:
+          "Major Mandatory 6 (As per the specialization selected in Semester I)",
+        rowSpan: 5,
+      },
       paperTitle: "Finance: Business Accounting",
       credits: { value: 50, rowSpan: 5 },
     },
   },
   {
-    cells: { courseType: null, course: null, paperTitle: "Marketing: Consumer Behavior and Sales Management", credits: null },
+    cells: {
+      courseType: null,
+      course: null,
+      paperTitle: "Marketing: Consumer Behavior and Sales Management",
+      credits: null,
+    },
   },
   {
-    cells: { courseType: null, course: null, paperTitle: "HRM: Organizational Behavior", credits: null },
+    cells: {
+      courseType: null,
+      course: null,
+      paperTitle: "HRM: Organizational Behavior",
+      credits: null,
+    },
   },
   {
-    cells: { courseType: null, course: null, paperTitle: "Agri. Bussi.: Essentials of Rural Development", credits: null },
+    cells: {
+      courseType: null,
+      course: null,
+      paperTitle: "Agri. Bussi.: Essentials of Rural Development",
+      credits: null,
+    },
   },
   {
-    cells: { courseType: null, course: null, paperTitle: "Service Mgmt.: Essentials of Services Management", credits: null },
+    cells: {
+      courseType: null,
+      course: null,
+      paperTitle: "Service Mgmt.: Essentials of Services Management",
+      credits: null,
+    },
   },
   {
     cells: {
@@ -90,7 +136,8 @@ const semesterTwoData: CurriculumRow[] = [
     cells: {
       courseType: "Skill Enhancement Course (SEC)",
       course: "Skill Enhancement Course (SEC)",
-      paperTitle: "Basics of Stock Market/ Cross - Cultural Communication/ AI and ML for Business",
+      paperTitle:
+        "Basics of Stock Market/ Cross - Cultural Communication/ AI and ML for Business",
       credits: 50,
     },
   },
@@ -129,7 +176,7 @@ const semesterTwoData: CurriculumRow[] = [
   },
 ];
 
-function CurriculumTable({ data }: { data: CurriculumRow[] }) {
+function CurriculumTable({ data }: { data: typeof bbaBcaCurriculumData }) {
   return (
     <div className="bba-bca-curriculum table-card shadow-sm">
       <div className="table-responsive">
@@ -154,9 +201,16 @@ function CurriculumTable({ data }: { data: CurriculumRow[] }) {
                   return (
                     <td
                       key={column.key}
-                      rowSpan={cell.rowSpan}
-                      colSpan={cell.colSpan}
+                      rowSpan={
+                        typeof cell === "object" ? cell.rowSpan : undefined
+                      }
+                      colSpan={
+                        typeof cell === "object" ? cell.colSpan : undefined
+                      }
                       data-label={column.title}
+                      className={
+                        column.key === "courseType" ? "member-name" : ""
+                      }
                     >
                       {typeof cell === "object" ? cell.value : cell}
                     </td>
@@ -174,11 +228,12 @@ function CurriculumTable({ data }: { data: CurriculumRow[] }) {
 const page = () => {
   return (
     <div className="innerpagerightside">
-      <div className="heading">FYBBA-Semester-I</div>
+      <div className="heading">BBA Syllabus</div>
+      <div className="subheading mb-2">FYBBA-Semester-I</div>
       <div className="mb-5">
         <CurriculumTable data={bbaBcaCurriculumData} />
       </div>
-      <div className="heading">FYBBA-Semester-II</div>
+      <div className="subheading mb-2">FYBBA-Semester-II</div>
       <CurriculumTable data={semesterTwoData} />
     </div>
   );
