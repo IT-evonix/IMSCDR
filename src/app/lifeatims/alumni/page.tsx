@@ -24,16 +24,16 @@ const page = () => {
             <div className="col-md-7">
               {/* <div className="heading">About IMS</div> */}
               <p>
-                IMS has a strong and growing network of more than 6,000 alumni
-                who are working successfully in various fields across India and
-                abroad. They serve as professionals, entrepreneurs,
-                academicians, corporate leaders, and public servants. The
-                institute maintains close connections with its alumni through
-                regular interactions, alumni meets, mentoring sessions, and
-                guest lectures. Alumni actively support the institute by guiding
-                students, sharing industry knowledge, facilitating internships
-                and placements, and inspiring future generations with their
-                achievements.
+                IMS-CDR has a strong and growing network of more than 6,000
+                alumni who are working successfully in various institutes and
+                organizations across India and abroad. They serve as
+                professionals, entrepreneurs, academicians, corporate leaders,
+                and public servants. The institute maintains close connections
+                with its alumni through regular interactions, alumni meets,
+                mentoring sessions, and guest lectures. Alumni actively support
+                the institute by guiding students, sharing industry knowledge,
+                facilitating internships and placements, and inspiring future
+                generations with their achievements.
               </p>
             </div>
           </div>

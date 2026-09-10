@@ -245,12 +245,6 @@ export const scholarshipData: TableRow[] = [
 ];
 
 
-
-
-
-
-
-
 export const scholarshipColumns2: Column[] = [
   {
     key: "srNo",

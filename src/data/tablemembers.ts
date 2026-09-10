@@ -873,24 +873,24 @@ export const committeesColumns = [
   },
   {
     key: "text",
-    title: "Text",
+    title: "Purpose",
   },
 ];
 export const committeesText = [
   {
     id: 1,
     committee: "Magazine Committee",
-    text: "Publishes the annual institute magazine featuring student contributions in the field of academics, art-work and other interests. This magazine fosters students’ creativity in their respective fields.",
+    text: "Publishes the annual institute magazine featuring student contributions in academics, arts and other interests. This magazine fosters students’ talents in their various fields. ",
   },
   {
     id: 2,
     committee: "Vidyarthini Manch Committee",
-    text: "Organizes activities for women empowerment, leadership, and personality development.",
+    text: "Organizes activities for women empowerment, leadership, and personality development. ",
   },
   {
     id: 3,
     committee: "Library Committee",
-    text: "Promotes effective use of library resources and a reading culture.",
+    text: "Promotes effective use of library resources, fostering a reading culture.",
   },
   {
     id: 4,
@@ -900,12 +900,12 @@ export const committeesText = [
   {
     id: 5,
     committee: "Cultural Committee",
-    text: "Organizes cultural, academic, and management events to enhance organizational and leadership skills.",
+    text: "Organizes cultural, academic, and management events, enhancing character and leadership skills.",
   },
   {
     id: 6,
     committee: "Media Cell (Podcast Club)",
-    text: "Produces podcasts, interviews, and digital content to strengthen communication skills.",
+    text: "Produces podcasts, interviews, and digital content to polish communication skills.",
   },
   {
     id: 7,
@@ -915,7 +915,7 @@ export const committeesText = [
   {
     id: 8,
     committee: "Seminar Cell",
-    text: "Organizes guest lectures and expert sessions to provide industry exposure.",
+    text: "Organizes guest lectures and expert sessions to provide industry insights and networking.",
   },
 ];
 

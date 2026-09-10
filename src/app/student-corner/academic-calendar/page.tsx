@@ -63,29 +63,21 @@ function AcademicCalendarTable({ data }: { data: CalendarRow[] }) {
 const Page = () => {
   return (
     <div>
-      <InnerpageBanner
-        title="Academic Calendar"
-        breadcrumbs={[
-          {
-            label: "Academic Calendar",
-          },
-        ]}
-      />
 
-      <div className="innerpagewrapper">
+      <div className="innerpagerightside">
         <div className="container">
           <section>
-            {/* <p className="text-center">The scheduled timeline of academic sessions, exams, and key activities for the academic year. </p> */}
-            <div className="heading text-center">
+            <div className="heading">
               Academic Calendar Term – I
             </div>
+
             <div className="mb-5">
               <AcademicCalendarTable data={termICalendarData} />
             </div>
           </section>
 
           <section>
-            <div className="heading text-center">
+            <div className="heading">
               Academic Calendar Term – II
             </div>
 

@@ -217,10 +217,10 @@ export const menuItems: MenuItem[] = [
   //   ],
   // },
 
-  // {
-  //   label: "Student Corner",
-  //   href: "/student-corner",
-  // },
+  {
+    label: "Student Corner",
+    href: "/student-corner/academic-calendar",
+  },
 
   // {
   //   label: "Student Corner",
@@ -259,74 +259,6 @@ export const menuItems: MenuItem[] = [
   //     },
   //     {
   //       label: "Sports Council",
-  //       href: "/",
-  //     },
-
-  //     {
-  //       label: "Student Achivements",
-  //       children: [
-  //         {
-  //           label: "Curricular",
-  //           href: "/",
-  //         },
-  //         {
-  //           label: "Non Curricular",
-  //           href: "/",
-  //         },
-  //         {
-  //           label: "Report",
-  //           href: "/",
-  //         },
-  //       ],
-  //     },
-
-  //     {
-  //       label: "Student Club",
-  //       href: "/",
-  //     },
-
-  //     {
-  //       label: "Infrastructure",
-  //       children: [
-  //         {
-  //           label: "Hostel",
-  //           href: "/",
-  //         },
-  //         {
-  //           label: "Library",
-  //           href: "/",
-  //         },
-  //         {
-  //           label: "Amminities",
-  //           href: "/",
-  //         },
-  //       ],
-  //     },
-
-  //     {
-  //       label: "Events",
-  //       children: [
-  //         {
-  //           label: "Cultural",
-  //           href: "/",
-  //         },
-  //         {
-  //           label: "Technical",
-  //           href: "/",
-  //         },
-  //         // {
-  //         //   label: "Festivals",
-  //         //   href: "/",
-  //         // },
-  //         // {
-  //         //   label: "Gender Equality",
-  //         //   href: "/",
-  //         // },
-  //       ],
-  //     },
-
-  //     {
-  //       label: "Alumni",
   //       href: "/",
   //     },
   //   ],
