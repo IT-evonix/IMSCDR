@@ -12,23 +12,23 @@ const page = () => {
             A Modern Campus Designed for Learning
           </div>
           <div className="infrapara">
-            Spread <span>across 2.62 acres</span>, IMS-CDR offers a state-of-the-art campus
-            that provides an ideal environment for academic excellence and
-            holistic development. The institute is housed in a well-planned
-             <span> three-storeyed academic building</span> along with an additional <span>SEED-C
-            Building</span>, offering excellent facilities for teaching, learning,
-            research, and student engagement.
+            Spread across 2.62 acres, IMS-CDR offers a spacious campus hosting
+            state-of-the-art facilities and academic infrastructure that
+            provides an ideal environment for overall excellence and holistic
+            development. The institute is housed in a well-planned three-storied
+            building with an additional SEED-C Building, offering excellent
+            facilities for teaching, learning, research, and student engagement.
           </div>
         </div>
         <div className="col-md-5">
           <Image
-              src="/images/campus/infraline.webp"
-              alt="infrastructure"
-              width={400}
-              height={212}
-              className="img-fluid"
-              style={{ opacity: 0.6 }}
-            />
+            src="/images/campus/infraline.webp"
+            alt="infrastructure"
+            width={400}
+            height={212}
+            className="img-fluid"
+            style={{ opacity: 0.6 }}
+          />
         </div>
         <div className="col-md-12">
           <div className="infrastructure_main">
@@ -39,9 +39,7 @@ const page = () => {
               height={522}
               className="img-fluid"
             />
-            <div className="infrastructure_main_content">
-              IMS-CDR spread across 2.62 acres
-            </div>
+            <div className="infrastructure_main_content">2.62 acres campus</div>
           </div>
         </div>
       </div>

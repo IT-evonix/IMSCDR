@@ -7,7 +7,7 @@ const page = () => {
       <div className="programme_outcome_main">
         <div className="programme_outcome_box">
           <div className="programme_outcome_left">
-            {/* <div className="programme_outcome_tags">
+            <div className="programme_outcome_tags">
               <div
                 style={{
                   color: "#89004A",
@@ -20,7 +20,7 @@ const page = () => {
               <span>Principles</span>
               <span>Frameworks</span>
               <span>Management</span>
-            </div> */}
+            </div>
             <div className="programme_outcome_image">
               <Image
                 src="/images/program/program-outcome/generic-and-domain-knowledge.webp"

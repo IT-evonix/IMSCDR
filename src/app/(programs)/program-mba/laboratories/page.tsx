@@ -45,7 +45,7 @@ const facilities: Facility[] = [
     icon: FlaskConical,
   },
   {
-    title: "Placement Assistance",
+    title: "Placement Cell",
     icon: BriefcaseBusiness,
   },
   {

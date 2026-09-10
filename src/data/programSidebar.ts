@@ -2,7 +2,7 @@ export const programSidebar = {
   about: {
     heading: "About",
     menuItems: [
-      { title: "About Overview", href: "/about-ims" },
+      { title: "About IMS-CDR", href: "/about-ims" },
       { title: "Vision & Mission", href: "/about-ims/#vision-and-mision" },
 
       {
@@ -41,10 +41,7 @@ export const programSidebar = {
       { title: "Eligibility", href: "/program-mba/eligibility" },
       { title: "Curriculum / Syllabus", href: "/program-mba/curriculum" },
       { title: "Programme Outcomes", href: "/program-mba/programme-outcomes" },
-      {
-        title: "Career Opportunities",
-        href: "/program-mba/career-opportunities",
-      },
+      { title: "Career Opportunities", href: "/program-mba/career-opportunities", },
       { title: "Faculty", href: "/faculty#faculty-managementprogramme" },
       { title: "Laboratories / Facilities", href: "/program-mba/laboratories" },
       // { title: "Downloads", href: "/program-mba/downloads" },
@@ -60,14 +57,11 @@ export const programSidebar = {
       { title: "Eligibility", href: "/program-mca/eligibility" },
       { title: "Curriculum / Syllabus", href: "/program-mca/curriculum" },
       { title: "Programme Outcomes", href: "/program-mca/programme-outcomes" },
-      {
-        title: "Career Opportunities",
-        href: "/program-mca/career-opportunities",
-      },
+      { title: "Career Opportunities", href: "/program-mca/career-opportunities", },
       { title: "Faculty", href: "/faculty#faculty-informationtechnology" },
       { title: "Laboratories / Facilities", href: "/program-mca/laboratories" },
       // { title: "Downloads", href: "/program-mca/downloads" },
-      // { title: "FAQ", href: "/program-mca/faq" },
+      { title: "FAQ", href: "/program-mca/faq" },
     ],
   },
 
@@ -79,14 +73,11 @@ export const programSidebar = {
       { title: "Eligibility", href: "/program-bba/eligibility" },
       { title: "Curriculum / Syllabus", href: "/program-bba/curriculum" },
       { title: "Programme Outcomes", href: "/program-bba/programme-outcomes" },
-      {
-        title: "Career Opportunities",
-        href: "/program-bba/career-opportunities",
-      },
+      { title: "Career Opportunities", href: "/program-bba/career-opportunities", },
       { title: "Faculty", href: "/faculty#bbastaff" },
       // { title: "Laboratories / Facilities", href: "/program-bba/laboratories" },
       // { title: "Downloads", href: "/program-bba/downloads" },
-      // { title: "FAQ", href: "/program-bba/faq" },
+      { title: "FAQ", href: "/program-bba/faq" },
     ],
   },
 
@@ -98,14 +89,11 @@ export const programSidebar = {
       { title: "Eligibility", href: "/program-bca/eligibility" },
       { title: "Curriculum / Syllabus", href: "/program-bca/curriculum" },
       { title: "Programme Outcomes", href: "/program-bca/programme-outcomes" },
-      {
-        title: "Career Opportunities",
-        href: "/program-bca/career-opportunities",
-      },
+      { title: "Career Opportunities", href: "/program-bca/career-opportunities", },
       { title: "Faculty", href: "/faculty#bcastaff" },
       // { title: "Laboratories / Facilities", href: "/program-bca/laboratories" },
       // { title: "Downloads", href: "/program-bca/downloads" },
-      // { title: "FAQ", href: "/program-bca/faq" },
+      { title: "FAQ", href: "/program-bca/faq" },
     ],
   },
 
@@ -165,7 +153,14 @@ export const programSidebar = {
   studentCorner: {
     heading: "Student Corner",
     menuItems: [
-      { title: "Gallery", href: "/lifeatims/gallery" },
+      // { title: "ERP", href: "/lifeatims/gallery" },
+      // { title: "Examination", href: "/student-corner/examination" },
+      { title: "Academic Calendar", href: "/student-corner/academic-calendar" },
+      // { title: "Downloads", href: "/student-corner/examination" },
+      { title: "Scholarships", href: "/student-corner/scholarships" },
+      // { title: "Code of Conduct", href: "/student-corner/examination" },
+      // { title: "Notices & Circulars", href: "/student-corner/examination" },
+      // { title: "Student Grievance Portal", href: "/student-corner/examination" },
     ],
   },
 
