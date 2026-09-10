@@ -873,24 +873,24 @@ export const committeesColumns = [
   },
   {
     key: "text",
-    title: "Text",
+    title: "Purpose",
   },
 ];
 export const committeesText = [
   {
     id: 1,
     committee: "Magazine Committee",
-    text: "Publishes the annual institute magazine featuring student contributions in the field of academics, art-work and other interests. This magazine fosters students’ creativity in their respective fields.",
+    text: "Publishes the annual institute magazine featuring student contributions in academics, arts and other interests. This magazine fosters students’ talents in their various fields. ",
   },
   {
     id: 2,
     committee: "Vidyarthini Manch Committee",
-    text: "Organizes activities for women empowerment, leadership, and personality development.",
+    text: "Organizes activities for women empowerment, leadership, and personality development. ",
   },
   {
     id: 3,
     committee: "Library Committee",
-    text: "Promotes effective use of library resources and a reading culture.",
+    text: "Promotes effective use of library resources, fostering a reading culture.",
   },
   {
     id: 4,
@@ -900,12 +900,12 @@ export const committeesText = [
   {
     id: 5,
     committee: "Cultural Committee",
-    text: "Organizes cultural, academic, and management events to enhance organizational and leadership skills.",
+    text: "Organizes cultural, academic, and management events, enhancing character and leadership skills.",
   },
   {
     id: 6,
     committee: "Media Cell (Podcast Club)",
-    text: "Produces podcasts, interviews, and digital content to strengthen communication skills.",
+    text: "Produces podcasts, interviews, and digital content to polish communication skills.",
   },
   {
     id: 7,
@@ -915,7 +915,7 @@ export const committeesText = [
   {
     id: 8,
     committee: "Seminar Cell",
-    text: "Organizes guest lectures and expert sessions to provide industry exposure.",
+    text: "Organizes guest lectures and expert sessions to provide industry insights and networking.",
   },
 ];
 
@@ -938,53 +938,68 @@ export const iqacCommitteeColumns = [
 export const iqacCommitteeMembers = [
   {
     srNo: "1",
-    name: "Dr. M. B. Mehta",
-    designation: "Director and Chairman",  
+    name: "Pronoti Telore ",
+    designation: "In-Charge Director",  
   },
   {
     srNo: "2",
-    name: "Dr. Vikram Barnabas",
-    designation: "Deputy Director",  
+    name: "S. Pathare (Mgt. Repr) ",
+    designation: "-",  
   },
   {
     srNo: "3",
-    name: "Dr. Suresh Pathare",
-    designation: "Management Representative",  
+    name: "M.P. Potdar  ",
+    designation: "-",  
   },
   {
     srNo: "4",
-    name: "Mr. Deepak Chandorkar",
-    designation: "Industry Representative",  
+    name: "Swati Barnabas",
+    designation: "-",  
   },
   {
     srNo: "5",
-    name: "Dr. Pronoti Telore",
-    designation: "Head, Management Dept.",  
+    name: "Mahesh R. Dixit",
+    designation: "-",  
   },
   {
     srNo: "6",
-    name: "Dr. Uday Nagarkar",
-    designation: "Head, IT Dept.",  
+    name: "Rahul Khandelwal",
+    designation: "-",  
   },
   {
     srNo: "7",
-    name: "Dr. Hatim F. Kayumi",
-    designation: "IQAC Co-ordinator",  
+    name: "Rahul Khandelwal",
+    designation: "-",  
   },
   {
     srNo: "8",
-    name: "Prof. Mudassar N. Sayyed",
-    designation: "NEP Co-ordinator",  
+    name: "Sayyed Mudassar N.",
+    designation: "-",  
   },
   {
     srNo: "9",
-    name: "Mrs. Sharayu Kulkarni",
-    designation: "Office Superintendent",  
+    name: "Gauri Patil",
+    designation: "-",  
   },
   {
     srNo: "10",
-    name: "Dr. Swati Barnabas",
-    designation: "Librarian",  
+    name: "H. Bhavsar",
+    designation: "-",  
+  },
+  {
+    srNo: "11",
+    name: "Student Council Representative",
+    designation: "-",  
+  },
+  {
+    srNo: "12",
+    name: "Hatim Kayumi",
+    designation: "-",  
+  },
+  {
+    srNo: "13",
+    name: "Basavraj Bakalli",
+    designation: "Industrialist",  
   },
   
   
@@ -1045,5 +1060,99 @@ export const DocumentsRequiredText = [
   {
     id: 11,
     text: "APAAR ID CARD",
+  },
+];
+
+
+
+
+// Placement Statistics Data Start Here ----------------------------
+export const PlacementStatisticsMBAColumns = [
+  {
+    key: "srNo",
+    title: "Sr No",
+  },
+  {
+    key: "course",
+    title: "Course",
+  },
+  {
+    key: "year",
+    title: "Year",
+  },
+  {
+    key: "highestPackage",
+    title: "Highest Package (In Lakhs)",
+  },
+  {
+    key: "averagePackage",
+    title: "Average Package (In Lakhs)",
+  },
+];
+
+export const PlacementStatisticsMBAProgramme = [
+  {
+    srNo: "1",
+    course: "MBA",
+    year: "2024-2025",
+    highestPackage: "5.5",
+    averagePackage: "3.4",
+  },
+  {
+    srNo: "2",
+    course: "MBA",
+    year: "2025-2026",
+    highestPackage: "8.0",
+    averagePackage: "3.6",
+  },
+  {
+    srNo: "3",
+    course: "MBA",
+    year: "2026-2027 (Still in process)",
+    highestPackage: "5.0",
+    averagePackage: "3.0",
+  },
+];
+
+
+// MCA PROGRAME
+
+export const PlacementStatisticsMCAColumns = [
+  {
+    key: "srNo",
+    title: "Sr No",
+  },
+  {
+    key: "course",
+    title: "Course",
+  },
+  {
+    key: "year",
+    title: "Year",
+  },
+  {
+    key: "highestPackage",
+    title: "Highest Package (In Lakhs)",
+  },
+  {
+    key: "averagePackage",
+    title: "Average Package (In Lakhs)",
+  },
+];
+
+export const PlacementStatisticsMCAProgramme = [
+  {
+    srNo: "1",
+    course: "MCA",
+    year: "2025-2026",
+    highestPackage: "8.0",
+    averagePackage: "3.4",
+  },
+  {
+    srNo: "2",
+    course: "MCA",
+    year: "2026-2027 (Still in process)",
+    highestPackage: "4.0",
+    averagePackage: "2.9",
   },
 ];

@@ -24,10 +24,84 @@ export const mbaFaqs: FAQItem[] = [
 ];
 
 
+
+export const mcaFaqs: FAQItem[] = [
+  {
+    question: "What is the duration of the MCA course at IMS-CDR?",
+    answer: "The MCA is a two-year, four-semester postgraduate programme affiliated to Savitribai Phule Pune University and designed as per the NEP 2020 framework.",
+  },
+  {
+    question: "What is the eligibility for the MCA course at IMS-CDR?",
+    answer: "Candidates must satisfy the eligibility criteria prescribed by AICTE, the Government of Maharashtra, State CET Cell, and Savitribai Phule Pune University. Admission is conducted through the Centralized Admission Process (CAP) by the State CET Cell.",
+  },
+  {
+    question: "What does the Master of Computer Applications course cover?",
+    answer: "The programme covers emerging technologies such as Artificial Intelligence, Machine Learning, Cloud Computing, Cyber Security, Data Science, Web Technologies, Software Engineering, Mobile Application Development, Deep Learning, and Enterprise Applications.",
+  },
+  {
+    question: "What are the MCA course fees at IMS-CDR?",
+    answer: "The fee structure is as per the guidelines prescribed by the Shikshan Shulka Samiti, Government of Maharashtra, and Savitribai Phule Pune University for the respective academic year.",
+  },
+  {
+    question: "Why choose IMS-CDR for an MCA in Ahilyanagar?",
+    answer: "As one of the leading MCA colleges in Ahmednagar, we offer an industry-aligned curriculum, experienced faculty, hands-on lab exposure, project-based learning, and consistent placement support to prepare you for leadership roles in the IT industry.",
+  },
+];
+
+
+export const bbaFaqs: FAQItem[] = [
+  {
+    question: "What is a BBA course and what does it prepare students for?",
+    answer: "The Bachelor of Business Administration is a dynamic undergraduate programme that builds strong foundations in marketing, finance, HR, business analytics, entrepreneurship, and organizational behaviour. It prepares students for corporate roles, entrepreneurial ventures, or higher studies like MBA.",
+  },
+  {
+    question: "What can I do after completing a BBA degree?",
+    answer: "BBA graduates can pursue careers in marketing, finance, human resources, sales, operations, business development, retail management, banking, and consulting. The degree also serves as an excellent pathway to MBA, PGDM, and other specialized postgraduate programmes.",
+  },
+  {
+    question: "Is BBA a good course for students interested in business and management?",
+    answer: "Yes. BBA is ideal for students seeking a business management bachelor degree, offering practical exposure through case studies, internships, and projects while developing essential leadership and problem-solving skills.",
+  },
+  {
+    question: "What is the BBA admission process at IMS-CDR?",
+    answer: "Candidates must have passed 10+2 or equivalent from a recognized board. Admission follows the rules and merit process prescribed by Savitribai Phule Pune University and the State CET Cell as applicable.",
+  },
+  {
+    question: "Why is IMS-CDR a BBA college to consider in Ahilyanagar (Ahmednagar)?",
+    answer: "IMSCDR is a NAAC Re-Accredited institute with experienced faculty, modern infrastructure, strong industry connections, and a student-first approach, making it a preferred choice among BBA course colleges in the region.",
+  },
+];
+
+
+export const bcaFaqs: FAQItem[] = [
+  {
+    question: "What is a BCA course and what does it cover?",
+    answer: "The Bachelor of Computer Applications is an undergraduate programme covering programming, software development, database management, web technologies, cloud computing, cybersecurity, and data analytics.",
+  },
+  {
+    question: "Can I pursue BCA after Commerce or Arts?",
+    answer: "Yes. Students from Commerce or Arts backgrounds can pursue BCA, provided they meet the qualification for BCA admission as prescribed by the affiliating university.",
+  },
+  {
+    question: "What are the career options after completing a BCA degree?",
+    answer: "BCA graduates can work as Software Developers, Web Developers, System Analysts, Database Administrators, Cybersecurity Analysts, Data Analysts, and IT Support Professionals, or pursue higher studies like MCA or MBA.",
+  },
+  {
+    question: "Does the BCA programme include Artificial Intelligence and emerging technologies?",
+    answer: "Yes. The programme includes a focus on emerging fields, and our BCA in Artificial Intelligence readiness ensures students gain exposure to AI, Machine Learning, and Data Science fundamentals.",
+  },
+  {
+    question: "Why choose IMS-CDR for BCA in Ahilyanagar (Ahmednagar)?",
+    answer: "As one of the best BCA colleges in Ahilyanagar, we offer an AICTE-approved curriculum, hands-on labs, industry projects, and a supportive learning environment that prepares you for a successful IT career.",
+  },
+];
+
+
+
 export const libraryFaqs: FAQItem[] = [
   {
     question: "Who can become a regular member?",
-    answer: "Students who have taken Students who have taken admission for Management Programmes at IMS can become a regular member of the Library for that academic year.",
+    answer: "Students who have taken admission for Management Programmes at IMS can become a regular member of the Library for that academic year.",
   },
   {
     question: "I am an external post graduate student of the University of Pune. Can I avail the library book lending facility?",

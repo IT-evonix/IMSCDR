@@ -33,6 +33,7 @@ export interface SyllabusTable {
    */
   heading?: string;
   subHeading?: string;
+  text?: string;
   /*
    * Unique class for every table
    */
@@ -61,6 +62,7 @@ export const mbaSyllabus: MBASyllabusData = {
       heading: "MBA Syllabus",
       subHeading:
         "PG Diploma and PG Degree (MBA) Programme Structure as per NEP",
+      text: "The prescribed course structure and subject outline designed by Savitribai Phule Pune University. ",
       headerGroups: [
         {
           title: "Year",

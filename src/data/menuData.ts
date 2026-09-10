@@ -73,10 +73,10 @@ export const menuItems: MenuItem[] = [
         label: "Faculty",
         href: "/faculty",
       },
-      // {
-      //   label: "Academic Calendar",
-      //   href: "/academic-calendar",
-      // },
+      {
+        label: "Academic Calendar",
+        href: "/academic-calendar",
+      },
       // {
       //   label: "Research & Innovation",
       //   href: "/research-and-innovation",
@@ -217,10 +217,10 @@ export const menuItems: MenuItem[] = [
   //   ],
   // },
 
-  // {
-  //   label: "Student Corner",
-  //   href: "/student-corner",
-  // },
+  {
+    label: "Student Corner",
+    href: "/student-corner/academic-calendar",
+  },
 
   // {
   //   label: "Student Corner",
@@ -261,74 +261,6 @@ export const menuItems: MenuItem[] = [
   //       label: "Sports Council",
   //       href: "/",
   //     },
-
-  //     {
-  //       label: "Student Achivements",
-  //       children: [
-  //         {
-  //           label: "Curricular",
-  //           href: "/",
-  //         },
-  //         {
-  //           label: "Non Curricular",
-  //           href: "/",
-  //         },
-  //         {
-  //           label: "Report",
-  //           href: "/",
-  //         },
-  //       ],
-  //     },
-
-  //     {
-  //       label: "Student Club",
-  //       href: "/",
-  //     },
-
-  //     {
-  //       label: "Infrastructure",
-  //       children: [
-  //         {
-  //           label: "Hostel",
-  //           href: "/",
-  //         },
-  //         {
-  //           label: "Library",
-  //           href: "/",
-  //         },
-  //         {
-  //           label: "Amminities",
-  //           href: "/",
-  //         },
-  //       ],
-  //     },
-
-  //     {
-  //       label: "Events",
-  //       children: [
-  //         {
-  //           label: "Cultural",
-  //           href: "/",
-  //         },
-  //         {
-  //           label: "Technical",
-  //           href: "/",
-  //         },
-  //         // {
-  //         //   label: "Festivals",
-  //         //   href: "/",
-  //         // },
-  //         // {
-  //         //   label: "Gender Equality",
-  //         //   href: "/",
-  //         // },
-  //       ],
-  //     },
-
-  //     {
-  //       label: "Alumni",
-  //       href: "/",
-  //     },
   //   ],
   // },
 
@@ -343,10 +275,10 @@ export const menuItems: MenuItem[] = [
         label: "Mandatory Disclosure",
         href: "/mandatory-disclosure",
       },
-      // {
-      //   label: "IQAC",
-      //   href: "/IQAC",
-      // },
+      {
+        label: "IQAC",
+        href: "/IQAC",
+      },
       // {
       //   label: "Policies",
       //   href: "/policies",
@@ -409,9 +341,4 @@ export const menuItems: MenuItem[] = [
       },
     ],
   },
-
-  // {
-  //   label: "IQAC",
-  //   href: "/IQAC",
-  // },
 ];

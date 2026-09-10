@@ -31,12 +31,9 @@ const page = () => {
             </div>
           </div>
           <div className="programme_outcome_right">
-            <div className="subheading">Generic and Domain Knowledge</div>
+            <div className="subheading"> Generic and Domain Knowledge</div>
             <p className="p-0 m-0">
-              Ability to articulate, illustrate, analyze, synthesize and apply
-              the knowledge of principles and frameworks of management and
-              allied domains to the solutions of real-world complex business
-              issues
+              Graduates will be able to articulate, illustrate, analyze, synthesize and apply the knowledge of principles and frameworks of management and allied domains to the solutions of real-world complex business issues
             </p>
           </div>
         </div>
@@ -66,12 +63,9 @@ const page = () => {
             </div>
           </div>
           <div className="programme_outcome_right">
-            <div className="subheading">Problem Solving & Innovation</div>
+            <div className="subheading"> Problem Solving & Innovation </div>
             <p className="p-0 m-0">
-              Ability to Identify, formulate and provide innovative solution
-              frameworks to real world complex business and social problems by
-              systematically applying modern quantitative and qualitative
-              problem-solving tools and techniques.
+              Graduates would have the ability to identify, formulate and provide innovative solution frameworks to real-world complex business and social problems by systematically applying modern quantitative and qualitative problem-solving tools and techniques.
             </p>
           </div>
         </div>
@@ -88,8 +82,8 @@ const page = () => {
               >
                 Ability to:
               </div>
-              <span>Investigation</span>
-              <span>Research Methods</span>
+              <span>Investigation </span>
+              <span>Research Methods </span>
             </div>
             <div className="programme_outcome_image">
               <Image
@@ -103,7 +97,7 @@ const page = () => {
           <div className="programme_outcome_right">
             <div className="subheading">Critical Thinking</div>
             <p className="p-0 m-0">
-              Ability to conduct investigation of multidimensional business problems using research based knowledge and research methods to arrive at data driven decisions
+              Graduates could carry out investigations of multidimensional business problems using research-based knowledge and research methods to arrive at data-driven decisions
             </p>
           </div>
         </div>
@@ -135,7 +129,7 @@ const page = () => {
           <div className="programme_outcome_right">
             <div className="subheading">Effective Communication</div>
             <p className="p-0 m-0">
-              Ability to effectively communicate in cross-cultural settings, in technology mediated environments, especially in the business context and with society at large
+              Graduates would effectively communicate in cross-cultural settings, in technology-mediated environments, especially in the business context and with society at large
             </p>
           </div>
         </div>
@@ -165,9 +159,9 @@ const page = () => {
             </div>
           </div>
           <div className="programme_outcome_right">
-            <div className="subheading">Leadership and Team Work</div>
+            <div className="subheading">Leadership and Team Work </div>
             <p className="p-0 m-0">
-                Ability to collaborate in an organizational context and across organizational boundaries and lead themselves and others in the achievement of organizational goals and optimize outcomes for all stakeholders.
+              Graduates will be able to collaborate in an organizational context and across organizational boundaries and lead themselves and others in the achievement of organizational goals and optimize outcomes for all stakeholders.
             </p>
           </div>
         </div>
@@ -197,9 +191,11 @@ const page = () => {
             </div>
           </div>
           <div className="programme_outcome_right">
-            <div className="subheading">Global Orientation and Cross-Cultural Appreciation</div>
+            <div className="subheading">
+              Global Orientation and Cross-Cultural Appreciation
+            </div>
             <p className="p-0 m-0">
-                Ability to approach any relevant business issues from a global perspective and exhibit an appreciation of Cross Cultural aspects of business and management.
+              Graduates will approach any relevant business issues from a global perspective and exhibit an appreciation of cross-cultural aspects of business and management.
             </p>
           </div>
         </div>
@@ -229,9 +225,9 @@ const page = () => {
             </div>
           </div>
           <div className="programme_outcome_right">
-            <div className="subheading">Entrepreneurship </div>
+            <div className="subheading">Entrepreneurship  </div>
             <p className="p-0 m-0">
-                Ability to identify entrepreneurial opportunities and leverage managerial & leadership skills for founding, leading & managing startups as well as professionalizing and growing family businesses.
+              Graduates will identify entrepreneurial opportunities and leverage managerial & leadership skills for founding, leading & managing startups as well as professionalizing and growing family businesses.
             </p>
           </div>
         </div>
@@ -261,9 +257,9 @@ const page = () => {
             </div>
           </div>
           <div className="programme_outcome_right">
-            <div className="subheading">Environment and Sustainability</div>
+            <div className="subheading">Environment and Sustainability </div>
             <p className="p-0 m-0">
-                Ability to demonstrate knowledge of and need for sustainable development and assess the impact of managerial decisions and business priorities on the societal, economic and environmental aspects.
+              Graduates will be able to demonstrate knowledge of and the need for sustainable development and assess the impact of managerial decisions and business priorities on the societal, economic and environmental aspects.
             </p>
           </div>
         </div>
@@ -280,8 +276,8 @@ const page = () => {
               >
                 Ability to:
               </div>
-              <span>Ethical</span>
-              <span>Managerial choices</span>
+              <span>Ethical </span>
+              <span>Managerial choices </span>
               <span>Integrity</span>
             </div>
             <div className="programme_outcome_image">
@@ -294,9 +290,9 @@ const page = () => {
             </div>
           </div>
           <div className="programme_outcome_right">
-            <div className="subheading">Social Responsiveness and Ethics</div>
+            <div className="subheading"> Social Responsiveness and Ethics </div>
             <p className="p-0 m-0">
-                Ability to exhibit a broad appreciation of the ethical and value underpinnings of managerial choices in a political, cross-cultural, globalized, digitized, socio-economic environment and distinguish between ethical and unethical behaviors & act with integrity.
+              Graduates can exhibit a broad appreciation of the ethical and value underpinnings of managerial choices in a political, cross-cultural, globalized, digitized, socio-economic environment and distinguish between ethical and unethical behaviors & act with integrity.
             </p>
           </div>
         </div>
@@ -329,11 +325,10 @@ const page = () => {
           <div className="programme_outcome_right">
             <div className="subheading">Life Long Learning</div>
             <p className="p-0 m-0">
-                Ability to operate independently in new environment, acquire new knowledge and skills and assimilate them into the internalized knowledge and skills.
+              Graduates can operate independently in a new environment, acquire new knowledge and skills and assimilate them into internalized knowledge and skills. 
             </p>
           </div>
         </div>
-
       </div>
     </div>
   );

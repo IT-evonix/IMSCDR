@@ -4,28 +4,21 @@ import ExploreBtn from "@/components/ui/ExploreBtn";
 const page = () => {
   return (
     <div className="innerpagerightside">
-      <section className="zigzag-section d-none">
+      <section className="zigzag-section">
         <div className="zigzag-row">
           <div className="parallaximg_image">
             <Image
               className="img-fluid"
-              src="/images/about/aicte-sspu-naac.webp"
+              src="/images/about/aicte-sspu.webp"
               alt="about imscdr"
-              width={400}
-              height={480}
+              width={750}
+              height={670}
             />
           </div>
           <div className="content-box">
-            <div className="heading">AICTE, Savitribai Phule Pune University and NAAC Accrediation</div>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since 1966, when designers at Letraset and James Mosley, the
-              librarian at St Bride Printing Library in London, took a 1914
-              Cicero translation and scrambled it to make dummy text for
-              Letraset's Body Type sheets.
-            </p>
-
+            <div className="heading" style={{ lineHeight: "36px" }}>
+              We are an AICTE approved institiution affliliated to SPPU
+            </div>
             <ExploreBtn href="/about" text="Know More" />
           </div>
         </div>
@@ -84,7 +77,7 @@ const page = () => {
           </div>
         </div>
       </section>
-      <div className="heading">Coming Soon</div>
+      {/* <div className="heading">Coming Soon</div> */}
     </div>
   );
 };
