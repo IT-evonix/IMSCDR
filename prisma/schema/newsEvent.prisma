@@ -1,25 +1,25 @@
 // News, Events & Blogs Model
 model NewsEvent {
-  id             Int       @id @default(autoincrement())
-  title          String
-  slug           String    @unique
-  contentType    String    @default("News")
-  category       String    @default("")
-  startDate      DateTime?
-  endDate        DateTime?
-  summary        String?
-  contentFormat  String    @default("description")
-  contentHtml    String?
-  pdfUrl         String?
-  externalUrl    String?
-  thumbnailUrl   String    @default("/images/home/black_logo.webp")
-  images         String[]  @default([])
-  status         String    @default("Published")
-  adminId        Int?
-  admin          Admin?    @relation(fields: [adminId], references: [id], onDelete: SetNull)
-  createdAt      DateTime  @default(now())
-  updatedAt      DateTime  @updatedAt
-  deletedAt      DateTime?
+  id            Int       @id @default(autoincrement())
+  title         String
+  slug          String    @unique
+  contentType   String    @default("News")
+  category      String    @default("")
+  startDate     DateTime?
+  endDate       DateTime?
+  summary       String?
+  contentFormat String    @default("description")
+  contentHtml   String?
+  pdfUrl        String?
+  externalUrl   String?
+  thumbnailUrl  String    @default("/images/home/black_logo.webp")
+  images        String[]  @default([])
+  status        String    @default("Published")
+  adminId       Int?
+  admin         Admin?    @relation(fields: [adminId], references: [id], onDelete: SetNull)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  deletedAt     DateTime?
 
   @@index([createdAt(sort: Desc)])
   @@index([category])
