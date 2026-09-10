@@ -543,7 +543,13 @@
 /* Inactive icons inside sidebar */
 .admin-root aside a:not(.brand-gradient) svg,
 .admin-root aside button:not(.brand-gradient):not(.sidebar-collapse-btn) svg {
-  color: #737782 !important;
+  color: #000000 !important;
+}
+
+/* Ensure all #737782 texts on Admin render as pure black (#000000) */
+.admin-root .text-\[\#737782\],
+.admin-root [class*="text-[#737782]"] {
+  color: #000000 !important;
 }
 
 /* Sidebar Collapse Toggle Button: Premium Modern Pill / Circle with Logo Color */
@@ -602,7 +608,7 @@
    CRITICAL: Exclude Sidebar (aside) and Header (header) buttons!
    ==================================================== */
 
-.admin-root main button:not(header button):not(.status-dropdown-menu button):not(.table-action-btn):not(.pagination-btn):not(.ql-snow button):not(.ql-toolbar button):not([class*="ql-"]):not(.react-quill-container button):not(.upload-remove-btn):not([class*="remove-btn"]):not(.modal-close-btn),
+.admin-root main button:not(header button):not(.status-dropdown-menu button):not(.status-trigger-btn):not(.admin-back-btn):not(.table-action-btn):not(.pagination-btn):not(.admin-pagination-arrow):not(.admin-page-number):not(.admission-btn):not(.explore_more_btn):not([class*="explore_more"]):not(.ql-snow button):not(.ql-toolbar button):not([class*="ql-"]):not(.react-quill-container button):not(.upload-remove-btn):not([class*="remove-btn"]):not(.modal-close-btn),
 .admin-root main a[class*="btn"],
 .admin-root button.admin-btn,
 .admin-root .modal button:not(.modal-close-btn),
@@ -636,7 +642,7 @@
 }
 
 /* Subtle, decent hover matching AdminLayout button */
-.admin-root main button:not(header button):not(:disabled):not([class*="table"]):not(.table-btn):not(.pagination-btn):not(.ql-snow button):not(.ql-toolbar button):not([class*="ql-"]):not(.react-quill-container button):not(.upload-remove-btn):not([class*="remove-btn"]):not(.modal-close-btn):hover,
+.admin-root main button:not(header button):not(:disabled):not([class*="table"]):not(.table-btn):not(.pagination-btn):not(.admin-back-btn):not(.status-trigger-btn):not(.ql-snow button):not(.ql-toolbar button):not([class*="ql-"]):not(.react-quill-container button):not(.upload-remove-btn):not([class*="remove-btn"]):not(.modal-close-btn):hover,
 .admin-root main a[class*="btn"]:hover,
 .admin-root .modal button:not(:disabled):not(.modal-close-btn):hover {
   transform: translateY(-1px);
@@ -713,15 +719,16 @@
 }
 
 /* Table Icon Action Buttons: Small, compact, sleek pills with subtle borders and shadows */
-.admin-root table td:last-child button,
+.admin-root table td:last-child button.table-action-btn,
+.admin-root table td:last-child button:not(.admission-btn):not(.explore_more_btn):not([class*="admission"]):not([class*="explore_more"]),
 .admin-root table .table-action-btn,
 .admin-root .table-action-btn {
-  width: 25px !important;
-  height: 25px !important;
-  min-height: 25px !important;
-  min-width: 25px !important;
-  max-width: 25px !important;
-  max-height: 25px !important;
+  width: 23px !important;
+  height: 23px !important;
+  min-height: 23px !important;
+  min-width: 23px !important;
+  max-width: 23px !important;
+  max-height: 23px !important;
   padding: 0 !important;
   border-radius: 6px !important;
   display: inline-flex !important;
@@ -732,21 +739,23 @@
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04) !important;
 }
 
-.admin-root table td:last-child button svg,
+.admin-root table td:last-child button.table-action-btn svg,
+.admin-root table td:last-child button:not(.admission-btn):not(.explore_more_btn):not([class*="admission"]):not([class*="explore_more"]) svg,
 .admin-root table .table-action-btn svg,
 .admin-root .table-action-btn svg {
-  width: 12.5px !important;
-  height: 12.5px !important;
-  stroke-width: 2.2 !important;
+  width: 11.5px !important;
+  height: 11.5px !important;
+  stroke-width: 2 !important;
   display: block !important;
   stroke: currentColor !important;
   transition: transform 0.15s ease, color 0.15s ease !important;
 }
 
-.admin-root table td:last-child button:hover,
+.admin-root table td:last-child button.table-action-btn:hover,
+.admin-root table td:last-child button:not(.admission-btn):not(.explore_more_btn):not([class*="admission"]):not([class*="explore_more"]):hover,
 .admin-root table .table-action-btn:hover,
 .admin-root .table-action-btn:hover {
-  transform: translateY(-1px) scale(1.08) !important;
+  transform: translateY(-1px) scale(1.06) !important;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12) !important;
 }
 
@@ -799,14 +808,15 @@
   stroke: #ffffff !important;
 }
 
-/* Individual Action Button Variants */
+/* Individual Action Button Variants *//* Table Action Icon Buttons — Unified, sleek styling without clashing colors */
 .table-btn-view {
-  background-color: #f0f4f9 !important;
+  background-color: #eff6ff !important;
   color: #09468e !important;
-  border: 1px solid rgba(9, 70, 142, 0.25) !important;
+  border: 1px solid rgba(9, 70, 142, 0.22) !important;
 }
 .table-btn-view svg {
   color: #09468e !important;
+  stroke: #09468e !important;
 }
 .table-btn-view:hover {
   background-color: #09468e !important;
@@ -815,40 +825,83 @@
 }
 .table-btn-view:hover svg {
   color: #ffffff !important;
+  stroke: #ffffff !important;
+}
+
+.table-btn-pdf {
+  background-color: #fdf2f8 !important;
+  color: #89004a !important;
+  border: 1px solid rgba(137, 0, 74, 0.22) !important;
+}
+.table-btn-pdf svg {
+  color: #89004a !important;
+  stroke: #89004a !important;
+}
+.table-btn-pdf:hover {
+  background-color: #89004a !important;
+  color: #ffffff !important;
+  border-color: #89004a !important;
+}
+.table-btn-pdf:hover svg {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+}
+
+.table-btn-link {
+  background-color: #f0fdf4 !important;
+  color: #16a34a !important;
+  border: 1px solid rgba(22, 163, 74, 0.22) !important;
+}
+.table-btn-link svg {
+  color: #16a34a !important;
+  stroke: #16a34a !important;
+}
+.table-btn-link:hover {
+  background-color: #16a34a !important;
+  color: #ffffff !important;
+  border-color: #16a34a !important;
+}
+.table-btn-link:hover svg {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
 }
 
 .table-btn-edit {
-  background-color: #fdf2f8 !important;
-  color: #ad2865 !important;
-  border: 1px solid rgba(173, 40, 101, 0.25) !important;
+  background-color: #f1f5f9 !important;
+  color: #09468e !important;
+  border: 1px solid rgba(9, 70, 142, 0.22) !important;
 }
 .table-btn-edit svg {
-  color: #ad2865 !important;
+  color: #09468e !important;
+  stroke: #09468e !important;
 }
 .table-btn-edit:hover {
-  background-color: #ad2865 !important;
+  background-color: #09468e !important;
   color: #ffffff !important;
-  border-color: #ad2865 !important;
+  border-color: #09468e !important;
 }
 .table-btn-edit:hover svg {
   color: #ffffff !important;
+  stroke: #ffffff !important;
 }
 
 .table-btn-delete {
   background-color: #fef2f2 !important;
-  color: #e11d48 !important;
-  border: 1px solid rgba(225, 29, 72, 0.25) !important;
+  color: #dc2626 !important;
+  border: 1px solid rgba(220, 38, 38, 0.22) !important;
 }
 .table-btn-delete svg {
-  color: #e11d48 !important;
+  color: #dc2626 !important;
+  stroke: #dc2626 !important;
 }
 .table-btn-delete:hover {
-  background-color: #e11d48 !important;
+  background-color: #dc2626 !important;
   color: #ffffff !important;
-  border-color: #e11d48 !important;
+  border-color: #dc2626 !important;
 }
 .table-btn-delete:hover svg {
   color: #ffffff !important;
+  stroke: #ffffff !important;
 }
 
 .table-btn-download {
@@ -1014,3 +1067,558 @@
   background: #c3c6d2;
   border-radius: 10px;
 }
+
+/* ==========================================================================
+   IMSCDR Admin Panel — Dedicated Table & Pagination Styles (Merged from admin-table.css)
+   Exact match with notices-circular.css Aesthetics & Brand Guidelines
+   CRITICAL: Sidebar and navigation styles are strictly isolated and untouched.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Keyframe Animations for Buttons
+   -------------------------------------------------------------------------- */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   1. Admin Table Card Container (Matches .notices-table-card)
+   -------------------------------------------------------------------------- */
+.admin-table-card {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 14px !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 14px -3px rgba(0, 0, 0, 0.05) !important;
+}
+
+.admin-table-responsive {
+  width: 100% !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+/* --------------------------------------------------------------------------
+   2. Admin Table Header (Matches .notices-table thead)
+   -------------------------------------------------------------------------- */
+.admin-root thead.admin-table-header,
+.admin-root table thead.admin-table-header,
+.admin-table-header {
+  background: linear-gradient(90deg, #09468e 0%, #89004a 100%) !important;
+  border-bottom: none !important;
+}
+
+.admin-root thead.admin-table-header th,
+.admin-root table thead.admin-table-header th,
+.admin-table-header th {
+  padding: 13px 16px !important;
+  font-family: "Roma-Semibold", sans-serif !important;
+  font-size: 11.5px !important;
+  color: #ffffff !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.6px !important;
+  border: none !important;
+  white-space: nowrap !important;
+  line-height: normal !important;
+}
+
+/* Checkbox alignment in table header */
+.admin-table-header th input[type="checkbox"],
+.admin-root thead.admin-table-header th input[type="checkbox"] {
+  cursor: pointer !important;
+  accent-color: #09468e !important;
+}
+
+/* --------------------------------------------------------------------------
+   3. Table Rows & Cells (Matches .notices-table tbody)
+   -------------------------------------------------------------------------- */
+.admin-root table tbody tr {
+  transition: background-color 0.15s ease !important;
+  border-bottom: 1px solid #f1f5f9 !important;
+}
+
+.admin-root table tbody tr:last-child {
+  border-bottom: none !important;
+}
+
+.admin-root table tbody tr:hover {
+  background-color: #f8fbff !important;
+}
+
+.admin-root table tbody td {
+  padding: 12px 16px !important;
+  vertical-align: middle !important;
+  border-bottom: 1px solid #f1f5f9 !important;
+  font-family: "Avenir-Next-Regular", sans-serif !important;
+  color: #000000;
+}
+
+/* --------------------------------------------------------------------------
+   4. Action Buttons: .admission-btn & .explore_more_btn
+      Exact dimensions, fonts, animations matching notices-circular.css
+   -------------------------------------------------------------------------- */
+
+/* 4.1 Blue Gradient .admission-btn (View / Link action) */
+.admin-root .admission-btn,
+.admission-btn {
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #09468e, #44ade2, #09468e) !important;
+  background-size: 250% 250% !important;
+  animation: gradientMove 4s ease infinite !important;
+  transition: all 0.3s ease !important;
+  width: auto !important;
+  min-width: 90px !important;
+  height: 28px !important;
+  min-height: 28px !important;
+  max-height: 28px !important;
+  padding: 0 10px !important;
+  font-size: 11px !important;
+  line-height: normal !important;
+  text-decoration: none !important;
+  border-radius: 20px !important;
+  font-family: "Roma-Semibold", sans-serif !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 5px !important;
+  box-shadow: 0 2px 5px rgba(9, 70, 142, 0.18) !important;
+  cursor: pointer !important;
+  white-space: nowrap !important;
+  box-sizing: border-box !important;
+  border: none !important;
+  outline: none !important;
+}
+
+.admin-root .admission-btn:hover,
+.admission-btn:hover {
+  transform: translateY(-1.5px) !important;
+  box-shadow: 0 4px 12px rgba(9, 70, 142, 0.3) !important;
+  color: #ffffff !important;
+}
+
+.admin-root .admission-btn span,
+.admission-btn span {
+  color: #ffffff !important;
+  display: inline-block !important;
+  font-size: 11px !important;
+  letter-spacing: 0.1px !important;
+  font-family: "Roma-Semibold", sans-serif !important;
+}
+
+.admin-root .admission-btn svg,
+.admission-btn svg {
+  width: 11px !important;
+  height: 11px !important;
+  flex-shrink: 0 !important;
+  stroke: #ffffff !important;
+}
+
+/* 4.2 Rose/Magenta Gradient .explore_more_btn & .explore-btn with Shimmer */
+.admin-root .explore_more_btn,
+.explore_more_btn,
+.admin-root .explore-btn,
+.explore-btn {
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 5px !important;
+  background: linear-gradient(90deg, #89004a 34%, #f05a94 100%) !important;
+  color: #ffffff !important;
+  width: auto !important;
+  min-width: 80px !important;
+  height: 28px !important;
+  min-height: 26px !important;
+  max-height: 28px !important;
+  padding: 0 10px !important;
+  border-radius: 9999px !important;
+  text-decoration: none !important;
+  overflow: hidden !important;
+  transition: all 0.3s ease !important;
+  font-family: "Avenir-Next-Demi", "Roma-Semibold", sans-serif !important;
+  font-size: 11px !important;
+  line-height: 28px !important;
+  margin-top: 0 !important;
+  box-shadow: 0 2px 6px rgba(137, 0, 74, 0.22) !important;
+  white-space: nowrap !important;
+  box-sizing: border-box !important;
+  cursor: pointer !important;
+  border: none !important;
+  outline: none !important;
+}
+
+.admin-root .explore_more_btn::before,
+.explore_more_btn::before,
+.admin-root .explore-btn::before,
+.explore-btn::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: -120% !important;
+  width: 60% !important;
+  height: 100% !important;
+  background: rgba(255, 255, 255, 0.25) !important;
+  transform: skewX(-25deg) !important;
+  transition: all 0.7s ease !important;
+}
+
+.admin-root .explore_more_btn:hover::before,
+.explore_more_btn:hover::before,
+.admin-root .explore-btn:hover::before,
+.explore-btn:hover::before {
+  left: 130% !important;
+}
+
+.admin-root .explore_more_btn:hover,
+.explore_more_btn:hover,
+.admin-root .explore-btn:hover,
+.explore-btn:hover {
+  transform: translateY(-1.5px) !important;
+  box-shadow: 0 4px 12px rgba(137, 0, 74, 0.35) !important;
+  color: #ffffff !important;
+}
+
+.admin-root .explore_more_btn span,
+.explore_more_btn span,
+.admin-root .explore-btn span,
+.explore-btn span {
+  color: #ffffff !important;
+  display: inline-block !important;
+  font-size: 11px !important;
+  letter-spacing: 0.1px !important;
+  font-family: "Avenir-Next-Demi", "Roma-Semibold", sans-serif !important;
+}
+
+.admin-root .explore_more_btn svg,
+.explore_more_btn svg,
+.admin-root .explore-btn svg,
+.explore-btn svg {
+  width: 11px !important;
+  height: 11px !important;
+  flex-shrink: 0 !important;
+  stroke: #ffffff !important;
+  transition: transform 0.25s ease !important;
+}
+
+.admin-root .explore_more_btn:hover svg,
+.explore_more_btn:hover svg,
+.admin-root .explore-btn:hover svg,
+.explore-btn:hover svg {
+  transform: translateX(1.5px) !important;
+}
+
+/* 4.3 Table Action Buttons (Edit, Delete, View Modal, PDF, Link) */
+.admin-root table .table-action-btn,
+.admin-root .table-action-btn,
+.table-action-btn {
+  width: 23px !important;
+  height: 23px !important;
+  min-width: 23px !important;
+  min-height: 23px !important;
+  max-width: 23px !important;
+  max-height: 23px !important;
+  padding: 0 !important;
+  border-radius: 6px !important;
+  border: 1px solid #e2e8f0 !important;
+  background: #ffffff !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04) !important;
+  outline: none !important;
+}
+
+.admin-root table .table-action-btn svg,
+.admin-root .table-action-btn svg,
+.table-action-btn svg {
+  width: 11.5px !important;
+  height: 11.5px !important;
+  stroke-width: 2 !important;
+  display: block !important;
+  transition: transform 0.15s ease, color 0.15s ease, stroke 0.15s ease !important;
+}
+
+/* Base states for each action variant */
+.admin-root table .table-action-btn.table-btn-view,
+.admin-root .table-action-btn.table-btn-view,
+.table-btn-view {
+  background: #eff6ff !important;
+  border: 1px solid rgba(9, 70, 142, 0.22) !important;
+  color: #09468e !important;
+}
+.admin-root table .table-action-btn.table-btn-view svg,
+.admin-root .table-action-btn.table-btn-view svg,
+.table-btn-view svg {
+  color: #09468e !important;
+  stroke: #09468e !important;
+}
+
+.admin-root table .table-action-btn.table-btn-edit,
+.admin-root .table-action-btn.table-btn-edit,
+.table-btn-edit {
+  background: #eff6ff !important;
+  border: 1px solid rgba(9, 70, 142, 0.22) !important;
+  color: #09468e !important;
+}
+.admin-root table .table-action-btn.table-btn-edit svg,
+.admin-root .table-action-btn.table-btn-edit svg,
+.table-btn-edit svg {
+  color: #09468e !important;
+  stroke: #09468e !important;
+}
+
+.admin-root table .table-action-btn.table-btn-pdf,
+.admin-root .table-action-btn.table-btn-pdf,
+.table-btn-pdf {
+  background: #fdf2f8 !important;
+  border: 1px solid rgba(137, 0, 74, 0.22) !important;
+  color: #89004a !important;
+}
+.admin-root table .table-action-btn.table-btn-pdf svg,
+.admin-root .table-action-btn.table-btn-pdf svg,
+.table-btn-pdf svg {
+  color: #89004a !important;
+  stroke: #89004a !important;
+}
+
+.admin-root table .table-action-btn.table-btn-link,
+.admin-root .table-action-btn.table-btn-link,
+.table-btn-link {
+  background: #f0fdf4 !important;
+  border: 1px solid rgba(22, 163, 74, 0.22) !important;
+  color: #16a34a !important;
+}
+.admin-root table .table-action-btn.table-btn-link svg,
+.admin-root .table-action-btn.table-btn-link svg,
+.table-btn-link svg {
+  color: #16a34a !important;
+  stroke: #16a34a !important;
+}
+
+.admin-root table .table-action-btn.table-btn-delete,
+.admin-root .table-action-btn.table-btn-delete,
+.table-btn-delete {
+  background: #fef2f2 !important;
+  border: 1px solid rgba(220, 38, 38, 0.22) !important;
+  color: #dc2626 !important;
+}
+.admin-root table .table-action-btn.table-btn-delete svg,
+.admin-root .table-action-btn.table-btn-delete svg,
+.table-btn-delete svg {
+  color: #dc2626 !important;
+  stroke: #dc2626 !important;
+}
+
+/* Hover States — Solid saturated background + Crisp Pure White Icon (100% visible) */
+.admin-root table .table-action-btn.table-btn-view:hover,
+.admin-root .table-action-btn.table-btn-view:hover,
+.table-btn-view:hover {
+  background: #09468e !important;
+  border-color: #09468e !important;
+  color: #ffffff !important;
+  transform: translateY(-1px) scale(1.06) !important;
+  box-shadow: 0 2px 7px rgba(9, 70, 142, 0.3) !important;
+}
+.admin-root table .table-action-btn.table-btn-view:hover svg,
+.admin-root .table-action-btn.table-btn-view:hover svg,
+.table-btn-view:hover svg {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+  fill: none !important;
+}
+
+.admin-root table .table-action-btn.table-btn-edit:hover,
+.admin-root .table-action-btn.table-btn-edit:hover,
+.table-btn-edit:hover {
+  background: #09468e !important;
+  border-color: #09468e !important;
+  color: #ffffff !important;
+  transform: translateY(-1px) scale(1.06) !important;
+  box-shadow: 0 2px 7px rgba(9, 70, 142, 0.3) !important;
+}
+.admin-root table .table-action-btn.table-btn-edit:hover svg,
+.admin-root .table-action-btn.table-btn-edit:hover svg,
+.table-btn-edit:hover svg {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+  fill: none !important;
+}
+
+.admin-root table .table-action-btn.table-btn-pdf:hover,
+.admin-root .table-action-btn.table-btn-pdf:hover,
+.table-btn-pdf:hover {
+  background: #89004a !important;
+  border-color: #89004a !important;
+  color: #ffffff !important;
+  transform: translateY(-1px) scale(1.06) !important;
+  box-shadow: 0 2px 7px rgba(137, 0, 74, 0.3) !important;
+}
+.admin-root table .table-action-btn.table-btn-pdf:hover svg,
+.admin-root .table-action-btn.table-btn-pdf:hover svg,
+.table-btn-pdf:hover svg {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+  fill: none !important;
+}
+
+.admin-root table .table-action-btn.table-btn-link:hover,
+.admin-root .table-action-btn.table-btn-link:hover,
+.table-btn-link:hover {
+  background: #16a34a !important;
+  border-color: #16a34a !important;
+  color: #ffffff !important;
+  transform: translateY(-1px) scale(1.06) !important;
+  box-shadow: 0 2px 7px rgba(220, 38, 38, 0.22) !important;
+}
+.admin-root table .table-action-btn.table-btn-link:hover svg,
+.admin-root .table-action-btn.table-btn-link:hover svg,
+.table-btn-link:hover svg {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+  fill: none !important;
+}
+
+.admin-root table .table-action-btn.table-btn-delete:hover,
+.admin-root .table-action-btn.table-btn-delete:hover,
+.table-btn-delete:hover {
+  background: #dc2626 !important;
+  border-color: #dc2626 !important;
+  color: #ffffff !important;
+  transform: translateY(-1px) scale(1.06) !important;
+  box-shadow: 0 2px 7px rgba(220, 38, 38, 0.3) !important;
+}
+.admin-root table .table-action-btn.table-btn-delete:hover svg,
+.admin-root .table-action-btn.table-btn-delete:hover svg,
+.table-btn-delete:hover svg {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+  fill: none !important;
+}
+
+/* 4.4 Status Trigger Button (Compact Pill Inside Table) */
+.admin-root .status-trigger-btn,
+.status-trigger-btn {
+  height: 19px !important;
+  min-height: 19px !important;
+  max-height: 19px !important;
+  padding: 0 7px !important;
+  font-size: 9px !important;
+  line-height: 19px !important;
+  box-sizing: border-box !important;
+}
+.admin-root .status-trigger-btn svg,
+.status-trigger-btn svg {
+  width: 9px !important;
+  height: 9px !important;
+}
+
+/* 4.5 Admin Back Button (Compact Pill with brand styling) */
+.admin-back-btn,
+.admin-root .admin-back-btn {
+  height: 26px !important;
+  min-height: 26px !important;
+  max-height: 26px !important;
+  padding: 0 10px !important;
+  font-size: 10.5px !important;
+  font-family: "Roma-Semibold", sans-serif !important;
+  border-radius: 9999px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* --------------------------------------------------------------------------
+   5. Dedicated Admin Pagination Bar (Matches notices-circular.css)
+   -------------------------------------------------------------------------- */
+.admin-pagination-container {
+  padding: 13px 20px !important;
+  background: #f8fafc !important;
+  border-top: 1px solid #e2e8f0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-wrap: wrap !important;
+  gap: 12px !important;
+}
+
+.admin-pagination-info {
+  font-family: "Avenir-Next-Regular", sans-serif !important;
+  font-size: 12.5px !important;
+  color: #64748b !important;
+}
+
+.admin-pagination-info strong {
+  color: #0f172a !important;
+  font-family: "Avenir-Next-Demi", sans-serif !important;
+}
+
+.admin-pagination-arrow {
+  width: 30px !important;
+  height: 30px !important;
+  min-width: 30px !important;
+  min-height: 30px !important;
+  border-radius: 7px !important;
+  border: 1px solid #cbd5e1 !important;
+  background: #ffffff !important;
+  color: #475569 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  outline: none !important;
+  padding: 0 !important;
+}
+
+.admin-pagination-arrow:hover:not(:disabled) {
+  border-color: #09468e !important;
+  color: #09468e !important;
+  background: #eff6ff !important;
+  transform: translateY(-1px) !important;
+}
+
+.admin-pagination-arrow:disabled {
+  opacity: 0.35 !important;
+  cursor: not-allowed !important;
+}
+
+.admin-page-number {
+  min-width: 30px !important;
+  height: 30px !important;
+  padding: 0 8px !important;
+  border-radius: 7px !important;
+  border: 1px solid transparent !important;
+  background: transparent !important;
+  font-family: "Roma-Semibold", sans-serif !important;
+  font-size: 12px !important;
+  color: #334155 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  outline: none !important;
+}
+
+.admin-page-number:hover:not(.active) {
+  background: #e2e8f0 !important;
+  color: #09468e !important;
+}
+
+.admin-page-number.active {
+  background: linear-gradient(90deg, #09468e 0%, #89004a 100%) !important;
+  color: #ffffff !important;
+  border-color: #09468e !important;
+  box-shadow: 0 2px 6px rgba(9, 70, 142, 0.25) !important;
+  font-weight: bold !important;
+}

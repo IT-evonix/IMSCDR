@@ -26,7 +26,40 @@ async function main() {
   });
 
   console.log('✅ Admin account seeded successfully:', adminAccount.email);
-  console.log('✅ Database seeding finished successfully.');
+
+  // 2. Seed System Content Types for Production
+  console.log('🌱 Seeding core content types...');
+  const initialContentTypes = [
+    { name: 'News', label: 'News Only', slug: 'news', module: 'news-events' },
+    { name: 'Event', label: 'Events Only', slug: 'event', module: 'news-events' },
+    { name: 'Blog', label: 'Blogs Only', slug: 'blog', module: 'news-events' },
+    { name: 'Notice', label: 'Notices Only', slug: 'notice', module: 'news-events' },
+    { name: 'Circular', label: 'Circulars Only', slug: 'circular', module: 'news-events' },
+    { name: 'Notice,Circular', label: 'Notices & Circulars', slug: 'notice-circular', module: 'categories' },
+    { name: 'All', label: 'Universal / All Modules', slug: 'all', module: 'categories' },
+  ];
+
+  for (const item of initialContentTypes) {
+    await prisma.contentType.upsert({
+      where: { name: item.name },
+      update: {
+        label: item.label,
+        slug: item.slug,
+        module: item.module,
+        isActive: true,
+      },
+      create: {
+        name: item.name,
+        label: item.label,
+        slug: item.slug,
+        module: item.module,
+        isActive: true,
+      },
+    });
+  }
+
+  console.log('✅ Content types seeded successfully.');
+  console.log('✅ Databas e seeding finished successfully.');
 }
 
 main()

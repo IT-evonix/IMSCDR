@@ -54,7 +54,7 @@ export const ImageUpload: React.FC<ImageUploadProps> = ({
         {images.map((img) => (
           <div
             key={img.id}
-            className="relative group w-20 h-14 rounded-md border border-[#737782]/25 overflow-hidden bg-white shadow-2xs shrink-0 transition-all hover:border-[#09468e]"
+            className="relative group w-20 h-14 rounded-md border border-[#1a1c20]/25 overflow-hidden bg-white shadow-2xs shrink-0 transition-all hover:border-[#09468e]"
           >
             <img
               src={img.url}
@@ -85,9 +85,9 @@ export const ImageUpload: React.FC<ImageUploadProps> = ({
         {images.length < maxFiles && (
           <div
             onClick={() => fileInputRef.current?.click()}
-            className="w-20 h-14 rounded-md border border-dashed border-[#737782]/30 hover:border-[#ad2865] bg-[#f9f9ff] hover:bg-[#ffd9e3]/10 transition-all flex flex-col items-center justify-center p-1 cursor-pointer group shrink-0"
+            className="w-20 h-14 rounded-md border border-dashed border-[#1a1c20]/30 hover:border-[#ad2865] bg-[#f9f9ff] hover:bg-[#ffd9e3]/10 transition-all flex flex-col items-center justify-center p-1 cursor-pointer group shrink-0"
           >
-            <Upload className="w-3.5 h-3.5 text-[#737782] group-hover:text-[#ad2865] transition-colors mb-0.5" />
+            <Upload className="w-3.5 h-3.5 text-[#000000] group-hover:text-[#ad2865] transition-colors mb-0.5" />
             <span className="text-[9px] font-bold text-[#434751] group-hover:text-[#ad2865] text-center leading-none">
               upload
             </span>
@@ -105,7 +105,7 @@ export const ImageUpload: React.FC<ImageUploadProps> = ({
       </div>
 
       {helperText && (
-        <p className="text-[10px] text-[#737782] italic mt-0.5">{helperText}</p>
+        <p className="text-[10px] text-[#000000] italic mt-0.5">{helperText}</p>
       )}
     </div>
   );

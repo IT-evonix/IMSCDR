@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Eye, Edit3, Trash2, Inbox, ChevronDown } from 'lucide-react';
+import { Eye, Edit3, Trash2, Inbox, ChevronDown, FileText, ExternalLink } from 'lucide-react';
 
 export interface ContentItem {
   id: string | number;
@@ -37,15 +37,15 @@ const StatusDropdownCell: React.FC<{
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        style={{ width: 'auto', minWidth: 'auto', height: '24px', minHeight: '24px' }}
-        className={`status-trigger-btn inline-flex items-center gap-1.5 pl-3 pr-2.5 py-0.5 rounded-full text-[10px] font-extrabold outline-none cursor-pointer transition-all border shadow-2xs font-['Roma-Semibold'] ${
+        style={{ width: 'auto', minWidth: 'auto', height: '19px', minHeight: '19px', maxHeight: '19px' }}
+        className={`status-trigger-btn inline-flex items-center gap-1 px-2 py-0 rounded-full text-[9px] font-extrabold outline-none cursor-pointer transition-all border shadow-2xs font-['Roma-Semibold'] leading-none ${
           status === 'Active'
             ? 'bg-emerald-50 text-emerald-700 border-emerald-300 hover:bg-emerald-100'
             : 'bg-rose-50 text-rose-700 border-rose-300 hover:bg-rose-100'
         }`}
       >
-        <span>{status}</span>
-        <ChevronDown className="w-3 h-3 shrink-0" />
+        <span className="leading-none">{status}</span>
+        <ChevronDown className="w-2.5 h-2.5 shrink-0" />
       </button>
 
       {isOpen && (
@@ -119,23 +119,27 @@ export const ContentTable: React.FC<ContentTableProps> = ({
         return 'bg-[#89004a]/10 text-[#89004a] border border-[#89004a]/20';
       case 'BLOG':
         return 'bg-[#d19547]/15 text-[#b0782e] border border-[#d19547]/30';
+      case 'NOTICE':
+        return 'bg-[#09468e]/15 text-[#09468e] border border-[#09468e]/25';
+      case 'CIRCULAR':
+        return 'bg-[#89004a]/15 text-[#89004a] border border-[#89004a]/25';
       default:
-        return 'bg-[#737782]/10 text-[#434751] border border-[#737782]/20';
+        return 'bg-[#000000]/10 text-[#000000] border border-[#000000]/20';
     }
   };
 
   return (
-    <div className="w-full flex-1">
-      <table className="w-full text-left border-collapse min-w-[680px]">
-        {/* ── Table Head ── */}
-        <thead className="bg-[#f3f7fc] border-b border-[#09468e]/15 text-[10px] font-extrabold text-[#09468e] uppercase tracking-widest">
+    <div className="w-full flex-1 overflow-x-auto">
+      <table className="w-full text-left border-collapse min-w-[720px]">
+        {/* ── Table Head (Matches notices-circular.css style) ── */}
+        <thead className="admin-table-header">
           <tr>
             <th className="py-2.5 px-3 w-8 text-center">
               <input
                 type="checkbox"
                 onChange={handleSelectAll}
                 checked={items.length > 0 && selectedIds.length === items.length}
-                className="rounded border-[#737782]/40 text-[#09468e] focus:ring-[#09468e] cursor-pointer w-3.5 h-3.5"
+                className="rounded border-white/40 text-[#09468e] focus:ring-white cursor-pointer w-3.5 h-3.5 accent-[#09468e]"
               />
             </th>
             <th className="py-2.5 px-3">Title</th>
@@ -143,16 +147,16 @@ export const ContentTable: React.FC<ContentTableProps> = ({
             <th className="py-2.5 px-3 hidden sm:table-cell">Category</th>
             <th className="py-2.5 px-3 text-center">Status</th>
             <th className="py-2.5 px-3">Date</th>
-            <th className="py-2.5 px-3 text-center w-28">Actions</th>
+            <th className="py-2.5 px-3 text-center w-36">Actions</th>
           </tr>
         </thead>
 
         {/* ── Table Body ── */}
-        <tbody className="divide-y divide-[#737782]/8 text-[11px] text-[#1a1c20]">
+        <tbody className="divide-y divide-[#000000]/10 text-[11px] text-[#000000]">
           {items.length === 0 ? (
             <tr>
-              <td colSpan={7} className="py-14 text-center text-[#737782]">
-                <Inbox className="w-7 h-7 mx-auto mb-1.5 text-[#737782]/40" />
+              <td colSpan={7} className="py-14 text-center text-[#000000]">
+                <Inbox className="w-7 h-7 mx-auto mb-1.5 text-[#000000]/40" />
                 <p className="font-semibold text-[11px]">No content items found</p>
               </td>
             </tr>
@@ -162,8 +166,9 @@ export const ContentTable: React.FC<ContentTableProps> = ({
               return (
                 <tr
                   key={item.id}
-                  className={`group transition-colors hover:bg-[#f3f7fc]/60 ${isSelected ? 'bg-[#09468e]/5' : ''
-                    }`}
+                  className={`group transition-colors hover:bg-[#09468e]/[0.03] ${
+                    isSelected ? 'bg-[#09468e]/5' : ''
+                  }`}
                 >
                   {/* Checkbox */}
                   <td className="py-2 px-3 text-center align-middle">
@@ -171,7 +176,7 @@ export const ContentTable: React.FC<ContentTableProps> = ({
                       type="checkbox"
                       checked={isSelected}
                       onChange={() => handleSelectOne(item.id)}
-                      className="rounded border-[#737782]/40 text-[#09468e] focus:ring-[#09468e] cursor-pointer w-3.5 h-3.5"
+                      className="rounded border-[#000000]/40 text-[#09468e] focus:ring-[#09468e] cursor-pointer w-3.5 h-3.5"
                     />
                   </td>
 
@@ -179,7 +184,7 @@ export const ContentTable: React.FC<ContentTableProps> = ({
                   <td className="py-2 px-3 align-middle">
                     <div className="flex items-center gap-2.5">
                       {/* Compact 8×8 thumbnail */}
-                      <div className="w-8 h-8 rounded-md overflow-hidden border border-[#737782]/15 bg-[#f0f4f8] shrink-0 flex items-center justify-center p-0.5">
+                      <div className="w-8 h-8 rounded-md overflow-hidden border border-[#000000]/15 bg-[#f0f4f8] shrink-0 flex items-center justify-center p-0.5">
                         <img
                           src={item.thumbnailUrl || '/images/home/black_logo.webp'}
                           alt={item.title}
@@ -192,7 +197,7 @@ export const ContentTable: React.FC<ContentTableProps> = ({
                       {/* Text block */}
                       <div className="min-w-0 flex-1">
                         <div
-                          className="font-semibold text-[#1a1c20] hover:text-[#09468e] transition-colors cursor-pointer line-clamp-1 leading-tight text-[11px]"
+                          className="font-semibold text-[#000000] hover:text-[#09468e] transition-colors cursor-pointer line-clamp-1 leading-tight text-[11px]"
                           onClick={() => onEdit && onEdit(item)}
                         >
                           {item.title}
@@ -208,12 +213,14 @@ export const ContentTable: React.FC<ContentTableProps> = ({
                   <td className="py-2 px-3 align-middle">
                     {item.type ? (
                       <span
-                        className={`px-2 py-0.5 rounded-full text-[9px] font-extrabold tracking-widest uppercase ${getTypeBadgeClass(item.type)}`}
+                        className={`px-2 py-0.5 rounded-full text-[9px] font-extrabold tracking-widest uppercase ${getTypeBadgeClass(
+                          item.type
+                        )}`}
                       >
                         {item.type.toUpperCase()}
                       </span>
                     ) : (
-                      <span className="text-[11px] font-medium text-[#737782]">—</span>
+                      <span className="text-[11px] font-medium text-[#000000]">—</span>
                     )}
                   </td>
 
@@ -237,32 +244,54 @@ export const ContentTable: React.FC<ContentTableProps> = ({
                     {item.dateCreated || 'N/A'}
                   </td>
 
-                  {/* Actions */}
+                  {/* Actions Column: Sleek, compact icon buttons only (no text) */}
                   <td className="py-2 px-3 text-center whitespace-nowrap align-middle">
                     <div className="flex justify-center items-center gap-1">
-                      <button
-                        type="button"
-                        onClick={() => onView && onView(item)}
-                        className="table-action-btn table-btn-view"
-                        title="View"
-                      >
-                        <Eye className="w-3.5 h-3.5" />
-                      </button>
+                      {item.contentFormat === 'pdf' ? (
+                        <button
+                          type="button"
+                          onClick={() => onView && onView(item)}
+                          className="table-action-btn table-btn-pdf"
+                          title="View Official PDF"
+                        >
+                          <FileText className="w-3 h-3" />
+                        </button>
+                      ) : item.contentFormat === 'link' ? (
+                        <button
+                          type="button"
+                          onClick={() => onView && onView(item)}
+                          className="table-action-btn table-btn-link"
+                          title="Open External Link"
+                        >
+                          <ExternalLink className="w-3 h-3" />
+                        </button>
+                      ) : (
+                        <button
+                          type="button"
+                          onClick={() => onView && onView(item)}
+                          className="table-action-btn table-btn-view"
+                          title="Preview Content"
+                        >
+                          <Eye className="w-3 h-3" />
+                        </button>
+                      )}
+
                       <button
                         type="button"
                         onClick={() => onEdit && onEdit(item)}
                         className="table-action-btn table-btn-edit"
-                        title="Edit"
+                        title="Edit Content"
                       >
-                        <Edit3 className="w-3.5 h-3.5" />
+                        <Edit3 className="w-3 h-3" />
                       </button>
+
                       <button
                         type="button"
                         onClick={() => onDelete && onDelete(item)}
                         className="table-action-btn table-btn-delete"
-                        title="Delete"
+                        title="Delete Content"
                       >
-                        <Trash2 className="w-3.5 h-3.5" />
+                        <Trash2 className="w-3 h-3" />
                       </button>
                     </div>
                   </td>

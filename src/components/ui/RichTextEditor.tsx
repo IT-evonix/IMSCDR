@@ -8,7 +8,7 @@ import 'react-quill-new/dist/quill.snow.css';
 const ReactQuill = dynamic(() => import('react-quill-new'), {
   ssr: false,
   loading: () => (
-    <div className="h-44 w-full bg-[#f9f9ff] brand-border rounded-lg flex items-center justify-center text-xs font-normal text-[#737782]">
+    <div className="h-44 w-full bg-[#f9f9ff] brand-border rounded-lg flex items-center justify-center text-xs font-normal text-[#000000]">
       Loading Rich Text Editor...
     </div>
   ),

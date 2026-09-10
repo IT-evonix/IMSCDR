@@ -153,14 +153,15 @@ export const programSidebar = {
   studentCorner: {
     heading: "Student Corner",
     menuItems: [
+
       // { title: "ERP", href: "/lifeatims/gallery" },
       // { title: "Examination", href: "/student-corner/examination" },
       { title: "Academic Calendar", href: "/student-corner/academic-calendar" },
       // { title: "Downloads", href: "/student-corner/examination" },
       { title: "Scholarships", href: "/student-corner/scholarships" },
       // { title: "Code of Conduct", href: "/student-corner/examination" },
-      // { title: "Notices & Circulars", href: "/student-corner/examination" },
-      // { title: "Student Grievance Portal", href: "/student-corner/examination" },
+       { title: "Notices & Circulars", href: "/student-corner/notices-circulars" },
+      { title: "Grievance Redressal", href: "/student-corner/grievance-redressal" }
     ],
   },
 

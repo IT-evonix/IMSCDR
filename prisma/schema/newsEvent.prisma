@@ -4,7 +4,7 @@ model NewsEvent {
   title          String
   slug           String    @unique
   contentType    String    @default("News")
-  category       String    @default("General")
+  category       String    @default("")
   startDate      DateTime?
   endDate        DateTime?
   summary        String?

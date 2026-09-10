@@ -181,7 +181,7 @@ export default function ContentLibraryPage() {
         />
 
       {/* Single Cohesive Full Display Table & Pagination Card Container */}
-      <div className="rounded-xl brand-border overflow-hidden bg-white shadow-2xs min-h-[380px] sm:min-h-[440px] flex flex-col justify-between">
+      <div className="admin-table-card min-h-[380px] sm:min-h-[440px] flex flex-col justify-between">
         {loading ? (
           <div className="flex-1 py-20 flex items-center justify-center">
             <LogoLoader size="md" text="Loading Content Library..." />

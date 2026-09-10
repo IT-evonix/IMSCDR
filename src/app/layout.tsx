@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./globals.css";
+import "./notices-circular.css";
 import LayoutWrapper from "@/components/LayoutWrapper";
 
 export const metadata: Metadata = {

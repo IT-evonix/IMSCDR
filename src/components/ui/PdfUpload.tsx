@@ -52,7 +52,7 @@ export const PdfUpload: React.FC<PdfUploadProps> = ({
       {/* Compact Mini Card matching ImageUpload layout */}
       <div className="flex flex-wrap gap-2 items-center pt-0.5">
         {pdf ? (
-          <div className="relative group w-32 h-14 rounded-md border border-[#737782]/25 overflow-hidden bg-white shadow-2xs shrink-0 flex flex-col justify-between p-1.5 transition-all hover:border-[#09468e]">
+          <div className="relative group w-32 h-14 rounded-md border border-[#1a1c20]/25 overflow-hidden bg-white shadow-2xs shrink-0 flex flex-col justify-between p-1.5 transition-all hover:border-[#09468e]">
             {/* Top Row: Icon + Red Cross Remove Button */}
             <div className="flex justify-between items-start">
               <div className="p-1 bg-red-100 text-red-600 rounded shrink-0">
@@ -88,9 +88,9 @@ export const PdfUpload: React.FC<PdfUploadProps> = ({
           /* Add Single PDF Card Button */
           <div
             onClick={() => inputRef.current?.click()}
-            className="w-32 h-14 rounded-md border border-dashed border-[#737782]/30 hover:border-[#09468e] bg-[#f9f9ff] hover:bg-[#e1efff]/20 transition-all flex flex-col items-center justify-center p-1 cursor-pointer group shrink-0"
+            className="w-32 h-14 rounded-md border border-dashed border-[#1a1c20]/30 hover:border-[#09468e] bg-[#f9f9ff] hover:bg-[#e1efff]/20 transition-all flex flex-col items-center justify-center p-1 cursor-pointer group shrink-0"
           >
-            <Upload className="w-3.5 h-3.5 text-[#737782] group-hover:text-[#09468e] transition-colors mb-0.5" />
+            <Upload className="w-3.5 h-3.5 text-[#000000] group-hover:text-[#09468e] transition-colors mb-0.5" />
             <span className="text-[9px] font-bold text-[#434751] group-hover:text-[#09468e] text-center leading-none">
               Upload PDF
             </span>
@@ -107,7 +107,7 @@ export const PdfUpload: React.FC<PdfUploadProps> = ({
       </div>
 
       {helperText && (
-        <p className="text-[10px] text-[#737782] italic mt-0.5">{helperText}</p>
+        <p className="text-[10px] text-[#000000] italic mt-0.5">{helperText}</p>
       )}
     </div>
   );

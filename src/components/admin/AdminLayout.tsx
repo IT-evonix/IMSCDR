@@ -17,6 +17,8 @@ export const AdminLayout: React.FC<{ children: React.ReactNode }> = ({ children 
   const isCreateActive = pathname === '/admin/news-events/create';
   const isCategoriesActive = pathname.startsWith('/admin/categories');
   const isContactActive = pathname.startsWith('/admin/contact-messages');
+  const isEnquiriesActive = pathname.startsWith('/admin/enquiries');
+  const isGrievancesActive = pathname.startsWith('/admin/grievances');
 
   return (
     <div className="admin-root min-h-screen bg-[#f9f9ff] text-[#1a1c20]">

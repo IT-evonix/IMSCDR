@@ -31,6 +31,8 @@ exports.createNewsEvent = async (req, res, next) => {
       if (lower === 'news') normalizedContentType = 'News';
       else if (lower === 'event') normalizedContentType = 'Event';
       else if (lower === 'blog') normalizedContentType = 'Blog';
+      else if (lower === 'notice' || lower === 'notices') normalizedContentType = 'Notice';
+      else if (lower === 'circular' || lower === 'circulars') normalizedContentType = 'Circular';
       else normalizedContentType = contentType.trim().charAt(0).toUpperCase() + contentType.trim().slice(1);
     }
 
@@ -145,7 +147,13 @@ exports.getAllNewsEvents = async (req, res, next) => {
 
     const selectedType = contentType || type;
     if (selectedType && selectedType !== 'All') {
-      where.contentType = { equals: selectedType, mode: 'insensitive' };
+      const types = selectedType.split(',').map((t) => t.trim()).filter(Boolean);
+      if (types.length > 1) {
+        const capitalizedTypes = types.map((t) => t.charAt(0).toUpperCase() + t.slice(1).toLowerCase());
+        where.contentType = { in: Array.from(new Set([...types, ...capitalizedTypes])) };
+      } else if (types.length === 1) {
+        where.contentType = { equals: types[0], mode: 'insensitive' };
+      }
     }
 
     if (status && status !== 'All') {
@@ -278,6 +286,8 @@ exports.updateNewsEvent = async (req, res, next) => {
         if (lower === 'news') normalizedContentType = 'News';
         else if (lower === 'event') normalizedContentType = 'Event';
         else if (lower === 'blog') normalizedContentType = 'Blog';
+        else if (lower === 'notice' || lower === 'notices') normalizedContentType = 'Notice';
+        else if (lower === 'circular' || lower === 'circulars') normalizedContentType = 'Circular';
         else normalizedContentType = contentType.trim().charAt(0).toUpperCase() + contentType.trim().slice(1);
       }
     }
@@ -404,6 +414,42 @@ exports.exportNewsEvents = async (req, res, next) => {
     res.setHeader('Content-Type', 'text/csv');
     res.setHeader('Content-Disposition', `attachment; filename=news_events_${Date.now()}.csv`);
     return res.status(200).send(csv);
+  } catch (error) {
+    next(error);
+  }
+};
+
+/**
+ * Get Dynamic Filter Metadata (Types, Categories, Statuses)
+ * Handles GET /api/news-events/filters (100% Database-driven via ContentType & Category models)
+ */
+exports.getFilterMetadata = async (req, res, next) => {
+  try {
+    // 1. Fetch contentTypes directly from PostgreSQL content_types table
+    const dbContentTypes = await prisma.contentType.findMany({
+      where: { isActive: true, module: 'news-events' },
+      orderBy: { id: 'asc' },
+    });
+
+    const types = dbContentTypes.map((t) => t.name);
+
+    // 2. Fetch all active categories directly from PostgreSQL categories table
+    const categories = await prisma.category.findMany({
+      where: { deletedAt: null },
+      select: { id: true, name: true, slug: true, type: true },
+      orderBy: { name: 'asc' },
+    });
+
+    const statuses = ['Active', 'Inactive'];
+
+    return res.status(200).json({
+      status: 'success',
+      data: {
+        types,
+        categories,
+        statuses,
+      },
+    });
   } catch (error) {
     next(error);
   }
