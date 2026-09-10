@@ -1,0 +1,13 @@
+// System Content Types Model
+model ContentType {
+  id        Int      @id @default(autoincrement())
+  name      String   @unique
+  label     String
+  slug      String   @unique
+  module    String   @default("news-events")
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("content_types")
+}

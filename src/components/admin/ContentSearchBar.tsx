@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { Search, Plus, Filter, RotateCcw, Calendar } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 
@@ -25,9 +26,8 @@ interface ContentSearchBarProps {
   inlineDates?: boolean;
 }
 
-const TYPES = ['All', 'News', 'Event', 'Blog'];
-
-const DEFAULT_STATUSES = ['All', 'Active', 'Inactive'];
+const FALLBACK_TYPES = ['All', 'News', 'Event', 'Blog', 'Notice', 'Circular'];
+const FALLBACK_STATUSES = ['All', 'Active', 'Inactive'];
 
 export const ContentSearchBar: React.FC<ContentSearchBarProps> = ({
   searchQuery,
@@ -49,10 +49,28 @@ export const ContentSearchBar: React.FC<ContentSearchBarProps> = ({
   placeholder = 'Search by title...',
   inlineDates = false,
 }) => {
+  const [typesList, setTypesList] = useState<string[]>(FALLBACK_TYPES);
+  const [statusesList, setStatusesList] = useState<string[]>(statusOptions || FALLBACK_STATUSES);
   const [categoriesList, setCategoriesList] = useState<string[]>(['All']);
 
-  const actualStatuses = statusOptions || DEFAULT_STATUSES;
+  // Fetch dynamic filter metadata (types and statuses)
+  React.useEffect(() => {
+    fetch('/api/news-events/filters')
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.status === 'success' && data.data) {
+          if (Array.isArray(data.data.types)) {
+            setTypesList(Array.from(new Set(['All', ...data.data.types])));
+          }
+          if (!statusOptions && Array.isArray(data.data.statuses)) {
+            setStatusesList(Array.from(new Set(['All', ...data.data.statuses])));
+          }
+        }
+      })
+      .catch(() => {});
+  }, [statusOptions]);
 
+  // Fetch cascading categories when selectedType changes
   React.useEffect(() => {
     const url =
       selectedType !== 'All'
@@ -116,15 +134,13 @@ export const ContentSearchBar: React.FC<ContentSearchBarProps> = ({
 
           {/* Create New Action Button */}
           {createHref && (
-            <Button
-              variant="gradient"
-              size="sm"
+            <Link
               href={createHref}
-              icon={<Plus className="w-3.5 h-3.5" />}
-              className="h-7 text-xs font-semibold shadow-xs"
+              className="explore_more_btn !h-7 !px-3 !text-[11px] !font-bold"
             >
-              {createLabel}
-            </Button>
+              <Plus className="w-3 h-3" />
+              <span>{createLabel}</span>
+            </Link>
           )}
         </div>
 
@@ -164,7 +180,7 @@ export const ContentSearchBar: React.FC<ContentSearchBarProps> = ({
                 onChange={(e) => onTypeChange(e.target.value)}
                 className="filter-input w-full cursor-pointer outline-none hover:border-[#09468e] focus:border-[#09468e] focus:ring-1 focus:ring-[#09468e]/20 transition-all"
               >
-                {TYPES.map((t) => (
+                {typesList.map((t) => (
                   <option key={t} value={t}>
                     {t === 'All' ? 'All Types' : t}
                   </option>
@@ -204,7 +220,7 @@ export const ContentSearchBar: React.FC<ContentSearchBarProps> = ({
                 onChange={(e) => onStatusChange(e.target.value)}
                 className="filter-input w-full cursor-pointer outline-none hover:border-[#09468e] focus:border-[#09468e] focus:ring-1 focus:ring-[#09468e]/20 transition-all"
               >
-                {actualStatuses.map((s) => (
+                {statusesList.map((s) => (
                   <option key={s} value={s}>
                     {s === 'All' ? 'All Status' : s}
                   </option>

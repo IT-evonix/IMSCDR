@@ -5,6 +5,7 @@ const { protect } = require('../middleware/authMiddleware');
 
 // Public Category Route
 router.get('/', categoryController.getAllCategories);
+router.get('/types', categoryController.getCategoryTypes);
 
 // Protected Admin Category Routes (CRUD)
 router.post('/', protect, categoryController.createCategory);

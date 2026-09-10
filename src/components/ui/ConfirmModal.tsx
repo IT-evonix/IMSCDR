@@ -86,7 +86,7 @@ export const ConfirmModal: React.FC<ConfirmModalProps> = ({
         </div>
 
         {/* Compact Action Footer */}
-        <div className="px-4 py-2.5 bg-[#f9f9ff] border-t border-[#737782]/10 flex items-center justify-end gap-2">
+        <div className="px-4 py-2.5 bg-[#f9f9ff] border-t border-[#1a1c20]/10 flex items-center justify-end gap-2">
           {cancelText && (
             <Button
               type="button"

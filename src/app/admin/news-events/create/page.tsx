@@ -26,6 +26,8 @@ const FORM_CONFIG = {
       { value: 'News', label: 'News' },
       { value: 'Event', label: 'Event' },
       { value: 'Blog', label: 'Blog' },
+      { value: 'Notice', label: 'Notice' },
+      { value: 'Circular', label: 'Circular' },
     ],
   },
   CATEGORY: {
@@ -92,6 +94,8 @@ const normalizeType = (t?: string | null): string => {
   if (clean === 'news') return 'News';
   if (clean === 'event') return 'Event';
   if (clean === 'blog') return 'Blog';
+  if (clean === 'notice' || clean === 'notices') return 'Notice';
+  if (clean === 'circular' || clean === 'circulars') return 'Circular';
   return t.trim().charAt(0).toUpperCase() + t.trim().slice(1);
 };
 
@@ -143,6 +147,8 @@ export default function CreateNewsEventPage() {
 
   // Content Format Type State: 'description' (Text Editor) vs 'pdf' (PDF Upload) vs 'link' (External Link)
   const [contentTypeOption, setContentTypeOption] = useState<'description' | 'pdf' | 'link'>('description');
+
+  const isNoticeOrCircular = contentType === 'Notice' || contentType === 'Circular';
 
   const fetchCategories = async (typeToFetch: string, retainCategory?: string) => {
     try {
@@ -256,7 +262,7 @@ export default function CreateNewsEventPage() {
     setIsSubmitting(true);
 
     try {
-      const imageUrls = galleryImages.map((img) => img.url);
+      const imageUrls = isNoticeOrCircular ? [] : galleryImages.map((img) => img.url);
 
       const url = editId ? `/api/news-events/${editId}` : '/api/news-events';
       const method = editId ? 'PUT' : 'POST';
@@ -269,12 +275,12 @@ export default function CreateNewsEventPage() {
         body: JSON.stringify({
           title: title.trim(),
           contentType: normalizeType(contentType),
-          category: selectedCategory,
+          category: selectedCategory || 'General',
           startDate: startDate || null,
-          endDate: endDate || null,
-          summary: summary.trim() ? summary.trim() : null,
+          endDate: isNoticeOrCircular ? null : (endDate || null),
+          summary: isNoticeOrCircular ? null : (summary.trim() ? summary.trim() : null),
           contentFormat: contentTypeOption,
-          contentHtml: contentTypeOption === 'description' ? contentHtml : null,
+          contentHtml: (!isNoticeOrCircular && contentTypeOption === 'description') ? contentHtml : null,
           pdfUrl: contentTypeOption === 'pdf' ? attachedPdf?.url : null,
           externalUrl: contentTypeOption === 'link' ? externalUrl : null,
           images: imageUrls,
@@ -418,7 +424,7 @@ export default function CreateNewsEventPage() {
   return (
     <div className="max-w-[1150px] w-full mx-auto space-y-3 pb-4 pt-1">
       {/* Page Header */}
-      <PageTitle showBack backHref="/admin/news-events" title={editId ? 'Edit Post' : 'Add New Notice, Event or Blog'} />
+      <PageTitle showBack backHref="/admin/news-events" title={editId ? 'Edit Post' : 'Add News, Event, Blog, Notice, Circulars'} />
 
       {/* Single Clean Form Card */}
       <form onSubmit={handleSubmit} className="bg-white rounded-xl brand-border overflow-hidden shadow-2xs">
@@ -451,6 +457,11 @@ export default function CreateNewsEventPage() {
                   const val = normalizeType(e.target.value);
                   setContentType(val);
                   fetchCategories(val);
+                  if (val === 'Notice' || val === 'Circular') {
+                    if (contentTypeOption === 'description') {
+                      setContentTypeOption('pdf');
+                    }
+                  }
                 }}
                 className="w-full px-3.5 py-2 rounded-lg brand-border focus:border-[#09468e] text-xs bg-white cursor-pointer outline-none font-normal text-[#1a1c20]"
               >
@@ -486,12 +497,12 @@ export default function CreateNewsEventPage() {
             </div>
           </div>
 
-          {/* Start Date & End Date Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
+          {/* Start Date & End Date Grid (Single Date for Notice/Circular) */}
+          {isNoticeOrCircular ? (
             <div className="space-y-1">
               <label className="text-[10px] font-bold text-[#434751] uppercase tracking-wider !flex !flex-row !items-center gap-1.5">
                 <Calendar className={`w-3.5 h-3.5 ${FORM_CONFIG.START_DATE.iconColor} shrink-0`} />
-                <span>{FORM_CONFIG.START_DATE.label}</span>
+                <span>Notice / Circular Date</span>
               </label>
               <input
                 type="date"
@@ -500,35 +511,52 @@ export default function CreateNewsEventPage() {
                 className="w-full px-3.5 py-2 rounded-lg brand-border text-xs outline-none font-normal text-[#1a1c20]"
               />
             </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
+              <div className="space-y-1">
+                <label className="text-[10px] font-bold text-[#434751] uppercase tracking-wider !flex !flex-row !items-center gap-1.5">
+                  <Calendar className={`w-3.5 h-3.5 ${FORM_CONFIG.START_DATE.iconColor} shrink-0`} />
+                  <span>{FORM_CONFIG.START_DATE.label}</span>
+                </label>
+                <input
+                  type="date"
+                  value={startDate}
+                  onChange={(e) => setStartDate(e.target.value)}
+                  className="w-full px-3.5 py-2 rounded-lg brand-border text-xs outline-none font-normal text-[#1a1c20]"
+                />
+              </div>
 
+              <div className="space-y-1">
+                <label className="text-[10px] font-bold text-[#434751] uppercase tracking-wider !flex !flex-row !items-center gap-1.5">
+                  <Calendar className={`w-3.5 h-3.5 ${FORM_CONFIG.END_DATE.iconColor} shrink-0`} />
+                  <span>{FORM_CONFIG.END_DATE.label}</span>
+                </label>
+                <input
+                  type="date"
+                  value={endDate}
+                  onChange={(e) => setEndDate(e.target.value)}
+                  className="w-full px-3.5 py-2 rounded-lg brand-border text-xs outline-none font-normal text-[#1a1c20]"
+                />
+              </div>
+            </div>
+          )}
+
+          {/* Short Summary (Hidden for Notice / Circular) */}
+          {!isNoticeOrCircular && (
             <div className="space-y-1">
-              <label className="text-[10px] font-bold text-[#434751] uppercase tracking-wider !flex !flex-row !items-center gap-1.5">
-                <Calendar className={`w-3.5 h-3.5 ${FORM_CONFIG.END_DATE.iconColor} shrink-0`} />
-                <span>{FORM_CONFIG.END_DATE.label}</span>
+              <label className="text-[10px] font-bold text-[#434751] uppercase tracking-wider">
+                {FORM_CONFIG.SUMMARY.label} {FORM_CONFIG.SUMMARY.required && <span className="text-red-500">*</span>}
               </label>
-              <input
-                type="date"
-                value={endDate}
-                onChange={(e) => setEndDate(e.target.value)}
-                className="w-full px-3.5 py-2 rounded-lg brand-border text-xs outline-none font-normal text-[#1a1c20]"
+              <textarea
+                required={FORM_CONFIG.SUMMARY.required}
+                rows={2.5}
+                value={summary}
+                onChange={(e) => setSummary(e.target.value)}
+                placeholder={FORM_CONFIG.SUMMARY.placeholder}
+                className="w-full px-3.5 py-2.5 rounded-lg brand-border focus:border-[#09468e] text-xs transition-all outline-none resize-none font-normal text-[#1a1c20] leading-relaxed"
               />
             </div>
-          </div>
-
-          {/* Short Summary */}
-          <div className="space-y-1">
-            <label className="text-[10px] font-bold text-[#434751] uppercase tracking-wider">
-              {FORM_CONFIG.SUMMARY.label} {FORM_CONFIG.SUMMARY.required && <span className="text-red-500">*</span>}
-            </label>
-            <textarea
-              required={FORM_CONFIG.SUMMARY.required}
-              rows={2.5}
-              value={summary}
-              onChange={(e) => setSummary(e.target.value)}
-              placeholder={FORM_CONFIG.SUMMARY.placeholder}
-              className="w-full px-3.5 py-2.5 rounded-lg brand-border focus:border-[#09468e] text-xs transition-all outline-none resize-none font-normal text-[#1a1c20] leading-relaxed"
-            />
-          </div>
+          )}
 
           {/* Radio Button Format Selector (Text vs PDF vs External Link) */}
           <div className="space-y-2 p-3 sm:p-3.5 rounded-xl bg-[#f8fafc] border border-[#09468e]/15">
@@ -536,15 +564,18 @@ export default function CreateNewsEventPage() {
               {FORM_CONFIG.DETAIL_FORMAT.label} {FORM_CONFIG.DETAIL_FORMAT.required && <span className="text-red-500">*</span>}
             </label>
             <div className="flex flex-col sm:flex-row sm:items-center gap-2.5 sm:gap-3 pt-1">
-              {FORM_CONFIG.DETAIL_FORMAT.options.map((opt) => {
+              {(isNoticeOrCircular
+                ? FORM_CONFIG.DETAIL_FORMAT.options.filter((opt) => opt.id !== 'description')
+                : FORM_CONFIG.DETAIL_FORMAT.options
+              ).map((opt) => {
                 const isSelected = contentTypeOption === opt.id;
                 return (
                   <label
                     key={opt.id}
                     onClick={() => setContentTypeOption(opt.id as any)}
                     className={`!inline-flex !items-center gap-2 px-3.5 py-2 rounded-lg border text-xs font-semibold cursor-pointer transition-all select-none ${isSelected
-                        ? 'bg-blue-50/90 border-[#09468e] text-[#09468e] shadow-xs'
-                        : 'bg-white border-slate-200 text-slate-700 hover:border-slate-300'
+                      ? 'bg-blue-50/90 border-[#09468e] text-[#09468e] shadow-xs'
+                      : 'bg-white border-slate-200 text-slate-700 hover:border-slate-300'
                       }`}
                   >
                     <input
@@ -603,15 +634,17 @@ export default function CreateNewsEventPage() {
             </div>
           )}
 
-          {/* Media Upload */}
-          <ImageUpload
-            images={galleryImages}
-            onAddImages={handleAddGalleryImages}
-            onRemoveImage={handleRemoveGalleryImage}
-            maxFiles={FORM_CONFIG.IMAGE_UPLOAD.maxFiles}
-            label={FORM_CONFIG.IMAGE_UPLOAD.label}
-            helperText={FORM_CONFIG.IMAGE_UPLOAD.helperText}
-          />
+          {/* Media Upload (Hidden for Notice / Circular) */}
+          {!isNoticeOrCircular && (
+            <ImageUpload
+              images={galleryImages}
+              onAddImages={handleAddGalleryImages}
+              onRemoveImage={handleRemoveGalleryImage}
+              maxFiles={FORM_CONFIG.IMAGE_UPLOAD.maxFiles}
+              label={FORM_CONFIG.IMAGE_UPLOAD.label}
+              helperText={FORM_CONFIG.IMAGE_UPLOAD.helperText}
+            />
+          )}
         </div>
 
         {/* Form Action Footer */}
@@ -688,7 +721,7 @@ export default function CreateNewsEventPage() {
               </div>
 
               {/* Action Footer */}
-              <div className="px-4 py-2.5 bg-[#f9f9ff] border-t border-[#737782]/10 flex items-center justify-end gap-2">
+              <div className="px-4 py-2.5 bg-[#f9f9ff] border-t border-[#1a1c20]/10 flex items-center justify-end gap-2">
                 <Button
                   type="button"
                   variant="outline"

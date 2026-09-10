@@ -165,7 +165,8 @@ export const programSidebar = {
   studentCorner: {
     heading: "Student Corner",
     menuItems: [
-      { title: "Gallery", href: "/lifeatims/gallery" },
+      { title: "Notices & Circulars", href: "/student-corner/notices-circulars" },
+      { title: "Grievance Redressal", href: "/student-corner/grievance-redressal" }
     ],
   },
 

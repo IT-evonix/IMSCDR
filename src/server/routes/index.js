@@ -5,6 +5,8 @@ const newsEventRoutes = require('./newsEventRoutes');
 const uploadRoutes = require('./uploadRoutes');
 const categoryRoutes = require('./categoryRoutes');
 const contactRoutes = require('./contactRoutes');
+const enquiryRoutes = require('./enquiryRoutes');
+const grievanceRoutes = require('./grievanceRoutes');
 
 // Auth API Routes (/api/auth)
 router.use('/auth', authRoutes);
@@ -20,6 +22,12 @@ router.use('/categories', categoryRoutes);
 
 // Contact Messages API Routes (/api/contact)
 router.use('/contact', contactRoutes);
+
+// Admission Enquiries API Routes (/api/enquiries)
+router.use('/enquiries', enquiryRoutes);
+
+// Grievance Redressal API Routes (/api/grievances)
+router.use('/grievances', grievanceRoutes);
 
 // Health Check API Route
 router.get('/health', (req, res) => {

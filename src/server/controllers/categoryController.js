@@ -1,20 +1,68 @@
 const prisma = require('../config/db');
 
 /**
- * Get All Categories (Supports search and type filters - Soft deleted excluded)
+ * Get Dynamic Category Types & Content Type Metadata
+ * Handles GET /api/categories/types (100% Database-driven via ContentType model)
+ */
+exports.getCategoryTypes = async (req, res, next) => {
+  try {
+    // 1. Fetch active types directly from PostgreSQL content_types table
+    const allDbTypes = await prisma.contentType.findMany({
+      where: { isActive: true },
+      orderBy: { id: 'asc' },
+    });
+
+    // Content types for posts (e.g. Notice, Circular, News, Event, Blog)
+    const contentTypes = allDbTypes
+      .filter((t) => t.module === 'news-events')
+      .map((t) => t.name);
+
+    // Formatted category target types for UI dropdowns
+    const categoryTypes = allDbTypes.map((t) => ({
+      value: t.name,
+      label: t.label,
+    }));
+
+    return res.status(200).json({
+      status: 'success',
+      data: {
+        contentTypes,
+        categoryTypes,
+        statuses: ['Active', 'Inactive'],
+      },
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
+/**
+ * Get All Categories (Supports search and multi-type filters - Soft deleted excluded)
  * Handles GET /api/categories
  */
 exports.getAllCategories = async (req, res, next) => {
   try {
-    const { search, type } = req.query;
+    const { search, type, page, limit } = req.query;
 
     const whereConditions = [{ deletedAt: null }];
     if (type && type !== 'All') {
+      const typeList = type
+        .split(',')
+        .map((t) => t.trim().toLowerCase())
+        .filter(Boolean);
+
+      const orConditions = [
+        { type: { equals: 'All', mode: 'insensitive' } },
+        { type: { equals: 'NewsEvent', mode: 'insensitive' } },
+      ];
+
+      typeList.forEach((t) => {
+        orConditions.push({ type: { equals: t, mode: 'insensitive' } });
+        orConditions.push({ type: { contains: t, mode: 'insensitive' } });
+      });
+
       whereConditions.push({
-        OR: [
-          { type: { equals: type, mode: 'insensitive' } },
-          { type: { equals: 'NewsEvent', mode: 'insensitive' } },
-        ],
+        OR: orConditions,
       });
     }
     if (search && search.trim()) {
@@ -28,12 +76,24 @@ exports.getAllCategories = async (req, res, next) => {
 
     const where = { AND: whereConditions };
 
-    const categories = await prisma.category.findMany({
+    const totalItems = await prisma.category.count({ where });
+
+    const pageNum = parseInt(page, 10);
+    const limitNum = parseInt(limit, 10);
+
+    const queryOptions = {
       where,
       orderBy: { name: 'asc' },
-    });
+    };
 
-    // Count associated news/events for each category
+    if (pageNum > 0 && limitNum > 0) {
+      queryOptions.skip = (pageNum - 1) * limitNum;
+      queryOptions.take = limitNum;
+    }
+
+    const categories = await prisma.category.findMany(queryOptions);
+
+    // Count associated news/events/notices for each category
     const categoriesWithCount = await Promise.all(
       categories.map(async (cat) => {
         const count = await prisma.newsEvent.count({
@@ -46,9 +106,13 @@ exports.getAllCategories = async (req, res, next) => {
       })
     );
 
+    const totalPages = limitNum > 0 ? Math.ceil(totalItems / limitNum) : 1;
+
     return res.status(200).json({
       status: 'success',
-      totalItems: categoriesWithCount.length,
+      totalItems,
+      totalPages,
+      currentPage: pageNum || 1,
       data: categoriesWithCount,
     });
   } catch (error) {

@@ -46,7 +46,7 @@ export const PageTitle: React.FC<PageTitleProps> = ({
           {title}
         </h1>
         {description && (
-          <p className="text-xs text-[#737782] mt-1 leading-normal font-['Avenir-Next-Regular']">
+          <p className="text-xs text-[#000000] mt-1 leading-normal font-['Avenir-Next-Regular']">
             {description}
           </p>
         )}

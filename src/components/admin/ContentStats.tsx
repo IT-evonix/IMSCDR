@@ -25,7 +25,7 @@ export const ContentStats: React.FC<ContentStatsProps> = ({ stats = [], classNam
       return icon;
     }
 
-    const iconClass = "w-5 h-5";
+    const iconClass = "w-4 h-4";
     switch (icon) {
       case 'mail':
       case 'email':
@@ -84,26 +84,26 @@ export const ContentStats: React.FC<ContentStatsProps> = ({ stats = [], classNam
   };
 
   return (
-    <div className={`grid grid-cols-1 sm:grid-cols-3 gap-3 ${className}`}>
+    <div className={`grid grid-cols-1 sm:grid-cols-3 gap-2.5 ${className}`}>
       {stats.map((stat, idx) => {
         const styles = getVariantStyles(stat.variant, idx);
         return (
           <div
             key={idx}
-            className="bg-[#ffffff] p-3.5 rounded-xl brand-border shadow-2xs flex items-center gap-3"
+            className="bg-[#ffffff] px-3 py-2 rounded-lg brand-border shadow-2xs flex items-center gap-2.5"
           >
             <div
-              className={`w-10 h-10 rounded-lg ${
+              className={`w-8 h-8 rounded-md ${
                 stat.iconBgColor || styles.iconBg
               } flex items-center justify-center shrink-0`}
             >
               {renderIcon(stat.icon)}
             </div>
-            <div>
-              <div className="stat-label text-[10px] font-extrabold text-[#737782] uppercase tracking-wider font-['Roma-Semibold']">
+            <div className="min-w-0">
+              <div className="stat-label text-[9.5px] font-extrabold text-[#000000] uppercase tracking-wider font-['Roma-Semibold'] leading-none">
                 {stat.label}
               </div>
-              <div className={`stat-value text-lg font-black ${stat.textColor || styles.textVal} font-['Roma-Bold']`}>
+              <div className={`stat-value text-sm font-black ${stat.textColor || styles.textVal} font-['Roma-Bold'] mt-0.5`}>
                 {stat.value}
               </div>
             </div>

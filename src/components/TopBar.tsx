@@ -39,10 +39,23 @@ const TopBar = ({ isSticky }: TopBarProps) => {
             <span>Infrastructure Video</span>
           </Link> */}
 
-          <Link href="/contact" className="top-btn white-btn admission-btn">
+          <button
+            type="button"
+            onClick={(e) => {
+              e.preventDefault();
+              if (typeof window !== 'undefined') {
+                if (typeof (window as any).openEnquiryModal === 'function') {
+                  (window as any).openEnquiryModal();
+                }
+                window.dispatchEvent(new CustomEvent('open-enquiry-modal'));
+              }
+            }}
+            className="top-btn white-btn admission-btn border-0 outline-none cursor-pointer"
+            title="Open Admission Enquiry Form"
+          >
             <CircleHelp size={18} />
             <span>Enquire Now</span>
-          </Link>
+          </button>
 
           <Link href="/contact" className="top-btn white-btn">
             <Phone size={15} />

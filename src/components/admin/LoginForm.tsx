@@ -132,7 +132,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onSuccess }) => {
               isLoading={loading}
               icon={<ArrowRight className="w-3.5 h-3.5" />}
               iconPosition="right"
-              className="w-full py-2.5 text-xs font-semibold !rounded-[10px] transition-all"
+              className="w-full py-2 !rounded-[5px]"
             >
               Sign In to Dashboard
             </Button>

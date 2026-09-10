@@ -1,0 +1,19 @@
+// Enquiry Model Schema — Dedicated for Admission & Program Inquiries
+
+model Enquiry {
+  id        Int       @id @default(autoincrement())
+  name      String
+  email     String
+  phone     String
+  course    String
+  address   String?   @db.Text
+  message   String    @db.Text
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  deletedAt DateTime?
+
+  @@index([email])
+  @@index([course])
+  @@index([createdAt])
+  @@index([deletedAt])
+}

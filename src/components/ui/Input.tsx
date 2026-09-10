@@ -33,10 +33,10 @@ export const Input: React.FC<InputProps> = ({
         </div>
       )}
       <div
-        className={`relative flex items-center rounded-lg border bg-white px-3.5 py-2.5 transition-all shadow-xs ${
+        className={`relative flex items-center rounded-md border bg-white px-3 py-2 transition-all shadow-xs ${
           error
             ? 'border-red-400 focus-within:ring-2 focus-within:ring-red-100'
-            : 'border-slate-200 focus-within:border-[#0F4C81] focus-within:ring-2 focus-within:ring-blue-100/50'
+            : 'border-slate-300 focus-within:border-[#09468e] focus-within:ring-1 focus-within:ring-[#09468e]/20'
         }`}
       >
         {icon && <span className="text-slate-400 mr-2.5 shrink-0">{icon}</span>}

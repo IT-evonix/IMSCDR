@@ -5,6 +5,7 @@ const { protect } = require('../middleware/authMiddleware');
 
 // Public Routes
 router.get('/', newsEventController.getAllNewsEvents);
+router.get('/filters', newsEventController.getFilterMetadata);
 router.get('/export', protect, newsEventController.exportNewsEvents);
 router.get('/:id', newsEventController.getNewsEventById);
 

@@ -180,18 +180,15 @@ ${item.message}
         title="Contact Enquiries & Messages"
         description="Review and manage incoming user contact form enquiries."
       >
-        <Button
+        <button
           type="button"
-          variant="gradient"
-          size="sm"
-          pill={false}
           onClick={handleExportExcel}
-          isLoading={isExporting}
-          icon={<FileSpreadsheet className="w-3.5 h-3.5" />}
-          className="h-8.5 rounded-lg cursor-pointer"
+          disabled={isExporting}
+          className="explore_more_btn !h-7 !px-3 !text-[11px] !font-bold"
         >
-          Export Contacts
-        </Button>
+          <FileSpreadsheet className="w-3 h-3" />
+          <span>{isExporting ? 'Exporting...' : 'Export Contacts'}</span>
+        </button>
       </PageTitle>
 
       {/* Standard Reusable Dynamic Search & Filter Bar Component */}
@@ -223,58 +220,64 @@ ${item.message}
       />
 
       {/* Single Cohesive Display Table Card Container */}
-      <div className="bg-white rounded-xl brand-border overflow-hidden shadow-2xs min-h-[380px] sm:min-h-[440px] flex flex-col justify-between">
+      <div className="admin-table-card min-h-[380px] sm:min-h-[440px] flex flex-col justify-between">
         {loading ? (
-          <div className="flex-1 py-20 flex items-center justify-center text-xs font-semibold text-[#737782]">
+          <div className="flex-1 py-20 flex items-center justify-center text-xs font-semibold text-[#000000]">
             Loading messages...
           </div>
         ) : messages.length === 0 ? (
-          <div className="flex-1 py-20 flex flex-col items-center justify-center text-[#737782] space-y-2">
-            <Inbox className="w-8 h-8 mx-auto text-[#737782]/40" />
+          <div className="flex-1 py-20 flex flex-col items-center justify-center text-[#000000] space-y-2">
+            <Inbox className="w-8 h-8 mx-auto text-[#000000]/40" />
             <p className="text-xs font-semibold">No contact enquiries found.</p>
           </div>
         ) : (
           <div className="overflow-x-auto w-full flex-1 flex flex-col justify-between">
-            <table className="w-full text-left border-collapse">
-              <thead>
-                <tr className="bg-[#f8fafc] border-b border-slate-200 text-[10px] font-extrabold uppercase tracking-wider text-[#434751]">
-                  <th className="py-3 px-4">Sender Name</th>
-                  <th className="py-3 px-4">Email &amp; Mobile</th>
-                  <th className="py-3 px-4">Subject &amp; Message Excerpt</th>
-                  <th className="py-3 px-4">Received Date</th>
-                  <th className="py-3 px-4 text-center">Actions</th>
+            <table className="w-full text-left border-collapse min-w-[700px]">
+              <thead className="admin-table-header">
+                <tr>
+                  <th className="py-2.5 px-4 w-12 text-center">Sr.</th>
+                  <th className="py-2.5 px-4">Sender Name</th>
+                  <th className="py-2.5 px-4">Email &amp; Mobile</th>
+                  <th className="py-2.5 px-4">Subject &amp; Message Excerpt</th>
+                  <th className="py-2.5 px-4">Received Date</th>
+                  <th className="py-2.5 px-4 text-center w-36">Actions</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-100 text-xs">
-                {messages.map((item) => (
+              <tbody className="divide-y divide-slate-100 text-xs font-semibold text-[#000000]">
+                {messages.map((item, idx) => (
                   <tr
                     key={item.id}
-                    className="hover:bg-[#f8fafc] transition-colors cursor-pointer"
+                    className="hover:bg-[#09468e]/[0.02] transition-colors cursor-pointer"
                     onClick={() => setSelectedMsg(item)}
                   >
+                    {/* Sr. No */}
+                    <td className="py-3 px-4 text-center font-['Roma-Semibold'] text-[#000000] text-xs w-12">
+                      {(currentPage - 1) * itemsPerPage + idx + 1}
+                    </td>
+
                     {/* Sender Name */}
                     <td className="py-3 px-4 align-middle">
-                      <div className="font-bold text-[#1a1c20]">
+                      <div className="font-bold text-[#000000]">
                         {item.firstName} {item.lastName}
                       </div>
                     </td>
 
                     {/* Contact Details */}
                     <td className="py-3 px-4 align-middle">
-                      <div className="text-slate-700 font-medium">{item.email}</div>
-                      <div className="text-[11px] text-slate-500 font-normal mt-0.5">{item.mobile}</div>
+                      <div className="text-[#000000] font-medium">{item.email}</div>
+                      <div className="text-[11px] text-[#000000]/75 font-normal mt-0.5">{item.mobile}</div>
                     </td>
 
                     {/* Subject & Excerpt */}
                     <td className="py-3 px-4 align-middle max-w-[280px] sm:max-w-[340px]">
-                      <div className="font-bold text-[#09468e] truncate">{item.subject}</div>
-                      <div className="text-[11px] text-slate-600 line-clamp-1 font-normal mt-0.5">
+                      <div className="font-bold text-[#000000] truncate">{item.subject}</div>
+                      <div className="text-[11px] text-[#000000]/80 line-clamp-1 font-normal mt-0.5">
                         {item.message}
                       </div>
                     </td>
 
                     {/* Date */}
-                    <td className="py-3 px-4 align-middle text-[11px] text-slate-500 font-medium whitespace-nowrap">
+                    <td className="py-3 px-4 align-middle text-[11px] text-[#000000] font-medium whitespace-nowrap">
                       {new Date(item.createdAt).toLocaleDateString('en-US', {
                         month: 'short',
                         day: 'numeric',
@@ -282,7 +285,7 @@ ${item.message}
                       })}
                     </td>
 
-                    {/* Actions */}
+                    {/* Actions: Icon-only buttons */}
                     <td className="py-3 px-4 text-center align-middle whitespace-nowrap">
                       <div className="flex items-center justify-center gap-1" onClick={(e) => e.stopPropagation()}>
                         <button
@@ -291,17 +294,8 @@ ${item.message}
                           className="table-action-btn table-btn-view"
                           title="Read Full Message"
                         >
-                          <Eye className="w-3.5 h-3.5" />
+                          <Eye className="w-3 h-3" />
                         </button>
-
-                        {/* <button
-                          type="button"
-                          onClick={() => handleDownloadSingle(item)}
-                          className="table-action-btn table-btn-download"
-                          title="Download Enquiry File"
-                        >
-                          <Download className="w-3.5 h-3.5" />
-                        </button> */}
 
                         <button
                           type="button"
@@ -309,7 +303,7 @@ ${item.message}
                           className="table-action-btn table-btn-delete"
                           title="Delete Enquiry"
                         >
-                          <Trash2 className="w-3.5 h-3.5" />
+                          <Trash2 className="w-3 h-3" />
                         </button>
                       </div>
                     </td>
@@ -337,29 +331,19 @@ ${item.message}
       {/* Full Message Reader Modal */}
       {selectedMsg && (
         <div className="fixed inset-0 bg-black/40 backdrop-blur-xs z-50 flex items-center justify-center p-3 animate-in fade-in duration-150">
-          <div className="bg-white rounded-xl brand-border shadow-xl max-w-[520px] w-full overflow-hidden animate-in fade-in zoom-in-95 duration-150">
+          <div className="bg-white rounded-xl brand-border shadow-xl max-w-[500px] w-full overflow-hidden animate-in fade-in zoom-in-95 duration-150">
             {/* Modal Header — Perfectly Aligned Single Line */}
-            <div className="p-3.5 sm:p-4 border-b border-slate-100 flex items-center justify-between gap-2.5">
+            <div className="p-3.5 sm:p-4 border-b border-slate-100 flex items-center justify-between gap-2.5 bg-[#f8fafc]/50">
               <div className="flex items-center gap-2.5 min-w-0 flex-1">
                 <div className="w-7 h-7 rounded-md bg-[#09468e]/10 text-[#09468e] shrink-0 flex items-center justify-center">
                   <Mail className="w-4 h-4 text-[#09468e]" />
                 </div>
                 <h4 className="modal-title text-sm font-bold text-[#003067] truncate leading-tight my-auto">
-                  Enquiry Details
+                  Contact Message Details
                 </h4>
               </div>
 
               <div className="flex items-center gap-1.5">
-                <button
-                  type="button"
-                  onClick={() => handleDownloadSingle(selectedMsg)}
-                  className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-emerald-50 text-emerald-700 hover:bg-emerald-100 transition-colors text-xs font-semibold cursor-pointer border border-emerald-200"
-                  title="Download this enquiry"
-                >
-                  <Download className="w-3.5 h-3.5" />
-                  <span>Download</span>
-                </button>
-
                 <button
                   type="button"
                   onClick={() => setSelectedMsg(null)}
@@ -372,27 +356,43 @@ ${item.message}
             </div>
 
             {/* Modal Body */}
-            <div className="p-4 space-y-3.5 max-h-[70vh] overflow-y-auto">
-              {/* Received Date Badge */}
-              <div className="text-[11px] text-slate-500 font-medium">
-                Received on: <span className="font-bold text-slate-700">{new Date(selectedMsg.createdAt).toLocaleString()}</span>
+            <div className="p-4 space-y-3.5 max-h-[75vh] overflow-y-auto">
+              {/* Received Date Badge (No ID as requested) */}
+              <div className="flex items-center gap-1.5 text-[11px] text-slate-500 font-medium px-0.5">
+                <Clock className="w-3.5 h-3.5 text-slate-400 shrink-0" />
+                <span>
+                  Received on:{' '}
+                  <strong className="text-slate-800">
+                    {new Date(selectedMsg.createdAt).toLocaleString()}
+                  </strong>
+                </span>
               </div>
 
               {/* Sender Details Box */}
               <div className="p-3 bg-[#f8fafc] rounded-lg border border-slate-200 space-y-2 text-xs">
-                <div className="flex items-center gap-2 text-slate-800">
+                <div className="flex items-center gap-2 text-[#000000]">
                   <User className="w-3.5 h-3.5 text-[#09468e] shrink-0" />
-                  <span className="font-bold">{selectedMsg.firstName} {selectedMsg.lastName}</span>
+                  <span className="font-bold text-sm text-[#003067]">
+                    {selectedMsg.firstName} {selectedMsg.lastName}
+                  </span>
                 </div>
-                <div className="flex items-center gap-2 text-slate-700">
+                <div className="flex items-center gap-2 text-[#000000]">
                   <Mail className="w-3.5 h-3.5 text-slate-400 shrink-0" />
-                  <a href={`mailto:${selectedMsg.email}`} className="text-[#09468e] hover:underline font-semibold break-all">
+                  <span className="text-slate-500 font-medium">Email:</span>
+                  <a
+                    href={`mailto:${selectedMsg.email}`}
+                    className="text-[#09468e] hover:underline font-semibold break-all"
+                  >
                     {selectedMsg.email}
                   </a>
                 </div>
-                <div className="flex items-center gap-2 text-slate-700">
+                <div className="flex items-center gap-2 text-[#000000]">
                   <Phone className="w-3.5 h-3.5 text-slate-400 shrink-0" />
-                  <a href={`tel:${selectedMsg.mobile}`} className="text-slate-800 font-semibold">
+                  <span className="text-slate-500 font-medium">Mobile:</span>
+                  <a
+                    href={`tel:${selectedMsg.mobile}`}
+                    className="text-[#000000] hover:text-[#09468e] font-semibold"
+                  >
                     {selectedMsg.mobile}
                   </a>
                 </div>
@@ -400,17 +400,31 @@ ${item.message}
 
               {/* Subject */}
               <div className="space-y-1">
-                <label className="text-[10px] font-bold text-slate-500 uppercase tracking-wider">Subject</label>
-                <div className="text-xs font-bold text-[#09468e] p-2.5 bg-blue-50/50 rounded-lg border border-blue-100 break-words [word-break:break-word] overflow-hidden">
+                <label className="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">
+                  Subject
+                </label>
+                <div className="text-xs font-bold text-[#09468e] p-2.5 bg-blue-50/60 rounded-lg border border-blue-100 break-words [word-break:break-word] overflow-hidden">
                   {selectedMsg.subject}
                 </div>
               </div>
 
-              {/* Message Body */}
-              <div className="space-y-1">
-                <label className="text-[10px] font-bold text-slate-500 uppercase tracking-wider">Message</label>
-                <div className="text-xs font-normal text-slate-700 leading-relaxed p-3 bg-white rounded-lg border border-slate-200 whitespace-pre-wrap break-words [word-break:break-word] max-h-60 overflow-y-auto">
-                  {selectedMsg.message}
+              {/* Message Body with Smooth Slide / Scroll for Long Messages */}
+              <div className="space-y-1.5">
+                <label className="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">
+                  Message
+                </label>
+                <div
+                  className="text-xs font-normal text-[#000000] leading-relaxed p-3.5 bg-[#fcfcfd] rounded-lg border border-slate-200/90 whitespace-pre-wrap break-words [word-break:break-word] max-h-56 sm:max-h-64 overflow-y-auto shadow-inner"
+                  style={{
+                    scrollbarWidth: 'thin',
+                    scrollbarColor: '#94a3b8 #f1f5f9',
+                  }}
+                >
+                  {selectedMsg.message ? (
+                    selectedMsg.message
+                  ) : (
+                    <span className="text-slate-400 italic">No message content.</span>
+                  )}
                 </div>
               </div>
             </div>

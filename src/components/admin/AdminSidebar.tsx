@@ -13,6 +13,8 @@ import {
   ChevronRight,
   ChevronDown,
   Mail,
+  GraduationCap,
+  ShieldAlert,
 } from 'lucide-react';
 
 interface AdminSidebarProps {
@@ -48,7 +50,9 @@ export const SIDEBAR_NAV_ITEMS: SidebarNavItem[] = [
       { id: 'categories', label: 'Categories', href: '/admin/categories', icon: FolderKanban },
     ],
   },
-  { id: 'contact-messages', label: 'Contact Messages', href: '/admin/contact-messages', icon: Mail },
+  { id: 'contact-messages', label: 'Contact Enquiries', href: '/admin/contact-messages', icon: Mail },
+  { id: 'enquiries', label: 'Admission Enquiries', href: '/admin/enquiries', icon: GraduationCap },
+  { id: 'grievances', label: 'Grievance Redressal', href: '/admin/grievances', icon: ShieldAlert },
 ];
 
 export const AdminSidebar: React.FC<AdminSidebarProps> = ({
@@ -142,7 +146,7 @@ export const AdminSidebar: React.FC<AdminSidebarProps> = ({
 
           {/* Navigation Category Label */}
           {!isCollapsed && (
-            <div className="px-2 mb-2 text-[10px] font-extrabold uppercase tracking-wider text-[#737782]">
+            <div className="px-2 mb-2 text-[10px] font-extrabold uppercase tracking-wider text-[#000000]">
               Menu
             </div>
           )}
@@ -184,7 +188,7 @@ export const AdminSidebar: React.FC<AdminSidebarProps> = ({
                           ? 'text-white'
                           : anyChildActive
                             ? 'text-[#09468e]'
-                            : 'text-[#737782]'
+                            : 'text-[#000000]'
                           }`}
                       />
                       {!isCollapsed && (
@@ -193,7 +197,7 @@ export const AdminSidebar: React.FC<AdminSidebarProps> = ({
                             {item.label}
                           </span>
                           <ChevronDown
-                            className={`w-3 h-3 shrink-0 text-[#737782] transition-transform duration-200 ${groupOpen ? 'rotate-180 text-[#1a1c20]' : ''
+                            className={`w-3 h-3 shrink-0 text-[#000000] transition-transform duration-200 ${groupOpen ? 'rotate-180 text-[#1a1c20]' : ''
                               }`}
                           />
                         </>
@@ -202,7 +206,7 @@ export const AdminSidebar: React.FC<AdminSidebarProps> = ({
 
                     {/* Children sub-links */}
                     {!isCollapsed && groupOpen && (
-                      <div className="mt-1.5 ml-3 pl-2.5 border-l border-[#737782]/20 space-y-1.5">
+                      <div className="mt-1.5 ml-3 pl-2.5 border-l border-[#000000]/20 space-y-1.5">
                         {item.children.map((child) => {
                           const ChildIcon = child.icon;
                           const childActive =
@@ -218,7 +222,7 @@ export const AdminSidebar: React.FC<AdminSidebarProps> = ({
                                 }`}
                             >
                               <ChildIcon
-                                className={`w-3 h-3 shrink-0 ${childActive ? 'text-white' : 'text-[#737782]'
+                                className={`w-3 h-3 shrink-0 ${childActive ? 'text-white' : 'text-[#000000]'
                                   }`}
                               />
                               <span className="tracking-tight whitespace-nowrap leading-none">{child.label}</span>
@@ -249,7 +253,7 @@ export const AdminSidebar: React.FC<AdminSidebarProps> = ({
                     }`}
                 >
                   <Icon
-                    className={`w-3.5 h-3.5 shrink-0 ${isActive ? 'text-white' : 'text-[#737782]'
+                    className={`w-3.5 h-3.5 shrink-0 ${isActive ? 'text-white' : 'text-[#000000]'
                       }`}
                   />
                   {!isCollapsed && <span className="tracking-tight">{item.label}</span>}
