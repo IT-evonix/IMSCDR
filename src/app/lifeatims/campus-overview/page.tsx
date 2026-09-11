@@ -8,7 +8,7 @@ const page = () => {
         <div className="aboutsec_inner">
           <div className="aboutus_left">
             <Image
-              src="/images/campus/campus-overview.webp"
+              src="/images/campus/campus-overview/campus-overview.webp"
               alt="Banner"
               width={1200}
               height={900}
@@ -157,7 +157,7 @@ const page = () => {
 
         <div className="ourvaluesmain">
           <Image
-            src="/images/campus/valuesimg.webp"
+            src="/images/campus/campus-overview/valuesimg.webp"
             alt="Banner"
             width={1400}
             height={613}

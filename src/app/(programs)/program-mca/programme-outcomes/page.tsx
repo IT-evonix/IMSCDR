@@ -4,7 +4,7 @@ import Image from "next/image";
 const page = () => {
   return (
     <div className="innerpagerightside">
-      <div className="programme_outcome_main">
+      <div className="programme_outcome_main programme_outcome_mainmca">
         <div className="subheading mb-4">Upon successful completion of the programme, graduates will be able to:</div>
         <div className="programme_outcome_box">
           <div className="programme_outcome_left">
@@ -32,9 +32,9 @@ const page = () => {
             </div>
           </div>
           <div className="programme_outcome_right">
-            {/* <div className="subheading">Generic and Domain Knowledge</div> */}
+            <div className="subheading">Application of Fundamental & Knowledge</div>
             <p className="p-0 m-0">
-              Apply computing fundamentals and domain knowledge to solve complex computing problems.
+              Graduates will be able to apply computing fundamentals and domain knowledge to solve complex computing problems.
             </p>
           </div>
         </div>
@@ -64,9 +64,9 @@ const page = () => {
             </div>
           </div>
           <div className="programme_outcome_right">
-            {/* <div className="subheading">Problem Solving & Innovation</div> */}
+            <div className="subheading">Devise Innovative Solutions</div>
             <p className="p-0 m-0">
-              Analyse, design and develop innovative software solutions.
+              Graduates will analyse, design and develop innovative software solutions.
             </p>
           </div>
         </div>
@@ -96,9 +96,9 @@ const page = () => {
             </div>
           </div>
           <div className="programme_outcome_right">
-            {/* <div className="subheading">Critical Thinking</div> */}
+            <div className="subheading">Research Capabilities</div>
             <p className="p-0 m-0">
-              Conduct research using scientific methods and analytical techniques.
+              Graduates can conduct research using scientific methods and analytical techniques.
             </p>
           </div>
         </div>
@@ -128,9 +128,9 @@ const page = () => {
             </div>
           </div>
           <div className="programme_outcome_right">
-            {/* <div className="subheading">Effective Communication</div> */}
+            <div className="subheading">Technological Expertise</div>
             <p className="p-0 m-0">
-              Utilize modern computing tools and emerging technologies effectively.
+              Graduates will utilize modern computing tools and emerging technologies effectively.
             </p>
           </div>
         </div>
@@ -160,9 +160,9 @@ const page = () => {
             </div>
           </div>
           <div className="programme_outcome_right">
-            {/* <div className="subheading">Leadership and Team Work</div> */}
+            <div className="subheading">Ethical Computing</div>
             <p className="p-0 m-0">
-              Demonstrate ethical, legal and professional responsibilities in computing.
+              Graduates will demonstrate ethical, legal and professional responsibilities in computing.
             </p>
           </div>
         </div>
@@ -192,11 +192,11 @@ const page = () => {
             </div>
           </div>
           <div className="programme_outcome_right">
-            {/* <div className="subheading">
-              Global Orientation and Cross-Cultural Appreciation
-            </div> */}
+            <div className="subheading">
+              Learning Mindset
+            </div>
             <p className="p-0 m-0">
-              Engage in lifelong learning and continuous professional development.
+              Graduates will engage in lifelong learning and continuous professional development.
             </p>
           </div>
         </div>
@@ -226,9 +226,9 @@ const page = () => {
             </div>
           </div>
           <div className="programme_outcome_right">
-            {/* <div className="subheading">Entrepreneurship </div> */}
+            <div className="subheading">Multidisciplinary Competence </div>
             <p className="p-0 m-0">
-              Apply computing and management principles in multidisciplinary environments.
+              Graduates will apply computing and management principles in multidisciplinary environments.
             </p>
           </div>
         </div>
@@ -258,9 +258,9 @@ const page = () => {
             </div>
           </div>
           <div className="programme_outcome_right">
-            {/* <div className="subheading">Environment and Sustainability</div> */}
+            <div className="subheading">Communication Skills</div>
             <p className="p-0 m-0">
-              Communicate effectively with technical and non-technical stakeholders.
+              Graduates will be able to communicate effectively with technical and non-technical stakeholders.
             </p>
           </div>
         </div>
@@ -277,9 +277,9 @@ const page = () => {
             </div>
           </div>
           <div className="programme_outcome_right">
-            {/* <div className="subheading">Social Responsiveness and Ethics</div> */}
+            <div className="subheading">Tempered Professionalism</div>
             <p className="p-0 m-0">
-              Understand societal, environmental and legal responsibilities of computing professionals.
+              Graduates will be able to understand societal, environmental and legal responsibilities of computing professionals.
             </p>
           </div>
         </div>
@@ -296,9 +296,9 @@ const page = () => {
             </div>
           </div>
           <div className="programme_outcome_right">
-            {/* <div className="subheading">Life Long Learning</div> */}
+            <div className="subheading">Enhanced Work Ethic</div>
             <p className="p-0 m-0">
-              Work effectively as an individual and as a team leader.
+              Graduates will work effectively as an individual and as a team leader.
             </p>
           </div>
         </div>
@@ -316,9 +316,9 @@ const page = () => {
             </div>
           </div>
           <div className="programme_outcome_right">
-            {/* <div className="subheading">Social Responsiveness and Ethics</div> */}
+            <div className="subheading">Evolved Thinking</div>
             <p className="p-0 m-0">
-              Demonstrate innovation, entrepreneurship and sustainable thinking.
+              Graduates will demonstrate innovation, entrepreneurship and sustainable thinking.
             </p>
           </div>
         </div>
@@ -335,9 +335,9 @@ const page = () => {
             </div>
           </div>
           <div className="programme_outcome_right">
-            {/* <div className="subheading">Life Long Learning</div> */}
+            <div className="subheading">Value Creation</div>
             <p className="p-0 m-0">
-              Create value through technology-driven solutions for industry and society.
+              Graduates will be able to create value through technology-driven solutions for industry and society.
             </p>
           </div>
         </div>

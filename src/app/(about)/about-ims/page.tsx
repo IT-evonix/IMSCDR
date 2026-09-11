@@ -12,7 +12,7 @@ const page = () => {
               <div className="about_inner_img">
                 <Image
                   className="img-fluid"
-                  src="/images/program/mba-overview1.webp"
+                  src="/images/about/home-aboutimg.webp"
                   alt="about imscdr"
                   width={350}
                   height={350}
