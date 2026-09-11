@@ -1,5 +1,5 @@
 const prisma = require('../config/db');
-const { generateCsv } = require('../utils/exportHelper');
+const { generateCsv, generateExcel } = require('../utils/exportHelper');
 
 // Default Thumbnail (matches static newsData fallback image)
 const DEFAULT_IMSCDR_LOGO = '/images/news-and-events/newsandevents.webp';
@@ -40,6 +40,13 @@ exports.createNewsEvent = async (req, res, next) => {
       return res.status(400).json({
         status: 'fail',
         message: 'Title / Heading is required.',
+      });
+    }
+
+    if (!normalizedContentType) {
+      return res.status(400).json({
+        status: 'fail',
+        message: 'Type of Post is required (News, Event, Blog, Notice, Circular).',
       });
     }
 
@@ -290,6 +297,13 @@ exports.updateNewsEvent = async (req, res, next) => {
         else if (lower === 'circular' || lower === 'circulars') normalizedContentType = 'Circular';
         else normalizedContentType = contentType.trim().charAt(0).toUpperCase() + contentType.trim().slice(1);
       }
+
+      if (!normalizedContentType) {
+        return res.status(400).json({
+          status: 'fail',
+          message: 'Type of Post cannot be empty.',
+        });
+      }
     }
 
     // Determine Thumbnail URL
@@ -409,11 +423,13 @@ exports.exportNewsEvents = async (req, res, next) => {
       { label: 'Created At', key: (r) => new Date(r.createdAt).toLocaleString() },
     ];
 
-    const csv = generateCsv(items, columns);
+    const excelBuffer = generateExcel(items, columns, 'News & Events');
+    const today = new Date().toISOString().split('T')[0];
+    const filename = `IMSCDR_News_Events_${today}.xlsx`;
 
-    res.setHeader('Content-Type', 'text/csv');
-    res.setHeader('Content-Disposition', `attachment; filename=news_events_${Date.now()}.csv`);
-    return res.status(200).send(csv);
+    res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+    res.setHeader('Content-Disposition', `attachment; filename="${filename}"`);
+    return res.status(200).send(excelBuffer);
   } catch (error) {
     next(error);
   }

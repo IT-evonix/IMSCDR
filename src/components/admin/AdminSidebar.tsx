@@ -43,11 +43,11 @@ export const SIDEBAR_NAV_ITEMS: SidebarNavItem[] = [
   { id: 'dashboard', label: 'Dashboard', href: '/admin', icon: LayoutDashboard },
   {
     id: 'news-events-blogs',
-    label: 'News-Events & Blogs',
+    label: 'News-Events , Blogs & Circulars',
     icon: Newspaper,
     children: [
-      { id: 'news-events', label: 'All Posts', href: '/admin/news-events', icon: Newspaper },
       { id: 'categories', label: 'Categories', href: '/admin/categories', icon: FolderKanban },
+      { id: 'news-events', label: 'All Posts', href: '/admin/news-events', icon: Newspaper },
     ],
   },
   { id: 'contact-messages', label: 'Contact Enquiries', href: '/admin/contact-messages', icon: Mail },

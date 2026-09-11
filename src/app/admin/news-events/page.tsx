@@ -8,6 +8,7 @@ import { ContentPagination } from '@/components/admin/ContentPagination';
 import { ConfirmModal } from '@/components/ui/ConfirmModal';
 import { LogoLoader } from '@/components/ui/LogoLoader';
 import { authenticatedFetch } from '@/lib/auth';
+import { FileSpreadsheet } from 'lucide-react';
 
 
 export default function ContentLibraryPage() {
@@ -29,6 +30,7 @@ export default function ContentLibraryPage() {
   const [deleteModalOpen, setDeleteModalOpen] = useState(false);
   const [itemToDelete, setItemToDelete] = useState<ContentItem | null>(null);
   const [isDeleting, setIsDeleting] = useState(false);
+  const [isExporting, setIsExporting] = useState(false);
 
   const handleResetFilters = () => {
     setSearchQuery('');
@@ -152,6 +154,36 @@ export default function ContentLibraryPage() {
     }
   };
 
+  const handleExportExcel = async () => {
+    try {
+      setIsExporting(true);
+      const params = new URLSearchParams();
+      if (searchQuery.trim()) params.append('search', searchQuery.trim());
+      if (selectedType !== 'All') params.append('contentType', selectedType);
+      if (selectedCategory !== 'All') params.append('category', selectedCategory);
+      if (selectedStatus !== 'All') params.append('status', selectedStatus);
+
+      const res = await authenticatedFetch(`/api/news-events/export?${params.toString()}`);
+      if (!res.ok) throw new Error('Export failed');
+
+      const blob = await res.blob();
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      const today = new Date().toISOString().slice(0, 10);
+      a.download = `IMSCDR_News_Events_${today}.xlsx`;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      window.URL.revokeObjectURL(url);
+    } catch (err) {
+      console.error('Export Excel error:', err);
+      alert('Could not export news & events Excel file. Please try again.');
+    } finally {
+      setIsExporting(false);
+    }
+  };
+
 
 
   return (
@@ -161,7 +193,17 @@ export default function ContentLibraryPage() {
         subtitle="IMSCDR Management"
         title="News-Events & Blogs"
         description="Manage and publish your institution's digital assets."
-      />
+      >
+        <button
+          type="button"
+          onClick={handleExportExcel}
+          disabled={isExporting}
+          className="explore_more_btn !h-7 !px-3 !text-[11px] !font-bold"
+        >
+          <FileSpreadsheet className="w-3 h-3" />
+          <span>{isExporting ? 'Exporting...' : 'Export to Excel'}</span>
+        </button>
+      </PageTitle>
         <ContentSearchBar
           searchQuery={searchQuery}
           onSearchChange={(q) => { setSearchQuery(q); setCurrentPage(1); }}

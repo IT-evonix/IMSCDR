@@ -93,7 +93,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onSuccess }) => {
           <Input
             label="EMAIL ADDRESS"
             type="email"
-            placeholder="admin@evonix.co"
+            placeholder="Enter your email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             icon={<User className="w-3.5 h-3.5 text-[#737782]" />}
@@ -103,7 +103,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onSuccess }) => {
           <Input
             label="PASSWORD"
             type={showPassword ? "text" : "password"}
-            placeholder="••••••••"
+            placeholder="Enter your password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             icon={<Lock className="w-3.5 h-3.5 text-[#737782]" />}
