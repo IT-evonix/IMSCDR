@@ -104,14 +104,14 @@ const Page = () => {
         "/api/news-events?page=1&limit=50&status=Published",
       );
       const data = await res.json();
-      if (res.ok && data.status === "success" && Array.isArray(data.data)) {
-        // Only display published/active News and Events (exclude Blogs)
-        const publishedOnly = data.data.filter(
-          (item: any) =>
-            item.status === "Published" &&
-            item.contentType?.toLowerCase() !== "blog",
-        );
-        setDynamicItems(publishedOnly);
+      if (res.ok && data.status === 'success' && Array.isArray(data.data)) {
+        // Sirf News, Event aur bina type (legacy empty) wale posts hi aayenge. Dusra koi bhi type allow nahi hoga.
+        const newsAndEventsOnly = data.data.filter((item: any) => {
+          if (item.status !== 'Published') return false;
+          const type = (item.contentType || '').trim().toLowerCase();
+          return type === 'news' || type === 'event' || type === '';
+        });
+        setDynamicItems(newsAndEventsOnly);
       }
     } catch {
       // Silently fall back to static data only

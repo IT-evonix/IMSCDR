@@ -1,5 +1,5 @@
 const prisma = require('../config/db');
-const { generateCsv } = require('../utils/exportHelper');
+const { generateCsv, generateExcel } = require('../utils/exportHelper');
 
 // Submit Contact Us Form (Public API for website visitors - Saves to Database)
 exports.submitContactForm = async (req, res, next) => {
@@ -67,17 +67,19 @@ exports.downloadContactsCsv = async (req, res, next) => {
       { label: 'Received Date', key: (row) => new Date(row.createdAt).toLocaleString() },
     ];
 
-    const csvData = generateCsv(messages, columns);
+    const excelBuffer = generateExcel(messages, columns, 'Contact Enquiries');
     const today = new Date().toISOString().split('T')[0];
-    const filename = `IMSCDR_Contact_Enquiries_${today}.csv`;
+    const filename = `IMSCDR_Contact_Enquiries_${today}.xlsx`;
 
-    res.setHeader('Content-Type', 'text/csv; charset=utf-8');
+    res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
     res.setHeader('Content-Disposition', `attachment; filename="${filename}"`);
-    return res.status(200).send(csvData);
+    return res.status(200).send(excelBuffer);
   } catch (error) {
     next(error);
   }
 };
+
+exports.downloadContactsExcel = exports.downloadContactsCsv;
 
 // Get All Contact Messages (Admin Protected Route - Soft Deleted records excluded)
 exports.getAllContactMessages = async (req, res, next) => {
@@ -256,11 +258,13 @@ exports.exportContactMessages = async (req, res, next) => {
       { label: 'Received Date', key: (row) => new Date(row.createdAt).toLocaleString() },
     ];
 
-    const csv = generateCsv(messages, columns);
+    const excelBuffer = generateExcel(messages, columns, 'Contact Enquiries');
+    const today = new Date().toISOString().split('T')[0];
+    const filename = `IMSCDR_Contact_Enquiries_${today}.xlsx`;
 
-    res.setHeader('Content-Type', 'text/csv');
-    res.setHeader('Content-Disposition', `attachment; filename=contact_enquiries_${Date.now()}.csv`);
-    return res.status(200).send(csv);
+    res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+    res.setHeader('Content-Disposition', `attachment; filename="${filename}"`);
+    return res.status(200).send(excelBuffer);
   } catch (error) {
     next(error);
   }

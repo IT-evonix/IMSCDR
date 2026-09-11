@@ -1,5 +1,5 @@
 const prisma = require('../config/db');
-const { generateCsv } = require('../utils/exportHelper');
+const { generateCsv, generateExcel } = require('../utils/exportHelper');
 const { verifyRecaptcha } = require('../utils/recaptchaHelper');
 
 // --------------------------------------------------------------------------
@@ -298,14 +298,16 @@ exports.exportGrievancesCsv = async (req, res, next) => {
       },
     ];
 
-    const csvData = generateCsv(records, columns);
+    const excelBuffer = generateExcel(records, columns, 'Grievances');
     const today = new Date().toISOString().split('T')[0];
-    const filename = `IMSCDR_Grievance_Complaints_${today}.csv`;
+    const filename = `IMSCDR_Grievance_Complaints_${today}.xlsx`;
 
-    res.setHeader('Content-Type', 'text/csv; charset=utf-8');
+    res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
     res.setHeader('Content-Disposition', `attachment; filename="${filename}"`);
-    return res.status(200).send(csvData);
+    return res.status(200).send(excelBuffer);
   } catch (error) {
     next(error);
   }
 };
+
+exports.exportGrievancesExcel = exports.exportGrievancesCsv;

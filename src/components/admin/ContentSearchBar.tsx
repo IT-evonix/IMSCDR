@@ -238,7 +238,13 @@ export const ContentSearchBar: React.FC<ContentSearchBarProps> = ({
               <input
                 type="date"
                 value={startDate}
-                onChange={(e) => onStartDateChange(e.target.value)}
+                onChange={(e) => {
+                  const val = e.target.value;
+                  onStartDateChange(val);
+                  if (endDate && val && endDate < val && onEndDateChange) {
+                    onEndDateChange('');
+                  }
+                }}
                 className="filter-input w-full cursor-pointer outline-none hover:border-[#09468e] focus:border-[#09468e] focus:ring-1 focus:ring-[#09468e]/20 transition-all"
               />
             </div>
@@ -252,6 +258,7 @@ export const ContentSearchBar: React.FC<ContentSearchBarProps> = ({
               </label>
               <input
                 type="date"
+                min={startDate || undefined}
                 value={endDate}
                 onChange={(e) => onEndDateChange(e.target.value)}
                 className="filter-input w-full cursor-pointer outline-none hover:border-[#09468e] focus:border-[#09468e] focus:ring-1 focus:ring-[#09468e]/20 transition-all"

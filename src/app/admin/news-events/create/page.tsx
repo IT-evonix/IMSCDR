@@ -20,7 +20,7 @@ const FORM_CONFIG = {
   },
   POST_TYPE: {
     label: 'Type of Post',
-    required: false,
+    required: true,
     options: [
       { value: '', label: 'Select Type' },
       { value: 'News', label: 'News' },
@@ -241,6 +241,22 @@ export default function CreateNewsEventPage() {
       return;
     }
 
+    if (!contentType || !contentType.trim()) {
+      showAlertModal('Please select a Type of Post (News, Event, Blog, Notice, Circular) before publishing.', 'Post Type Required', 'warning');
+      return;
+    }
+
+    const todayStr = new Date().toISOString().split('T')[0];
+    if (!editId && startDate && startDate < todayStr) {
+      showAlertModal('Start Date cannot be in the past. Please select today or a future date.', 'Invalid Date', 'warning');
+      return;
+    }
+
+    if (startDate && endDate && endDate < startDate) {
+      showAlertModal('End Date cannot be earlier than Start Date. Please select a valid date range.', 'Invalid Date Range', 'warning');
+      return;
+    }
+
     if (contentTypeOption === 'description') {
       const textOnly = contentHtml.replace(/<[^>]*>/g, '').trim();
       if (!textOnly && !contentHtml.includes('<img')) {
@@ -421,6 +437,10 @@ export default function CreateNewsEventPage() {
     }
   };
 
+  const todayStr = new Date().toISOString().split('T')[0];
+  const minStartDate = editId && startDate && startDate < todayStr ? startDate : todayStr;
+  const minEndDate = startDate ? (startDate > todayStr ? startDate : todayStr) : todayStr;
+
   return (
     <div className="max-w-[1150px] w-full mx-auto space-y-3 pb-4 pt-1">
       {/* Page Header */}
@@ -452,6 +472,7 @@ export default function CreateNewsEventPage() {
                 {FORM_CONFIG.POST_TYPE.label} {FORM_CONFIG.POST_TYPE.required && <span className="text-red-500">*</span>}
               </label>
               <select
+                required={FORM_CONFIG.POST_TYPE.required}
                 value={contentType}
                 onChange={(e) => {
                   const val = normalizeType(e.target.value);
@@ -506,6 +527,7 @@ export default function CreateNewsEventPage() {
               </label>
               <input
                 type="date"
+                min={minStartDate}
                 value={startDate}
                 onChange={(e) => setStartDate(e.target.value)}
                 className="w-full px-3.5 py-2 rounded-lg brand-border text-xs outline-none font-normal text-[#1a1c20]"
@@ -520,8 +542,15 @@ export default function CreateNewsEventPage() {
                 </label>
                 <input
                   type="date"
+                  min={minStartDate}
                   value={startDate}
-                  onChange={(e) => setStartDate(e.target.value)}
+                  onChange={(e) => {
+                    const newStart = e.target.value;
+                    setStartDate(newStart);
+                    if (endDate && newStart && endDate < newStart) {
+                      setEndDate(newStart);
+                    }
+                  }}
                   className="w-full px-3.5 py-2 rounded-lg brand-border text-xs outline-none font-normal text-[#1a1c20]"
                 />
               </div>
@@ -533,6 +562,7 @@ export default function CreateNewsEventPage() {
                 </label>
                 <input
                   type="date"
+                  min={minEndDate}
                   value={endDate}
                   onChange={(e) => setEndDate(e.target.value)}
                   className="w-full px-3.5 py-2 rounded-lg brand-border text-xs outline-none font-normal text-[#1a1c20]"
