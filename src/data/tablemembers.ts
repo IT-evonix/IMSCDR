@@ -263,14 +263,14 @@ export const antiRaggingCommitteeMembers = [
   {
     srNo: "5",
     name: "Vikram Barnabas",
-    role: "Associated with the Institute a Faculty Member",
+    role: "Dy Direct of institute",
     // representation: "Associated with the Institute a Faculty Member",
     // contactNumber: "9890937793",
   },
   {
     srNo: "6",
     name: "Mahesh Dixit",
-    role: "-",
+    role: "Associated with the offiice superintendent",
     // representation: "-",
     // contactNumber: "-",
   },
@@ -968,13 +968,14 @@ export const iqacCommitteeMembers = [
   },
   {
     srNo: "7",
-    name: "Rahul Khandelwal",
+    name: "Sanjay Bhakkad",
     designation: "-",  
   },
   {
     srNo: "8",
     name: "Sayyed Mudassar N.",
-    designation: "-",  
+    highlight: true,
+    designation: "Committee Head",  
   },
   {
     srNo: "9",
@@ -1008,7 +1009,7 @@ export const iqacCommitteeMembers = [
 // Documents Required Start Here ----------------------------
 export const DocumentsRequiredColumns = [
   {
-    key: "id",
+    key: "srNo",
     title: "Sr. No.",
   },
   {
@@ -1018,47 +1019,47 @@ export const DocumentsRequiredColumns = [
 ];
 export const DocumentsRequiredText = [
   {
-    id: 1,
+    srNo: 1,
     text: "Statement of marks obtained at 10th/SSC or its Equivalent Examination",
   },
   {
-    id: 2,
+    srNo: 2,
     text: "Statement of marks obtained at 12th/HSC or its Equivalent Examination.",
   },
   {
-    id: 3,
+    srNo: 3,
     text: "Certificate of the Indian Nationality of the candidate",
   },
   {
-    id: 4,
+    srNo: 4,
     text: "Domicile Certificate of Candidate indicating that he/she is Domiciled in the State of Maharashtra",
   },
   {
-    id: 5,
+    srNo: 5,
     text: "Caste Certificate stating that the caste is recognised under backward class category in Maharashtra",
   },
   {
-    id: 6,
+    srNo: 6,
     text: "Caste / Tribe Validity Certificate issued by Caste / Tribe Certificate Scrutiny Committee",
   },
   {
-    id: 7,
+    srNo: 7,
     text: "Non-Creamy Layer Certificate valid upto 31st March 2027",
   },
   {
-    id: 8,
+    srNo: 8,
     text: "Graduation Marksheet",
   },
   {
-    id: 9,
+    srNo: 9,
     text: "Score Card of MAH-MCA-CET-2026",
   },
   {
-    id: 10,
+    srNo: 10,
     text: "CGPA TO Equivalent Percentage certificate",
   },
   {
-    id: 11,
+    srNo: 11,
     text: "APAAR ID CARD",
   },
 ];

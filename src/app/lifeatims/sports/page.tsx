@@ -30,7 +30,7 @@ const page = () => {
         <div className="col-md-12">
           <div className="infrastructure_main">
             <Image
-              src="/images/campus/infrastructure.webp"
+              src="/images/campus/infrastructure/infrastructure.webp"
               alt="infrastructure"
               width={1400}
               height={522}

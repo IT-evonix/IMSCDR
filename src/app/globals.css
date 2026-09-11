@@ -1538,6 +1538,7 @@ Body {
   white-space: nowrap;
   letter-spacing: 0.4px;
   vertical-align: middle;
+  line-height: normal;
 }
 .governing-table thead th:first-child {
   border-top-left-radius: 18px;
@@ -2230,6 +2231,7 @@ Body {
   top: 8px;
   left: 0;
 }
+  
 /*----- Specializations Page End Here -----*/
 /*----- Eligibility Page Start Here -----*/
 .eligibility_main {
@@ -2569,6 +2571,9 @@ Body {
 }
 .programme_outcome_box:nth-child(even) .programme_outcome_right {
   background-color: #e0eaf6;
+}
+.programme_outcome_mainmca .programme_outcome_right{
+  min-height: 180px;
 }
 .programme_outcome_left {
   width: 57%;
@@ -3634,12 +3639,31 @@ Body {
 .scholarships_page .governing-table thead th:last-child {
   border-top-right-radius: 0px;
 }
-.scholarships_page .governing-table thead tr:last-child th {
+/* .scholarships_page .governing-table thead tr:last-child th {
   font-size: 12px;
-}
+} */
 .scholarships_page .governing-table thead th {
   border-right: 1px solid #ffffff1f;
   white-space: wrap;
+  line-height: normal;
+}
+.placement-table-year-heading {
+  background-color:#0a4f9d !important;
+}
+.statistics_data_table .governing-table thead th {
+    white-space: wrap;
+    border-right: 1px solid #ffffff1f;
+    line-height:normal;
+}
+.statistics_data_table .governing-table thead th{
+    white-space: normal;
+    border-right: 1px solid #ffffff1f;
+}
+.statistics_data_table .Enrollment_row th:first-child{
+    border-top-left-radius: 0px;
+}
+.statistics_data_table .Enrollment_row th:last-child{
+    border-top-right-radius: 0px;
 }
 .academic_calendar_table  .governing-table thead th:first-child{
     border-top-left-radius: 0px;
@@ -3650,6 +3674,7 @@ Body {
 .academic_calendar_table .governing-table thead th {
     white-space: wrap;
     border-right: 1px solid #ffffff1f;
+    line-height:normal;
 }
 .VacationColumn{
   background: #0a4f9d !important;
@@ -3997,6 +4022,23 @@ Body {
 }
 .hostel_image img {
   width: 100%;
+  border-radius: 25px;
+}
+ .hostel_image{
+    position: relative;
+  }
+.hostel_image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        transparent 40%,
+        rgba(0, 0, 0, 0.85) 100%
+    );
+    z-index: 10;
+    pointer-events: none;
+    border-radius:25px;
 }
 .hosteltopinner {
   background-image: url(/images/campus/hostel/girls_hostel_bg.webp);
@@ -4016,6 +4058,7 @@ Body {
   margin: 0 auto;
   text-align: center;
   line-height: normal;
+  z-index:999;
 }
 .Capacitytext span {
   font-size: 20px;
@@ -4795,7 +4838,7 @@ border: 10px solid #fff;
 }
 @media (max-width: 991.98px) {
   .heading {
-    font-size: 28px;
+    font-size: 25px;
   }
   /* Header Start Here */
   .topbar_inner {
@@ -5064,7 +5107,7 @@ border: 10px solid #fff;
     position: fixed;
     left: 0;
     top: 120px;
-    z-index: 5;
+    z-index:99;
   }
   .sidebar-toggle svg {
     color: #fff;
@@ -5170,6 +5213,7 @@ border: 10px solid #fff;
   }
   .overview_right2 {
     width: 100%;
+    font-size:16px ;
   }
   .imscdr_box {
     bottom: 20px;
@@ -5443,7 +5487,12 @@ border: 10px solid #fff;
   .faq-answer.show {
     padding: 0 15px 24px;
   }
-
+  .programme_outcome_left{
+    width: 45%;
+  }
+  .programme_outcome_right{
+    width: 54%;
+  }
   .mca_career_opportunities_main .facilities-wrapper {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -5478,6 +5527,10 @@ border: 10px solid #fff;
   .faculty-modal-overlay .info-box {
     width: 48%;
   }
+  .governing-table th:nth-child(1),
+.governing-table td:nth-child(1) {
+  width: inherit;
+}
   /*---------------- Programe Tab End Here ----------------*/
   /*-------------- Addmision tab Start here --------------*/
   .admission_process_content{
@@ -5609,6 +5662,16 @@ border: 10px solid #fff;
     margin: 20px 0 0 0;
     padding-left: 0px;
     position: inherit;
+  }
+  .librarianImg{
+    padding-left: 0px;
+  }
+  .librarianImginner:after{
+    width: 90%;
+    top: -15px;
+    right: 0px;
+    margin: 0 auto;
+    left: 0;
   }
   /*---------------- Life @ IMS End Here ----------------*/
 }
@@ -5782,7 +5845,37 @@ border: 10px solid #fff;
   .facilities-wrapper {
     grid-template-columns: repeat(1, 1fr);
   }
-
+  .governing-table thead th{
+    padding: 17px 15px 17px 15px;
+  }
+  .governing-table tbody td{
+    padding: 10px 15px;
+  }
+  .programme_outcome_box{
+    flex-wrap: wrap;
+  }
+  .programme_outcome_left, .programme_outcome_right {
+    width: 100%;
+    min-height: inherit;
+  }
+  .programme_outcome_mainmca .programme_outcome_right {
+    min-height: inherit;
+  }
+  .programme_outcome_left{
+    width: 100%;
+  }
+  .programme_outcome_box {
+    gap: 10px;
+  }
+  .intake_number{
+    font-size: 30px;
+    gap: 0px;
+    flex-wrap: wrap;
+  }
+  .intake_content p{
+    padding: 5px 0;
+    line-height: normal;
+  }
   /*--------------- Programee Tab End Here ---------------*/
   /*-------------- Addmision tab Start here --------------*/
   .processCrad .processCrad_Arrow svg {

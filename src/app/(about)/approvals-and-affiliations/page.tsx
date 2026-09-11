@@ -17,7 +17,7 @@ const page = () => {
           </div>
           <div className="content-box">
             <div className="heading" style={{ lineHeight: "36px" }}>
-              We are an AICTE approved institiution affliliated to SPPU
+              We are an AICTE approved institiution affiliated to SPPU and also also NAAC re-accreditation
             </div>
             <ExploreBtn href="/about" text="Know More" />
           </div>

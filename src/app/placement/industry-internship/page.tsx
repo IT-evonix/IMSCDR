@@ -8,7 +8,7 @@ const page = () => {
         <div className="aboutsec_inner">
           <div className="aboutus_left">
             <Image
-              src="/images/campus/campus-overview.webp"
+              src="/images/campus/hostel/girls_hostel_new.webp"
               alt="Banner"
               width={1200}
               height={900}

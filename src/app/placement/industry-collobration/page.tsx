@@ -26,167 +26,167 @@ const page = () => {
                 </thead>
                 <tbody>
                   <tr>
-                    <td>1</td>
+                    <td><span className="sr-badge">01</span></td>
                     <td>Mr Samir Patwardhan</td>
                     <td>Aspire Moulding & Tools</td>
                   </tr>
                   <tr>
-                    <td>2</td>
+                    <td><span className="sr-badge">02</span></td>
                     <td>Mr. Chinmay Sukhtankar</td>
                     <td>Prathamesh Indu.</td>
                   </tr>
                   <tr>
-                    <td>3</td>
+                    <td><span className="sr-badge">03</span></td>
                     <td>Mr. Sunil Kanwade</td>
                     <td>Siddhi Stampings</td>
                   </tr>
                   <tr>
-                    <td>04	</td>
+                    <td><span className="sr-badge">04</span>	</td>
                     <td>Mr. Vijay Ingale	</td>
                     <td>Mayur Industries</td>
                   </tr>
                   <tr>
-                    <td>05	</td>
+                    <td><span className="sr-badge">05</span>	</td>
                     <td>Mr. Shashikant Gulve	</td>
                     <td>Kinetic</td>
                   </tr>
                   <tr>
-                    <td>06	</td>
+                    <td><span className="sr-badge">06</span>	</td>
                     <td>Mr Sunil Munot	</td>
                     <td>Klassic Wheels</td>
                   </tr>
                   <tr>
-                    <td>07	</td>
+                    <td><span className="sr-badge">07</span>	</td>
                     <td>Mr Anurag Dhoot	</td>
                     <td>Epitome</td>
                   </tr>
                   <tr>
-                    <td>08	</td>
+                    <td><span className="sr-badge">08</span>	</td>
                     <td>Mr. Aniruddha Ghaisas	</td>
                     <td>Anipra Chemicals</td>
                   </tr>
                   <tr>
-                    <td>09	</td>
+                    <td><span className="sr-badge">09</span>	</td>
                     <td>Mr.Meher Tiwari	</td>
                     <td>Kalpattaru Enterprises</td>
                   </tr>
                   <tr>
-                    <td>10	</td>
+                    <td><span className="sr-badge">10</span>	</td>
                     <td>Mr kartik Nair	</td>
                     <td>Anuron </td>
                   </tr>
                   <tr>
-                    <td>11	</td>
+                    <td><span className="sr-badge">11</span>	</td>
                     <td>Mr Milind Kulkarni	</td>
                     <td>Ankur Engineering</td>
                   </tr>
                   <tr>
-                    <td>12	</td>
+                    <td><span className="sr-badge">12</span>	</td>
                     <td>Mr Rajesh Pewal	</td>
                     <td>Eaton</td>
                   </tr>
                   <tr>
-                    <td>13 	</td>
+                    <td><span className="sr-badge">13</span> 	</td>
                     <td>Mr Basavraj bakali	</td>
                     <td>Exide Industries</td>
                   </tr>
                   <tr>
-                    <td>14	</td>
+                    <td><span className="sr-badge">14</span>	</td>
                     <td>Mr Anurag Dhoot	</td>
                     <td>Epitome Components</td>
                   </tr>
                   <tr>
-                    <td>15	</td>
+                    <td><span className="sr-badge">15</span>	</td>
                     <td>Ms Chanpreet Kaur	</td>
                     <td>Epitome</td>
                   </tr>
                   <tr>
-                    <td>16	</td>
+                    <td><span className="sr-badge">16</span>	</td>
                     <td>Mr Ajit Thadani	</td>
                     <td>Retailware Soulutions</td>
                   </tr>
                   <tr>
-                    <td>17	</td>
+                    <td><span className="sr-badge">17</span>	</td>
                     <td>Mr Deepak Chandorkar	</td>
                     <td>Allwin caramels</td>
                   </tr>
                   <tr>
-                    <td>18	</td>
+                    <td><span className="sr-badge">18</span>	</td>
                     <td>Mr Arvind pargaonkar 	</td>
                     <td>Schneider Electric</td>
                   </tr>
                   <tr>
-                    <td>19	</td>
+                    <td><span className="sr-badge">19</span>	</td>
                     <td>Mr Jitendra Badgujar	</td>
                     <td>Cummins India</td>
                   </tr>
                   <tr>
-                    <td>20	</td>
+                    <td><span className="sr-badge">20</span>	</td>
                     <td>Mr Santosh Bothara	</td>
                     <td>Paras Pipes </td>
                   </tr>
                   <tr>
-                    <td>21	</td>
+                    <td><span className="sr-badge">21</span>	</td>
                     <td>Mr Nilesh Lodha	</td>
                     <td>Prabhudas Lilladher Investment</td>
                   </tr>
                   <tr>
-                    <td>22	</td>
+                    <td><span className="sr-badge">22</span>	</td>
                     <td>Mr Amol Bhumkar	</td>
                     <td>Indian Post Payment Bank</td>
                   </tr>
                   <tr>
-                    <td>23	</td>
+                    <td><span className="sr-badge">23</span>	</td>
                     <td>Mr Gowardhan Verma	</td>
                     <td>PNB Housing</td>
                   </tr>
                   <tr>
-                    <td>24	</td>
+                    <td><span className="sr-badge">24</span>	</td>
                     <td>Mr N Suryavanshi	</td>
                     <td>Employment Commisioner</td>
                   </tr>
                   <tr>
-                    <td>25	</td>
+                    <td><span className="sr-badge">25</span>	</td>
                     <td>Mr Ravindra Thakur	</td>
                     <td>Media Cell </td>
                   </tr>
                   <tr>
-                    <td>26	</td>
+                    <td><span className="sr-badge">26</span>	</td>
                     <td>Mr Kamlesh Chiche	</td>
                     <td>Datamatics India</td>
                   </tr>
                   <tr>
-                    <td>27	</td>
+                    <td><span className="sr-badge">27</span>	</td>
                     <td>Mr Gaurav Firodiya	</td>
                     <td>Kalpattaru Enterprises</td>
                   </tr>
                   <tr>
-                    <td>28	</td>
+                    <td><span className="sr-badge">28</span>	</td>
                     <td>Mr Narendra Firodiya	</td>
                     <td>Anuron ,I Love NGR</td>
                   </tr>
                   <tr>
-                    <td>29	</td>
+                    <td><span className="sr-badge">29</span>	</td>
                     <td>Mr Joshi	</td>
                     <td>Eetamax India</td>
                   </tr>
                   <tr>
-                    <td>30	</td>
+                    <td><span className="sr-badge">30</span>	</td>
                     <td>Mr Sanjay Agarwal	</td>
                     <td>Agarwal Group</td>
                   </tr>
                   <tr>
-                    <td>31	</td>
+                    <td><span className="sr-badge">31</span>	</td>
                     <td>Mr Yogesh Choudhary	</td>
                     <td>Zeal Connect</td>
                   </tr>
                   <tr>
-                    <td>32	</td>
+                    <td><span className="sr-badge">32</span>	</td>
                     <td>Mr Imran Shaikh	</td>
                     <td>Arham IT solutions</td>
                   </tr>
                   <tr>
-                    <td>33	</td>
+                    <td><span className="sr-badge">33</span>	</td>
                     <td>Ms Kajal Rege	</td>
                     <td>Sai Infotech Solutions</td>
                   </tr>                  

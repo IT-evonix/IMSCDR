@@ -39,10 +39,10 @@ export const menuItems: MenuItem[] = [
         label: "College Development Committee (CDC)",
         href: "/college-development-commitee",
       },
-      // {
-      //   label: "Approvals & Affiliations",
-      //   href: "/approvals-and-affiliations",
-      // },
+      {
+        label: "Approvals & Affiliations",
+        href: "/approvals-and-affiliations",
+      },
     ],
   },
 
@@ -300,7 +300,7 @@ export const menuItems: MenuItem[] = [
             href: "/student-grievance-redressal-committee",
           },
           {
-            label: "Internal Complaint Committee",
+            label: "Internal Complaint Committee / POSH",
             href: "/internal-commitee",
           },
           {

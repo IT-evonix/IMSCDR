@@ -35,5 +35,13 @@ export const approvalData = {
       file: "/pdf/governance/NAAC-Cycle-3-SSR-Revised-June-2024.pdf",
     },
   ] as ApprovalItem[],
+
+  mandatorydisclosure: [
+    {
+      id: 1,
+      title: "Draft Mandatory Disclosure 2026-27",
+      file: "/pdf/mandatory-disclosure/Draft-Mandatory-Disclosure-2026-27.pdf",
+    },
+  ] as ApprovalItem[],
   
 };

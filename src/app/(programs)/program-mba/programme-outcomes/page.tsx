@@ -7,7 +7,7 @@ const page = () => {
       <div className="programme_outcome_main">
         <div className="programme_outcome_box">
           <div className="programme_outcome_left">
-            <div className="programme_outcome_tags">
+            {/* <div className="programme_outcome_tags">
               <div
                 style={{
                   color: "#89004A",
@@ -20,7 +20,7 @@ const page = () => {
               <span>Principles</span>
               <span>Frameworks</span>
               <span>Management</span>
-            </div>
+            </div> */}
             <div className="programme_outcome_image">
               <Image
                 src="/images/program/program-outcome/generic-and-domain-knowledge.webp"
@@ -40,7 +40,7 @@ const page = () => {
 
         <div className="programme_outcome_box">
           <div className="programme_outcome_left">
-            <div className="programme_outcome_tags">
+            {/* <div className="programme_outcome_tags">
               <div
                 style={{
                   color: "#89004A",
@@ -52,7 +52,7 @@ const page = () => {
               </div>
               <span>Identify</span>
               <span>Innovative solution frameworks</span>
-            </div>
+            </div> */}
             <div className="programme_outcome_image">
               <Image
                 src="/images/program/program-outcome/generic-and-domain-knowledge.webp"
@@ -72,7 +72,7 @@ const page = () => {
 
         <div className="programme_outcome_box">
           <div className="programme_outcome_left">
-            <div className="programme_outcome_tags">
+            {/* <div className="programme_outcome_tags">
               <div
                 style={{
                   color: "#89004A",
@@ -84,7 +84,7 @@ const page = () => {
               </div>
               <span>Investigation </span>
               <span>Research Methods </span>
-            </div>
+            </div> */}
             <div className="programme_outcome_image">
               <Image
                 src="/images/program/program-outcome/generic-and-domain-knowledge.webp"
@@ -104,7 +104,7 @@ const page = () => {
 
         <div className="programme_outcome_box">
           <div className="programme_outcome_left">
-            <div className="programme_outcome_tags">
+            {/* <div className="programme_outcome_tags">
               <div
                 style={{
                   color: "#89004A",
@@ -116,7 +116,7 @@ const page = () => {
               </div>
               <span>Effectively Communicate</span>
               <span>Cross-cultural communication</span>
-            </div>
+            </div> */}
             <div className="programme_outcome_image">
               <Image
                 src="/images/program/program-outcome/generic-and-domain-knowledge.webp"
@@ -136,7 +136,7 @@ const page = () => {
 
         <div className="programme_outcome_box">
           <div className="programme_outcome_left">
-            <div className="programme_outcome_tags">
+            {/* <div className="programme_outcome_tags">
               <div
                 style={{
                   color: "#89004A",
@@ -148,7 +148,7 @@ const page = () => {
               </div>
               <span>Effectively communicate</span>
               <span>Cross-cultural settings</span>
-            </div>
+            </div> */}
             <div className="programme_outcome_image">
               <Image
                 src="/images/program/program-outcome/generic-and-domain-knowledge.webp"
@@ -168,7 +168,7 @@ const page = () => {
 
         <div className="programme_outcome_box">
           <div className="programme_outcome_left">
-            <div className="programme_outcome_tags">
+            {/* <div className="programme_outcome_tags">
               <div
                 style={{
                   color: "#89004A",
@@ -180,7 +180,7 @@ const page = () => {
               </div>
               <span>Global perspective</span>
               <span>Cross Cultural</span>
-            </div>
+            </div> */}
             <div className="programme_outcome_image">
               <Image
                 src="/images/program/program-outcome/generic-and-domain-knowledge.webp"
@@ -202,7 +202,7 @@ const page = () => {
 
         <div className="programme_outcome_box">
           <div className="programme_outcome_left">
-            <div className="programme_outcome_tags">
+            {/* <div className="programme_outcome_tags">
               <div
                 style={{
                   color: "#89004A",
@@ -214,7 +214,7 @@ const page = () => {
               </div>
               <span>Entrepreneurial opportunities</span>
               <span>Leadership skills</span>
-            </div>
+            </div> */}
             <div className="programme_outcome_image">
               <Image
                 src="/images/program/program-outcome/generic-and-domain-knowledge.webp"
@@ -234,7 +234,7 @@ const page = () => {
 
         <div className="programme_outcome_box">
           <div className="programme_outcome_left">
-            <div className="programme_outcome_tags">
+            {/* <div className="programme_outcome_tags">
               <div
                 style={{
                   color: "#89004A",
@@ -246,7 +246,7 @@ const page = () => {
               </div>
               <span>Sustainable development</span>
               <span>Managerial decisions</span>
-            </div>
+            </div> */}
             <div className="programme_outcome_image">
               <Image
                 src="/images/program/program-outcome/generic-and-domain-knowledge.webp"
@@ -266,7 +266,7 @@ const page = () => {
 
         <div className="programme_outcome_box">
           <div className="programme_outcome_left">
-            <div className="programme_outcome_tags">
+            {/* <div className="programme_outcome_tags">
               <div
                 style={{
                   color: "#89004A",
@@ -279,7 +279,7 @@ const page = () => {
               <span>Ethical </span>
               <span>Managerial choices </span>
               <span>Integrity</span>
-            </div>
+            </div> */}
             <div className="programme_outcome_image">
               <Image
                 src="/images/program/program-outcome/generic-and-domain-knowledge.webp"
@@ -299,7 +299,7 @@ const page = () => {
 
         <div className="programme_outcome_box">
           <div className="programme_outcome_left">
-            <div className="programme_outcome_tags">
+            {/* <div className="programme_outcome_tags">
               <div
                 style={{
                   color: "#89004A",
@@ -311,8 +311,7 @@ const page = () => {
               </div>
               <span>Operate independently</span>
               <span>New knowledge</span>
-              {/* <span>New skills</span> */}
-            </div>
+            </div> */}
             <div className="programme_outcome_image">
               <Image
                 src="/images/program/program-outcome/generic-and-domain-knowledge.webp"

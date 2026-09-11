@@ -122,11 +122,11 @@ export const programSidebar = {
     menuItems: [
       { title: "Placement Overview", href: "/placement/placement-overview" },
       { title: "Training & Placement Cell", href: "/placement/training-placement" },
-      { title: "Industry Internship", href: "/placement/industry-internship" },
+      { title: "Internship & Industry Connect", href: "/placement/industry-internship" },
       { title: "Industry Collobration", href: "/placement/industry-collobration" },
       { title: "Top Recruiters", href: "/placement/top-recruiters" },
-      { title: "Placement Report", href: "/placement/placement-report" },
-      { title: "Testimonials", href: "/placement/testimonials" },
+      { title: "Placement Statistics", href: "/placement/placement-report" },
+      { title: "Success Stories", href: "/placement/testimonials" },
     ],
   },
 
@@ -155,9 +155,9 @@ export const programSidebar = {
     menuItems: [
 
       // { title: "ERP", href: "/lifeatims/gallery" },
-      // { title: "Examination", href: "/student-corner/examination" },
+      { title: "Examination", href: "/academic-calendar" },
       { title: "Academic Calendar", href: "/student-corner/academic-calendar" },
-      // { title: "Downloads", href: "/student-corner/examination" },
+      { title: "Downloads", href: "/student-corner/downloads" },
       { title: "Scholarships", href: "/student-corner/scholarships" },
       // { title: "Code of Conduct", href: "/student-corner/examination" },
        { title: "Notices & Circulars", href: "/student-corner/notices-circulars" },
