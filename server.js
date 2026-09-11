@@ -1,5 +1,13 @@
 const path = require('path');
-require('dotenv').config();
+const fs = require('fs');
+
+// Auto-clean conflicting prisma/.env if present
+const prismaEnv = path.join(__dirname, 'prisma', '.env');
+if (fs.existsSync(prismaEnv)) {
+  try { fs.unlinkSync(prismaEnv); } catch (_) {}
+}
+
+require('dotenv').config({ path: path.join(__dirname, '.env') });
 
 const next = require('next');
 const expressApp = require('./src/server/app');
