@@ -34,12 +34,12 @@ export default function CampusLife() {
         <div className="galleryWrapper">
           {/* Image 1 */}
           <a
-            href="/images/home/gallery/CampusLife1.png"
+            href="/images/home/gallery/Language-Lab.webp"
             data-fancybox="gallery"
             className="galleryItem tall"
           >
             <Image
-              src="/images/home/gallery/CampusLife1.png"
+              src="/images/home/gallery/Language-Lab.webp"
               alt="Campus Life 1"
               width={800}
               height={600}
@@ -50,12 +50,12 @@ export default function CampusLife() {
           {/* Column 1 */}
           <div className="doubleColumn">
             <a
-              href="/images/home/gallery/CampusLife2.png"
+              href="/images/home/gallery/learning-resource-centre.webp"
               data-fancybox="gallery"
               className="galleryItem half"
             >
               <Image
-                src="/images/home/gallery/CampusLife2.png"
+                src="/images/home/gallery/learning-resource-centre.webp"
                 alt="Campus Life 2"
                 width={800}
                 height={600}
@@ -64,12 +64,12 @@ export default function CampusLife() {
             </a>
 
             <a
-              href="/images/home/gallery/CampusLife3.png"
+              href="/images/home/gallery/Seminar-Hall.webp"
               data-fancybox="gallery"
               className="galleryItem half"
             >
               <Image
-                src="/images/home/gallery/CampusLife3.png"
+                src="/images/home/gallery/Seminar-Hall.webp"
                 alt="Campus Life 3"
                 width={800}
                 height={600}
@@ -80,12 +80,12 @@ export default function CampusLife() {
 
           {/* Center */}
           <a
-            href="/images/home/gallery/CampusLife4.webp"
+            href="/images/home/gallery/gallery-center-img.webp"
             data-fancybox="gallery"
             className="galleryItem centerTall"
           >
             <Image
-              src="/images/home/gallery/CampusLife4.webp"
+              src="/images/home/gallery/gallery-center-img.webp"
               alt="Campus Life 4"
               width={800}
               height={600}
@@ -96,12 +96,12 @@ export default function CampusLife() {
           {/* Column 2 */}
           <div className="doubleColumn">
             <a
-              href="/images/home/gallery/CampusLife5.png"
+              href="/images/home/gallery/ICT-enabled.webp"
               data-fancybox="gallery"
               className="galleryItem half"
             >
               <Image
-                src="/images/home/gallery/CampusLife5.png"
+                src="/images/home/gallery/ICT-enabled.webp"
                 alt="Campus Life 5"
                 width={800}
                 height={600}
@@ -110,12 +110,12 @@ export default function CampusLife() {
             </a>
 
             <a
-              href="/images/home/gallery/CampusLife6.png"
+              href="/images/home/gallery/library.webp"
               data-fancybox="gallery"
               className="galleryItem half"
             >
               <Image
-                src="/images/home/gallery/CampusLife6.png"
+                src="/images/home/gallery/library.webp"
                 alt="Campus Life 6"
                 width={800}
                 height={600}
@@ -126,12 +126,12 @@ export default function CampusLife() {
 
           {/* Image 7 */}
           <a
-            href="/images/home/gallery/CampusLife7.png"
+            href="/images/campus/campus-overview/campus-overview.webp"
             data-fancybox="gallery"
             className="galleryItem tall"
           >
             <Image
-              src="/images/home/gallery/CampusLife7.png"
+              src="/images/campus/campus-overview/campus-overview.webp"
               alt="Campus Life 7"
               width={800}
               height={600}

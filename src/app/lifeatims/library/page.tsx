@@ -246,7 +246,7 @@ const page = () => {
             <div className="parallaximg_image">
               <Image
                 className="img-fluid"
-                src="/images/campus/library/Library1.webp"
+                src="/images/campus/library/Librarynew1.webp"
                 alt="about imscdr"
                 width={350}
                 height={350}
@@ -278,7 +278,7 @@ const page = () => {
             <div className="parallaximg_image">
               <Image
                 className="img-fluid"
-                src="/images/campus/library/Library2.webp"
+                src="/images/campus/library/Librarynew2.webp"
                 alt="about imscdr"
                 width={350}
                 height={350}

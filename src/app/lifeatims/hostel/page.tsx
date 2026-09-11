@@ -1,6 +1,6 @@
 import FacilityGrid from "@/components/ui/FacilityListing";
-import GallerySlider from "@/components/ui/GallerySlider";
-import { galleryData } from "@/data/GallerySlider";
+// import GallerySlider from "@/components/ui/GallerySlider";
+// import { galleryData } from "@/data/GallerySlider";
 import {
   hostelFacilities,
   hostelboysFacilities,
@@ -42,7 +42,7 @@ const HostelPage = () => {
             <div className="col-md-5">
               <div className="hostel_image">
                 <Image
-                  src={"/images/campus/hostel/girls_hostel.webp"}
+                  src={"/images/campus/hostel/girls_hostel_new.webp"}
                   alt={""}
                   className="imf-fluid"
                   width={280}
@@ -68,7 +68,7 @@ const HostelPage = () => {
             <div className="col-md-5">
               <div className="hostel_image">
                 <Image
-                  src={"/images/campus/hostel/girls_hostel.webp"}
+                  src={"/images/campus/hostel/boys_hostel.webp"}
                   alt={""}
                   className="imf-fluid"
                   width={250}
@@ -88,13 +88,13 @@ const HostelPage = () => {
           </div>
         </div>
 
-        <div className="lastpara_hostel pb-3 pb-md-5">
+        <div className="lastpara_hostel">
           The hostels are designed to create a home-like environment where
           students can focus on academics while developing independence,
           responsibility, and lifelong friendships.
         </div>
 
-        <GallerySlider items={galleryData} />
+        {/* <GallerySlider items={galleryData} /> */}
       </div>
     </section>
   );

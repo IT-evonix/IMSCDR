@@ -1,11 +1,7 @@
 "use client";
 
 import React from "react";
-import {
-  ArrowUpRight,
-  FileSpreadsheet,
-  FileText,
-} from "lucide-react";
+import { ArrowUpRight, FileSpreadsheet, FileText } from "lucide-react";
 
 export interface ApprovalItem {
   id: number;
@@ -64,51 +60,49 @@ const getIcon = (link: string) => {
 export default function ApprovalList({ title, data }: ApprovalListProps) {
   return (
     <section className="approval-section">
-      <div className="container">
-        <div className="row g-4">
-          {data.map((item) => {
-            const link = item.file || item.url || item.href;
+      <div className="row g-4">
+        {data.map((item) => {
+          const link = item.file || item.url || item.href;
 
-            if (!link) return null;
+          if (!link) return null;
 
-            const documentType = getDocumentType(link);
-            const isExternal =
-              link.startsWith("http://") || link.startsWith("https://");
+          const documentType = getDocumentType(link);
+          const isExternal =
+            link.startsWith("http://") || link.startsWith("https://");
 
-            return (
-              <div className="col-12 col-md-6" key={item.id}>
-                <a
-                  href={link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="approval-card"
-                >
-                  {/* Animated Background */}
-                  <span className="approval-card-glow" />
+          return (
+            <div className="col-12 col-md-6" key={item.id}>
+              <a
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="approval-card"
+              >
+                {/* Animated Background */}
+                <span className="approval-card-glow" />
 
-                  {/* Icon */}
-                  <div className="approval-icon-wrap">
-                    <div className="approval-icon">{getIcon(link)}</div>
+                {/* Icon */}
+                <div className="approval-icon-wrap">
+                  <div className="approval-icon">{getIcon(link)}</div>
 
-                    <span className={`approval-type ${documentType.className}`}>
-                      {documentType.type}
-                    </span>
-                  </div>
+                  <span className={`approval-type ${documentType.className}`}>
+                    {documentType.type}
+                  </span>
+                </div>
 
-                  {/* Content */}
-                  <div className="approval-content">
-                    <h3 className="approval-title">{item.title}</h3>
-                  </div>
+                {/* Content */}
+                <div className="approval-content">
+                  <h3 className="approval-title">{item.title}</h3>
+                </div>
 
-                  {/* Right Arrow */}
-                  <div className="approval-arrow">
-                    <ArrowUpRight size={20} strokeWidth={1.8} />
-                  </div>
-                </a>
-              </div>
-            );
-          })}
-        </div>
+                {/* Right Arrow */}
+                <div className="approval-arrow">
+                  <ArrowUpRight size={20} strokeWidth={1.8} />
+                </div>
+              </a>
+            </div>
+          );
+        })}
       </div>
     </section>
   );

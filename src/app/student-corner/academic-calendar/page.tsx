@@ -8,8 +8,7 @@ import {
 function AcademicCalendarTable({ data }: { data: CalendarRow[] }) {
   return (
     <div className="academic_calendar_table tablemain_section">
-      <div className="container">
-        <div className="table-card shadow-sm">
+      <div className="table-card shadow-sm">
           <div className="table-responsive">
             <table className="table governing-table align-middle mb-0">
               <thead>
@@ -55,7 +54,6 @@ function AcademicCalendarTable({ data }: { data: CalendarRow[] }) {
             </table>
           </div>
         </div>
-      </div>
     </div>
   );
 }

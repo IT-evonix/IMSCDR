@@ -11,7 +11,7 @@ const AboutUs = () => {
           <div className="aboutsec_inner">
             <div className="aboutus_left">
               <Image
-                src="/images/home/homeb-aboutimg.webp"
+                src="/images/home/homeb-aboutimg-1.webp"
                 alt="Banner"
                 width={1200}
                 height={600}

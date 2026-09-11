@@ -7,32 +7,32 @@ export interface GalleryItem {
 export const galleryData: GalleryItem[] = [
   {
     id: 1,
-    src: "/images/common-image1.webp",
+    src: "/images/campus/infrastructure/ICT-enabled.webp",
     name: "Spacious ICT-enabled classrooms",
   },
   {
     id: 2,
-    src: "/images/common-image1.webp",
+    src: "/images/campus/infrastructure/tutorial-rooms.webp",
     name: "Tutorial rooms",
   },
   {
     id: 3,
-    src: "/images/common-image1.webp",
+    src: "/images/campus/infrastructure/learning-resource-centre.webp",
     name: "Learning Resource Centre (Central Library)",
   },
   {
     id: 4,
-    src: "/images/common-image1.webp",
+    src: "/images/campus/infrastructure/Language-Lab.webp",
     name: "Language Lab",
   },
   {
     id: 5,
-    src: "/images/common-image1.webp",
+    src: "/images/campus/infrastructure/Seminar-Hall.webp",
     name: "Seminar Hall and SEED-C Auditorium for conferences, workshops and guest lectures",
   },
   {
     id: 6,
-    src: "/images/common-image1.webp",
+    src: "/images/campus/infrastructure/Administrative-Office.webp",
     name: "Administrative Office",
   },
 ];
@@ -141,32 +141,32 @@ export const galleryData3: GalleryItem[] = [
 export const LifeAtImsGallery: GalleryItem[] = [
   {
     id: 1,
-    src: "/images/common-image1.webp",
-    name: "University-level competitions (Aavishkar)",
+    src: "/images/home/gallery/Language-Lab.webp",
+    name: "Classrooms",
   },
   {
     id: 2,
-    src: "/images/common-image1.webp",
-    name: "Management festivals",
+    src: "/images/home/gallery/learning-resource-centre.webp",
+    name: "Learning Resource Centre",
   },
   {
     id: 3,
-    src: "/images/common-image1.webp",
-    name: "Research paper presentations",
+    src: "/images/home/gallery/Seminar-Hall.webp",
+    name: "Seminar Hall",
   },
   {
     id: 4,
-    src: "/images/common-image1.webp",
+    src: "/images/home/gallery/gallery-center-img.webp",
     name: "Business plan competitions",
   },
   {
     id: 5,
-    src: "/images/common-image1.webp",
-    name: "Sports tournaments",
+    src: "/images/home/gallery/ICT-enabled.webp",
+    name: "Lab",
   },
   {
     id: 6,
-    src: "/images/common-image1.webp",
-    name: "Cultural events",
+    src: "/images/home/gallery/library.webp",
+    name: "Library",
   },
 ];

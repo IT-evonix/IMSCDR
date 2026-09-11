@@ -52,19 +52,12 @@ const page = () => {
             </div>
           </section>
 
-          <div className="tablemain_section">
-            <div className="container">
-              <div className="mb-4">
-                <div className="heading text-center">
-                  Composition of the IQAC
-                </div>
-              </div>
-
-              <Table
-                columns={iqacCommitteeColumns}
-                data={iqacCommitteeMembers}
-              />
+          <div className="tablemain_section mt-5 mt-md-0">
+            <div className="mb-4">
+              <div className="heading text-center">Composition of the IQAC</div>
             </div>
+
+            <Table columns={iqacCommitteeColumns} data={iqacCommitteeMembers} />
           </div>
 
           <div className="pdf_section">
