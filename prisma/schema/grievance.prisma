@@ -1,18 +1,18 @@
 // Grievance Redressal Model Schema — Dedicated for Student / Visitor Complaints
 
 model Grievance {
-  id              Int       @id @default(autoincrement())
-  name            String
-  mobile          String
-  email           String
-  course          String
-  complaintShort  String
-  complaintDetail String    @db.Text
-  status          String    @default("Pending") // Pending, In Progress, Resolved, Rejected
-  resolutionRemark String?  @db.Text
-  createdAt       DateTime  @default(now())
-  updatedAt       DateTime  @updatedAt
-  deletedAt       DateTime?
+  id               Int       @id @default(autoincrement())
+  name             String
+  mobile           String
+  email            String
+  course           String
+  complaintShort   String
+  complaintDetail  String    @db.Text
+  status           String    @default("Pending") // Pending, In Progress, Resolved, Rejected
+  resolutionRemark String?   @db.Text
+  createdAt        DateTime  @default(now())
+  updatedAt        DateTime  @updatedAt
+  deletedAt        DateTime?
 
   @@index([email])
   @@index([mobile])

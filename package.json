@@ -8,8 +8,9 @@
   },
   "scripts": {
     "dev": "nodemon server.js",
-    "build": "next build",
+    "build": "prisma generate --schema=./prisma/schema && next build",
     "start": "NODE_ENV=production node server.js",
+    "postinstall": "prisma generate --schema=./prisma/schema",
     "lint": "eslint",
     "db:migrate": "npx prisma migrate dev --schema=./prisma/schema",
     "db:seed": "npx prisma db seed --schema=./prisma/schema",

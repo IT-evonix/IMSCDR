@@ -111,10 +111,9 @@ export default function GrievanceRedressalPage() {
             <div className="col-lg-6 mb-4">
               <input
                 type="text"
-                placeholder="Candidate Full Name"
-                className={`form-control custom-input ${
-                  errors.name ? 'is-invalid' : ''
-                }`}
+                placeholder="Full Name"
+                className={`form-control custom-input ${errors.name ? 'is-invalid' : ''
+                  }`}
                 {...register('name', {
                   onChange: (e) => {
                     e.target.value = e.target.value.replace(/[^a-zA-Z\s.]/g, '');
@@ -130,9 +129,8 @@ export default function GrievanceRedressalPage() {
                 type="tel"
                 placeholder="Mobile Number"
                 maxLength={10}
-                className={`form-control custom-input ${
-                  errors.mobile ? 'is-invalid' : ''
-                }`}
+                className={`form-control custom-input ${errors.mobile ? 'is-invalid' : ''
+                  }`}
                 {...register('mobile', {
                   onChange: (e) => {
                     e.target.value = e.target.value.replace(/\D/g, '').slice(0, 10);
@@ -149,9 +147,8 @@ export default function GrievanceRedressalPage() {
               <input
                 type="email"
                 placeholder="Email Address"
-                className={`form-control custom-input ${
-                  errors.email ? 'is-invalid' : ''
-                }`}
+                className={`form-control custom-input ${errors.email ? 'is-invalid' : ''
+                  }`}
                 {...register('email')}
               />
               {errors.email && (
@@ -162,9 +159,8 @@ export default function GrievanceRedressalPage() {
             {/* 4. Select Course Name */}
             <div className="col-lg-6 mb-4">
               <select
-                className={`form-control custom-input ${
-                  errors.course ? 'is-invalid' : ''
-                }`}
+                className={`form-control custom-input ${errors.course ? 'is-invalid' : ''
+                  }`}
                 defaultValue=""
                 style={{
                   cursor: 'pointer',
@@ -208,9 +204,8 @@ export default function GrievanceRedressalPage() {
               <input
                 type="text"
                 placeholder="Complaint in short (Subject)"
-                className={`form-control custom-input ${
-                  errors.complaintShort ? 'is-invalid' : ''
-                }`}
+                className={`form-control custom-input ${errors.complaintShort ? 'is-invalid' : ''
+                  }`}
                 {...register('complaintShort')}
               />
               {errors.complaintShort && (
@@ -223,9 +218,8 @@ export default function GrievanceRedressalPage() {
               <textarea
                 rows={5}
                 placeholder="Write your complaint in detail"
-                className={`form-control custom-textarea ${
-                  errors.complaintDetail ? 'is-invalid' : ''
-                }`}
+                className={`form-control custom-textarea ${errors.complaintDetail ? 'is-invalid' : ''
+                  }`}
                 {...register('complaintDetail')}
               ></textarea>
               {errors.complaintDetail && (
