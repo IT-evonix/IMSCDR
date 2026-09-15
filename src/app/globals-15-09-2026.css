@@ -34,7 +34,7 @@
   font-display: swap;
 }
 html {
-  scrollbar-gutter: stable;
+  /* scrollbar-gutter: stable; */
 }
 Body {
   font-family: "Avenir-Next-Regular" !important;
@@ -56,6 +56,9 @@ Body {
 /* Header Start Here */
 .headerNavigation {
   padding: 10px 0px;
+}
+.onlyformobile {
+  display: none;
 }
 /* TopBar Start Here */
 .topbar_inner {
@@ -151,7 +154,20 @@ Body {
 /*--------------- Hero Section Start Here ----------------*/
 .hero-video {
   position: relative;
-  min-height: 680px;
+  min-height: 650px;
+  /* background-image:url(/images/banners/herobanner-img.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; */
+}
+.hero-video > video {
+  width: 100%;
+  height: 650px;
+  object-fit: cover;
+  display: block;
+}
+.hero-video img {
+  width: 100%;
 }
 .hero-video::after {
   position: absolute;
@@ -161,8 +177,8 @@ Body {
   bottom: 0;
   content: "";
   z-index: 1;
-  background-color: #00000075;
-  height: 99%;
+  background-color: #0000008b;
+  height: 100%;
 }
 .herobanner_Content {
   position: absolute;
@@ -538,6 +554,9 @@ Body {
   );
   position: relative;
 }
+.achievement-section .container {
+  min-width: 0;
+}
 .achievement-section::after {
   background-image: url(/images/home/achievement-waves.webp);
   background-position: center;
@@ -555,9 +574,11 @@ Body {
   line-height: normal;
 }
 .achievement-swiper {
-  padding: 60px 0 0 0 !important;
+  width: 100%;
+  max-width: 100%;
+  padding: 45px 0 0 !important;
 }
-.achievement-card {
+/* .achievement-card {
   position: relative;
   height: 230px;
   display: flex;
@@ -566,6 +587,15 @@ Body {
   transition: all 0.5s ease;
   width: 90%;
   margin: 0px auto;
+} */
+.achievement-card {
+  position: relative;
+  height: 230px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease;
 }
 .achievement-content {
   text-align: center;
@@ -630,11 +660,14 @@ Body {
 /* .swiper-slide-active .achievement-card::after {
   height: 190px;
 } */
-.achievement-swiper .swiper-slide-active .achievement-card {
+/* .achievement-swiper .swiper-slide-active .achievement-card {
   transform: scale(1.3);
   margin: -25px auto 0px auto;
+} */
+.achievement-swiper .swiper-slide-active .achievement-card {
+  transform: scale(1.15);
+  margin: -10px auto 0;
 }
-
 .achievement-swiper .swiper-slide-active .achievement-card::before {
   content: "";
   position: absolute;
@@ -652,6 +685,7 @@ Body {
 }
 .achievement-swiper .swiper-slide {
   transition: all 0.5s ease;
+   min-width: 0;
 }
 .achievement-swiper .swiper-slide:not(.swiper-slide-active) {
   opacity: 0.85;
@@ -698,7 +732,7 @@ Body {
   border-radius: 500px 0 0 500px;
   width: 50%;
   min-height: 340px;
-  padding: 30px 190px 30px 70px;
+  padding: 30px 190px 30px 60px;
   line-height: normal;
   margin: 80px 0 0 0;
   display: flex;
@@ -801,19 +835,17 @@ Body {
   background: #f1f1f1;
   padding: 10px;
   border-radius: 30px;
+  min-height: 350px;
 }
 .testimonials_box img {
   width: 100%;
   border-radius: 20px;
-  /* max-height: 190px;
-  min-height: 190px;
-  overflow: hidden;
-  object-fit: cover; */
   height: auto;
 }
 .testimonials_box .subheading {
   text-align: center;
-  margin: 13px 0 4px 0;
+  margin: 13px 0 0px 0;
+  line-height: normal;
 }
 .testimonials_box p {
   text-align: center;
@@ -823,10 +855,38 @@ Body {
   position: relative;
   z-index: 999;
 }
-
 .testimonial-prev,
 .testimonial-next {
   pointer-events: auto;
+}
+.testimonials_box .designation {
+  font-size: 14px;
+  font-family: "Avenir-Next-Demi";
+  text-align: center;
+  color: #333;
+}
+.testimonials_content {
+  max-height: 100px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #999 transparent;
+  padding: 0 10px 0 0;
+  font-size: 14px;
+  margin: 5px 0 0 0;
+}
+.testimonials_content::-webkit-scrollbar {
+  width: 4px;
+}
+.testimonials_content::-webkit-scrollbar-track {
+  background: transparent;
+}
+.testimonials_content::-webkit-scrollbar-thumb {
+  background: #999;
+  border-radius: 10px;
+}
+.testimonials_content::-webkit-scrollbar-thumb:hover {
+  background: #666;
 }
 /*----------------------- CampusLife Start Here -----------------------*/
 .gallerySection {
@@ -945,7 +1005,7 @@ Body {
 }
 .educationinner {
   display: flex;
-  gap: 20px;
+  gap: 15px;
   justify-content: space-between;
   align-items: center;
 }
@@ -953,7 +1013,7 @@ Body {
   background: #fff;
   border-radius: 15px;
   width: 23%;
-  padding: 10px;
+  padding: 10px 8px;
   box-shadow: 0 2px 10px #00000014;
   transition-duration: 0.5s;
 }
@@ -1000,6 +1060,7 @@ Body {
   padding: 0;
   font-family: "Avenir-Next-Regular";
   line-height: normal;
+  font-size: 13px;
 }
 /*----------------------- Footer Start Here -----------------------*/
 .footer_main {
@@ -1010,6 +1071,7 @@ Body {
   );
   padding: 0px 0px 25px 0px;
   position: relative;
+  z-index: 5;
 }
 .footer_main::after {
   content: "";
@@ -1197,7 +1259,7 @@ Body {
   margin-top: 40px;
 }
 .about-naccimg {
-  margin: 0 0 0 -60px;
+  margin: 0 0 0 -50px;
 }
 .about-nacc-content {
   width: 90%;
@@ -1278,7 +1340,7 @@ Body {
   background: #fff;
   border-radius: 20px;
   padding: 25px;
-  min-height: 210px;
+  min-height: 220px;
   position: relative;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   transition: 0.3s;
@@ -1452,9 +1514,6 @@ Body {
 
 /*---------------------- Leaders Pages End Here --------------------*/
 /*----------------- Governing Body Start Here ------------------*/
-/* .tablemain_section {
-  padding: 80px 0;
-} */
 .table-card {
   background: #fff;
   border-radius: 22px;
@@ -1464,14 +1523,14 @@ Body {
 }
 .governing-table {
   margin: 0;
-  min-width: 900px;
+  min-width: 800px;
   border-collapse: separate;
   border-spacing: 0;
 }
 .governing-table thead th {
   background: #09468e;
   color: #fff;
-  padding: 20px 25px 20px 20px;
+  padding: 17px 25px 17px 20px;
   font-size: 16px;
   font-family: "Roma-Semibold";
   text-transform: uppercase;
@@ -1479,6 +1538,7 @@ Body {
   white-space: nowrap;
   letter-spacing: 0.4px;
   vertical-align: middle;
+  line-height: normal;
 }
 .governing-table thead th:first-child {
   border-top-left-radius: 18px;
@@ -1497,9 +1557,9 @@ Body {
   transition: 0.3s;
   line-height: normal;
 }
-.governing-table tbody td:last-child {
+/* .governing-table tbody td:last-child {
   border-right: none;
-}
+} */
 .governing-table tbody tr:last-child td {
   border-bottom: none;
 }
@@ -1509,6 +1569,10 @@ Body {
 .member-name {
   font-family: "Roma-Semibold";
   color: #000;
+}
+.highlight-name {
+  font-family: "Roma-Bold";
+  color: #f58232 !important;
 }
 .sr-badge {
   width: 30px;
@@ -1542,8 +1606,15 @@ Body {
 .governing-table td {
   white-space: normal;
 }
-.member-name {
-  font-weight: 600;
+.bba-bca-curriculum .governing-table th:first-child, .governing-table td:first-child {
+    width: inherit;
+} 
+.bba-bca-total-row{
+    font-size: 16px;
+    font-family: "Avenir-Next-Demi";
+}
+.pdf_section{
+  padding:60px 0px 0px 0px;
 }
 /*----------------- Governing Body End Here ------------------*/
 /*----------- Approvals & Affiliations Start Here -----------*/
@@ -2160,6 +2231,7 @@ Body {
   top: 8px;
   left: 0;
 }
+  
 /*----- Specializations Page End Here -----*/
 /*----- Eligibility Page Start Here -----*/
 .eligibility_main {
@@ -2175,6 +2247,7 @@ Body {
   padding: 20px;
   background: #fff;
   border-radius: 20px;
+  width: 100%;
 }
 .eligibility_inner img {
   border-radius: 20px;
@@ -2366,6 +2439,10 @@ Body {
 .logobox_img img {
   width: 100%;
 }
+.careerimages_sticky {
+  position: sticky;
+  top: 100px;
+}
 /* Career Opportunities End Here */
 /* ---------- Laboratories & Facilities Start Here ---------- */
 .facilities-wrapper {
@@ -2377,9 +2454,9 @@ Body {
   position: relative;
   display: flex;
   align-items: center;
-  gap: 18px;
-  min-height: 90px;
-  padding: 10px 17px;
+  gap: 12px;
+  min-height: 80px;
+  padding: 5px 11px;
   background: #fff;
   border: 1px solid #e5e5e5;
   transition:
@@ -2387,6 +2464,7 @@ Body {
     border-color 0.35s ease,
     box-shadow 0.35s ease;
   overflow: hidden;
+  font-size: 14px;
 }
 .facility-item::before {
   content: "";
@@ -2408,8 +2486,8 @@ Body {
 }
 .facility-icon {
   flex-shrink: 0;
-  width: 52px;
-  height: 52px;
+  width: 48px;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2431,11 +2509,39 @@ Body {
 }
 .facility-content h3 {
   margin: 0;
-  font-size: 16px;
+  font-size: 14px;
   color: #222;
 }
+.higher_education {
+  margin-top: 40px;
+}
+.higher_education .facilities-wrapper {
+  grid-template-columns: repeat(4, 1fr);
+}
 /* ---------- Laboratories & Facilities End Here ---------- */
-/* Dowanload Start Here */
+/*----------- Curriculum Page Start Here -----------*/
+.mca_curriculum .mca-elective-heading .member-name {
+  background-color:#fffdf5;
+  font-size: 16px;
+  color:#f79433;
+}
+.mca-soft-skills-section .member-name{
+  background: #88004a12;
+  font-size: 16px;
+  color:#89004a;
+}
+.mca-practical-section .member-name{
+  background: #88004a12;
+  font-size: 16px;
+  color:#89004a;
+}
+.mca-total-row{
+  font-size:16px;
+  font-family: "Avenir-Next-Demi";
+}
+
+/*----------- Curriculum Page End Here -----------*/
+/*------------- Dowanload Start Here -------------*/
 .ImageBox {
   position: relative;
   overflow: hidden;
@@ -2449,7 +2555,71 @@ Body {
   transform: scale(1.1);
   transition-duration: 0.5s;
 }
-/* Dowanload End Here */
+/* ----------Dowanload End Here ----------*/
+/*----------- Programme Outcome Start Here -----------*/
+.programme_outcome_box {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+/* .programme_outcome_box:nth-child(odd) {
+  flex-direction: row-reverse;
+} */
+.programme_outcome_box:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.programme_outcome_box:nth-child(even) .programme_outcome_right {
+  background-color: #e0eaf6;
+}
+.programme_outcome_mainmca .programme_outcome_right{
+  min-height: 180px;
+}
+.programme_outcome_left {
+  width: 57%;
+}
+.programme_outcome_left {
+  display: flex;
+  flex-wrap: wrap;
+}
+.programme_outcome_tags {
+  display: flex;
+  gap: 9px;
+  width: 100%;
+  margin: 0 0 12px 0;
+  align-items: center;
+}
+.programme_outcome_tags span {
+  background: #f5f5f5;
+  color: #000;
+  padding: 3px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  line-height: normal;
+}
+.programme_outcome_image {
+  width: 100%;
+}
+.programme_outcome_image img {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 20px;
+  object-fit: cover;
+}
+.programme_outcome_right {
+  width: 40%;
+  padding: 25px;
+  border-radius: 20px;
+  background-color: #f7e8f1;
+  line-height: normal;
+  text-align: center;
+  min-height: 220px;
+}
+.programme_outcome_right .subheading {
+  margin: 0px 0px 10px 0px;
+}
+/*----------- Programme Outcome End Here -----------*/
 /* ---------- FAQ Start Here ---------- */
 .faq-list {
   display: flex;
@@ -2509,6 +2679,16 @@ Body {
 .faculty-section {
   padding: 80px 0;
   background: #fff;
+}
+.faculty-category {
+  padding: 40px 0px;
+  scroll-margin-top: 100px;
+}
+.faculty-category:first-child {
+  padding-top: 0px;
+}
+.faculty-category:last-child {
+  padding-bottom: 0px;
 }
 .faculty-grid {
   display: grid;
@@ -2782,6 +2962,25 @@ Body {
   text-decoration: none;
   color: #000;
   font-family: "Roma-Regular";
+}
+.faculty-category:first-child .faculty-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+.faculty-category:first-child .faculty-grid .faculty-item .faculty-card {
+  display: flex;
+}
+.faculty-category:first-child .faculty-grid .faculty-item .faculty-image {
+  width: 48%;
+  height: 260px;
+}
+.faculty-category:first-child .faculty-grid .faculty-content {
+  text-align: start;
+}
+.faculty-content a {
+  text-decoration: none;
+  color: rgb(9, 70, 142);
+  font-size: 14px;
+  margin: 5px 0px 5px 0px;
 }
 /*-------------- Faculty New Design ---------------*/
 /* =========================================
@@ -3201,12 +3400,13 @@ Body {
 
 .eligibility_cardlisting .eligibility_card:nth-child(3) {
   background: #fcedde;
+  margin: 0 0 0px;
 }
 
 .eligibility_cardlisting .eligibility_card:nth-child(4) {
   background: #ffe9f3;
 }
-.eligibility_inner {
+.eligibility_card .eligibility_inner {
   width: 40%;
   position: relative;
 }
@@ -3256,6 +3456,7 @@ Body {
   align-items: center;
   display: flex;
 }
+
 .fee_structure_content {
   border-radius: 20px;
   width: 69%;
@@ -3375,9 +3576,11 @@ Body {
   font-family: "Avenir-Next-Demi";
   margin: 0px;
 }
-/* .fee_structure_box:nth-child(5) {
- 
-}  */
+.feetabbox a{
+  color: #000;
+  font-size: 14px;
+  text-decoration: none;
+}
 .course_name {
   text-align: center;
   color: #fff;
@@ -3436,12 +3639,45 @@ Body {
 .scholarships_page .governing-table thead th:last-child {
   border-top-right-radius: 0px;
 }
-.scholarships_page .governing-table thead tr:last-child th {
+/* .scholarships_page .governing-table thead tr:last-child th {
   font-size: 12px;
-}
+} */
 .scholarships_page .governing-table thead th {
   border-right: 1px solid #ffffff1f;
   white-space: wrap;
+  line-height: normal;
+}
+.placement-table-year-heading {
+  background-color:#0a4f9d !important;
+}
+.statistics_data_table .governing-table thead th {
+    white-space: wrap;
+    border-right: 1px solid #ffffff1f;
+    line-height:normal;
+}
+.statistics_data_table .governing-table thead th{
+    white-space: normal;
+    border-right: 1px solid #ffffff1f;
+}
+.statistics_data_table .Enrollment_row th:first-child{
+    border-top-left-radius: 0px;
+}
+.statistics_data_table .Enrollment_row th:last-child{
+    border-top-right-radius: 0px;
+}
+.academic_calendar_table  .governing-table thead th:first-child{
+    border-top-left-radius: 0px;
+}
+.academic_calendar_table  .governing-table thead th:last-child{
+    border-top-right-radius: 0px;
+}
+.academic_calendar_table .governing-table thead th {
+    white-space: wrap;
+    border-right: 1px solid #ffffff1f;
+    line-height:normal;
+}
+.VacationColumn{
+  background: #0a4f9d !important;
 }
 /*------------- Scholarships Page End Here -------------*/
 /* ------------- Admission Tab End Here ---------------*/
@@ -3786,6 +4022,23 @@ Body {
 }
 .hostel_image img {
   width: 100%;
+  border-radius: 25px;
+}
+ .hostel_image{
+    position: relative;
+  }
+.hostel_image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        transparent 40%,
+        rgba(0, 0, 0, 0.85) 100%
+    );
+    z-index: 10;
+    pointer-events: none;
+    border-radius:25px;
 }
 .hosteltopinner {
   background-image: url(/images/campus/hostel/girls_hostel_bg.webp);
@@ -3805,6 +4058,7 @@ Body {
   margin: 0 auto;
   text-align: center;
   line-height: normal;
+  z-index:999;
 }
 .Capacitytext span {
   font-size: 20px;
@@ -3878,97 +4132,109 @@ Body {
 .gallery-slider-next:hover {
   transform: translateY(-5px);
 }
+
 /* /////////////////////////////////////// */
-.librarianImg{
-  position:sticky;
-  top:150px;
-  padding-left:25px;
+.librarianImg {
+  position: sticky;
+  top: 150px;
+  padding-left: 25px;
 }
-.librarianImg img{
-  border-radius:20px;
-  position:relative;
+.librarianImg img {
+  border-radius: 20px;
+  position: relative;
 }
-.librarianImginner{
-  position:relative;
+.librarianImginner {
+  position: relative;
 }
-.librarianImginner::after{
+.librarianImginner::after {
   content: "";
   width: 250px;
   height: 100%;
   position: absolute;
-  right:-20px;
+  right: -20px;
   top: -20px;
   z-index: -1;
-  background: linear-gradient(180deg,rgba(9, 70, 142, 1) 0%, rgba(137, 0, 74, 1) 85%);
-  border-radius:20px;
+  background: linear-gradient(
+    180deg,
+    rgba(9, 70, 142, 1) 0%,
+    rgba(137, 0, 74, 1) 85%
+  );
+  border-radius: 20px;
 }
-.librarianPara{
+.librarianPara {
   background-color: #e8f6ff;
-  padding:20px;
-  border-radius:25px;
-  margin:60px 0px;
+  padding: 20px;
+  border-radius: 25px;
+  margin: 60px 0px;
 }
-.library_statistical_data{
+.library_statistical_data {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 26px;
-  margin-top:20px;
+  gap: 15px;
+  margin-top: 15px;
 }
-.library_card{
+.library_card {
   border: 1px solid #ccc;
   border-radius: 15px;
-  padding: 20px;
+  padding: 13px;
   display: flex;
-  gap: 19px;
-  min-height: 100px;
+  gap: 10px;
+  min-height: 80px;
   border: 1px solid #ddd;
   border-radius: 20px;
-  font-size:14px;
+  font-size: 14px;
+}
+.library_card:nth-child(2) {
+  grid-column: span 2;
+}
+.library_card:nth-child(4) {
+  grid-column: span 2;
 }
 .library_card:nth-child(7) {
   grid-column: span 1;
 }
 .library_card:nth-child(8) {
-  grid-column: span 2;
+  grid-column: span 3;
 }
-.library_icons{
+.library_icons {
   background-color: #f5ebd9;
   border-radius: 10px;
-  width: 65px;
-  height:65px;
+  width: 55px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width:65px;
+  min-width: 55px;
 }
-.library_card_content{line-height:normal;}
-.library_card_content .librarytags{
-  font-size: 12px;
+.library_card_content {
+  line-height: normal;
+}
+.library_card_content .librarytags {
+  font-size: 11px;
   background: #cbecff;
-  padding: 3px 12px;
+  padding: 3px 7px;
   border-radius: 20px;
   line-height: normal;
-  width:fit-content;
-  margin-bottom:10px;
+  width: fit-content;
+  margin-bottom: 5px;
 }
-.library_card_content .librarytags2{
+.library_card_content .librarytags2 {
   background: #bca6d0;
-  margin-bottom:0px;
+  margin-bottom: 0px;
 }
-.librarynumtext{
-  margin:0px 25px 0px 0px;
+.librarynumtext {
+  margin:0 17px 0 0px;
 }
-.library_main .zigzag-section{
-  padding:80px 0px;
+.library_main .zigzag-section {
+  padding: 80px 0px;
 }
-.library_servicesinner{
+.library_servicesinner {
   background-color: #e8f6ff;
-  padding:30px;
-  border-radius:20px;
-  position:relative;
-  font-size:14px;
+  padding: 30px;
+  border-radius: 20px;
+  position: relative;
 }
-.library_servicesinner::after{
+.library_servicesinner::after {
   content: "";
   z-index: 1;
   background-image: url(/images/campus/library/library-services1.webp);
@@ -3979,7 +4245,69 @@ Body {
   height: 440px;
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: -30px;
+}
+.libraryNum{
+  color: #f79433;
+  margin: 4px 0 0;
+  font-family: Avenir-Next-Demi;
+  line-height: normal;
+  font-size: 18px;
+}
+.BestPractices_main{
+    background-color: #ffe293;
+    border-radius: 20px;
+    padding: 30px;
+    font-size: 14px;
+    margin:60px 0px 60px 0px;
+}
+.BestPractices_innerlist{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.BestPractices_innerlist span {
+    width: 48%;
+    margin: 0 0 0px;
+    padding: 0 0 0 20px;
+    font-size: 15px;
+    line-height: normal;
+    display: block;
+}
+.BestPractices_innerlist span:before {
+    content: "";
+    background-color: #000;
+    border-radius: 100px;
+    width: 6px;
+    height: 6px;
+    margin: 8px 0 0 -18px;
+    position: absolute;
+}
+.listbox_heading{
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    padding: 9px 40px;
+    background: #bca6d0;
+    border-radius: 30px;
+    line-height: normal;
+    right: 0;
+    width: fit-content;
+}
+.library_reinforces{
+  position: relative;
+}
+.library_img{
+  position:absolute;
+  bottom:-20px;
+  right:-20px;
+}
+.rules_and_regulations span{
+  width: 100%;
+}
+.libraryFAQ{
+  padding: 60px 0px 0px 0px;
 }
 /* ------------- LifeatIMS Tab End Here ---------------*/
 /*----------------------- Inner Pages End Here --------------------*/
@@ -4170,7 +4498,7 @@ Body {
   margin: 0 0 6px 0px;
 }
 .news-content .subheading {
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   text-overflow: ellipsis;
   -webkit-box-orient: vertical;
   line-height: normal;
@@ -4293,13 +4621,86 @@ Body {
   left: 130%;
 }
 /*------------- News And Events Details Page End Here -------------*/
+/*------------- PLACEMENTS-PAGE-START -------------*/
+.place_training_box {
+  background-color: #e8f6ff;
+  padding: 30px;
+  border-radius: 30px;
+  height: 100%;
+}
+.place_training_box span{
+  display: block;
+  width: 100%;
+  margin: 0 0 15px;
+  font-size: 15px;
+  line-height: normal;
+  padding: 0 0 0 20px;
+}
+.place_training_box span:last-child {
+  margin: 0;
+}
+.place_training_box span::before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: #000;
+  border-radius: 100px;
+  margin: 8px 0 0 -18px;
+}
+.top_recru_list {
+  background-color: #ebeff3;
+  width: 30%;
+  float: left;
+  padding: 20px;
+  margin: 0 2% 20px 0;
+  min-height: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.top_recru_list img {
+  width: auto;
+  max-height: 70px;
+}
+.placement_testi_list{
+background-color: #dff3ff;
+  padding: 30px;
+  border-radius: 20px;
+}
+.placement_testi_list:nth-child(even){
+  background-color: #f0e5fa;
+}
+.placement_testi_list:nth-child(even) .row{
+  display: flex;
+  flex-direction: row-reverse;
+}
+.placement_testi_img{
+border: 10px solid #fff;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.placement_testi_img img{
+  border-radius: 10px;
+}
+
+/*------------- PLACEMENTS-PAGE-END -------------*/
 
 /* -------------------   Responsive Pages Start here ------------------- */
 
 @media (min-width: 1365.98px) {
+  /*------------- Home Page Start Here  -------------*/
+  .testimonials_box{
+    min-height: 390px;
+  }
+  /*------------- Home Page End Here  -------------*/
   /*------------- Inner Pages Start Here -------------*/
   .excell_girlbox {
     width: 24%;
+  }
+  .librarynumtext {
+    margin: 0 35px 0 0;
   }
   /*------------- Inner Pages End Here -------------*/
 }
@@ -4397,10 +4798,47 @@ Body {
     min-height: 170px;
   }
   /*--------------- News And Events End Here ---------------*/
+  /*---------------- Programe tab Start Here ----------------*/
+  .facility-item {
+    padding: 10px 12px;
+    gap: 10px;
+    min-height: 70px;
+  }
+  .mca_career_opportunities_main .facilities-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .higher_education .facilities-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .details-grid {
+    gap: 20px;
+  }
+  .info_box_main {
+    gap: 15px;
+  }
+  .faculty-modal-overlay .info-box {
+    font-size: 13px;
+    line-height: normal;
+  }
+  /*---------------- Programe Tab End Here ----------------*/
+  /*---------------- Life @ IMS Start Here --------------*/
+  .libraryNum{
+    font-size:15px;
+  }
+  .library_statistical_data {
+      grid-template-columns: repeat(2, 1fr);
+  }
+
+  .library_card:nth-child(2),
+  .library_card:nth-child(4),
+  .library_card:nth-child(8) {
+      grid-column: span 1;
+  }
+  /*---------------- Life @ IMS End Here ----------------*/
 }
 @media (max-width: 991.98px) {
   .heading {
-    font-size: 28px;
+    font-size: 25px;
   }
   /* Header Start Here */
   .topbar_inner {
@@ -4409,6 +4847,9 @@ Body {
   }
   .topbar-contact span {
     color: #000;
+    /* background-color: #89004a; */
+    padding: 4px 10px;
+    border-radius: 100px;
   }
   .top-btn {
     background: #eaeaea;
@@ -4584,10 +5025,12 @@ Body {
     min-height: 150px;
   }
   .innerbannerheading {
-    margin: 20px 0 20px;
+    margin: 20px 30px;
     font-size: 25px;
   }
-
+  .innerpagerightside {
+    padding: 60px 0 60px 0px;
+  }
   /*-------------------- Contact Us Start Here ------------*/
   .contactinner {
     flex-wrap: wrap;
@@ -4634,7 +5077,7 @@ Body {
     background-color: transparent;
     padding: 0;
   }
-  .sidebar-toggle {
+  /* .sidebar-toggle {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -4649,6 +5092,27 @@ Body {
     position: absolute;
     left: 0;
     margin: 5px 0 0 0;
+  } */
+
+  .sidebar-toggle {
+    background: #09468e;
+    border: none;
+    border-radius: 0 50px 50px 0;
+    align-items: center;
+    gap: 10px;
+    margin: 5px 0 0;
+    padding: 7px 13px 7px 8px;
+    font-family: Roma-Bold;
+    display: flex;
+    position: fixed;
+    left: 0;
+    top: 120px;
+    z-index:99;
+  }
+  .sidebar-toggle svg {
+    color: #fff;
+    width: 20px;
+    height: 20px;
   }
   .sidebar-toggle span {
     display: none;
@@ -4702,19 +5166,169 @@ Body {
     height: inherit;
   }
   /*--------------- News And Events End Here ---------------*/
+  /*--------------- Programee Tab Start Here ---------------*/
+  .overview_inner {
+    padding-bottom: 30px;
+    flex-wrap: wrap;
+  }
+  .specialization_inner {
+    margin: 0px 0;
+  }
+  .coursesstrip {
+    padding: 30px 0;
+  }
+  .overview_left {
+    width: 100%;
+  }
+  .overview_right {
+    width: 100%;
+  }
+  .specialization-section .left-box {
+    width: 100%;
+    border-radius: 0px;
+  }
+  .specialization-section .overlay {
+    border-radius: 0px;
+  }
+  .specialization-section .right-box {
+    position: inherit;
+    padding: 20px;
+    width: 100%;
+    transform: translateY(0%);
+    border-radius: 0px 0px 30px 30px;
+  }
+  .specialization-section .left-box img {
+    border-radius: 30px 30px 0px 0px;
+  }
+  .intake_content {
+    position: inherit;
+    top: 0%;
+    left: 0px;
+    transform: translateY(0%);
+    border-radius: 0px 0px 20px 20px;
+    background: #5f6872;
+  }
+  .intake_inner img {
+    border-radius: 20px 20px 0px 0px;
+  }
+  .overview_right2 {
+    width: 100%;
+    font-size:16px ;
+  }
+  .imscdr_box {
+    bottom: 20px;
+    padding: 20px;
+    width: 75%;
+  }
+  .facilities-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-columns: repeat(2, minmax(0, 1fr)); */
+  }
+  .faculty-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+  .faculty-modal .faculty-details {
+    padding: 30px;
+  }
+
+  .faculty-category:first-child .faculty-grid {
+    /* grid-template-columns: repeat(2, 1fr); */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .faculty-category:first-child .faculty-grid .faculty-item .faculty-card {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .faculty-category:first-child .faculty-grid .faculty-item .faculty-image {
+    width: 100%;
+    height: 260px;
+  }
+  .faculty-section {
+    padding: 30px 0;
+  }
+  /*--------------- Programee Tab End Here ---------------*/
+  /*--------------- Campus Tab Start Here ---------------*/
+  .lifeat_states {
+    margin: 30px 0 0;
+  }
+  .lifeat_marquee {
+    padding: 30px 0 0;
+  }
+  .privacy_policyand_motto {
+    padding: 30px 0 0;
+  }
+  .lifeat_marquee .marquee_content {
+    font-size: 35px;
+  }
+  .infrastructure_main {
+    margin: 20px 0 30px;
+  }
+  /*---------- Campus Overview Page Start Here ----------*/
+  /*-------------- Resposnive Padding Margin Start Here --------------*/
+  .library_main .zigzag-section {
+    padding: 30px 0;
+  }
+  .librarianPara{
+    margin: 30px 0;
+  }
+  .BestPractices_main{
+    margin:30px 0px;
+  }
+  .libraryFAQ {
+    padding: 30px 0 0;
+  }
+  /*-------------- Resposnive Padding Margin End Here --------------*/
 }
 
 @media (max-width: 767.98px) {
+  /*--------------- Header Start Here ---------------*/
+  .headerNavigation {
+    display: none;
+  }
+  .onlyformobile {
+    display: block;
+  }
+  .topbar-contact {
+    font-size: 13px;
+  }
+  .topbar-contact span {
+    padding: 4px 0px;
+  }
+  .top-btn {
+    padding: 5px 16px;
+    font-size: 14px;
+  }
+  .topbar_inner {
+    justify-content: start;
+    padding: 20px;
+    background: #f5f5f5;
+    border-radius: 10px;
+  }
+  .top-btn {
+    background: #ffffff;
+  }
+  .topbar {
+    padding: 10px;
+  }
+  .topbar-contact a {
+    color: #44ade2;
+    text-decoration: none;
+  }
+  /*--------------- Header End Here ---------------*/
   .subheading {
     font-size: 16px;
   }
   /* Hero Banner Start Here */
   .herobanner_Content {
-    top: 80%;
+    top: 78%;
     width: 95%;
   }
   .hero-video {
-    min-height: 300px;
+    min-height: 290px;
   }
   /* Hero Banner End Here */
 
@@ -4784,33 +5398,287 @@ Body {
     border-radius: 18px;
   }
   /*----------------------- CampusLife End Here -----------------------*/
-
-  /*----------- Sidebar Start Here ------------*/
-
-  /*----------- Sidebar End Here ------------*/
-  /*--------------------- Inner Pages Start Here ---------------------*/
-  /* Programe Wise Faculty listing Start Here */
-  @media (max-width: 768px) {
-    .facultyListing {
-      grid-template-columns: 1fr;
-    }
-    .faculty-card {
-      flex-direction: column;
-      text-align: center;
-    }
-    .faculty-info {
-      align-items: center;
-    }
+  /*---------------------- About Us Tab Start Here --------------------*/
+  .vision_mision_inner {
+    display: block;
   }
-  /* Programe Wise Faculty listing End Here */
-  /*--------------------- Inner Pages End Here ---------------------*/
+  .vision_box {
+    width: 100%;
+    margin: 0 0 30px 0;
+  }
+  .privacy_policy_inner {
+    display: block;
+  }
+  .mottoleft {
+    width: 100%;
+    margin: 0 0 30px 0;
+  }
+  .info_card {
+    min-height: inherit;
+  }
+  .about-nacc {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  .about-nacc-content {
+    width: 100%;
+    text-align: center;
+  }
+  .about-naccimg {
+    margin: -40px auto 0px auto;
+  }
+  .privacy_policyand_motto {
+    padding: 0px 0 0;
+  }
+  .objective_section {
+    padding: 30px 0 0;
+  }
+  .mision_box .vision_mision_icon {
+    margin: -40px auto 25px;
+  }
+  .vision_mision_icon {
+    margin: -40px auto 25px;
+  }
+  .governing-table {
+    min-width: 600px;
+  }
+  /*---------------------- About Us Tab END Here --------------------*/
+
+  /*---------------------- Leaders Pages Start Here --------------------*/
+  .chancellor-wrapper {
+    flex-wrap: wrap;
+  }
+  /*---------------------- Leaders Pages Start Here --------------------*/
+
+  /*--------------- Sidebar START Here ---------------*/
+  .innerpagerightside {
+    padding: 60px 0px 60px 0px;
+  }
+  /*--------------- Sidebar End Here ---------------*/
+
+  /*------------ Programe Tab Start Here ------------*/
+  .facultyListing {
+    grid-template-columns: 1fr;
+  }
+  .faculty-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .faculty-info {
+    align-items: center;
+  }
+  .career_opportunities_images {
+    margin: 0 0 10px 0;
+  }
+  .ImageBox img {
+    width: 100%;
+  }
+  .ImageBox {
+    margin: 0 0 20px 0;
+  }
+  .faq-question {
+    padding: 15px;
+    gap: 10px;
+  }
+  .faq-question .subheading {
+    font-size: 16px;
+  }
+  .faq-answer.show {
+    padding: 0 15px 24px;
+  }
+  .programme_outcome_left{
+    width: 45%;
+  }
+  .programme_outcome_right{
+    width: 54%;
+  }
+  .mca_career_opportunities_main .facilities-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .mca_career_opportunities {
+    margin-top: 10px;
+  }
+  .higher_education .facilities-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .career_opportunities_main .subheading {
+    margin-bottom: 10px;
+  }
+
+  /* .higher_education .facilities-wrapper{
+    grid-template-columns: repeat(2, 1fr);
+  } */
+  .profiledesignbox {
+    flex-wrap: wrap;
+  }
+  .profiledesignbox .info-box1 {
+    width: 100%;
+    padding: 12px;
+    border-radius: 15px;
+  }
+  .facultydetail-content {
+    margin-top: 10px;
+    padding: 12px;
+  }
+  .facultydetails_name {
+    border-radius: 15px;
+  }
+  .faculty-modal-overlay .info-box {
+    width: 48%;
+  }
+  .governing-table th:nth-child(1),
+.governing-table td:nth-child(1) {
+  width: inherit;
+}
+  /*---------------- Programe Tab End Here ----------------*/
+  /*-------------- Addmision tab Start here --------------*/
+  .admission_process_content{
+    padding: 15px;
+  }
+  .phaseName{
+    font-size: 14px;
+  }
+  .phaseName{
+    padding: 0px 0 0 120px;
+  }
+  .processIcon{
+    width: 55px;
+    height: 55px;
+  }
+  .processCrad_Arrow{
+    width: 25px;
+    margin: 10px 0 0;
+  }
+  .phaseNumber{
+    font-size: 14px;
+  }
+  .eligibility_cardlisting .eligibility_card{
+    flex-direction: column-reverse;
+  }
+  .eligibility_text {
+    width: 100%;
+  }
+  .eligibility_card .eligibility_inner{
+    width: 100%;
+  }
+  .eligibility_cardlisting .eligibility_card:nth-child(2){
+    flex-direction: column;
+  }
+  .scholarships_page .governing-table thead tr:last-child th {
+    padding: 10px 15px 10px 10px;
+  }
+  /*-------------- Addmision tab End here --------------*/
+  /*---------- Campus Overview Page Start Here ----------*/
+  .lifeat_states {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .lifeat_states .verticalseparator {
+    display: none;
+  }
+  .lifeat_statebox {
+    margin: 0 0 20px 0;
+  }
+  .ourvaluescontent {
+    position: relative;
+    height: inherit;
+  }
+  .lifeatcampus .motto_quotes {
+    min-height: inherit;
+  }
+  .lifeat_marquee,
+  .privacy_policyand_motto {
+    padding: 30px 0px 0px;
+  }
+  .ourvaluescontent {
+    background: linear-gradient(#4a4a4a 0%, #000000b5 20%);
+    border-radius: 0px 0px 30px 30px;
+  }
+  .ourvaluesmain img {
+    border-radius: 30px 30px 0px 0px;
+    transition-duration: 0.5s;
+  }
+  .ourvaluescontent ul li {
+    width: 49%;
+  }
+  .ourvaluescontent ul {
+    gap: 4px;
+    padding: 10px 4px;
+    border: none;
+  }
+  .ourvaluescontent {
+    padding: 20px;
+  }
+  .hostel_image img {
+    width: 100%;
+    height: auto;
+    margin: 0px 0 30px 0;
+  }
+  .girsandboys_hostel {
+    padding: 20px 0;
+  }
+  .faculty-modal-overlay {
+    padding: 10px;
+  }
+  /*---------- Campus Overview Page Start Here ----------*/
+  /*---------------- Life @ IMS Start Here --------------*/
+  .libraryNum{
+    font-size:15px;
+  }
+  .library_statistical_data {
+      grid-template-columns: repeat(1, 1fr);
+  }
+
+  .library_card:nth-child(2),
+  .library_card:nth-child(4),
+  .library_card:nth-child(8) {
+      grid-column: span 1;
+  }
+  .library_card{
+    min-height: inherit;
+  }
+  .zigzag-section .parallaximg_image{
+    width: 100%;
+  }
+  .zigzag-row.reverse {
+    flex-direction: column;
+  }
+  .zigzag-section .content-box {
+    width: 100%;
+  }
+  .zigzag-row{
+    flex-wrap: wrap;
+    margin-bottom: 0px;
+    gap: 20px;
+  }
+  .library_servicesinner::after{
+    display: none;
+  }
+  .librarianImg img{
+    width:100%;
+  }
+  .librarianImginner {
+    margin: 20px 0 0 0;
+    padding-left: 0px;
+    position: inherit;
+  }
+  .librarianImg{
+    padding-left: 0px;
+  }
+  .librarianImginner:after{
+    width: 90%;
+    top: -15px;
+    right: 0px;
+    margin: 0 auto;
+    left: 0;
+  }
+  /*---------------- Life @ IMS End Here ----------------*/
 }
 
 @media (max-width: 575.98px) {
   /*--------------- Header Start Here ---------------*/
-  .headerNavigation {
-    display: none;
-  }
+
   /*--------------- Header End Here ---------------*/
   /* Hero Banner Start Here */
   .herobanner_Content {
@@ -4825,17 +5693,28 @@ Body {
     left: 0;
     top: inherit;
   }
-  .hero-video:after {
+  .hero-video::after {
     display: none;
   }
   .hero-video {
-    min-height: 300px;
+    min-height: 350px;
+  }
+  .hero-video > video {
+    height: 350px;
   }
   /* Hero Banner End Here */
+  /*------------ About Us Start Here ------------*/
+  .aboutus_section .aboutsec_inner .aboutus_left {
+    display: none;
+  }
   /*-------------------- Ranking Start Here ------------*/
   .ranking_card {
-    width: 100%;
-    gap: 20px;
+    gap: 10px;
+    width: 47%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
   }
   .ranking_content h3 {
     font-size: 25px;
@@ -4843,8 +5722,11 @@ Body {
   .ranking_content p {
     font-size: 16px;
   }
-  .ranking_icon {
+  /* .ranking_icon {
     width: 70px;
+  } */
+  .ranking_icon {
+    width: 100%;
   }
   /*-------------------- Ranking End Here ------------*/
   /*-------------------- Courses We Offer Start Here ------------*/
@@ -4890,6 +5772,9 @@ Body {
     border-radius: 10px !important;
   }
   /*-------------------- Courses We Offer End Here ------------*/
+  .excell_redbox {
+    padding: 10px 15px;
+  }
   /*----------------------- CampusLife Start Here -----------------------*/
   .galleryWrapper {
     gap: 12px;
@@ -4944,4 +5829,207 @@ Body {
     min-height: inherit;
   }
   /*--------------- News And Events End Here ---------------*/
+  /*--------------- Programe Pages Start Here ---------------*/
+  .overview_right {
+    gap: 10px;
+  }
+  .overview_right1 {
+    margin: 0 0 10px;
+  }
+  .specialization-section .left-box {
+    height: 250px;
+  }
+  .eligibility_inner {
+    padding: 10px;
+  }
+  .facilities-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .governing-table thead th{
+    padding: 17px 15px 17px 15px;
+  }
+  .governing-table tbody td{
+    padding: 10px 15px;
+  }
+  .programme_outcome_box{
+    flex-wrap: wrap;
+  }
+  .programme_outcome_left, .programme_outcome_right {
+    width: 100%;
+    min-height: inherit;
+  }
+  .programme_outcome_mainmca .programme_outcome_right {
+    min-height: inherit;
+  }
+  .programme_outcome_left{
+    width: 100%;
+  }
+  .programme_outcome_box {
+    gap: 10px;
+  }
+  .intake_number{
+    font-size: 30px;
+    gap: 0px;
+    flex-wrap: wrap;
+  }
+  .intake_content p{
+    padding: 5px 0;
+    line-height: normal;
+  }
+  /*--------------- Programee Tab End Here ---------------*/
+  /*-------------- Addmision tab Start here --------------*/
+  .processCrad .processCrad_Arrow svg {
+    width: 80%;
+  }
+  .processCrad_Arrow {
+    width: 45px;
+    margin: 10px 0 0;
+  }
+  .processCrad_main {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .processCrad {
+    width: 100%;
+  }
+  .processCrad_Arrow {
+    transform: rotate(90deg);
+  }
+  .phaseiconimage {
+    width: 50px;
+    height: 50px;
+    display:none;
+  }
+   /*-------------- Addmision tab End here --------------*/
+  /*---------- Campus Overview Page Start Here ----------*/
+  .infrastructure_main {
+    margin: 20px 0 30px;
+  }
+  .mainimage_gallery .gallery-image-wrapper {
+    height: 140px;
+  }
+  .mainimage_gallery .gallery-name {
+    padding: 3px 0;
+    padding: 3px 0;
+    min-height: 20px;
+  }
+  .infrastructure_main_content {
+    font-size: 16px;
+    bottom: 10px;
+  }
+  .faculty-modal-overlay .info-box {
+    width: 100%;
+  }
+  /*---------- Campus Overview Page End Here ----------*/
+/*------------- PLACEMENTS-PAGE-START -------------*/
+
+.placement_testi_img{
+  margin: 0 0 20px 0;
+}
+/*------------- PLACEMENTS-PAGE-END -------------*/
+  /*--------------- New Home Page Banner ---------------*/
+  .homepage .herobanner_Content {
+    position: absolute;
+    bottom: 0%;
+    height: auto;
+    align-items: center;
+    background: transparent;
+  }
+  .homepage .hero-video video {
+    height: 300px;
+    overflow: hidden;
+    object-fit: cover;
+  }
+  .homepage .hero-video::after {
+    display: block;
+  }
+  /*------------- Placement Tab Start Here -------------*/
+  .top_recru_list{
+    width: 47%;
+  }
+  .top_recru_list{
+    min-height: 90px;
+  }
+  /*---------------- Life @ IMS Start Here ----------------*/
+  .BestPractices_innerlist span {
+    width: 100%;
+  }
+  .BestPractices_innerlist {
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 300px;
+    gap: 10px;
+  }
+  .library_servicesinner{
+    padding: 20px;
+  }
+  .library_img{
+    display:none;
+  }
+  .BestPractices_main{
+    padding: 20px 15px 20px 20px;
+  }
+  /*---------------- Life @ IMS End Here ----------------*/
+
+
+}
+@media (max-width: 449.98px) {
+  /*--------------- Programe Pages Start Here ---------------*/
+  .faculty_listing_page .faculty-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .faculty-card {
+    flex-direction: row;
+  }
+  .faculty_listing_content {
+    text-align: start;
+  }
+  .faculty-education {
+    height: inherit;
+  }
+  .faculty_listing_page .faculty-card {
+    padding: 15px;
+    gap: 20px;
+  }
+  .faculty_listing_page .faculty-grid {
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  .faculty-image {
+    height: 150px;
+  }
+  .faculty-content {
+    padding: 10px;
+  }
+  .faculty-category:first-child .faculty-grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .faculty-category:first-child .faculty-grid .faculty-item .faculty-image {
+    width: 100%;
+    height: 360px;
+  }
+
+  .faculty-grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .faculty-image {
+    width: 100%;
+    height: 360px;
+  }
+  .faculty-page .faculty-grid {
+    gap: 15px;
+    margin-bottom: 0px;
+  }
+  .faculty-page .faculty-category {
+    padding: 30px 0;
+  }
+  /*--------------- Programe Pages End Here ---------------*/
+  /*---------- Campus Overview Page End Here ----------*/
+  .mainimage_gallery .gallery-image-wrapper {
+    height: 120px;
+  }
+  .gallery-slider .gallery-image-wrapper {
+    height: 160px;
+  }
+  /*---------- Campus Overview Page End Here ----------*/
 }

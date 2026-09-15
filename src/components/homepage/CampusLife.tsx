@@ -1,11 +1,196 @@
+// "use client";
+// import { useEffect } from "react";
+// import Image from "next/image";
+// import ExploreBtn from "../ui/ExploreBtn";
+// import { Fancybox } from "@fancyapps/ui";
+// import "@fancyapps/ui/dist/fancybox/fancybox.css";
+
+// export default function CampusLife() {
+//   useEffect(() => {
+//     Fancybox.bind("[data-fancybox='gallery']");
+
+//     return () => {
+//       Fancybox.unbind("[data-fancybox='gallery']");
+//       Fancybox.close();
+//     };
+//   }, []);
+
+//   return (
+//     <section className="gallerySection">
+//       <div className="container-fluid">
+//         <div className="row justify-content-center">
+//           <div className="col-md-7">
+//             <div className="heading text-center">Life at BPHES IMS-CDR</div>
+//             <p className="text-center mb-5">
+//               Experience a vibrant campus where academic pursuits go
+//               hand-in-hand with cultural, sports, and organizational activities,
+//               fostering holistic development and lifelong connections.
+//             </p>
+//           </div>
+//         </div>
+//         <div className="galleryWrapper">
+//           {/* Image 1 */}
+//           <a
+//             href="/images/home/gallery/Language-Lab.webp"
+//             data-fancybox="gallery"
+//             className="galleryItem tall"
+//           >
+//             <Image
+//               src="/images/home/gallery/Language-Lab.webp"
+//               alt="Campus Life 1"
+//               width={800}
+//               height={600}
+//               className="galleryImg"
+//             />
+//           </a>
+
+//           {/* Column 1 */}
+//           <div className="doubleColumn">
+//             <a
+//               href="/images/home/gallery/learning-resource-centre.webp"
+//               data-fancybox="gallery"
+//               className="galleryItem half"
+//             >
+//               <Image
+//                 src="/images/home/gallery/learning-resource-centre.webp"
+//                 alt="Campus Life 2"
+//                 width={800}
+//                 height={600}
+//                 className="galleryImg"
+//               />
+//             </a>
+
+//             <a
+//               href="/images/home/gallery/Seminar-Hall.webp"
+//               data-fancybox="gallery"
+//               className="galleryItem half"
+//             >
+//               <Image
+//                 src="/images/home/gallery/Seminar-Hall.webp"
+//                 alt="Campus Life 3"
+//                 width={800}
+//                 height={600}
+//                 className="galleryImg"
+//               />
+//             </a>
+//           </div>
+
+//           {/* Center */}
+//           <a
+//             href="/images/home/gallery/gallery-center-img.webp"
+//             data-fancybox="gallery"
+//             className="galleryItem centerTall"
+//           >
+//             <Image
+//               src="/images/home/gallery/gallery-center-img.webp"
+//               alt="Campus Life 4"
+//               width={800}
+//               height={600}
+//               className="galleryImg"
+//             />
+//           </a>
+
+//           {/* Column 2 */}
+//           <div className="doubleColumn">
+//             <a
+//               href="/images/home/gallery/ICT-enabled.webp"
+//               data-fancybox="gallery"
+//               className="galleryItem half"
+//             >
+//               <Image
+//                 src="/images/home/gallery/ICT-enabled.webp"
+//                 alt="Campus Life 5"
+//                 width={800}
+//                 height={600}
+//                 className="galleryImg"
+//               />
+//             </a>
+
+//             <a
+//               href="/images/home/gallery/library.webp"
+//               data-fancybox="gallery"
+//               className="galleryItem half"
+//             >
+//               <Image
+//                 src="/images/home/gallery/library.webp"
+//                 alt="Campus Life 6"
+//                 width={800}
+//                 height={600}
+//                 className="galleryImg"
+//               />
+//             </a>
+//           </div>
+
+//           {/* Image 7 */}
+//           <a
+//             href="/images/campus/campus-overview/campus-overview.webp"
+//             data-fancybox="gallery"
+//             className="galleryItem tall"
+//           >
+//             <Image
+//               src="/images/campus/campus-overview/campus-overview.webp"
+//               alt="Campus Life 7"
+//               width={800}
+//               height={600}
+//               className="galleryImg"
+//             />
+//           </a>
+//         </div>
+
+//         <div className="row justify-content-center">
+//           <div className="col-md-5 text-center mt-4">
+//             <ExploreBtn href="/lifeatims/gallery" />
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
+
+
 "use client";
 
 import { useEffect } from "react";
 import Image from "next/image";
 import ExploreBtn from "../ui/ExploreBtn";
-
 import { Fancybox } from "@fancyapps/ui";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
+import "swiper/css";
+import "swiper/css/navigation";
+
+const campusImages = [
+  {
+    src: "/images/home/gallery/Language-Lab.webp",
+    alt: "Campus Life 1",
+  },
+  {
+    src: "/images/home/gallery/learning-resource-centre.webp",
+    alt: "Campus Life 2",
+  },
+  {
+    src: "/images/home/gallery/Seminar-Hall.webp",
+    alt: "Campus Life 3",
+  },
+  {
+    src: "/images/home/gallery/gallery-center-img.webp",
+    alt: "Campus Life 4",
+  },
+  {
+    src: "/images/home/gallery/ICT-enabled.webp",
+    alt: "Campus Life 5",
+  },
+  {
+    src: "/images/home/gallery/library.webp",
+    alt: "Campus Life 6",
+  },
+  {
+    src: "/images/campus/campus-overview/campus-overview.webp",
+    alt: "Campus Life 7",
+  },
+];
 
 export default function CampusLife() {
   useEffect(() => {
@@ -22,16 +207,24 @@ export default function CampusLife() {
       <div className="container-fluid">
         <div className="row justify-content-center">
           <div className="col-md-7">
-            <div className="heading text-center">Life at BPHES IMS-CDR</div>
+            <div className="heading text-center">
+              Life at BPHES IMS-CDR
+            </div>
+
             <p className="text-center mb-5">
               Experience a vibrant campus where academic pursuits go
-              hand-in-hand with cultural, sports, and organizational activities,
-              fostering holistic development and lifelong connections.
+              hand-in-hand with cultural, sports, and organizational
+              activities, fostering holistic development and lifelong
+              connections.
             </p>
           </div>
         </div>
 
-        <div className="galleryWrapper">
+        {/* =========================================
+            DESKTOP GALLERY
+            Existing design - NO CHANGE
+        ========================================= */}
+        <div className="galleryWrapper desktopGallery">
           {/* Image 1 */}
           <a
             href="/images/home/gallery/Language-Lab.webp"
@@ -46,7 +239,6 @@ export default function CampusLife() {
               className="galleryImg"
             />
           </a>
-
           {/* Column 1 */}
           <div className="doubleColumn">
             <a
@@ -62,7 +254,6 @@ export default function CampusLife() {
                 className="galleryImg"
               />
             </a>
-
             <a
               href="/images/home/gallery/Seminar-Hall.webp"
               data-fancybox="gallery"
@@ -77,7 +268,6 @@ export default function CampusLife() {
               />
             </a>
           </div>
-
           {/* Center */}
           <a
             href="/images/home/gallery/gallery-center-img.webp"
@@ -92,7 +282,6 @@ export default function CampusLife() {
               className="galleryImg"
             />
           </a>
-
           {/* Column 2 */}
           <div className="doubleColumn">
             <a
@@ -108,7 +297,6 @@ export default function CampusLife() {
                 className="galleryImg"
               />
             </a>
-
             <a
               href="/images/home/gallery/library.webp"
               data-fancybox="gallery"
@@ -123,7 +311,6 @@ export default function CampusLife() {
               />
             </a>
           </div>
-
           {/* Image 7 */}
           <a
             href="/images/campus/campus-overview/campus-overview.webp"
@@ -139,7 +326,41 @@ export default function CampusLife() {
             />
           </a>
         </div>
+        {/* =========================================
+            MOBILE SWIPER
+            One image at a time
+        ========================================= */}
+        <div className="mobileGallery">
+          <Swiper
+            modules={[Navigation]}
+            navigation
+            slidesPerView={1}
+            slidesPerGroup={1}
+            spaceBetween={0}
+            loop={true}
+            speed={500}
+          >
+            {campusImages.map((image, index) => (
+              <SwiperSlide key={image.src}>
+                <a
+                  href={image.src}
+                  data-fancybox="gallery"
+                  className="mobileGalleryItem"
+                >
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    width={800}
+                    height={600}
+                    className="galleryImg"
+                  />
+                </a>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
 
+        {/* Explore Button */}
         <div className="row justify-content-center">
           <div className="col-md-5 text-center mt-4">
             <ExploreBtn href="/lifeatims/gallery" />
