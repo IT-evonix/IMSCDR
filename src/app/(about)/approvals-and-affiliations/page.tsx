@@ -17,9 +17,9 @@ const page = () => {
           </div>
           <div className="content-box">
             <div className="heading" style={{ lineHeight: "36px" }}>
-              We are an AICTE approved institiution affiliated to SPPU and also also NAAC re-accreditation
+              We are an AICTE approved institiution affiliated to Savitribai Phule Pune University also NAAC re-accredited
             </div>
-            <ExploreBtn href="/about" text="Know More" />
+            <ExploreBtn href="/student-corner/downloads" text="Know More" />
           </div>
         </div>
         <div className="zigzag-row reverse d-none">

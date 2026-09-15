@@ -92,7 +92,7 @@ export const facultyData: Faculty[] = [
     category: "Admin Team",
     "name": "C. D. Mohite",
     "designation": "Clerk (B. A. LLB)",
-    "image": "/images/faculty/C-D-Mohite.png",
+    "image": "/images/faculty/C-DMohite.webp",
     "email": "admission@imscdr.ac.in",
     "number": "9850642379"
   },
@@ -125,7 +125,7 @@ export const facultyData: Faculty[] = [
     "name": "Hatim Kayyumi",
     "designation": "Assistant Professor",
     "qualification": "Ph.D",
-    "image": "/images/faculty/Hatim-Kayyumi.png",
+    "image": "/images/faculty/Hatim-Kayyumi.webp",
     "email": "hatimkayumi@imscdr.ac.in",
     "broadAreas": [
       "International Business",
@@ -160,7 +160,7 @@ export const facultyData: Faculty[] = [
     "name": "Rucha Tandulwadkar",
     "designation": "Associate Professor",
     "qualification": "Ph.D",
-    "image": "/images/faculty/Rucha-Tandulwadkar.png",
+    "image": "/images/faculty/Rucha-Tandulwadkar.webp",
     "email": "ruchatmba@imscdr.ac.in",
     "broadAreas": [
       "Economics",
@@ -212,7 +212,7 @@ export const facultyData: Faculty[] = [
     "name": "Ashwini Thorat",
     "designation": "Assistant Professor",
     "qualification": "MMS -Marketing, HR",
-    "image": "/images/faculty/Ashwini-Thorat.png",
+    "image": "/images/faculty/Ashwini-Thorat.webp",
     "email": "ashwinithorat9@imscdr.ac.in",
     "broadAreas": [
       "Marketing Management",
@@ -272,7 +272,7 @@ export const facultyData: Faculty[] = [
     "name": "Mudassar Sayyed",
     "designation": "Assistant Professor",
     "qualification": "Ph.D",
-    "image": "/images/faculty/Sayyed-Mudassar.webp",
+    "image": "/images/faculty/Mudassar-Sayyed.webp",
     "email": "mudassar@imscdr.ac.in",
     "broadAreas": [
       "Operations Management",
@@ -301,7 +301,7 @@ export const facultyData: Faculty[] = [
     "name": "Rahul Khandelwal",
     "designation": "Assistant Professor",
     "qualification": "Ph.D",
-    "image": "/images/faculty/Rahul-Khandelwal.png",
+    "image": "/images/faculty/Rahul-Khandelwal.webp",
     "email": "rahulkhandelwal29@imscdr.ac.in",
     "broadAreas": [
       "Marketing Management",
@@ -333,7 +333,7 @@ export const facultyData: Faculty[] = [
     "name": "Harshvardhan Bhavsar",
     "designation": "Assistant Professor",
     "qualification": "Ph.D",
-    "image": "/images/faculty/Harshvardhan-Bhavsar.png",
+    "image": "/images/faculty/Harshvardhan-Bhavsar.webp",
     "email": "hnbhavsar@imscdr.ac.in",
     "broadAreas": [
       "Marketing Management",
@@ -367,7 +367,7 @@ export const facultyData: Faculty[] = [
     "name": "Sakshi Madhyan",
     "designation": "Assistant Professor",
     "qualification": "MBA",
-    "image": "/images/faculty/Sakshi-Madhyan.webp",
+    "image": "/images/faculty/Sakshi_madhyan.webp",
     "email": "madhyansakshi.08@imscdr.ac.in",
     "broadAreas": [
       "Commerce and Management"
@@ -391,7 +391,7 @@ export const facultyData: Faculty[] = [
     "name": "Pratap Gaikwad",
     "designation": "Assistant Professor",
     "qualification": "MBA",
-    "image": "/images/faculty/Pratap-Gaikwad.png",
+    "image": "/images/faculty/Pratap-Gaikwad.webp",
     "email": "pgaikwad@imscdr.ac.in",
   },
   {
@@ -480,7 +480,7 @@ export const facultyData: Faculty[] = [
     "name": "Shradha Bhandari",
     "designation": "Assistant Professor",
     "qualification": "MBA",
-    "image": "/images/faculty/ShradhaBhandari.webp",
+    "image": "/images/faculty/Shradha-Bhandari.webp",
     "email": "",
     "broadAreas": [
       "Commerce",
@@ -580,7 +580,7 @@ export const facultyData: Faculty[] = [
     "name": "Utkarsha Dethe",
     "designation": "Assistant Professor",
     "qualification": "MCA, SET Qualified",
-    "image": "/images/faculty/Utkarsha-Dethe.png",
+    "image": "/images/faculty/Utkarsha-Dethe.webp",
     "email": "udethe@imscdr.ac.in",
     "broadAreas": [
       "Computer Science and Application",
@@ -608,7 +608,7 @@ export const facultyData: Faculty[] = [
     "name": "Madhuri Godbole",
     "designation": "Assistant Professor",
     "qualification": "Ph.D",
-    "image": "/images/faculty/Madhuri-Godbole.png",
+    "image": "/images/faculty/Madhuri-Godbole.webp",
     "email": "madhurigodbole@imscdr.ac.in",
   },
   {
@@ -641,7 +641,7 @@ export const facultyData: Faculty[] = [
     "name": "Gauri Patil",
     "designation": "Assistant Professor",
     "qualification": "MCA (Ph.D pursuing) ",
-    "image": "/images/faculty/gauri-patil.png",
+    "image": "/images/faculty/Gauri-Patil.webp",
     "email": "gauripatil@imscdr.ac.in",
     "broadAreas": [
       "Mobile Application Development",
@@ -692,7 +692,7 @@ export const facultyData: Faculty[] = [
     "name": "Sayyed Mudassar",
     "designation": "Assistant Professor",
     "qualification": "Ph.D",
-    "image": "/images/faculty/Sayyed-Mudassar-Nazir.webp",
+    "image": "/images/faculty/Sayyed_Mudassar.webp",
     "email": "mudassar@imscdr.ac.in",
   },
   {
@@ -724,7 +724,7 @@ export const facultyData: Faculty[] = [
     "name": "Shubhangi Kharmate",
     "designation": "Assistant professor",
     "qualification": "MCA",
-    "image": "/images/faculty/Shubhangi-Kharmate.webp",
+    "image": "/images/faculty/ShubhangiKharmate.webp",
     "email": "",
     "broadAreas": [
       "Computer Science",
@@ -953,7 +953,7 @@ export const facultyData: Faculty[] = [
     category: "Technical-Support",
     "name": "Kiran Sable",
     "designation": "Technician",
-    "image": "/images/faculty/Kiran-Sable.png",
+    "image": "/images/faculty/Kiran-Sable.webp",
   },
 
 ];

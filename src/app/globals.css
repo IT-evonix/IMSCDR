@@ -33,9 +33,6 @@
   src: url("/fonts/AVENIRNEXT-DEMI.woff2") format("woff2");
   font-display: swap;
 }
-html {
-  /* scrollbar-gutter: stable; */
-}
 Body {
   font-family: "Avenir-Next-Regular" !important;
   color: #000;
@@ -341,6 +338,9 @@ Body {
 }
 /* About Institute End Here */
 /* -------------Courses We Offer Start Here----------- */
+.mobileCourses {
+  display: none;
+}
 .CoursesWeOffer_sec {
   position: relative;
   background: linear-gradient(
@@ -685,7 +685,7 @@ Body {
 }
 .achievement-swiper .swiper-slide {
   transition: all 0.5s ease;
-   min-width: 0;
+  min-width: 0;
 }
 .achievement-swiper .swiper-slide:not(.swiper-slide-active) {
   opacity: 0.85;
@@ -941,6 +941,10 @@ Body {
     rgba(9, 70, 142, 1) 0%,
     rgba(68, 173, 226, 1) 100%
   );
+}
+
+.mobileGallery {
+  display: none;
 }
 /*----------------------- CampusLife End Here -----------------------*/
 /*----------- Our Testimonials Section End Here -----------*/
@@ -1606,15 +1610,16 @@ Body {
 .governing-table td {
   white-space: normal;
 }
-.bba-bca-curriculum .governing-table th:first-child, .governing-table td:first-child {
-    width: inherit;
-} 
-.bba-bca-total-row{
-    font-size: 16px;
-    font-family: "Avenir-Next-Demi";
+.bba-bca-curriculum .governing-table th:first-child,
+.governing-table td:first-child {
+  width: inherit;
 }
-.pdf_section{
-  padding:60px 0px 0px 0px;
+.bba-bca-total-row {
+  font-size: 16px;
+  font-family: "Avenir-Next-Demi";
+}
+.pdf_section {
+  padding: 60px 0px 0px 0px;
 }
 /*----------------- Governing Body End Here ------------------*/
 /*----------- Approvals & Affiliations Start Here -----------*/
@@ -2231,7 +2236,7 @@ Body {
   top: 8px;
   left: 0;
 }
-  
+
 /*----- Specializations Page End Here -----*/
 /*----- Eligibility Page Start Here -----*/
 .eligibility_main {
@@ -2521,22 +2526,22 @@ Body {
 /* ---------- Laboratories & Facilities End Here ---------- */
 /*----------- Curriculum Page Start Here -----------*/
 .mca_curriculum .mca-elective-heading .member-name {
-  background-color:#fffdf5;
+  background-color: #fffdf5;
   font-size: 16px;
-  color:#f79433;
+  color: #f79433;
 }
-.mca-soft-skills-section .member-name{
+.mca-soft-skills-section .member-name {
   background: #88004a12;
   font-size: 16px;
-  color:#89004a;
+  color: #89004a;
 }
-.mca-practical-section .member-name{
+.mca-practical-section .member-name {
   background: #88004a12;
   font-size: 16px;
-  color:#89004a;
+  color: #89004a;
 }
-.mca-total-row{
-  font-size:16px;
+.mca-total-row {
+  font-size: 16px;
   font-family: "Avenir-Next-Demi";
 }
 
@@ -2572,7 +2577,7 @@ Body {
 .programme_outcome_box:nth-child(even) .programme_outcome_right {
   background-color: #e0eaf6;
 }
-.programme_outcome_mainmca .programme_outcome_right{
+.programme_outcome_mainmca .programme_outcome_right {
   min-height: 180px;
 }
 .programme_outcome_left {
@@ -3576,7 +3581,7 @@ Body {
   font-family: "Avenir-Next-Demi";
   margin: 0px;
 }
-.feetabbox a{
+.feetabbox a {
   color: #000;
   font-size: 14px;
   text-decoration: none;
@@ -3648,35 +3653,35 @@ Body {
   line-height: normal;
 }
 .placement-table-year-heading {
-  background-color:#0a4f9d !important;
+  background-color: #0a4f9d !important;
 }
 .statistics_data_table .governing-table thead th {
-    white-space: wrap;
-    border-right: 1px solid #ffffff1f;
-    line-height:normal;
+  white-space: wrap;
+  border-right: 1px solid #ffffff1f;
+  line-height: normal;
 }
-.statistics_data_table .governing-table thead th{
-    white-space: normal;
-    border-right: 1px solid #ffffff1f;
+.statistics_data_table .governing-table thead th {
+  white-space: normal;
+  border-right: 1px solid #ffffff1f;
 }
-.statistics_data_table .Enrollment_row th:first-child{
-    border-top-left-radius: 0px;
+.statistics_data_table .Enrollment_row th:first-child {
+  border-top-left-radius: 0px;
 }
-.statistics_data_table .Enrollment_row th:last-child{
-    border-top-right-radius: 0px;
+.statistics_data_table .Enrollment_row th:last-child {
+  border-top-right-radius: 0px;
 }
-.academic_calendar_table  .governing-table thead th:first-child{
-    border-top-left-radius: 0px;
+.academic_calendar_table .governing-table thead th:first-child {
+  border-top-left-radius: 0px;
 }
-.academic_calendar_table  .governing-table thead th:last-child{
-    border-top-right-radius: 0px;
+.academic_calendar_table .governing-table thead th:last-child {
+  border-top-right-radius: 0px;
 }
 .academic_calendar_table .governing-table thead th {
-    white-space: wrap;
-    border-right: 1px solid #ffffff1f;
-    line-height:normal;
+  white-space: wrap;
+  border-right: 1px solid #ffffff1f;
+  line-height: normal;
 }
-.VacationColumn{
+.VacationColumn {
   background: #0a4f9d !important;
 }
 /*------------- Scholarships Page End Here -------------*/
@@ -4024,21 +4029,21 @@ Body {
   width: 100%;
   border-radius: 25px;
 }
- .hostel_image{
-    position: relative;
-  }
+.hostel_image {
+  position: relative;
+}
 .hostel_image::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        to bottom,
-        transparent 40%,
-        rgba(0, 0, 0, 0.85) 100%
-    );
-    z-index: 10;
-    pointer-events: none;
-    border-radius:25px;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 40%,
+    rgba(0, 0, 0, 0.85) 100%
+  );
+  z-index: 10;
+  pointer-events: none;
+  border-radius: 25px;
 }
 .hosteltopinner {
   background-image: url(/images/campus/hostel/girls_hostel_bg.webp);
@@ -4058,7 +4063,7 @@ Body {
   margin: 0 auto;
   text-align: center;
   line-height: normal;
-  z-index:999;
+  z-index: 999;
 }
 .Capacitytext span {
   font-size: 20px;
@@ -4223,7 +4228,7 @@ Body {
   margin-bottom: 0px;
 }
 .librarynumtext {
-  margin:0 17px 0 0px;
+  margin: 0 17px 0 0px;
 }
 .library_main .zigzag-section {
   padding: 80px 0px;
@@ -4247,66 +4252,66 @@ Body {
   bottom: 0;
   right: -30px;
 }
-.libraryNum{
+.libraryNum {
   color: #f79433;
   margin: 4px 0 0;
   font-family: Avenir-Next-Demi;
   line-height: normal;
   font-size: 18px;
 }
-.BestPractices_main{
-    background-color: #ffe293;
-    border-radius: 20px;
-    padding: 30px;
-    font-size: 14px;
-    margin:60px 0px 60px 0px;
+.BestPractices_main {
+  background-color: #ffe293;
+  border-radius: 20px;
+  padding: 30px;
+  font-size: 14px;
+  margin: 60px 0px 60px 0px;
 }
-.BestPractices_innerlist{
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
+.BestPractices_innerlist {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 .BestPractices_innerlist span {
-    width: 48%;
-    margin: 0 0 0px;
-    padding: 0 0 0 20px;
-    font-size: 15px;
-    line-height: normal;
-    display: block;
+  width: 48%;
+  margin: 0 0 0px;
+  padding: 0 0 0 20px;
+  font-size: 15px;
+  line-height: normal;
+  display: block;
 }
 .BestPractices_innerlist span:before {
-    content: "";
-    background-color: #000;
-    border-radius: 100px;
-    width: 6px;
-    height: 6px;
-    margin: 8px 0 0 -18px;
-    position: absolute;
+  content: "";
+  background-color: #000;
+  border-radius: 100px;
+  width: 6px;
+  height: 6px;
+  margin: 8px 0 0 -18px;
+  position: absolute;
 }
-.listbox_heading{
-    position: absolute;
-    top: -15px;
-    left: 20px;
-    padding: 9px 40px;
-    background: #bca6d0;
-    border-radius: 30px;
-    line-height: normal;
-    right: 0;
-    width: fit-content;
+.listbox_heading {
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  padding: 9px 40px;
+  background: #bca6d0;
+  border-radius: 30px;
+  line-height: normal;
+  right: 0;
+  width: fit-content;
 }
-.library_reinforces{
+.library_reinforces {
   position: relative;
 }
-.library_img{
-  position:absolute;
-  bottom:-20px;
-  right:-20px;
+.library_img {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
 }
-.rules_and_regulations span{
+.rules_and_regulations span {
   width: 100%;
 }
-.libraryFAQ{
+.libraryFAQ {
   padding: 60px 0px 0px 0px;
 }
 /* ------------- LifeatIMS Tab End Here ---------------*/
@@ -4628,7 +4633,7 @@ Body {
   border-radius: 30px;
   height: 100%;
 }
-.place_training_box span{
+.place_training_box span {
   display: block;
   width: 100%;
   margin: 0 0 15px;
@@ -4664,24 +4669,24 @@ Body {
   width: auto;
   max-height: 70px;
 }
-.placement_testi_list{
-background-color: #dff3ff;
+.placement_testi_list {
+  background-color: #dff3ff;
   padding: 30px;
   border-radius: 20px;
 }
-.placement_testi_list:nth-child(even){
+.placement_testi_list:nth-child(even) {
   background-color: #f0e5fa;
 }
-.placement_testi_list:nth-child(even) .row{
+.placement_testi_list:nth-child(even) .row {
   display: flex;
   flex-direction: row-reverse;
 }
-.placement_testi_img{
-border: 10px solid #fff;
+.placement_testi_img {
+  border: 10px solid #fff;
   border-radius: 10px;
   background-color: #fff;
 }
-.placement_testi_img img{
+.placement_testi_img img {
   border-radius: 10px;
 }
 
@@ -4691,7 +4696,7 @@ border: 10px solid #fff;
 
 @media (min-width: 1365.98px) {
   /*------------- Home Page Start Here  -------------*/
-  .testimonials_box{
+  .testimonials_box {
     min-height: 390px;
   }
   /*------------- Home Page End Here  -------------*/
@@ -4822,17 +4827,17 @@ border: 10px solid #fff;
   }
   /*---------------- Programe Tab End Here ----------------*/
   /*---------------- Life @ IMS Start Here --------------*/
-  .libraryNum{
-    font-size:15px;
+  .libraryNum {
+    font-size: 15px;
   }
   .library_statistical_data {
-      grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .library_card:nth-child(2),
   .library_card:nth-child(4),
   .library_card:nth-child(8) {
-      grid-column: span 1;
+    grid-column: span 1;
   }
   /*---------------- Life @ IMS End Here ----------------*/
 }
@@ -5107,7 +5112,7 @@ border: 10px solid #fff;
     position: fixed;
     left: 0;
     top: 120px;
-    z-index:99;
+    z-index: 99;
   }
   .sidebar-toggle svg {
     color: #fff;
@@ -5213,7 +5218,7 @@ border: 10px solid #fff;
   }
   .overview_right2 {
     width: 100%;
-    font-size:16px ;
+    font-size: 16px;
   }
   .imscdr_box {
     bottom: 20px;
@@ -5272,11 +5277,11 @@ border: 10px solid #fff;
   .library_main .zigzag-section {
     padding: 30px 0;
   }
-  .librarianPara{
+  .librarianPara {
     margin: 30px 0;
   }
-  .BestPractices_main{
-    margin:30px 0px;
+  .BestPractices_main {
+    margin: 30px 0px;
   }
   .libraryFAQ {
     padding: 30px 0 0;
@@ -5355,7 +5360,7 @@ border: 10px solid #fff;
   }
   /*-------------------- Ranking End Here ------------*/
   /*-------------------- Courses We Offer Start Here ------------*/
-  .course_card:nth-child(2) .Courses_content,
+  /* .course_card:nth-child(2) .Courses_content,
   .course_card:nth-child(4) .Courses_content,
   .Courses_content,
   .course_card:nth-child(3) .Courses_content {
@@ -5363,6 +5368,83 @@ border: 10px solid #fff;
   }
   .Courses_content svg {
     bottom: 10px;
+  } */
+  /* Hide desktop grid */
+  .desktopCourses {
+    display: none;
+  } 
+  .mobileCourses {
+    display: block;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    z-index: 3;
+  }
+  .mobileCourses .swiper {
+    width: 100%;
+    padding-bottom:0px;
+    overflow: visible;
+  }
+  .mobileCourses .swiper-wrapper {
+    align-items: stretch;
+    padding: 0 0 20px 0px;
+  }
+  .mobileCourses .swiper-slide {
+    width: 100%;
+    height: auto;
+    display: flex;
+  }
+  .mobileCourses .course_card {
+    display: block;
+    width: auto;
+    position: relative;
+  }
+  .mobileCourses .course_card_inner {
+    width: 100%;
+    position: relative;
+  }
+  .mobileCourses .course_card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .mobileCourses .course_card::before,
+  .mobileCourses .course_card::after {
+    pointer-events: none;
+  }
+  .mobileCourses .Courses_content {
+    pointer-events: none;
+  } 
+  .mobileCourses .swiper-pagination {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 5px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    pointer-events: auto;
+    top: inherit !important;
+    bottom: 0px !important;
+  }
+  .mobileCourses .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    margin: 0 5px !important;
+    opacity: 1;
+    border-radius: 50%;
+    cursor: pointer;
+    pointer-events: auto;
+    transition: all 0.3s ease;
+  }
+  .mobileCourses .swiper-pagination-bullet-active {
+    width: 22px;
+    border-radius: 10px;
+  }
+  .course_card::after{
+    height: auto;
   }
   /*-------------------- Courses We Offer End Here ------------*/
   /*-------------------- Excellent Placements Start Here ------------*/
@@ -5382,7 +5464,7 @@ border: 10px solid #fff;
   }
   /*-------------------- Excellent Placements End Here ------------*/
   /*----------------------- CampusLife Start Here -----------------------*/
-  .galleryWrapper {
+  /* .galleryWrapper {
     grid-template-columns: 1fr;
     gap: 15px;
   }
@@ -5396,7 +5478,82 @@ border: 10px solid #fff;
   }
   .galleryItem {
     border-radius: 18px;
+  } */
+  /* Existing desktop mosaic hidden */
+  .desktopGallery {
+    display: none;
   }
+  /* Swiper visible */
+  .mobileGallery {
+    display: block;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  .mobileGallery .swiper {
+    width: 100%;
+    padding: 0px 0px 60px 0px;
+  }
+  .mobileGallery .swiper-slide {
+    width: 100%;
+  }
+  .mobileGalleryItem {
+    display: block;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+  }
+  .mobileGalleryItem .galleryImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  /* Disable desktop hover zoom on mobile */
+  .mobileGalleryItem:hover .galleryImg {
+    transform: none;
+  }
+  .mobileGallery .swiper-button-prev,
+  .mobileGallery .swiper-button-next {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    /* background: #fff; */
+    margin-top: -19px;
+    bottom: 0px;
+    top: inherit !important;
+  }
+  .mobileGallery .swiper-button-prev svg,
+  .mobileGallery .swiper-button-next svg {
+    display: none;
+  }
+  .mobileGallery .swiper-button-next {
+    background-image: url(/images/home/rightArrow.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-color: #fff;
+    right: 34% !important;
+  }
+  .mobileGallery .swiper-button-prev {
+    background-image: url(/images/home/leftArrow.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-color: #fff;
+    left: 34% !important;
+  }
+  .mobileGallery .swiper-button-next {
+    right: 10px;
+  }
+  .mobileGallery .swiper-button-prev::after,
+  .mobileGallery .swiper-button-next::after {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  /*----------------------- CampusLife End Here -----------------------*/
   /*----------------------- CampusLife End Here -----------------------*/
   /*---------------------- About Us Tab Start Here --------------------*/
   .vision_mision_inner {
@@ -5487,10 +5644,10 @@ border: 10px solid #fff;
   .faq-answer.show {
     padding: 0 15px 24px;
   }
-  .programme_outcome_left{
+  .programme_outcome_left {
     width: 45%;
   }
-  .programme_outcome_right{
+  .programme_outcome_right {
     width: 54%;
   }
   .mca_career_opportunities_main .facilities-wrapper {
@@ -5528,41 +5685,41 @@ border: 10px solid #fff;
     width: 48%;
   }
   .governing-table th:nth-child(1),
-.governing-table td:nth-child(1) {
-  width: inherit;
-}
+  .governing-table td:nth-child(1) {
+    width: inherit;
+  }
   /*---------------- Programe Tab End Here ----------------*/
   /*-------------- Addmision tab Start here --------------*/
-  .admission_process_content{
+  .admission_process_content {
     padding: 15px;
   }
-  .phaseName{
+  .phaseName {
     font-size: 14px;
   }
-  .phaseName{
+  .phaseName {
     padding: 0px 0 0 120px;
   }
-  .processIcon{
+  .processIcon {
     width: 55px;
     height: 55px;
   }
-  .processCrad_Arrow{
+  .processCrad_Arrow {
     width: 25px;
     margin: 10px 0 0;
   }
-  .phaseNumber{
+  .phaseNumber {
     font-size: 14px;
   }
-  .eligibility_cardlisting .eligibility_card{
+  .eligibility_cardlisting .eligibility_card {
     flex-direction: column-reverse;
   }
   .eligibility_text {
     width: 100%;
   }
-  .eligibility_card .eligibility_inner{
+  .eligibility_card .eligibility_inner {
     width: 100%;
   }
-  .eligibility_cardlisting .eligibility_card:nth-child(2){
+  .eligibility_cardlisting .eligibility_card:nth-child(2) {
     flex-direction: column;
   }
   .scholarships_page .governing-table thead tr:last-child th {
@@ -5623,22 +5780,22 @@ border: 10px solid #fff;
   }
   /*---------- Campus Overview Page Start Here ----------*/
   /*---------------- Life @ IMS Start Here --------------*/
-  .libraryNum{
-    font-size:15px;
+  .libraryNum {
+    font-size: 15px;
   }
   .library_statistical_data {
-      grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
 
   .library_card:nth-child(2),
   .library_card:nth-child(4),
   .library_card:nth-child(8) {
-      grid-column: span 1;
+    grid-column: span 1;
   }
-  .library_card{
+  .library_card {
     min-height: inherit;
   }
-  .zigzag-section .parallaximg_image{
+  .zigzag-section .parallaximg_image {
     width: 100%;
   }
   .zigzag-row.reverse {
@@ -5647,26 +5804,26 @@ border: 10px solid #fff;
   .zigzag-section .content-box {
     width: 100%;
   }
-  .zigzag-row{
+  .zigzag-row {
     flex-wrap: wrap;
     margin-bottom: 0px;
     gap: 20px;
   }
-  .library_servicesinner::after{
+  .library_servicesinner::after {
     display: none;
   }
-  .librarianImg img{
-    width:100%;
+  .librarianImg img {
+    width: 100%;
   }
   .librarianImginner {
     margin: 20px 0 0 0;
     padding-left: 0px;
     position: inherit;
   }
-  .librarianImg{
+  .librarianImg {
     padding-left: 0px;
   }
-  .librarianImginner:after{
+  .librarianImginner:after {
     width: 90%;
     top: -15px;
     right: 0px;
@@ -5677,9 +5834,6 @@ border: 10px solid #fff;
 }
 
 @media (max-width: 575.98px) {
-  /*--------------- Header Start Here ---------------*/
-
-  /*--------------- Header End Here ---------------*/
   /* Hero Banner Start Here */
   .herobanner_Content {
     width: 100%;
@@ -5845,34 +5999,35 @@ border: 10px solid #fff;
   .facilities-wrapper {
     grid-template-columns: repeat(1, 1fr);
   }
-  .governing-table thead th{
+  .governing-table thead th {
     padding: 17px 15px 17px 15px;
   }
-  .governing-table tbody td{
+  .governing-table tbody td {
     padding: 10px 15px;
   }
-  .programme_outcome_box{
+  .programme_outcome_box {
     flex-wrap: wrap;
   }
-  .programme_outcome_left, .programme_outcome_right {
+  .programme_outcome_left,
+  .programme_outcome_right {
     width: 100%;
     min-height: inherit;
   }
   .programme_outcome_mainmca .programme_outcome_right {
     min-height: inherit;
   }
-  .programme_outcome_left{
+  .programme_outcome_left {
     width: 100%;
   }
   .programme_outcome_box {
     gap: 10px;
   }
-  .intake_number{
+  .intake_number {
     font-size: 30px;
     gap: 0px;
     flex-wrap: wrap;
   }
-  .intake_content p{
+  .intake_content p {
     padding: 5px 0;
     line-height: normal;
   }
@@ -5898,9 +6053,9 @@ border: 10px solid #fff;
   .phaseiconimage {
     width: 50px;
     height: 50px;
-    display:none;
+    display: none;
   }
-   /*-------------- Addmision tab End here --------------*/
+  /*-------------- Addmision tab End here --------------*/
   /*---------- Campus Overview Page Start Here ----------*/
   .infrastructure_main {
     margin: 20px 0 30px;
@@ -5921,12 +6076,12 @@ border: 10px solid #fff;
     width: 100%;
   }
   /*---------- Campus Overview Page End Here ----------*/
-/*------------- PLACEMENTS-PAGE-START -------------*/
+  /*------------- PLACEMENTS-PAGE-START -------------*/
 
-.placement_testi_img{
-  margin: 0 0 20px 0;
-}
-/*------------- PLACEMENTS-PAGE-END -------------*/
+  .placement_testi_img {
+    margin: 0 0 20px 0;
+  }
+  /*------------- PLACEMENTS-PAGE-END -------------*/
   /*--------------- New Home Page Banner ---------------*/
   .homepage .herobanner_Content {
     position: absolute;
@@ -5944,10 +6099,10 @@ border: 10px solid #fff;
     display: block;
   }
   /*------------- Placement Tab Start Here -------------*/
-  .top_recru_list{
+  .top_recru_list {
     width: 47%;
   }
-  .top_recru_list{
+  .top_recru_list {
     min-height: 90px;
   }
   /*---------------- Life @ IMS Start Here ----------------*/
@@ -5960,18 +6115,16 @@ border: 10px solid #fff;
     height: 300px;
     gap: 10px;
   }
-  .library_servicesinner{
+  .library_servicesinner {
     padding: 20px;
   }
-  .library_img{
-    display:none;
+  .library_img {
+    display: none;
   }
-  .BestPractices_main{
+  .BestPractices_main {
     padding: 20px 15px 20px 20px;
   }
   /*---------------- Life @ IMS End Here ----------------*/
-
-
 }
 @media (max-width: 449.98px) {
   /*--------------- Programe Pages Start Here ---------------*/
