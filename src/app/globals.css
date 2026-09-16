@@ -4699,6 +4699,9 @@ Body {
   .testimonials_box {
     min-height: 390px;
   }
+  .faculty-image{
+    height: 320px;
+  }
   /*------------- Home Page End Here  -------------*/
   /*------------- Inner Pages Start Here -------------*/
   .excell_girlbox {
