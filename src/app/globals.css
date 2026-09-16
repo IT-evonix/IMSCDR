@@ -4699,6 +4699,9 @@ Body {
   .testimonials_box {
     min-height: 390px;
   }
+  .faculty-image{
+    height: 320px;
+  }
   /*------------- Home Page End Here  -------------*/
   /*------------- Inner Pages Start Here -------------*/
   .excell_girlbox {
@@ -5747,6 +5750,12 @@ Body {
   .governing-table td:nth-child(1) {
     width: inherit;
   }
+  .faculty-card:hover{
+    transform: translateY(0px);
+  }
+  .faculty-card:hover .faculty-image img {
+    transform: scale(1);
+  }
   /*---------------- Programe Tab End Here ----------------*/
   /*-------------- Addmision tab Start here --------------*/
   .admission_process_content {
@@ -6179,30 +6188,38 @@ Body {
     gap: 15px;
     margin-bottom: 20px;
   }
-  .faculty-image {
-    height: 150px;
+  .faculty-category:first-child .faculty-grid .faculty-content {
+    text-align: center;
   }
   .faculty-content {
     padding: 10px;
+    text-align: center;
+    width: 100%;
   }
   .faculty-category:first-child .faculty-grid {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
   .faculty-category:first-child .faculty-grid .faculty-item .faculty-image {
     width: 100%;
-    height: 360px;
+    height: 400px;
   }
-
+  .faculty-image{
+    height:inherit;
+  }
+  .faculty-image img {
+    object-fit: cover;
+    transition: all .5s;
+    position: inherit !important;
+  }
+  .faculty-card{
+    height: auto;
+  }
   .faculty-grid {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
-  .faculty-image {
-    width: 100%;
-    height:420px;
-  }
   .faculty-page .faculty-grid {
     gap: 15px;
-    margin-bottom: 0px;
+    margin-bottom: 15px;
   }
   .faculty-page .faculty-category {
     padding: 30px 0;
