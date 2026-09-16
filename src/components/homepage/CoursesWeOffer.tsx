@@ -296,7 +296,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination,  } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 const courses = [
@@ -417,7 +417,7 @@ const CoursesWeOffer = () => {
         <div className="mobileCourses">
           {" "}
           <Swiper
-            modules={[Pagination,]}
+            modules={[Pagination, Autoplay]}
             slidesPerView={1}
             slidesPerGroup={1}
             spaceBetween={15}

@@ -5291,9 +5291,9 @@ Body {
 
 @media (max-width: 767.98px) {
   /*--------------- Header Start Here ---------------*/
-  .headerNavigation {
+  /* .headerNavigation {
     display: none;
-  }
+  } */
   .onlyformobile {
     display: block;
   }
@@ -5323,6 +5323,20 @@ Body {
     color: #44ade2;
     text-decoration: none;
   }
+  .headerNavigation{
+    display: none !important;
+  }
+  /* .topbar_inner{
+    background:transparent;
+    border-radius: 10px;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+    justify-content: center;
+  } */
   /*--------------- Header End Here ---------------*/
   .subheading {
     font-size: 16px;
@@ -5442,10 +5456,55 @@ Body {
   .mobileCourses .swiper-pagination-bullet-active {
     width: 22px;
     border-radius: 10px;
+    background-color:#fff;
   }
   .course_card::after{
     height: auto;
   }
+
+  /*-------------------- Courses We Offer Start Here ------------*/
+  .CoursesWeOffer_inner {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .CoursesWeOffer_sec:before {
+    display: none;
+  }
+  .course_card:nth-child(2) .Courses_content,
+  .course_card:nth-child(4) .Courses_content,
+  .Courses_content,
+  .course_card:nth-child(3) .Courses_content {
+    padding: 15px;
+  }
+  .Courses_content {
+    border-radius: 13px !important;
+  }
+  .course_card:nth-child(2):after {
+    border-radius: 13px !important;
+  }
+  .course_card:nth-child(4):after {
+    border-radius: 13px !important;
+  }
+  .course_card:nth-child(3):after {
+    border-radius: 13px !important;
+  }
+  .course_card:nth-child(2) img {
+    border-radius: 13px !important;
+  }
+  .Courses_content,
+  .course_card:nth-child(2)::after,
+  .course_card:nth-child(4)::after,
+  .course_card:nth-child(3)::after,
+  .course_card:nth-child(2) img,
+  .course_card:nth-child(2) img,
+  .course_card:nth-child(3) img,
+  .course_card:nth-child(4) img {
+    border-radius: 13px !important;
+  }
+  .course_card:first-child img {
+    border-radius: 13px !important;
+  }
+  /*-------------------- Courses We Offer End Here ------------*/
   /*-------------------- Courses We Offer End Here ------------*/
   /*-------------------- Excellent Placements Start Here ------------*/
   .excellent_placements_inner {
@@ -5883,50 +5942,7 @@ Body {
     width: 100%;
   }
   /*-------------------- Ranking End Here ------------*/
-  /*-------------------- Courses We Offer Start Here ------------*/
-  .CoursesWeOffer_inner {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-  .CoursesWeOffer_sec:before {
-    display: none;
-  }
-  .course_card:nth-child(2) .Courses_content,
-  .course_card:nth-child(4) .Courses_content,
-  .Courses_content,
-  .course_card:nth-child(3) .Courses_content {
-    padding: 15px;
-  }
-  .Courses_content {
-    border-radius: 10px !important;
-  }
-  .course_card:nth-child(2):after {
-    border-radius: 10px !important;
-  }
-  .course_card:nth-child(4):after {
-    border-radius: 10px !important;
-  }
-  .course_card:nth-child(3):after {
-    border-radius: 10px !important;
-  }
-  .course_card:nth-child(2) img {
-    border-radius: 10px !important;
-  }
-  .Courses_content,
-  .course_card:nth-child(2)::after,
-  .course_card:nth-child(4)::after,
-  .course_card:nth-child(3)::after,
-  .course_card:nth-child(2) img,
-  .course_card:nth-child(2) img,
-  .course_card:nth-child(3) img,
-  .course_card:nth-child(4) img {
-    border-radius: 10px !important;
-  }
-  .course_card:first-child img {
-    border-radius: 10px !important;
-  }
-  /*-------------------- Courses We Offer End Here ------------*/
-  .excell_redbox {
+    .excell_redbox {
     padding: 10px 15px;
   }
   /*----------------------- CampusLife Start Here -----------------------*/
@@ -5959,6 +5975,21 @@ Body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
+  }
+  .eduiconbox{
+    display:none;
+  }
+  .educationinner{
+    gap:12px;
+  }
+  .educationtext {
+    width: 100%;
+  }
+  .educationbox{
+    padding:13px;
+  }
+  .coursesstrip .educationbox{
+    width:48%;
   }
   /*--------------- Footer End Here ---------------*/
   /*-------------------- Contact Us Start Here ------------*/
@@ -6167,7 +6198,7 @@ Body {
   }
   .faculty-image {
     width: 100%;
-    height: 360px;
+    height:420px;
   }
   .faculty-page .faculty-grid {
     gap: 15px;
