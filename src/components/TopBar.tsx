@@ -29,16 +29,6 @@ const TopBar = ({ isSticky }: TopBarProps) => {
         </div>
 
         <div className="topbar-buttons d-flex justify-content-lg-end justify-content-center flex-wrap gap-3">
-          {/* <Link href="#" className="top-btn admission-btn">
-            <GraduationCap size={18} />
-            <span>Admission</span>
-          </Link> */}
-
-          {/* <Link href="#" className="top-btn white-btn">
-            <Video size={18} />
-            <span>Infrastructure Video</span>
-          </Link> */}
-
           <button
             type="button"
             onClick={(e) => {
