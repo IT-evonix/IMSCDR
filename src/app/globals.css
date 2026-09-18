@@ -91,10 +91,6 @@ Body {
   color: #f9e338;
   text-decoration: none;
 }
-/* .topbar_inner .admission-btn {
-  background: #44ade2;
-  color: #fff;
-} */
 .topbar_inner .admission-btn {
   color: #fff;
   background: linear-gradient(135deg, #09468e, #44ade2, #09468e);
@@ -4843,6 +4839,25 @@ Body {
     grid-column: span 1;
   }
   /*---------------- Life @ IMS End Here ----------------*/
+  /* Fee Strcuture Page Design Start Here */
+  .feetabboxmain:after{
+    display:none;
+  }
+  .feetabbox{
+    width:100%;
+  }
+  .feetabboxmain .heading {
+    width: 100%;
+    text-align: center;
+  }
+  .feetabboxmain{
+    padding: 20px;
+  }
+  .fee_structure_heading{
+    line-height: normal;
+    font-size:21px;
+  }
+  /* Fee Strcuture Page Design End Here */
 }
 @media (max-width: 991.98px) {
   .heading {
@@ -5290,6 +5305,16 @@ Body {
     padding: 30px 0 0;
   }
   /*-------------- Resposnive Padding Margin End Here --------------*/
+   /* Fee Strcuture Page Design Start Here */
+  .fee_structure_box{
+    background-image:none !important;
+  }
+  .fee_text{font-size: 25px;}
+  .fee_structure_box{
+    padding: 12px;
+  }
+  .fee_structure_heading{padding:15px; height: inherit;}
+  /* Fee Strcuture Page Design End Here */
 }
 
 @media (max-width: 767.98px) {
@@ -5308,16 +5333,14 @@ Body {
   }
   .top-btn {
     padding: 5px 16px;
-    font-size: 14px;
+    font-size: 12px;
+    background: #ffffff;
   }
   .topbar_inner {
     justify-content: start;
     padding: 20px;
     background: #f5f5f5;
     border-radius: 10px;
-  }
-  .top-btn {
-    background: #ffffff;
   }
   .topbar {
     padding: 10px;
@@ -5899,9 +5922,32 @@ Body {
     left: 0;
   }
   /*---------------- Life @ IMS End Here ----------------*/
+  /* Fee Strcuture Page Design Start Here */
+  .fee_structure_main hr{
+    margin: 50px 0 70px 0;
+  }
+  .fee_structure_inner{
+    margin: 0px 0px 50px;
+  }
+  /* Fee Strcuture Page Design End Here */
 }
 
 @media (max-width: 575.98px) {
+  .footer_numcontact .notices-action-cell .admission-btn, .admission-btn{
+    border-radius: 20px 20px 0px 0px;
+    font-size:12px;
+  }
+  .footer_numcontact .top-btn {
+    padding: 4px 15px;
+    font-size: 12px;
+    border-radius: 14px 14px 0px 0px;
+    height: inherit;
+  }
+  .footer_numcontact{
+    position: fixed;
+    z-index: 99999;
+    bottom: 0;
+  }
   /* Hero Banner Start Here */
   .herobanner_Content {
     width: 100%;
@@ -6165,6 +6211,29 @@ Body {
     padding: 20px 15px 20px 20px;
   }
   /*---------------- Life @ IMS End Here ----------------*/
+  /* Fee Strcuture Page Design Start Here */
+  .fee_structure_box{
+    width:100%;
+    margin: 20px 0 20px;
+  }
+  .fee_structure_content{
+    width:100%;
+  }
+  .fee_structure_inner{
+    flex-wrap: wrap;
+    height: inherit;
+  }
+  .feetabboxmain{
+    margin: 0 0 30px 0px;
+  }
+  .fee_structure_heading{
+    width:100%;
+    border-radius: 14px;
+  }
+  .fee_structure_main hr {
+    margin: 0px 0 40px;
+  }
+  /* Fee Strcuture Page Design End Here */
 }
 @media (max-width: 449.98px) {
   /*--------------- Programe Pages Start Here ---------------*/

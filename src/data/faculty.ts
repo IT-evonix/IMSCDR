@@ -83,7 +83,7 @@ export const facultyData: Faculty[] = [
     category: "Admin Team",
     "name": "Mahesh Dixit",
     "designation": "Office Superintendent",
-    "image": "/images/faculty/Mahesh-Dixit.png",
+    "image": "/images/faculty/mahesh-dixit.webp",
     "email": "exam@imscdr.ac.in",
     "number": "9272125106"
   },
@@ -946,7 +946,7 @@ export const facultyData: Faculty[] = [
     category: "Technical-Support",
     "name": "Pratap Gaikwad",
     "designation": "Additional Charge - Technical Support",
-    "image": "/images/faculty/Pratap-Gaikwad.png",
+    "image": "/images/faculty/Pratap-Gaikwad.webp",
   },
   {
     "id": 2,

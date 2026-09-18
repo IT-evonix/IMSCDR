@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import CoursesStrip from "./homepage/CoursesStrip";
+import { CircleHelp, Phone } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -12,14 +13,45 @@ const Footer = () => {
           <div className="footer_inner">
             <div className="footerbox blueBox">
               <div className="logo-wrapper">
+                <div className="footer_numcontact">
+                  <div className="topbar-buttons d-flex justify-content-lg-end justify-content-center flex-wrap gap-3">
+                    <button
+                      type="button"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        if (typeof window !== "undefined") {
+                          if (
+                            typeof (window as any).openEnquiryModal ===
+                            "function"
+                          ) {
+                            (window as any).openEnquiryModal();
+                          }
+                          window.dispatchEvent(
+                            new CustomEvent("open-enquiry-modal"),
+                          );
+                        }
+                      }}
+                      className="top-btn white-btn admission-btn border-0 outline-none cursor-pointer"
+                      title="Open Admission Enquiry Form"
+                    >
+                      <CircleHelp size={18} />
+                      <span>Enquire Now</span>
+                    </button>
+
+                    <Link href="/contact" className="top-btn white-btn">
+                      <Phone size={15} />
+                      <span>Contact Us</span>
+                    </Link>
+                  </div>
+                </div>
                 <Link href="/">
-                <Image
-                  src="/images/home/white_logo.webp"
-                  alt="BPHES IMS-CDR"
-                  width={220}
-                  height={150}
-                  className="img-fluid"
-                />
+                  <Image
+                    src="/images/home/white_logo.webp"
+                    alt="BPHES IMS-CDR"
+                    width={220}
+                    height={150}
+                    className="img-fluid"
+                  />
                 </Link>
               </div>
 
@@ -33,7 +65,11 @@ const Footer = () => {
               </div>
               {/* Social Icons */}
               <div className="social-icons">
-                <Link target="_blank" href="https://www.facebook.com/people/Imscdr-Ahmednagar/100072520716086/#" className="social-icon">
+                <Link
+                  target="_blank"
+                  href="https://www.facebook.com/people/Imscdr-Ahmednagar/100072520716086/#"
+                  className="social-icon"
+                >
                   <Image
                     src="/images/home/facebook.png"
                     alt="BPHES IMSCDR"
@@ -42,7 +78,11 @@ const Footer = () => {
                     className="img-fluid"
                   />
                 </Link>
-                <Link target="_blank" href="https://www.instagram.com/imscdr_ahmednagar/?utm_medium=copy_link" className="social-icon">
+                <Link
+                  target="_blank"
+                  href="https://www.instagram.com/imscdr_ahmednagar/?utm_medium=copy_link"
+                  className="social-icon"
+                >
                   <Image
                     src="/images/home/instagram.png"
                     alt="BPHES IMSCDR"
@@ -99,10 +139,14 @@ const Footer = () => {
               <div className="footerheading">Important Links</div>
               <ul>
                 <li>
-                  <Link href="/anti-ragging-committee">Anti-Ragging Committee</Link>
+                  <Link href="/anti-ragging-committee">
+                    Anti-Ragging Committee
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/internal-commitee">Internal Complaint Committee</Link>
+                  <Link href="/internal-commitee">
+                    Internal Complaint Committee
+                  </Link>
                 </li>
                 <li>
                   <Link href="/sc-st-cell">
@@ -110,10 +154,14 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/student-grievance-redressal-committee">Grievance Redressal  Committee</Link>
+                  <Link href="/student-grievance-redressal-committee">
+                    Grievance Redressal Committee
+                  </Link>
                 </li>
                 <li>
-                  <Link target="_blank" href="/pdf/home/NIRF.pdf">NIRF</Link>
+                  <Link target="_blank" href="/pdf/home/NIRF.pdf">
+                    NIRF
+                  </Link>
                 </li>
                 {/* <li>
                   <Link href="/IQAC">IQAC</Link>
@@ -197,7 +245,9 @@ const Footer = () => {
       <div className="footerstrip">
         <div className="container">
           <div className="footerstripinner">
-            <p className="p-0 m-0">Copyright ©2026 IMS-CDR. All Rights Reserved.</p>
+            <p className="p-0 m-0">
+              Copyright ©2026 IMS-CDR. All Rights Reserved.
+            </p>
             <div className="div">
               Crafted by{" "}
               <Link
