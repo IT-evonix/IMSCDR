@@ -1157,3 +1157,85 @@ export const PlacementStatisticsMCAProgramme = [
     averagePackage: "2.9",
   },
 ];
+
+
+
+// Research Tab Start Here ----------------------------
+export const NameofGuide = [
+  {
+    key: "srNo",
+    title: "Sr. No",
+  },
+  {
+    key: "name",
+    title: "Name of Guide",
+  },
+  {
+    key: "designation",
+    title: "Specialization",
+  },
+];
+export const SpecializationNames = [
+  {
+    srNo: "01",
+    name: "Pronoti Telore",
+    designation: {
+      value: "Marketing/Human Resource Management ",
+      rowSpan: 1,
+    },
+  },
+  {
+    srNo: "02",
+    name: "Hatim Kayumi ",
+    designation: {
+      value: "Finance/ Organizational Management ",
+      rowSpan: 1,
+    },
+  },
+  {
+    srNo: "03",
+    name: "Mahesh Potdar",
+    designation: {
+      value:
+        "Computer Management/Organizational Management ",
+      rowSpan: 1,
+    },
+  },
+
+  {
+    srNo: "04",
+    name: "Rucha Tandulwadkar",
+    designation: {
+      value:
+        "Marketing ",
+      rowSpan: 1,
+    },
+  },
+  {
+    srNo: "05",
+    name: "Rahul Khandelwal",
+    designation: {
+      value:
+        "Marketing/Organizational Management",
+      rowSpan: 1,
+    },
+  },
+  {
+    srNo: "06",
+    name: "H.Bhavsar ",
+    designation: {
+      value:
+        "Marketing ",
+      rowSpan: 1,
+    },
+  },
+
+  {
+    srNo: "07",
+    name: "Manoj Kulkarni ",
+    designation: {
+      value: "Marketing ",
+      rowSpan: 1,
+    },
+  },
+];

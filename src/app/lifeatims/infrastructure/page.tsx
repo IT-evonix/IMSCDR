@@ -1,7 +1,7 @@
 import React from "react";
-import ImageGallery from "@/components/ui/ImageGallery";
-import { galleryData } from "@/data/galleryData";
 import Image from "next/image";
+import GallerySlider from "@/components/ui/GallerySlider";
+import { galleryData } from "@/data/GallerySlider";
 
 const page = () => {
   return (
@@ -43,12 +43,14 @@ const page = () => {
           </div>
         </div>
       </div>
-      <div className="">
+      {/* <div className="">
         <div className="subheading mb-3">
           The campus infrastructure includes:
         </div>
         <ImageGallery images={galleryData} />
-      </div>
+      </div> */}
+
+      <GallerySlider items={galleryData} />
     </div>
   );
 };

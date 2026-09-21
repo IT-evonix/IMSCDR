@@ -329,10 +329,14 @@ export const menuItems: MenuItem[] = [
   },
 
   {
-    label: "News & Events",
+    label: "Research & News",
     children: [
       {
-        label: "News & Events",
+        label: "Research",
+        href: "/research/research-centre",
+      },
+      {
+        label: "News",
         href: "/news-events",
       },
       {

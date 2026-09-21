@@ -91,16 +91,15 @@ Body {
   color: #f9e338;
   text-decoration: none;
 }
-/* .topbar_inner .admission-btn {
-  background: #44ade2;
-  color: #fff;
-} */
 .topbar_inner .admission-btn {
   color: #fff;
   background: linear-gradient(135deg, #09468e, #44ade2, #09468e);
   background-size: 250% 250%;
   animation: gradientMove 4s ease infinite;
   transition: all 0.3s ease;
+}
+.footer_numcontact{
+  display:none;
 }
 .topbar_inner .admission-btn:hover {
   transform: translateY(-2px);
@@ -3899,6 +3898,132 @@ Body {
   bottom: 0;
   overflow: hidden;
 }
+/*-------------------- Gallery Page New Layout Start Here --------------------*/
+.Tabbing_gallery .gallery-tabs {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 40px;
+  padding: 0 45px;
+  border-bottom: 1px solid #ddd;
+}
+.Tabbing_gallery .gallery-tabs-swiper {
+  width: 100%;
+}
+.Tabbing_gallery .gallery-tab-slide {
+  width: auto !important;
+}
+.Tabbing_gallery .gallery-tab {
+  position: relative;
+  display: block;
+  border: 0;
+  background: transparent;
+  padding: 12px 22px;
+  color: #333;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.Tabbing_gallery .gallery-tab:hover {
+  color: #c4161c;
+}
+.Tabbing_gallery .gallery-tab.active {
+  color: #c4161c;
+}
+.Tabbing_gallery .gallery-tab.active::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 0;
+  height: 3px;
+  background: #c4161c;
+  border-radius: 3px 3px 0 0;
+}
+/* ===== Tab Arrows ===== */
+.Tabbing_gallery .gallery-tab-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #10467f;
+  color: #fff;
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.Tabbing_gallery .gallery-tab-arrow:hover {
+  background: #c4161c;
+}
+.Tabbing_gallery .gallery-tab-arrow span {
+  display: block;
+  font-size: 28px;
+  line-height: 1;
+  margin-top: -3px;
+}
+.Tabbing_gallery .gallery-tab-prev {
+  left: 0;
+}
+.Tabbing_gallery .gallery-tab-next {
+  right: 0;
+}
+/* Swiper disabled arrow */
+.Tabbing_gallery .gallery-tab-arrow.swiper-button-disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+/* .Tabbing_gallery .gallery-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+  border-radius: 8px;
+} */
+.Tabbing_gallery .gallery-image {
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.gallery-image-link {
+  display: block;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.Tabbing_gallery .gallery-image-link:hover .gallery-image {
+  transform: scale(1.06);
+}
+/* .Tabbing_gallery .gallery-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+} */
+.Tabbing_gallery .gallery-image-link:hover .gallery-overlay {
+  opacity: 1;
+}
+/* .Tabbing_gallery .gallery-view {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+} */
+.Tabbing_gallery .gallery-name {
+  display:none;
+}
+/*-------------------- Gallery Page New Layout End Here --------------------*/
 /*------------ Campus Overview Page End Here ------------*/
 /*----------- Infrastructure Page Start Here -----------*/
 .infrastructure_main {
@@ -4691,6 +4816,27 @@ Body {
 }
 
 /*------------- PLACEMENTS-PAGE-END -------------*/
+/*------------ Research-Page-Start ------------*/
+.research_listing ul{
+  margin: 0;
+  padding: 0 0 0 15px;
+}
+.research_listing ul li{
+  list-style-type:none;
+  font-size:15px;
+  margin-bottom: 12px;
+}
+.research_listing ul li:before {
+  content: "";
+  background-color: #000;
+  border-radius: 100px;
+  width: 6px;
+  height: 6px;
+  margin: 8px 0 0 -15px;
+  position: absolute;
+}
+
+/*------------- Research-Page-End -------------*/
 
 /* -------------------   Responsive Pages Start here ------------------- */
 
@@ -4843,6 +4989,25 @@ Body {
     grid-column: span 1;
   }
   /*---------------- Life @ IMS End Here ----------------*/
+  /* Fee Strcuture Page Design Start Here */
+  .feetabboxmain:after{
+    display:none;
+  }
+  .feetabbox{
+    width:100%;
+  }
+  .feetabboxmain .heading {
+    width: 100%;
+    text-align: center;
+  }
+  .feetabboxmain{
+    padding: 20px;
+  }
+  .fee_structure_heading{
+    line-height: normal;
+    font-size:21px;
+  }
+  /* Fee Strcuture Page Design End Here */
 }
 @media (max-width: 991.98px) {
   .heading {
@@ -5290,6 +5455,16 @@ Body {
     padding: 30px 0 0;
   }
   /*-------------- Resposnive Padding Margin End Here --------------*/
+   /* Fee Strcuture Page Design Start Here */
+  .fee_structure_box{
+    background-image:none !important;
+  }
+  .fee_text{font-size: 25px;}
+  .fee_structure_box{
+    padding: 12px;
+  }
+  .fee_structure_heading{padding:15px; height: inherit;}
+  /* Fee Strcuture Page Design End Here */
 }
 
 @media (max-width: 767.98px) {
@@ -5308,16 +5483,14 @@ Body {
   }
   .top-btn {
     padding: 5px 16px;
-    font-size: 14px;
+    font-size: 12px;
+    background: #ffffff;
   }
   .topbar_inner {
     justify-content: start;
     padding: 20px;
     background: #f5f5f5;
     border-radius: 10px;
-  }
-  .top-btn {
-    background: #ffffff;
   }
   .topbar {
     padding: 10px;
@@ -5899,9 +6072,33 @@ Body {
     left: 0;
   }
   /*---------------- Life @ IMS End Here ----------------*/
+  /* Fee Strcuture Page Design Start Here */
+  .fee_structure_main hr{
+    margin: 50px 0 70px 0;
+  }
+  .fee_structure_inner{
+    margin: 0px 0px 50px;
+  }
+  /* Fee Strcuture Page Design End Here */
 }
 
 @media (max-width: 575.98px) {
+  .footer_numcontact .notices-action-cell .admission-btn, .admission-btn{
+    border-radius: 20px 20px 0px 0px;
+    font-size:12px;
+  }
+  .footer_numcontact .top-btn {
+    padding: 4px 15px;
+    font-size: 12px;
+    border-radius: 14px 14px 0px 0px;
+    height: inherit;
+  }
+  .footer_numcontact{
+    position: fixed;
+    z-index: 99999;
+    bottom: 0;
+    display:block;
+  }
   /* Hero Banner Start Here */
   .herobanner_Content {
     width: 100%;
@@ -5999,6 +6196,9 @@ Body {
   }
   .coursesstrip .educationbox{
     width:48%;
+  }
+  .footerstrip{
+    padding: 13px 0 35px 0;
   }
   /*--------------- Footer End Here ---------------*/
   /*-------------------- Contact Us Start Here ------------*/
@@ -6101,7 +6301,10 @@ Body {
     margin: 20px 0 30px;
   }
   .mainimage_gallery .gallery-image-wrapper {
-    height: 140px;
+    min-height: 150px;
+  }
+  .gallery-slider .gallery-image-wrapper {
+    min-height: 220px;
   }
   .mainimage_gallery .gallery-name {
     padding: 3px 0;
@@ -6115,6 +6318,10 @@ Body {
   .faculty-modal-overlay .info-box {
     width: 100%;
   }
+
+
+
+  
   /*---------- Campus Overview Page End Here ----------*/
   /*------------- PLACEMENTS-PAGE-START -------------*/
 
@@ -6165,6 +6372,29 @@ Body {
     padding: 20px 15px 20px 20px;
   }
   /*---------------- Life @ IMS End Here ----------------*/
+  /* Fee Strcuture Page Design Start Here */
+  .fee_structure_box{
+    width:100%;
+    margin: 20px 0 20px;
+  }
+  .fee_structure_content{
+    width:100%;
+  }
+  .fee_structure_inner{
+    flex-wrap: wrap;
+    height: inherit;
+  }
+  .feetabboxmain{
+    margin: 0 0 30px 0px;
+  }
+  .fee_structure_heading{
+    width:100%;
+    border-radius: 14px;
+  }
+  .fee_structure_main hr {
+    margin: 0px 0 40px;
+  }
+  /* Fee Strcuture Page Design End Here */
 }
 @media (max-width: 449.98px) {
   /*--------------- Programe Pages Start Here ---------------*/
@@ -6227,10 +6457,10 @@ Body {
   /*--------------- Programe Pages End Here ---------------*/
   /*---------- Campus Overview Page End Here ----------*/
   .mainimage_gallery .gallery-image-wrapper {
-    height: 120px;
+    min-height: 130px;
   }
   .gallery-slider .gallery-image-wrapper {
-    height: 160px;
+    min-height: 200px;
   }
   /*---------- Campus Overview Page End Here ----------*/
 }
