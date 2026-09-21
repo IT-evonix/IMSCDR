@@ -4,73 +4,8 @@ export interface GalleryItem {
   name: string;
 }
 
-export const galleryData: GalleryItem[] = [
-  {
-    id: 1,
-    src: "/images/campus/infrastructure/ICT-enabled.webp",
-    name: "Spacious ICT-enabled classrooms",
-  },
-  {
-    id: 2,
-    src: "/images/campus/infrastructure/tutorial-rooms.webp",
-    name: "Tutorial rooms",
-  },
-  {
-    id: 3,
-    src: "/images/campus/infrastructure/learning-resource-centre.webp",
-    name: "Learning Resource Centre (Central Library)",
-  },
-  {
-    id: 4,
-    src: "/images/campus/infrastructure/Language-Lab.webp",
-    name: "Language Lab",
-  },
-  {
-    id: 5,
-    src: "/images/campus/infrastructure/Seminar-Hall.webp",
-    name: "Seminar Hall and SEED-C Auditorium for conferences, workshops and guest lectures",
-  },
-  {
-    id: 6,
-    src: "/images/campus/infrastructure/Administrative-Office.webp",
-    name: "Administrative Office",
-  },
-];
 
-export const galleryData1: GalleryItem[] = [
-  {
-    id: 1,
-    src: "/images/common-image1.webp",
-    name: "Campus View",
-  },
-  {
-    id: 2,
-    src: "/images/common-image1.webp",
-    name: "Academic Building",
-  },
-  {
-    id: 3,
-    src: "/images/common-image1.webp",
-    name: "Library",
-  },
-  {
-    id: 4,
-    src: "/images/common-image1.webp",
-    name: "Computer Lab",
-  },
-  {
-    id: 5,
-    src: "/images/common-image1.webp",
-    name: "Student Activity",
-  },
-  {
-    id: 6,
-    src: "/images/common-image1.webp",
-    name: "Campus Infrastructure",
-  },
-];
-
-export const galleryData2: GalleryItem[] = [
+export const galleryDatasport: GalleryItem[] = [
   {
     id: 1,
     src: "/images/campus/sports/table-tennis.webp",
@@ -103,40 +38,6 @@ export const galleryData2: GalleryItem[] = [
   },
 ];
 
-export const galleryData3: GalleryItem[] = [
-  {
-    id: 1,
-    src: "/images/common-image1.webp",
-    name: "University-level competitions (Aavishkar)",
-  },
-  {
-    id: 2,
-    src: "/images/common-image1.webp",
-    name: "Management festivals",
-  },
-  {
-    id: 3,
-    src: "/images/common-image1.webp",
-    name: "Research paper presentations",
-  },
-  {
-    id: 4,
-    src: "/images/common-image1.webp",
-    name: "Business plan competitions",
-  },
-  {
-    id: 5,
-    src: "/images/common-image1.webp",
-    name: "Sports tournaments",
-  },
-  {
-    id: 6,
-    src: "/images/common-image1.webp",
-    name: "Cultural events",
-  },
-];
-
-
 
 export const LifeAtImsGallery: GalleryItem[] = [
   {
@@ -156,7 +57,7 @@ export const LifeAtImsGallery: GalleryItem[] = [
   },
   {
     id: 4,
-    src: "/images/home/gallery/gallery-center-img.webp",
+    src: "/images/home/gallery/gallery-center-imgnew.webp",
     name: "Business plan competitions",
   },
   {
@@ -168,5 +69,51 @@ export const LifeAtImsGallery: GalleryItem[] = [
     id: 6,
     src: "/images/home/gallery/library.webp",
     name: "Library",
+  },
+];
+
+export const galleryDatacultural: GalleryItem[] = [
+  {
+    id: 1,
+    src: "/images/campus/cultural-activities/independance-day-2026.webp",
+    name: "Independance Day 2026",
+  },
+  {
+    id: 2,
+    src: "/images/campus/cultural-activities/maharastra-din-2025-26.webp",
+    name: "Maharastra Din 2025-26",
+  },
+  {
+    id: 3,
+    src: "/images/campus/cultural-activities/marathi-din-2025-26.webp",
+    name: "Marathi Din 2025-26",
+  },
+  {
+    id: 4,
+    src: "/images/campus/cultural-activities/navratri-days-2025-26.webp",
+    name: "Navratri Days 2025-26",
+  },
+];
+
+export const galleryDatastudentachievements: GalleryItem[] = [ 
+  {
+    id: 1,
+    src: "/images/campus/student-achievements/avishkar-2026.webp",
+    name: "Avishkar 2026",
+  },
+  {
+    id: 2,
+    src: "/images/campus/student-achievements/business-quiz-2025-26.webp",
+    name: "Business Quiz 2025-26",
+  },
+  {
+    id: 3,
+    src: "/images/campus/student-achievements/business-idea.webp",
+    name: "Business Idea 2025",
+  },
+  {
+    id: 4,
+    src: "/images/campus/student-achievements/avishkar-2025.webp",
+    name: "Avishkar 2025",
   },
 ];

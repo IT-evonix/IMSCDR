@@ -165,6 +165,16 @@ export const programSidebar = {
     ],
   },
 
+   research: {
+    heading: "Research",
+    menuItems: [
+      { title: "Research Centre", href: "/research/research-centre" },
+      { title: "Research Journal", href: "/research/research-journal" },
+      { title: "Faculty Research", href: "/research/faculty-research" },
+      { title: "Student Research", href: "/research/student-research" },
+    ],
+  },
+
 
 };
 

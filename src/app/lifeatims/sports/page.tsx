@@ -1,7 +1,7 @@
 
 import React from "react";
 import ImageGallery from "@/components/ui/ImageGallery";
-import { galleryData2 } from "@/data/galleryData";
+import { galleryDatasport } from "@/data/galleryData";
 import Image from "next/image";
 
 
@@ -46,7 +46,7 @@ const page = () => {
         <div className="subheading mb-3">
          The campus features a well-equipped Sports Complex with facilities for:
         </div>
-        <ImageGallery images={galleryData2} />
+        <ImageGallery images={galleryDatasport} />
           <div className="infrapara mt-4">
             Students actively utilize these facilities during their leisure time, promoting a healthy lifestyle, teamwork, discipline, and sportsmanship. The institute also encourages participation in university-level and intercollegiate sports competitions.
           </div>

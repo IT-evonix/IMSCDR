@@ -11,10 +11,10 @@ const AboutUs = () => {
           <div className="aboutsec_inner">
             <div className="aboutus_left">
               <Image
-                src="/images/home/homeb-aboutimg-1.webp"
+                src="/images/home/about-home-img.webp"
                 alt="Banner"
-                width={1200}
-                height={600}
+                width={650}
+                height={513}
                 className="img-fluid"
               />
             </div>

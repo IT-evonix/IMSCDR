@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Faq from "@/components/Faq";
 import { libraryFaqs } from "@/data/faqData";
+import { Link } from "lucide-react";
 
 const page = () => {
   return (
@@ -11,10 +12,8 @@ const page = () => {
         <div className="row">
           <div className="col-md-7">
             <p>
-              In the historic city of Ahmednagar, which takes its name from
-              Ahmad Nizam Shah I, who founded the town in 1494, IMS-CDR was
-              estd. in 1990 & has reputation for need based and novel
-              educational Programmes, community-oriented activities, and
+              IMS-CDR was estd. in 1990 & has reputation for need based and
+              novel educational Programmes, community-oriented activities, and
               innovative practices. The primary aim of an institutional library
               is to aid and support the academic programmes offered and
               administer all facets of the Learning Resources. Thus IMS-CDR
@@ -227,8 +226,22 @@ const page = () => {
               <div className="library_card_content">
                 <div className="subheading">E-Library:CALIBRE</div>
                 <div className="w-100 d-flex flex-wrap align-items-center">
+                  {/* <div className="librarynumtext">
+                    Domain Name: <span>
+                      <Link href="imselibrary.in"></Link>,
+                      </span>
+                  </div> */}
                   <div className="librarynumtext">
-                    Domain Name: <span>imselibrary.ddns.net,</span>
+                    Domain Name:{" "}
+                    <span>
+                      <a style={{textDecoration:"none"}}
+                        href="http://imselibrary.in/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        imselibrary.in
+                      </a>
+                    </span>
                   </div>
                   <div className="librarynumtext">
                     Username: <span>staff,</span>
@@ -419,9 +432,7 @@ const page = () => {
             <span>
               Life skills – health and Hygiene, decision making, leadership.
             </span>
-            <span>
-              National Integrity -National events & Anniversaries.
-            </span>
+            <span>National Integrity -National events & Anniversaries.</span>
             <span>Non-Verbal Comm. –Press note, Notices, Resume, Reports.</span>
             <span>Personality -Manners, Etiquettes, dressing sense.</span>
             <span>
@@ -442,7 +453,10 @@ const page = () => {
           </div>
         </div>
 
-        <div className="BestPractices_main rules_and_regulations" style={{ background: "#f8eee2" }}>
+        <div
+          className="BestPractices_main rules_and_regulations"
+          style={{ background: "#f8eee2" }}
+        >
           <div className="subheading mb-3">Research Committee</div>
           <div className="BestPractices_innerlist">
             <span>
@@ -461,8 +475,8 @@ const page = () => {
             </span>
             <span>Bags are to be deposited at the luggage counter.</span>
             <span>
-              Charging mobile phones & laptops, personal audio equipment use
-              is not permitted.
+              Charging mobile phones & laptops, personal audio equipment use is
+              not permitted.
             </span>
             <span>
               Downloading of undesirable e-resources shall not be allowed and
@@ -512,10 +526,8 @@ const page = () => {
         </div>
 
         <div className="libraryFAQ">
-           <Faq title="Frequently Asked Questions" faqs={libraryFaqs} />
+          <Faq title="Frequently Asked Questions" faqs={libraryFaqs} />
         </div>
-
-
       </div>
     </div>
   );

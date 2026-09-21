@@ -1,7 +1,7 @@
 
 import React from "react";
 import ImageGallery from "@/components/ui/ImageGallery";
-import { galleryData3 } from "@/data/galleryData";
+import { galleryDatastudentachievements } from "@/data/galleryData";
 import Image from "next/image";
 
 
@@ -30,7 +30,7 @@ const page = () => {
         <div className="col-md-12">
           <div className="infrastructure_main">
             <Image
-              src="/images/campus/infrastructure/infrastructure.webp"
+              src="/images/campus/student-achievements/student-achievements_mainimg.webp"
               alt="infrastructure"
               width={1400}
               height={522}
@@ -45,7 +45,7 @@ const page = () => {
         <div className="subheading mb-3">
          Students regularly participate and achieve success in:
         </div>
-        <ImageGallery images={galleryData3} />
+        <ImageGallery images={galleryDatastudentachievements} />
         <div className="infrapara mt-4">
           The institute's continuous emphasis on experiential learning and industry interaction enables students to become competent professionals and responsible citizens.
           </div>

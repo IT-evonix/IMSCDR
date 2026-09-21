@@ -333,7 +333,7 @@ export const menuItems: MenuItem[] = [
     children: [
       {
         label: "Research",
-        href: "/research",
+        href: "/research/research-centre",
       },
       {
         label: "News",

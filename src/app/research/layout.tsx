@@ -7,13 +7,13 @@ export default function Layout({
 }: {
   children: React.ReactNode;
 }) {
-  const program = programSidebar.placement;
+  const program = programSidebar.research;
 
   return (
     <>
       <ProgramBanner
         heading={program.heading}
-        bannerTitle="Placements"
+        bannerTitle="Research"
       />
 
       <section className="innerpage_main programe_main">

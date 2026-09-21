@@ -43,5 +43,13 @@ export const approvalData = {
       file: "/pdf/mandatory-disclosure/Draft-Mandatory-Disclosure-2026-27.pdf",
     },
   ] as ApprovalItem[],
+
+    researchJournal: [
+    {
+      id: 1,
+      title: "Journal Release 2026",
+      file: "/pdf/research/IMS-August-Ediiton-final.pdf",
+    },
+  ] as ApprovalItem[],
   
 };
