@@ -100,10 +100,31 @@ export const facultyData: Faculty[] = [
     "id": 3,
     category: "Admin Team",
     "name": "Dipak Tungar",
-    "designation": "Sr. Clerk",
+    "designation": "-",
     "image": "/images/faculty/Dipak-Tungar.png",
     "email": "scholorship@imscdr.ac.in",
     "number": "9766618195"
+  },
+  {
+    "id": 4,
+    category: "Admin Team",
+    "name": "Balasaheb Kotkar",
+    "designation": "",
+    "image": "/images/faculty/balasaheb-kotkar.webp",
+  },
+  {
+    "id": 5,
+    category: "Admin Team",
+    "name": "Samual Ujagare",
+    "designation": "",
+    "image": "/images/faculty/samual-ujagare.webp",
+  },
+  {
+    "id": 6,
+    category: "Admin Team",
+    "name": "Rajendra Lonkar",
+    "designation": "",
+    "image": "/images/faculty/rajendra-lonkar.webp",
   },
 
 
@@ -508,6 +529,9 @@ export const facultyData: Faculty[] = [
     "profileContent": "Dr. Shradha S. Bhandari is an Assistant Professor with over nine years of teaching experience in the fields of Commerce and Management. She holds a Ph.D. in Commerce & Management from Kavayitri Bahinabai Chaudhari North Maharashtra University, Jalgaon. Her doctoral research focused on consumer perception, buying behaviour, and spending patterns in the retail garment sector. She also holds an MBA in Financial Management along with professional qualifications in Taxation Laws and Government Diploma in Cooperation & Accountancy. Her teaching expertise includes Financial Management, Accounting, Financial Services, Business Economics, Digital Banking, International Finance, Banking Operations, Business Statistics, Business Mathematics, and Investment Management across undergraduate and postgraduate programmes. Her research interests include Consumer Behaviour, Retail Marketing, Financial Management, FinTech, Financial Inclusion, E-Commerce, and Sustainable Business Practices. She has published eight research papers in reputed national and international journals, authored one MBA textbook, contributed two book chapters, and presented research papers at national and international conferences. Alongside her academic and research contributions, she is actively involved in academic administration, university examination responsibilities, student mentoring, entrepreneurship development, and institutional quality initiatives, reflecting her commitment to excellence in higher education. In addition to her teaching and research, she actively contributes to academic administration, university examination responsibilities, student mentoring, entrepreneurship development, and institutional quality initiatives, reflecting her commitment to academic excellence and holistic student development."
   },
   
+
+
+  
   
   
 
@@ -617,7 +641,7 @@ export const facultyData: Faculty[] = [
     "name": "Supriya Sapa",
     "designation": "Assistant Professor",
     "qualification": "M. Tech IT (Ph.D pursuing)",
-    "image": "/images/faculty/Supriya-Sapa.png",
+    "image": "/images/faculty/Supriya-Sapa.webp",
     "email": "sapasupriya@imscdr.ac.in",
     "broadAreas": [
       "Computer Science"
@@ -657,35 +681,6 @@ export const facultyData: Faculty[] = [
     "sponsoredResearchProjects": 1,
     "profileContent": "Prof. Gauri Patil is an Assistant Professor in the Information Technology Department at BPHE Society's Institute of Management Studies, Career Development & Research (IMS-CDR), Ahilyanagar, with over 20 years of teaching experience. She holds M.C.A., M.C.S., and B.C.S. degrees. Throughout her academic career, she has undertaken several key institutional responsibilities, including Placement Coordinator, Student Mentor, and active membership in the IMS-CDR SEEDC and Industry Interface Committee. At the university level, she has contributed as a Paper Setter and Examiner for SPPU and has actively participated in the curriculum development and syllabus framing for the MCA (Management) programme under both NEP and Non-NEP frameworks. She has also served as a Resource Person for Visual Basic .NET and has delivered career guidance sessions on \"Career Opportunities after 10th Standard\" for students at various Schools in Ahilyanagar. Her research interests include Cyber Security, Artificial Intelligence, and emerging technologies, with a focus on their applications in higher education and industry."
   },
-  // {
-  //   "id": 8,
-  //   category: "Faculty - Information Technology",
-  //   "name": "Mudassar Sayyed",
-  //   "designation": "Assistant Professor",
-  //   "qualification": "Ph.D",
-  //   "image": "/images/faculty/Sayyed-Mudassar-Nazir.webp",
-  //   "email": "mudassar@imscdr.ac.in",
-  //   "broadAreas": [
-  //     "Operations Management",
-  //     "Supply Chain Management",
-  //     "General Management",
-  //     "Human Resources Management"
-  //   ],
-  //   "specificAreas": [
-  //     "Succession Planning",
-  //     "World Class Manufacturing Practices",
-  //     "Theory of Constraints",
-  //     "Lean Management",
-  //     "Materials Management"
-  //   ],
-  //   "orcidId": "https://orcid.org/0009-0002-8533-2567",
-  //   "googleScholar": "https://scholar.google.com/citations?user=dwRDcjAAAAAJ&hl=en",
-  //   "researchPapersPublished": 23,
-  //   "booksPublished": 2,
-  //   "bookChaptersPublished": 2,
-  //   "patents": "UK Design Patent titled 'AI-POWERED SUPPLY CHAIN MANAGEMENT DEVICE' (Design No.: 6477012)",
-  //   "profileContent": "Dr. Sayyed Mudassar Nazir is an accomplished academician, researcher, and management educator with over 24 years of combined experience spanning academia, research, and industry. He is currently serving as an Assistant Professor at the Institute of Management Studies, Career Development & Research (IMS-CDR), Ahilyanagar, where he has been contributing to management education since 2013. He holds a Ph.D. in Management (Human Resource Management) from Savitribai Phule Pune University, with his doctoral research focusing on Succession Planning in Family-Owned Enterprises. He is also qualified in UGC-NET and Maharashtra SET in Management and possesses multidisciplinary academic credentials in Operations Management, Supply Chain Management, Entrepreneurship Development, Project Management, and Biochemistry. His teaching and research interests encompass Operations and Supply Chain Management, Human Resource Management, Business Strategy, Lean Management, Theory of Constraints, World-Class Manufacturing Practices, and Family Business Management.Dr. Mudassar has established himself as an active researcher and academic contributor with 23 research publications, 13 conference presentations, 2 authored books, 2 book chapters, and a UK-registered Design Patent titled AI-Powered Supply Chain Management Device. He has been invited as a resource person by several universities and institutions, contributed to the MBA curriculum development of Savitribai Phule Pune University, and has coordinated and served on numerous institutional quality, research, admission, and accreditation committees. His academic excellence has been recognized through multiple distinctions, including the Best Teacher Award (2020 and twice in 2025), the Best Paper Presentation Award (2023), and several professional recognitions. Driven by a passion for quality education, research, innovation, and student development, Dr. Mudassar continues to bridge academic theory with industry practice while fostering critical thinking, ethical leadership, and lifelong learning among future management professionals."
-  // },
   {
     "id": 8,
     category: "Faculty - Information Technology",
@@ -739,6 +734,13 @@ export const facultyData: Faculty[] = [
     ],
     "profileContent": "I am Shubhangi Ashok Kharmate, working as an Assistant Professor in the Department of Computer Applications. I completed my Bachelor of Computer Applications (BCA) in 2019 and Master of Computer Applications (MCA) in 2022.\n\nMy academic background has provided me with a strong foundation in programming, software development, databases, data structures, and cyber security. I am committed to continuous learning and enhancing my teaching through practical, student-centric, and innovative methodologies.\n\nExperience \n\n I have teaching experience in undergraduate and postgraduate computer application programs. As an Assistant Professor, I teach subjects including Python Programming, Java Programming, and Cyber Security to MCA students.\n\nIn addition to teaching, I actively contribute to departmental and institutional activities such as academic coordination, student mentoring, practical sessions, technical events, cultural activities, documentation, and NAAC-related work. I believe in fostering an engaging learning environment that promotes analytical thinking, practical skills, and continuous professional development.\n\nResearch Interests \n\n My research interests include: \n\n - Cyber Security\n\n- Information Security\n\n- Network Security\n\n- Python Programming\n\n- Artificial Intelligence Applications in Cyber Security\n\n- Secure Software Development\n\n- Data Privacy and Digital Forensics\n\nI am interested in exploring emerging technologies and contributing to research through academic publications, conferences, and collaborative projects, with a particular focus on Cyber Security."
   },  
+  {
+    "id": 11,
+    category: "Faculty - Information Technology",
+    "name": "Kanchan Sonar",
+    "designation": "Assistant Professor",
+    "image": "/images/faculty/kanchan-sonar.webp",
+  },
 
   
   
@@ -796,6 +798,27 @@ export const facultyData: Faculty[] = [
     ],
     "researchPapersPublished": "4",
     "profileContent": "Ms. Shital Ashish Upadhyay (Nabariya) is an Assistant Professor with 13 years of teaching experience in the fields of Commerce and Management. She holds a Master of Commerce (M.Com.) in Cost Accounting from Savitribai Phule Pune University, an MBA in Marketing from Dr. Babasaheb Ambedkar Marathwada University, an M.B.S. in Financial Management, a Post Graduate Diploma in Business Management (Marketing Management) from the University of Pune, and a Bachelor of Education (B.Ed.) from S.N.D.T. Women's University. Throughout her academic career, she has taught undergraduate and junior college students in a wide range of commerce and management subjects. Her teaching expertise includes Business Analytics, Human Resource Management, Organizational Behaviour, Communication Skills, Cost Accounting, Financial Accounting, Corporate Accounting, Marketing Management, Economics, and Business Communication. Her academic interests focus on Business Analytics, Accounting and Finance, Marketing, Human Resource Management, innovative teaching pedagogies, and the application of Artificial Intelligence in higher education. She has actively participated in Faculty Development Programmes, national conferences, workshops, and professional certification programmes to enhance her academic and professional competencies. In addition to her teaching responsibilities, she has served as Chairman and Member of University Paper Setting Panels, and actively contributes to institutional development through university examination work, student mentoring, seminar coordination, cultural activities, and admission and promotion initiatives. Her commitment to continuous learning, academic excellence, and student-centric teaching reflects her dedication to fostering quality higher education and holistic student development."
+  },
+  {
+    "id": 3,
+    category: "BBA Staff",
+    "name": "Bhakti Jaggi",
+    "designation": "Assistant Professor",
+    "image": "/images/faculty/bhakti-jaggi.webp",
+  },
+  {
+    "id": 4,
+    category: "BBA Staff",
+    "name": "Trupti Khabiya",
+    "designation": "Assistant Professor",
+    "image": "/images/faculty/trupti-khabiya.webp",
+  },
+  {
+    "id": 5,
+    category: "BBA Staff",
+    "name": "Varad Hatwalne",
+    "designation": "Assistant Professor",
+    "image": "/images/faculty/varad-hatwalne.webp",
   },
   
   
@@ -883,6 +906,21 @@ export const facultyData: Faculty[] = [
     "profileContent": "Prof. Swati Vaibhav Thombare is an Assistant Professor with over 10 years of teaching and industry experience in Computer Application. She holds a Master of Computer Applications (MCA) and a Bachelor of Computer Applications (BCA).\n\nShe has extensive teaching experience in undergraduate computer science courses, including Web Technology (HTML, CSS, JavaScript), Principles of Programming and Algorithms, C Programming, C++, Discrete Mathematics, and Linear Algebra. She is committed to providing quality education through practical, student-focused learning.\n\nHer areas of interest include Web Technology, Software Development, Programming, Discrete Mathematics, and Linear Algebra. She actively mentors students and participates in academic and professional development activities.\n\nIn addition to teaching, she contributes to academic coordination, certification programmes, admission outreach, and institutional activities. She regularly participates in Faculty Development Programmes (FDPs) and workshops to enhance her teaching skills and stay updated with emerging technologies."
   },
 
+  {
+    "id": 4,
+    category: "BCA Staff",
+    "name": "Alsaba Inamdar",
+    "designation": "Assistant Professor",
+    "image": "/images/faculty/alsaba-inamdar.webp",
+  },
+  {
+    "id": 5,
+    category: "BCA Staff",
+    "name": "Iram khan",
+    "designation": "Assistant Professor",
+    "image": "/images/faculty/iram-khan.webp",
+  },
+
   
   
   
@@ -938,6 +976,13 @@ export const facultyData: Faculty[] = [
     "name": "Rajesh Kamble",
     "designation": "Library maintenance staff",
     "image": "/images/faculty/Rajesh-Kamble.png",
+  },
+  {
+    "id": 5,
+    category: "Library-Staff",
+    "name": "Pratap Gaikwad",
+    "designation": "Assistant in Library",
+    "image": "/images/faculty/dhanraj-ghodake.webp",
   },
 
   // Technical Support ---------------------------------------

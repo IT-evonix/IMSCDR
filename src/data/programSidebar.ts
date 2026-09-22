@@ -155,7 +155,7 @@ export const programSidebar = {
     menuItems: [
 
       // { title: "ERP", href: "/lifeatims/gallery" },
-      { title: "Examination", href: "/academic-calendar" },
+      // { title: "Examination", href: "/academic-calendar" },
       { title: "Academic Calendar", href: "/student-corner/academic-calendar" },
       { title: "Downloads", href: "/student-corner/downloads" },
       { title: "Scholarships", href: "/student-corner/scholarships" },
