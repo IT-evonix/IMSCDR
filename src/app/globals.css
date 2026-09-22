@@ -4806,6 +4806,9 @@ Body {
   display: flex;
   flex-direction: row-reverse;
 }
+.placement_testi_list .subheading{
+  line-height:normal;
+}
 .placement_testi_img {
   border: 10px solid #fff;
   border-radius: 10px;
