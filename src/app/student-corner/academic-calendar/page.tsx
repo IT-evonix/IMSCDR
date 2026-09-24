@@ -66,7 +66,7 @@ const Page = () => {
         <div className="container">
           <section>
             <div className="heading">
-              Academic Calendar Term – I
+              Academic Calendar As Per SPPU Term – I
             </div>
 
             <div className="mb-5">
@@ -76,7 +76,7 @@ const Page = () => {
 
           <section>
             <div className="heading">
-              Academic Calendar Term – II
+              Academic Calendar As Per SPPU Term – II
             </div>
 
             <div className="mb-5">

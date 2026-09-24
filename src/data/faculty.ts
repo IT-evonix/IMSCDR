@@ -4,6 +4,7 @@ export interface Faculty {
   category:
   | "Administration"
   | "Admin Team"
+  | "Accounts Department"
   | "Faculty - Information Technology"
   | "Faculty - Management Programme"
   | "BCA Staff"
@@ -125,6 +126,41 @@ export const facultyData: Faculty[] = [
     "name": "Rajendra Lonkar",
     "designation": "",
     "image": "/images/faculty/rajendra-lonkar.webp",
+  },
+
+
+  
+
+
+
+// Accounts Department ---------------------------------------
+  {
+    "id": 1,
+    category: "Accounts Department",
+    "name": "N. B. kadam",
+    "designation": "Accounts Department Head",
+    "image": "/images/faculty/n-b-kadam.webp",
+  },
+  {
+    "id": 2,
+    category: "Accounts Department",
+    "name": "Anushree Gumphekar",
+    "designation": "-",
+    "image": "/images/faculty/Anushree-Gumphekar.webp",
+  },
+  {
+    "id": 3,
+    category: "Accounts Department",
+    "name": "Ashwini Yelikar",
+    "designation": "-",
+    "image": "/images/faculty/ashwini-yelikar.webp",
+  },
+  {
+    "id": 4,
+    category: "Accounts Department",
+    "name": "Sunil Rashinkar",
+    "designation": "-",
+    "image": "/images/faculty/sunil-rashinkar.webp",
   },
 
 

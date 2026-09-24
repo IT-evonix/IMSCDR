@@ -8,8 +8,8 @@ export default function ChancellorSection() {
           <div className="chancellor-left">
             <div className="chancellor-image">
               <Image
-                src="images/about/In-Charge-directorNew.webp"
-                alt="Dr. S. B. Mujumdar"
+                src="/images/about/In-Charge-directorNew.webp"
+                alt=""
                 width={333}
                 height={325}
                 priority
@@ -25,16 +25,6 @@ export default function ChancellorSection() {
                 Bhaskar Pandurang Hivale Education (B.P.H.E.)
               </span>
             </div>
-            {/* <p
-                className="mt-2 mt-sm-4"
-                style={{ fontFamily: "Avenir-Next-Demi" }}
-              >
-                The Bhaskar Pandurang Hivale Education (B.P.H.E.) Society’s
-                Institute of Management Studies, Career Development and Research
-                (IMS) is a premier management institute conducting various
-                quality programmes in Management and Information Technology in
-                Ahmednagar.
-              </p> */}
             <p className="mt-2 mt-sm-4">
               Welcome to BPHES Institute of Management Studies, Career
               Development and Research (IMS-CDR), Ahilyanagar. As a premier

@@ -10,6 +10,7 @@ const FacultySection = () => {
   const facultyCategories: Faculty["category"][] = [
     "Administration",
     "Admin Team",
+    "Accounts Department",
     "Faculty - Information Technology",
     "Faculty - Management Programme",
     "BCA Staff",
