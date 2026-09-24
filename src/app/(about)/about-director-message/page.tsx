@@ -8,7 +8,7 @@ export default function ChancellorSection() {
           <div className="chancellor-left">
             <div className="chancellor-image">
               <Image
-                src="/images/campus/campus-overview/campus-overview.webp"
+                src="images/about/In-Charge-directorNew.webp"
                 alt="Dr. S. B. Mujumdar"
                 width={333}
                 height={325}
