@@ -37,8 +37,8 @@ const DEFAULT_NAV_ITEMS: SearchResultItem[] = [
   },
   {
     id: 'nav-content',
-    title: 'News & Events Library',
-    subtitle: 'Manage all published news, events & blogs',
+    title: 'News & Content Library',
+    subtitle: 'Manage all published news, blogs & notices',
     type: 'nav',
     badge: 'Page',
     url: '/admin/news-events',
@@ -46,7 +46,7 @@ const DEFAULT_NAV_ITEMS: SearchResultItem[] = [
   {
     id: 'nav-create',
     title: 'Create New Content',
-    subtitle: 'Publish new article, event, or upload PDF',
+    subtitle: 'Publish new article, blog, or upload PDF',
     type: 'nav',
     badge: 'Action',
     url: '/admin/news-events/create',
@@ -184,9 +184,9 @@ export const GlobalSearchModal: React.FC<GlobalSearchModalProps> = ({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 bg-black/40 backdrop-blur-xs flex items-start justify-center pt-16 sm:pt-24 px-4 animate-in fade-in duration-150">
+    <div className="faculty-modal-overlay fixed inset-0 z-50 bg-black/75 backdrop-blur-xs flex items-start justify-center pt-16 sm:pt-24 px-4 animate-in fade-in duration-150">
       {/* Search Modal Box */}
-      <div className="bg-white w-full max-w-xl rounded-2xl brand-border shadow-2xl overflow-hidden flex flex-col max-h-[80vh]">
+      <div className="faculty-modal bg-white w-full max-w-xl rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.35)] overflow-hidden flex flex-col max-h-[80vh]">
         {/* Search Input Bar */}
         <div className="p-3.5 border-b border-slate-100 flex items-center gap-3 bg-[#f8fafc]">
           <Search className="w-4 h-4 text-[#09468e] shrink-0" />
@@ -210,10 +210,10 @@ export const GlobalSearchModal: React.FC<GlobalSearchModalProps> = ({
           <button
             type="button"
             onClick={onClose}
-            className="modal-close-btn"
+            className="faculty-close modal-close-btn"
             title="Close"
           >
-            <X className="w-4 h-4" />
+            <X className="w-3.5 h-3.5" />
           </button>
         </div>
 

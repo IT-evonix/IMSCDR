@@ -56,49 +56,43 @@ export const ConfirmModal: React.FC<ConfirmModalProps> = ({
   const VariantIcon = currentVariant.Icon;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 bg-black/40 backdrop-blur-xs animate-in fade-in duration-150">
-      <div className="bg-white rounded-xl brand-border shadow-xl max-w-[400px] w-full overflow-hidden animate-in fade-in zoom-in-95 duration-150">
-        
+    <div
+      className="faculty-modal-overlay fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/75 backdrop-blur-xs animate-in fade-in duration-150"
+      onClick={!isLoading ? onClose : undefined}
+    >
+      <div
+        className="faculty-modal bg-white rounded-xl shadow-[0_20px_60px_rgba(0,0,0,0.35)] max-w-[440px] w-full overflow-hidden relative animate-in fade-in zoom-in-95 duration-150"
+        onClick={(e) => e.stopPropagation()}
+      >
+
         {/* Header & Body */}
-        <div className="p-4 space-y-3">
-          <div className="flex items-center justify-between gap-3 border-b border-slate-100 pb-2.5">
+        <div className="px-4 py-2 space-y-3">
+          <div className="flex items-center justify-between gap-3 border-b border-slate-100 pb-2">
             <div className="flex items-center gap-2.5 min-w-0 flex-1">
-              <div className={`w-7 h-7 rounded-md border ${currentVariant.iconBg} shrink-0 flex items-center justify-center`}>
-                <VariantIcon className="w-3.5 h-3.5" />
+              <div className={`w-8 h-8 rounded-lg border ${currentVariant.iconBg} shrink-0 flex items-center justify-center`}>
+                <VariantIcon className="w-4 h-4" />
               </div>
-              <h4 className="modal-title text-sm font-bold text-[#003067] truncate leading-tight my-auto">{title}</h4>
+              <h4 className="modal-title text-[15px] font-semibold text-[#000000] truncate leading-tight my-auto">{title}</h4>
             </div>
 
             <button
               type="button"
               onClick={onClose}
               disabled={isLoading}
-              className="modal-close-btn"
+              className="faculty-close modal-close-btn"
               title="Close dialog"
             >
-              <X className="w-4 h-4" />
+              <X className="w-3.5 h-3.5" />
             </button>
           </div>
 
-          <p className="text-xs sm:text-[13px] font-medium text-slate-700 leading-relaxed pt-0.5">
+          <p className="text-[14px] font-normal text-[#000000] leading-relaxed pt-1">
             {message}
           </p>
         </div>
 
         {/* Compact Action Footer */}
-        <div className="px-4 py-2.5 bg-[#f9f9ff] border-t border-[#1a1c20]/10 flex items-center justify-end gap-2">
-          {cancelText && (
-            <Button
-              type="button"
-              variant="outline"
-              size="xs"
-              onClick={onClose}
-              disabled={isLoading}
-            >
-              {cancelText}
-            </Button>
-          )}
-
+        <div className="px-4 py-2.5 bg-[#f9f9ff] border-t border-[#1a1c20]/10 flex items-center justify-end">
           <Button
             type="button"
             variant={currentVariant.btnVariant}

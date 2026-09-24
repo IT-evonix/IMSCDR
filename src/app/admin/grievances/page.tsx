@@ -159,6 +159,8 @@ export default function AdminGrievancesPage() {
     <div className="space-y-4">
       {/* Top Header & Export Action */}
       <PageTitle
+        showBack={false}
+        subtitle="IMSCDR Management"
         title="Grievance Redressal"
         description="Review and manage student complaints and grievance redressal submissions."
       >
@@ -166,18 +168,18 @@ export default function AdminGrievancesPage() {
           type="button"
           onClick={handleExportExcel}
           disabled={isExporting}
-          className="explore_more_btn !h-7 !px-3 !text-[11px] !font-bold"
+          className="admission-btn"
         >
-          <FileSpreadsheet className="w-3 h-3" />
+          <FileSpreadsheet className="w-3.5 h-3.5" />
           <span>{isExporting ? 'Exporting...' : 'Export to Excel'}</span>
         </button>
       </PageTitle>
 
       {/* Search & Filter Bar */}
-      <div className="bg-white p-3 rounded-xl brand-border shadow-2xs flex flex-wrap items-center justify-between gap-3">
+      <div className="bg-white px-3 py-2 rounded-xl brand-border shadow-2xs flex flex-wrap items-center justify-between gap-2.5">
         {/* Search Field */}
-        <div className="relative flex-1 min-w-[220px] max-w-sm flex items-center">
-          <Search className="w-3.5 h-3.5 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none z-10" />
+        <div className="relative flex-1 min-w-[200px] max-w-sm flex items-center">
+          <Search className="w-3.5 h-3.5 absolute left-2.5 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none z-10" />
           <input
             type="text"
             value={searchQuery}
@@ -186,22 +188,22 @@ export default function AdminGrievancesPage() {
               setCurrentPage(1);
             }}
             placeholder="Search by name, mobile, email, complaint..."
-            className="pl-9 pr-4 h-8 bg-[#f8fafc] border border-slate-200 rounded-lg text-xs text-[#000000] placeholder:text-slate-400 hover:border-[#09468e] focus:border-[#09468e] focus:ring-1 focus:ring-[#09468e]/20 w-full outline-none transition-all search-input"
+            className="filter-input filter-input-search w-full"
           />
         </div>
 
         {/* Filter Controls */}
-        <div className="flex flex-wrap items-center gap-2.5">
+        <div className="flex flex-wrap items-center gap-2">
           {/* Course Filter Dropdown */}
           <div className="flex items-center gap-1.5">
-            <span className="text-xs font-bold text-[#000000]">Course:</span>
+            <span className="text-[14px] font-bold text-[#000000]">Course:</span>
             <select
               value={selectedCourse}
               onChange={(e) => {
                 setSelectedCourse(e.target.value);
                 setCurrentPage(1);
               }}
-              className="bg-[#f8fafc] border border-slate-200 rounded-lg px-2.5 h-8 text-xs font-semibold text-[#000000] hover:border-[#09468e] focus:border-[#09468e] focus:ring-1 focus:ring-[#09468e]/20 outline-none cursor-pointer transition-all"
+              className="filter-input cursor-pointer"
             >
               {COURSE_FILTER_OPTIONS.map((opt) => (
                 <option key={opt.value} value={opt.value}>
@@ -220,10 +222,10 @@ export default function AdminGrievancesPage() {
                 setStartDate(e.target.value);
                 setCurrentPage(1);
               }}
-              className="bg-[#f8fafc] border border-slate-200 rounded-lg px-2 h-8 text-xs text-[#000000] outline-none"
+              className="filter-input cursor-pointer"
               title="From date"
             />
-            <span className="text-xs text-slate-400">to</span>
+            <span className="text-[14px] text-slate-400 font-medium">to</span>
             <input
               type="date"
               value={endDate}
@@ -231,7 +233,7 @@ export default function AdminGrievancesPage() {
                 setEndDate(e.target.value);
                 setCurrentPage(1);
               }}
-              className="bg-[#f8fafc] border border-slate-200 rounded-lg px-2 h-8 text-xs text-[#000000] outline-none"
+              className="filter-input cursor-pointer"
               title="To date"
             />
           </div>
@@ -247,9 +249,9 @@ export default function AdminGrievancesPage() {
                 setEndDate('');
                 setCurrentPage(1);
               }}
-              className="inline-flex items-center gap-1 px-2.5 h-8 rounded-lg text-xs font-semibold text-slate-600 bg-slate-100 hover:bg-slate-200 transition-colors cursor-pointer"
+              className="flex items-center gap-1 text-[14px] font-bold text-[#ad2865] hover:underline cursor-pointer px-1.5 py-1"
             >
-              <RotateCcw className="w-3 h-3" />
+              <RotateCcw className="w-3.5 h-3.5" />
               <span>Reset</span>
             </button>
           )}
@@ -257,46 +259,46 @@ export default function AdminGrievancesPage() {
       </div>
 
       {/* Main Grievances Table Card Container */}
-      <div className="admin-table-card min-h-[380px] sm:min-h-[440px] flex flex-col justify-between">
+      <div className="table-card admin-table-card  flex flex-col justify-between">
         {loading ? (
-          <div className="flex-1 py-20 flex items-center justify-center text-xs font-semibold text-[#000000]">
+          <div className="flex-1 py-20 flex items-center justify-center text-[14px] font-semibold text-[#000000]">
             Loading grievances...
           </div>
         ) : grievances.length === 0 ? (
           <div className="flex-1 py-20 flex flex-col items-center justify-center text-[#000000] space-y-2">
             <Inbox className="w-8 h-8 mx-auto text-[#000000]/40" />
-            <p className="text-xs font-semibold">No grievances found.</p>
+            <p className="text-[14px] font-semibold">No grievances found.</p>
           </div>
         ) : (
-          <div className="overflow-x-auto w-full flex-1 flex flex-col justify-between">
-            <table className="w-full text-left border-collapse min-w-[760px]">
+          <div className="overflow-x-auto w-full flex-1 flex flex-col justify-between table-responsive admin-table-responsive">
+            <table className="table governing-table w-full text-left min-w-[760px] mb-0">
               <thead className="admin-table-header">
                 <tr>
-                  <th className="py-2.5 px-4 w-12 text-center">Sr.</th>
+                  <th className="py-2.5 px-4 text-center col-sr">Sr. No.</th>
                   <th className="py-2.5 px-4">Candidate Name</th>
                   <th className="py-2.5 px-4">Email &amp; Mobile</th>
                   <th className="py-2.5 px-4 text-center">Course</th>
                   <th className="py-2.5 px-4">Complaint in Short</th>
                   <th className="py-2.5 px-4">Submitted Date</th>
-                  <th className="py-2.5 px-4 text-center w-28">Actions</th>
+                  <th className="py-2.5 px-4 text-center w-28">Action</th>
                 </tr>
               </thead>
 
-              <tbody className="divide-y divide-slate-100 text-xs font-semibold text-[#000000]">
+              <tbody className="text-[15px] font-normal text-[#000000]">
                 {grievances.map((item, idx) => (
                   <tr
                     key={item.id}
-                    className="hover:bg-[#09468e]/[0.02] transition-colors cursor-pointer"
+                    className="cursor-pointer"
                     onClick={() => handleOpenDetail(item)}
                   >
                     {/* Sr. No */}
-                    <td className="py-3 px-4 text-center font-['Roma-Semibold'] text-[#000000] text-xs w-12">
-                      {(currentPage - 1) * itemsPerPage + idx + 1}
+                    <td className="py-3 px-4 text-center col-sr">
+                      <span className="sr-badge">{(currentPage - 1) * itemsPerPage + idx + 1}</span>
                     </td>
 
                     {/* Candidate Name */}
                     <td className="py-3 px-4 align-middle">
-                      <div className="font-bold text-[#000000] flex items-center gap-1.5">
+                      <div className="font-normal text-[#000000] flex items-center gap-1.5 text-[14px] capitalize">
                         <User className="w-3.5 h-3.5 text-[#09468e] shrink-0" />
                         <span>{item.name}</span>
                       </div>
@@ -304,29 +306,29 @@ export default function AdminGrievancesPage() {
 
                     {/* Email & Mobile */}
                     <td className="py-3 px-4 align-middle">
-                      <div className="text-xs text-[#000000] font-semibold">{item.email}</div>
-                      <div className="text-[11px] text-slate-500">{item.mobile}</div>
+                      <div className="text-[14px] text-[#000000] font-normal lowercase normal-case email-text">{item.email}</div>
+                      <div className="text-[14px] text-slate-600 font-normal mt-0.5">{item.mobile}</div>
                     </td>
 
                     {/* Course */}
                     <td className="py-3 px-4 text-center align-middle">
-                      <span className="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-bold bg-[#09468e]/10 text-[#09468e]">
+                      <span className="inline-flex items-center px-2.5 py-0.5 rounded text-[12px] font-medium bg-[#09468e]/10 text-[#09468e] uppercase">
                         {item.course}
                       </span>
                     </td>
 
                     {/* Complaint in Short */}
                     <td className="py-3 px-4 align-middle max-w-[260px]">
-                      <div className="font-bold text-[#000000] truncate" title={item.complaintShort}>
+                      <div className="font-normal text-[#000000] truncate text-[14px] capitalize" title={item.complaintShort}>
                         {item.complaintShort}
                       </div>
-                      <div className="text-[11px] text-slate-500 truncate" title={item.complaintDetail}>
+                      <div className="text-[13px] text-slate-500 truncate capitalize" title={item.complaintDetail}>
                         {item.complaintDetail}
                       </div>
                     </td>
 
                     {/* Date */}
-                    <td className="py-3 px-4 align-middle text-xs text-[#000000] whitespace-nowrap">
+                    <td className="py-3 px-4 align-middle text-[14px] text-[#000000] whitespace-nowrap">
                       {new Date(item.createdAt).toLocaleDateString('en-GB', {
                         day: '2-digit',
                         month: 'short',
@@ -368,9 +370,10 @@ export default function AdminGrievancesPage() {
         <ContentPagination
           currentPage={currentPage}
           totalPages={totalPages}
-          totalItems={totalItems}
           itemsPerPage={itemsPerPage}
-          onPageChange={setCurrentPage}
+          totalItems={totalItems}
+          entityName="grievances"
+          onPageChange={(p) => setCurrentPage(p)}
           onItemsPerPageChange={(limit) => {
             setItemsPerPage(limit);
             setCurrentPage(1);
@@ -381,109 +384,106 @@ export default function AdminGrievancesPage() {
       {/* Full Grievance Reader Modal */}
       {selectedGrievance && (
         <div
-          className="fixed inset-0 bg-black/50 backdrop-blur-xs z-50 flex items-center justify-center p-3 sm:p-6 animate-in fade-in duration-150"
+          className="faculty-modal-overlay fixed inset-0 bg-black/75 backdrop-blur-xs z-50 flex items-center justify-center p-3 sm:p-6 animate-in fade-in duration-150"
           onClick={() => setSelectedGrievance(null)}
         >
           <div
-            className="bg-white rounded-xl brand-border shadow-2xl max-w-[950px] w-full overflow-hidden animate-in fade-in zoom-in-95 duration-150"
+            className="faculty-modal bg-white rounded-xl shadow-[0_20px_60px_rgba(0,0,0,0.35)] max-w-[950px] w-full overflow-hidden relative animate-in fade-in zoom-in-95 duration-150"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Modal Header — Perfectly Aligned Single Line */}
-            <div className="px-4 py-2.5 border-b border-slate-100 flex items-center justify-between gap-2.5 bg-[#f8fafc]/50">
-              <div className="flex items-center gap-2 min-w-0 flex-1">
-                <div className="w-6 h-6 rounded-md bg-[#09468e]/10 text-[#09468e] shrink-0 flex items-center justify-center">
-                  <ShieldAlert className="w-3.5 h-3.5 text-[#09468e]" />
+            <div className="px-5 py-3.5 border-b border-slate-100 flex items-center justify-between gap-3 bg-[#f8fafc]/60">
+              <div className="flex items-center gap-2.5 min-w-0 flex-1">
+                <div className="w-7 h-7 rounded-md bg-[#09468e]/10 text-[#09468e] shrink-0 flex items-center justify-center">
+                  <ShieldAlert className="w-4 h-4 text-[#09468e]" />
                 </div>
-                <h4 className="modal-title text-xs sm:text-sm font-bold text-[#003067] truncate leading-tight my-auto">
+                <h4 className="modal-title text-[15px] font-semibold text-[#000000] truncate leading-tight my-auto">
                   Grievance Redressal Details
                 </h4>
               </div>
 
-              <div className="flex items-center gap-1.5">
-                <button
-                  type="button"
-                  onClick={() => setSelectedGrievance(null)}
-                  className="modal-close-btn"
-                  title="Close modal"
-                >
-                  <X className="w-3.5 h-3.5" />
-                </button>
-              </div>
+              <button
+                type="button"
+                onClick={() => setSelectedGrievance(null)}
+                className="faculty-close modal-close-btn"
+                title="Close modal"
+              >
+                <X className="w-3.5 h-3.5" />
+              </button>
             </div>
 
             {/* Modal Body */}
-            <div className="p-3.5 sm:p-4 space-y-2.5 max-h-[68vh] overflow-y-auto">
+            <div className="p-4 sm:p-5 pb-5 sm:pb-6 space-y-3.5 max-h-[75vh] overflow-y-auto">
               {/* Received Date Badge */}
-              <div className="flex items-center gap-1.5 text-[10px] text-slate-500 font-medium px-0.5">
-                <Clock className="w-3 h-3 text-slate-400 shrink-0" />
+              <div className="flex items-center gap-1.5 text-[13px] text-[#64748b] font-normal px-0.5">
+                <Clock className="w-3.5 h-3.5 text-slate-400 shrink-0" />
                 <span>
                   Received on:{' '}
-                  <strong className="text-slate-800">
+                  <span className="text-[#000000] font-normal">
                     {new Date(selectedGrievance.createdAt).toLocaleString()}
-                  </strong>
+                  </span>
                 </span>
               </div>
 
               {/* Sender Details Grid */}
-              <div className="p-2.5 sm:p-3 bg-[#f8fafc] rounded-lg border border-slate-200 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5 text-xs">
+              <div className="p-3.5 bg-[#f8fafc] rounded-lg border border-slate-200 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-[14px]">
                 <div>
-                  <span className="text-[9px] font-bold text-slate-400 uppercase tracking-wider block">Candidate Name</span>
-                  <div className="flex items-center gap-1 mt-0.5 font-bold text-xs sm:text-sm text-[#003067]">
-                    <User className="w-3 h-3 text-[#09468e] shrink-0" />
+                  <span className="text-[12px] font-normal text-slate-500 uppercase tracking-wider block">Candidate Name</span>
+                  <div className="flex items-center gap-1.5 mt-1 font-normal text-[15px] text-[#000000] capitalize">
+                    <User className="w-3.5 h-3.5 text-[#09468e] shrink-0" />
                     <span>{selectedGrievance.name}</span>
                   </div>
                 </div>
 
                 <div>
-                  <span className="text-[9px] font-bold text-slate-400 uppercase tracking-wider block">Applied Course</span>
-                  <div className="flex items-center gap-1 mt-0.5">
-                    <GraduationCap className="w-3 h-3 text-[#89004a] shrink-0" />
-                    <span className="font-bold text-[#09468e] bg-blue-50 px-2 py-0.5 rounded text-[11px] border border-blue-100">
+                  <span className="text-[12px] font-normal text-slate-500 uppercase tracking-wider block">Applied Course</span>
+                  <div className="flex items-center gap-1 mt-1">
+                    <span className="font-normal text-[#09468e] bg-[#09468e]/10 px-2.5 py-0.5 rounded text-[13px] border border-[#09468e]/20 uppercase">
                       {selectedGrievance.course}
                     </span>
                   </div>
                 </div>
 
                 <div>
-                  <span className="text-[9px] font-bold text-slate-400 uppercase tracking-wider block">Mobile Number</span>
+                  <span className="text-[12px] font-normal text-slate-500 uppercase tracking-wider block">Mobile Number</span>
                   <a
                     href={`tel:${selectedGrievance.mobile}`}
-                    className="flex items-center gap-1 mt-0.5 text-[#000000] hover:text-[#09468e] font-semibold text-xs"
+                    className="flex items-center gap-1.5 mt-1 text-[#000000] hover:text-[#09468e] font-normal text-[14px]"
                   >
-                    <Phone className="w-3 h-3 text-slate-400 shrink-0" />
+                    <Phone className="w-3.5 h-3.5 text-slate-400 shrink-0" />
                     <span>{selectedGrievance.mobile}</span>
                   </a>
                 </div>
 
                 <div>
-                  <span className="text-[9px] font-bold text-slate-400 uppercase tracking-wider block">Email Address</span>
+                  <span className="text-[12px] font-normal text-slate-500 uppercase tracking-wider block">Email Address</span>
                   <a
                     href={`mailto:${selectedGrievance.email}`}
-                    className="flex items-center gap-1 mt-0.5 text-[#09468e] hover:underline font-semibold text-xs break-all"
+                    className="flex items-center gap-1.5 mt-1 text-[#09468e] hover:underline font-normal text-[14px] break-all lowercase normal-case"
                   >
-                    <Mail className="w-3 h-3 text-slate-400 shrink-0" />
+                    <Mail className="w-3.5 h-3.5 text-[#09468e] shrink-0" />
                     <span>{selectedGrievance.email}</span>
                   </a>
                 </div>
               </div>
 
               {/* Complaint in Short */}
-              <div className="space-y-0.5">
-                <label className="text-[9px] font-bold text-slate-500 uppercase tracking-wider block">
+              <div className="space-y-1.5">
+                <label className="text-[12px] font-normal text-slate-500 uppercase tracking-wider block">
                   Complaint in Short
                 </label>
-                <div className="text-xs font-bold text-[#09468e] p-2 px-2.5 bg-blue-50/60 rounded-lg border border-blue-100 break-words [word-break:break-word]">
+                <div className="text-[14px] font-normal text-[#000000] p-2.5 px-3 bg-[#f8fafc] rounded-lg border border-slate-200 break-words [word-break:break-word] capitalize">
                   {selectedGrievance.complaintShort}
                 </div>
               </div>
 
               {/* Complaint in Detail */}
-              <div className="space-y-0.5">
-                <label className="text-[9px] font-bold text-slate-500 uppercase tracking-wider block">
+              <div className="space-y-1.5">
+                <label className="text-[12px] font-normal text-slate-500 uppercase tracking-wider block">
                   Full Complaint Details
                 </label>
                 <div
-                  className="text-xs font-normal text-[#1a1c20] leading-relaxed p-3 bg-[#fcfcfd] rounded-lg border border-slate-200 whitespace-pre-wrap break-words [word-break:break-word] max-h-[160px] overflow-y-auto shadow-inner"
+                  className="text-[14px] font-normal text-[#000000] leading-relaxed p-3.5 bg-[#ffffff] rounded-lg border border-slate-200 whitespace-pre-wrap break-words [word-break:break-word] max-h-[220px] overflow-y-auto capitalize"
                   style={{
                     scrollbarWidth: 'thin',
                     scrollbarColor: '#94a3b8 #f1f5f9',
@@ -492,21 +492,10 @@ export default function AdminGrievancesPage() {
                   {selectedGrievance.complaintDetail ? (
                     selectedGrievance.complaintDetail
                   ) : (
-                    <span className="text-slate-400 italic">No complaint details provided.</span>
+                    <span className="text-slate-400 italic font-normal">No complaint details provided.</span>
                   )}
                 </div>
               </div>
-            </div>
-
-            {/* Modal Footer */}
-            <div className="px-4 py-2 bg-[#f8fafc] border-t border-slate-100 flex items-center justify-end">
-              <button
-                type="button"
-                onClick={() => setSelectedGrievance(null)}
-                className="px-3.5 py-1 rounded-md border border-slate-200 text-xs font-semibold text-slate-700 hover:bg-slate-100 transition-colors cursor-pointer"
-              >
-                Close
-              </button>
             </div>
           </div>
         </div>
@@ -524,7 +513,6 @@ export default function AdminGrievancesPage() {
             : 'Are you sure you want to delete this grievance record?'
         }
         confirmText="Delete Record"
-        cancelText="Cancel"
         variant="danger"
         isLoading={isDeleting}
       />

@@ -1,5 +1,6 @@
 import React from 'react';
 import { LoginForm } from '@/components/admin/LoginForm';
+import '@/app/admin.css';
 
 export const metadata = {
   title: 'Admin Login | IMSCDR Portal',
@@ -8,8 +9,9 @@ export const metadata = {
 
 export default function AdminLoginPage() {
   return (
-    <main className="min-h-screen w-full bg-[#F5F7FA] flex items-center justify-center p-4 sm:p-6">
+    <main className="admin-login-page">
       <LoginForm />
     </main>
   );
 }
+

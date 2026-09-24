@@ -2,7 +2,8 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import Image from 'next/image';
+import { usePathname, useSearchParams } from 'next/navigation';
 import {
   LayoutDashboard,
   Newspaper,
@@ -15,6 +16,11 @@ import {
   Mail,
   GraduationCap,
   ShieldAlert,
+  Calendar,
+  BookOpen,
+  Bell,
+  FileText,
+  Layers,
 } from 'lucide-react';
 
 interface AdminSidebarProps {
@@ -28,14 +34,14 @@ export interface SidebarChild {
   id: string;
   label: string;
   href: string;
-  icon: React.ComponentType<{ className?: string }>;
+  icon: React.ComponentType<{ className?: string; size?: number }>;
 }
 
 export interface SidebarNavItem {
   id: string;
   label: string;
   href?: string;
-  icon: React.ComponentType<{ className?: string }>;
+  icon: React.ComponentType<{ className?: string; size?: number }>;
   children?: SidebarChild[];
 }
 
@@ -43,11 +49,15 @@ export const SIDEBAR_NAV_ITEMS: SidebarNavItem[] = [
   { id: 'dashboard', label: 'Dashboard', href: '/admin', icon: LayoutDashboard },
   {
     id: 'news-events-blogs',
-    label: 'News-Events , Blogs & Circulars',
+    label: 'News, Blogs & Circulars-Notices',
     icon: Newspaper,
     children: [
+      { id: 'news-events-all', label: 'All Posts', href: '/admin/news-events', icon: Layers },
       { id: 'categories', label: 'Categories', href: '/admin/categories', icon: FolderKanban },
-      { id: 'news-events', label: 'All Posts', href: '/admin/news-events', icon: Newspaper },
+      { id: 'create-news', label: 'News', href: '/admin/news-events/create?type=News', icon: Newspaper },
+      // { id: 'create-event', label: 'Event', href: '/admin/news-events/create?type=Event', icon: Calendar },
+      { id: 'create-blog', label: 'Blogs', href: '/admin/news-events/create?type=Blog', icon: BookOpen },
+      { id: 'create-notice-circular', label: 'Notices-Circulars', href: '/admin/news-events/create?type=Notice', icon: Bell },
     ],
   },
   { id: 'contact-messages', label: 'Contact Enquiries', href: '/admin/contact-messages', icon: Mail },
@@ -62,14 +72,34 @@ export const AdminSidebar: React.FC<AdminSidebarProps> = ({
   onToggleCollapse,
 }) => {
   const pathname = usePathname();
+  const searchParams = useSearchParams();
+
+  const isChildActive = (childHref?: string) => {
+    if (!childHref) return false;
+    if (childHref.includes('?')) {
+      const [basePath, query] = childHref.split('?');
+      if (pathname !== basePath) return false;
+      const expectedType = new URLSearchParams(query).get('type');
+      const currentType = searchParams?.get('type');
+      if (expectedType === 'Notice' && (currentType === 'Notice' || currentType === 'Circular')) {
+        return true;
+      }
+      return expectedType === currentType;
+    }
+    if (childHref === '/admin/news-events') {
+      return pathname === '/admin/news-events';
+    }
+    return pathname === childHref;
+  };
 
   const [openGroups, setOpenGroups] = useState<Record<string, boolean>>(() => {
     const initial: Record<string, boolean> = {};
     SIDEBAR_NAV_ITEMS.forEach((item) => {
       if (item.children) {
-        initial[item.id] = item.children.some(
-          (c) => pathname === c.href || pathname.startsWith(c.href)
-        );
+        initial[item.id] = item.children.some((c) => {
+          const basePath = c.href?.split('?')[0] || '';
+          return pathname === basePath || (basePath && pathname.startsWith(basePath));
+        });
       }
     });
     return initial;
@@ -79,9 +109,10 @@ export const AdminSidebar: React.FC<AdminSidebarProps> = ({
     if (openGroups[item.id] !== undefined) {
       return openGroups[item.id];
     }
-    return item.children?.some(
-      (c) => pathname === c.href || pathname.startsWith(c.href)
-    ) ?? false;
+    return item.children?.some((c) => {
+      const basePath = c.href?.split('?')[0] || '';
+      return pathname === basePath || (basePath && pathname.startsWith(basePath));
+    }) ?? false;
   };
 
   const toggleGroup = (item: SidebarNavItem) => {
@@ -94,190 +125,210 @@ export const AdminSidebar: React.FC<AdminSidebarProps> = ({
       {/* Mobile Overlay */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black/40 z-40 lg:hidden backdrop-blur-xs transition-opacity"
+          className="fixed inset-0 bg-black/50 z-40 lg:hidden backdrop-blur-xs transition-opacity"
           onClick={onClose}
         />
       )}
 
-      {/* Sidebar Container */}
+      {/* Sidebar Container: Follows exact globals.css website sidebar theme */}
       <aside
-        className={`h-screen flex flex-col fixed left-0 top-0 bg-white border-r border-slate-200 shadow-[1px_0_8px_rgba(9,70,142,0.03)] z-50 transition-all duration-300 ease-in-out ${isCollapsed ? 'w-16' : 'w-56'
+        className={`leftSidebarmain h-screen flex flex-col fixed left-0 top-0 z-50 transition-all duration-300 ease-in-out ${isCollapsed ? 'w-16' : 'w-64'
           } ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}`}
+        style={{ backgroundColor: '#09468e', padding: 0 }}
       >
-        <div className="flex flex-col h-full py-3.5 px-3">
-          {/* Header / Logo Area */}
-          <div className={`flex ${isCollapsed ? 'flex-col gap-2 items-center' : 'items-center justify-between'} pb-3 mb-3 border-b border-slate-100 px-0.5`}>
-            <Link
-              href="/admin"
-              className="flex items-center justify-center group overflow-hidden"
-            >
-              <img
-                src="/images/home/black_logo.webp"
-                alt="IMSCDR Logo"
-                className={`${isCollapsed ? 'h-5' : 'h-7'} w-auto object-contain transition-transform group-hover:scale-105`}
-              />
-            </Link>
+        {/* Header / Logo Area */}
+        <div
+          className={`flex ${isCollapsed ? 'flex-col gap-2 items-center' : 'items-center justify-between'
+            } px-4 py-3.5 border-b border-[#5392db]/40 shrink-0`}
+        >
+          <Link href="/admin" className="flex items-center group overflow-hidden">
+            <Image
+              src="/images/home/white_logo.webp"
+              alt="IMSCDR Logo"
+              width={160}
+              height={44}
+              priority
+              className={`${isCollapsed ? 'h-5' : 'h-7'} w-auto object-contain transition-transform group-hover:scale-105`}
+            />
+          </Link>
 
-            {/* Mobile Close Button */}
+          {/* Mobile Close Button */}
+          <button
+            onClick={onClose}
+            className="lg:hidden p-1 text-white hover:bg-white/10 rounded-md transition-colors"
+            aria-label="Close sidebar"
+          >
+            <X size={20} />
+          </button>
+
+          {/* Desktop Collapse / Expand Toggle Button */}
+          {onToggleCollapse && (
             <button
-              onClick={onClose}
-              className="lg:hidden p-1 text-[#1a1c20] hover:bg-[#f3f3fa] rounded-md transition-colors"
-              aria-label="Close sidebar"
+              type="button"
+              onClick={onToggleCollapse}
+              className="hidden lg:flex items-center justify-center w-6 h-6 rounded-full text-white/80 hover:text-white bg-[#135fb9] hover:bg-[#1b71da] cursor-pointer shrink-0 transition-colors shadow-xs"
+              title={isCollapsed ? 'Expand Sidebar' : 'Collapse Sidebar'}
             >
-              <X className="w-4 h-4" />
+              {isCollapsed ? (
+                <ChevronRight size={14} />
+              ) : (
+                <ChevronLeft size={14} />
+              )}
             </button>
-
-            {/* Desktop Collapse / Expand Toggle Button */}
-            {onToggleCollapse && (
-              <button
-                type="button"
-                onClick={onToggleCollapse}
-                className="sidebar-collapse-btn hidden lg:flex items-center justify-center w-6 h-6 rounded-full cursor-pointer shadow-2xs shrink-0"
-                title={isCollapsed ? 'Expand Sidebar' : 'Collapse Sidebar'}
-              >
-                {isCollapsed ? (
-                  <ChevronRight className="w-3.5 h-3.5" />
-                ) : (
-                  <ChevronLeft className="w-3.5 h-3.5" />
-                )}
-              </button>
-            )}
-          </div>
-
-          {/* Navigation Category Label */}
-          {!isCollapsed && (
-            <div className="px-2 mb-2 text-[10px] font-extrabold uppercase tracking-wider text-[#000000]">
-              Menu
-            </div>
           )}
+        </div>
 
-          {/* Navigation Links */}
-          <nav className="flex-1 space-y-2">
+        {/* Sidebar Title Header (Exact website .sidebar-title from globals.css) */}
+        {!isCollapsed && (
+          <div className="px-3 pt-3 pb-1 shrink-0">
+            <div
+              className="sidebar-title"
+              style={{
+                fontSize: '17px',
+                padding: '8px 14px',
+                borderRadius: '50px 0 0 50px',
+              }}
+            >
+              <span>Admin Menu</span>
+            </div>
+          </div>
+        )}
+
+        {/* Navigation Menu (Exact website .sidebar-menu from globals.css) */}
+        <div className="flex-1 overflow-y-auto overflow-x-hidden admin-sidebar-scroll px-2 py-2">
+          <ul
+            className="sidebar-menu"
+            style={isCollapsed ? { padding: '8px 0' } : { padding: '8px 0 0 10px' }}
+          >
             {SIDEBAR_NAV_ITEMS.map((item) => {
               const Icon = item.icon;
 
-              // ── Group with children (Dedicated Custom Compact CSS) ─────────
+              // ── Dropdown Item with Children (e.g. News-Events & Blogs) ────
               if (item.children) {
                 const anyChildActive = item.children.some(
                   (c) => pathname === c.href || pathname.startsWith(c.href)
                 );
                 const groupOpen = isGroupOpen(item);
 
-                return (
-                  <div key={item.id}>
-                    {/* Parent toggle button */}
-                    <button
-                      type="button"
-                      onClick={() => {
-                        if (isCollapsed && onToggleCollapse) {
-                          onToggleCollapse();
-                        }
-                        toggleGroup(item);
-                      }}
-                      title={item.label}
-                      className={`w-full flex items-center ${isCollapsed ? 'justify-center px-0 py-2' : 'gap-2 px-2.5 py-2'
-                        } rounded-lg transition-all duration-150 cursor-pointer ${isCollapsed && anyChildActive
-                          ? 'brand-gradient text-white shadow-xs'
-                          : anyChildActive
-                            ? 'bg-[#f3f3fa] text-[#1a1c20]'
-                            : 'text-[#1a1c20] hover:bg-[#f3f3fa] hover:text-[#1a1c20]'
-                        }`}
-                    >
-                      <Icon
-                        className={`w-3.5 h-3.5 shrink-0 ${isCollapsed && anyChildActive
-                          ? 'text-white'
-                          : anyChildActive
-                            ? 'text-[#09468e]'
-                            : 'text-[#000000]'
+                if (isCollapsed) {
+                  return (
+                    <li key={item.id} style={{ borderBottom: '1.5px dotted #5392db' }}>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          if (onToggleCollapse) onToggleCollapse();
+                          toggleGroup(item);
+                        }}
+                        title={item.label}
+                        className={`w-full flex items-center justify-center py-3 text-white hover:text-[#ffc233] transition-colors ${anyChildActive ? 'text-[#ffc233]' : ''
                           }`}
-                      />
-                      {!isCollapsed && (
-                        <>
-                          <span className="text-[11.5px] font-bold tracking-tight whitespace-nowrap flex-1 text-left leading-none">
-                            {item.label}
-                          </span>
-                          <ChevronDown
-                            className={`w-3 h-3 shrink-0 text-[#000000] transition-transform duration-200 ${groupOpen ? 'rotate-180 text-[#1a1c20]' : ''
-                              }`}
-                          />
-                        </>
-                      )}
-                    </button>
+                      >
+                        <Icon size={18} className="shrink-0" />
+                      </button>
+                    </li>
+                  );
+                }
 
-                    {/* Children sub-links */}
-                    {!isCollapsed && groupOpen && (
-                      <div className="mt-1.5 ml-3 pl-2.5 border-l border-[#000000]/20 space-y-1.5">
+                return (
+                  <li key={item.id}>
+                    <div
+                      className={`sidebar-link has-children ${anyChildActive ? 'active' : ''}`}
+                      onClick={() => toggleGroup(item)}
+                      style={{ cursor: 'pointer' }}
+                    >
+                      <div className="flex items-center gap-2 flex-1 min-w-0">
+                        <Icon size={16} className="shrink-0" />
+                        <span className="sidebar-link-text text-[12.5px] leading-tight">
+                          {item.label}
+                        </span>
+                      </div>
+                      <ChevronDown
+                        size={15}
+                        className={`submenu-arrow shrink-0 ${groupOpen ? 'open' : ''}`}
+                      />
+                    </div>
+
+                    {groupOpen && (
+                      <ul className="sidebar-submenu">
                         {item.children.map((child) => {
                           const ChildIcon = child.icon;
-                          const childActive =
-                            pathname === child.href || pathname.startsWith(child.href);
+                          const childActive = isChildActive(child.href);
+
                           return (
-                            <Link
-                              key={child.id}
-                              href={child.href}
-                              style={!childActive ? { color: '#434751' } : undefined}
-                              className={`flex items-center gap-2 px-2.5 py-1.5 rounded-lg text-[11.5px] font-semibold transition-all duration-150 ${childActive
-                                ? 'brand-gradient text-white shadow-xs'
-                                : 'text-[#434751] hover:bg-[#f3f3fa] hover:text-[#1a1c20]'
-                                }`}
-                            >
-                              <ChildIcon
-                                className={`w-3 h-3 shrink-0 ${childActive ? 'text-white' : 'text-[#000000]'
-                                  }`}
-                              />
-                              <span className="tracking-tight whitespace-nowrap leading-none">{child.label}</span>
-                            </Link>
+                            <li key={child.id}>
+                              <Link
+                                href={child.href}
+                                className={`sidebar-sublink ${childActive ? 'active' : ''}`}
+                                onClick={() => onClose()}
+                              >
+                                <div className="flex items-center gap-2">
+                                  <ChildIcon size={14} className="shrink-0" />
+                                  <span className="text-[14px]">{child.label}</span>
+                                </div>
+                              </Link>
+                            </li>
                           );
                         })}
-                      </div>
+                      </ul>
                     )}
-                  </div>
+                  </li>
                 );
               }
 
-              // ── Regular flat links (Original Default Styling Preserved) ───
+              // ── Direct Link Item (Dashboard, Contact, Enquiries, etc.) ────
               const isActive =
                 pathname === item.href ||
                 (item.href !== '/admin' && pathname.startsWith(item.href!));
 
+              if (isCollapsed) {
+                return (
+                  <li key={item.id} style={{ borderBottom: '1.5px dotted #5392db' }}>
+                    <Link
+                      href={item.href!}
+                      title={item.label}
+                      className={`w-full flex items-center justify-center py-3 text-white hover:text-[#ffc233] transition-colors ${isActive ? 'text-[#ffc233]' : ''
+                        }`}
+                    >
+                      <Icon size={18} className="shrink-0" />
+                    </Link>
+                  </li>
+                );
+              }
+
               return (
-                <Link
-                  key={item.id}
-                  href={item.href!}
-                  title={isCollapsed ? item.label : undefined}
-                  style={!isActive ? { color: '#1a1c20' } : undefined}
-                  className={`flex items-center ${isCollapsed ? 'justify-center px-0 py-2' : 'gap-2.5 px-3 py-2'
-                    } rounded-lg text-xs font-bold transition-all duration-150 ${isActive
-                      ? 'brand-gradient text-white shadow-xs'
-                      : 'text-[#1a1c20] hover:bg-[#f3f3fa] hover:text-[#1a1c20]'
-                    }`}
-                >
-                  <Icon
-                    className={`w-3.5 h-3.5 shrink-0 ${isActive ? 'text-white' : 'text-[#000000]'
-                      }`}
-                  />
-                  {!isCollapsed && <span className="tracking-tight">{item.label}</span>}
-                </Link>
+                <li key={item.id}>
+                  <Link
+                    href={item.href!}
+                    className={`sidebar-link ${isActive ? 'active' : ''}`}
+                    onClick={() => onClose()}
+                  >
+                    <div className="flex items-center gap-2.5">
+                      <Icon size={16} className="shrink-0" />
+                      <span className="sidebar-link-text text-[14px]">{item.label}</span>
+                    </div>
+                  </Link>
+                </li>
               );
             })}
-          </nav>
+          </ul>
+        </div>
 
-          {/* Footer / Logout (Original Default Styling Preserved) */}
-          <div className="mt-auto border-t border-slate-100 pt-3">
-            <button
-              onClick={() => {
-                localStorage.removeItem('adminToken');
-                localStorage.removeItem('adminUser');
-                window.location.href = '/admin/login';
-              }}
-              title={isCollapsed ? 'Logout' : undefined}
-              className={`w-full flex items-center ${isCollapsed ? 'justify-center px-0 py-2' : 'gap-2.5 px-3 py-2'
-                } rounded-lg text-xs font-bold text-red-600 hover:bg-red-50 transition-all cursor-pointer`}
-            >
-              <LogOut className="w-3.5 h-3.5 shrink-0" />
-              {!isCollapsed && <span>Logout</span>}
-            </button>
-          </div>
+        {/* Footer / Logout Button */}
+        <div className="p-3 border-t border-[#5392db]/40 shrink-0 mt-auto">
+          <button
+            onClick={() => {
+              localStorage.removeItem('adminToken');
+              localStorage.removeItem('adminRefreshToken');
+              localStorage.removeItem('adminUser');
+              window.location.href = '/admin/login';
+            }}
+            title={isCollapsed ? 'Logout' : undefined}
+            className={`w-full flex items-center ${isCollapsed ? 'justify-center p-2.5' : 'gap-2.5 px-3 py-2'
+              } rounded-lg text-white/90 hover:text-[#ffc233] hover:bg-white/10 transition-all font-['Avenir-Next-Demi'] text-[14px] cursor-pointer`}
+          >
+            <LogOut size={16} className="shrink-0" />
+            {!isCollapsed && <span>Logout</span>}
+          </button>
         </div>
       </aside>
     </>

@@ -22,78 +22,7 @@
   line-height: 1.55;
 }
 
-/* --------------------------------------------------------------------------
-   Table Card & Layout
-   -------------------------------------------------------------------------- */
 
-.notices-table-card {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 4px 14px -3px rgba(0, 0, 0, 0.05);
-}
-
-.notices-table-responsive {
-  width: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
-.notices-table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: left;
-}
-
-/* Table Header */
-.notices-table thead {
-  background: linear-gradient(135deg, #003067 0%, #09468e 100%);
-}
-
-.notices-table thead th {
-  padding: 14px 18px;
-  font-family: "Roma-Semibold", sans-serif;
-  font-size: 12px;
-  color: #ffffff;
-  text-transform: uppercase;
-  letter-spacing: 0.6px;
-  border: none;
-  white-space: nowrap;
-}
-
-.notices-table thead th.text-center {
-  text-align: center;
-}
-
-/* Table Body */
-.notices-table tbody tr {
-  transition: background-color 0.15s ease;
-  border-bottom: 1px solid #f1f5f9;
-}
-
-.notices-table tbody tr:last-child {
-  border-bottom: none;
-}
-
-.notices-table tbody tr:hover {
-  background-color: #f8fbff;
-}
-
-.notices-table tbody td {
-  padding: 14px 18px;
-  vertical-align: middle;
-  border-bottom: 1px solid #f1f5f9;
-}
-
-/* Sr. No Column */
-.notices-sr-cell {
-  font-family: "Roma-Semibold", sans-serif;
-  font-size: 12px;
-  color: #94a3b8;
-  text-align: center;
-  width: 60px;
-}
 
 /* Title & Content Column */
 .notices-title-content {
@@ -103,16 +32,15 @@
 }
 
 .notices-item-title {
-  font-family: "Avenir-Next-Demi", sans-serif;
-  font-size: 14px;
-  color: #0f172a;
+  font-family: "Roma-Regular", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: #000000;
   line-height: 1.45;
   transition: color 0.15s ease;
 }
 
-.notices-table tbody tr:hover .notices-item-title {
-  color: #09468e;
-}
+
 
 /* Bottom of heading: Date & Category */
 .notices-meta-row {
@@ -219,13 +147,13 @@
   flex-shrink: 0;
 }
 
-/* 2. Compact .explore_more_btn */
+/* 2. Compact .explore_more_btn matching website .gallerySection .explore_more_btn a blue gradient */
 .notices-action-cell .explore_more_btn {
   display: inline-flex;
   justify-content: center;
   align-items: center;
   margin: 0;
-  width: 100%;
+  width: auto;
 }
 
 .notices-action-cell .explore_more_btn a {
@@ -233,43 +161,23 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 5px;
-  background: linear-gradient(90deg, #89004a 34%, #f05a94 100%);
+  gap: 6px;
+  background: linear-gradient(90deg, rgba(9, 70, 142, 1) 0%, rgba(68, 173, 226, 1) 100%);
   color: #ffffff !important;
-  width: 96px;
-  height: 28px;
-  padding: 0 8px;
+  padding: 6px 14px;
   border-radius: 20px;
   text-decoration: none !important;
-  overflow: hidden;
-  transition: all 0.4s ease;
+  transition: all 0.3s ease;
   font-family: "Roma-Semibold", sans-serif;
   font-size: 11px;
   margin-top: 0;
-  box-shadow: 0 2px 5px rgba(137, 0, 74, 0.18);
+  box-shadow: 0 2px 5px rgba(9, 70, 142, 0.2);
   white-space: nowrap;
-  box-sizing: border-box;
-}
-
-.notices-action-cell .explore_more_btn a::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -120%;
-  width: 60%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.25);
-  transform: skewX(-25deg);
-  transition: all 0.7s ease;
-}
-
-.notices-action-cell .explore_more_btn a:hover::before {
-  left: 130%;
 }
 
 .notices-action-cell .explore_more_btn a:hover {
   transform: translateY(-1.5px);
-  box-shadow: 0 4px 12px rgba(137, 0, 74, 0.3);
+  box-shadow: 0 4px 12px rgba(9, 70, 142, 0.35);
   color: #ffffff !important;
 }
 
@@ -509,7 +417,8 @@
   }
 
   .notices-item-title {
-    font-size: 13.5px;
+    font-size: 14px;
+    font-weight: 400;
   }
 
   .notices-th-action,
@@ -567,7 +476,8 @@
   }
 
   .notices-item-title {
-    font-size: 13px;
+    font-size: 13.5px;
+    font-weight: 400;
     line-height: 1.4;
   }
 
@@ -640,7 +550,8 @@
   }
 
   .notices-item-title {
-    font-size: 12.5px;
+    font-size: 13px;
+    font-weight: 400;
   }
 
   .notices-th-action,
@@ -689,6 +600,7 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -720,6 +632,7 @@
     opacity: 0;
     transform: scale(0.94) translateY(12px);
   }
+
   to {
     opacity: 1;
     transform: scale(1) translateY(0);

@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import { PageTitle } from '@/components/admin/PageTitle';
-import { ContentSearchBar } from '@/components/admin/ContentSearchBar';
 import { ContentPagination } from '@/components/admin/ContentPagination';
 import { ConfirmModal } from '@/components/ui/ConfirmModal';
 import { Button } from '@/components/ui/Button';
@@ -19,6 +18,8 @@ import {
   CheckCircle2,
   FileSpreadsheet,
   Download,
+  Search,
+  RotateCcw,
 } from 'lucide-react';
 import { authenticatedFetch } from '@/lib/auth';
 
@@ -172,7 +173,7 @@ ${item.message}
   };
 
   return (
-    <div className="max-w-[1250px] w-full mx-auto space-y-4 pb-6 pt-1">
+    <div className="space-y-4">
       {/* Standard Page Title Header matching News-Events and Categories */}
       <PageTitle
         subtitle="IMSCDR Management"
@@ -183,100 +184,135 @@ ${item.message}
           type="button"
           onClick={handleExportExcel}
           disabled={isExporting}
-          className="explore_more_btn !h-7 !px-3 !text-[11px] !font-bold"
+          className="admission-btn"
         >
-          <FileSpreadsheet className="w-3 h-3" />
+          <FileSpreadsheet className="w-3.5 h-3.5" />
           <span>{isExporting ? 'Exporting...' : 'Export to Excel'}</span>
         </button>
       </PageTitle>
 
-      {/* Standard Reusable Dynamic Search & Filter Bar Component */}
-      <ContentSearchBar
-        searchQuery={searchQuery}
-        onSearchChange={(q) => {
-          setSearchQuery(q);
-          setCurrentPage(1);
-        }}
-        startDate={startDate}
-        onStartDateChange={(d) => {
-          setStartDate(d);
-          setCurrentPage(1);
-        }}
-        endDate={endDate}
-        onEndDateChange={(d) => {
-          setEndDate(d);
-          setCurrentPage(1);
-        }}
-        onResetFilters={() => {
-          setSearchQuery('');
-          setStartDate('');
-          setEndDate('');
-          setCurrentPage(1);
-        }}
-        createHref=""
-        placeholder="Search by sender name, email, phone, subject..."
-        inlineDates={true}
-      />
+      {/* Search & Filter Bar (Matching Admission Enquiries) */}
+      <div className="bg-white px-3 py-2 rounded-xl brand-border shadow-2xs flex flex-wrap items-center justify-between gap-2.5">
+        {/* Search Field */}
+        <div className="relative flex-1 min-w-[200px] max-w-sm flex items-center">
+          <Search className="w-3.5 h-3.5 absolute left-2.5 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none z-10" />
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={(e) => {
+              setSearchQuery(e.target.value);
+              setCurrentPage(1);
+            }}
+            placeholder="Search by sender name, email, phone, subject..."
+            className="filter-input filter-input-search w-full"
+          />
+        </div>
 
-      {/* Single Cohesive Display Table Card Container */}
-      <div className="admin-table-card min-h-[380px] sm:min-h-[440px] flex flex-col justify-between">
+        {/* Filter Controls: Date Range + Reset */}
+        <div className="flex flex-wrap items-center gap-2">
+          <div className="flex items-center gap-1.5">
+            <input
+              type="date"
+              value={startDate}
+              onChange={(e) => {
+                setStartDate(e.target.value);
+                setCurrentPage(1);
+              }}
+              className="filter-input cursor-pointer"
+              title="From date"
+            />
+            <span className="text-[14px] text-slate-400 font-medium">to</span>
+            <input
+              type="date"
+              value={endDate}
+              onChange={(e) => {
+                setEndDate(e.target.value);
+                setCurrentPage(1);
+              }}
+              className="filter-input cursor-pointer"
+              title="To date"
+            />
+          </div>
+
+          {/* Reset Filters */}
+          {(searchQuery || startDate || endDate) && (
+            <button
+              type="button"
+              onClick={() => {
+                setSearchQuery('');
+                setStartDate('');
+                setEndDate('');
+                setCurrentPage(1);
+              }}
+              className="flex items-center gap-1 text-[14px] font-bold text-[#ad2865] hover:underline cursor-pointer px-1.5 py-1"
+            >
+              <RotateCcw className="w-3.5 h-3.5" />
+              <span>Reset</span>
+            </button>
+          )}
+        </div>
+      </div>
+
+      {/* Main Messages Table Card Container */}
+      <div className="table-card admin-table-card flex flex-col justify-between">
         {loading ? (
-          <div className="flex-1 py-20 flex items-center justify-center text-xs font-semibold text-[#000000]">
-            Loading messages...
+          <div className="flex-1 py-20 flex items-center justify-center text-[14px] font-semibold text-[#000000]">
+            Loading contact enquiries...
           </div>
         ) : messages.length === 0 ? (
           <div className="flex-1 py-20 flex flex-col items-center justify-center text-[#000000] space-y-2">
             <Inbox className="w-8 h-8 mx-auto text-[#000000]/40" />
-            <p className="text-xs font-semibold">No contact enquiries found.</p>
+            <p className="text-[14px] font-semibold">No contact messages found.</p>
           </div>
         ) : (
-          <div className="overflow-x-auto w-full flex-1 flex flex-col justify-between">
-            <table className="w-full text-left border-collapse min-w-[700px]">
+          <div className="overflow-x-auto w-full flex-1 flex flex-col justify-between table-responsive admin-table-responsive">
+            <table className="table governing-table w-full text-left min-w-[760px] mb-0">
               <thead className="admin-table-header">
                 <tr>
-                  <th className="py-2.5 px-4 w-12 text-center">Sr.</th>
+                  <th className="py-2.5 px-4 text-center col-sr">Sr. No.</th>
                   <th className="py-2.5 px-4">Sender Name</th>
-                  <th className="py-2.5 px-4">Email &amp; Mobile</th>
+                  <th className="py-2.5 px-4">Contact Info</th>
                   <th className="py-2.5 px-4">Subject &amp; Message Excerpt</th>
-                  <th className="py-2.5 px-4">Received Date</th>
-                  <th className="py-2.5 px-4 text-center w-36">Actions</th>
+                  <th className="py-2.5 px-4">Date</th>
+                  <th className="py-2.5 px-4 text-center w-28">Action</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-100 text-xs font-semibold text-[#000000]">
+
+              <tbody className="text-[15px] font-normal text-[#000000]">
                 {messages.map((item, idx) => (
                   <tr
                     key={item.id}
-                    className="hover:bg-[#09468e]/[0.02] transition-colors cursor-pointer"
+                    className="cursor-pointer"
                     onClick={() => setSelectedMsg(item)}
                   >
                     {/* Sr. No */}
-                    <td className="py-3 px-4 text-center font-['Roma-Semibold'] text-[#000000] text-xs w-12">
-                      {(currentPage - 1) * itemsPerPage + idx + 1}
+                    <td className="py-3 px-4 text-center col-sr">
+                      <span className="sr-badge">{(currentPage - 1) * itemsPerPage + idx + 1}</span>
                     </td>
 
                     {/* Sender Name */}
                     <td className="py-3 px-4 align-middle">
-                      <div className="font-bold text-[#000000]">
+                      <div className="font-normal text-[#000000] text-[14px] capitalize">
                         {item.firstName} {item.lastName}
                       </div>
                     </td>
 
                     {/* Contact Details */}
                     <td className="py-3 px-4 align-middle">
-                      <div className="text-[#000000] font-medium">{item.email}</div>
-                      <div className="text-[11px] text-[#000000]/75 font-normal mt-0.5">{item.mobile}</div>
+                      <div className="text-[#000000] font-normal text-[14px] lowercase normal-case email-text">{item.email}</div>
+                      <div className="text-[14px] text-[#000000]/80 font-normal mt-0.5">{item.mobile}</div>
                     </td>
 
                     {/* Subject & Excerpt */}
                     <td className="py-3 px-4 align-middle max-w-[280px] sm:max-w-[340px]">
-                      <div className="font-bold text-[#000000] truncate">{item.subject}</div>
-                      <div className="text-[11px] text-[#000000]/80 line-clamp-1 font-normal mt-0.5">
+                      <div className="font-normal text-[#000000] truncate text-[14px] capitalize">{item.subject}</div>
+                      <div className="text-[14px] text-[#000000]/80 line-clamp-1 font-normal mt-0.5 capitalize">
                         {item.message}
                       </div>
                     </td>
 
                     {/* Date */}
-                    <td className="py-3 px-4 align-middle text-[11px] text-[#000000] font-medium whitespace-nowrap">
+                    <td className="py-3 px-4 align-middle text-[14px] text-[#000000] font-normal whitespace-nowrap">
                       {new Date(item.createdAt).toLocaleDateString('en-US', {
                         month: 'short',
                         day: 'numeric',
@@ -319,6 +355,7 @@ ${item.message}
           totalPages={totalPages}
           itemsPerPage={itemsPerPage}
           totalItems={totalItems}
+          entityName="messages"
           onPageChange={(p) => setCurrentPage(p)}
           onItemsPerPageChange={(limit) => {
             setItemsPerPage(limit);
@@ -329,94 +366,98 @@ ${item.message}
 
       {/* Full Message Reader Modal */}
       {selectedMsg && (
-        <div className="fixed inset-0 bg-black/50 backdrop-blur-xs z-50 flex items-center justify-center p-3 sm:p-6 animate-in fade-in duration-150">
-          <div className="bg-white rounded-xl brand-border shadow-2xl max-w-[950px] w-full overflow-hidden animate-in fade-in zoom-in-95 duration-150">
+        <div
+          className="faculty-modal-overlay fixed inset-0 bg-black/75 backdrop-blur-xs z-50 flex items-center justify-center p-3 sm:p-6 animate-in fade-in duration-150"
+          onClick={() => setSelectedMsg(null)}
+        >
+          <div
+            className="faculty-modal bg-white rounded-xl shadow-[0_20px_60px_rgba(0,0,0,0.35)] max-w-[950px] w-full overflow-hidden relative animate-in fade-in zoom-in-95 duration-150"
+            onClick={(e) => e.stopPropagation()}
+          >
             {/* Modal Header — Perfectly Aligned Single Line */}
-            <div className="px-4 py-2.5 border-b border-slate-100 flex items-center justify-between gap-2.5 bg-[#f8fafc]/50">
-              <div className="flex items-center gap-2 min-w-0 flex-1">
-                <div className="w-6 h-6 rounded-md bg-[#09468e]/10 text-[#09468e] shrink-0 flex items-center justify-center">
-                  <Mail className="w-3.5 h-3.5 text-[#09468e]" />
+            <div className="px-5 py-3.5 border-b border-slate-100 flex items-center justify-between gap-3 bg-[#f8fafc]/60">
+              <div className="flex items-center gap-2.5 min-w-0 flex-1">
+                <div className="w-7 h-7 rounded-md bg-[#09468e]/10 text-[#09468e] shrink-0 flex items-center justify-center">
+                  <Mail className="w-4 h-4 text-[#09468e]" />
                 </div>
-                <h4 className="modal-title text-xs sm:text-sm font-bold text-[#003067] truncate leading-tight my-auto">
+                <h4 className="modal-title text-[15px] font-semibold text-[#000000] truncate leading-tight my-auto">
                   Contact Message Details
                 </h4>
               </div>
 
-              <div className="flex items-center gap-1.5">
-                <button
-                  type="button"
-                  onClick={() => setSelectedMsg(null)}
-                  className="modal-close-btn"
-                  title="Close modal"
-                >
-                  <X className="w-3.5 h-3.5" />
-                </button>
-              </div>
+              <button
+                type="button"
+                onClick={() => setSelectedMsg(null)}
+                className="faculty-close modal-close-btn"
+                title="Close modal"
+              >
+                <X className="w-3.5 h-3.5" />
+              </button>
             </div>
 
             {/* Modal Body */}
-            <div className="p-3.5 sm:p-4 space-y-2.5 max-h-[68vh] overflow-y-auto">
+            <div className="p-4 sm:p-5 pb-5 sm:pb-6 space-y-3.5 max-h-[75vh] overflow-y-auto">
               {/* Received Date Badge */}
-              <div className="flex items-center gap-1.5 text-[10px] text-slate-500 font-medium px-0.5">
-                <Clock className="w-3 h-3 text-slate-400 shrink-0" />
+              <div className="flex items-center gap-1.5 text-[13px] text-[#64748b] font-normal px-0.5">
+                <Clock className="w-3.5 h-3.5 text-slate-400 shrink-0" />
                 <span>
                   Received on:{' '}
-                  <strong className="text-slate-800">
+                  <span className="text-[#000000] font-normal">
                     {new Date(selectedMsg.createdAt).toLocaleString()}
-                  </strong>
+                  </span>
                 </span>
               </div>
 
               {/* Sender Details Grid */}
-              <div className="p-2.5 sm:p-3 bg-[#f8fafc] rounded-lg border border-slate-200 grid grid-cols-1 sm:grid-cols-3 gap-2.5 text-xs">
+              <div className="p-3.5 bg-[#f8fafc] rounded-lg border border-slate-200 grid grid-cols-1 sm:grid-cols-3 gap-3 text-[14px]">
                 <div>
-                  <span className="text-[9px] font-bold text-slate-400 uppercase tracking-wider block">Sender Name</span>
-                  <div className="flex items-center gap-1 mt-0.5 font-bold text-xs sm:text-sm text-[#003067]">
-                    <User className="w-3 h-3 text-[#09468e] shrink-0" />
+                  <span className="text-[12px] font-normal text-slate-500 uppercase tracking-wider block">Sender Name</span>
+                  <div className="flex items-center gap-1.5 mt-1 font-normal text-[15px] text-[#000000] capitalize">
+                    <User className="w-3.5 h-3.5 text-[#09468e] shrink-0" />
                     <span>{selectedMsg.firstName} {selectedMsg.lastName}</span>
                   </div>
                 </div>
 
                 <div>
-                  <span className="text-[9px] font-bold text-slate-400 uppercase tracking-wider block">Email Address</span>
+                  <span className="text-[12px] font-normal text-slate-500 uppercase tracking-wider block">Email Address</span>
                   <a
                     href={`mailto:${selectedMsg.email}`}
-                    className="flex items-center gap-1 mt-0.5 text-[#09468e] hover:underline font-semibold text-xs break-all"
+                    className="flex items-center gap-1.5 mt-1 text-[#09468e] hover:underline font-normal text-[14px] break-all lowercase normal-case"
                   >
-                    <Mail className="w-3 h-3 text-slate-400 shrink-0" />
+                    <Mail className="w-3.5 h-3.5 text-[#09468e] shrink-0" />
                     <span>{selectedMsg.email}</span>
                   </a>
                 </div>
 
                 <div>
-                  <span className="text-[9px] font-bold text-slate-400 uppercase tracking-wider block">Mobile Number</span>
+                  <span className="text-[12px] font-normal text-slate-500 uppercase tracking-wider block">Mobile Number</span>
                   <a
                     href={`tel:${selectedMsg.mobile}`}
-                    className="flex items-center gap-1 mt-0.5 text-[#000000] hover:text-[#09468e] font-semibold text-xs"
+                    className="flex items-center gap-1.5 mt-1 text-[#000000] hover:text-[#09468e] font-normal text-[14px]"
                   >
-                    <Phone className="w-3 h-3 text-slate-400 shrink-0" />
+                    <Phone className="w-3.5 h-3.5 text-slate-400 shrink-0" />
                     <span>{selectedMsg.mobile}</span>
                   </a>
                 </div>
               </div>
 
               {/* Subject */}
-              <div className="space-y-0.5">
-                <label className="text-[9px] font-bold text-slate-500 uppercase tracking-wider block">
+              <div className="space-y-1.5">
+                <label className="text-[12px] font-normal text-slate-500 uppercase tracking-wider block">
                   Subject
                 </label>
-                <div className="text-xs font-bold text-[#09468e] p-2 px-2.5 bg-blue-50/60 rounded-lg border border-blue-100 break-words [word-break:break-word]">
+                <div className="text-[14px] font-normal text-[#000000] p-2.5 px-3 bg-[#f8fafc] rounded-lg border border-slate-200 break-words [word-break:break-word] capitalize">
                   {selectedMsg.subject}
                 </div>
               </div>
 
               {/* Message Body */}
-              <div className="space-y-0.5">
-                <label className="text-[9px] font-bold text-slate-500 uppercase tracking-wider block">
+              <div className="space-y-1.5">
+                <label className="text-[12px] font-normal text-slate-500 uppercase tracking-wider block">
                   Full Message Content
                 </label>
                 <div
-                  className="text-xs font-normal text-[#1a1c20] leading-relaxed p-3 bg-[#fcfcfd] rounded-lg border border-slate-200 whitespace-pre-wrap break-words [word-break:break-word] max-h-[160px] overflow-y-auto shadow-inner"
+                  className="text-[14px] font-normal text-[#000000] leading-relaxed p-3.5 bg-[#ffffff] rounded-lg border border-slate-200 whitespace-pre-wrap break-words [word-break:break-word] max-h-[220px] overflow-y-auto"
                   style={{
                     scrollbarWidth: 'thin',
                     scrollbarColor: '#94a3b8 #f1f5f9',
@@ -425,21 +466,10 @@ ${item.message}
                   {selectedMsg.message ? (
                     selectedMsg.message
                   ) : (
-                    <span className="text-slate-400 italic">No message content provided.</span>
+                    <span className="text-slate-400 italic font-normal">No message content provided.</span>
                   )}
                 </div>
               </div>
-            </div>
-
-            {/* Modal Footer */}
-            <div className="px-4 py-2 bg-[#f8fafc] border-t border-slate-100 flex items-center justify-end">
-              <button
-                type="button"
-                onClick={() => setSelectedMsg(null)}
-                className="px-3.5 py-1 rounded-md border border-slate-200 text-xs font-semibold text-slate-700 hover:bg-slate-100 transition-colors cursor-pointer"
-              >
-                Close
-              </button>
             </div>
           </div>
         </div>
@@ -453,7 +483,6 @@ ${item.message}
         title="Delete Contact Enquiry"
         message={`Are you sure you want to delete the enquiry from ${msgToDelete?.firstName} ${msgToDelete?.lastName}?`}
         confirmText="Delete Enquiry"
-        cancelText="Cancel"
         variant="danger"
         isLoading={isDeleting}
       />
