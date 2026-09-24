@@ -1,10 +1,10 @@
 'use client';
 
 import React, { useState, useRef, useEffect } from 'react';
-import { usePathname } from 'next/navigation';
-import { Menu, Search, User, ChevronDown, LogOut, Settings } from 'lucide-react';
-import { BackButton } from './BackButton';
-
+import Link from 'next/link';
+import Image from 'next/image';
+import { useRouter, usePathname } from 'next/navigation';
+import { Menu, User, ChevronDown, LogOut, Settings, ArrowLeft } from 'lucide-react';
 import { GlobalSearchModal } from './GlobalSearchModal';
 
 interface AdminHeaderProps {
@@ -12,11 +12,21 @@ interface AdminHeaderProps {
 }
 
 export const AdminHeader: React.FC<AdminHeaderProps> = ({ onToggleSidebar }) => {
+  const router = useRouter();
   const pathname = usePathname();
-  const showGlobalBack = pathname !== '/admin';
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [searchModalOpen, setSearchModalOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+
+  const topLevelRoutes = [
+    '/admin',
+    '/admin/categories',
+    '/admin/news-events',
+    '/admin/contact-messages',
+    '/admin/enquiries',
+    '/admin/grievances',
+  ];
+  const isSubPage = !topLevelRoutes.includes(pathname);
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -62,84 +72,93 @@ export const AdminHeader: React.FC<AdminHeaderProps> = ({ onToggleSidebar }) => 
   };
 
   return (
-    <header className="w-full h-14 flex items-center bg-white border-b border-[#000000]/15 sticky top-0 z-40 shadow-[0_1px_4px_rgba(0,0,0,0.04)]">
-      <div className="relative flex items-center px-4 lg:px-6 w-full max-w-[1200px] mx-auto">
-
-        {/* Left: Mobile Hamburger (Only visible on screens < 1024px) */}
-        <div className="lg:hidden flex items-center gap-3 shrink-0">
+    <header className="w-full h-14 flex items-center bg-[#f0f5fc] border-b border-[#dbe8f6] sticky top-0 z-40 shadow-[0_1px_3px_rgba(9,70,142,0.05)] transition-colors">
+      <div className="flex items-center justify-between px-4 lg:px-6 w-full">
+        {/* Left: Mobile Toggle, Subpage Back Arrow & Mobile Brand Logo */}
+        <div className="flex items-center gap-2">
           <button
+            type="button"
             onClick={onToggleSidebar}
-            className="lg:hidden p-1.5 text-[#434751] hover:bg-[#f3f3fa] rounded-md transition-colors"
+            className="lg:hidden p-1.5 text-[#09468e] hover:bg-[#09468e]/10 rounded-lg transition-colors cursor-pointer"
             aria-label="Toggle navigation menu"
           >
             <Menu className="w-5 h-5" />
           </button>
+
+          {isSubPage && (
+            <button
+              type="button"
+              onClick={() => router.back()}
+              className="p-1.5 text-[#09468e] hover:text-[#ad2865] hover:bg-[#09468e]/10 rounded-lg transition-all cursor-pointer flex items-center justify-center outline-none"
+              title="Go back"
+              aria-label="Go back"
+            >
+              <ArrowLeft className="w-5 h-5 transition-transform hover:-translate-x-0.5" />
+            </button>
+          )}
+
+          {/* Mobile & Tablet Brand Logo */}
+          <Link href="/admin" className="flex items-center lg:hidden ml-1 transition-transform hover:scale-102">
+            <Image
+              src="/images/home/black_logo.webp"
+              alt="IMSCDR Logo"
+              width={140}
+              height={36}
+              className="h-7 sm:h-8 w-auto object-contain"
+              priority
+            />
+          </Link>
         </div>
 
-        {/* Center: Global Search Bar Trigger (absolutely centered) */}
-        {/* <div className="absolute left-1/2 -translate-x-1/2 hidden sm:block w-72">
+        {/* Right: Profile Dropdown (Soft brand-tinted styling) */}
+        <div className="flex items-center gap-3 relative ml-auto" ref={dropdownRef}>
           <button
             type="button"
-            onClick={() => setSearchModalOpen(true)}
-            className="w-full bg-[#f8fafc] hover:bg-slate-100 border border-[#09468e]/25 rounded-full pl-9 pr-3 py-1.5 text-xs text-[#000000] flex items-center justify-between transition-all outline-none cursor-pointer group shadow-2xs"
-          >
-            <div className="flex items-center gap-2">
-              <Search className="w-3.5 h-3.5 text-[#09468e] group-hover:scale-110 transition-transform" />
-              <span className="font-semibold text-[11px]">Search Global Admin...</span>
-            </div>
-          </button>
-        </div>
- */}
-        {/* Right: Profile Dropdown & Mobile Search Button */}
-        <div className="flex items-center gap-2 ml-auto relative" ref={dropdownRef}>
-          {/* Mobile Search Button */}
-          <button
-            type="button"
-            onClick={() => setSearchModalOpen(true)}
-            className="sm:hidden p-1.5 text-[#434751] hover:bg-[#f3f3fa] rounded-md transition-colors"
-            title="Global Search"
-          >
-            <Search className="w-4 h-4 text-[#09468e]" />
-          </button>
-
-          {/* Profile Button */}
-          <button
             onClick={() => setDropdownOpen((prev) => !prev)}
-            className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg hover:bg-[#eff6ff] transition-colors group cursor-pointer"
+            className="flex items-center gap-2 py-1.5 px-2.5 rounded-lg hover:bg-white/70 text-[#0f172a] hover:text-[#09468e] transition-all cursor-pointer group outline-none"
+            aria-expanded={dropdownOpen}
+            aria-haspopup="true"
           >
-            <div className="w-7 h-7 rounded-full brand-gradient flex items-center justify-center text-white shadow-xs shrink-0">
-              <User className="w-3.5 h-3.5" />
+            <div className="w-7 h-7 rounded-full bg-white border border-[#dbe8f6] text-[#09468e] flex items-center justify-center font-bold shadow-2xs shrink-0">
+              <User className="w-3.5 h-3.5 text-[#09468e]" />
             </div>
-            <span className="text-xs font-semibold text-[#1a1c20] group-hover:text-[#09468e] transition-colors hidden md:block">
-              {adminUser?.name || 'Administrator'}
+            <span className="text-[14px] font-bold text-[#0f172a] group-hover:text-[#09468e] transition-colors font-['Roma-Semibold'] hidden sm:block">
+              {adminUser?.name || 'System Administrator'}
             </span>
             <ChevronDown
-              className={`w-3.5 h-3.5 text-[#64748b] group-hover:text-[#09468e] hidden md:block transition-transform duration-200 ${dropdownOpen ? 'rotate-180' : ''}`}
+              className={`w-3.5 h-3.5 text-[#64748b] group-hover:text-[#09468e] transition-transform duration-200 ${dropdownOpen ? 'rotate-180' : ''
+                }`}
             />
           </button>
 
-          {/* Dropdown Menu */}
+          {/* Profile Dropdown Menu */}
           {dropdownOpen && (
-            <div className="absolute right-0 top-full mt-2 w-48 bg-white rounded-xl shadow-lg border border-[#000000]/15 py-1.5 z-50 animate-in fade-in slide-in-from-top-1 duration-150">
-              <div className="px-3.5 py-2 border-b border-[#000000]/10 mb-1">
-                <p className="text-xs font-bold text-[#1a1c20]">{adminUser?.name || 'Administrator'}</p>
-                <p className="text-[11px] text-[#000000]">{adminUser?.email || ''}</p>
+            <div className="absolute right-0 top-full mt-2 w-56 bg-white rounded-xl shadow-xl border border-slate-200 py-1.5 z-50 animate-in fade-in slide-in-from-top-1 duration-150">
+              <div className="px-4 py-2.5 border-b border-slate-100 mb-1">
+                <p className="text-[14px] font-bold text-[#0f172a] font-['Roma-Semibold']">
+                  {adminUser?.name || 'Administrator'}
+                </p>
+                <p className="text-[13px] text-slate-500 truncate">
+                  {adminUser?.email || ''}
+                </p>
               </div>
               <button
+                type="button"
                 onClick={() => {
                   setDropdownOpen(false);
                   window.location.href = '/admin/profile';
                 }}
-                className="w-full flex items-center gap-2.5 px-3.5 py-2 text-xs font-semibold text-[#1a1c20] hover:bg-[#f3f3fa] transition-colors cursor-pointer"
+                className="w-full flex items-center gap-2.5 px-4 py-2 text-[14px] font-medium text-slate-700 hover:bg-[#eff6ff] hover:text-[#09468e] transition-colors cursor-pointer text-left"
               >
-                <Settings className="w-3.5 h-3.5 text-[#09468e]" />
-                <span>Profile </span>
+                <Settings className="w-4 h-4 text-[#09468e]" />
+                <span>Profile Settings</span>
               </button>
               <button
+                type="button"
                 onClick={handleLogout}
-                className="w-full flex items-center gap-2.5 px-3.5 py-2 text-xs font-semibold text-red-600 hover:bg-red-50 transition-colors cursor-pointer"
+                className="w-full flex items-center gap-2.5 px-4 py-2 text-[14px] font-medium text-red-600 hover:bg-red-50 transition-colors cursor-pointer text-left"
               >
-                <LogOut className="w-3.5 h-3.5" />
+                <LogOut className="w-4 h-4 text-red-600" />
                 <span>Logout</span>
               </button>
             </div>

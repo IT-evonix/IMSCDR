@@ -131,16 +131,15 @@ export default function AdminProfilePage() {
   };
 
   return (
-    <div className="max-w-[1150px] w-full mx-auto space-y-4 pb-6 pt-1">
+    <div className="space-y-4">
       {/* Page Title */}
       <PageTitle showBack backHref="/admin" subtitle="Account Management" title="Profile & Security Settings" />
 
       {/* Centered Change Password Form */}
-      <div className="max-w-2xl mx-auto w-full">
+      <div className="">
         <div className="bg-white rounded-xl brand-border overflow-hidden shadow-2xs">
           <div className="px-4 py-2.5 bg-[#f3f7fc] border-b border-[#09468e]/15 flex items-center gap-2">
-            <KeyRound className="w-4 h-4 text-[#ad2865]" />
-            <h4 className="text-xs font-bold text-[#003067]">Change Account Password</h4>
+            <h4 className="sub-heading">Change Account Password</h4>
           </div>
 
           <form onSubmit={handleUpdatePassword} className="p-4 space-y-3.5">
@@ -160,7 +159,7 @@ export default function AdminProfilePage() {
 
             {/* Account Email (Read-Only) */}
             <div className="space-y-1">
-              <label className="text-[10px] font-bold text-[#1a1c20] uppercase tracking-wider">
+              <label className="text-[13px] font-medium text-[#2d3139] font-['Avenir-Next-Demi']">
                 Account Email Address
               </label>
               <div className="relative">
@@ -169,7 +168,7 @@ export default function AdminProfilePage() {
                   readOnly
                   disabled
                   value={currentEmail}
-                  className="w-full px-3.5 py-2 rounded-lg brand-border bg-[#f8fafc] text-xs font-semibold text-[#1a1c20] outline-none cursor-not-allowed pl-9 border border-[#1a1c20]/30"
+                  className="w-full px-3.5 py-2 rounded-lg brand-border bg-[#f8fafc] text-xs  text-[#1a1c20] outline-none cursor-not-allowed pl-9 border border-[#1a1c20]/30"
                 />
                 <Mail className="w-3.5 h-3.5 text-[#1a1c20] absolute left-3 top-1/2 -translate-y-1/2" />
               </div>
@@ -177,7 +176,7 @@ export default function AdminProfilePage() {
 
             {/* Old Password */}
             <div className="space-y-1">
-              <label className="text-[10px] font-bold text-[#434751] uppercase tracking-wider">
+              <label className="text-[13px] font-medium text-[#2d3139] font-['Avenir-Next-Demi']">
                 Current Old Password <span className="text-red-500">*</span>
               </label>
               <div className="relative">
@@ -202,7 +201,7 @@ export default function AdminProfilePage() {
             {/* New Password & Confirm Password Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
               <div className="space-y-1">
-                <label className="text-[10px] font-bold text-[#434751] uppercase tracking-wider">
+                <label className="text-[13px] font-medium text-[#2d3139] font-['Avenir-Next-Demi']">
                   New Password <span className="text-red-500">*</span>
                 </label>
                 <div className="relative">
@@ -225,7 +224,7 @@ export default function AdminProfilePage() {
               </div>
 
               <div className="space-y-1">
-                <label className="text-[10px] font-bold text-[#434751] uppercase tracking-wider">
+                <label className="text-[13px] font-medium text-[#2d3139] font-['Avenir-Next-Demi']">
                   Confirm New Password <span className="text-red-500">*</span>
                 </label>
                 <div className="relative">
@@ -258,7 +257,7 @@ export default function AdminProfilePage() {
 
             {/* Real-time Password Rules Checklist Card */}
             <div className="p-3 rounded-lg bg-[#f9f9ff] border border-[#1a1c20]/15 space-y-2">
-              <p className="text-[10px] font-bold text-[#434751] uppercase tracking-wider">
+              <p className="text-[12px] font-medium text-[#2d3139] font-['Avenir-Next-Demi']">
                 Password Security Requirements (Live Check):
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 text-[11px]">

@@ -7,8 +7,9 @@ import { ContentTable, ContentItem } from '@/components/admin/ContentTable';
 import { ContentPagination } from '@/components/admin/ContentPagination';
 import { ConfirmModal } from '@/components/ui/ConfirmModal';
 import { LogoLoader } from '@/components/ui/LogoLoader';
+import Link from 'next/link';
 import { authenticatedFetch } from '@/lib/auth';
-import { FileSpreadsheet } from 'lucide-react';
+import { FileSpreadsheet, Plus } from 'lucide-react';
 
 
 export default function ContentLibraryPage() {
@@ -65,8 +66,10 @@ export default function ContentLibraryPage() {
           title: item.title,
           slug: `/news-events/${item.slug}`,
           rawSlug: item.slug,
-          type: item.contentType ? item.contentType.trim().toUpperCase() : '',
-          category: (item.category && item.category !== 'General') ? item.category : '—',
+          type: item.contentType
+            ? item.contentType.trim().charAt(0).toUpperCase() + item.contentType.trim().slice(1).toLowerCase()
+            : '',
+          category: (item.category && item.category !== 'General') ? item.category : 'None',
           status: item.status === 'Published' ? 'Active' : 'Inactive',
           thumbnailUrl: item.thumbnailUrl || '/images/news-and-events/newsandevents.webp',
           contentFormat: item.contentFormat,
@@ -187,51 +190,60 @@ export default function ContentLibraryPage() {
 
 
   return (
-    <div className="space-y-2.5 w-full mx-auto">
+    <div className="space-y-4">
       {/* Page Header */}
       <PageTitle
         subtitle="IMSCDR Management"
-        title="News-Events & Blogs"
+        title="News, Blogs, Notice &  Circulars"
         description="Manage and publish your institution's digital assets."
       >
-        <button
-          type="button"
-          onClick={handleExportExcel}
-          disabled={isExporting}
-          className="explore_more_btn !h-7 !px-3 !text-[11px] !font-bold"
-        >
-          <FileSpreadsheet className="w-3 h-3" />
-          <span>{isExporting ? 'Exporting...' : 'Export to Excel'}</span>
-        </button>
+        <div className="flex flex-wrap items-center gap-2">
+          <Link
+            href="/admin/news-events/create"
+            className="explore_more_btn"
+          >
+            <Plus className="w-3.5 h-3.5" />
+            <span>Add New Post</span>
+          </Link>
+          <button
+            type="button"
+            onClick={handleExportExcel}
+            disabled={isExporting}
+            className="admission-btn"
+          >
+            <FileSpreadsheet className="w-3.5 h-3.5" />
+            <span>{isExporting ? 'Exporting...' : 'Export to Excel'}</span>
+          </button>
+        </div>
       </PageTitle>
-        <ContentSearchBar
-          searchQuery={searchQuery}
-          onSearchChange={(q) => { setSearchQuery(q); setCurrentPage(1); }}
-          selectedType={selectedType}
-          onTypeChange={(t) => { setSelectedType(t); setCurrentPage(1); }}
-          selectedCategory={selectedCategory}
-          onCategoryChange={(c) => { setSelectedCategory(c); setCurrentPage(1); }}
-          selectedStatus={selectedStatus}
-          onStatusChange={(s) => { setSelectedStatus(s); setCurrentPage(1); }}
-          startDate={startDate}
-          onStartDateChange={(d) => { setStartDate(d); setCurrentPage(1); }}
-          endDate={endDate}
-          onEndDateChange={(d) => { setEndDate(d); setCurrentPage(1); }}
-          onResetFilters={handleResetFilters}
-          createHref="/admin/news-events/create"
-          createLabel="Create New"
-        />
+      <ContentSearchBar
+        searchQuery={searchQuery}
+        onSearchChange={(q) => { setSearchQuery(q); setCurrentPage(1); }}
+        selectedType={selectedType}
+        onTypeChange={(t) => { setSelectedType(t); setCurrentPage(1); }}
+        selectedCategory={selectedCategory}
+        onCategoryChange={(c) => { setSelectedCategory(c); setCurrentPage(1); }}
+        selectedStatus={selectedStatus}
+        onStatusChange={(s) => { setSelectedStatus(s); setCurrentPage(1); }}
+        startDate={startDate}
+        onStartDateChange={(d) => { setStartDate(d); setCurrentPage(1); }}
+        endDate={endDate}
+        onEndDateChange={(d) => { setEndDate(d); setCurrentPage(1); }}
+        onResetFilters={handleResetFilters}
+        createHref=""
+      />
 
       {/* Single Cohesive Full Display Table & Pagination Card Container */}
-      <div className="admin-table-card min-h-[380px] sm:min-h-[440px] flex flex-col justify-between">
+      <div className="table-card admin-table-card  flex flex-col justify-between">
         {loading ? (
           <div className="flex-1 py-20 flex items-center justify-center">
             <LogoLoader size="md" text="Loading Content Library..." />
           </div>
         ) : (
-          <div className="overflow-x-auto w-full flex-1 flex flex-col justify-between">
+          <div className="overflow-x-auto w-full flex-1 flex flex-col justify-between table-responsive admin-table-responsive">
             <ContentTable
               items={filteredItems}
+              startIndex={(currentPage - 1) * itemsPerPage}
               onView={handleView}
               onEdit={handleEdit}
               onDelete={promptDelete}
@@ -244,6 +256,7 @@ export default function ContentLibraryPage() {
           totalPages={totalPages}
           itemsPerPage={itemsPerPage}
           totalItems={totalItems}
+          entityName="posts"
           onPageChange={(page) => setCurrentPage(page)}
           onItemsPerPageChange={(limit) => {
             setItemsPerPage(limit);
@@ -269,7 +282,6 @@ export default function ContentLibraryPage() {
             : 'Are you sure you want to delete this item?'
         }
         confirmText="Delete"
-        cancelText="Cancel"
         variant="danger"
         isLoading={isDeleting}
       />

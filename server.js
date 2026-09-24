@@ -8,7 +8,7 @@ const dev = process.env.NODE_ENV !== 'production';
 const port = process.env.PORT || 3000;
 
 // Initialize Next.js Application Instance
-const nextApp = next({ dev, dir: __dirname });
+const nextApp = next({ dev, dir: __dirname, turbo: false });
 const handle = nextApp.getRequestHandler();
 
 nextApp.prepare().then(() => {

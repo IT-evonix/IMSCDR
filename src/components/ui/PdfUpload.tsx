@@ -2,6 +2,7 @@
 
 import React, { useRef } from 'react';
 import { FileText, Upload, X, ExternalLink } from 'lucide-react';
+import { LogoLoader } from './LogoLoader';
 
 export interface PdfFile {
   id: string;
@@ -16,6 +17,7 @@ interface PdfUploadProps {
   onRemovePdf: () => void;
   label?: string;
   helperText?: string;
+  isUploading?: boolean;
 }
 
 export const PdfUpload: React.FC<PdfUploadProps> = ({
@@ -24,6 +26,7 @@ export const PdfUpload: React.FC<PdfUploadProps> = ({
   onRemovePdf,
   label = 'PDF File / Official Notice',
   helperText = 'Attach official PDF document or notice file (Max 10MB).',
+  isUploading = false,
 }) => {
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -40,22 +43,26 @@ export const PdfUpload: React.FC<PdfUploadProps> = ({
     <div className="space-y-1">
       {label && (
         <div className="flex justify-between items-center">
-          <label className="text-[10px] font-bold text-[#434751] uppercase tracking-wider">
+          <label className="text-[13px] font-medium text-[#2d3139] font-['Avenir-Next-Demi']">
             {label}
           </label>
-          <span className="text-[10px] font-bold text-[#09468e]">
-            {pdf ? '1 / 1 Attached' : '0 / 1 Attached'}
+          <span className="text-[12px] font-medium text-[#09468e]">
+            {isUploading ? 'Uploading...' : pdf ? '1 / 1 Attached' : '0 / 1 Attached'}
           </span>
         </div>
       )}
 
       {/* Compact Mini Card matching ImageUpload layout */}
       <div className="flex flex-wrap gap-2 items-center pt-0.5">
-        {pdf ? (
-          <div className="relative group w-32 h-14 rounded-md border border-[#1a1c20]/25 overflow-hidden bg-white shadow-2xs shrink-0 flex flex-col justify-between p-1.5 transition-all hover:border-[#09468e]">
+        {isUploading ? (
+          <div className="w-20 h-14 rounded-md border border-[#09468e]/30 bg-[#f9f9ff] flex flex-col items-center justify-center p-1 shrink-0 shadow-2xs">
+            <LogoLoader size="xs" text="Uploading..." />
+          </div>
+        ) : pdf ? (
+          <div className="relative group w-20 h-14 rounded-md border border-[#1a1c20]/25 overflow-hidden bg-white shadow-2xs shrink-0 flex flex-col justify-between p-1.5 transition-all hover:border-[#09468e]">
             {/* Top Row: Icon + Red Cross Remove Button */}
             <div className="flex justify-between items-start">
-              <div className="p-1 bg-red-100 text-red-600 rounded shrink-0">
+              <div className="p-0.5 bg-red-100 text-red-600 rounded shrink-0 flex items-center justify-center">
                 <FileText className="w-3.5 h-3.5" />
               </div>
 
@@ -78,7 +85,7 @@ export const PdfUpload: React.FC<PdfUploadProps> = ({
               className="group/link flex items-center justify-between gap-1 text-[#09468e] hover:underline"
               title={`Click to preview ${pdf.name}`}
             >
-              <span className="text-[9px] font-bold text-[#1a1c20] truncate leading-none">
+              <span className="text-[8.5px] font-bold text-[#1a1c20] truncate leading-none">
                 {pdf.name}
               </span>
               <ExternalLink className="w-2.5 h-2.5 text-[#09468e] shrink-0" />
@@ -88,7 +95,7 @@ export const PdfUpload: React.FC<PdfUploadProps> = ({
           /* Add Single PDF Card Button */
           <div
             onClick={() => inputRef.current?.click()}
-            className="w-32 h-14 rounded-md border border-dashed border-[#1a1c20]/30 hover:border-[#09468e] bg-[#f9f9ff] hover:bg-[#e1efff]/20 transition-all flex flex-col items-center justify-center p-1 cursor-pointer group shrink-0"
+            className="w-20 h-14 rounded-md border border-dashed border-[#1a1c20]/30 hover:border-[#09468e] bg-[#f9f9ff] hover:bg-[#e1efff]/20 transition-all flex flex-col items-center justify-center p-1 cursor-pointer group shrink-0"
           >
             <Upload className="w-3.5 h-3.5 text-[#000000] group-hover:text-[#09468e] transition-colors mb-0.5" />
             <span className="text-[9px] font-bold text-[#434751] group-hover:text-[#09468e] text-center leading-none">

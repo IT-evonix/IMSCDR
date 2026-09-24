@@ -2,6 +2,7 @@
 
 import React, { useRef } from 'react';
 import { Upload, X } from 'lucide-react';
+import { LogoLoader } from './LogoLoader';
 
 export interface ImageFile {
   id: string;
@@ -16,15 +17,17 @@ interface ImageUploadProps {
   maxFiles?: number;
   label?: string;
   helperText?: string;
+  isUploading?: boolean;
 }
 
 export const ImageUpload: React.FC<ImageUploadProps> = ({
   images,
   onAddImages,
   onRemoveImage,
-  maxFiles = 6,
+  maxFiles = 1,
   label = 'Photos / Images',
   helperText = 'Add photo or image files (PNG, JPG, WEBP up to 5MB each).',
+  isUploading = false,
 }) => {
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -38,12 +41,12 @@ export const ImageUpload: React.FC<ImageUploadProps> = ({
     <div className="space-y-1">
       {label && (
         <div className="flex justify-between items-center">
-          <label className="text-[10px] font-bold text-[#434751] uppercase tracking-wider">
+          <label className="text-[13px] font-medium text-[#2d3139] font-['Avenir-Next-Demi']">
             {label}
           </label>
 
-          <span className="text-[10px] font-extrabold text-[#09468e]">
-            {images.length} / {maxFiles} Uploaded
+          <span className="text-[12px] font-medium text-[#09468e]">
+            {isUploading ? 'Uploading...' : `${images.length} / ${maxFiles} Uploaded`}
           </span>
         </div>
       )}
@@ -81,8 +84,15 @@ export const ImageUpload: React.FC<ImageUploadProps> = ({
           </div>
         ))}
 
+        {/* Uploading Placeholder Card */}
+        {isUploading && (
+          <div className="w-20 h-14 rounded-md border border-[#09468e]/30 bg-[#f9f9ff] flex flex-col items-center justify-center p-1 shrink-0 shadow-2xs">
+            <LogoLoader size="xs" text="Uploading..." />
+          </div>
+        )}
+
         {/* Add Image Button Card */}
-        {images.length < maxFiles && (
+        {!isUploading && images.length < maxFiles && (
           <div
             onClick={() => fileInputRef.current?.click()}
             className="w-20 h-14 rounded-md border border-dashed border-[#1a1c20]/30 hover:border-[#ad2865] bg-[#f9f9ff] hover:bg-[#ffd9e3]/10 transition-all flex flex-col items-center justify-center p-1 cursor-pointer group shrink-0"
@@ -96,7 +106,7 @@ export const ImageUpload: React.FC<ImageUploadProps> = ({
               ref={fileInputRef}
               type="file"
               accept="image/*"
-              multiple
+              multiple={maxFiles > 1}
               onChange={handleFileChange}
               className="hidden"
             />

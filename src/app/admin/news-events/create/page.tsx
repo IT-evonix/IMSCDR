@@ -1,6 +1,8 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
 import { PageTitle } from '@/components/admin/PageTitle';
 import { Button } from '@/components/ui/Button';
 import { BackButton } from '@/components/admin/BackButton';
@@ -10,6 +12,7 @@ import { RichTextEditor } from '@/components/ui/RichTextEditor';
 import { ConfirmModal } from '@/components/ui/ConfirmModal';
 import { Plus, Calendar, X, ExternalLink } from 'lucide-react';
 import { authenticatedFetch } from '@/lib/auth';
+import { LogoLoader } from '@/components/ui/LogoLoader';
 
 // Master Centralized Form Configuration Schema Object
 const FORM_CONFIG = {
@@ -24,7 +27,7 @@ const FORM_CONFIG = {
     options: [
       { value: '', label: 'Select Type' },
       { value: 'News', label: 'News' },
-      { value: 'Event', label: 'Event' },
+      // { value: 'Event', label: 'Event' },
       { value: 'Blog', label: 'Blog' },
       { value: 'Notice', label: 'Notice' },
       { value: 'Circular', label: 'Circular' },
@@ -70,16 +73,16 @@ const FORM_CONFIG = {
   },
   RICH_TEXT: {
     label: 'Full Details',
-    placeholder: 'Type complete details, notice instructions, or event information here...',
+    placeholder: 'Type complete details, notice instructions, or post information here...',
   },
   PDF_UPLOAD: {
     label: 'PDF Notice or Circular File',
     helperText: 'Upload official PDF notice, circular, or timetable file (Max 10MB).',
   },
   IMAGE_UPLOAD: {
-    label: 'Photos / Images (Cover & Gallery)',
-    helperText: 'Add photos or event poster images(PNG, JPG, WEBP up to 5MB each).',
-    maxFiles: 6,
+    label: 'Photo / Feature Image',
+    helperText: 'Add cover photo or featured image (PNG, JPG, WEBP up to 5MB).',
+    maxFiles: 1,
   },
   ACTIONS: {
     cancel: 'Cancel & Go Back',
@@ -107,7 +110,11 @@ const normalizeFormat = (format?: string | null): 'description' | 'pdf' | 'link'
   return 'description';
 };
 
-export default function CreateNewsEventPage() {
+function CreateNewsEventForm() {
+  const searchParams = useSearchParams();
+  const urlType = searchParams.get('type') || searchParams.get('contentType');
+  const urlId = searchParams.get('id');
+
   const [editId, setEditId] = useState<string | null>(null);
   const [title, setTitle] = useState('');
   const [slug, setSlug] = useState('your-title-here');
@@ -132,6 +139,10 @@ export default function CreateNewsEventPage() {
 
   // PDF Document State
   const [attachedPdf, setAttachedPdf] = useState<PdfFile | null>(null);
+
+  // Uploading Loading States
+  const [isUploadingImage, setIsUploadingImage] = useState(false);
+  const [isUploadingPdf, setIsUploadingPdf] = useState(false);
 
   // Category state & Modal
   const [categories, setCategories] = useState<string[]>([]);
@@ -174,13 +185,20 @@ export default function CreateNewsEventPage() {
   }, [contentType]);
 
   useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const id = params.get('id');
-    if (id) {
-      setEditId(id);
-      fetchExistingEntry(id);
+    if (urlId) {
+      setEditId(urlId);
+      fetchExistingEntry(urlId);
+    } else if (urlType) {
+      const val = normalizeType(urlType);
+      setContentType(val);
+      fetchCategories(val);
+      if (val === 'Notice' || val === 'Circular') {
+        setContentTypeOption('pdf');
+      }
+    } else {
+      setContentType('');
     }
-  }, []);
+  }, [urlId, urlType]);
 
   const fetchExistingEntry = async (id: string) => {
     try {
@@ -242,7 +260,7 @@ export default function CreateNewsEventPage() {
     }
 
     if (!contentType || !contentType.trim()) {
-      showAlertModal('Please select a Type of Post (News, Event, Blog, Notice, Circular) before publishing.', 'Post Type Required', 'warning');
+      showAlertModal('Please select a Type of Post (News, Blog, Notice, Circular) before publishing.', 'Post Type Required', 'warning');
       return;
     }
 
@@ -336,29 +354,37 @@ export default function CreateNewsEventPage() {
   };
 
   const handleAddGalleryImages = async (files: FileList | File[]) => {
-    const token = localStorage.getItem('adminToken');
-    const uploads = await Promise.all(
-      Array.from(files).map(async (file) => {
-        const form = new FormData();
-        form.append('file', file);
-        const res = await fetch('/api/upload/image', {
-          method: 'POST',
-          headers: { Authorization: `Bearer ${token}` },
-          body: form,
-        });
-        const data = await res.json();
-        if (res.ok && data.status === 'success') {
-          return {
-            id: Math.random().toString(36).substring(2, 9),
-            url: data.url,
-            name: file.name,
-          };
-        }
-        return null;
-      })
-    );
-    const successful = uploads.filter(Boolean) as ImageFile[];
-    setGalleryImages((prev) => [...prev, ...successful]);
+    setIsUploadingImage(true);
+    try {
+      const token = localStorage.getItem('adminToken');
+      const uploads = await Promise.all(
+        Array.from(files).map(async (file) => {
+          const form = new FormData();
+          form.append('file', file);
+          const res = await fetch('/api/upload/image', {
+            method: 'POST',
+            headers: { Authorization: `Bearer ${token}` },
+            body: form,
+          });
+          const data = await res.json();
+          if (res.ok && data.status === 'success') {
+            return {
+              id: Math.random().toString(36).substring(2, 9),
+              url: data.url,
+              name: file.name,
+            };
+          }
+          return null;
+        })
+      );
+      const successful = uploads.filter(Boolean) as ImageFile[];
+      setGalleryImages((prev) => [...prev, ...successful].slice(0, FORM_CONFIG.IMAGE_UPLOAD.maxFiles));
+    } catch (err) {
+      console.error('Failed to upload image:', err);
+      showAlertModal('Image upload failed. Please try again.', 'Upload Error', 'danger');
+    } finally {
+      setIsUploadingImage(false);
+    }
   };
 
   const handleRemoveGalleryImage = (id: string) => {
@@ -366,30 +392,38 @@ export default function CreateNewsEventPage() {
   };
 
   const handleSelectPdf = async (file: File) => {
-    const token = localStorage.getItem('adminToken');
-    const form = new FormData();
-    form.append('file', file);
+    setIsUploadingPdf(true);
+    try {
+      const token = localStorage.getItem('adminToken');
+      const form = new FormData();
+      form.append('file', file);
 
-    const res = await fetch('/api/upload/pdf', {
-      method: 'POST',
-      headers: { Authorization: `Bearer ${token}` },
-      body: form,
-    });
-    const data = await res.json();
-
-    if (res.ok && data.status === 'success') {
-      const sizeKb = (file.size / 1024).toFixed(0);
-      const sizeMb = (file.size / (1024 * 1024)).toFixed(1);
-      const sizeStr = file.size > 1024 * 1024 ? `${sizeMb} MB` : `${sizeKb} KB`;
-
-      setAttachedPdf({
-        id: Math.random().toString(36).substring(2, 9),
-        name: file.name,
-        size: sizeStr,
-        url: data.url,   // ← permanent server URL, NOT blob:
+      const res = await fetch('/api/upload/pdf', {
+        method: 'POST',
+        headers: { Authorization: `Bearer ${token}` },
+        body: form,
       });
-    } else {
-      showAlertModal(data.message || 'PDF upload failed. Please try again.', 'PDF Upload Failed', 'danger');
+      const data = await res.json();
+
+      if (res.ok && data.status === 'success') {
+        const sizeKb = (file.size / 1024).toFixed(0);
+        const sizeMb = (file.size / (1024 * 1024)).toFixed(1);
+        const sizeStr = file.size > 1024 * 1024 ? `${sizeMb} MB` : `${sizeKb} KB`;
+
+        setAttachedPdf({
+          id: Math.random().toString(36).substring(2, 9),
+          name: file.name,
+          size: sizeStr,
+          url: data.url,   // ← permanent server URL, NOT blob:
+        });
+      } else {
+        showAlertModal(data.message || 'PDF upload failed. Please try again.', 'PDF Upload Failed', 'danger');
+      }
+    } catch (err) {
+      console.error('Failed to upload PDF:', err);
+      showAlertModal('PDF upload failed. Please try again.', 'PDF Upload Failed', 'danger');
+    } finally {
+      setIsUploadingPdf(false);
     }
   };
 
@@ -442,9 +476,13 @@ export default function CreateNewsEventPage() {
   const minEndDate = startDate ? (startDate > todayStr ? startDate : todayStr) : todayStr;
 
   return (
-    <div className="max-w-[1150px] w-full mx-auto space-y-3 pb-4 pt-1">
-      {/* Page Header */}
-      <PageTitle showBack backHref="/admin/news-events" title={editId ? 'Edit Post' : 'Add News, Event, Blog, Notice, Circulars'} />
+    <div className="space-y-4">
+      <PageTitle
+        showBack
+        backHref="/admin/news-events"
+        subtitle="IMSCDR Management"
+        title={editId ? 'Edit Post' : contentType ? `Add ${contentType}` : 'Add News, Blogs, Circulars, Notices'}
+      />
 
       {/* Single Clean Form Card */}
       <form onSubmit={handleSubmit} className="bg-white rounded-xl brand-border overflow-hidden shadow-2xs">
@@ -452,7 +490,7 @@ export default function CreateNewsEventPage() {
 
           {/* Article Title */}
           <div className="space-y-1">
-            <label className="text-[10px] font-bold text-[#434751] uppercase tracking-wider">
+            <label className="text-[13px] font-medium text-[#2d3139] font-['Avenir-Next-Demi']">
               {FORM_CONFIG.TITLE.label} {FORM_CONFIG.TITLE.required && <span className="text-red-500">*</span>}
             </label>
             <input
@@ -468,7 +506,7 @@ export default function CreateNewsEventPage() {
           {/* Type & Category Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
             <div className="space-y-1">
-              <label className="text-[10px] font-bold text-[#434751] uppercase tracking-wider">
+              <label className="text-[13px] font-medium text-[#2d3139] font-['Avenir-Next-Demi']">
                 {FORM_CONFIG.POST_TYPE.label} {FORM_CONFIG.POST_TYPE.required && <span className="text-red-500">*</span>}
               </label>
               <select
@@ -495,7 +533,7 @@ export default function CreateNewsEventPage() {
             </div>
 
             <div className="space-y-1">
-              <label className="text-[10px] font-bold text-[#434751] uppercase tracking-wider block">
+              <label className="text-[13px] font-medium text-[#2d3139] font-['Avenir-Next-Demi'] block">
                 {FORM_CONFIG.CATEGORY.label} {FORM_CONFIG.CATEGORY.required && <span className="text-red-500">*</span>}
               </label>
               <select
@@ -521,7 +559,7 @@ export default function CreateNewsEventPage() {
           {/* Start Date & End Date Grid (Single Date for Notice/Circular) */}
           {isNoticeOrCircular ? (
             <div className="space-y-1">
-              <label className="text-[10px] font-bold text-[#434751] uppercase tracking-wider !flex !flex-row !items-center gap-1.5">
+              <label className="text-[13px] font-medium text-[#2d3139] font-['Avenir-Next-Demi'] !flex !flex-row !items-center gap-1.5">
                 <Calendar className={`w-3.5 h-3.5 ${FORM_CONFIG.START_DATE.iconColor} shrink-0`} />
                 <span>Notice / Circular Date</span>
               </label>
@@ -536,7 +574,7 @@ export default function CreateNewsEventPage() {
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
               <div className="space-y-1">
-                <label className="text-[10px] font-bold text-[#434751] uppercase tracking-wider !flex !flex-row !items-center gap-1.5">
+                <label className="text-[13px] font-medium text-[#2d3139] font-['Avenir-Next-Demi'] !flex !flex-row !items-center gap-1.5">
                   <Calendar className={`w-3.5 h-3.5 ${FORM_CONFIG.START_DATE.iconColor} shrink-0`} />
                   <span>{FORM_CONFIG.START_DATE.label}</span>
                 </label>
@@ -556,7 +594,7 @@ export default function CreateNewsEventPage() {
               </div>
 
               <div className="space-y-1">
-                <label className="text-[10px] font-bold text-[#434751] uppercase tracking-wider !flex !flex-row !items-center gap-1.5">
+                <label className="text-[13px] font-medium text-[#2d3139] font-['Avenir-Next-Demi'] !flex !flex-row !items-center gap-1.5">
                   <Calendar className={`w-3.5 h-3.5 ${FORM_CONFIG.END_DATE.iconColor} shrink-0`} />
                   <span>{FORM_CONFIG.END_DATE.label}</span>
                 </label>
@@ -574,7 +612,7 @@ export default function CreateNewsEventPage() {
           {/* Short Summary (Hidden for Notice / Circular) */}
           {!isNoticeOrCircular && (
             <div className="space-y-1">
-              <label className="text-[10px] font-bold text-[#434751] uppercase tracking-wider">
+              <label className="text-[13px] font-medium text-[#2d3139] font-['Avenir-Next-Demi']">
                 {FORM_CONFIG.SUMMARY.label} {FORM_CONFIG.SUMMARY.required && <span className="text-red-500">*</span>}
               </label>
               <textarea
@@ -590,7 +628,7 @@ export default function CreateNewsEventPage() {
 
           {/* Radio Button Format Selector (Text vs PDF vs External Link) */}
           <div className="space-y-2 p-3 sm:p-3.5 rounded-xl bg-[#f8fafc] border border-[#09468e]/15">
-            <label className="text-[10px] font-bold text-[#003067] uppercase tracking-wider block font-['Roma-Semibold']">
+            <label className="text-[13px] font-semibold text-[#003067] block font-['Roma-Semibold']">
               {FORM_CONFIG.DETAIL_FORMAT.label} {FORM_CONFIG.DETAIL_FORMAT.required && <span className="text-red-500">*</span>}
             </label>
             <div className="flex flex-col sm:flex-row sm:items-center gap-2.5 sm:gap-3 pt-1">
@@ -632,11 +670,12 @@ export default function CreateNewsEventPage() {
                 onRemovePdf={handleRemovePdf}
                 label={FORM_CONFIG.PDF_UPLOAD.label}
                 helperText={FORM_CONFIG.PDF_UPLOAD.helperText}
+                isUploading={isUploadingPdf}
               />
             </div>
           ) : contentTypeOption === 'link' ? (
             <div className="space-y-1.5 animate-in fade-in duration-150">
-              <label className="text-[10px] font-bold text-[#434751] uppercase tracking-wider flex items-center gap-1.5">
+              <label className="text-[13px] font-medium text-[#2d3139] font-['Avenir-Next-Demi'] flex items-center gap-1.5">
                 <span>{FORM_CONFIG.EXTERNAL_LINK.label} {FORM_CONFIG.EXTERNAL_LINK.required && <span className="text-red-500">*</span>}</span>
               </label>
               <input
@@ -653,7 +692,7 @@ export default function CreateNewsEventPage() {
             </div>
           ) : (
             <div className="space-y-1 animate-in fade-in duration-150">
-              <label className="text-[10px] font-bold text-[#434751] uppercase tracking-wider">
+              <label className="text-[13px] font-medium text-[#2d3139] font-['Avenir-Next-Demi']">
                 {FORM_CONFIG.RICH_TEXT.label}
               </label>
               <RichTextEditor
@@ -673,13 +712,19 @@ export default function CreateNewsEventPage() {
               maxFiles={FORM_CONFIG.IMAGE_UPLOAD.maxFiles}
               label={FORM_CONFIG.IMAGE_UPLOAD.label}
               helperText={FORM_CONFIG.IMAGE_UPLOAD.helperText}
+              isUploading={isUploadingImage}
             />
           )}
         </div>
 
         {/* Form Action Footer */}
         <div className="px-3 sm:px-4 py-3 bg-[#f3f7fc] border-t border-[#09468e]/15 flex items-center justify-between gap-3">
-          <BackButton label={FORM_CONFIG.ACTIONS.cancel} href="/admin/news-events" />
+          <Link
+            href="/admin/news-events"
+            className="px-4 py-2 rounded-lg border border-slate-300 bg-white text-slate-700 hover:bg-slate-50 hover:text-slate-900 text-[14px] font-semibold transition-colors font-['Roma-Semibold'] inline-flex items-center justify-center cursor-pointer shadow-2xs"
+          >
+            Cancel
+          </Link>
 
           <Button
             type="submit"
@@ -697,17 +742,17 @@ export default function CreateNewsEventPage() {
 
       {/* Add New Category Modal */}
       {showCategoryModal && (
-        <div className="fixed inset-0 bg-black/40 backdrop-blur-xs z-50 flex items-center justify-center p-3 animate-in fade-in duration-150">
-          <div className="bg-white rounded-xl brand-border shadow-xl max-w-[390px] w-full overflow-hidden animate-in fade-in zoom-in-95 duration-150">
+        <div className="faculty-modal-overlay fixed inset-0 bg-black/75 backdrop-blur-xs z-50 flex items-center justify-center p-3 animate-in fade-in duration-150">
+          <div className="faculty-modal bg-white rounded-xl shadow-[0_20px_60px_rgba(0,0,0,0.35)] max-w-[420px] w-full overflow-hidden relative animate-in fade-in zoom-in-95 duration-150">
             <form onSubmit={handleAddCategorySubmit}>
               {/* Header */}
-              <div className="p-4 space-y-3">
-                <div className="flex items-center justify-between gap-3 border-b border-slate-100 pb-2.5">
+              <div className="p-4 sm:p-5 space-y-3">
+                <div className="flex items-center justify-between gap-3 border-b border-slate-100 pb-3">
                   <div className="flex items-center gap-2.5 min-w-0 flex-1">
-                    <div className="w-7 h-7 rounded-md border bg-blue-50 text-[#09468e] border-blue-200 shrink-0 flex items-center justify-center">
-                      <Plus className="w-3.5 h-3.5 text-[#09468e]" />
+                    <div className="w-8 h-8 rounded-lg border bg-blue-50 text-[#09468e] border-blue-200 shrink-0 flex items-center justify-center">
+                      <Plus className="w-4 h-4 text-[#09468e]" />
                     </div>
-                    <h4 className="modal-title text-sm font-bold text-[#003067] truncate leading-tight my-auto">
+                    <h4 className="modal-title text-[15px] font-semibold text-[#003067] truncate leading-tight my-auto">
                       Add New Category
                     </h4>
                   </div>
@@ -715,10 +760,10 @@ export default function CreateNewsEventPage() {
                   <button
                     type="button"
                     onClick={() => setShowCategoryModal(false)}
-                    className="modal-close-btn"
+                    className="faculty-close modal-close-btn"
                     title="Close modal"
                   >
-                    <X className="w-4 h-4" />
+                    <X className="w-3.5 h-3.5" />
                   </button>
                 </div>
 
@@ -731,8 +776,8 @@ export default function CreateNewsEventPage() {
                 </div>
 
                 {/* Category Input Field */}
-                <div className="space-y-1 pt-0.5">
-                  <label className="text-[10px] font-bold text-[#434751] uppercase tracking-wider">
+                <div className="space-y-1.5 pt-0.5">
+                  <label className="text-[13px] font-medium text-[#000000] font-['Avenir-Next-Demi'] block">
                     Category Name <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -742,7 +787,7 @@ export default function CreateNewsEventPage() {
                     value={newCategoryInput}
                     onChange={(e) => setNewCategoryInput(e.target.value)}
                     placeholder="e.g. Exam Notices, Sports, Workshops..."
-                    className="w-full px-3 py-2 rounded-lg brand-border text-xs outline-none focus:ring-2 focus:ring-[#09468e]/20 font-normal text-[#1a1c20] transition-all"
+                    className="admin-input"
                   />
                   <p className="text-[11px] text-slate-500 font-normal pt-0.5">
                     This category will be saved under <strong>{contentType}</strong> section.
@@ -751,15 +796,7 @@ export default function CreateNewsEventPage() {
               </div>
 
               {/* Action Footer */}
-              <div className="px-4 py-2.5 bg-[#f9f9ff] border-t border-[#1a1c20]/10 flex items-center justify-end gap-2">
-                <Button
-                  type="button"
-                  variant="outline"
-                  size="xs"
-                  onClick={() => setShowCategoryModal(false)}
-                >
-                  Cancel
-                </Button>
+              <div className="px-5 py-3 bg-[#f9f9ff] border-t border-[#1a1c20]/10 flex items-center justify-end">
                 <Button type="submit" variant="gradient" size="xs">
                   + Add Category
                 </Button>
@@ -777,9 +814,25 @@ export default function CreateNewsEventPage() {
         title={alertTitle}
         message={alertMessage}
         confirmText="OK, Got It"
-        cancelText=""
         variant={alertVariant}
       />
+
+      {/* Uploading Fullscreen LogoLoader Overlay */}
+      {(isUploadingImage || isUploadingPdf) && (
+        <LogoLoader
+          size="full"
+          text={isUploadingImage ? 'Uploading Image, please wait...' : 'Uploading PDF Document, please wait...'}
+        />
+      )}
     </div>
   );
 }
+
+export default function CreateNewsEventPage() {
+  return (
+    <React.Suspense fallback={<div className="p-8 text-center text-slate-500 font-medium">Loading form...</div>}>
+      <CreateNewsEventForm />
+    </React.Suspense>
+  );
+}
+

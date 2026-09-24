@@ -14,7 +14,7 @@ export interface BackButtonProps {
 
 export const BackButton: React.FC<BackButtonProps> = ({
   href,
-  label = 'Back',
+  label = 'Go back',
   className = '',
   onClick,
 }) => {
@@ -32,10 +32,11 @@ export const BackButton: React.FC<BackButtonProps> = ({
     <button
       type="button"
       onClick={!href ? handleBack : () => router.push(href)}
-      className={`admin-back-btn inline-flex items-center gap-1.5 px-2.5 py-1 h-[26px] min-h-[26px] rounded-full text-[10.5px] font-bold text-[#09468e] bg-white border border-[#09468e]/30 hover:bg-gradient-to-r hover:from-[#09468e] hover:to-[#89004a] hover:text-white hover:border-transparent transition-all duration-200 shadow-2xs cursor-pointer active:scale-95 group font-['Roma-Semibold'] ${className}`}
+      className={`admin-back-btn p-1.5 text-[#09468e] hover:text-[#ad2865] hover:bg-[#09468e]/10 rounded-lg transition-all cursor-pointer flex items-center justify-center outline-none ${className}`}
+      title={label}
+      aria-label={label}
     >
-      <ArrowLeft className="w-3 h-3 text-[#09468e] group-hover:text-white group-hover:-translate-x-0.5 transition-all" />
-      <span className="leading-none">{label}</span>
+      <ArrowLeft className="w-5 h-5 transition-transform hover:-translate-x-0.5" />
     </button>
   );
 };

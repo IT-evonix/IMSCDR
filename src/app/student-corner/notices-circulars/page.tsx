@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { FileText, ExternalLink, Calendar, ArrowDownToLine, Bell, ChevronLeft, ChevronRight } from 'lucide-react';
+import { FileText, ExternalLink, Calendar, Bell, ChevronLeft, ChevronRight } from 'lucide-react';
 import { mockNoticesCirculars } from '@/data/notices-circulars';
 import '@/app/notices-circular.css';
 
@@ -21,7 +21,7 @@ interface NoticeItem {
 
 export default function NoticesCircularsPage() {
   const [items, setItems] = useState<NoticeItem[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [hasFetched, setHasFetched] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(20);
   const [totalItems, setTotalItems] = useState(0);
@@ -33,7 +33,6 @@ export default function NoticesCircularsPage() {
 
   const fetchNotices = async () => {
     try {
-      setLoading(true);
       const res = await fetch(
         `/api/news-events?type=Notice,Circular&status=Published&limit=100`
       );
@@ -60,7 +59,7 @@ export default function NoticesCircularsPage() {
       setTotalItems(mockNoticesCirculars.length);
       setTotalPages(Math.ceil(mockNoticesCirculars.length / itemsPerPage) || 1);
     } finally {
-      setLoading(false);
+      setHasFetched(true);
     }
   };
 
@@ -80,34 +79,27 @@ export default function NoticesCircularsPage() {
 
   return (
     <div className="innerpagerightside">
-      {/* Page Title */}
-      <h2 className="heading">Notices & Circulars</h2>
+      <div className="heading">Notices & Circulars</div>
 
-      <div className="notices-wrapper">
-        {loading ? (
-          <div className="notices-loading-state">
-            <div className="notices-spinner"></div>
-            <p className="notices-loading-text">Loading notices & circulars...</p>
-          </div>
-        ) : items.length === 0 ? (
+      <div className="mb-5">
+        {hasFetched && items.length === 0 ? (
           <div className="notices-empty-box">
             <div className="notices-empty-icon-wrap">
               <Bell />
             </div>
-            <h4 className="notices-empty-title"> There are currently no active notices or circulars published.</h4>
-            {/* <p className="notices-empty-desc">
+            <h4 className="notices-empty-title">
               There are currently no active notices or circulars published.
-            </p> */}
+            </h4>
           </div>
         ) : (
-          <div className="notices-table-card">
-            <div className="notices-table-responsive">
-              <table className="notices-table">
+          <div className="table-card shadow-sm">
+            <div className="table-responsive">
+              <table className="table governing-table align-middle mb-0">
                 <thead>
                   <tr>
-                    <th className="text-center notices-th-sr">Sr.</th>
-                    <th className="notices-th-title">Title </th>
-                    <th className="text-center notices-th-action">Action</th>
+                    <th className="text-center" style={{ width: '100px' }}>Sr. No.</th>
+                    <th>Title</th>
+                    <th className="text-center" style={{ width: '160px' }}>Action</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -119,9 +111,9 @@ export default function NoticesCircularsPage() {
 
                     return (
                       <tr key={`${item.id}-${idx}`}>
-                        {/* Sr. No */}
-                        <td className="notices-sr-cell">
-                          {srNumber}
+                        {/* Sr. No with Circular Badge from website */}
+                        <td className="sr-no text-center">
+                          <span className="sr-badge">{srNumber}</span>
                         </td>
 
                         {/* Title / Subject with manual date below heading */}
@@ -150,7 +142,7 @@ export default function NoticesCircularsPage() {
                         </td>
 
                         {/* Action Button */}
-                        <td className="notices-action-cell">
+                        <td className="text-center notices-action-cell">
                           {hasPdf ? (
                             <div className="explore_more_btn">
                               <a
@@ -159,7 +151,6 @@ export default function NoticesCircularsPage() {
                                 rel="noopener noreferrer"
                                 title="Download or View Official PDF"
                               >
-                                <FileText size={11} />
                                 <span>View PDF</span>
                                 <svg
                                   width="11"
@@ -178,18 +169,19 @@ export default function NoticesCircularsPage() {
                               </a>
                             </div>
                           ) : hasLink ? (
-                            <a
-                              href={item.externalUrl!}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="admission-btn"
-                              title="Open External Link"
-                            >
-                              <span>Open Link</span>
-                              <ExternalLink size={11} />
-                            </a>
+                            <div className="explore_more_btn">
+                              <a
+                                href={item.externalUrl!}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                title="Open External Link"
+                              >
+                                <span>Open Link</span>
+                                <ExternalLink size={12} />
+                              </a>
+                            </div>
                           ) : (
-                            <span className="notices-no-attachment">No attachment</span>
+                            <span>-</span>
                           )}
                         </td>
                       </tr>
@@ -198,52 +190,52 @@ export default function NoticesCircularsPage() {
                 </tbody>
               </table>
             </div>
+          </div>
+        )}
 
-            {/* Pagination: Display ONLY when more than 20 records exist */}
-            {totalItems > 20 && totalPages > 1 && (
-              <div className="notices-pagination-container">
-                <div className="notices-pagination-info">
-                  Showing <strong>{(currentPage - 1) * itemsPerPage + 1}</strong>–<strong>{Math.min(currentPage * itemsPerPage, totalItems)}</strong> of <strong>{totalItems}</strong> notices
-                </div>
+        {/* Pagination: Display ONLY when more than 20 records exist */}
+        {totalItems > 20 && totalPages > 1 && (
+          <div className="notices-pagination-container">
+            <div className="notices-pagination-info">
+              Showing <strong>{(currentPage - 1) * itemsPerPage + 1}</strong>–<strong>{Math.min(currentPage * itemsPerPage, totalItems)}</strong> of <strong>{totalItems}</strong> notices
+            </div>
 
-                <div className="notices-pagination-controls">
+            <div className="notices-pagination-controls">
+              <button
+                type="button"
+                onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
+                disabled={currentPage === 1}
+                className="notices-page-arrow"
+                title="Previous Page"
+                aria-label="Previous Page"
+              >
+                <ChevronLeft size={16} />
+              </button>
+
+              <div className="notices-page-numbers">
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map((p) => (
                   <button
+                    key={p}
                     type="button"
-                    onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
-                    disabled={currentPage === 1}
-                    className="notices-page-arrow"
-                    title="Previous Page"
-                    aria-label="Previous Page"
+                    onClick={() => setCurrentPage(p)}
+                    className={`notices-page-btn ${currentPage === p ? 'active' : ''}`}
                   >
-                    <ChevronLeft size={16} />
+                    {p}
                   </button>
-
-                  <div className="notices-page-numbers">
-                    {Array.from({ length: totalPages }, (_, i) => i + 1).map((p) => (
-                      <button
-                        key={p}
-                        type="button"
-                        onClick={() => setCurrentPage(p)}
-                        className={`notices-page-btn ${currentPage === p ? 'active' : ''}`}
-                      >
-                        {p}
-                      </button>
-                    ))}
-                  </div>
-
-                  <button
-                    type="button"
-                    onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
-                    disabled={currentPage === totalPages}
-                    className="notices-page-arrow"
-                    title="Next Page"
-                    aria-label="Next Page"
-                  >
-                    <ChevronRight size={16} />
-                  </button>
-                </div>
+                ))}
               </div>
-            )}
+
+              <button
+                type="button"
+                onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
+                disabled={currentPage === totalPages}
+                className="notices-page-arrow"
+                title="Next Page"
+                aria-label="Next Page"
+              >
+                <ChevronRight size={16} />
+              </button>
+            </div>
           </div>
         )}
       </div>

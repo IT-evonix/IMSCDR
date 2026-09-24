@@ -28,15 +28,17 @@ export const Button: React.FC<ButtonProps> = ({
   ...props
 }) => {
   const sizeClasses = {
-    xs: 'px-2.5 py-1 text-[11px] font-medium gap-1 h-7.5',
-    sm: 'px-3 py-1.5 text-[11.5px] font-semibold gap-1.5 h-8',
-    md: 'px-3.5 py-1.5 text-xs font-semibold gap-2 h-8.5',
-    lg: 'px-4 py-2 text-xs font-semibold gap-2 h-9',
+    xs: 'px-2.5 py-1 text-[13px] font-semibold gap-1 h-7.5',
+    sm: 'px-3.5 py-1 text-[14px] font-semibold gap-1.5 h-8',
+    md: 'px-4 py-1.5 text-[14px] font-semibold gap-2 h-8.5',
+    lg: 'px-4.5 py-2 text-[14px] font-semibold gap-2 h-9',
   };
 
-  const roundedClass = pill ? '!rounded-full' : 'rounded-lg';
+  const isExplore = variant === 'gradient' || className.includes('explore_more_btn');
+  const roundedClass = pill || isExplore ? '!rounded-full' : 'rounded-lg';
+  const sizeStyle = isExplore ? '' : sizeClasses[size];
 
-  const baseStyles = `inline-flex items-center justify-center whitespace-nowrap font-semibold transition-all duration-200 active:scale-95 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed disabled:active:scale-100 ${roundedClass} ${sizeClasses[size]}`;
+  const baseStyles = `inline-flex items-center justify-center whitespace-nowrap font-['Roma-Semibold'] font-semibold transition-all duration-200 active:scale-95 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed disabled:active:scale-100 ${roundedClass} ${sizeStyle}`;
 
   const variants = {
     brand:
