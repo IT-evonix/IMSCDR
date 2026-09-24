@@ -4599,6 +4599,7 @@ Body {
 .news-image {
   overflow: hidden;
   width: 45%;
+  display:none;
 }
 .news-image img {
   width: 100%;
@@ -4610,10 +4611,12 @@ Body {
   transform: scale(1.08);
 }
 .news-content {
-  padding: 15px;
+  padding: 15px 25px;
   position: relative;
-  min-height: 160px;
-  width: 55%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .news-date {
   color: #444;
@@ -4627,6 +4630,9 @@ Body {
   display: block;
   margin: 0 0 6px 0px;
 }
+.newscontentleft{
+  width:85%;
+}
 .news-content .subheading {
   -webkit-line-clamp: 3;
   text-overflow: ellipsis;
@@ -4634,7 +4640,7 @@ Body {
   line-height: normal;
   display: -webkit-box;
   overflow: hidden;
-  margin: 0 0 10px 0;
+  margin: 0 0 0px 0;
   font-size: 18px;
 }
 .news-content p {
@@ -4645,6 +4651,7 @@ Body {
   text-overflow: ellipsis;
   line-height: normal;
   font-size: 14px;
+  margin: 7px 0 0 0;
 }
 .news-btn {
   color: #fff;
@@ -4652,7 +4659,6 @@ Body {
   border-radius: 50px;
   align-items: center;
   gap: 10px;
-  margin-top: 10px;
   padding: 5px 13px;
   font-family: Avenir-Next-Demi;
   text-decoration: none;
@@ -4661,8 +4667,7 @@ Body {
   position: relative;
   overflow: hidden;
   font-size: 12px;
-  bottom: 20px;
-  position: absolute;
+  overflow: hidden; 
 }
 .news-btn:before {
   content: "";

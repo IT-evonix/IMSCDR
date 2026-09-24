@@ -309,7 +309,6 @@ export const tabbingGalleryData: GalleryCategory[] = [
       },
     ],
   },
-
   {
     id: "christmas-2025-26",
     label: "Christmas 2025-26",
@@ -332,7 +331,6 @@ export const tabbingGalleryData: GalleryCategory[] = [
       },
     ],
   },
-
   {
     id: "annual-days-2025-26",
     label: "Annual Days 2025-26",
@@ -347,7 +345,6 @@ export const tabbingGalleryData: GalleryCategory[] = [
       },
     ],
   },
-
   {
     id: "cet-awareness-2026-27",
     label: "CET Awareness 2026-27",
@@ -358,77 +355,6 @@ export const tabbingGalleryData: GalleryCategory[] = [
       },
     ],
   },
-
-  {
-    id: "FDP",
-    label: "FDP",
-    images: [
-      {
-        id: 1,
-        src: "/images/campus/gallery/FDP/fdp-1.webp",
-      },
-      {
-        id: 2,
-        src: "/images/campus/gallery/FDP/fdp-2.webp",
-      },
-      {
-        id: 3,
-        src: "/images/campus/gallery/FDP/fdp-3.webp",
-      },
-      {
-        id: 4,
-        src: "/images/campus/gallery/FDP/fdp-4.webp",
-      },
-    ],
-  },
-
-  {
-    id: "fusion2025",
-    label: "Fusion 2025",
-    images: [
-      {
-        id: 1,
-        src: "/images/campus/gallery/fusion2025/fusion2025-1.webp",
-      },
-      {
-        id: 2,
-        src: "/images/campus/gallery/fusion2025/fusion2025-2.webp",
-      },
-      {
-        id: 3,
-        src: "/images/campus/gallery/fusion2025/fusion2025-3.webp",
-      },
-      {
-        id: 4,
-        src: "/images/campus/gallery/fusion2025/fusion2025-4.webp",
-      },
-      {
-        id: 5,
-        src: "/images/campus/gallery/fusion2025/fusion2025-5.webp",
-      },
-      {
-        id: 6,
-        src: "/images/campus/gallery/fusion2025/fusion2025-6.webp",
-      },
-      {
-        id: 7,
-        src: "/images/campus/gallery/fusion2025/fusion2025-7.webp",
-      },
-      {
-        id: 8,
-        src: "/images/campus/gallery/fusion2025/fusion2025-8.webp",
-      },
-      {
-        id: 9,
-        src: "/images/campus/gallery/fusion2025/fusion2025-9.webp",
-      },
-      {
-        id: 10,
-        src: "/images/campus/gallery/fusion2025/fusion2025-10.webp",
-      },
-    ],
-  },
-
   {
     id: "expert-for-specialization-selection-session-2026",
     label: "Expert For Specialization Selection Session 2026",
@@ -479,7 +405,6 @@ export const tabbingGalleryData: GalleryCategory[] = [
       },
     ],
   },
-
   {
     id: "faculty-introduction-2026-27",
     label: "Faculty Introduction 2026-27",
@@ -530,7 +455,74 @@ export const tabbingGalleryData: GalleryCategory[] = [
       },
     ],
   },
-
+  {
+    id: "FDP",
+    label: "FDP",
+    images: [
+      {
+        id: 1,
+        src: "/images/campus/gallery/FDP/fdp-1.webp",
+      },
+      {
+        id: 2,
+        src: "/images/campus/gallery/FDP/fdp-2.webp",
+      },
+      {
+        id: 3,
+        src: "/images/campus/gallery/FDP/fdp-3.webp",
+      },
+      {
+        id: 4,
+        src: "/images/campus/gallery/FDP/fdp-4.webp",
+      },
+    ],
+  },
+  {
+    id: "fusion2025",
+    label: "Fusion 2025",
+    images: [
+      {
+        id: 1,
+        src: "/images/campus/gallery/fusion2025/fusion2025-1.webp",
+      },
+      {
+        id: 2,
+        src: "/images/campus/gallery/fusion2025/fusion2025-2.webp",
+      },
+      {
+        id: 3,
+        src: "/images/campus/gallery/fusion2025/fusion2025-3.webp",
+      },
+      {
+        id: 4,
+        src: "/images/campus/gallery/fusion2025/fusion2025-4.webp",
+      },
+      {
+        id: 5,
+        src: "/images/campus/gallery/fusion2025/fusion2025-5.webp",
+      },
+      {
+        id: 6,
+        src: "/images/campus/gallery/fusion2025/fusion2025-6.webp",
+      },
+      {
+        id: 7,
+        src: "/images/campus/gallery/fusion2025/fusion2025-7.webp",
+      },
+      {
+        id: 8,
+        src: "/images/campus/gallery/fusion2025/fusion2025-8.webp",
+      },
+      {
+        id: 9,
+        src: "/images/campus/gallery/fusion2025/fusion2025-9.webp",
+      },
+      {
+        id: 10,
+        src: "/images/campus/gallery/fusion2025/fusion2025-10.webp",
+      },
+    ],
+  },
   {
     id: "gandi-jayanti-2025-26",
     label: "Gandhi Jayanti 2025-26",
@@ -549,154 +541,6 @@ export const tabbingGalleryData: GalleryCategory[] = [
       },
     ],
   },
-
-  {
-    id: "genesis-induction-2025",
-    label: "Genesis Induction 2025",
-    images: [
-      {
-        id: 1,
-        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-1.webp",
-      },
-      {
-        id: 2,
-        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-2.webp",
-      },
-      {
-        id: 3,
-        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-3.webp",
-      },
-      {
-        id: 4,
-        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-4.webp",
-      },
-      {
-        id: 5,
-        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-5.webp",
-      },
-      {
-        id: 6,
-        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-6.webp",
-      },
-      {
-        id: 7,
-        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-7.webp",
-      },
-      {
-        id: 8,
-        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-8.webp",
-      },
-      {
-        id: 9,
-        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-9.webp",
-      },
-      {
-        id: 10,
-        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-10.webp",
-      },
-      {
-        id: 11,
-        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-11.webp",
-      },
-      {
-        id: 12,
-        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-12.webp",
-      },
-      {
-        id: 13,
-        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-13.webp",
-      },
-      {
-        id: 14,
-        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-14.webp",
-      },
-      {
-        id: 15,
-        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-15.webp",
-      },
-      {
-        id: 16,
-        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-16.webp",
-      },
-      {
-        id: 17,
-        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-17.webp",
-      },
-      {
-        id: 18,
-        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-18.webp",
-      },
-      {
-        id: 19,
-        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-19.webp",
-      },
-      {
-        id: 20,
-        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-20.webp",
-      },
-      {
-        id: 21,
-        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-21.webp",
-      },
-      {
-        id: 22,
-        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-22.webp",
-      },
-      {
-        id: 23,
-        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-23.webp",
-      },
-      {
-        id: 24,
-        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-24.webp",
-      },
-      {
-        id: 25,
-        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-25.webp",
-      },
-      {
-        id: 26,
-        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-26.webp",
-      },
-      {
-        id: 27,
-        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-27.webp",
-      },
-      {
-        id: 28,
-        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-28.webp",
-      },
-      {
-        id: 29,
-        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-29.webp",
-      },
-      {
-        id: 30,
-        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-30.webp",
-      },
-      {
-        id: 31,
-        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-31.webp",
-      },
-      {
-        id: 32,
-        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-32.webp",
-      },
-      {
-        id: 33,
-        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-33.webp",
-      },
-      {
-        id: 34,
-        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-34.webp",
-      },
-      {
-        id: 35,
-        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-35.webp",
-      },
-    ],
-  },
-
   {
     id: "genesis-induction-2026",
     label: "Genesis Induction 2026",
@@ -863,7 +707,152 @@ export const tabbingGalleryData: GalleryCategory[] = [
       },
     ],
   },
-
+  {
+    id: "genesis-induction-2025",
+    label: "Genesis Induction 2025",
+    images: [
+      {
+        id: 1,
+        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-1.webp",
+      },
+      {
+        id: 2,
+        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-2.webp",
+      },
+      {
+        id: 3,
+        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-3.webp",
+      },
+      {
+        id: 4,
+        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-4.webp",
+      },
+      {
+        id: 5,
+        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-5.webp",
+      },
+      {
+        id: 6,
+        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-6.webp",
+      },
+      {
+        id: 7,
+        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-7.webp",
+      },
+      {
+        id: 8,
+        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-8.webp",
+      },
+      {
+        id: 9,
+        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-9.webp",
+      },
+      {
+        id: 10,
+        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-10.webp",
+      },
+      {
+        id: 11,
+        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-11.webp",
+      },
+      {
+        id: 12,
+        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-12.webp",
+      },
+      {
+        id: 13,
+        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-13.webp",
+      },
+      {
+        id: 14,
+        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-14.webp",
+      },
+      {
+        id: 15,
+        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-15.webp",
+      },
+      {
+        id: 16,
+        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-16.webp",
+      },
+      {
+        id: 17,
+        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-17.webp",
+      },
+      {
+        id: 18,
+        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-18.webp",
+      },
+      {
+        id: 19,
+        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-19.webp",
+      },
+      {
+        id: 20,
+        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-20.webp",
+      },
+      {
+        id: 21,
+        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-21.webp",
+      },
+      {
+        id: 22,
+        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-22.webp",
+      },
+      {
+        id: 23,
+        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-23.webp",
+      },
+      {
+        id: 24,
+        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-24.webp",
+      },
+      {
+        id: 25,
+        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-25.webp",
+      },
+      {
+        id: 26,
+        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-26.webp",
+      },
+      {
+        id: 27,
+        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-27.webp",
+      },
+      {
+        id: 28,
+        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-28.webp",
+      },
+      {
+        id: 29,
+        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-29.webp",
+      },
+      {
+        id: 30,
+        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-30.webp",
+      },
+      {
+        id: 31,
+        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-31.webp",
+      },
+      {
+        id: 32,
+        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-32.webp",
+      },
+      {
+        id: 33,
+        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-33.webp",
+      },
+      {
+        id: 34,
+        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-34.webp",
+      },
+      {
+        id: 35,
+        src: "/images/campus/gallery/genesis-induction-2025/genesis-induction-2025-35.webp",
+      },
+    ],
+  },
   {
     id: "chai-pe-charcha",
     label: "Chai Pe Charcha",
@@ -926,7 +915,620 @@ export const tabbingGalleryData: GalleryCategory[] = [
       },
     ],
   },
+  {
+    id: "annual-function-2025-26",
+    label: "Annual Function 2025-26",
+    images: [
+      {
+        id: 1,
+        src: "/images/campus/gallery/annual-function-2025-26/annual-function-2025-26.webp",
+      },
+    ],
+  },
+  {
+    id: "guest-lecture-expert-session-2025-26",
+    label: "Guest Lecture Expert Session 2025-26",
+    images: [
+      {
+        id: 1,
+        src: "/images/campus/gallery/guest-lecture-expert-session-2025-26/guest-lecture-expert-session-2025-26-1.webp",
+      },
+      {
+        id: 2,
+        src: "/images/campus/gallery/guest-lecture-expert-session-2025-26/guest-lecture-expert-session-2025-26-2.webp",
+      },
+      {
+        id: 3,
+        src: "/images/campus/gallery/guest-lecture-expert-session-2025-26/guest-lecture-expert-session-2025-26-3.webp",
+      },
+      {
+        id: 4,
+        src: "/images/campus/gallery/guest-lecture-expert-session-2025-26/guest-lecture-expert-session-2025-26-4.webp",
+      },
+      {
+        id: 5,
+        src: "/images/campus/gallery/guest-lecture-expert-session-2025-26/guest-lecture-expert-session-2025-26-5.webp",
+      },
+      {
+        id: 6,
+        src: "/images/campus/gallery/guest-lecture-expert-session-2025-26/guest-lecture-expert-session-2025-26-6.webp",
+      },
+      {
+        id: 7,
+        src: "/images/campus/gallery/guest-lecture-expert-session-2025-26/guest-lecture-expert-session-2025-26-6-1.webp",
+      },
+      {
+        id: 8,
+        src: "/images/campus/gallery/guest-lecture-expert-session-2025-26/guest-lecture-expert-session-2025-26-7.webp",
+      },
+      {
+        id: 9,
+        src: "/images/campus/gallery/guest-lecture-expert-session-2025-26/guest-lecture-expert-session-2025-26-8.webp",
+      },
+      {
+        id: 10,
+        src: "/images/campus/gallery/guest-lecture-expert-session-2025-26/guest-lecture-expert-session-2025-26-9.webp",
+      },
+      {
+        id: 11,
+        src: "/images/campus/gallery/guest-lecture-expert-session-2025-26/guest-lecture-expert-session-2025-26-10.webp",
+      },
+      {
+        id: 12,
+        src: "/images/campus/gallery/guest-lecture-expert-session-2025-26/guest-lecture-expert-session-2025-26-11.webp",
+      },
+      {
+        id: 13,
+        src: "/images/campus/gallery/guest-lecture-expert-session-2025-26/guest-lecture-expert-session-2025-26-12.webp",
+      },
+      {
+        id: 14,
+        src: "/images/campus/gallery/guest-lecture-expert-session-2025-26/guest-lecture-expert-session-2025-26-13.webp",
+      },
+      {
+        id: 15,
+        src: "/images/campus/gallery/guest-lecture-expert-session-2025-26/guest-lecture-expert-session-2025-26-14.webp",
+      },
+      {
+        id: 16,
+        src: "/images/campus/gallery/guest-lecture-expert-session-2025-26/guest-lecture-expert-session-2025-26-15.webp",
+      },
+      {
+        id: 17,
+        src: "/images/campus/gallery/guest-lecture-expert-session-2025-26/guest-lecture-expert-session-2025-26-17.webp",
+      },
+    ],
+  },
 
+  {
+    id: "guest-lecture-on-french-language-2026-27",
+    label: "Guest Lecture on French Language 2026-27",
+    images: [
+      {
+        id: 1,
+        src: "/images/campus/gallery/guest-lecture-on-french-language-2026-27/guest-lecture-on-french-language-2026-27-1.webp",
+      },
+    ],
+  },
 
+  {
+    id: "guest-lecture-posh-act-session",
+    label: "Guest Lecture POSH Act Session",
+    images: [
+      {
+        id: 1,
+        src: "/images/campus/gallery/guest-lecture-posh-act-session/guest-lecture-posh-act-session-1.webp",
+      },
+      {
+        id: 2,
+        src: "/images/campus/gallery/guest-lecture-posh-act-session/guest-lecture-posh-act-session-2.webp",
+      },
+      {
+        id: 3,
+        src: "/images/campus/gallery/guest-lecture-posh-act-session/guest-lecture-posh-act-session-3.webp",
+      },
+      {
+        id: 4,
+        src: "/images/campus/gallery/guest-lecture-posh-act-session/guest-lecture-posh-act-session-4.webp",
+      },
+      {
+        id: 5,
+        src: "/images/campus/gallery/guest-lecture-posh-act-session/guest-lecture-posh-act-session-5.webp",
+      },
+      {
+        id: 6,
+        src: "/images/campus/gallery/guest-lecture-posh-act-session/guest-lecture-posh-act-session-6.webp",
+      },
+      {
+        id: 7,
+        src: "/images/campus/gallery/guest-lecture-posh-act-session/guest-lecture-posh-act-session-7.webp",
+      },
+      {
+        id: 8,
+        src: "/images/campus/gallery/guest-lecture-posh-act-session/guest-lecture-posh-act-session-8.webp",
+      },
+      {
+        id: 9,
+        src: "/images/campus/gallery/guest-lecture-posh-act-session/guest-lecture-posh-act-session-9.webp",
+      },
+      {
+        id: 10,
+        src: "/images/campus/gallery/guest-lecture-posh-act-session/guest-lecture-posh-act-session-10.webp",
+      },
+    ],
+  },
 
+  {
+    id: "Guest-Lecture-Share-Market-Gen-Z",
+    label: "Guest Lecture Share Market Gen-Z",
+    images: [
+      {
+        id: 1,
+        src: "/images/campus/gallery/Guest-Lecture-Share-Market-Gen-Z/Guest-Lecture-Share-Market-Gen-Z-1.webp",
+      },
+      {
+        id: 2,
+        src: "/images/campus/gallery/Guest-Lecture-Share-Market-Gen-Z/Guest-Lecture-Share-Market-Gen-Z-2.webp",
+      },
+      {
+        id: 3,
+        src: "/images/campus/gallery/Guest-Lecture-Share-Market-Gen-Z/Guest-Lecture-Share-Market-Gen-Z-3.webp",
+      },
+      {
+        id: 4,
+        src: "/images/campus/gallery/Guest-Lecture-Share-Market-Gen-Z/Guest-Lecture-Share-Market-Gen-Z-4.webp",
+      },
+      {
+        id: 5,
+        src: "/images/campus/gallery/Guest-Lecture-Share-Market-Gen-Z/Guest-Lecture-Share-Market-Gen-Z-5.webp",
+      },
+      {
+        id: 6,
+        src: "/images/campus/gallery/Guest-Lecture-Share-Market-Gen-Z/Guest-Lecture-Share-Market-Gen-Z-6.webp",
+      },
+      {
+        id: 7,
+        src: "/images/campus/gallery/Guest-Lecture-Share-Market-Gen-Z/Guest-Lecture-Share-Market-Gen-Z-7.webp",
+      },
+      {
+        id: 8,
+        src: "/images/campus/gallery/Guest-Lecture-Share-Market-Gen-Z/Guest-Lecture-Share-Market-Gen-Z-8.webp",
+      },
+      {
+        id: 9,
+        src: "/images/campus/gallery/Guest-Lecture-Share-Market-Gen-Z/Guest-Lecture-Share-Market-Gen-Z-9.webp",
+      },
+      {
+        id: 10,
+        src: "/images/campus/gallery/Guest-Lecture-Share-Market-Gen-Z/Guest-Lecture-Share-Market-Gen-Z-10.webp",
+      },
+      {
+        id: 11,
+        src: "/images/campus/gallery/Guest-Lecture-Share-Market-Gen-Z/Guest-Lecture-Share-Market-Gen-Z-11.webp",
+      },
+    ],
+  },
+
+  {
+    id: "guest-lecture-youth-engagement-and-water-tewardship-program-2025-26",
+    label:
+      "Guest Lecture Youth Engagement and Water Stewardship Program 2025-26",
+    images: [
+      {
+        id: 1,
+        src: "/images/campus/gallery/guest-lecture-youth-engagement-and-water-tewardship-program-2025-26/guest-lecture-youth-engagement-and-water-tewardship-program-2025-26-1.webp",
+      },
+      {
+        id: 2,
+        src: "/images/campus/gallery/guest-lecture-youth-engagement-and-water-tewardship-program-2025-26/guest-lecture-youth-engagement-and-water-tewardship-program-2025-26-2.webp",
+      },
+      {
+        id: 3,
+        src: "/images/campus/gallery/guest-lecture-youth-engagement-and-water-tewardship-program-2025-26/guest-lecture-youth-engagement-and-water-tewardship-program-2025-26-3.webp",
+      },
+      {
+        id: 4,
+        src: "/images/campus/gallery/guest-lecture-youth-engagement-and-water-tewardship-program-2025-26/guest-lecture-youth-engagement-and-water-tewardship-program-2025-26-4.webp",
+      },
+      {
+        id: 5,
+        src: "/images/campus/gallery/guest-lecture-youth-engagement-and-water-tewardship-program-2025-26/guest-lecture-youth-engagement-and-water-tewardship-program-2025-26-5.webp",
+      },
+      {
+        id: 6,
+        src: "/images/campus/gallery/guest-lecture-youth-engagement-and-water-tewardship-program-2025-26/guest-lecture-youth-engagement-and-water-tewardship-program-2025-26-6.webp",
+      },
+      {
+        id: 7,
+        src: "/images/campus/gallery/guest-lecture-youth-engagement-and-water-tewardship-program-2025-26/guest-lecture-youth-engagement-and-water-tewardship-program-2025-26-7.webp",
+      },
+      {
+        id: 8,
+        src: "/images/campus/gallery/guest-lecture-youth-engagement-and-water-tewardship-program-2025-26/guest-lecture-youth-engagement-and-water-tewardship-program-2025-26-8.webp",
+      },
+    ],
+  },
+
+  {
+    id: "open-day",
+    label: "Open Day",
+    images: [
+      {
+        id: 1,
+        src: "/images/campus/gallery/open-day/open-day-1.webp",
+      },
+      {
+        id: 2,
+        src: "/images/campus/gallery/open-day/open-day-2.webp",
+      },
+      {
+        id: 3,
+        src: "/images/campus/gallery/open-day/open-day-3.webp",
+      },
+      {
+        id: 4,
+        src: "/images/campus/gallery/open-day/open-day-4.webp",
+      },
+      {
+        id: 5,
+        src: "/images/campus/gallery/open-day/open-day-5.webp",
+      },
+    ],
+  },
+
+  {
+    id: "parent-teacher-day-2025",
+    label: "Parent Teacher Day 2025",
+    images: [
+      {
+        id: 1,
+        src: "/images/campus/gallery/parent-teacher-day-2025/parent-teacher-day-2025-1.webp",
+      },
+      {
+        id: 2,
+        src: "/images/campus/gallery/parent-teacher-day-2025/parent-teacher-day-2025-2.webp",
+      },
+      {
+        id: 3,
+        src: "/images/campus/gallery/parent-teacher-day-2025/parent-teacher-day-2025-3.webp",
+      },
+      {
+        id: 4,
+        src: "/images/campus/gallery/parent-teacher-day-2025/parent-teacher-day-2025-4.webp",
+      },
+      {
+        id: 5,
+        src: "/images/campus/gallery/parent-teacher-day-2025/parent-teacher-day-2025-5.webp",
+      },
+      {
+        id: 6,
+        src: "/images/campus/gallery/parent-teacher-day-2025/parent-teacher-day-2025-6.webp",
+      },
+      {
+        id: 7,
+        src: "/images/campus/gallery/parent-teacher-day-2025/parent-teacher-day-2025-7.webp",
+      },
+      {
+        id: 8,
+        src: "/images/campus/gallery/parent-teacher-day-2025/parent-teacher-day-2025-8.webp",
+      },
+      {
+        id: 9,
+        src: "/images/campus/gallery/parent-teacher-day-2025/parent-teacher-day-2025-9.webp",
+      },
+      {
+        id: 10,
+        src: "/images/campus/gallery/parent-teacher-day-2025/parent-teacher-day-2025-10.webp",
+      },
+      {
+        id: 11,
+        src: "/images/campus/gallery/parent-teacher-day-2025/parent-teacher-day-2025-11.webp",
+      },
+      {
+        id: 12,
+        src: "/images/campus/gallery/parent-teacher-day-2025/parent-teacher-day-2025-12.webp",
+      },
+      {
+        id: 13,
+        src: "/images/campus/gallery/parent-teacher-day-2025/parent-teacher-day-2025-13.webp",
+      },
+      {
+        id: 14,
+        src: "/images/campus/gallery/parent-teacher-day-2025/parent-teacher-day-2025-14.webp",
+      },
+      {
+        id: 15,
+        src: "/images/campus/gallery/parent-teacher-day-2025/parent-teacher-day-2025-15.webp",
+      },
+      {
+        id: 16,
+        src: "/images/campus/gallery/parent-teacher-day-2025/parent-teacher-day-2025-16.webp",
+      },
+      {
+        id: 17,
+        src: "/images/campus/gallery/parent-teacher-day-2025/parent-teacher-day-2025-17.webp",
+      },
+      {
+        id: 18,
+        src: "/images/campus/gallery/parent-teacher-day-2025/parent-teacher-day-2025-18.webp",
+      },
+      {
+        id: 19,
+        src: "/images/campus/gallery/parent-teacher-day-2025/parent-teacher-day-2025-19.webp",
+      },
+      {
+        id: 20,
+        src: "/images/campus/gallery/parent-teacher-day-2025/parent-teacher-day-2025-20.webp",
+      },
+      {
+        id: 21,
+        src: "/images/campus/gallery/parent-teacher-day-2025/parent-teacher-day-2025-21.webp",
+      },
+      {
+        id: 22,
+        src: "/images/campus/gallery/parent-teacher-day-2025/parent-teacher-day-2025-22.webp",
+      },
+      {
+        id: 23,
+        src: "/images/campus/gallery/parent-teacher-day-2025/parent-teacher-day-2025-23.webp",
+      },
+      {
+        id: 24,
+        src: "/images/campus/gallery/parent-teacher-day-2025/parent-teacher-day-2025-24.webp",
+      },
+      {
+        id: 25,
+        src: "/images/campus/gallery/parent-teacher-day-2025/parent-teacher-day-2025-25.webp",
+      },
+      {
+        id: 26,
+        src: "/images/campus/gallery/parent-teacher-day-2025/parent-teacher-day-2025-26.webp",
+      },
+      {
+        id: 27,
+        src: "/images/campus/gallery/parent-teacher-day-2025/parent-teacher-day-2025-27.webp",
+      },
+      {
+        id: 28,
+        src: "/images/campus/gallery/parent-teacher-day-2025/parent-teacher-day-2025-28.webp",
+      },
+    ],
+  },
+
+  {
+    id: "podcast-2025-26",
+    label: "Podcast 2025-26",
+    images: [
+      {
+        id: 1,
+        src: "/images/campus/gallery/podcast-2025-26/podcast-2025-26-1.webp",
+      },
+      {
+        id: 2,
+        src: "/images/campus/gallery/podcast-2025-26/podcast-2025-26-2.webp",
+      },
+      {
+        id: 3,
+        src: "/images/campus/gallery/podcast-2025-26/podcast-2025-26-3.webp",
+      },
+      {
+        id: 4,
+        src: "/images/campus/gallery/podcast-2025-26/podcast-2025-26-4.webp",
+      },
+      {
+        id: 5,
+        src: "/images/campus/gallery/podcast-2025-26/podcast-2025-26-5.webp",
+      },
+      {
+        id: 6,
+        src: "/images/campus/gallery/podcast-2025-26/podcast-2025-26-6.webp",
+      },
+      {
+        id: 7,
+        src: "/images/campus/gallery/podcast-2025-26/podcast-2025-26-7.webp",
+      },
+      {
+        id: 8,
+        src: "/images/campus/gallery/podcast-2025-26/podcast-2025-26-8.webp",
+      },
+      {
+        id: 9,
+        src: "/images/campus/gallery/podcast-2025-26/podcast-2025-26-9.webp",
+      },
+      {
+        id: 10,
+        src: "/images/campus/gallery/podcast-2025-26/podcast-2025-26-10.webp",
+      },
+      {
+        id: 11,
+        src: "/images/campus/gallery/podcast-2025-26/podcast-2025-26-11.webp",
+      },
+      {
+        id: 12,
+        src: "/images/campus/gallery/podcast-2025-26/podcast-2025-26-12.webp",
+      },
+      {
+        id: 13,
+        src: "/images/campus/gallery/podcast-2025-26/podcast-2025-26-13.webp",
+      },
+      {
+        id: 14,
+        src: "/images/campus/gallery/podcast-2025-26/podcast-2025-26-14.webp",
+      },
+    ],
+  },
+
+  {
+    id: "skill-based-courses-session-2025",
+    label: "Skill Based Courses Session 2025",
+    images: [
+      {
+        id: 1,
+        src: "/images/campus/gallery/skill-based-courses-session-2025/skill-based-courses-session-2025-1.webp",
+      },
+      {
+        id: 2,
+        src: "/images/campus/gallery/skill-based-courses-session-2025/skill-based-courses-session-2025-2.webp",
+      },
+      {
+        id: 3,
+        src: "/images/campus/gallery/skill-based-courses-session-2025/skill-based-courses-session-2025-3.webp",
+      },
+      {
+        id: 4,
+        src: "/images/campus/gallery/skill-based-courses-session-2025/skill-based-courses-session-2025-4.webp",
+      },
+      {
+        id: 5,
+        src: "/images/campus/gallery/skill-based-courses-session-2025/skill-based-courses-session-2025-5.webp",
+      },
+      {
+        id: 6,
+        src: "/images/campus/gallery/skill-based-courses-session-2025/skill-based-courses-session-2025-6.webp",
+      },
+      {
+        id: 7,
+        src: "/images/campus/gallery/skill-based-courses-session-2025/skill-based-courses-session-2025-7.webp",
+      },
+      {
+        id: 8,
+        src: "/images/campus/gallery/skill-based-courses-session-2025/skill-based-courses-session-2025-8.webp",
+      },
+      {
+        id: 9,
+        src: "/images/campus/gallery/skill-based-courses-session-2025/skill-based-courses-session-2025-9.webp",
+      },
+      {
+        id: 10,
+        src: "/images/campus/gallery/skill-based-courses-session-2025/skill-based-courses-session-2025-10.webp",
+      },
+      {
+        id: 11,
+        src: "/images/campus/gallery/skill-based-courses-session-2025/skill-based-courses-session-2025-11.webp",
+      },
+      {
+        id: 12,
+        src: "/images/campus/gallery/skill-based-courses-session-2025/skill-based-courses-session-2025-12.webp",
+      },
+      {
+        id: 13,
+        src: "/images/campus/gallery/skill-based-courses-session-2025/skill-based-courses-session-2025-13.webp",
+      },
+      {
+        id: 14,
+        src: "/images/campus/gallery/skill-based-courses-session-2025/skill-based-courses-session-2025-14.webp",
+      },
+    ],
+  },
+
+  {
+    id: "teachers-day-2026-27",
+    label: "Teachers Day 2026-27",
+    images: [
+      {
+        id: 1,
+        src: "/images/campus/gallery/teachers-day-2026-27/teachers-day-2026-27-1.png",
+      },
+      {
+        id: 2,
+        src: "/images/campus/gallery/teachers-day-2026-27/teachers-day-2026-27-2.png",
+      },
+      {
+        id: 3,
+        src: "/images/campus/gallery/teachers-day-2026-27/teachers-day-2026-27-3.png",
+      },
+      {
+        id: 4,
+        src: "/images/campus/gallery/teachers-day-2026-27/teachers-day-2026-27-4.png",
+      },
+      {
+        id: 5,
+        src: "/images/campus/gallery/teachers-day-2026-27/teachers-day-2026-27-5.png",
+      },
+      {
+        id: 6,
+        src: "/images/campus/gallery/teachers-day-2026-27/teachers-day-2026-27-6.png",
+      },
+      {
+        id: 7,
+        src: "/images/campus/gallery/teachers-day-2026-27/teachers-day-2026-27-7.png",
+      },
+      {
+        id: 8,
+        src: "/images/campus/gallery/teachers-day-2026-27/teachers-day-2026-27-8.png",
+      },
+      {
+        id: 9,
+        src: "/images/campus/gallery/teachers-day-2026-27/teachers-day-2026-27-9.png",
+      },
+      {
+        id: 10,
+        src: "/images/campus/gallery/teachers-day-2026-27/teachers-day-2026-27-10.png",
+      },
+      {
+        id: 11,
+        src: "/images/campus/gallery/teachers-day-2026-27/teachers-day-2026-27-11.png",
+      },
+      {
+        id: 12,
+        src: "/images/campus/gallery/teachers-day-2026-27/teachers-day-2026-27-12.png",
+      },
+      {
+        id: 13,
+        src: "/images/campus/gallery/teachers-day-2026-27/teachers-day-2026-27-13.png",
+      },
+      {
+        id: 14,
+        src: "/images/campus/gallery/teachers-day-2026-27/teachers-day-2026-27-14.png",
+      },
+      {
+        id: 15,
+        src: "/images/campus/gallery/teachers-day-2026-27/teachers-day-2026-27-15.png",
+      },
+      {
+        id: 16,
+        src: "/images/campus/gallery/teachers-day-2026-27/teachers-day-2026-27-16.png",
+      },
+      {
+        id: 17,
+        src: "/images/campus/gallery/teachers-day-2026-27/teachers-day-2026-27-17.png",
+      },
+      {
+        id: 18,
+        src: "/images/campus/gallery/teachers-day-2026-27/teachers-day-2026-27-18.png",
+      },
+      {
+        id: 19,
+        src: "/images/campus/gallery/teachers-day-2026-27/teachers-day-2026-27-19.png",
+      },
+      {
+        id: 20,
+        src: "/images/campus/gallery/teachers-day-2026-27/teachers-day-2026-27-20.png",
+      },
+      {
+        id: 21,
+        src: "/images/campus/gallery/teachers-day-2026-27/teachers-day-2026-27-21.png",
+      },
+      {
+        id: 22,
+        src: "/images/campus/gallery/teachers-day-2026-27/teachers-day-2026-27-22.png",
+      },
+      {
+        id: 23,
+        src: "/images/campus/gallery/teachers-day-2026-27/teachers-day-2026-27-23.png",
+      },
+      {
+        id: 24,
+        src: "/images/campus/gallery/teachers-day-2026-27/teachers-day-2026-27-24.png",
+      },
+      {
+        id: 25,
+        src: "/images/campus/gallery/teachers-day-2026-27/teachers-day-2026-27-25.png",
+      },
+      {
+        id: 26,
+        src: "/images/campus/gallery/teachers-day-2026-27/teachers-day-2026-27-26.png",
+      },
+    ],
+  },
 ];

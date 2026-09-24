@@ -18,7 +18,7 @@ const page = () => {
           </div>
           <div className="aboutus_right">
             <div className="heading">
-              Indian Journal of Current trends in Management science
+              Indian Journal Of Current Trends In Management Science
             </div>
             Institute also invites and publishes research papers in institute
             journal Indian Journal of Current trends in Management science”

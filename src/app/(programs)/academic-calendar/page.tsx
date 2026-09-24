@@ -77,7 +77,7 @@ const Page = () => {
           <section>
             {/* <p className="text-center">The scheduled timeline of academic sessions, exams, and key activities for the academic year. </p> */}
             <div className="heading text-center">
-              Academic Calendar Term – I
+              Academic Calendar As Per SPPU Term – I
             </div>
             <div className="mb-5">
               <AcademicCalendarTable data={termICalendarData} />
@@ -86,7 +86,7 @@ const Page = () => {
 
           <section>
             <div className="heading text-center">
-              Academic Calendar Term – II
+              Academic Calendar As Per SPPU Term – II
             </div>
 
             <div className="mb-5">

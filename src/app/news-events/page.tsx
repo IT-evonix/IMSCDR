@@ -47,7 +47,7 @@ const DEFAULT_LOGO = "/images/news-and-events/newsandevents.webp";
 
 /* ─── Skeleton Card ──────────────────────────────── */
 const SkeletonCard = () => (
-  <div className="col-lg-4 col-sm-6 mb-4">
+  <div className="col-lg-12 col-sm-12 mb-4">
     <div className="news-card animate-pulse">
       <div
         className="news-image"
@@ -104,12 +104,12 @@ const Page = () => {
         "/api/news-events?page=1&limit=50&status=Published",
       );
       const data = await res.json();
-      if (res.ok && data.status === 'success' && Array.isArray(data.data)) {
+      if (res.ok && data.status === "success" && Array.isArray(data.data)) {
         // Sirf News, Event aur bina type (legacy empty) wale posts hi aayenge. Dusra koi bhi type allow nahi hoga.
         const newsAndEventsOnly = data.data.filter((item: any) => {
-          if (item.status !== 'Published') return false;
-          const type = (item.contentType || '').trim().toLowerCase();
-          return type === 'news' || type === 'event' || type === '';
+          if (item.status !== "Published") return false;
+          const type = (item.contentType || "").trim().toLowerCase();
+          return type === "news" || type === "event" || type === "";
         });
         setDynamicItems(newsAndEventsOnly);
       }
@@ -152,7 +152,7 @@ const Page = () => {
                 ))
               : dynamicItems.map((item) => (
                   <div
-                    className="col-lg-4 col-md-6 col-sm-12 mb-4"
+                    className="col-lg-12 col-md-12 col-sm-12 mb-4"
                     key={`dyn-${item.id}`}
                   >
                     <div className="news-card">
@@ -203,15 +203,8 @@ const Page = () => {
                         )}
                       </div>
 
-                      <div
-                        className="news-content"
-                        style={{
-                          display: "flex",
-                          flexDirection: "column",
-                          justifyContent: "space-between",
-                        }}
-                      >
-                        <div>
+                      <div className="news-content">
+                        <div className="newscontentleft">
                           {/* Date / Date Range at top (only displayed if manually provided) */}
                           {(item.startDate || item.endDate) && (
                             <span className="news-date">
@@ -222,35 +215,14 @@ const Page = () => {
                           )}
 
                           {/* Title */}
-                          <div
-                            className="subheading"
-                            style={{ margin: "2px 0 4px 0" }}
-                          >
-                            {item.title}
-                          </div>
+                          <div className="subheading">{item.title}</div>
 
                           {/* Truncated Short Description */}
-                          {item.summary && (
-                            <p
-                              style={{
-                                fontSize: 11,
-                                color: "#555",
-                                margin: "4px 0 8px 0",
-                                display: "-webkit-box",
-                                WebkitLineClamp: 2,
-                                WebkitBoxOrient: "vertical",
-                                overflow: "hidden",
-                                textOverflow: "ellipsis",
-                                lineHeight: "1.35",
-                              }}
-                            >
-                              {item.summary}
-                            </p>
-                          )}
+                          {item.summary && <p>{item.summary}</p>}
                         </div>
 
                         {/* Read More Button */}
-                        <div style={{ marginTop: "auto", paddingTop: 6 }}>
+                        <div>
                           {item.contentFormat === "pdf" &&
                           item.pdfUrl &&
                           !item.pdfUrl.startsWith("blob:") ? (
