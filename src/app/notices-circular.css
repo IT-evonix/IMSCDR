@@ -733,6 +733,13 @@
   background-color: #fffaf0;
 }
 
+.enquiry-input.is-invalid:focus,
+.enquiry-textarea.is-invalid:focus,
+.enquiry-select.is-invalid:focus {
+  border-color: #dc2626 !important;
+  box-shadow: 0 0 0 3.5px rgba(220, 38, 38, 0.14) !important;
+}
+
 .enquiry-textarea {
   width: 100%;
   height: 65px;

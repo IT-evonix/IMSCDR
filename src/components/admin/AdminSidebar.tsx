@@ -57,7 +57,7 @@ export const SIDEBAR_NAV_ITEMS: SidebarNavItem[] = [
       { id: 'create-news', label: 'News', href: '/admin/news-events/create?type=News', icon: Newspaper },
       // { id: 'create-event', label: 'Event', href: '/admin/news-events/create?type=Event', icon: Calendar },
       { id: 'create-blog', label: 'Blogs', href: '/admin/news-events/create?type=Blog', icon: BookOpen },
-      { id: 'create-notice-circular', label: 'Notices-Circulars', href: '/admin/news-events/create?type=Notice', icon: Bell },
+      { id: 'create-notice-circular', label: 'Circulars & Notices', href: '/admin/news-events/create?type=Notice', icon: Bell },
     ],
   },
   { id: 'contact-messages', label: 'Contact Enquiries', href: '/admin/contact-messages', icon: Mail },

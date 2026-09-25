@@ -35,6 +35,9 @@ export const ImageUpload: React.FC<ImageUploadProps> = ({
     if (e.target.files && e.target.files.length > 0) {
       onAddImages(e.target.files);
     }
+    if (e.target) {
+      e.target.value = '';
+    }
   };
 
   return (
@@ -105,7 +108,7 @@ export const ImageUpload: React.FC<ImageUploadProps> = ({
             <input
               ref={fileInputRef}
               type="file"
-              accept="image/*"
+              accept="image/png,image/jpeg,image/jpg,image/webp,.png,.jpg,.jpeg,.webp"
               multiple={maxFiles > 1}
               onChange={handleFileChange}
               className="hidden"

@@ -97,7 +97,13 @@ exports.getAllCategories = async (req, res, next) => {
     const categoriesWithCount = await Promise.all(
       categories.map(async (cat) => {
         const count = await prisma.newsEvent.count({
-          where: { category: cat.name, deletedAt: null },
+          where: {
+            deletedAt: null,
+            OR: [
+              { category: { equals: cat.name, mode: 'insensitive' } },
+              { category: { equals: cat.slug, mode: 'insensitive' } },
+            ],
+          },
         });
         return {
           ...cat,
@@ -288,6 +294,25 @@ exports.deleteCategory = async (req, res, next) => {
       return res.status(404).json({ status: 'fail', message: 'Category not found or already deleted.' });
     }
 
+    // Check if category is linked to any active posts (by name or slug)
+    const linkedPostsCount = await prisma.newsEvent.count({
+      where: {
+        deletedAt: null,
+        OR: [
+          { category: { equals: category.name, mode: 'insensitive' } },
+          { category: { equals: category.slug, mode: 'insensitive' } },
+        ],
+      },
+    });
+
+    if (linkedPostsCount > 0) {
+      return res.status(400).json({
+        status: 'fail',
+        message: `Cannot delete category "${category.name}" because it is currently linked to ${linkedPostsCount} post${linkedPostsCount > 1 ? 's' : ''}. Please reassign or delete the associated posts first.`,
+        linkedPostsCount,
+      });
+    }
+
     // Perform SOFT DELETE (preserve data in database)
     await prisma.category.update({
       where: { id: catId },
@@ -296,7 +321,7 @@ exports.deleteCategory = async (req, res, next) => {
 
     return res.status(200).json({
       status: 'success',
-      message: 'Category soft deleted successfully!',
+      message: 'Category deleted successfully!',
     });
   } catch (error) {
     next(error);

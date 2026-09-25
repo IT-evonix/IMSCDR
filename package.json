@@ -8,6 +8,7 @@
   },
   "scripts": {
     "dev": "nodemon server.js",
+    "prisma:generate": "prisma generate --schema=./prisma/schema",
     "build": "prisma generate --schema=./prisma/schema && next build",
     "start": "NODE_ENV=production node server.js",
     "postinstall": "prisma generate --schema=./prisma/schema",

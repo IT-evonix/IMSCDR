@@ -7,8 +7,9 @@ const expressApp = require('./src/server/app');
 const dev = process.env.NODE_ENV !== 'production';
 const port = process.env.PORT || 3000;
 
-// Initialize Next.js Application Instance
-const nextApp = next({ dev, dir: __dirname, turbo: false });
+// Initialize Next.js Application Instance (Using Webpack on Windows for stability)
+delete process.env.TURBOPACK;
+const nextApp = next({ dev, dir: __dirname, webpack: true });
 const handle = nextApp.getRequestHandler();
 
 nextApp.prepare().then(() => {

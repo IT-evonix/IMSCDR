@@ -279,7 +279,7 @@ export default function AdminGrievancesPage() {
                   <th className="py-2.5 px-4">Email &amp; Mobile</th>
                   <th className="py-2.5 px-4 text-center">Course</th>
                   <th className="py-2.5 px-4">Complaint in Short</th>
-                  <th className="py-2.5 px-4">Submitted Date</th>
+                  <th className="py-2.5 px-4">Date</th>
                   <th className="py-2.5 px-4 text-center w-28">Action</th>
                 </tr>
               </thead>

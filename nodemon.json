@@ -1,6 +1,6 @@
 {
-  "watch": ["server.js", "src/server", "prisma/schema"],
-  "ext": "js,json,prisma",
+  "watch": ["server.js", "src/server"],
+  "ext": "js,json",
   "ignore": ["node_modules", ".next", "*.log"],
-  "exec": "npx prisma generate --schema=./prisma/schema && node server.js"
+  "exec": "node server.js"
 }

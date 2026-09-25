@@ -194,7 +194,7 @@ export default function ContentLibraryPage() {
       {/* Page Header */}
       <PageTitle
         subtitle="IMSCDR Management"
-        title="News, Blogs, Notice &  Circulars"
+        title="News, Blogs, Circulars & Notices"
         description="Manage and publish your institution's digital assets."
       >
         <div className="flex flex-wrap items-center gap-2">

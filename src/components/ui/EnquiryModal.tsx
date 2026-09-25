@@ -1,7 +1,10 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { X, GraduationCap, ArrowRight, CheckCircle2, AlertCircle } from 'lucide-react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { ArrowRight, CheckCircle2, AlertCircle } from 'lucide-react';
+import { enquirySchema, EnquiryFormData } from '@/data/enquirySchema';
 
 interface EnquiryModalProps {
   isOpen?: boolean;
@@ -25,32 +28,43 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
   const [internalIsOpen, setInternalIsOpen] = useState(false);
   const isModalOpen = controlledIsOpen !== undefined ? controlledIsOpen : internalIsOpen;
 
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    course: defaultCourse || '',
-    address: '',
-    message: '',
-  });
-
-  const [errors, setErrors] = useState<Record<string, string>>({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [successMsg, setSuccessMsg] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
+
+  const {
+    register,
+    handleSubmit,
+    reset,
+    setValue,
+    watch,
+    clearErrors,
+    formState: { errors, isSubmitting },
+  } = useForm<EnquiryFormData>({
+    resolver: zodResolver(enquirySchema),
+    defaultValues: {
+      name: '',
+      phone: '',
+      email: '',
+      course: defaultCourse || '',
+      address: '',
+      message: '',
+    },
+  });
+
+  const selectedCourse = watch('course');
 
   // Listen for global custom event and window function to trigger modal from any button
   useEffect(() => {
     const handleOpen = (e: any) => {
       if (e?.detail?.course) {
-        setFormData((prev) => ({ ...prev, course: e.detail.course }));
+        setValue('course', e.detail.course, { shouldValidate: true });
       }
       setInternalIsOpen(true);
     };
 
     (window as any).openEnquiryModal = (course?: string) => {
       if (course) {
-        setFormData((prev) => ({ ...prev, course }));
+        setValue('course', course, { shouldValidate: true });
       }
       setInternalIsOpen(true);
     };
@@ -60,7 +74,13 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
       window.removeEventListener('open-enquiry-modal', handleOpen);
       delete (window as any).openEnquiryModal;
     };
-  }, []);
+  }, [setValue]);
+
+  useEffect(() => {
+    if (defaultCourse) {
+      setValue('course', defaultCourse, { shouldValidate: true });
+    }
+  }, [defaultCourse, setValue]);
 
   // Load Google reCAPTCHA v3 script dynamically
   useEffect(() => {
@@ -85,32 +105,12 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
     }
     setSuccessMsg('');
     setErrorMsg('');
-    setErrors({});
+    clearErrors();
   };
 
-  const validate = () => {
-    const errs: Record<string, string> = {};
-    if (!formData.name.trim()) errs.name = 'Please enter your full name';
-    if (!formData.email.trim() || !formData.email.includes('@')) {
-      errs.email = 'Please enter a valid email address';
-    }
-    if (!formData.phone.trim() || formData.phone.length < 10) {
-      errs.phone = 'Please enter a valid 10-digit mobile number';
-    }
-    if (!formData.course) errs.course = 'Please select a course';
-    if (!formData.message.trim()) errs.message = 'Please enter your enquiry message';
-    setErrors(errs);
-    return Object.keys(errs).length === 0;
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const onSubmit = async (data: EnquiryFormData) => {
     setSuccessMsg('');
     setErrorMsg('');
-
-    if (!validate()) return;
-
-    setIsSubmitting(true);
 
     try {
       let recaptchaToken = '';
@@ -134,19 +134,19 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          ...formData,
+          ...data,
           recaptchaToken,
         }),
       });
 
-      const data = await res.json();
+      const resData = await res.json();
 
-      if (res.ok && data.status === 'success') {
-        setSuccessMsg(data.message || 'Enquiry submitted successfully!');
-        setFormData({
+      if (res.ok && resData.status === 'success') {
+        setSuccessMsg(resData.message || 'Thank you! Your admission enquiry has been submitted successfully.');
+        reset({
           name: '',
-          email: '',
           phone: '',
+          email: '',
           course: defaultCourse || '',
           address: '',
           message: '',
@@ -155,18 +155,15 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
           closeModal();
         }, 3000);
       } else {
-        throw new Error(data.message || 'Failed to submit enquiry. Please try again.');
+        throw new Error(resData.message || 'Failed to submit enquiry. Please try again.');
       }
     } catch (err: any) {
       setErrorMsg(err.message || 'Something went wrong. Please try again.');
-    } finally {
-      setIsSubmitting(false);
     }
   };
 
   return (
     <>
-
       {/* Modal Backdrop & Container (Pure CSS - No Tailwind) */}
       {isModalOpen && (
         <div className="enquiry-modal-overlay" onClick={closeModal}>
@@ -174,7 +171,7 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
             className="enquiry-modal-container"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Close Button (Matching Faculty Modal style) */}
+            {/* Close Button */}
             <button
               type="button"
               onClick={closeModal}
@@ -185,7 +182,7 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
               ✕
             </button>
 
-            {/* Modal Header (Clean Title & Subtitle - Logo Removed as requested) */}
+            {/* Modal Header */}
             <div className="enquiry-modal-header">
               <h3 className="enquiry-modal-title">Admission Enquiry</h3>
               <p className="enquiry-modal-subtitle">
@@ -194,58 +191,57 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
             </div>
 
             {/* Form */}
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit(onSubmit)} noValidate>
               <div className="row">
-                {/* Candidate Name */}
+                {/* 1. Candidate Name */}
                 <div className="col-12 col-md-6 mb-2">
                   <input
                     type="text"
                     placeholder="Full Name *"
-                    value={formData.name}
-                    onChange={(e) => {
-                      const val = e.target.value.replace(/[^a-zA-Z\s]/g, '');
-                      setFormData({ ...formData, name: val });
-                    }}
                     className={`enquiry-input ${errors.name ? 'is-invalid' : ''}`}
+                    {...register('name', {
+                      onChange: (e) => {
+                        e.target.value = e.target.value.replace(/[^a-zA-Z\s.]/g, '');
+                      },
+                    })}
                   />
-                  {errors.name && <p className="enquiry-error">{errors.name}</p>}
+                  {errors.name && <p className="enquiry-error">{errors.name.message}</p>}
                 </div>
 
-                {/* Mobile Number */}
+                {/* 2. Mobile Number */}
                 <div className="col-12 col-md-6 mb-2">
                   <input
                     type="tel"
                     placeholder="Mobile Number *"
                     maxLength={10}
-                    value={formData.phone}
-                    onChange={(e) => {
-                      const val = e.target.value.replace(/\D/g, '').slice(0, 10);
-                      setFormData({ ...formData, phone: val });
-                    }}
                     className={`enquiry-input ${errors.phone ? 'is-invalid' : ''}`}
+                    {...register('phone', {
+                      onChange: (e) => {
+                        e.target.value = e.target.value.replace(/\D/g, '').slice(0, 10);
+                      },
+                    })}
                   />
-                  {errors.phone && <p className="enquiry-error">{errors.phone}</p>}
+                  {errors.phone && <p className="enquiry-error">{errors.phone.message}</p>}
                 </div>
 
-                {/* Email Address */}
+                {/* 3. Email Address */}
                 <div className="col-12 col-md-6 mb-2">
                   <input
                     type="email"
                     placeholder="Email Address *"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     className={`enquiry-input ${errors.email ? 'is-invalid' : ''}`}
+                    {...register('email')}
                   />
-                  {errors.email && <p className="enquiry-error">{errors.email}</p>}
+                  {errors.email && <p className="enquiry-error">{errors.email.message}</p>}
                 </div>
 
-                {/* Course Dropdown */}
+                {/* 4. Course Dropdown */}
                 <div className="col-12 col-md-6 mb-2">
                   <select
-                    value={formData.course}
-                    onChange={(e) => setFormData({ ...formData, course: e.target.value })}
                     className={`enquiry-select ${errors.course ? 'is-invalid' : ''
-                      } ${!formData.course ? 'is-placeholder' : ''}`}
+                      } ${!selectedCourse ? 'is-placeholder' : ''}`}
+                    value={selectedCourse || ''}
+                    {...register('course')}
                   >
                     <option value="" disabled>
                       Select Program / Course *
@@ -256,30 +252,29 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                       </option>
                     ))}
                   </select>
-                  {errors.course && <p className="enquiry-error">{errors.course}</p>}
+                  {errors.course && <p className="enquiry-error">{errors.course.message}</p>}
                 </div>
 
-                {/* Address / City */}
+                {/* 5. Address / City */}
                 <div className="col-12 mb-2">
                   <input
                     type="text"
                     placeholder="Address / City (Optional)"
-                    value={formData.address}
-                    onChange={(e) => setFormData({ ...formData, address: e.target.value })}
-                    className="enquiry-input"
+                    className={`enquiry-input ${errors.address ? 'is-invalid' : ''}`}
+                    {...register('address')}
                   />
+                  {errors.address && <p className="enquiry-error">{errors.address.message}</p>}
                 </div>
 
-                {/* Message Box */}
+                {/* 6. Message Box */}
                 <div className="col-12 mb-2">
                   <textarea
                     rows={2}
                     placeholder="Your Enquiry / Message *"
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     className={`enquiry-textarea ${errors.message ? 'is-invalid' : ''}`}
-                  />
-                  {errors.message && <p className="enquiry-error">{errors.message}</p>}
+                    {...register('message')}
+                  ></textarea>
+                  {errors.message && <p className="enquiry-error">{errors.message.message}</p>}
                 </div>
               </div>
 
