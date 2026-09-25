@@ -78,11 +78,17 @@ const FORM_CONFIG = {
   PDF_UPLOAD: {
     label: 'PDF Notice or Circular File',
     helperText: 'Upload official PDF notice, circular, or timetable file (Max 10MB).',
+    maxSizeBytes: 11 * 1024 * 1024, // 11MB buffer to comfortably allow complete 10MB files
+    maxSizeLabel: '10MB',
+    allowedExtensions: ['.pdf'],
   },
   IMAGE_UPLOAD: {
     label: 'Photo / Feature Image',
     helperText: 'Add cover photo or featured image (PNG, JPG, WEBP up to 5MB).',
     maxFiles: 1,
+    maxSizeBytes: 5.5 * 1024 * 1024, // 5.5MB buffer to comfortably allow complete 5MB images
+    maxSizeLabel: '5MB',
+    allowedExtensions: ['.png', '.jpg', '.jpeg', '.webp'],
   },
   ACTIONS: {
     cancel: 'Cancel & Go Back',
@@ -163,9 +169,12 @@ function CreateNewsEventForm() {
 
   const fetchCategories = async (typeToFetch: string, retainCategory?: string) => {
     try {
-      const url = (typeToFetch && typeToFetch.trim() && typeToFetch !== 'All')
-        ? `/api/categories?type=${encodeURIComponent(typeToFetch.trim())}`
-        : '/api/categories';
+      if (!typeToFetch || !typeToFetch.trim() || typeToFetch === 'All') {
+        setCategories([]);
+        setSelectedCategory('');
+        return;
+      }
+      const url = `/api/categories?type=${encodeURIComponent(typeToFetch.trim())}`;
       const res = await fetch(url);
       const data = await res.json();
       if (res.ok && data.status === 'success' && Array.isArray(data.data)) {
@@ -181,7 +190,10 @@ function CreateNewsEventForm() {
   };
 
   useEffect(() => {
-    fetchCategories(contentType, selectedCategory);
+    if (!contentType) {
+      setSelectedCategory('');
+      setCategories([]);
+    }
   }, [contentType]);
 
   useEffect(() => {
@@ -354,34 +366,99 @@ function CreateNewsEventForm() {
   };
 
   const handleAddGalleryImages = async (files: FileList | File[]) => {
+    const fileArray = Array.from(files);
+    if (fileArray.length === 0) return;
+
+    const maxFiles = FORM_CONFIG.IMAGE_UPLOAD.maxFiles;
+    const currentCount = galleryImages.length;
+
+    // 1. Check if maximum number of images has already been reached
+    if (currentCount >= maxFiles) {
+      showAlertModal(
+        `You can only upload a maximum of ${maxFiles} image. Please remove the existing image before uploading a new one.`,
+        'Maximum Image Limit',
+        'warning'
+      );
+      return;
+    }
+
+    // 2. Check if selected count exceeds available slots
+    if (currentCount + fileArray.length > maxFiles) {
+      showAlertModal(
+        `You can only upload up to ${maxFiles} image. Please select only 1 image file.`,
+        'Too Many Files',
+        'warning'
+      );
+      return;
+    }
+
+    // 3. Format and Size validation for each selected file
+    const allowedExts = FORM_CONFIG.IMAGE_UPLOAD.allowedExtensions;
+    const maxSizeBytes = FORM_CONFIG.IMAGE_UPLOAD.maxSizeBytes;
+    const maxSizeLabel = FORM_CONFIG.IMAGE_UPLOAD.maxSizeLabel;
+
+    for (const file of fileArray) {
+      const lowerName = file.name.toLowerCase();
+      const hasValidExt = allowedExts.some((ext) => lowerName.endsWith(ext));
+      const mime = (file.type || '').toLowerCase();
+      const isImageMime = mime.startsWith('image/') || mime === 'application/octet-stream' || !mime;
+
+      if (!hasValidExt && !mime.startsWith('image/')) {
+        showAlertModal(
+          `The file "${file.name}" has an unsupported format. Please upload a valid image file (PNG, JPG, JPEG, WEBP).`,
+          'Unsupported Image Format',
+          'warning'
+        );
+        return;
+      }
+
+      if (file.size > maxSizeBytes) {
+        const sizeMb = (file.size / (1024 * 1024)).toFixed(2);
+        showAlertModal(
+          `The image "${file.name}" (${sizeMb} MB) exceeds the maximum allowed size limit of ${maxSizeLabel}. Please choose a smaller image.`,
+          'Image Size Exceeded',
+          'warning'
+        );
+        return;
+      }
+    }
+
     setIsUploadingImage(true);
     try {
       const token = localStorage.getItem('adminToken');
-      const uploads = await Promise.all(
-        Array.from(files).map(async (file) => {
-          const form = new FormData();
-          form.append('file', file);
-          const res = await fetch('/api/upload/image', {
-            method: 'POST',
-            headers: { Authorization: `Bearer ${token}` },
-            body: form,
+      const successful: ImageFile[] = [];
+      let serverErrorMsg = '';
+
+      for (const file of fileArray) {
+        const form = new FormData();
+        form.append('file', file);
+        const res = await fetch('/api/upload/image', {
+          method: 'POST',
+          headers: { Authorization: `Bearer ${token}` },
+          body: form,
+        });
+        const data = await res.json();
+        if (res.ok && data.status === 'success') {
+          successful.push({
+            id: Math.random().toString(36).substring(2, 9),
+            url: data.url,
+            name: file.name,
           });
-          const data = await res.json();
-          if (res.ok && data.status === 'success') {
-            return {
-              id: Math.random().toString(36).substring(2, 9),
-              url: data.url,
-              name: file.name,
-            };
-          }
-          return null;
-        })
-      );
-      const successful = uploads.filter(Boolean) as ImageFile[];
-      setGalleryImages((prev) => [...prev, ...successful].slice(0, FORM_CONFIG.IMAGE_UPLOAD.maxFiles));
-    } catch (err) {
+        } else {
+          serverErrorMsg = data.message || `Failed to upload "${file.name}".`;
+        }
+      }
+
+      if (successful.length > 0) {
+        setGalleryImages((prev) => [...prev, ...successful].slice(0, maxFiles));
+      }
+
+      if (serverErrorMsg) {
+        showAlertModal(serverErrorMsg, 'Image Upload Failed', 'danger');
+      }
+    } catch (err: any) {
       console.error('Failed to upload image:', err);
-      showAlertModal('Image upload failed. Please try again.', 'Upload Error', 'danger');
+      showAlertModal(err.message || 'Image upload failed due to a network error. Please try again.', 'Upload Error', 'danger');
     } finally {
       setIsUploadingImage(false);
     }
@@ -392,6 +469,38 @@ function CreateNewsEventForm() {
   };
 
   const handleSelectPdf = async (file: File) => {
+    if (!file) return;
+
+    // 1. Format validation
+    const allowedExts = FORM_CONFIG.PDF_UPLOAD.allowedExtensions;
+    const maxSizeBytes = FORM_CONFIG.PDF_UPLOAD.maxSizeBytes;
+    const maxSizeLabel = FORM_CONFIG.PDF_UPLOAD.maxSizeLabel;
+
+    const lowerName = file.name.toLowerCase();
+    const isPdfExt = lowerName.endsWith('.pdf');
+    const mime = (file.type || '').toLowerCase();
+    const isPdfMime = mime.includes('pdf') || mime === 'application/octet-stream' || !mime;
+
+    if (!isPdfExt && !mime.includes('pdf')) {
+      showAlertModal(
+        `The file "${file.name}" has an unsupported format. Please upload an official PDF document (.pdf only).`,
+        'Unsupported File Format',
+        'warning'
+      );
+      return;
+    }
+
+    // 2. File size validation
+    if (file.size > maxSizeBytes) {
+      const sizeMb = (file.size / (1024 * 1024)).toFixed(2);
+      showAlertModal(
+        `The selected PDF "${file.name}" (${sizeMb} MB) exceeds the maximum allowed size limit of ${maxSizeLabel}. Please select a smaller PDF file.`,
+        'File Size Exceeded',
+        'warning'
+      );
+      return;
+    }
+
     setIsUploadingPdf(true);
     try {
       const token = localStorage.getItem('adminToken');
@@ -419,9 +528,9 @@ function CreateNewsEventForm() {
       } else {
         showAlertModal(data.message || 'PDF upload failed. Please try again.', 'PDF Upload Failed', 'danger');
       }
-    } catch (err) {
+    } catch (err: any) {
       console.error('Failed to upload PDF:', err);
-      showAlertModal('PDF upload failed. Please try again.', 'PDF Upload Failed', 'danger');
+      showAlertModal(err.message || 'PDF upload failed due to a network error. Please try again.', 'PDF Upload Error', 'danger');
     } finally {
       setIsUploadingPdf(false);
     }
@@ -515,10 +624,15 @@ function CreateNewsEventForm() {
                 onChange={(e) => {
                   const val = normalizeType(e.target.value);
                   setContentType(val);
-                  fetchCategories(val);
-                  if (val === 'Notice' || val === 'Circular') {
-                    if (contentTypeOption === 'description') {
-                      setContentTypeOption('pdf');
+                  setSelectedCategory('');
+                  if (!val) {
+                    setCategories([]);
+                  } else {
+                    fetchCategories(val);
+                    if (val === 'Notice' || val === 'Circular') {
+                      if (contentTypeOption === 'description') {
+                        setContentTypeOption('pdf');
+                      }
                     }
                   }
                 }}
@@ -539,9 +653,10 @@ function CreateNewsEventForm() {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-3.5 py-2 rounded-lg brand-border focus:border-[#09468e] text-xs bg-white outline-none font-normal text-[#1a1c20] cursor-pointer"
+                disabled={!contentType}
+                className="w-full px-3.5 py-2 rounded-lg brand-border focus:border-[#09468e] text-xs bg-white outline-none font-normal text-[#1a1c20] cursor-pointer disabled:bg-slate-50 disabled:text-slate-400 disabled:cursor-not-allowed"
               >
-                <option value="">Select Category</option>
+                <option value="">{contentType ? 'Select Category' : 'Select Type first'}</option>
                 {selectedCategory && !categories.includes(selectedCategory) && (
                   <option key={selectedCategory} value={selectedCategory}>
                     {selectedCategory}

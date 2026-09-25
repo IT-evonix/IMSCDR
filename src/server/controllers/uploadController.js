@@ -48,24 +48,29 @@ const imageStorage = multer.diskStorage({
 
 const uploadPdf = multer({
   storage: pdfStorage,
-  limits: { fileSize: 10 * 1024 * 1024 }, // 10 MB
+  limits: { fileSize: 15 * 1024 * 1024 }, // 15 MB on server to comfortably accept full 10MB files
   fileFilter: (req, file, cb) => {
-    if (file.mimetype === 'application/pdf') {
+    const ext = path.extname(file.originalname).toLowerCase();
+    const mime = (file.mimetype || '').toLowerCase();
+    if (ext === '.pdf' || mime.includes('pdf') || mime === 'application/octet-stream') {
       cb(null, true);
     } else {
-      cb(new Error('Only PDF files are allowed.'));
+      cb(new Error('Only PDF files (.pdf) are allowed.'));
     }
   },
 }).single('file');
 
 const uploadImage = multer({
   storage: imageStorage,
-  limits: { fileSize: 5 * 1024 * 1024 }, // 5 MB
+  limits: { fileSize: 10 * 1024 * 1024 }, // 10 MB on server
   fileFilter: (req, file, cb) => {
-    if (file.mimetype.startsWith('image/')) {
+    const ext = path.extname(file.originalname).toLowerCase();
+    const mime = (file.mimetype || '').toLowerCase();
+    const allowed = ['.png', '.jpg', '.jpeg', '.webp'];
+    if (mime.startsWith('image/') || allowed.includes(ext)) {
       cb(null, true);
     } else {
-      cb(new Error('Only image files are allowed.'));
+      cb(new Error('Only image files (PNG, JPG, JPEG, WEBP) are allowed.'));
     }
   },
 }).single('file');

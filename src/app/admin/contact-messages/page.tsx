@@ -272,7 +272,7 @@ ${item.message}
                   <th className="py-2.5 px-4 text-center col-sr">Sr. No.</th>
                   <th className="py-2.5 px-4">Sender Name</th>
                   <th className="py-2.5 px-4">Contact Info</th>
-                  <th className="py-2.5 px-4">Subject &amp; Message Excerpt</th>
+                  <th className="py-2.5 px-4">Subject & Message</th>
                   <th className="py-2.5 px-4">Date</th>
                   <th className="py-2.5 px-4 text-center w-28">Action</th>
                 </tr>

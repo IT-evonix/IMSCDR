@@ -33,9 +33,10 @@ export const PdfUpload: React.FC<PdfUploadProps> = ({
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
       const file = e.target.files[0];
-      if (file.type === 'application/pdf') {
-        onSelectPdf(file);
-      }
+      onSelectPdf(file);
+    }
+    if (e.target) {
+      e.target.value = '';
     }
   };
 
@@ -105,7 +106,7 @@ export const PdfUpload: React.FC<PdfUploadProps> = ({
             <input
               ref={inputRef}
               type="file"
-              accept="application/pdf"
+              accept=".pdf,application/pdf"
               onChange={handleFileChange}
               className="hidden"
             />

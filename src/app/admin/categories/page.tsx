@@ -72,6 +72,11 @@ export default function CategoryManagementPage() {
   const [categoryToDelete, setCategoryToDelete] = useState<CategoryItem | null>(null);
   const [isDeleting, setIsDeleting] = useState(false);
 
+  // Alert Modal State (for categories linked to posts)
+  const [alertModalOpen, setAlertModalOpen] = useState(false);
+  const [alertTitle, setAlertTitle] = useState('');
+  const [alertMessage, setAlertMessage] = useState('');
+
   const fetchCategories = useCallback(async () => {
     try {
       setLoading(true);
@@ -178,6 +183,14 @@ export default function CategoryManagementPage() {
   };
 
   const promptDelete = (cat: CategoryItem) => {
+    if (cat.itemCount > 0) {
+      setAlertTitle('Cannot Delete Category');
+      setAlertMessage(
+        `Category "${cat.name}" cannot be deleted because it is currently linked with ${cat.itemCount} post${cat.itemCount > 1 ? 's' : ''}. Please reassign or delete the associated posts first before deleting this category.`
+      );
+      setAlertModalOpen(true);
+      return;
+    }
     setCategoryToDelete(cat);
     setDeleteModalOpen(true);
   };
@@ -189,17 +202,29 @@ export default function CategoryManagementPage() {
       const res = await authenticatedFetch(`/api/categories/${categoryToDelete.id}`, {
         method: 'DELETE',
       });
+      const data = await res.json();
 
-      if (res.ok) {
+      if (res.ok && data.status === 'success') {
         showToast(`Category "${categoryToDelete.name}" deleted successfully!`);
         fetchCategories();
+        setDeleteModalOpen(false);
+        setCategoryToDelete(null);
+      } else {
+        setDeleteModalOpen(false);
+        setCategoryToDelete(null);
+        setAlertTitle('Cannot Delete Category');
+        setAlertMessage(data.message || 'Cannot delete category because it is linked with posts.');
+        setAlertModalOpen(true);
       }
-    } catch (err) {
+    } catch (err: any) {
       console.error('Failed to delete category:', err);
-    } finally {
-      setIsDeleting(false);
       setDeleteModalOpen(false);
       setCategoryToDelete(null);
+      setAlertTitle('Delete Error');
+      setAlertMessage(err.message || 'Failed to delete category.');
+      setAlertModalOpen(true);
+    } finally {
+      setIsDeleting(false);
     }
   };
 
@@ -364,9 +389,9 @@ export default function CategoryManagementPage() {
                             type="button"
                             onClick={() => promptDelete(cat)}
                             className="table-action-btn table-btn-delete"
-                            title="Delete Category"
+                            title={cat.itemCount > 0 ? `Cannot delete: Linked with ${cat.itemCount} post(s)` : 'Delete Category'}
                           >
-                            <Trash2 className="w-3.5 h-3.5" />
+                            <Trash2 className={`w-3.5 h-3.5 ${cat.itemCount > 0 ? 'text-slate-400' : ''}`} />
                           </button>
                         </div>
                       </td>
@@ -499,6 +524,17 @@ export default function CategoryManagementPage() {
             : 'Are you sure you want to delete this category?'
         }
         confirmText="Delete"
+      />
+
+      {/* Alert Modal for Linked Categories or Errors */}
+      <ConfirmModal
+        isOpen={alertModalOpen}
+        onClose={() => setAlertModalOpen(false)}
+        onConfirm={() => setAlertModalOpen(false)}
+        title={alertTitle}
+        message={alertMessage}
+        confirmText="OK, Got It"
+        variant="warning"
       />
     </div>
   );
