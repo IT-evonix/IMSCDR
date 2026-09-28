@@ -99,9 +99,9 @@ export const collegeCommitteeColumns = [
 export const collegeCommitteeMembers = [
   {
     srNo: "01",
-    name: "Dr. Sanjeevan S. Arsud",
+    name: "Dr. R.J. Barnabas",
     designation: {
-      value: "Chairperson Of The Management",
+      value: "Chairman, B.P.H.E Society",
       rowSpan: 1,
     },
   },
@@ -109,98 +109,143 @@ export const collegeCommitteeMembers = [
     srNo: "02",
     name: "Mr. Vishal Barnabas",
     designation: {
-      value: "Secretary Of The Management",
+      value: "Secretary B.P.H.E Society",
       rowSpan: 1,
     },
   },
   {
     srNo: "03",
-    name: "Dr. Ms. Meera Kulkarni",
+    name: "Dr. Ms. Pronoti Telore",
     designation: {
-      value:
-        "One Head Of Department, To Be Nominated By The Principal Or The Head Of The Institution",
+      value: "Director (Member Secretary)",
       rowSpan: 1,
     },
   },
-
   {
     srNo: "04",
-    name: "Dr. U.H. Nagarkar",
+    name: "Dr. M.B. Mehta",
     designation: {
-      value:
-        "Three Teachers In The College Or Recognized Institution",
-      rowSpan: 3,
+      value: "Expert",
+      rowSpan: 1,
     },
   },
   {
     srNo: "05",
-    name: "Dr. Ms. Pronoti Telore",
-    designation: null,
-  },
-  {
-    srNo: "06",
-    name: "Dr. Vikram Barnabas",
-    designation: null,
-  },
-
-  {
-    srNo: "07",
-    name: "Ms. S.D. Kulkarni",
+    name: "Dr. S. R. Pathare (Director, I.S.W.R.-C.S.R.D.)",
     designation: {
-      value: "One Non-Teaching Employee",
+      value: "Local Member",
       rowSpan: 1,
     },
   },
-
+  {
+    srNo: "06",
+    name: "Dr. S.B. Nimse (Ex. Vice Chancellor, Lucknow University)",
+    designation: {
+      value: "Local Member",
+      rowSpan: 1,
+    },
+  },
+  {
+    srNo: "07",
+    name: "Mr. Ramesh Phirodia (from the fields of education, industry, and social service)",
+    designation: {
+      value: "Local Member",
+      rowSpan: 1,
+    },
+  },
   {
     srNo: "08",
-    name: "Dr. S.R. Pathare",
+    name: "Dr. Basavraj Bakali",
     designation: {
-      value:
-        "Four Local Members, Nominated By The Management In Consultation With The Principal, From The Fields Of Education, Industry, Research And Social Service Of Whom At Least One Shall Be Alumnus",
-      rowSpan: 4,
+      value: "Industrialist",
+      rowSpan: 1,
     },
   },
   {
     srNo: "09",
-    name: "Dr. S.B. Nimse",
-    designation: null,
+    name: "Dr. Potdar M.P.",
+    designation: {
+      value: "H.O.D. IT Department",
+      rowSpan: 1,
+    },
   },
   {
     srNo: "10",
-    name: "Mr. Ramesh Phirodia",
-    designation: null,
+    name: "Dr. Kayumi H.F.",
+    designation: {
+      value: "H.O.D. Management Department",
+      rowSpan: 1,
+    },
   },
   {
     srNo: "11",
-    name: "Mr. Deepak Chandorkar",
-    designation: null,
+    name: "Dr. Vikram Barnabas",
+    designation: {
+      value: "Teaching",
+      rowSpan: 1,
+    },
   },
-
   {
     srNo: "12",
-    name: "Dr. Hatim Kayumi",
+    name: "Dr. R.U. Tandulwadkar",
     designation: {
-      value:
-        "Co-Ordinator, Internal Quality Assurance Committee Of The College",
+      value: "Teaching & Alumni",
       rowSpan: 1,
     },
   },
   {
     srNo: "13",
-    name: "Mr. Bhingardive Vishal Jalindar",
+    name: "Prof. Gauri A. Patil",
     designation: {
-      value:
-        "President And Secretary Of The College Students' Council",
+      value: "Teaching",
       rowSpan: 1,
     },
   },
   {
     srNo: "14",
-    name: "Dr. M.B. Mehta",
+    name: "Mr. N.B. Kadam",
     designation: {
-      value:
-        "Principal Of The College Or Head Of The Institution - Member Secretary",
+      value: "Non-teaching Staff",
+      rowSpan: 1,
+    },
+  },
+  {
+    srNo: "15",
+    name: "Dr. Swati Barnabas",
+    designation: {
+      value: "Non-teaching Staff",
+      rowSpan: 1,
+    },
+  },
+  {
+    srNo: "16",
+    name: "Dr. Mudassar N. Sayyed",
+    designation: {
+      value: "IQAC",
+      rowSpan: 1,
+    },
+  },
+  {
+    srNo: "17",
+    name: "Mr. Mate Kartik (M.C.A. - II Year)",
+    designation: {
+      value: "President of Student Council",
+      rowSpan: 1,
+    },
+  },
+  {
+    srNo: "18",
+    name: "Mr. Malhar Rahinji (M.B.A. - II Year)",
+    designation: {
+      value: "Secretary of Student Council",
+      rowSpan: 1,
+    },
+  },
+  {
+    srNo: "19",
+    name: "Mr. M. R. Dixit",
+    designation: {
+      value: "Office Superintendent",
       rowSpan: 1,
     },
   },
