@@ -41,18 +41,19 @@ const imageStorage = multer.diskStorage({
   },
   filename: (req, file, cb) => {
     const uniqueSuffix = `${Date.now()}-${Math.round(Math.random() * 1e6)}`;
-    const ext = path.extname(file.originalname);
+    const ext = path.extname(file.originalname).toLowerCase();
     cb(null, `img-${uniqueSuffix}${ext}`);
   },
 });
 
 const uploadPdf = multer({
   storage: pdfStorage,
-  limits: { fileSize: 15 * 1024 * 1024 }, // 15 MB on server to comfortably accept full 10MB files
+  limits: { fileSize: 10 * 1024 * 1024 }, // Strictly 10 MB limit
   fileFilter: (req, file, cb) => {
     const ext = path.extname(file.originalname).toLowerCase();
     const mime = (file.mimetype || '').toLowerCase();
-    if (ext === '.pdf' || mime.includes('pdf') || mime === 'application/octet-stream') {
+    const isPdfMime = mime === 'application/pdf' || mime === 'application/x-pdf' || mime === 'application/octet-stream' || !mime;
+    if (ext === '.pdf' && isPdfMime) {
       cb(null, true);
     } else {
       cb(new Error('Only PDF files (.pdf) are allowed.'));
@@ -62,16 +63,32 @@ const uploadPdf = multer({
 
 const uploadImage = multer({
   storage: imageStorage,
-  limits: { fileSize: 10 * 1024 * 1024 }, // 10 MB on server
+  limits: { fileSize: 5 * 1024 * 1024 }, // Strictly 5 MB limit
   fileFilter: (req, file, cb) => {
     const ext = path.extname(file.originalname).toLowerCase();
     const mime = (file.mimetype || '').toLowerCase();
     const allowed = ['.png', '.jpg', '.jpeg', '.webp'];
-    if (mime.startsWith('image/') || allowed.includes(ext)) {
-      cb(null, true);
-    } else {
-      cb(new Error('Only image files (PNG, JPG, JPEG, WEBP) are allowed.'));
+    const allowedMimes = ['image/png', 'image/jpeg', 'image/jpg', 'image/webp'];
+
+    // 1. Strict extension check: MUST be .png, .jpg, .jpeg, or .webp (rejects .jfif, .svg, .gif, etc.)
+    if (!allowed.includes(ext)) {
+      return cb(
+        new Error(
+          `Only image files (.png, .jpg, .jpeg, .webp) are allowed. Format "${ext || 'unknown'}" is not supported.`
+        )
+      );
     }
+
+    // 2. Strict MIME check: MIME type (if present) must match allowed formats
+    if (mime && !allowedMimes.includes(mime) && mime !== 'application/octet-stream') {
+      return cb(
+        new Error(
+          `Invalid image type (${mime}). Only PNG, JPG, JPEG, and WEBP formats are allowed.`
+        )
+      );
+    }
+
+    cb(null, true);
   },
 }).single('file');
 
@@ -79,6 +96,12 @@ const uploadImage = multer({
 exports.uploadPdfFile = (req, res) => {
   uploadPdf(req, res, (err) => {
     if (err) {
+      if (err.code === 'LIMIT_FILE_SIZE') {
+        return res.status(400).json({
+          status: 'fail',
+          message: 'The selected PDF exceeds the maximum allowed size limit of 10MB. Please select a smaller PDF file.',
+        });
+      }
       return res.status(400).json({ status: 'fail', message: err.message });
     }
     if (!req.file) {
@@ -99,6 +122,12 @@ exports.uploadPdfFile = (req, res) => {
 exports.uploadImageFile = (req, res) => {
   uploadImage(req, res, (err) => {
     if (err) {
+      if (err.code === 'LIMIT_FILE_SIZE') {
+        return res.status(400).json({
+          status: 'fail',
+          message: 'The image exceeds the maximum allowed size limit of 5MB. Please choose a smaller image.',
+        });
+      }
       return res.status(400).json({ status: 'fail', message: err.message });
     }
     if (!req.file) {

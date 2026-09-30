@@ -26,7 +26,7 @@ export const ImageUpload: React.FC<ImageUploadProps> = ({
   onRemoveImage,
   maxFiles = 1,
   label = 'Photos / Images',
-  helperText = 'Add photo or image files (PNG, JPG, WEBP up to 5MB each).',
+  helperText = 'Add cover photo or featured image (PNG, JPG, JPEG, WEBP up to 5MB).',
   isUploading = false,
 }) => {
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -108,7 +108,7 @@ export const ImageUpload: React.FC<ImageUploadProps> = ({
             <input
               ref={fileInputRef}
               type="file"
-              accept="image/png,image/jpeg,image/jpg,image/webp,.png,.jpg,.jpeg,.webp"
+              accept=".png,.jpg,.jpeg,.webp"
               multiple={maxFiles > 1}
               onChange={handleFileChange}
               className="hidden"

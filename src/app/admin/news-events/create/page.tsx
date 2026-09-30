@@ -78,15 +78,15 @@ const FORM_CONFIG = {
   PDF_UPLOAD: {
     label: 'PDF Notice or Circular File',
     helperText: 'Upload official PDF notice, circular, or timetable file (Max 10MB).',
-    maxSizeBytes: 11 * 1024 * 1024, // 11MB buffer to comfortably allow complete 10MB files
+    maxSizeBytes: 10 * 1024 * 1024, // Strictly 10MB
     maxSizeLabel: '10MB',
     allowedExtensions: ['.pdf'],
   },
   IMAGE_UPLOAD: {
     label: 'Photo / Feature Image',
-    helperText: 'Add cover photo or featured image (PNG, JPG, WEBP up to 5MB).',
+    helperText: 'Add cover photo or featured image (PNG, JPG, JPEG, WEBP up to 5MB).',
     maxFiles: 1,
-    maxSizeBytes: 5.5 * 1024 * 1024, // 5.5MB buffer to comfortably allow complete 5MB images
+    maxSizeBytes: 5 * 1024 * 1024, // Strictly 5MB
     maxSizeLabel: '5MB',
     allowedExtensions: ['.png', '.jpg', '.jpeg', '.webp'],
   },
@@ -394,6 +394,7 @@ function CreateNewsEventForm() {
 
     // 3. Format and Size validation for each selected file
     const allowedExts = FORM_CONFIG.IMAGE_UPLOAD.allowedExtensions;
+    const allowedMimes = ['image/png', 'image/jpeg', 'image/jpg', 'image/webp'];
     const maxSizeBytes = FORM_CONFIG.IMAGE_UPLOAD.maxSizeBytes;
     const maxSizeLabel = FORM_CONFIG.IMAGE_UPLOAD.maxSizeLabel;
 
@@ -401,11 +402,21 @@ function CreateNewsEventForm() {
       const lowerName = file.name.toLowerCase();
       const hasValidExt = allowedExts.some((ext) => lowerName.endsWith(ext));
       const mime = (file.type || '').toLowerCase();
-      const isImageMime = mime.startsWith('image/') || mime === 'application/octet-stream' || !mime;
 
-      if (!hasValidExt && !mime.startsWith('image/')) {
+      // Strict validation: File extension MUST end with .png, .jpg, .jpeg, or .webp
+      if (!hasValidExt) {
         showAlertModal(
-          `The file "${file.name}" has an unsupported format. Please upload a valid image file (PNG, JPG, JPEG, WEBP).`,
+          `The file "${file.name}" has an unsupported format. Only PNG, JPG, JPEG, and WEBP images are allowed (.jfif, .gif, .svg and other formats are not permitted).`,
+          'Unsupported Image Format',
+          'warning'
+        );
+        return;
+      }
+
+      // Strict MIME check: Reject if MIME is provided and doesn't match allowed types
+      if (mime && !allowedMimes.includes(mime) && mime !== 'application/octet-stream') {
+        showAlertModal(
+          `The file "${file.name}" has an unsupported image type (${mime}). Only PNG, JPG, JPEG, and WEBP formats are allowed.`,
           'Unsupported Image Format',
           'warning'
         );
@@ -481,7 +492,7 @@ function CreateNewsEventForm() {
     const mime = (file.type || '').toLowerCase();
     const isPdfMime = mime.includes('pdf') || mime === 'application/octet-stream' || !mime;
 
-    if (!isPdfExt && !mime.includes('pdf')) {
+    if (!isPdfExt) {
       showAlertModal(
         `The file "${file.name}" has an unsupported format. Please upload an official PDF document (.pdf only).`,
         'Unsupported File Format',
