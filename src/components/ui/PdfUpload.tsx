@@ -25,7 +25,7 @@ export const PdfUpload: React.FC<PdfUploadProps> = ({
   onSelectPdf,
   onRemovePdf,
   label = 'PDF File / Official Notice',
-  helperText = 'Attach official PDF document or notice file (Max 10MB).',
+  helperText = 'Upload official PDF  file (Max 10MB).',
   isUploading = false,
 }) => {
   const inputRef = useRef<HTMLInputElement>(null);

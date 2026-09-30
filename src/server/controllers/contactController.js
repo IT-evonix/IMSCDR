@@ -81,6 +81,42 @@ exports.downloadContactsCsv = async (req, res, next) => {
 
 exports.downloadContactsExcel = exports.downloadContactsCsv;
 
+// Helper for building flexible search filter (supports full name, multi-word matching)
+const buildContactSearchConditions = (search) => {
+  if (!search || !search.trim()) return null;
+
+  const q = search.trim();
+  const words = q.split(/\s+/).filter(Boolean);
+
+  const searchConditions = [
+    { firstName: { contains: q, mode: 'insensitive' } },
+    { lastName: { contains: q, mode: 'insensitive' } },
+    { email: { contains: q, mode: 'insensitive' } },
+    { mobile: { contains: q, mode: 'insensitive' } },
+    { subject: { contains: q, mode: 'insensitive' } },
+    { message: { contains: q, mode: 'insensitive' } },
+  ];
+
+  if (words.length > 1) {
+    // Multi-word full name and cross-field search:
+    // Enables searching "tesimg c", "tesimg cscs", "John Doe", etc.
+    searchConditions.push({
+      AND: words.map((word) => ({
+        OR: [
+          { firstName: { contains: word, mode: 'insensitive' } },
+          { lastName: { contains: word, mode: 'insensitive' } },
+          { email: { contains: word, mode: 'insensitive' } },
+          { mobile: { contains: word, mode: 'insensitive' } },
+          { subject: { contains: word, mode: 'insensitive' } },
+          { message: { contains: word, mode: 'insensitive' } },
+        ],
+      })),
+    });
+  }
+
+  return searchConditions;
+};
+
 // Get All Contact Messages (Admin Protected Route - Soft Deleted records excluded)
 exports.getAllContactMessages = async (req, res, next) => {
   try {
@@ -98,16 +134,9 @@ exports.getAllContactMessages = async (req, res, next) => {
       where.status = status;
     }
 
-    if (search && search.trim()) {
-      const q = search.trim();
-      where.OR = [
-        { firstName: { contains: q, mode: 'insensitive' } },
-        { lastName: { contains: q, mode: 'insensitive' } },
-        { email: { contains: q, mode: 'insensitive' } },
-        { mobile: { contains: q, mode: 'insensitive' } },
-        { subject: { contains: q, mode: 'insensitive' } },
-        { message: { contains: q, mode: 'insensitive' } },
-      ];
+    const searchConditions = buildContactSearchConditions(search);
+    if (searchConditions) {
+      where.OR = searchConditions;
     }
 
     if (startDate || endDate) {
@@ -224,16 +253,9 @@ exports.exportContactMessages = async (req, res, next) => {
       deletedAt: null,
     };
 
-    if (search && search.trim()) {
-      const q = search.trim();
-      where.OR = [
-        { firstName: { contains: q, mode: 'insensitive' } },
-        { lastName: { contains: q, mode: 'insensitive' } },
-        { email: { contains: q, mode: 'insensitive' } },
-        { mobile: { contains: q, mode: 'insensitive' } },
-        { subject: { contains: q, mode: 'insensitive' } },
-        { message: { contains: q, mode: 'insensitive' } },
-      ];
+    const searchConditions = buildContactSearchConditions(search);
+    if (searchConditions) {
+      where.OR = searchConditions;
     }
 
     if (startDate || endDate) {
