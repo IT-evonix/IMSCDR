@@ -44,7 +44,7 @@ export interface Faculty {
 
   // Description
   profileContent?: string;
-  number?:string;
+  number?: string;
 }
 
 export const facultyData: Faculty[] = [
@@ -62,8 +62,8 @@ export const facultyData: Faculty[] = [
     "specificAreas": [
       "Marketing and Human Resource Management"
     ],
-   
-    
+
+
     "profileContent": "A Management academic and a leader with 25 years at IMS-CDR Currently serving as an In - Charge Director, former Head of the MBA Department, supported by 8 years of prior Corporate experience. An SPPU-approved Research Guide with 18 published research papers and a strong record across teaching, research supervision, accreditation, and institutional governance. Experienced in leading academic departments, managing change, and building systems that endure, with direct involvement in NAAC accreditation, University-level academic duties, and statutory committees across the BPHE Society. Committed to building IMS-CDR into a leading Management institute for emerging India, grounded in academic rigour, inclusive excellence, and strong industry connect."
   },
   {
@@ -78,7 +78,7 @@ export const facultyData: Faculty[] = [
 
 
 
-// Technical Support ---------------------------------------
+  // Technical Support ---------------------------------------
   {
     "id": 1,
     category: "Admin Team",
@@ -129,11 +129,11 @@ export const facultyData: Faculty[] = [
   },
 
 
-  
 
 
 
-// Accounts Department ---------------------------------------
+
+  // Accounts Department ---------------------------------------
   {
     "id": 1,
     category: "Accounts Department",
@@ -242,7 +242,7 @@ export const facultyData: Faculty[] = [
     "profileContent": "Dr. Rucha Tandulwadkar is a distinguished academician, researcher, Ph.D. guide, and management educator with over two decades of experience in higher education. Her expertise lies in Economics, Entrepreneurship, Marketing Management, and Women Entrepreneurship, with a strong focus on fostering innovation, entrepreneurial thinking, and sustainable development through learner-centric and experiential teaching practices.\n\nHer research interests include Entrepreneurship Development, Women Entrepreneurship and Marketing Management. As a recognized Ph.D. guide, she has successfully guided one doctoral scholar to completion, while four research scholars are currently pursuing their Ph.D. under her supervision. Dr. Tandulwadkar received a research grant from Savitribai Phule Pune University to study the challenges and opportunities of Self-Help Groups. She has presented and published research papers at numerous national and international conferences and journals and has been honoured with two Best Research Paper Awards for her scholarly contributions.\n\nBeyond academics, Dr. Tandulwadkar serves as the Coordinator of the Skill Enhancement and Entrepreneurship Development Centre (SEEDC), where she actively nurtures entrepreneurial aspirations among students and promotes women empowerment through training, mentoring, networking initiatives, and industry-academia collaborations. She also coordinates the IMS-CDR Academy of Fine and Performing Arts (AFPA), where she has introduced new academic programmes, strengthened student participation, and contributed to the promotion of Indian classical dance and cultural education. Her unwavering commitment to academic excellence, research, entrepreneurship, and holistic student development continues to create a lasting impact on higher education.\n\nHer Academic contribution and women empowerment work has been recognized by several institutions which include Best Teacher Award and Vocational Excellence Award"
   },
   {
-    "id":4,
+    "id": 4,
     category: "Faculty - Management Programme",
     "name": "D. A. Kulkarni",
     "designation": "Assistant Professor",
@@ -408,14 +408,14 @@ export const facultyData: Faculty[] = [
     "orcidId": "https://orcid.org/0009-0007-7162-4346",
     "googleScholar": "https://scholar.google.com/citations?user=2Mu57UUAAAAJ&hl=en&oi=ao",
     "scopusId": "https://www.scopus.com/authid/detail.uri?authorId=60028671400",
-    "researchPapersPublished":22,
+    "researchPapersPublished": 22,
     "sponsoredResearchProjects": "2",
     "booksPublished": 1,
-    "bookChaptersPublished":2,
+    "bookChaptersPublished": 2,
     "phdAwarded": 3,
-    "phdScholarsInProcess":2,
-    "patents":1,
-    "researchGuidance":"Recognized Ph. D. Guide under Faculty of Commerce and Management, S. P. Pune University (in the subjects of Marketing Management)",
+    "phdScholarsInProcess": 2,
+    "patents": 1,
+    "researchGuidance": "Recognized Ph. D. Guide under Faculty of Commerce and Management, S. P. Pune University (in the subjects of Marketing Management)",
     "profileContent": "Dr. Harshvardhan N. Bhavsar is an accomplished academician, researcher, and management educator with 15 years of teaching experience. He currently serves as an Assistant Professor, where he also holds key academic and administrative responsibilities as the BBA Coordinator and College Examination Officer (CEO). He holds a Ph.D. in Management from R.T.M. Nagpur University, along with UGC-NET and MH-SET in Management. He completed his MBA in Marketing from PUMBA, S. P. Pune University. His areas of expertise include Marketing Strategy, Marketing Research, Services Marketing, Consumer Behaviour, Business Research Methodology, and Business Analytics. Dr. Bhavsar has 22 research papers, one book, and two book chapters to his credit. He is a recognized Ph.D. Guide under S. P. Pune University and has successfully guided three Ph.D. scholars who have completed their doctoral research, with two scholars currently pursuing their Ph.D. under his guidance. He has also been associated with two sponsored research projects sanctioned by the Indian Council of Social Science Research (ICSSR), New Delhi, and S. P. Pune University (SPPU). He has presented research papers at academic conferences organized by prestigious institutions including IIMs and IITs. His academic philosophy emphasizes research-driven teaching, critical thinking, practical learning, and the holistic development of students."
   },
   {
@@ -476,7 +476,7 @@ export const facultyData: Faculty[] = [
     "orcidId": "https://orcid.org/0009-0001-6476-331X",
     "researchPapersPublished": "More than 6",
     "profileContent": "Ms. Poonam Tiwari is an Assistant Professor and Research Scholar with over nine years of teaching experience in the field of Management. She is currently pursuing her Ph.D. in Management at Charutar Vidya Mandal University (CVMU), Anand, Gujarat. She holds an MBA with Dual Specialization and a Bachelor of Commerce (B.Com.), which together provide her with a strong academic foundation in management and commerce.\n\nPrior to her academic career, she gained valuable corporate experience with The Hindu Group, which strengthened her practical understanding of business operations and industry practices. Her teaching expertise spans Financial Management, Indian Financial System, Business Valuation, Technical Analysis, Stock Market, Research Methodology, Strategic Management, and Mentoring & Coaching for undergraduate and postgraduate students.\n\nHer research interests include Financial Management, Technical Analysis, Stock Market, Indian Financial System, Business Valuation, Higher Education, and Mentoring & Coaching. She has published more than six research papers in reputed national and international journals and actively participates in academic conferences, faculty development programmes, and research activities. She also serves as a Board of Studies (BoS) Member at Parul University, contributing to curriculum design and academic development.\n\nIn addition to teaching and research, Ms. Tiwari is committed to mentoring and coaching students, fostering their academic, professional, and personal growth. She actively contributes to academic administration, university examination responsibilities, institutional development initiatives, and quality assurance activities, reflecting her dedication to excellence in higher education and holistic student development."
-  },  
+  },
   {
     "id": 14,
     category: "Faculty - Management Programme",
@@ -564,15 +564,15 @@ export const facultyData: Faculty[] = [
     "bookChaptersPublished": 2,
     "profileContent": "Dr. Shradha S. Bhandari is an Assistant Professor with over nine years of teaching experience in the fields of Commerce and Management. She holds a Ph.D. in Commerce & Management from Kavayitri Bahinabai Chaudhari North Maharashtra University, Jalgaon. Her doctoral research focused on consumer perception, buying behaviour, and spending patterns in the retail garment sector. She also holds an MBA in Financial Management along with professional qualifications in Taxation Laws and Government Diploma in Cooperation & Accountancy. Her teaching expertise includes Financial Management, Accounting, Financial Services, Business Economics, Digital Banking, International Finance, Banking Operations, Business Statistics, Business Mathematics, and Investment Management across undergraduate and postgraduate programmes. Her research interests include Consumer Behaviour, Retail Marketing, Financial Management, FinTech, Financial Inclusion, E-Commerce, and Sustainable Business Practices. She has published eight research papers in reputed national and international journals, authored one MBA textbook, contributed two book chapters, and presented research papers at national and international conferences. Alongside her academic and research contributions, she is actively involved in academic administration, university examination responsibilities, student mentoring, entrepreneurship development, and institutional quality initiatives, reflecting her commitment to excellence in higher education. In addition to her teaching and research, she actively contributes to academic administration, university examination responsibilities, student mentoring, entrepreneurship development, and institutional quality initiatives, reflecting her commitment to academic excellence and holistic student development."
   },
-  
 
 
-  
-  
-  
 
 
-// Faculty - Information Technology Start Here------------------------ 
+
+
+
+
+  // Faculty - Information Technology Start Here------------------------ 
   {
     "id": 1,
     category: "Faculty - Information Technology",
@@ -605,13 +605,13 @@ export const facultyData: Faculty[] = [
     "image": "/images/faculty/Anjali-Vaidya.png",
     "email": "anjalivamca@imscdr.ac.in",
     "broadAreas": [
-    
+
     ],
     "specificAreas": [
-  
+
     ],
     "profileContent": "Dr. Anjali A. Vaidya is an accomplished academician with over 23 years of teaching experience in Computer Applications and Information Technology. She holds an M.Sc. in Physics (Electronics), MCA, and Ph.D. Throughout her career, she has served in key academic roles, including MCA Coordinator, Placement Coordinator, Alumni Association Coordinator, and Web In-charge, contributing to academic administration, student mentoring, and institutional development. She has also served Savitribai Phule Pune University (SPPU) as a Syllabus Framing Committee Member, Examiner, and Question Paper Setter. Her areas of interest include Artificial Intelligence, Natural Language Processing, Speech Technology, Web Technologies, Educational Technology, and Software Development. Dr. Vaidya is committed to fostering innovation, industry-academia collaboration, and outcome-based learning while mentoring students to become skilled professionals and lifelong learners."
-  },  
+  },
   {
     "id": 3,
     category: "Faculty - Information Technology",
@@ -672,7 +672,7 @@ export const facultyData: Faculty[] = [
     "email": "madhurigodbole@imscdr.ac.in",
   },
   {
-    "id":6,
+    "id": 6,
     category: "Faculty - Information Technology",
     "name": "Supriya Sapa",
     "designation": "Assistant Professor",
@@ -769,7 +769,7 @@ export const facultyData: Faculty[] = [
       "Python programming"
     ],
     "profileContent": "I am Shubhangi Ashok Kharmate, working as an Assistant Professor in the Department of Computer Applications. I completed my Bachelor of Computer Applications (BCA) in 2019 and Master of Computer Applications (MCA) in 2022.\n\nMy academic background has provided me with a strong foundation in programming, software development, databases, data structures, and cyber security. I am committed to continuous learning and enhancing my teaching through practical, student-centric, and innovative methodologies.\n\nExperience \n\n I have teaching experience in undergraduate and postgraduate computer application programs. As an Assistant Professor, I teach subjects including Python Programming, Java Programming, and Cyber Security to MCA students.\n\nIn addition to teaching, I actively contribute to departmental and institutional activities such as academic coordination, student mentoring, practical sessions, technical events, cultural activities, documentation, and NAAC-related work. I believe in fostering an engaging learning environment that promotes analytical thinking, practical skills, and continuous professional development.\n\nResearch Interests \n\n My research interests include: \n\n - Cyber Security\n\n- Information Security\n\n- Network Security\n\n- Python Programming\n\n- Artificial Intelligence Applications in Cyber Security\n\n- Secure Software Development\n\n- Data Privacy and Digital Forensics\n\nI am interested in exploring emerging technologies and contributing to research through academic publications, conferences, and collaborative projects, with a particular focus on Cyber Security."
-  },  
+  },
   {
     "id": 11,
     category: "Faculty - Information Technology",
@@ -778,37 +778,37 @@ export const facultyData: Faculty[] = [
     "image": "/images/faculty/kanchan-sonar.webp",
   },
 
-  
-  
 
 
 
 
-  
+
+
+
   // BBA Staff Start Here--------------------
-    {
-      "id": 1,
-      category: "BBA Staff",
-      "name": "Sayali Torane",
-      "designation": "Assistant Professor",
-      "qualification": "MBA",
-      "image": "/images/faculty/SayaliTorane.webp",
-      "email": "",
-      "broadAreas": [
-        "Business Administration & Marketing Management",
-        "AI in Education & Digital Media",
-        "Strategic Media Production & Communication"
-      ],
-      "specificAreas": [
-        "Microeconomics & Demand Forecasting",
-        "AI-Driven Video Production & Digital Branding",
-        "Podcasting Curriculum & Media Production Management",
-        "Social Media Marketing & SEO Strategy",
-        "Cross-Functional Business Development"
-      ],
-      "profileContent": "Prof. Sayali Sunil Torane is a multi-disciplinary educator and strategist with over 13 years of cross-functional experience bridging higher education, digital marketing, media production, and engineering technology. She holds a Master of Business Administration (MBA) in Digital Media Communication Marketing from Savitribai Phule Pune University, a Bachelor’s degree in Journalism & Mass Communication (BJMC), and a background in Biomedical Engineering. Complemented by a formal foundation in the classical arts with a Diploma in Bharatanatyam and advanced credentials in digital marketing, her diverse background brings a rich, multi-dimensional perspective to higher education.\n\nHer academic instruction focuses on business administration, microeconomics, demand forecasting, and digital marketing strategies. Beyond traditional pedagogy, Prof. Torane’s industry experience includes serving as a Executive Producer and Production Manager for prominent broadcast channels like Star Pravaha and Colors Marathi, as well as managing global business development projects utilizing emerging technologies like Virtual Reality.\n\nHer key research interests and creative practice center on the integration of Artificial Intelligence in educational frameworks, AI-driven video production, academic podcasting management, and search engine optimization (SEO). Prof. Torane is dedicated to developing hands-on, industry-aligned curricula that prepare students to navigate the evolving digital economy through strategic branding, media technology, and analytical problem-solving."
-    },
-    {
+  {
+    "id": 1,
+    category: "BBA Staff",
+    "name": "Sayali Torane",
+    "designation": "Assistant Professor",
+    "qualification": "MBA",
+    "image": "/images/faculty/SayaliTorane.webp",
+    "email": "",
+    "broadAreas": [
+      "Business Administration & Marketing Management",
+      "AI in Education & Digital Media",
+      "Strategic Media Production & Communication"
+    ],
+    "specificAreas": [
+      "Microeconomics & Demand Forecasting",
+      "AI-Driven Video Production & Digital Branding",
+      "Podcasting Curriculum & Media Production Management",
+      "Social Media Marketing & SEO Strategy",
+      "Cross-Functional Business Development"
+    ],
+    "profileContent": "Prof. Sayali Sunil Torane is a multi-disciplinary educator and strategist with over 13 years of cross-functional experience bridging higher education, digital marketing, media production, and engineering technology. She holds a Master of Business Administration (MBA) in Digital Media Communication Marketing from Savitribai Phule Pune University, a Bachelor’s degree in Journalism & Mass Communication (BJMC), and a background in Biomedical Engineering. Complemented by a formal foundation in the classical arts with a Diploma in Bharatanatyam and advanced credentials in digital marketing, her diverse background brings a rich, multi-dimensional perspective to higher education.\n\nHer academic instruction focuses on business administration, microeconomics, demand forecasting, and digital marketing strategies. Beyond traditional pedagogy, Prof. Torane’s industry experience includes serving as a Executive Producer and Production Manager for prominent broadcast channels like Star Pravaha and Colors Marathi, as well as managing global business development projects utilizing emerging technologies like Virtual Reality.\n\nHer key research interests and creative practice center on the integration of Artificial Intelligence in educational frameworks, AI-driven video production, academic podcasting management, and search engine optimization (SEO). Prof. Torane is dedicated to developing hands-on, industry-aligned curricula that prepare students to navigate the evolving digital economy through strategic branding, media technology, and analytical problem-solving."
+  },
+  {
     "id": 2,
     category: "BBA Staff",
     "name": "Shital Nabariya",
@@ -856,10 +856,10 @@ export const facultyData: Faculty[] = [
     "designation": "Assistant Professor",
     "image": "/images/faculty/varad-hatwalne.webp",
   },
-  
-  
-  
-  
+
+
+
+
   // BCA Staff Start Here--------------------------
   {
     "id": 1,
@@ -957,13 +957,13 @@ export const facultyData: Faculty[] = [
     "image": "/images/faculty/iram-khan.webp",
   },
 
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
   // Library-Staff ---------------------------------------
   {
     "id": 1,
@@ -1016,7 +1016,7 @@ export const facultyData: Faculty[] = [
   {
     "id": 5,
     category: "Library-Staff",
-    "name": "Pratap Gaikwad",
+    "name": "Dhanraj Ghodke",
     "designation": "Assistant in Library",
     "image": "/images/faculty/dhanraj-ghodake.webp",
   },
