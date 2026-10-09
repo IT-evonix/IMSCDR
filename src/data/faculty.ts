@@ -179,8 +179,8 @@ export const facultyData: Faculty[] = [
   {
     "id": 2,
     category: "Faculty - Management Programme",
-    "name": "Hatim Kayyumi",
-    "designation": "Assistant Professor",
+    "name": "Hatim Kayumi",
+    "designation": "Head of Department and Associate Professor",
     "qualification": "Ph.D",
     "image": "/images/faculty/Hatim-Kayyumi.webp",
     "email": "hatimkayumi@imscdr.ac.in",

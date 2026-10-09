@@ -45,3 +45,22 @@ next-env.d.ts
 
 # Not Upload This Files
 *.zip
+
+# AI & Agent / GSD tools
+.agent/
+.agents/
+.gemini/
+.gsd/
+adapters/
+GSD-STYLE.md
+PROJECT_RULES.md
+VERSION
+model_capabilities.yaml
+scripts/search_repo.*
+scripts/setup_search.*
+scripts/validate-*
+
+# IDE & editors
+.vscode/
+.idea/
+
