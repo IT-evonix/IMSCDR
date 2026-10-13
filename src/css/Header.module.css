@@ -12,7 +12,7 @@
   left: 0;
   right: 0;
 }
-.sticky {
+.sticky{
   position: fixed;
   top: 0;
   left: 0;
@@ -20,6 +20,9 @@
   background: #fff;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   animation: slideDown 0.7s ease forwards;
+}
+.Header_sticky__DMbVB .topbar_inner .topbar-contact span{
+  color:#000 !important;
 }
 @keyframes slideDown {
   from {
