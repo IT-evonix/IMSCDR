@@ -30,7 +30,6 @@ const TopBar = ({ isSticky }: TopBarProps) => {
 
         <div className="topbar-buttons d-flex justify-content-lg-end flex-wrap gap-3">
           <Link href="/frafeesstructure" className="top-btn white-btn">
-            <Phone size={15} />
             <span>FRA Fee Structure</span>
           </Link>
           <button
