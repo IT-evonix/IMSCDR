@@ -48,7 +48,9 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onSuccess }) => {
       if (onSuccess) {
         onSuccess();
       } else {
-        window.location.href = '/admin';
+        const params = new URLSearchParams(window.location.search);
+        const redirectUrl = params.get('redirect') || '/admin/news-events';
+        window.location.href = redirectUrl;
       }
     } catch (err: any) {
       setError(err.message || 'Login failed. Please check your credentials.');

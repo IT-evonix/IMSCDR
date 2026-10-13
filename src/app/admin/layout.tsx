@@ -28,9 +28,9 @@ export default function RootAdminLayout({ children }: { children: React.ReactNod
       }
       setIsAuthenticated(true);
     } else if (token && !isTokenExpired(token)) {
-      // Valid logged-in admin trying to access /admin/login -> Redirect to Dashboard
+      // Valid logged-in admin trying to access /admin/login -> Redirect to News & Events
       setIsAuthenticated(true);
-      router.replace('/admin');
+      router.replace('/admin/news-events');
     } else {
       setIsAuthenticated(true);
     }

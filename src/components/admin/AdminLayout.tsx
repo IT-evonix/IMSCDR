@@ -22,14 +22,13 @@ export const AdminLayout: React.FC<{ children: React.ReactNode }> = ({ children 
 
       {/* Main Content Area */}
       <main
-        className={`${
-          isCollapsed ? 'lg:ml-16' : 'lg:ml-64'
-        } flex flex-col min-h-screen relative transition-all duration-300 ease-in-out`}
+        className={`${isCollapsed ? 'lg:ml-16' : 'lg:ml-64'
+          } flex flex-col min-h-screen relative transition-all duration-300 ease-in-out`}
       >
         <AdminHeader onToggleSidebar={() => setSidebarOpen(true)} />
 
         {/* Content Stage */}
-        <div className="flex-1 bg-[#d9d9e0]/30 px-3 sm:px-4 lg:px-6 pt-3 sm:pt-4 lg:pt-6 pb-6 sm:pb-8 overflow-x-hidden">
+        <div className="flex-1 bg-[#d9d9e0]/30 px-4 sm:px-4 lg:px-6 pt-3 sm:pt-4 lg:pt-6 pb-6 sm:pb-8 overflow-x-hidden">
           {children}
         </div>
       </main>
