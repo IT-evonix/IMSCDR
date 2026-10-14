@@ -1,3 +1,35 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact IMS-CDR Ahilyanagar | Admissions and Enquiry",
+  description: "Contact IMS-CDR Ahilyanagar for admissions, course enquiries, campus visits, or general assistance. Reach us by phone, email, or visit our campus today.",
+  alternates: {
+    canonical: "https://imscdr.ac.in/contact",
+  },
+  openGraph: {
+    title: "Contact IMS-CDR Ahilyanagar | Admissions and Enquiry",
+    description: "Contact IMS-CDR Ahilyanagar for admissions, course enquiries, campus visits, or general assistance. Reach us by phone, email, or visit our campus today.",
+    url: "https://imscdr.ac.in/contact",
+    siteName: "BPHE Society's IMS-CDR Ahilyanagar",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/images/home/black_logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Contact IMS-CDR Ahilyanagar | Admissions and Enquiry",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact IMS-CDR Ahilyanagar | Admissions and Enquiry",
+    description: "Contact IMS-CDR Ahilyanagar for admissions, course enquiries, campus visits, or general assistance. Reach us by phone, email, or visit our campus today.",
+    images: ["/images/home/black_logo.jpg"],
+  },
+};
+
 import Link from "next/link";
 import Image from "next/image";
 import InnerpageBanner from "@/components/InnerpageBanner";

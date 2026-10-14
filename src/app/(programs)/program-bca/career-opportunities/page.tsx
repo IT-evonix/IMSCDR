@@ -1,3 +1,35 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "BCA Career Opportunities | AI and IT Career Options",
+  description: "BCA career opportunities at IMS-CDR span software development, AI, Data Science, cybersecurity, cloud computing and other growing IT fields.",
+  alternates: {
+    canonical: "https://imscdr.ac.in/program-bca/career-opportunities",
+  },
+  openGraph: {
+    title: "BCA Career Opportunities | AI and IT Career Options",
+    description: "BCA career opportunities at IMS-CDR span software development, AI, Data Science, cybersecurity, cloud computing and other growing IT fields.",
+    url: "https://imscdr.ac.in/program-bca/career-opportunities",
+    siteName: "BPHE Society's IMS-CDR Ahilyanagar",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/images/home/black_logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "BCA Career Opportunities | AI and IT Career Options",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "BCA Career Opportunities | AI and IT Career Options",
+    description: "BCA career opportunities at IMS-CDR span software development, AI, Data Science, cybersecurity, cloud computing and other growing IT fields.",
+    images: ["/images/home/black_logo.jpg"],
+  },
+};
+
 import React from "react";
 import Image from "next/image";
 const page = () => {

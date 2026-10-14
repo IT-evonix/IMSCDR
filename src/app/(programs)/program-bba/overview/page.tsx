@@ -1,3 +1,35 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Best BBA College in Ahilyanagar | BBA Course and Fees",
+  description: "Pursue a BBA at IMS-CDR, with a practical business education, BBA course options, Marketing Management and industry-focused learning in Ahilyanagar.",
+  alternates: {
+    canonical: "https://imscdr.ac.in/program-bba/overview",
+  },
+  openGraph: {
+    title: "Best BBA College in Ahilyanagar | BBA Course and Fees",
+    description: "Pursue a BBA at IMS-CDR, with a practical business education, BBA course options, Marketing Management and industry-focused learning in Ahilyanagar.",
+    url: "https://imscdr.ac.in/program-bba/overview",
+    siteName: "BPHE Society's IMS-CDR Ahilyanagar",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/images/home/black_logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Best BBA College in Ahilyanagar | BBA Course and Fees",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Best BBA College in Ahilyanagar | BBA Course and Fees",
+    description: "Pursue a BBA at IMS-CDR, with a practical business education, BBA course options, Marketing Management and industry-focused learning in Ahilyanagar.",
+    images: ["/images/home/black_logo.jpg"],
+  },
+};
+
 import React from "react";
 import Image from "next/image";
 

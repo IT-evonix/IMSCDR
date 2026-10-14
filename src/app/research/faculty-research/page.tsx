@@ -1,3 +1,35 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Faculty Research | Research Publications at IMS-CDR",
+  description: "View faculty research at IMS-CDR Ahilyanagar, including research papers, Scopus and UGC-CARE publications, conferences, collaborations and funded projects.",
+  alternates: {
+    canonical: "https://imscdr.ac.in/research/faculty-research",
+  },
+  openGraph: {
+    title: "Faculty Research | Research Publications at IMS-CDR",
+    description: "View faculty research at IMS-CDR Ahilyanagar, including research papers, Scopus and UGC-CARE publications, conferences, collaborations and funded projects.",
+    url: "https://imscdr.ac.in/research/faculty-research",
+    siteName: "BPHE Society's IMS-CDR Ahilyanagar",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/images/home/black_logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Faculty Research | Research Publications at IMS-CDR",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Faculty Research | Research Publications at IMS-CDR",
+    description: "View faculty research at IMS-CDR Ahilyanagar, including research papers, Scopus and UGC-CARE publications, conferences, collaborations and funded projects.",
+    images: ["/images/home/black_logo.jpg"],
+  },
+};
+
 import Image from "next/image";
 
 const page = () => {

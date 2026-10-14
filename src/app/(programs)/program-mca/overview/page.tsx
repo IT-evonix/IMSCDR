@@ -1,3 +1,35 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "MCA Colleges in Ahilyanagar | Course Duration and Fees",
+  description: "Explore the MCA course at IMS-CDR, including course duration, fees, eligibility and details about the Master of Computer Application programme.",
+  alternates: {
+    canonical: "https://imscdr.ac.in/program-mca/overview",
+  },
+  openGraph: {
+    title: "MCA Colleges in Ahilyanagar | Course Duration and Fees",
+    description: "Explore the MCA course at IMS-CDR, including course duration, fees, eligibility and details about the Master of Computer Application programme.",
+    url: "https://imscdr.ac.in/program-mca/overview",
+    siteName: "BPHE Society's IMS-CDR Ahilyanagar",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/images/home/black_logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "MCA Colleges in Ahilyanagar | Course Duration and Fees",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MCA Colleges in Ahilyanagar | Course Duration and Fees",
+    description: "Explore the MCA course at IMS-CDR, including course duration, fees, eligibility and details about the Master of Computer Application programme.",
+    images: ["/images/home/black_logo.jpg"],
+  },
+};
+
 import React from "react";
 import Image from "next/image";
 

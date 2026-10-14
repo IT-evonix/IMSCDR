@@ -1,3 +1,35 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "MCA Programme Outcomes | Skills and Graduate Outcomes",
+  description: "MCA programme outcomes at IMS-CDR highlight technical expertise, research, innovation, communication, ethical computing and professional skills for graduates.",
+  alternates: {
+    canonical: "https://imscdr.ac.in/program-mca/programme-outcomes",
+  },
+  openGraph: {
+    title: "MCA Programme Outcomes | Skills and Graduate Outcomes",
+    description: "MCA programme outcomes at IMS-CDR highlight technical expertise, research, innovation, communication, ethical computing and professional skills for graduates.",
+    url: "https://imscdr.ac.in/program-mca/programme-outcomes",
+    siteName: "BPHE Society's IMS-CDR Ahilyanagar",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/images/home/black_logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "MCA Programme Outcomes | Skills and Graduate Outcomes",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MCA Programme Outcomes | Skills and Graduate Outcomes",
+    description: "MCA programme outcomes at IMS-CDR highlight technical expertise, research, innovation, communication, ethical computing and professional skills for graduates.",
+    images: ["/images/home/black_logo.jpg"],
+  },
+};
+
 import React from "react";
 import Image from "next/image";
 

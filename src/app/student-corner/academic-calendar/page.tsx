@@ -1,3 +1,35 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Academic Calendar | Student Corner | IMS-CDR Ahilyanagar",
+  description: "View the academic calendar of IMS-CDR College Ahilyanagar with important academic dates, schedules and key events for students across its programmes.",
+  alternates: {
+    canonical: "https://imscdr.ac.in/student-corner/academic-calendar",
+  },
+  openGraph: {
+    title: "Academic Calendar | Student Corner | IMS-CDR Ahilyanagar",
+    description: "View the academic calendar of IMS-CDR College Ahilyanagar with important academic dates, schedules and key events for students across its programmes.",
+    url: "https://imscdr.ac.in/student-corner/academic-calendar",
+    siteName: "BPHE Society's IMS-CDR Ahilyanagar",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/images/home/black_logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Academic Calendar | Student Corner | IMS-CDR Ahilyanagar",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Academic Calendar | Student Corner | IMS-CDR Ahilyanagar",
+    description: "View the academic calendar of IMS-CDR College Ahilyanagar with important academic dates, schedules and key events for students across its programmes.",
+    images: ["/images/home/black_logo.jpg"],
+  },
+};
+
 import InnerpageBanner from "@/components/InnerpageBanner";
 import {
   termICalendarData,

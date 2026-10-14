@@ -1,3 +1,35 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Student Research | Research Activities at IMS-CDR",
+  description: "Explore student research at IMS-CDR Ahilyanagar through research projects, case studies, seminars, conferences and academic publications across programs.",
+  alternates: {
+    canonical: "https://imscdr.ac.in/research/student-research",
+  },
+  openGraph: {
+    title: "Student Research | Research Activities at IMS-CDR",
+    description: "Explore student research at IMS-CDR Ahilyanagar through research projects, case studies, seminars, conferences and academic publications across programs.",
+    url: "https://imscdr.ac.in/research/student-research",
+    siteName: "BPHE Society's IMS-CDR Ahilyanagar",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/images/home/black_logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Student Research | Research Activities at IMS-CDR",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Student Research | Research Activities at IMS-CDR",
+    description: "Explore student research at IMS-CDR Ahilyanagar through research projects, case studies, seminars, conferences and academic publications across programs.",
+    images: ["/images/home/black_logo.jpg"],
+  },
+};
+
 import Image from "next/image";
 
 const page = () => {

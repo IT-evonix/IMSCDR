@@ -1,3 +1,35 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Anti-Ragging Squad | IMS-CDR Ahilyanagar Student Safety",
+  description: "Learn about the IMS-CDR Ahilyanagar Anti-Ragging Squad, its role in preventing ragging, promoting student safety and maintaining a respectful campus environment.",
+  alternates: {
+    canonical: "https://imscdr.ac.in/anti-ragging-squad",
+  },
+  openGraph: {
+    title: "Anti-Ragging Squad | IMS-CDR Ahilyanagar Student Safety",
+    description: "Learn about the IMS-CDR Ahilyanagar Anti-Ragging Squad, its role in preventing ragging, promoting student safety and maintaining a respectful campus environment.",
+    url: "https://imscdr.ac.in/anti-ragging-squad",
+    siteName: "BPHE Society's IMS-CDR Ahilyanagar",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/images/home/black_logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Anti-Ragging Squad | IMS-CDR Ahilyanagar Student Safety",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Anti-Ragging Squad | IMS-CDR Ahilyanagar Student Safety",
+    description: "Learn about the IMS-CDR Ahilyanagar Anti-Ragging Squad, its role in preventing ragging, promoting student safety and maintaining a respectful campus environment.",
+    images: ["/images/home/black_logo.jpg"],
+  },
+};
+
 import InnerpageBanner from "@/components/InnerpageBanner";
 import Table from "@/components/ui/Table";
 import {

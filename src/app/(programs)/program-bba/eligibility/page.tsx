@@ -1,3 +1,35 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "BBA Eligibility and Admission Requirements | IMS-CDR",
+  description: "BBA eligibility at IMS-CDR requires 10+2 or equivalent from a recognized board, with applicable percentage, subject and merit criteria as per university rules.",
+  alternates: {
+    canonical: "https://imscdr.ac.in/program-bba/eligibility",
+  },
+  openGraph: {
+    title: "BBA Eligibility and Admission Requirements | IMS-CDR",
+    description: "BBA eligibility at IMS-CDR requires 10+2 or equivalent from a recognized board, with applicable percentage, subject and merit criteria as per university rules.",
+    url: "https://imscdr.ac.in/program-bba/eligibility",
+    siteName: "BPHE Society's IMS-CDR Ahilyanagar",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/images/home/black_logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "BBA Eligibility and Admission Requirements | IMS-CDR",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "BBA Eligibility and Admission Requirements | IMS-CDR",
+    description: "BBA eligibility at IMS-CDR requires 10+2 or equivalent from a recognized board, with applicable percentage, subject and merit criteria as per university rules.",
+    images: ["/images/home/black_logo.jpg"],
+  },
+};
+
 import React from "react";
 import Image from "next/image";
 

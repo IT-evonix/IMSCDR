@@ -1,3 +1,35 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "IMS-CDR Ahilyanagar Fee Structure | MBA, MCA, BBA & BCA",
+  description: "View the IMS-CDR Ahilyanagar fee structure for MBA, MCA, BBA and BCA programs, with course-wise fees and details to plan your admission with ease.",
+  alternates: {
+    canonical: "https://imscdr.ac.in/frafeesstructure",
+  },
+  openGraph: {
+    title: "IMS-CDR Ahilyanagar Fee Structure | MBA, MCA, BBA & BCA",
+    description: "View the IMS-CDR Ahilyanagar fee structure for MBA, MCA, BBA and BCA programs, with course-wise fees and details to plan your admission with ease.",
+    url: "https://imscdr.ac.in/frafeesstructure",
+    siteName: "BPHE Society's IMS-CDR Ahilyanagar",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/images/home/black_logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "IMS-CDR Ahilyanagar Fee Structure | MBA, MCA, BBA & BCA",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "IMS-CDR Ahilyanagar Fee Structure | MBA, MCA, BBA & BCA",
+    description: "View the IMS-CDR Ahilyanagar fee structure for MBA, MCA, BBA and BCA programs, with course-wise fees and details to plan your admission with ease.",
+    images: ["/images/home/black_logo.jpg"],
+  },
+};
+
 import ApprovalList from "@/components/abouttab/ApprovalList";
 import InnerpageBanner from "@/components/InnerpageBanner";
 import { approvalData } from "@/data/approvalData";

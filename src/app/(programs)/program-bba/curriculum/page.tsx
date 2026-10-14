@@ -1,3 +1,35 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "BBA Syllabus and Curriculum | Bachelor Degree Courses",
+  description: "View the BBA syllabus at IMS-CDR, covering semester-wise subjects, Marketing Management, Finance, HRM and skill-based bachelor degree courses.",
+  alternates: {
+    canonical: "https://imscdr.ac.in/program-bba/curriculum",
+  },
+  openGraph: {
+    title: "BBA Syllabus and Curriculum | Bachelor Degree Courses",
+    description: "View the BBA syllabus at IMS-CDR, covering semester-wise subjects, Marketing Management, Finance, HRM and skill-based bachelor degree courses.",
+    url: "https://imscdr.ac.in/program-bba/curriculum",
+    siteName: "BPHE Society's IMS-CDR Ahilyanagar",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/images/home/black_logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "BBA Syllabus and Curriculum | Bachelor Degree Courses",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "BBA Syllabus and Curriculum | Bachelor Degree Courses",
+    description: "View the BBA syllabus at IMS-CDR, covering semester-wise subjects, Marketing Management, Finance, HRM and skill-based bachelor degree courses.",
+    images: ["/images/home/black_logo.jpg"],
+  },
+};
+
 import {
   bbaBcaCurriculumColumns,
   bbaBcaCurriculumData,
