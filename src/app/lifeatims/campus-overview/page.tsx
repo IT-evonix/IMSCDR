@@ -1,3 +1,35 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "IMS-CDR College Ahilyanagar | Campus and Student Life",
+  description: "Experience campus life at IMS-CDR College, Ahilyanagar, with industry-focused education, modern infrastructure, research, skill development and holistic student growth.",
+  alternates: {
+    canonical: "https://imscdr.ac.in/lifeatims/campus-overview",
+  },
+  openGraph: {
+    title: "IMS-CDR College Ahilyanagar | Campus and Student Life",
+    description: "Experience campus life at IMS-CDR College, Ahilyanagar, with industry-focused education, modern infrastructure, research, skill development and holistic student growth.",
+    url: "https://imscdr.ac.in/lifeatims/campus-overview",
+    siteName: "BPHE Society's IMS-CDR Ahilyanagar",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/images/home/black_logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "IMS-CDR College Ahilyanagar | Campus and Student Life",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "IMS-CDR College Ahilyanagar | Campus and Student Life",
+    description: "Experience campus life at IMS-CDR College, Ahilyanagar, with industry-focused education, modern infrastructure, research, skill development and holistic student growth.",
+    images: ["/images/home/black_logo.jpg"],
+  },
+};
+
 import React from "react";
 import Image from "next/image";
 

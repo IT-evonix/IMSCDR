@@ -1,3 +1,35 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "IMS-CDR IQAC | Internal Quality Assurance Cell, Ahilyanagar",
+  description: "Learn about IMS-CDR IQAC, its quality assurance and enhancement initiatives, institutional processes, NAAC documentation and continuous academic improvement.",
+  alternates: {
+    canonical: "https://imscdr.ac.in/IQAC",
+  },
+  openGraph: {
+    title: "IMS-CDR IQAC | Internal Quality Assurance Cell, Ahilyanagar",
+    description: "Learn about IMS-CDR IQAC, its quality assurance and enhancement initiatives, institutional processes, NAAC documentation and continuous academic improvement.",
+    url: "https://imscdr.ac.in/IQAC",
+    siteName: "BPHE Society's IMS-CDR Ahilyanagar",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/images/home/black_logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "IMS-CDR IQAC | Internal Quality Assurance Cell, Ahilyanagar",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "IMS-CDR IQAC | Internal Quality Assurance Cell, Ahilyanagar",
+    description: "Learn about IMS-CDR IQAC, its quality assurance and enhancement initiatives, institutional processes, NAAC documentation and continuous academic improvement.",
+    images: ["/images/home/black_logo.jpg"],
+  },
+};
+
 import InnerpageBanner from "@/components/InnerpageBanner";
 import Image from "next/image";
 import Table from "@/components/ui/Table";

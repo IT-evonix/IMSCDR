@@ -1,3 +1,35 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "IMS-CDR Ahilyanagar Approvals & Affiliations | UGC, AICTE",
+  description: "View IMS-CDR Ahilyanagar approvals and affiliations, including AICTE recognition and university affiliations supporting trusted MBA, MCA, BBA and BCA education.",
+  alternates: {
+    canonical: "https://imscdr.ac.in/approvals-and-affiliations",
+  },
+  openGraph: {
+    title: "IMS-CDR Ahilyanagar Approvals & Affiliations | UGC, AICTE",
+    description: "View IMS-CDR Ahilyanagar approvals and affiliations, including AICTE recognition and university affiliations supporting trusted MBA, MCA, BBA and BCA education.",
+    url: "https://imscdr.ac.in/approvals-and-affiliations",
+    siteName: "BPHE Society's IMS-CDR Ahilyanagar",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/images/home/black_logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "IMS-CDR Ahilyanagar Approvals & Affiliations | UGC, AICTE",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "IMS-CDR Ahilyanagar Approvals & Affiliations | UGC, AICTE",
+    description: "View IMS-CDR Ahilyanagar approvals and affiliations, including AICTE recognition and university affiliations supporting trusted MBA, MCA, BBA and BCA education.",
+    images: ["/images/home/black_logo.jpg"],
+  },
+};
+
 import React from "react";
 import Image from "next/image";
 import ExploreBtn from "@/components/ui/ExploreBtn";

@@ -1,3 +1,35 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "BCA Intake and Seat Capacity | Best BCA College in Ahilyanagar",
+  description: "BCA intake at IMS-CDR includes 60 sanctioned seats and 3 supernumerary seats for students pursuing Bachelor of Computer Applications in Ahilyanagar.",
+  alternates: {
+    canonical: "https://imscdr.ac.in/program-bca/intake",
+  },
+  openGraph: {
+    title: "BCA Intake and Seat Capacity | Best BCA College in Ahilyanagar",
+    description: "BCA intake at IMS-CDR includes 60 sanctioned seats and 3 supernumerary seats for students pursuing Bachelor of Computer Applications in Ahilyanagar.",
+    url: "https://imscdr.ac.in/program-bca/intake",
+    siteName: "BPHE Society's IMS-CDR Ahilyanagar",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/images/home/black_logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "BCA Intake and Seat Capacity | Best BCA College in Ahilyanagar",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "BCA Intake and Seat Capacity | Best BCA College in Ahilyanagar",
+    description: "BCA intake at IMS-CDR includes 60 sanctioned seats and 3 supernumerary seats for students pursuing Bachelor of Computer Applications in Ahilyanagar.",
+    images: ["/images/home/black_logo.jpg"],
+  },
+};
+
 import React from "react";
 import Image from "next/image";
 const page = () => {

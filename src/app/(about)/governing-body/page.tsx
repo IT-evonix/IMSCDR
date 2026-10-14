@@ -1,3 +1,35 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Governing Body | IMS-CDR Ahilyanagar",
+  description: "Meet the Governing Body of IMS-CDR Ahilyanagar and learn about the experienced leaders guiding the institute's vision, governance, and academic excellence.",
+  alternates: {
+    canonical: "https://imscdr.ac.in/governing-body",
+  },
+  openGraph: {
+    title: "Governing Body | IMS-CDR Ahilyanagar",
+    description: "Meet the Governing Body of IMS-CDR Ahilyanagar and learn about the experienced leaders guiding the institute's vision, governance, and academic excellence.",
+    url: "https://imscdr.ac.in/governing-body",
+    siteName: "BPHE Society's IMS-CDR Ahilyanagar",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/images/home/black_logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Governing Body | IMS-CDR Ahilyanagar",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Governing Body | IMS-CDR Ahilyanagar",
+    description: "Meet the Governing Body of IMS-CDR Ahilyanagar and learn about the experienced leaders guiding the institute's vision, governance, and academic excellence.",
+    images: ["/images/home/black_logo.jpg"],
+  },
+};
+
 // import InnerpageBanner from "@/components/InnerpageBanner";
 import Table from "@/components/ui/Table";
 import {

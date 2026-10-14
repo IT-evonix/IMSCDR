@@ -1,3 +1,35 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Best BCA College in Ahilyanagar | BCA Admission",
+  description: "Pursue BCA at IMS-CDR, with practical IT education, AI-focused learning, software development and industry-ready skills in Ahilyanagar.",
+  alternates: {
+    canonical: "https://imscdr.ac.in/program-bca/overview",
+  },
+  openGraph: {
+    title: "Best BCA College in Ahilyanagar | BCA Admission",
+    description: "Pursue BCA at IMS-CDR, with practical IT education, AI-focused learning, software development and industry-ready skills in Ahilyanagar.",
+    url: "https://imscdr.ac.in/program-bca/overview",
+    siteName: "BPHE Society's IMS-CDR Ahilyanagar",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/images/home/black_logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Best BCA College in Ahilyanagar | BCA Admission",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Best BCA College in Ahilyanagar | BCA Admission",
+    description: "Pursue BCA at IMS-CDR, with practical IT education, AI-focused learning, software development and industry-ready skills in Ahilyanagar.",
+    images: ["/images/home/black_logo.jpg"],
+  },
+};
+
 import React from "react";
 import Image from "next/image";
 

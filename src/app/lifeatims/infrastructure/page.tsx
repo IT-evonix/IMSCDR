@@ -1,3 +1,35 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "IMS-CDR Ahilyanagar Campus Infrastructure | Modern Facilities",
+  description: "Explore IMS-CDR Ahilyanagar campus infrastructure with ICT classrooms, library, language lab, seminar halls and modern facilities for learning and development.",
+  alternates: {
+    canonical: "https://imscdr.ac.in/lifeatims/infrastructure",
+  },
+  openGraph: {
+    title: "IMS-CDR Ahilyanagar Campus Infrastructure | Modern Facilities",
+    description: "Explore IMS-CDR Ahilyanagar campus infrastructure with ICT classrooms, library, language lab, seminar halls and modern facilities for learning and development.",
+    url: "https://imscdr.ac.in/lifeatims/infrastructure",
+    siteName: "BPHE Society's IMS-CDR Ahilyanagar",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/images/home/black_logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "IMS-CDR Ahilyanagar Campus Infrastructure | Modern Facilities",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "IMS-CDR Ahilyanagar Campus Infrastructure | Modern Facilities",
+    description: "Explore IMS-CDR Ahilyanagar campus infrastructure with ICT classrooms, library, language lab, seminar halls and modern facilities for learning and development.",
+    images: ["/images/home/black_logo.jpg"],
+  },
+};
+
 import React from "react";
 import Image from "next/image";
 import GallerySlider from "@/components/ui/GallerySlider";

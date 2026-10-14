@@ -1,3 +1,35 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "BCA Syllabus and Curriculum | BCA in Artificial Intelligence",
+  description: "View the BCA syllabus at IMS-CDR, covering programming, Data Science, web development and emerging technologies for an industry-focused BCA education.",
+  alternates: {
+    canonical: "https://imscdr.ac.in/program-bca/curriculum",
+  },
+  openGraph: {
+    title: "BCA Syllabus and Curriculum | BCA in Artificial Intelligence",
+    description: "View the BCA syllabus at IMS-CDR, covering programming, Data Science, web development and emerging technologies for an industry-focused BCA education.",
+    url: "https://imscdr.ac.in/program-bca/curriculum",
+    siteName: "BPHE Society's IMS-CDR Ahilyanagar",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/images/home/black_logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "BCA Syllabus and Curriculum | BCA in Artificial Intelligence",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "BCA Syllabus and Curriculum | BCA in Artificial Intelligence",
+    description: "View the BCA syllabus at IMS-CDR, covering programming, Data Science, web development and emerging technologies for an industry-focused BCA education.",
+    images: ["/images/home/black_logo.jpg"],
+  },
+};
+
 
 import {
   bcaCurriculumColumns,

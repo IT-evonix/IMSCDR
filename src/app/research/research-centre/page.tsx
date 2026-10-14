@@ -1,3 +1,35 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "PhD Research Centre | IMS-CDR Ahilyanagar",
+  description: "Explore PhD research opportunities at IMS Ahilyanagar, an SPPU-approved Research Centre in Management offering guidance across diverse research areas.",
+  alternates: {
+    canonical: "https://imscdr.ac.in/research/research-centre",
+  },
+  openGraph: {
+    title: "PhD Research Centre | IMS-CDR Ahilyanagar",
+    description: "Explore PhD research opportunities at IMS Ahilyanagar, an SPPU-approved Research Centre in Management offering guidance across diverse research areas.",
+    url: "https://imscdr.ac.in/research/research-centre",
+    siteName: "BPHE Society's IMS-CDR Ahilyanagar",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/images/home/black_logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "PhD Research Centre | IMS-CDR Ahilyanagar",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "PhD Research Centre | IMS-CDR Ahilyanagar",
+    description: "Explore PhD research opportunities at IMS Ahilyanagar, an SPPU-approved Research Centre in Management offering guidance across diverse research areas.",
+    images: ["/images/home/black_logo.jpg"],
+  },
+};
+
 import Image from "next/image";
 import Table from "@/components/ui/Table";
 import { NameofGuide, SpecializationNames } from "@/data/tablemembers";

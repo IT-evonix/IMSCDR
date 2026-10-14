@@ -1,3 +1,35 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "MCA Career Opportunities | Jobs and Career Options",
+  description: "Find career options after MCA in software development, data analytics, AI, cloud computing, cyber security, IT consulting and other IT roles.",
+  alternates: {
+    canonical: "https://imscdr.ac.in/program-mca/career-opportunities",
+  },
+  openGraph: {
+    title: "MCA Career Opportunities | Jobs and Career Options",
+    description: "Find career options after MCA in software development, data analytics, AI, cloud computing, cyber security, IT consulting and other IT roles.",
+    url: "https://imscdr.ac.in/program-mca/career-opportunities",
+    siteName: "BPHE Society's IMS-CDR Ahilyanagar",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/images/home/black_logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "MCA Career Opportunities | Jobs and Career Options",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MCA Career Opportunities | Jobs and Career Options",
+    description: "Find career options after MCA in software development, data analytics, AI, cloud computing, cyber security, IT consulting and other IT roles.",
+    images: ["/images/home/black_logo.jpg"],
+  },
+};
+
 import React from "react";
 import Image from "next/image";
 

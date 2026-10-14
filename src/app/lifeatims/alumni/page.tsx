@@ -1,3 +1,35 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "IMS-CDR Ahilyanagar Alumni Network | 6,000+ Global Alumni",
+  description: "Connect with the IMS-CDR Ahilyanagar alumni network of 6,000+ professionals, entrepreneurs and leaders supporting students through mentoring and opportunities.",
+  alternates: {
+    canonical: "https://imscdr.ac.in/lifeatims/alumni",
+  },
+  openGraph: {
+    title: "IMS-CDR Ahilyanagar Alumni Network | 6,000+ Global Alumni",
+    description: "Connect with the IMS-CDR Ahilyanagar alumni network of 6,000+ professionals, entrepreneurs and leaders supporting students through mentoring and opportunities.",
+    url: "https://imscdr.ac.in/lifeatims/alumni",
+    siteName: "BPHE Society's IMS-CDR Ahilyanagar",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/images/home/black_logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "IMS-CDR Ahilyanagar Alumni Network | 6,000+ Global Alumni",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "IMS-CDR Ahilyanagar Alumni Network | 6,000+ Global Alumni",
+    description: "Connect with the IMS-CDR Ahilyanagar alumni network of 6,000+ professionals, entrepreneurs and leaders supporting students through mentoring and opportunities.",
+    images: ["/images/home/black_logo.jpg"],
+  },
+};
+
 import React from "react";
 import Image from "next/image";
 

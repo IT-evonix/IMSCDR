@@ -1,3 +1,35 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "MBA Downloads | IMS-CDR Ahilyanagar Course Resources",
+  description: "Access MBA downloads from IMS-CDR Ahilyanagar, including course resources, academic documents, forms and useful information for students and applicants.",
+  alternates: {
+    canonical: "https://imscdr.ac.in/program-mba/downloads",
+  },
+  openGraph: {
+    title: "MBA Downloads | IMS-CDR Ahilyanagar Course Resources",
+    description: "Access MBA downloads from IMS-CDR Ahilyanagar, including course resources, academic documents, forms and useful information for students and applicants.",
+    url: "https://imscdr.ac.in/program-mba/downloads",
+    siteName: "BPHE Society's IMS-CDR Ahilyanagar",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/images/home/black_logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "MBA Downloads | IMS-CDR Ahilyanagar Course Resources",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MBA Downloads | IMS-CDR Ahilyanagar Course Resources",
+    description: "Access MBA downloads from IMS-CDR Ahilyanagar, including course resources, academic documents, forms and useful information for students and applicants.",
+    images: ["/images/home/black_logo.jpg"],
+  },
+};
+
 // import React from "react";
 // import Image from "next/image";
 // import ExploreBtn from "@/components/ui/ExploreBtn";

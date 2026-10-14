@@ -1,3 +1,35 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "BCA Programme Outcomes | Skills and Career Readiness",
+  description: "BCA programme outcomes at IMS-CDR focus on problem-solving, modern IT skills, communication, teamwork, project management, ethics and lifelong learning.",
+  alternates: {
+    canonical: "https://imscdr.ac.in/program-bca/programme-outcomes",
+  },
+  openGraph: {
+    title: "BCA Programme Outcomes | Skills and Career Readiness",
+    description: "BCA programme outcomes at IMS-CDR focus on problem-solving, modern IT skills, communication, teamwork, project management, ethics and lifelong learning.",
+    url: "https://imscdr.ac.in/program-bca/programme-outcomes",
+    siteName: "BPHE Society's IMS-CDR Ahilyanagar",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/images/home/black_logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "BCA Programme Outcomes | Skills and Career Readiness",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "BCA Programme Outcomes | Skills and Career Readiness",
+    description: "BCA programme outcomes at IMS-CDR focus on problem-solving, modern IT skills, communication, teamwork, project management, ethics and lifelong learning.",
+    images: ["/images/home/black_logo.jpg"],
+  },
+};
+
 import React from "react";
 import Image from "next/image";
 

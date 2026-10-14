@@ -1,3 +1,35 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "IMS-CDR Ahilyanagar | Best MBA, MCA, BBA & BCA College",
+  description: "Discover IMS-CDR Ahilyanagar for MBA, MCA, BBA & BCA programs, with course details, fees, admissions, eligibility and career-focused management education.",
+  alternates: {
+    canonical: "https://imscdr.ac.in/about-ims",
+  },
+  openGraph: {
+    title: "IMS-CDR Ahilyanagar | Best MBA, MCA, BBA & BCA College",
+    description: "Discover IMS-CDR Ahilyanagar for MBA, MCA, BBA & BCA programs, with course details, fees, admissions, eligibility and career-focused management education.",
+    url: "https://imscdr.ac.in/about-ims",
+    siteName: "BPHE Society's IMS-CDR Ahilyanagar",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/images/home/black_logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "IMS-CDR Ahilyanagar | Best MBA, MCA, BBA & BCA College",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "IMS-CDR Ahilyanagar | Best MBA, MCA, BBA & BCA College",
+    description: "Discover IMS-CDR Ahilyanagar for MBA, MCA, BBA & BCA programs, with course details, fees, admissions, eligibility and career-focused management education.",
+    images: ["/images/home/black_logo.jpg"],
+  },
+};
+
 import React from "react";
 import Image from "next/image";
 import InfoCard from "@/components/abouttab/infoCard";

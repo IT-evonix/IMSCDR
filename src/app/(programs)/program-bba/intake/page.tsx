@@ -1,3 +1,35 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "BBA Course Colleges in Ahilyanagar | BBA Intake",
+  description: "View the BBA intake at IMS-CDR, with 60 sanctioned seats and 3 supernumerary seats for students pursuing the Bachelor of Business Administration.",
+  alternates: {
+    canonical: "https://imscdr.ac.in/program-bba/intake",
+  },
+  openGraph: {
+    title: "BBA Course Colleges in Ahilyanagar | BBA Intake",
+    description: "View the BBA intake at IMS-CDR, with 60 sanctioned seats and 3 supernumerary seats for students pursuing the Bachelor of Business Administration.",
+    url: "https://imscdr.ac.in/program-bba/intake",
+    siteName: "BPHE Society's IMS-CDR Ahilyanagar",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/images/home/black_logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "BBA Course Colleges in Ahilyanagar | BBA Intake",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "BBA Course Colleges in Ahilyanagar | BBA Intake",
+    description: "View the BBA intake at IMS-CDR, with 60 sanctioned seats and 3 supernumerary seats for students pursuing the Bachelor of Business Administration.",
+    images: ["/images/home/black_logo.jpg"],
+  },
+};
+
 import React from "react";
 import Image from "next/image";
 const page = () => {

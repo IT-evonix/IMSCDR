@@ -1,3 +1,35 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "MCA Syllabus and Curriculum | Subjects and Course Structure",
+  description: "Get the MCA syllabus and semester-wise curriculum at IMS-CDR, covering Python, Java, Data Science, Cloud Computing, Cyber Security and more.",
+  alternates: {
+    canonical: "https://imscdr.ac.in/program-mca/curriculum",
+  },
+  openGraph: {
+    title: "MCA Syllabus and Curriculum | Subjects and Course Structure",
+    description: "Get the MCA syllabus and semester-wise curriculum at IMS-CDR, covering Python, Java, Data Science, Cloud Computing, Cyber Security and more.",
+    url: "https://imscdr.ac.in/program-mca/curriculum",
+    siteName: "BPHE Society's IMS-CDR Ahilyanagar",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/images/home/black_logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "MCA Syllabus and Curriculum | Subjects and Course Structure",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MCA Syllabus and Curriculum | Subjects and Course Structure",
+    description: "Get the MCA syllabus and semester-wise curriculum at IMS-CDR, covering Python, Java, Data Science, Cloud Computing, Cyber Security and more.",
+    images: ["/images/home/black_logo.jpg"],
+  },
+};
+
 import {
   mcaCurriculumColumns,
   mcaSem1Data,

@@ -1,3 +1,35 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "MBA Career Opportunities at IMS-CDR Ahilyanagar | Careers",
+  description: "Explore MBA career opportunities at IMS-CDR Ahilyanagar, with diverse management roles, industry pathways and professional skills for long-term career growth.",
+  alternates: {
+    canonical: "https://imscdr.ac.in/program-mba/career-opportunities",
+  },
+  openGraph: {
+    title: "MBA Career Opportunities at IMS-CDR Ahilyanagar | Careers",
+    description: "Explore MBA career opportunities at IMS-CDR Ahilyanagar, with diverse management roles, industry pathways and professional skills for long-term career growth.",
+    url: "https://imscdr.ac.in/program-mba/career-opportunities",
+    siteName: "BPHE Society's IMS-CDR Ahilyanagar",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/images/home/black_logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "MBA Career Opportunities at IMS-CDR Ahilyanagar | Careers",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MBA Career Opportunities at IMS-CDR Ahilyanagar | Careers",
+    description: "Explore MBA career opportunities at IMS-CDR Ahilyanagar, with diverse management roles, industry pathways and professional skills for long-term career growth.",
+    images: ["/images/home/black_logo.jpg"],
+  },
+};
+
 import React from "react";
 import Image from "next/image";
 

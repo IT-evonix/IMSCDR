@@ -1,3 +1,35 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Director's Message | M.B Mehta | IMS-CDR Ahilyanagar",
+  description: "Read Director's message at IMS-CDR Ahilyanagar and learn about our vision, values, academic excellence, & commitment to shaping future management professionals.",
+  alternates: {
+    canonical: "https://imscdr.ac.in/about-director-message",
+  },
+  openGraph: {
+    title: "Director's Message | M.B Mehta | IMS-CDR Ahilyanagar",
+    description: "Read Director's message at IMS-CDR Ahilyanagar and learn about our vision, values, academic excellence, & commitment to shaping future management professionals.",
+    url: "https://imscdr.ac.in/about-director-message",
+    siteName: "BPHE Society's IMS-CDR Ahilyanagar",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/images/home/black_logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Director's Message | M.B Mehta | IMS-CDR Ahilyanagar",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Director's Message | M.B Mehta | IMS-CDR Ahilyanagar",
+    description: "Read Director's message at IMS-CDR Ahilyanagar and learn about our vision, values, academic excellence, & commitment to shaping future management professionals.",
+    images: ["/images/home/black_logo.jpg"],
+  },
+};
+
 import Image from "next/image";
 
 export default function ChancellorSection() {

@@ -5,31 +5,45 @@ import "./notices-circular.css";
 import LayoutWrapper from "@/components/LayoutWrapper";
 
 export const metadata: Metadata = {
-  title: "IMS | Home Page",
+  metadataBase: new URL("https://imscdr.ac.in"),
+  title: {
+    default: "IMS-CDR Ahilyanagar | Institute of Management Studies",
+    template: "%s",
+  },
   description:
-    "BPHE Society's Institute of Management Studies Career Development & Research (IMSCDR)",
+    "Explore IMS-CDR Ahilyanagar, a leading Institute of Management Studies offering industry-focused programs. Apply for IMS admission and build your future.",
   icons: {
     icon: "/images/home/IMS_URL_LOGO.webp",
     shortcut: "/images/home/IMS_URL_LOGO.webp",
     apple: "/images/home/IMS_URL_LOGO.webp",
   },
-  // openGraph: {
-  //   title: "IMS-CDR | Home Page",
-  //   description:
-  //     "BPHE Society's Institute of Management Studies Career Development & Research (IMS-CDR)",
-  //   url: "https://imscdr.ac.in/",
-  //   siteName: "Institute of Management Studies",
-  //   images: [
-  //     {
-  //       url: "https://imscdr.ac.in/images/home/black_logo.jpg",
-  //       width: 500,
-  //       height: 250,
-  //       alt: "Institute of Management Studies",
-  //     },
-  //   ],
-  //   locale: "en_IN",
-  //   type: "website",
-  // },
+  alternates: {
+    canonical: "https://imscdr.ac.in",
+  },
+  openGraph: {
+    title: "IMS-CDR Ahilyanagar | Institute of Management Studies",
+    description:
+      "Explore IMS-CDR Ahilyanagar, a leading Institute of Management Studies offering industry-focused programs. Apply for IMS admission and build your future.",
+    url: "https://imscdr.ac.in",
+    siteName: "BPHE Society's IMS-CDR Ahilyanagar",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/images/home/black_logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "IMS-CDR Ahilyanagar",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "IMS-CDR Ahilyanagar | Institute of Management Studies",
+    description:
+      "Explore IMS-CDR Ahilyanagar, a leading Institute of Management Studies offering industry-focused programs. Apply for IMS admission and build your future.",
+    images: ["/images/home/black_logo.jpg"],
+  },
 };
 
 export default function RootLayout({

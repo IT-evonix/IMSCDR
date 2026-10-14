@@ -1,3 +1,35 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "BBA Programme Outcomes | Business and Career Skills",
+  description: "BBA programme outcomes at IMS-CDR cover business management, strategic decision-making, communication, leadership, entrepreneurship and professional skills.",
+  alternates: {
+    canonical: "https://imscdr.ac.in/program-bba/programme-outcomes",
+  },
+  openGraph: {
+    title: "BBA Programme Outcomes | Business and Career Skills",
+    description: "BBA programme outcomes at IMS-CDR cover business management, strategic decision-making, communication, leadership, entrepreneurship and professional skills.",
+    url: "https://imscdr.ac.in/program-bba/programme-outcomes",
+    siteName: "BPHE Society's IMS-CDR Ahilyanagar",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/images/home/black_logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "BBA Programme Outcomes | Business and Career Skills",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "BBA Programme Outcomes | Business and Career Skills",
+    description: "BBA programme outcomes at IMS-CDR cover business management, strategic decision-making, communication, leadership, entrepreneurship and professional skills.",
+    images: ["/images/home/black_logo.jpg"],
+  },
+};
+
 import React from "react";
 import Image from "next/image";
 

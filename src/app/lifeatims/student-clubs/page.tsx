@@ -1,3 +1,35 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Student Clubs at IMS-CDR Ahilyanagar | Campus Activities",
+  description: "Discover student clubs at IMS-CDR Ahilyanagar that encourage leadership, creativity, teamwork, cultural participation and engaging experiences beyond the classroom.",
+  alternates: {
+    canonical: "https://imscdr.ac.in/lifeatims/student-clubs",
+  },
+  openGraph: {
+    title: "Student Clubs at IMS-CDR Ahilyanagar | Campus Activities",
+    description: "Discover student clubs at IMS-CDR Ahilyanagar that encourage leadership, creativity, teamwork, cultural participation and engaging experiences beyond the classroom.",
+    url: "https://imscdr.ac.in/lifeatims/student-clubs",
+    siteName: "BPHE Society's IMS-CDR Ahilyanagar",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/images/home/black_logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Student Clubs at IMS-CDR Ahilyanagar | Campus Activities",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Student Clubs at IMS-CDR Ahilyanagar | Campus Activities",
+    description: "Discover student clubs at IMS-CDR Ahilyanagar that encourage leadership, creativity, teamwork, cultural participation and engaging experiences beyond the classroom.",
+    images: ["/images/home/black_logo.jpg"],
+  },
+};
+
 import React from "react";
 import Table from "@/components/ui/Table";
 import {

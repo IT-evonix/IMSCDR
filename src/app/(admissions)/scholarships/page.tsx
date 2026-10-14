@@ -1,3 +1,35 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Scholarships and Fee Concessions 2026–27 | IMS-CDR",
+  description: "View IMS-CDR scholarship benefits and fee concessions for MBA, MCA, BBA and BCA students, with category-wise details for the 2026–27 academic year.",
+  alternates: {
+    canonical: "https://imscdr.ac.in/scholarships",
+  },
+  openGraph: {
+    title: "Scholarships and Fee Concessions 2026–27 | IMS-CDR",
+    description: "View IMS-CDR scholarship benefits and fee concessions for MBA, MCA, BBA and BCA students, with category-wise details for the 2026–27 academic year.",
+    url: "https://imscdr.ac.in/scholarships",
+    siteName: "BPHE Society's IMS-CDR Ahilyanagar",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/images/home/black_logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Scholarships and Fee Concessions 2026–27 | IMS-CDR",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Scholarships and Fee Concessions 2026–27 | IMS-CDR",
+    description: "View IMS-CDR scholarship benefits and fee concessions for MBA, MCA, BBA and BCA students, with category-wise details for the 2026–27 academic year.",
+    images: ["/images/home/black_logo.jpg"],
+  },
+};
+
 import Table from "@/components/ui/Table";
 
 import {

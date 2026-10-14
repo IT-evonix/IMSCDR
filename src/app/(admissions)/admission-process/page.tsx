@@ -1,3 +1,35 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "IMS-CDR Ahilyanagar Admission Process | Apply for Courses",
+  description: "Learn the IMS-CDR Ahilyanagar admission process, including application steps, eligibility requirements, documents and key guidance for prospective students.",
+  alternates: {
+    canonical: "https://imscdr.ac.in/admission-process",
+  },
+  openGraph: {
+    title: "IMS-CDR Ahilyanagar Admission Process | Apply for Courses",
+    description: "Learn the IMS-CDR Ahilyanagar admission process, including application steps, eligibility requirements, documents and key guidance for prospective students.",
+    url: "https://imscdr.ac.in/admission-process",
+    siteName: "BPHE Society's IMS-CDR Ahilyanagar",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/images/home/black_logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "IMS-CDR Ahilyanagar Admission Process | Apply for Courses",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "IMS-CDR Ahilyanagar Admission Process | Apply for Courses",
+    description: "Learn the IMS-CDR Ahilyanagar admission process, including application steps, eligibility requirements, documents and key guidance for prospective students.",
+    images: ["/images/home/black_logo.jpg"],
+  },
+};
+
 import React from "react";
 // import Image from "next/image";
 import { ClipboardCheck, UserPlus, FilePlus } from "lucide-react";

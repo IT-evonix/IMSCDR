@@ -1,3 +1,35 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "BBA Career Opportunities | Jobs and Career Options",
+  description: "Find career opportunities after BBA in marketing, finance, HR, sales, banking, consulting and entrepreneurship, with pathways to MBA and other higher studies.",
+  alternates: {
+    canonical: "https://imscdr.ac.in/program-bba/career-opportunities",
+  },
+  openGraph: {
+    title: "BBA Career Opportunities | Jobs and Career Options",
+    description: "Find career opportunities after BBA in marketing, finance, HR, sales, banking, consulting and entrepreneurship, with pathways to MBA and other higher studies.",
+    url: "https://imscdr.ac.in/program-bba/career-opportunities",
+    siteName: "BPHE Society's IMS-CDR Ahilyanagar",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/images/home/black_logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "BBA Career Opportunities | Jobs and Career Options",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "BBA Career Opportunities | Jobs and Career Options",
+    description: "Find career opportunities after BBA in marketing, finance, HR, sales, banking, consulting and entrepreneurship, with pathways to MBA and other higher studies.",
+    images: ["/images/home/black_logo.jpg"],
+  },
+};
+
 import React from "react";
 import Image from "next/image";
 const page = () => {

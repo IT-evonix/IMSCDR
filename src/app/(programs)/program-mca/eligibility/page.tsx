@@ -1,3 +1,35 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "MCA Course Eligibility and Admission Criteria | IMS-CDR",
+  description: "Check MCA course eligibility and admission criteria at IMS-CDR, including CAP admission requirements, applicable regulations and bridge course details.",
+  alternates: {
+    canonical: "https://imscdr.ac.in/program-mca/eligibility",
+  },
+  openGraph: {
+    title: "MCA Course Eligibility and Admission Criteria | IMS-CDR",
+    description: "Check MCA course eligibility and admission criteria at IMS-CDR, including CAP admission requirements, applicable regulations and bridge course details.",
+    url: "https://imscdr.ac.in/program-mca/eligibility",
+    siteName: "BPHE Society's IMS-CDR Ahilyanagar",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/images/home/black_logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "MCA Course Eligibility and Admission Criteria | IMS-CDR",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MCA Course Eligibility and Admission Criteria | IMS-CDR",
+    description: "Check MCA course eligibility and admission criteria at IMS-CDR, including CAP admission requirements, applicable regulations and bridge course details.",
+    images: ["/images/home/black_logo.jpg"],
+  },
+};
+
 import React from "react";
 import Image from "next/image";
 

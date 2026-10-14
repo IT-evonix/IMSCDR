@@ -1,3 +1,35 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "MBA Programme Outcomes | IMS-CDR Ahilyanagar Career Skills",
+  description: "Discover MBA programme outcomes at IMS-CDR Ahilyanagar, focusing on management skills, professional development, leadership abilities and career readiness.",
+  alternates: {
+    canonical: "https://imscdr.ac.in/program-mba/programme-outcomes",
+  },
+  openGraph: {
+    title: "MBA Programme Outcomes | IMS-CDR Ahilyanagar Career Skills",
+    description: "Discover MBA programme outcomes at IMS-CDR Ahilyanagar, focusing on management skills, professional development, leadership abilities and career readiness.",
+    url: "https://imscdr.ac.in/program-mba/programme-outcomes",
+    siteName: "BPHE Society's IMS-CDR Ahilyanagar",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/images/home/black_logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "MBA Programme Outcomes | IMS-CDR Ahilyanagar Career Skills",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MBA Programme Outcomes | IMS-CDR Ahilyanagar Career Skills",
+    description: "Discover MBA programme outcomes at IMS-CDR Ahilyanagar, focusing on management skills, professional development, leadership abilities and career readiness.",
+    images: ["/images/home/black_logo.jpg"],
+  },
+};
+
 import React from "react";
 import Image from "next/image";
 

@@ -1,3 +1,35 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "IMS-CDR Research Journal | Management Research and Papers",
+  description: "Access the IMS-CDR Research Journal featuring research papers in management and related fields, with bi-annual publications supporting academic research.",
+  alternates: {
+    canonical: "https://imscdr.ac.in/research/research-journal",
+  },
+  openGraph: {
+    title: "IMS-CDR Research Journal | Management Research and Papers",
+    description: "Access the IMS-CDR Research Journal featuring research papers in management and related fields, with bi-annual publications supporting academic research.",
+    url: "https://imscdr.ac.in/research/research-journal",
+    siteName: "BPHE Society's IMS-CDR Ahilyanagar",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/images/home/black_logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "IMS-CDR Research Journal | Management Research and Papers",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "IMS-CDR Research Journal | Management Research and Papers",
+    description: "Access the IMS-CDR Research Journal featuring research papers in management and related fields, with bi-annual publications supporting academic research.",
+    images: ["/images/home/black_logo.jpg"],
+  },
+};
+
 import Image from "next/image";
 import ApprovalList from "@/components/abouttab/ApprovalList";
 import { approvalData } from "@/data/approvalData";

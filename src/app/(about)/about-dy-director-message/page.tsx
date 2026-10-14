@@ -1,3 +1,35 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "IMS-CDR Ahilyanagar Deputy Director | Vision for Education",
+  description: "Read the Deputy Director’s message at IMS-CDR Ahilyanagar and learn about our vision for quality education, student growth, academic excellence and success.",
+  alternates: {
+    canonical: "https://imscdr.ac.in/about-dy-director-message",
+  },
+  openGraph: {
+    title: "IMS-CDR Ahilyanagar Deputy Director | Vision for Education",
+    description: "Read the Deputy Director’s message at IMS-CDR Ahilyanagar and learn about our vision for quality education, student growth, academic excellence and success.",
+    url: "https://imscdr.ac.in/about-dy-director-message",
+    siteName: "BPHE Society's IMS-CDR Ahilyanagar",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/images/home/black_logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "IMS-CDR Ahilyanagar Deputy Director | Vision for Education",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "IMS-CDR Ahilyanagar Deputy Director | Vision for Education",
+    description: "Read the Deputy Director’s message at IMS-CDR Ahilyanagar and learn about our vision for quality education, student growth, academic excellence and success.",
+    images: ["/images/home/black_logo.jpg"],
+  },
+};
+
 import Image from "next/image";
 
 export default function ChancellorSection() {

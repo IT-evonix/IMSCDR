@@ -1,3 +1,35 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "MBA College in Ahmednagar | MBA Program at IMS-CDR",
+  description: "Build your career with the Master of Business Administration program at IMS-CDR Ahilyanagar. Get MBA course details, fee structure, placements, and admissions",
+  alternates: {
+    canonical: "https://imscdr.ac.in/program-mba/overview",
+  },
+  openGraph: {
+    title: "MBA College in Ahmednagar | MBA Program at IMS-CDR",
+    description: "Build your career with the Master of Business Administration program at IMS-CDR Ahilyanagar. Get MBA course details, fee structure, placements, and admissions",
+    url: "https://imscdr.ac.in/program-mba/overview",
+    siteName: "BPHE Society's IMS-CDR Ahilyanagar",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/images/home/black_logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "MBA College in Ahmednagar | MBA Program at IMS-CDR",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MBA College in Ahmednagar | MBA Program at IMS-CDR",
+    description: "Build your career with the Master of Business Administration program at IMS-CDR Ahilyanagar. Get MBA course details, fee structure, placements, and admissions",
+    images: ["/images/home/black_logo.jpg"],
+  },
+};
+
 import React from "react";
 import Image from "next/image";
 

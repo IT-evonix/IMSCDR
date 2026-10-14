@@ -1,3 +1,35 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "MBA Eligibility at IMS-CDR Ahilyanagar | Admission Criteria",
+  description: "Learn MBA eligibility criteria at IMS-CDR Ahilyanagar, including academic requirements and admission qualifications for students seeking a management degree.",
+  alternates: {
+    canonical: "https://imscdr.ac.in/program-mba/eligibility",
+  },
+  openGraph: {
+    title: "MBA Eligibility at IMS-CDR Ahilyanagar | Admission Criteria",
+    description: "Learn MBA eligibility criteria at IMS-CDR Ahilyanagar, including academic requirements and admission qualifications for students seeking a management degree.",
+    url: "https://imscdr.ac.in/program-mba/eligibility",
+    siteName: "BPHE Society's IMS-CDR Ahilyanagar",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/images/home/black_logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "MBA Eligibility at IMS-CDR Ahilyanagar | Admission Criteria",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MBA Eligibility at IMS-CDR Ahilyanagar | Admission Criteria",
+    description: "Learn MBA eligibility criteria at IMS-CDR Ahilyanagar, including academic requirements and admission qualifications for students seeking a management degree.",
+    images: ["/images/home/black_logo.jpg"],
+  },
+};
+
 import React from "react";
 import Image from "next/image";
 
