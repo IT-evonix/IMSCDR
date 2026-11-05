@@ -41,7 +41,7 @@ export default function ChancellorSection() {
             <div className="chancellor-image">
               <Image
                 src="/images/about/In-Charge-directorNew.webp"
-                alt=""
+                alt="In Charge director"
                 width={333}
                 height={325}
                 priority

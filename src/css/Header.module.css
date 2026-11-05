@@ -73,15 +73,6 @@
 /* ==========================
    DESKTOP MENU
 ========================== */
-/* .desktopNav {
-  background: linear-gradient(
-    90deg,
-    rgba(9, 70, 142, 1) 0%,
-    rgba(137, 0, 74, 1) 55%
-  );
-  border-radius: 50px 0px 0px 50px;
-} */
-
 .desktopNav {
     background: linear-gradient(
         90deg,

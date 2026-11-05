@@ -88,7 +88,7 @@ const page = () => {
               </div>
               <div className="library_card_content">
                 <div className="subheading">Resources</div>
-                <div className="w-100">
+                <div className="w-100 d-flex gap-2 gap-sm-3">
                   <div className="librarytags">Management Programme</div>
                   <div className="librarytags librarytags2">IT Programme</div>
                 </div>
@@ -105,11 +105,25 @@ const page = () => {
                 />
               </div>
               <div className="library_card_content">
-                <div className="subheading">Volumes Titles</div>
-                <div className="w-100 d-flex gap-1 gap-lg-3 flex-wrap align-items-center">
-                  <div className="librarytext libraryNum">36565 13249</div> |
-                  <div className="librarytext libraryNum">22240 7334</div> |
-                  <div className="librarytext libraryNum">14325 5915</div>
+                
+                <div className="w-100 d-flex gap-2 gap-md-3 flex-wrap align-items-center">
+                  <div className="VolumesBox">
+                    <div className="subheading">Volumes Titles</div>
+                    <div className=" libraryNum">64819: 17808 </div>
+                  </div>
+                   <div className="verticalline"></div>
+                   <div className="VolumesBox">
+                    <div className="subheading">Management Programme</div>
+                    <div className="librarytext libraryNum">40521: 10021 </div>
+                  </div>
+                   <div className="verticalline"></div>
+                   <div className="VolumesBox">
+                    <div className="subheading">IT Programme</div>
+                    <div className="librarytext libraryNum">24298: 7787 </div>
+                  </div>
+                   
+                  {/* <div className="librarytext libraryNum">40521: 10021</div> |
+                  <div className="librarytext libraryNum">24298: 7787</div> */}
                 </div>
               </div>
             </div>
@@ -126,7 +140,7 @@ const page = () => {
               <div className="library_card_content">
                 <div className="subheading">Journals :National</div>
                 <div className="w-100">
-                  <div className="librarynumtext libraryNum">51</div>
+                  <div className="librarynumtext libraryNum">46</div>
                 </div>
               </div>
             </div>
@@ -141,23 +155,14 @@ const page = () => {
                 />
               </div>
               <div className="library_card_content">
-                <div className="subheading">
-                  Online Resources <span style={{ color: "#f79433" }}>05</span>
-                </div>
+                <div className="subheading">Online Resources</div>
                 <div className="w-100">
                   {/* <div className="librarynumtext libraryNum">05</div> */}
                   <div className="w-100 d-flex flex-wrap">
-                    <div className="librarynumtext">
-                      DELNET: <span>New Discovery Portal</span>,
-                    </div>
-                    <div className="librarynumtext">N-LIST Consortia,</div>
-                    <div className="librarynumtext">NDLI-Club,</div>
-                    <div className="librarynumtext">
-                      NPTEL Video Streaming Library,
-                    </div>
-                    <div className="librarynumtext">
-                      User Experience Design (UXd),
-                    </div>
+                    <div className="librarynumtext">DELNET,</div>
+                    <div className="librarynumtext">N-LIST,</div>
+                    <div className="librarynumtext">NPTEL,</div>
+                    <div className="librarynumtext">NDLI,</div>
                   </div>
                 </div>
               </div>
@@ -175,7 +180,7 @@ const page = () => {
               <div className="library_card_content">
                 <div className="subheading">Periodicals</div>
                 <div className="w-100">
-                  <div className="librarynumtext libraryNum">17</div>
+                  <div className="librarynumtext libraryNum">10</div>
                 </div>
               </div>
             </div>
@@ -192,7 +197,7 @@ const page = () => {
               <div className="library_card_content">
                 <div className="subheading">Projects & CDs</div>
                 <div className="w-100">
-                  <div className="librarynumtext libraryNum">2462 & 1193</div>
+                  <div className="librarynumtext libraryNum">-</div>
                 </div>
               </div>
             </div>
@@ -209,7 +214,7 @@ const page = () => {
               <div className="library_card_content">
                 <div className="subheading">E-Books</div>
                 <div className="w-100">
-                  <div className="librarynumtext">E-Books</div>
+                  <div className="librarynumtext libraryNum">12944</div>
                 </div>
               </div>
             </div>
@@ -234,7 +239,8 @@ const page = () => {
                   <div className="librarynumtext">
                     Domain Name:{" "}
                     <span>
-                      <a style={{textDecoration:"none"}}
+                      <a
+                        style={{ textDecoration: "none" }}
                         href="http://imselibrary.in/"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -252,6 +258,35 @@ const page = () => {
                 </div>
               </div>
             </div>
+          </div>
+
+          <div className="mt-4 mt-sm-5 BestPractices_main" style={{ background: "#f8eee2", }}>
+            <p>
+              DELNET (Developing Library Network) facilitates resource sharing
+              among member libraries, providing access to a wide range of
+              library resources to support students, faculty members and
+              researchers.
+            </p>
+            <p>
+              Through DELNET, students can explore books, journals,
+              bibliographic databases and other scholarly resources to support
+              their academic assignments, projects and research activities.
+            </p>
+
+            <p className="mb-0 subheading">
+              Explore DELNET:{" "}
+              <a
+                style={{ textDecoration: "none" }}
+                href="https://discovery.delnet.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                https://discovery.delnet.in
+              </a>{" "}
+            </p>
+            <p className="mb-0 subheading">
+              Remote login details : Please contact IMS Library
+            </p>
           </div>
         </div>
         <div className="zigzag-section">
