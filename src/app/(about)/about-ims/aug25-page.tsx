@@ -121,7 +121,7 @@ const page = () => {
             <div className="mottoleft">
               <Image 
                 src="/images/about/privacy-policy.webp"
-                alt=""
+                alt="privacy policy"
                 width={400}
                 height={300}
               />
@@ -135,7 +135,7 @@ const page = () => {
             <div className="mottoleft mottoright">
               <Image 
                 src="/images/about/ourmotto.webp"
-                alt=""
+                alt="our motto"
                 width={400}
                 height={300}
               />

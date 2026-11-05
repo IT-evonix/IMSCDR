@@ -152,7 +152,7 @@ const page = () => {
             <div className="mottoleft mottoright visionleft">
               <Image
                 src="/images/campus/vision.webp"
-                alt=""
+                alt="vision"
                 width={400}
                 height={299}
               />
@@ -166,7 +166,7 @@ const page = () => {
             <div className="mottoleft mottoright misionright">
               <Image
                 src="/images/campus/mision.webp"
-                alt=""
+                alt="mision"
                 width={400}
                 height={299}
               />

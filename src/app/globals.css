@@ -1622,57 +1622,6 @@ Body {
 }
 /*----------------- Governing Body End Here ------------------*/
 /*----------- Approvals & Affiliations Start Here -----------*/
-/* .all-3p-section {
-  padding: 80px 0px;
-}
-.approval-card {
-  background: #fff;
-  border-radius: 15px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  transition: all 0.35s ease;
-  border: 1px solid #f1f1f1;
-  height: 100%;
-}
-.approval-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
-}
-.approval-icon {
-  width: 65px;
-  height: 65px;
-  background: #fff4ef;
-  border-radius: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #f79433;
-  flex-shrink: 0;
-}
-.approval-link {
-  color: #000;
-  font-size: 16px;
-  text-decoration: none;
-  transition: all 0.3s;
-  font-family: "Roma-Regular";
-  display: flex;
-  gap: 15px;
-  align-items: center;
-  padding: 15px;
-}
-.approval-link:hover {
-  color: #09468e;
-}
-.approval-icon svg {
-  stroke-width: 1;
-} */
-
-/* =====================================================
-   APPROVAL / DOCUMENT SECTION
-===================================================== */
-/* .approval-section {
-  padding: 100px 0 0px 0;
-} */
-
 .approval-card {
   background: #fff;
   border: 1px solid #e7ebf1;
@@ -2567,9 +2516,6 @@ Body {
   gap: 20px;
   margin-bottom: 40px;
 }
-/* .programme_outcome_box:nth-child(odd) {
-  flex-direction: row-reverse;
-} */
 .programme_outcome_box:nth-child(even) {
   flex-direction: row-reverse;
 }
@@ -3140,7 +3086,6 @@ Body {
   height: auto;
   display: block;
 }
-
 /* ----- Faculty Page End Here ----- */
 /*----- ADMISSION PROCESS Page Start Here -------*/
 .admission_process_phase {
@@ -3155,7 +3100,6 @@ Body {
   background: #fff;
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
 }
-
 .admission_process_top {
   background-color: #dff3ff;
   flex-wrap: wrap;
@@ -3191,7 +3135,6 @@ Body {
   overflow: hidden;
   position: absolute;
 }
-
 .phaseNumber::before {
   content: "";
   position: absolute;
@@ -3983,13 +3926,6 @@ Body {
   opacity: 0.35;
   cursor: not-allowed;
 }
-/* .Tabbing_gallery .gallery-image-wrapper {
-  position: relative;
-  width: 100%;
-  height: 260px;
-  overflow: hidden;
-  border-radius: 8px;
-} */
 .Tabbing_gallery .gallery-image {
   object-fit: cover;
   transition: transform 0.4s ease;
@@ -4002,24 +3938,9 @@ Body {
 .Tabbing_gallery .gallery-image-link:hover .gallery-image {
   transform: scale(1.06);
 }
-/* .Tabbing_gallery .gallery-overlay {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0, 0, 0, 0.45);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-} */
 .Tabbing_gallery .gallery-image-link:hover .gallery-overlay {
   opacity: 1;
 }
-/* .Tabbing_gallery .gallery-view {
-  color: #fff;
-  font-size: 15px;
-  font-weight: 600;
-} */
 .Tabbing_gallery .gallery-name {
   display:none;
 }
@@ -4029,7 +3950,6 @@ Body {
 .infrastructure_main {
   border-radius: 25px;
   position: relative;
-  /* overflow:hidden; */
   margin: 20px 0px 60px 0px;
 }
 .infrastructure_main::after {
@@ -4314,8 +4234,11 @@ Body {
   border-radius: 20px;
   font-size: 14px;
 }
+.library_card:nth-child(1) {
+  grid-column: span 3;
+}
 .library_card:nth-child(2) {
-  grid-column: span 2;
+  grid-column: span 3;
 }
 .library_card:nth-child(4) {
   grid-column: span 2;
@@ -4340,21 +4263,27 @@ Body {
   line-height: normal;
 }
 .library_card_content .librarytags {
-  font-size: 11px;
+  font-size: 14px;
   background: #cbecff;
-  padding: 3px 7px;
+  padding: 5px 15px;
   border-radius: 20px;
   line-height: normal;
-  width: fit-content;
+  /* width: fit-content; */
   margin-bottom: 5px;
 }
 .library_card_content .librarytags2 {
   background: #bca6d0;
-  margin-bottom: 0px;
+  /* margin-bottom: 0px; */
 }
 .librarynumtext {
   margin: 0 17px 0 0px;
 }
+.verticalline{
+  background-color: #9f9f9f;
+  width: 0.5px;
+  height: 50px;
+}
+
 .library_main .zigzag-section {
   padding: 80px 0px;
 }
@@ -4843,11 +4772,8 @@ Body {
   margin: 8px 0 0 -15px;
   position: absolute;
 }
-
 /*------------- Research-Page-End -------------*/
-
 /* -------------------   Responsive Pages Start here ------------------- */
-
 @media (min-width: 1365.98px) {
   /*------------- Home Page Start Here  -------------*/
   .testimonials_box {
@@ -4991,10 +4917,23 @@ Body {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .library_card:nth-child(2),
+  .library_card:nth-child(2){
+    grid-column: span 3;
+  }
   .library_card:nth-child(4),
   .library_card:nth-child(8) {
-    grid-column: span 1;
+    grid-column: span 2;
+  }
+  .librarianImginner::after{
+    right:-14px;
+    top:-14px;
+  }
+  .library_servicesinner::after{
+    background-size: 280px;
+    width: 270px;
+    height: 400px;
+    bottom: 0;
+    right: -25px;
   }
   /*---------------- Life @ IMS End Here ----------------*/
   /* Fee Strcuture Page Design Start Here */
@@ -5707,21 +5646,6 @@ Body {
   }
   /*-------------------- Excellent Placements End Here ------------*/
   /*----------------------- CampusLife Start Here -----------------------*/
-  /* .galleryWrapper {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-  .doubleColumn {
-    gap: 15px;
-  }
-  .tall,
-  .centerTall,
-  .half {
-    height: auto;
-  }
-  .galleryItem {
-    border-radius: 18px;
-  } */
   /* Existing desktop mosaic hidden */
   .desktopGallery {
     display: none;
@@ -6035,11 +5959,26 @@ Body {
   .library_statistical_data {
     grid-template-columns: repeat(1, 1fr);
   }
-
   .library_card:nth-child(2),
   .library_card:nth-child(4),
+  .library_card:nth-child(4),
+  .library_card:nth-child(5),
+  .library_card:nth-child(6),
+  .library_card:nth-child(7),
   .library_card:nth-child(8) {
-    grid-column: span 1;
+    grid-column: span 3;
+  }
+  .VolumesBox{
+    background-color:#f4f4f4;
+    padding:5px;
+    border-radius:7px;
+  }
+  .verticalline{
+    display:none;
+  }
+  .library_card_content .librarytags{
+    font-size: 11px;
+    padding: 4px 7px;
   }
   .library_card {
     min-height: inherit;
