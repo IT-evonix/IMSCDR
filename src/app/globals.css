@@ -6031,6 +6031,10 @@ Body {
   .feetabbox{
     padding: 14px 10px;
   }
+  .course_name{
+    margin: -22px 0 0;
+        padding: 5px 15px;
+  }
   /* Fee Strcuture Page Design End Here */
 }
 
