@@ -54,7 +54,7 @@ const page = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    FRA Approved <br /> Fee 2025-2026
+                    FRA Approved Fee 2026-2027
                   </a>
                 </div>
               </div>
@@ -65,7 +65,7 @@ const page = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    CAP & Against <br /> CAP / Management <br /> & NRI Seats
+                    CAP & Against CAP / Management & NRI Seats
                     Fees
                   </a>
                 </div>
@@ -77,7 +77,7 @@ const page = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Fee Proposal <br /> 2026 - 2027
+                    Fee Proposal 2027 - 2028
                   </a>
                 </div>
               </div>
@@ -89,7 +89,7 @@ const page = () => {
               <div className="fee_structure_content">
                 <div className="fee_structure_box">
                   <div className="course_name">MBA-I</div>
-                  <div className="fee_text">1,45,500</div>
+                  <div className="fee_text">1,43,000</div>
                   <p>Per Year</p>
                 </div>
                 <div className="fee_structure_box">
@@ -109,7 +109,7 @@ const page = () => {
                   >
                     MCA-I
                   </div>
-                  <div className="fee_text">1,09,500</div>
+                  <div className="fee_text">1,08,000</div>
                   <p>Per Year</p>
                 </div>
                 <div className="fee_structure_box">
@@ -129,7 +129,7 @@ const page = () => {
               <div className="fee_structure_content">
                 <div className="fee_structure_box">
                   <div className="course_name">BBA-I</div>
-                  <div className="fee_text">40,000</div>
+                  <div className="fee_text">38,500</div>
                   <p>Per Year</p>
                 </div>
                 <div className="fee_structure_box">
@@ -150,7 +150,7 @@ const page = () => {
                     >
                       BCA-I
                     </div>
-                    <div className="fee_text">45,500</div>
+                    <div className="fee_text">44,000</div>
                     <p>Per Year</p>
                   </div>
                   <div className="fee_structure_box">
