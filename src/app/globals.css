@@ -3489,14 +3489,15 @@ Body {
   position: relative;
   box-shadow: 0px 10px 10px #0000000a;
   border-radius: 20px;
-  padding: 40px 0px 20px 20px;
+  padding: 20px 20px 20px 20px;
   background: linear-gradient(
     90deg,
     rgba(255, 255, 255, 1) 0%,
     rgba(204, 204, 204, 0.235) 85%
   );
+  
 }
-.feetabboxmain::after {
+/* .feetabboxmain::after {
   content: "";
   background-image: url(/images/admission/collageimg1.webp);
   background-position: center;
@@ -3508,7 +3509,7 @@ Body {
   position: absolute;
   bottom: 0;
   border-radius: 0px 0px 20px 0px;
-}
+} */
 .feetabbox {
   background-color: #f4f4f4;
   border: 1px solid #ebebeb;
@@ -3517,6 +3518,7 @@ Body {
   width: auto;
   align-items: center;
   display: flex;
+  width: 33%;
 }
 .feetabboxmain .heading {
   font-size: 14px;
@@ -6025,6 +6027,9 @@ Body {
   }
   .fee_structure_inner{
     margin: 0px 0px 50px;
+  }
+  .feetabbox{
+    padding: 14px 10px;
   }
   /* Fee Strcuture Page Design End Here */
 }
