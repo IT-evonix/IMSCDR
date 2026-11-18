@@ -47,8 +47,8 @@ export const approvalData = {
     researchJournal: [
     {
       id: 1,
-      title: "Journal August 2025",
-      file: "/pdf/research/IMS-August-Ediiton-final.pdf",
+      title: "Journal April 2026",
+      file: "/pdf/research/Journal-April-2026.pdf",
     },
   ] as ApprovalItem[],
   
